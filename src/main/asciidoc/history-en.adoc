@@ -6,8 +6,10 @@ Clément Levallois <clementlevallois@gmail.com>
 ifndef::imagesdir[:imagesdir: images]
 ifndef::sourcedir[:sourcedir: ../../main/java]
 
-The source of this document (written in asciiDoc) is available on https://github.com/seinecle/gephi-tutorial/blob/master/src/main/asciidoc/history-en.adoc[on Github].
-The pdf, html and slide versions of this document are also on https://github.com/seinecle/gephi-tutorial/tree/master/target[Github].
+_want to contribute to these tutorials? Visit the https://github.com/seinecle/gephi-tutorials["readme"] file of this project!_
+
+The source of this document (written in asciiDoc) is available on https://github.com/seinecle/gephi-tutorials/blob/master/src/main/asciidoc/history-en.adoc[on Github].
+The pdf, html and slide versions of this document are also on https://github.com/seinecle/gephi-tutorials/tree/master/target[Github].
 
 
 == History of Gephi
