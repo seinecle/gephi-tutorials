@@ -1,0 +1,16 @@
+= Open and collaborative Gephi tutorials (in multiple languages)
+Clément Levallois <clementlevallois@gmail.com>
+2017-01-11
+:revnumber: 1.0
+:example-caption!:
+ifndef::imagesdir[:imagesdir: images]
+ifndef::sourcedir[:sourcedir: ../../main/java]
+
+This is a project to write Gephi tutorials in an open and collaborative way:
+
+- using git for collaboration and versioning
+- written in asciidoc to ease the conversion to pdf, html, slides, etc.
+
+The project is just starting (even this readme page is just a sketch).
+
+Want to join? Questions? Create a Github account and open an issue here!
