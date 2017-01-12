@@ -48,7 +48,7 @@
                             </url>
                             <unpack>true</unpack>
                             <outputFileName>asciidoctor-reveal.js-${asciidoctor-revealjs.version}.zip</outputFileName>
-                            <outputDirectory>${project.build.directory}</outputDirectory>
+                            <outputDirectory>${basedir}/docs/</outputDirectory>
                         </configuration>
                     </execution>
                     <execution>
@@ -61,7 +61,7 @@
                             <url>https://github.com/hakimel/reveal.js/archive/${revealjs.version}.zip</url>
                             <unpack>true</unpack>
                             <outputFileName>reveal.js-${revealjs.version}.zip</outputFileName>
-                            <outputDirectory>${project.slides.directory}</outputDirectory>
+                            <outputDirectory>${basedir}/docs/</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>
@@ -117,9 +117,9 @@
                             <goal>process-asciidoc</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${project.slides.directory}</outputDirectory>
+                            <outputDirectory>${basedir}/docs/generated-slides</outputDirectory>
                             <backend>revealjs</backend>
-                            <templateDir>${project.build.directory}/asciidoctor-reveal.js-${asciidoctor-revealjs.version}/templates/slim</templateDir>
+                            <templateDir>${basedir}/docs/asciidoctor-reveal.js-${asciidoctor-revealjs.version}/templates/slim</templateDir>
                             <sourceHighlighter>coderay</sourceHighlighter>
                             <attributes>
                                  
@@ -150,7 +150,7 @@
                             <goal>process-asciidoc</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${project.build.directory}/generated-pdf</outputDirectory>
+                            <outputDirectory>${basedir}/docs/generated-pdf</outputDirectory>
                             <backend>pdf</backend>
                             <sourceHighlighter>coderay</sourceHighlighter>
                             <attributes>
@@ -175,7 +175,7 @@
                         </goals>
                         <configuration>
                             <sourceDocumentName>${doc}</sourceDocumentName>
-                            <outputDirectory>${project.build.directory}/generated-html</outputDirectory>
+                            <outputDirectory>${basedir}/docs/generated-html</outputDirectory>
                             <backend>html</backend>
                             <sourceHighlighter>coderay</sourceHighlighter>
                             <extensions>
@@ -206,7 +206,7 @@
                         <configuration>
                             <target>
                                 <delete includeemptydirs="true">
-                                    <fileset dir="${project.build.directory}/generated-pdf"
+                                    <fileset dir="${basedir}/docs/generated-pdf"
                                              excludes="*.pdf"/>
                                 </delete>
                             </target>
@@ -222,7 +222,7 @@
                 <artifactId>MojoPublishToMedium</artifactId>
                 <version>1.0</version>
                 <configuration>
-                    <fileName>${project.build.directory}\generated-html\${doc}</fileName>
+                    <fileName>${basedir}/docs/generated-html/${doc}</fileName>
                 </configuration>
                 <executions>
                     <execution>
