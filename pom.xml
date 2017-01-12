@@ -61,7 +61,7 @@
                             <url>https://github.com/hakimel/reveal.js/archive/${revealjs.version}.zip</url>
                             <unpack>true</unpack>
                             <outputFileName>reveal.js-${revealjs.version}.zip</outputFileName>
-                            <outputDirectory>${basedir}/docs/</outputDirectory>
+                            <outputDirectory>${basedir}/docs/generated-slides/</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>
@@ -125,7 +125,7 @@
                                  
                                 <!--As we are downloading reveal.js in runtime, it sits in a nonstandard folder `reveal.js-${revealjs.version}`-->
                                 
-                                <revealjsdir>${basedir}/docs/reveal.js-${revealjs.version}</revealjsdir>
+                                <revealjsdir>${basedir}/docs/generated-slides/reveal.js-${revealjs.version}</revealjsdir>
 <!--                                                                put here the reveal.js specific attributes 
                                 see https://github.com/asciidoctor/asciidoctor-reveal.js/#revealjs-options -->
                                 <sourcedir>${basedir}/src/main/java</sourcedir>
