@@ -8,7 +8,7 @@
     <version>1.0</version>
     <packaging>jar</packaging>
     <properties>
-        <doc>10-01-2017-1.adoc</doc>
+        <doc>en/history-en.adoc</doc>
         <medium.publish>false</medium.publish>
     </properties>
     <parent>
@@ -110,7 +110,7 @@
                     -->
                 </configuration>
                 <executions>
-<!--                    <execution>
+                    <execution>
                         <id>generate-slides</id>
                         <phase>generate-resources</phase>
                         <goals>
@@ -166,7 +166,7 @@
                             </extensions>
 
                         </configuration>
-                    </execution>-->
+                    </execution>
                     <execution>
                         <id>generate-html</id>
                         <phase>generate-resources</phase>
