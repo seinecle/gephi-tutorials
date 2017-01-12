@@ -123,11 +123,11 @@
                             <sourceHighlighter>coderay</sourceHighlighter>
                             <attributes>
                                  
-                                As we are downloading reveal.js in runtime, it sits in a nonstandard folder `reveal.js-${revealjs.version}`
+                                <!--As we are downloading reveal.js in runtime, it sits in a nonstandard folder `reveal.js-${revealjs.version}`-->
                                 
-                                <revealjsdir>reveal.js-${revealjs.version}</revealjsdir>
-                                                                put here the reveal.js specific attributes 
-                                see https://github.com/asciidoctor/asciidoctor-reveal.js/#revealjs-options 
+                                <revealjsdir>${basedir}/docs/reveal.js-${revealjs.version}</revealjsdir>
+<!--                                                                put here the reveal.js specific attributes 
+                                see https://github.com/asciidoctor/asciidoctor-reveal.js/#revealjs-options -->
                                 <sourcedir>${basedir}/src/main/java</sourcedir>
                                 <revealjs_theme>white</revealjs_theme>
                                 <revealjs_transition>linear</revealjs_transition>

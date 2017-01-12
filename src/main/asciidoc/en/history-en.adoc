@@ -40,6 +40,6 @@ Gephi has evolved in several major milestones:
 
 pass:[<iframe width="600" height="600" align="center" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/13mTifgFRpEH0vpXUF2USdy6kTTtPuEq9FgWWXYEPIck/pubchart?oid=657051972&amp;format=interactive"></iframe>]
 
-ifdef::basebackend-pdf[]
+ifdef::basebackend-docbook[]
 image::https://docs.google.com/spreadsheets/d/13mTifgFRpEH0vpXUF2USdy6kTTtPuEq9FgWWXYEPIck/pubchart?oid=657051972&format=image[align="center", title="downloads"]
-endif::basebackend-pdf[]
+endif::basebackend-docbook[]
