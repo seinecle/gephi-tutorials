@@ -8,7 +8,7 @@ ifndef::sourcedir[:sourcedir: ../../../main/java]
 
 _want to contribute to these tutorials? Visit the https://github.com/seinecle/gephi-tutorials["readme"] file of this project!_
 
-The source of this document (written in asciiDoc) is available on https://github.com/seinecle/gephi-tutorials/blob/master/src/main/asciidoc/history-en.adoc[on Github].
+The source of this document (written in asciiDoc) is available on https://github.com/seinecle/gephi-tutorials/blob/master/src/main/asciidoc/en/history-en.adoc[on Github].
 The pdf, html and slide versions of this document are also on https://github.com/seinecle/gephi-tutorials/tree/master/target[Github].
 
 
@@ -25,7 +25,7 @@ image::matthieu-jacomy.jpg[align="center", title="Mathieu Jacomy"]
 //ST !
 In 2007/2008, this project morphed into Gephi, developed by a team of students at Université Technologique de Compiègne (https://www.utc.fr/en.html[UTC]).
 
-image::initial-team.png[align="center", title="The intiial Gephi team"]
+image::initial-team.png[width=450, align="center", title="The intiial Gephi team"]
 
 //ST !
 Gephi has evolved in several major milestones:

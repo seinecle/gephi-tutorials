@@ -1,0 +1,11 @@
+# root dir html files
+/*.html
+
+# test stuff
+test/*.html
+test/reveal.js/
+
+# node stuff
+node_modules/
+npm-debug.log
+build/

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <delete includeemptydirs="true">
+    <fileset excludes="*.pdf" dir="C:\Users\levallois\Google Drive\open\gephi tutorials\docs\target/generated-pdf"/>
+  </delete>
+</target>
+</project>
