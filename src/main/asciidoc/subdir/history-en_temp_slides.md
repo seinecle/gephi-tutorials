@@ -35,5 +35,8 @@ Gephi has evolved in several major milestones:
 - version 0.8 (2011): Introduced dynamic graphics. This version is the one where Gephi started becoming very popular.
 - version 0.9 (2016): An optimized graph engine is introduced. The codebase for the project is mavenized. The compatibility issues with Mac OS are solved.
 
+
+== !
+
 pass:[<iframe width="600" height="600" align="center" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/13mTifgFRpEH0vpXUF2USdy6kTTtPuEq9FgWWXYEPIck/pubchart?oid=657051972&amp;format=interactive"></iframe>]
 
