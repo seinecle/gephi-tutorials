@@ -125,7 +125,7 @@
                                  
                                 <!--As we are downloading reveal.js in runtime, it sits in a nonstandard folder `reveal.js-${revealjs.version}`-->
                                 
-                                <revealjsdir>${basedir}/docs/generated-slides/reveal.js-${revealjs.version}</revealjsdir>
+                                <revealjsdir>generated-slides/reveal.js-${revealjs.version}</revealjsdir>
 <!--                                                                put here the reveal.js specific attributes 
                                 see https://github.com/asciidoctor/asciidoctor-reveal.js/#revealjs-options -->
                                 <sourcedir>${basedir}/src/main/java</sourcedir>
