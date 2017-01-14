@@ -1,4 +1,6 @@
 = Open and collaborative Gephi tutorials (in multiple languages)
+
+image:https://badges.gitter.im/gephi-tutorials/Lobby.svg[link="https://gitter.im/gephi-tutorials/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"]
 Clément Levallois <clementlevallois@gmail.com>
 2017-01-11
 :revnumber: 1.0
