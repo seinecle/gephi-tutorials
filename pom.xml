@@ -8,7 +8,7 @@
     <version>1.0</version>
     <packaging>jar</packaging>
     <properties>
-        <doc>en/history-en.adoc</doc>
+        <doc>en/what-is-gephi-en.adoc</doc>
         <medium.publish>false</medium.publish>
     </properties>
     <parent>
@@ -61,7 +61,7 @@
                             <url>https://github.com/hakimel/reveal.js/archive/${revealjs.version}.zip</url>
                             <unpack>true</unpack>
                             <outputFileName>reveal.js-${revealjs.version}.zip</outputFileName>
-                            <outputDirectory>${basedir}/docs/generated-slides/</outputDirectory>
+                            <outputDirectory>${basedir}/docs/generated-slides</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>
@@ -117,17 +117,18 @@
                             <goal>process-asciidoc</goal>
                         </goals>
                         <configuration>
+                            <sourceDocumentName>${doc}</sourceDocumentName>
                             <outputDirectory>${basedir}/docs/generated-slides</outputDirectory>
                             <backend>revealjs</backend>
                             <templateDir>${basedir}/docs/asciidoctor-reveal.js-${asciidoctor-revealjs.version}/templates/slim</templateDir>
                             <sourceHighlighter>coderay</sourceHighlighter>
                             <attributes>
                                  
-                                <!--As we are downloading reveal.js in runtime, it sits in a nonstandard folder `reveal.js-${revealjs.version}`-->
+                                As we are downloading reveal.js in runtime, it sits in a nonstandard folder `reveal.js-${revealjs.version}`
                                 
                                 <revealjsdir>reveal.js-${revealjs.version}</revealjsdir>
-<!--                                                                put here the reveal.js specific attributes 
-                                see https://github.com/asciidoctor/asciidoctor-reveal.js/#revealjs-options -->
+                                put here the reveal.js specific attributes 
+                                see https://github.com/asciidoctor/asciidoctor-reveal.js/#revealjs-options 
                                 <sourcedir>${basedir}/src/main/java</sourcedir>
                                 <revealjs_theme>white</revealjs_theme>
                                 <revealjs_transition>linear</revealjs_transition>
@@ -150,6 +151,7 @@
                             <goal>process-asciidoc</goal>
                         </goals>
                         <configuration>
+                            <sourceDocumentName>${doc}</sourceDocumentName>
                             <outputDirectory>${basedir}/docs/generated-pdf</outputDirectory>
                             <backend>pdf</backend>
                             <sourceHighlighter>coderay</sourceHighlighter>
@@ -187,7 +189,6 @@
                                 <icons>font</icons>
                                 <pagenums/>
                                 <toc/>
-                                <currjob>yes html</currjob>
                             </attributes>
                         </configuration>
                     </execution>
@@ -222,7 +223,7 @@
                 <artifactId>MojoPublishToMedium</artifactId>
                 <version>1.0</version>
                 <configuration>
-                    <fileName>${basedir}/docs/generated-html/${doc}</fileName>
+                    <fileName>${project.build.directory}\generated-html\${doc}</fileName>
                 </configuration>
                 <executions>
                     <execution>
