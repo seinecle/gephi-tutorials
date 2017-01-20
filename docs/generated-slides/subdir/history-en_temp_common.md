@@ -6,6 +6,7 @@ last modified: {docdate}
 
 :revnumber: 1.0
 :example-caption!:
+:sourcedir: ../../../main/java
 
 == 2006 and Web Atlas
 

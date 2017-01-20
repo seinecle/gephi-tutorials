@@ -7,6 +7,10 @@ last modified: {docdate}
 :revnumber: 1.0
 :example-caption!:
 
+:title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
+
+image:gephi-logo-2010-transparent.png[width="450" align="center"]
+
 
 == the leading software to visualize networks on Linux, Windows and Apple computers
 
@@ -42,7 +46,7 @@ Developers who modify the Gephi code base are required to make these changes pub
 
 - Gephi won a http://www.oracle.com/technetwork/articles/java/dukeschoicewinners-171159.html[Duke Award in 2010]. Duke awards "recognize and honor extreme innovation in the world of Java technology".
 - Gephi evolved importantly since 2006 to adopt new, best performing techs for the visualization of very large graphs on the desktop
-- The code base of Gephi is maintained with the best standards to insure a https://gephi.wordpress.com/tag/code/[a stable application, ease of maintainance and modularity / extensibiltiy].
+- The code base of Gephi is maintained with the best standards to insure a https://gephi.wordpress.com/tag/code/[a stable application, ease of maintainance and modularity / extensibility].
 
 
 == modular and extensible
@@ -51,7 +55,7 @@ Developers who modify the Gephi code base are required to make these changes pub
 
 - Gephi is "cut" in a large number of modules, each providing a specific function. This makes it easier to maintain and evolve the software, by working on independent parts.
 - Since version 0.9 the https://gephi.wordpress.com/2015/12/04/gephi-boosts-its-performance-with-new-graphstore-core/["graph store"] of Gephi has become a completely independent module: it can be reused by another software.
-- Anybody can create new modules for Gephi! https://gephi.org/plugins/#/[They are called "plugins"]. You and me can create plugins to add features to Gephi. They integrated with Gephi seamlessly.
+- Anybody can create new modules for Gephi! https://gephi.org/plugins/#/[They are called "plugins"]. They integrate with Gephi seamlessly.
 
 == created, maintained and documented by volunteers, for the community.
 
