@@ -9,7 +9,7 @@ last modified: {docdate}
 
 :title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
 
-image:gephi-logo-2010-transparent.png[width="450" align="center"]
+image::gephi-logo-2010-transparent.png[width="450" align="center"]
 
 
 == the leading software to visualize networks on Linux, Windows and Apple computers

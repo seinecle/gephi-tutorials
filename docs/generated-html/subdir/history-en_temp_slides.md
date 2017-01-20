@@ -7,6 +7,10 @@ last modified: {docdate}
 :revnumber: 1.0
 :example-caption!:
 
+:title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
+
+image:gephi-logo-2010-transparent.png[width="450" align="center"]
+
 
 == History of Gephi
 
