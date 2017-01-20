@@ -1,14 +1,11 @@
 = History of Gephi
 Clément Levallois <clementlevallois@gmail.com>
 2017-01-11
+
+last modified: {docdate}
+
 :revnumber: 1.0
 :example-caption!:
-
-_want to contribute to these tutorials? Visit the https://github.com/seinecle/gephi-tutorials["readme"] file of this project!_
-
-The source of this document (written in asciiDoc) is available on https://github.com/seinecle/gephi-tutorials/blob/master/src/main/asciidoc/en/history-en.adoc[on Github].
-The pdf, html and slide versions of this document are also on https://github.com/seinecle/gephi-tutorials/tree/master/target[Github].
-
 
 
 == History of Gephi
@@ -16,8 +13,6 @@ The pdf, html and slide versions of this document are also on https://github.com
 The origin of Gephi lays in http://webatlas.fr/wp/[Web Atlas], a project started in 2006 involving Mathieu Jacomy, who was interested in the exploration of web-based graphs.
 This was about the same time http://www.cond.org/[Eytan Adar] was developing his https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjljNmDtbrRAhXL6xQKHWDdDRMQFggcMAA&url=http%3A%2F%2Fgraphexploration.cond.org%2Fchi2006%2Fguess-chi2006.pdf&usg=AFQjCNETmuZqHoaZyJSYpSuTGQ87PNSCLA&sig2=ns0z9wqVRIo5riVtHv1QfQ[GUESS software]
 
-[.text-center]
-.Package Overview
 image::matthieu-jacomy.jpg[align="center", title="Mathieu Jacomy", id=package_overview]
 
 == !
@@ -26,17 +21,44 @@ In 2007/2008, this project morphed into Gephi, developed by a team of students a
 
 image::initial-team.png[width=450, align="center", title="The initial Gephi team"]
 
+
 == !
 
 Gephi has evolved in several major milestones:
 
 - version 0.6 (2009): the initial public release. Contains already the filter system.
 - version 0.7 (2010): Major overhaul of the graphics interface. Started using OpenGL framework for graphics acceleration. A system of plugin is created.
-- version 0.8 (2011): Introduced dynamic graphics. This version is the one where Gephi started becoming very popular.
-- version 0.9 (2016): An optimized graph engine is introduced. The codebase for the project is mavenized. The compatibility issues with Mac OS are solved.
-
 
 == !
 
+- version 0.8 (2011): Introduced dynamic graphs.
+
+2011 to 2016: Many plugins were created for Gephi, and the software sarted becoming much popular.
+
+Mac computer users had issues installing Gephi on their computers because of a Java compatibility issue.
+
+== !
+
+version 0.9 (December 2015):
+
+- A graph engine optimized for memory is introduced: Gephi can handle much larger graphs.
+- The codebase for the project is "mavenized", making the code more modular and easier to maintain.
+- Compatibility issues with Mac OS are solved.
+
+== !
+
+In 2016, Gephi is translated in French, Spanish, Japanese,  Russian, Polish, Brazilian Portuguese, Chinese, Czech and German.
+
+== Cumulative downloads for Gephi
+
 pass:[<iframe width="600" height="600" align="center" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/13mTifgFRpEH0vpXUF2USdy6kTTtPuEq9FgWWXYEPIck/pubchart?oid=657051972&amp;format=interactive"></iframe>]
 
+
+== General interest for Gephi and related software over 2004 - 2016
+
+pass:[<iframe scrolling="no" style="border:none;" width="640" height="600" src="https://www.google.com/trends/fetchComponent?hl=en-US&q=gephi,vosviewer,nodexl,cytoscape,ucinet%20&cmpt=q&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=640&h=600"></iframe>]
+
+
+== Academic citations for Gephi (counting only citations to Bastian et al., 2009)
+
+image::google-scholar-gephi.png[align="center", title=""]
