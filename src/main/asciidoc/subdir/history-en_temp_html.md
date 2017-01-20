@@ -8,6 +8,10 @@ last modified: {docdate}
 :example-caption!:
 :sourcedir: ../../../main/java
 
+:title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
+
+image:gephi-logo-2010-transparent.png[width="450" align="center"]
+
 == 2006 and Web Atlas
 
 //ST: History of Gephi
