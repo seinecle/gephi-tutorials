@@ -60,7 +60,6 @@ In 2016, Gephi is translated in French, Spanish, Japanese,  Russian, Polish,
 
 
 image::Gephi--cumulative-downloads.png[align="center", title="Gephi, cumulative downloads"]
-{nbsp} +
 
 //ST: General interest for Gephi and related software over 2004 - 2016
 

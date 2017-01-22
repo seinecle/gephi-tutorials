@@ -8,11 +8,18 @@ ifndef::sourcedir[:sourcedir: ../../main/java]
 
 image:https://badges.gitter.im/gephi-tutorials/Lobby.svg[link="https://gitter.im/gephi-tutorials/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"]
 
+
+Website: https://seinecle.github.io/gephi-tutorials/
+
 This is a project to write Gephi tutorials in an open and collaborative way:
 
 - using git for collaboration and versioning
 - written in asciidoc to ease the conversion to pdf, html, slides, etc.
+- tutorials use a lot of charts. I use Google Drawings for that. Very practical for online editing, and live updates: charts made on Google Drawing can be embedded in web documents, so that any correction brought to a chart is instantaneously reflected in the web versions of the tutorials. Great stuff.
+
 
 The project is just starting (even this readme page is just a sketch).
 
 Want to join? Questions? Create a Github account and open an issue here!
+
+by http://clementlevallois.net[Clément Levallois], Associate Professor at http://www.emlyon.com[em*lyon* business school].
