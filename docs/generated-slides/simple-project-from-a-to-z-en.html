@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="author" content="Clément Levallois" /><title>Simple Project from A to Z</title><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><link href="reveal.js-3.1.0/css/reveal.css" rel="stylesheet" /><link rel="stylesheet" href="reveal.js-3.1.0/css/theme/white.css" id="theme" /><style>/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="author" content="Clément Levallois" /><title>Simple Gephi Project from A to Z</title><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><link href="reveal.js-3.1.0/css/reveal.css" rel="stylesheet" /><link rel="stylesheet" href="reveal.js-3.1.0/css/theme/white.css" id="theme" /><style>/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
 /*pre.CodeRay {background-color:#f7f7f8;}*/
 .CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
 .CodeRay span.line-numbers{display:inline-block;margin-right:.5em;color:rgba(0,0,0,.3)}
@@ -86,12 +86,14 @@ table.CodeRay td.code>pre{padding:0}
 .CodeRay .insert .insert{color:#080}
 .CodeRay .delete .delete{color:#800}
 .CodeRay .change .change{color:#66f}
-.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.1.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.1.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>Simple Project from A to Z</h1><div class="preamble"><div class="paragraph"><p>last modified: 2017-01-20</p></div>
+.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.1.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.1.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>Simple Gephi Project from A to Z</h1><div class="preamble"><div class="paragraph"><p>last modified: 2017-01-22</p></div>
 <div class="imageblock" style="text-align: center"><img src="images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450" /></div></div><p class="author"><small>Clément Levallois</small></p></section>
 <section id="_description_of_the_project"><h2>Description of the project</h2><div class="paragraph"><p>This project is for complete beginners to Gephi.
 It supposes you have Gephi installed and running on your computer. That is all.</p></div>
 <div class="paragraph"><p>When finishing this tutorial, you should be able to:</p></div>
-<div class="ulist"><ul><li><p>download a network file for this exercise</p></li><li><p>description of the file / the network</p></li><li><p>open a network file</p></li><li><p>read the report after opening a file</p></li><li><p>layout the network</p></li><li><p>show labels</p></li><li><p>visualize attributes of the network</p></li><li><p>compute the centrality of the nodes in the network</p></li><li><p>visualize attributes created by Gephi</p></li><li><p>export a visualization as a picture or pdf</p></li></ul></div></section>
+<div class="ulist"><ul><li><p>understand the vocabulary to discuss networks</p></li><li><p>download a network file for this exercise</p></li><li><p>description of the file / the network</p></li><li><p>open a network file</p></li><li><p>read the report after opening a file</p></li><li><p>show the labels of the nodes</p></li><li><p>layout the network</p></li><li><p>visualize attributes of the network</p></li><li><p>compute the centrality of the nodes in the network</p></li><li><p>visualize attributes created by Gephi</p></li><li><p>export a visualization as a picture or pdf</p></li></ul></div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/terminology-for-networks.png" alt="terminology for networks" /></div><div class="title">Figure 1. terminology for networks</div>
+<div class="paragraph"><p>&#160;<br /></p></div></section>
 <section id="_download_a_network_file"><h2>download a network file</h2><div class="paragraph"><p><a href="../resources/miserables.zip">download this zip file</a> and unzip it on your computer.</p></div>
 <div class="paragraph"><p>You should find the file <code>miserables.gexf</code> in it.</p></div>
 <div class="paragraph"><p>Save it in a folder you will remember (or create a folder specially for this small project).</p></div></section>
@@ -99,34 +101,50 @@ It supposes you have Gephi installed and running on your computer. That is all.<
 <div class="paragraph"><p>A link between characters A and B means they appeared on the same page or paragraph in the novel.</p></div>
 <div class="paragraph"><p>The file name ends with ".gexf", which just means this is a text file where the network information is stored (name of the characters, their relations, etc.), following some conventions.</p></div></section>
 <section><div class="ulist"><ul><li><p>open Gephi. On the Welcome screen that appears,  click on <code>Open Graph File</code></p></li><li><p>find <code>miserables.gexf</code> on your computer and open it</p></li></ul></div>
-<div class="imageblock" style="text-align: center"><img src="images/en/gephi-welcome-screen-open-graph-en.png" alt="gephi welcome screen open graph en" /></div></section>
+<div class="imageblock" style="text-align: center"><img src="images/en/gephi-welcome-screen-open-graph-en.png" alt="gephi welcome screen open graph en" /></div><div class="title">Figure 2. welcome screen</div></section>
 <section><div class="paragraph"><p>A report window will open, giving you basic info on the network you opened:</p></div>
-<div class="imageblock" style="text-align: center"><img src="images/en/opening-file-report-en.png" alt="opening file report en" /></div></section>
+<div class="imageblock" style="text-align: center"><img src="images/en/opening-file-report-en.png" alt="opening file report en" /></div><div class="title">Figure 3. report window</div></section>
 <section><div class="paragraph"><p>This tells you that the network comprises 74 characters, connected by 248 links.</p></div>
 <div class="paragraph"><p>Links are undirected, meaning that if A is connected to B, then it is the same as B connected to A.</p></div>
 <div class="paragraph"><p>The report also tells us the graph is not dynamic: it means there is no evolution or chronology, it won&#8217;t "move in time".</p></div>
 <div class="paragraph"><p>Click on <code>OK</code> to see the graph in Gephi.</p></div></section>
-<section><div class="imageblock" style="text-align: center"><img src="images/en/project-initial-view.png" alt="project initial view" /></div>
+<section><div class="imageblock" style="text-align: center"><img src="images/en/project-initial-view.png" alt="project initial view" /></div><div class="title">Figure 4. initial view when opening a graph</div>
 <div class="paragraph"><p>This is how the network appears in Gephi. Not very useful! Let&#8217;s examine what we have here.</p></div></section>
-<section><div class="imageblock" style="text-align: center"><img src="images/project-initial-view-1-3-en.png" alt="project initial view 1 3 en" /></div><div class="title">Figure 1. project-initial-view-1-3-en</div>
+<section><div class="imageblock" style="text-align: center"><img src="images/the-3-main-screens-in-Gephi.png" alt="the 3 main screens in Gephi" /></div><div class="title">Figure 5. the 3 main screens in Gephi</div>
 <div class="paragraph"><p>&#160;<br /></p></div></section>
-<section><div class="paragraph"><p>Gephi has 3 main screens: 1. Overview, 2. Data Laboratory 3. and Preview.
-What we see here is the Overview.
-This is where we can explore the graph visually.</p></div></section>
-<section><div class="imageblock" style="text-align: center"><img src="images/project-initial-view-4-5-en.png" alt="project initial view 4 5 en" /></div><div class="title">Figure 2. project-initial-view-4-5-en</div>
+<section><div class="paragraph"><p>Gephi has 3 main screens:</p></div>
+<div class="olist arabic"><ol class="arabic"><li><p>Overview: where we can explore the graph visually</p></li><li><p>Data Laboratory: provides an "Excel" table view of the data in network</p></li><li><p>Preview: where we polish the visualization before exporting it as a pictue or pdf</p></li></ol></div>
+<div class="paragraph"><p>What we see here is the Overview.</p></div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/Filters-and-statistics-panels-in-Gephi.png" alt="Filters and statistics panels in Gephi" /></div><div class="title">Figure 6. Filters and statistics panels in Gephi</div>
 <div class="paragraph"><p>&#160;<br /></p></div></section>
 <section><div class="paragraph"><p>In the Overview, the graph is shown at the center. Around it, several panels help us fine tune the visualization.</p></div>
-<div class="olist arabic"><ol class="arabic" start="4"><li><p>"Statistics", where we can compute metrics on the network</p></li><li><p>"Filters", where we can hide different parts of the network under a variety of conditions</p></li></ol></div></section>
-<section><div class="imageblock" style="text-align: center"><img src="images/project-initial-view-6-7-en.png" alt="project initial view 6 7 en" /></div><div class="title">Figure 3. project-initial-view-6-7-en</div>
+<div class="olist arabic"><ol class="arabic" start="4"><li><p>"Filters", where we can hide different parts of the network under a variety of conditions</p></li><li><p>"Statistics", where we can compute metrics on the network</p></li></ol></div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/Appearance-and-layout-panels-in-Gephi.png" alt="Appearance and layout panels in Gephi" /></div><div class="title">Figure 7. Appearance and layout panels in Gephi</div>
 <div class="paragraph"><p>&#160;<br /></p></div></section>
 <section><div class="olist arabic"><ol class="arabic" start="6"><li><p>"Appearance", where we can change colors and sizes in interesting ways</p></li><li><p>"Layouts", where we can apply automated procedures to change the position of the network</p></li></ol></div></section>
-<section><div class="imageblock" style="text-align: center"><img src="images/project-initial-view-8-10-en.png" alt="project initial view 8 10 en" /></div><div class="title">Figure 4. project-initial-view-8-10-en</div>
+<section><div class="imageblock" style="text-align: center"><img src="images/3-groups-of-icons.png" alt="3 groups of icons" /></div><div class="title">Figure 8. 3 groups of icons</div>
 <div class="paragraph"><p>&#160;<br /></p></div></section>
-<section><div class="olist arabic"><ol class="arabic" start="8"><li><p>A series of icons to add / colorize nodes and links manually, by cliking on them</p></li><li><p>Options and sliders to change the size of all nodes, links, or labels</p></li><li><p>More options become visible if we click on this <strong>little arrow head pointing up</strong>.</p></li></ol></div></section>
+<section><div class="olist arabic"><ol class="arabic" start="8"><li><p>A series of icons to add / colorize nodes and links manually, by cliking on them</p></li><li><p>Options and sliders to change the size of all nodes, links, or labels</p></li><li><p>More options become visible if we click on this <strong>little arrow head pointing up</strong></p></li></ol></div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/showing-node-labels.png" alt="showing node labels" /></div><div class="title">Figure 9. showing node labels</div>
+<div class="paragraph"><p>&#160;<br /></p></div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/selecting-the-force-atlas-2-layout.png" alt="selecting the force atlas 2 layout" /></div><div class="title">Figure 10. selecting the force atlas 2 layout</div>
+<div class="paragraph"><p>&#160;<br /></p></div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/changing-a-few-parameters-and-launching-the-layout.png" alt="changing a few parameters and launching the layout" /></div><div class="title">Figure 11. changing a few parameters and launching the layout</div>
+<div class="paragraph"><p>&#160;<br /></p></div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/result-of-Force-Atlas-2-layout.png" alt="result of Force Atlas 2 layout" /></div><div class="title">Figure 12. result of Force Atlas 2 layout</div>
+<div class="paragraph"><p>&#160;<br /></p></div></section>
+<section id="__to_be_continued"><h2>(to be continued)</h2></section>
 <section id="_questions_and_exercises"><h2>questions and exercises</h2></section>
 <section><div class="olist arabic"><ol class="arabic"><li><p>Open the file <code>miserables.gexf</code> with a text editor (here is how to do it on a <a href="http://www.dummies.com/computers/macs/how-to-open-and-edit-a-text-file-on-a-mac/">Mac</a>, and on <a href="https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/app_notepad.mspx?mfr=true">Windows</a>). See how the nodes and the links are written in the file. Can you find the character Javert?</p></li></ol></div></section>
-<section><div class="olist arabic"><ol class="arabic" start="2"><li><p>Our network of Les Miserables characters was undirected. Can you think of networks which are directed?
-Imagine how undirected and directed networks differ when computing centrality, for example.</p></li></ol></div></section></div></div><script src="reveal.js-3.1.0/lib/js/head.min.js"></script><script src="reveal.js-3.1.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+<section><div class="olist arabic"><ol class="arabic" start="2"><li><p>Our network of Les Miserables characters was undirected. Can you think of networks which are directed?</p></li></ol></div>
+<div class="paragraph"><p>Imagine how undirected and directed networks differ when computing centrality, for example.</p></div></section>
+<section><div class="olist arabic"><ol class="arabic" start="3"><li><p>Force Atlas 2 is a layout which brings together connected node, and spreads out unconnected nodes. What will happen to the nodes wich have no relation at all with other nodes (called "isolated nodes").</p></li></ol></div>
+<div class="paragraph"><p>How will these isolated nodes move on screen?</p></div></section>
+<section><div class="olist arabic"><ol class="arabic" start="4"><li><p>When applying the Force Atlas 2 layout, the network moves quickly, then stabilizes, and then keeps moving a bit.</p></li></ol></div>
+<div class="paragraph"><p>Can you guess why this is happening?</p></div></section>
+<section><div class="olist arabic"><ol class="arabic" start="5"><li><p>In the list of layouts, Force Atlas 2 is just one of many options you can choose.
+Try "Fruchterman Reingold" and "Yfan Hu".</p></li></ol></div>
+<div class="paragraph"><p>These are layouts which follow the same logic as Force Atlas 2, but with slight variations. Explore how these algorithms result in similar, yet specific layouts.</p></div></section></div></div><script src="reveal.js-3.1.0/lib/js/head.min.js"></script><script src="reveal.js-3.1.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
 Reveal.initialize({
   // Display controls in the bottom right corner
   controls: true,
