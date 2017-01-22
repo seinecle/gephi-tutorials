@@ -118,7 +118,7 @@ In the Overview, the graph is shown at the center. Around it, several panels hel
 5. "Statistics", where we can compute metrics on the network
 
 //ST: !
-image::https://docs.google.com/drawings/d/1J4wCFaXwIaRmiiG7t69s8HmhA0hnR0Sp0hwgOFquFdw/pub?w=480[align="center", title="Appearand and layout panels in Gephi"]
+image::https://docs.google.com/drawings/d/1J4wCFaXwIaRmiiG7t69s8HmhA0hnR0Sp0hwgOFquFdw/pub?w=480[align="center", title="Appearance and layout panels in Gephi"]
 
 
 //ST: !
@@ -159,7 +159,7 @@ image::https://docs.google.com/drawings/d/1TnbclWXKFJiYUOJTHAl2Fyh5j3KgxV5TyLGyN
 
 //ST: !
 
-image::https://docs.google.com/drawings/d/1RkRn4Q8Ln-C1qJCiuBp2FN51GavaaLlm17QnVOO_av4/pub?w=960&h=720[align="center", title="applying the Force Atlas 2 layout: the result"]
+image::https://docs.google.com/drawings/d/1RkRn4Q8Ln-C1qJCiuBp2FN51GavaaLlm17QnVOO_av4/pub?w=960&h=720[align="center", title="result of Force Atlas 2 layout"]
 
 
 
@@ -199,4 +199,4 @@ Can you guess why this is happening?
 5. In the list of layouts, Force Atlas 2 is just one of many options you can choose.
 Try "Fruchterman Reingold" and "Yfan Hu".
 
-These are layouts which follow the same logic as Force Atlas 2, but with sligh variations. Explore how these algorithms result in similar, yet specific layouts.
+These are layouts which follow the same logic as Force Atlas 2, but with slight variations. Explore how these algorithms result in similar, yet specific layouts.
