@@ -34,7 +34,6 @@ When finishing this tutorial, you should be able to:
 
 == !
 image::terminology-for-networks.png[align="center",title="terminology for networks"]
-{nbsp} +
 
 
 
@@ -87,7 +86,6 @@ This is how the network appears in Gephi. Not very useful! Let's examine what we
 
 == !
 image::the-3-main-screens-in-Gephi.png[align="center", title="the 3 main screens in Gephi"]
-{nbsp} +
 
 == !
 Gephi has 3 main screens:
@@ -101,7 +99,6 @@ What we see here is the Overview.
 == !
 
 image::Filters-and-statistics-panels-in-Gephi.png[align="center", title="Filters and statistics panels in Gephi"]
-{nbsp} +
 
 == !
 In the Overview, the graph is shown at the center. Around it, several panels help us fine tune the visualization.
@@ -112,7 +109,6 @@ In the Overview, the graph is shown at the center. Around it, several panels hel
 
 == !
 image::Appearance-and-layout-panels-in-Gephi.png[align="center", title="Appearance and layout panels in Gephi"]
-{nbsp} +
 
 
 == !
@@ -123,7 +119,6 @@ image::Appearance-and-layout-panels-in-Gephi.png[align="center", title="Appearan
 
 == !
 image::3-groups-of-icons.png[align="center", title="3 groups of icons"]
-{nbsp} +
 
 == !
 
@@ -138,25 +133,21 @@ image::3-groups-of-icons.png[align="center", title="3 groups of icons"]
 == !
 
 image::showing-node-labels.png[align="center", title="showing node labels"]
-{nbsp} +
 
 
 
 == !
 
 image::selecting-the-force-atlas-2-layout.png[align="center", title="selecting the force atlas 2 layout"]
-{nbsp} +
 
 == !
 
 image::changing-a-few-parameters-and-launching-the-layout.png[align="center", title="changing a few parameters and launching the layout"]
-{nbsp} +
 
 
 == !
 
 image::result-of-Force-Atlas-2-layout.png[align="center", title="result of Force Atlas 2 layout"]
-{nbsp} +
 
 
 

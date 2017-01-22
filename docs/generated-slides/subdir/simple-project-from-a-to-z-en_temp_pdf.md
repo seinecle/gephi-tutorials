@@ -120,7 +120,7 @@ In the Overview, the graph is shown at the center. Around it, several panels hel
 5. "Statistics", where we can compute metrics on the network
 
 //ST: !
-image::Appearand-and-layout-panels-in-Gephi.png[align="center", title="Appearand and layout panels in Gephi"]
+image::Appearance-and-layout-panels-in-Gephi.png[align="center", title="Appearance and layout panels in Gephi"]
 {nbsp} +
 
 
@@ -166,7 +166,7 @@ image::changing-a-few-parameters-and-launching-the-layout.png[align="center", ti
 
 //ST: !
 
-image::applying-the-Force-Atlas-2-layout:-the-result.png[align="center", title="applying the Force Atlas 2 layout: the result"]
+image::result-of-Force-Atlas-2-layout.png[align="center", title="result of Force Atlas 2 layout"]
 {nbsp} +
 
 
@@ -207,4 +207,4 @@ Can you guess why this is happening?
 5. In the list of layouts, Force Atlas 2 is just one of many options you can choose.
 Try "Fruchterman Reingold" and "Yfan Hu".
 
-These are layouts which follow the same logic as Force Atlas 2, but with sligh variations. Explore how these algorithms result in similar, yet specific layouts.
+These are layouts which follow the same logic as Force Atlas 2, but with slight variations. Explore how these algorithms result in similar, yet specific layouts.
