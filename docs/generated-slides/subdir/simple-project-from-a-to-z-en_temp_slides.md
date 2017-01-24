@@ -236,7 +236,7 @@ image::Adjusting-edge-thickness.png[align="center",title="Adjusting edge thickne
 == Computing the centrality of the nodes
 == !
 
-"Centrality" is one of the most common things to measure on a network.
+"Centrality" is a very good metrics to first get an idea of a network.
 What does centrality mean? Intuitively, we understand that a "central" node will probably sit in the middle of the network.
 But how to measure that "scientifically", so that we have an objective confirmation of our visual impression?
 
@@ -256,24 +256,24 @@ Another measure is `betweenness centrality`. This one is more tricky.
 
 - A node which is on many shortest paths is "between" many nodes. And when you realize it, it is a very intuitive sense of what it means to "be central". These nodes have a high `betweenness centrality`.
 
-//ST:!
+== !
 
-The good news is, you don't have to find all shortest paths and then find which nodes are on many shortest paths. Gephi does it for you:
+Gephi computes this for you. Find "Network diameter" in the statistics panel and click "run":
 
-image::Find-Network-Diameter-in-the-statistics-panel-and-click-on-Run.png[align="center",title="Find Network Diameter in the statistics panel and click on Run"]
+image::Computing-betweenness-centrality.png[align="center",title="Computing betweenness centrality"]
 
-//ST:!
-This will open a window where you can choose parameters. They are explained in a more advanced tutorials. For the moment leave them unchanged, and click "OK":
+== !
+This will open a window with parameters (explained in a more advanced tutorials). Click "OK":
 
 image::Parameters-for-the-computation-of-betweenness-centrality.png[align="center",title="Parameters for the computation of betweenness centrality"]
 
 
-//ST:!
-The computation takes place, it lasts less than a second. Then a report window opens: This report is explained in a more advanced tutorial. Close the window.
+== !
+A report window opens (also explained in a other tutorials). Close it.
 
 image::Report-after-the-computation-of-betweenness-centrality.png[align="center",title="Report after the computation of betweenness centrality"]
 
-Gephi has computed the betweenness centrality of each node in the network. Now we can visualize this information.
+Now we can visualize this information.
 
 
 

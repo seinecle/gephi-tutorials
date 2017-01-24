@@ -211,9 +211,6 @@
                                              excludes="*.pdf"/>
                                 </delete>
                             </target>
-                            <attributes>
-                                <currjob>yes pdf</currjob>
-                            </attributes>
                         </configuration>
                     </execution>
                 </executions>

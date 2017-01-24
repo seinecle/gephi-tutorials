@@ -274,21 +274,21 @@ Another measure is `betweenness centrality`. This one is more tricky.
 
 - A node which is on many shortest paths is "between" many nodes. And when you realize it, it is a very intuitive sense of what it means to "be central". These nodes have a high `betweenness centrality`.
 
-//ST:!
+//ST: !
 === Computing the betweennees centrality of all nodes with Gephi.
 
-The good news is, you don't have to find all shortest paths and then find which nodes are on many shortest paths. Gephi does it for you:
+Gephi computes this for you. Find "Network diameter" in the statistics panel and click "run":
 
-image::Find-Network-Diameter-in-the-statistics-panel-and-click-on-Run.png[align="center",title="Find Network Diameter in the statistics panel and click on Run"]
+image::Computing-betweenness-centrality.png[align="center",title="Computing betweenness centrality"]
 
-//ST:!
-This will open a window where you can choose parameters. They are explained in a more advanced tutorials. For the moment leave them unchanged, and click "OK":
+//ST: !
+This will open a window where you can choose parameters. They are explained in a more advanced tutorials. Leave them unchanged, and click "OK":
 
 image::Parameters-for-the-computation-of-betweenness-centrality.png[align="center",title="Parameters for the computation of betweenness centrality"]
 
 
-//ST:!
-The computation takes place, it lasts less than a second. Then a report window opens: This report is explained in a more advanced tutorial. Close the window.
+//ST: !
+A report window opens (it is explained in a more advanced tutorial). Close it.
 
 image::Report-after-the-computation-of-betweenness-centrality.png[align="center",title="Report after the computation of betweenness centrality"]
 

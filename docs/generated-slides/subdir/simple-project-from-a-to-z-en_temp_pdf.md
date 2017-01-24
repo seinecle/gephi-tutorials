@@ -249,7 +249,51 @@ image::Adjusting-label-size.png[align="center",title="Adjusting label size"]
 
 image::Adjusting-edge-thickness.png[align="center",title="Adjusting edge thickness"]
 
+== Computing the centrality of the nodes
 
+//ST: Computing the centrality of the nodes
+//ST: !
+=== Definitions of centrality
+
+"Centrality" is a very good metrics to first get an idea of a network.
+What does centrality mean? Intuitively, we understand that a "central" node will probably sit in the middle of the network.
+But how to measure that "scientifically", so that we have an objective confirmation of our visual impression?
+
+There are several ways, all equally interesting.
+
+//ST: !
+We can measure `degree centrality`. "Degree" is the technical term for "number of connections that a node has".
+
+So, `degree centrality` just means that the most central node is the node which has the most connections. Simple!
+
+//ST: !
+Another measure is `betweenness centrality`. This one is more tricky.
+
+- First, you have to imagine what is a `shortest path`.
+   - A `path` from node A to node B is a chain of nodes, the road if you will, that you have to traverse to go from A to B.
+   - The `shortest path` from A to B is the quickest road from A to B: the path that has the smallest number of nodes between A and B.
+
+- A node which is on many shortest paths is "between" many nodes. And when you realize it, it is a very intuitive sense of what it means to "be central". These nodes have a high `betweenness centrality`.
+
+//ST: !
+=== Computing the betweennees centrality of all nodes with Gephi.
+
+Gephi computes this for you. Find "Network diameter" in the statistics panel and click "run":
+
+image::Computing-betweenness-centrality.png[align="center",title="Computing betweenness centrality"]
+
+//ST: !
+This will open a window with parameters (explained in a more advanced tutorials). Click "OK":
+
+image::Parameters-for-the-computation-of-betweenness-centrality.png[align="center",title="Parameters for the computation of betweenness centrality"]
+
+
+//ST: !
+A report window opens (also explained in a other tutorials). Close it.
+
+image::Report-after-the-computation-of-betweenness-centrality.png[align="center",title="Report after the computation of betweenness centrality"]
+
+Now we can visualize this information.
 
 
 == (to be continued)
@@ -288,3 +332,8 @@ Can you guess why this is happening?
 Try "Fruchterman Reingold" and "Yfan Hu".
 
 These are layouts which follow the same logic as Force Atlas 2, but with slight variations. Explore how these algorithms result in similar, yet specific layouts.
+
+//ST: !
+[start=6]
+6. In this tutorial, we defined degree centrality.
+Can you imagine a situation when a node with the largest degree centrality will actually be in the periphery of the network? You can draw a toy network to help you figure.
