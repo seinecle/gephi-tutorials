@@ -522,17 +522,29 @@ table.CodeRay td.code>pre{padding:0}
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_description_of_the_project">Description of the project</a></li>
-<li><a href="#_know_the_terminology_to_discuss_networks">know the terminology to discuss networks</a></li>
+<li><a href="#_be_familiar_with_the_terminology_to_discuss_networks">be familiar with the terminology to discuss networks</a></li>
 <li><a href="#_download_a_network_file">download a network file</a></li>
 <li><a href="#_description_of_the_file_the_network">description of the file / the network</a></li>
-<li><a href="#_open_the_network">open the network</a></li>
+<li><a href="#_open_the_network_in_gephi">open the network in Gephi</a></li>
 <li><a href="#_read_the_report_after_opening_a_file">read the report after opening a file</a></li>
 <li><a href="#_initial_view">initial view</a></li>
 <li><a href="#_basic_view_of_gephi_s_interface">basic view of Gephi&#8217;s interface</a></li>
 <li><a href="#_showing_labels_of_the_nodes">showing labels of the nodes</a></li>
 <li><a href="#_layout_spatialize_the_network">layout ("spatialize") the network</a></li>
 <li><a href="#_visualize_the_properties_of_the_nodes">visualize the properties of the nodes</a></li>
-<li><a href="#_prettify_the_network_for_enhanced_readability">prettify the network for enhanced readability</a></li>
+<li><a href="#_prettify_the_network_for_enhanced_readability">prettify the network for enhanced readability</a>
+<ul class="sectlevel2">
+<li><a href="#_1_enlarge_or_shrink_the_network">1. Enlarge or shrink the network</a></li>
+<li><a href="#_2_prevent_the_labels_from_overlapping">2. Prevent the Labels from overlapping</a></li>
+<li><a href="#_3_changing_the_size_of_the_labels">3. Changing the size of the labels</a></li>
+<li><a href="#_4_adjusting_the_thickness_of_the_links">4. Adjusting the thickness of the links</a></li>
+</ul>
+</li>
+<li><a href="#_computing_the_centrality_of_the_nodes">Computing the centrality of the nodes</a>
+<ul class="sectlevel2">
+<li><a href="#_computing_the_betweennees_centrality_of_all_nodes_with_gephi">Computing the betweennees centrality of all nodes with Gephi.</a></li>
+</ul>
+</li>
 <li><a href="#__to_be_continued">(to be continued)</a></li>
 <li><a href="#_questions_and_exercises">questions and exercises</a></li>
 </ul>
@@ -564,7 +576,7 @@ It supposes you have Gephi installed and running on your computer. That is all.<
 <div class="ulist">
 <ul>
 <li>
-<p>understand the vocabulary to discuss networks</p>
+<p>be familiar with the vocabulary to discuss networks</p>
 </li>
 <li>
 <p>download a network file for this exercise</p>
@@ -604,7 +616,7 @@ It supposes you have Gephi installed and running on your computer. That is all.<
 </div>
 </div>
 <div class="sect1">
-<h2 id="_know_the_terminology_to_discuss_networks">know the terminology to discuss networks</h2>
+<h2 id="_be_familiar_with_the_terminology_to_discuss_networks">be familiar with the terminology to discuss networks</h2>
 <div class="sectionbody">
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -643,7 +655,7 @@ It supposes you have Gephi installed and running on your computer. That is all.<
 </div>
 </div>
 <div class="sect1">
-<h2 id="_open_the_network">open the network</h2>
+<h2 id="_open_the_network_in_gephi">open the network in Gephi</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -775,7 +787,7 @@ It supposes you have Gephi installed and running on your computer. That is all.<
 <div class="olist arabic">
 <ol class="arabic" start="8">
 <li>
-<p>A series of icons to add / colorize nodes and links manually, by cliking on them</p>
+<p>A series of icons to add / colorize nodes and links manually, by clicking on them</p>
 </li>
 <li>
 <p>Options and sliders to change the size of all nodes, links, or labels</p>
@@ -835,17 +847,11 @@ Yet, the properties of these entities remain invisible.</p>
 <div class="paragraph">
 <p>Now, we will see how to make this property ("Gender") visible.</p>
 </div>
-<div class="paragraph">
-<p>First, let&#8217;s switch to the <code>Data Laboratory`"</code> view:</p>
-</div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="images/Switching-the-view-to-the-data-laboratory.png" alt="Switching the view to the data laboratory">
 </div>
 <div class="title">Figure 13. Switching the view to the data laboratory</div>
-</div>
-<div class="paragraph">
-<p>We see the list of the characters in the network. There is a column <code>Gender</code>, where each character is either "M" or "F". Click on <code>Overview</code> to come back to the visual version.</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -898,18 +904,125 @@ Yet, the properties of these entities remain invisible.</p>
 <div class="paragraph">
 <p>Let&#8217;s fix these issues.</p>
 </div>
+<div class="sect2">
+<h3 id="_1_enlarge_or_shrink_the_network">1. Enlarge or shrink the network</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>either we use the "scaling" parameter of the layout, as we have seen <a href="#force-atlas-2-parameters">here</a>.</p>
+</li>
+<li>
+<p>or the scale is fine, it is just that we need to zoom it or out. Use the scrolling wheel of your mouse, and right click to move the network.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_prevent_the_labels_from_overlapping">2. Prevent the Labels from overlapping</h3>
 <div class="paragraph">
-<p>To enlarge or shrink the network, we have 2 options:</p>
+<p>In the layout panel, choose "Label Adjust" or "Noverlap": these layouts will move the nodes just so that the Labels stop overlapping:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/en/choosing-a-label-adjust-algo-en.png" alt="choosing a label adjust algo en">
+</div>
+<div class="title">Figure 17. Noverlap or Label Adjust will help you</div>
+</div>
+<div class="paragraph">
+<p>Don&#8217;t forget to click on "Run" to apply these layouts.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_changing_the_size_of_the_labels">3. Changing the size of the labels</h3>
+<div class="paragraph">
+<p>Open the bottom panel of Gephi by clicking on tiny arrow head (1). Then select "nodes" (2), then move the slider (3).</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Adjusting-label-size.png" alt="Adjusting label size">
+</div>
+<div class="title">Figure 18. Adjusting label size</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_4_adjusting_the_thickness_of_the_links">4. Adjusting the thickness of the links</h3>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Adjusting-edge-thickness.png" alt="Adjusting edge thickness">
+</div>
+<div class="title">Figure 19. Adjusting edge thickness</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_computing_the_centrality_of_the_nodes">Computing the centrality of the nodes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>"Centrality" is one of the most common things to measure on a network.
+What does centrality mean? Intuitively, we understand that a "central" node will probably sit in the middle of the network.
+But how to measure that "scientifically", so that we have an objective confirmation of our visual impression?</p>
+</div>
+<div class="paragraph">
+<p>There are several ways, all equally interesting.</p>
+</div>
+<div class="paragraph">
+<p>We can measure <code>degree centrality</code>. "Degree" is the technical term for "number of connections that a node has".</p>
+</div>
+<div class="paragraph">
+<p>So, <code>degree centrality</code> just means that the most central node is the node which has the most connections. Simple!</p>
+</div>
+<div class="paragraph">
+<p>Another measure is <code>betweenness centrality</code>. This one is more tricky.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>either we use the "scale" parameters of the layout, as we have seen <a href="#force-atlas-2-parameters">here</a>.</p>
+<p>First, you have to imagine what is a <code>shortest path</code>.</p>
 </li>
 <li>
-<p>or the scale is fine, it is just that we need to zoom it or out. If so, you can use the scrolling wheel of your mouse.</p>
+<p>A <code>path</code> from node A to node B is a chain of nodes, the road if you will, that you have to traverse to go from A to B.</p>
+</li>
+<li>
+<p>The <code>shortest path</code> from A to B is the quickest road from A to B: the path that has the smallest number of nodes between A and B.</p>
+</li>
+<li>
+<p>A node which is on many shortest paths is "between" many nodes. And when you realize it, it is a very intuitive sense of what it means to "be central". These nodes have a high <code>betweenness centrality</code>.</p>
 </li>
 </ul>
+</div>
+<div class="sect2">
+<h3 id="_computing_the_betweennees_centrality_of_all_nodes_with_gephi">Computing the betweennees centrality of all nodes with Gephi.</h3>
+<div class="paragraph">
+<p>The good news is, you don&#8217;t have to find all shortest paths and then find which nodes are on many shortest paths. Gephi does it for you:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Find-Network-Diameter-in-the-statistics-panel-and-click-on-Run.png" alt="Find Network Diameter in the statistics panel and click on Run">
+</div>
+<div class="title">Figure 20. Find Network Diameter in the statistics panel and click on Run</div>
+</div>
+<div class="paragraph">
+<p>This will open a window where you can choose parameters. They are explained in a more advanced tutorials. For the moment leave them unchanged, and click "OK":</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Parameters-for-the-computation-of-betweenness-centrality.png" alt="Parameters for the computation of betweenness centrality">
+</div>
+<div class="title">Figure 21. Parameters for the computation of betweenness centrality</div>
+</div>
+<div class="paragraph">
+<p>The computation takes place, it lasts less than a second. Then a report window opens: This report is explained in a more advanced tutorial. Close the window.</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Report-after-the-computation-of-betweenness-centrality.png" alt="Report after the computation of betweenness centrality">
+</div>
+<div class="title">Figure 22. Report after the computation of betweenness centrality</div>
+</div>
+<div class="paragraph">
+<p>Gephi has computed the betweenness centrality of each node in the network. Now we can visualize this information.</p>
+</div>
 </div>
 </div>
 </div>
@@ -970,6 +1083,14 @@ Try "Fruchterman Reingold" and "Yfan Hu".</p>
 <div class="paragraph">
 <p>These are layouts which follow the same logic as Force Atlas 2, but with slight variations. Explore how these algorithms result in similar, yet specific layouts.</p>
 </div>
+<div class="olist arabic">
+<ol class="arabic" start="6">
+<li>
+<p>In this tutorial, we defined degree centrality.
+Can you imagine a situation when a node with the largest degree centrality will actually be in the periphery of the network? You can draw a toy network to help you figure.</p>
+</li>
+</ol>
+</div>
 </div>
 </div>
 </div>
@@ -982,7 +1103,7 @@ Try "Fruchterman Reingold" and "Yfan Hu".</p>
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2017-01-24 14:39:01 CET
+Last updated 2017-01-24 22:37:45 CET
 </div>
 </div>
 </body>

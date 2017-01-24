@@ -88,15 +88,19 @@ table.CodeRay td.code>pre{padding:0}
 .CodeRay .change .change{color:#66f}
 .CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.1.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.1.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>Simple Gephi Project from A to Z</h1><div class="preamble"><div class="paragraph"><p>last modified: 2017-01-24</p></div>
 <div class="imageblock" style="text-align: center"><img src="images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450" /></div></div><p class="author"><small>Clément Levallois</small></p></section>
-<section id="_description_of_the_project"><h2>Description of the project</h2><div class="paragraph"><p>This project is for complete beginners to Gephi.
+<section id="_description_of_the_project"><h2>Description of the project</h2></section>
+<section><div class="paragraph"><p>This project is for complete beginners to Gephi.
 It supposes you have Gephi installed and running on your computer. That is all.</p></div>
 <div class="paragraph"><p>When finishing this tutorial, you should be able to:</p></div>
-<div class="ulist"><ul><li><p>understand the vocabulary to discuss networks</p></li><li><p>download a network file for this exercise</p></li><li><p>description of the file / the network</p></li><li><p>open a network file</p></li><li><p>read the report after opening a file</p></li><li><p>show the labels of the nodes</p></li><li><p>layout the network</p></li><li><p>visualize attributes of the network</p></li><li><p>prettify the network for enhanced readability</p></li><li><p>compute the centrality of the nodes in the network</p></li><li><p>visualize attributes created by Gephi</p></li><li><p>export a visualization as a picture or pdf</p></li></ul></div></section>
+<div class="ulist"><ul><li><p>be familiar with the vocabulary to discuss networks</p></li><li><p>download a network file for this exercise</p></li><li><p>description of the file / the network</p></li><li><p>open a network file</p></li><li><p>read the report after opening a file</p></li><li><p>show the labels of the nodes</p></li><li><p>layout the network</p></li><li><p>visualize attributes of the network</p></li><li><p>prettify the network for enhanced readability</p></li><li><p>compute the centrality of the nodes in the network</p></li><li><p>visualize attributes created by Gephi</p></li><li><p>export a visualization as a picture or pdf</p></li></ul></div></section>
+<section id="_terminology_to_discuss_networks"><h2>terminology to discuss networks</h2></section>
 <section><div class="imageblock" style="text-align: center"><img src="images/terminology-for-networks.png" alt="terminology for networks" /></div><div class="title">Figure 1. terminology for networks</div></section>
-<section id="_download_a_network_file"><h2>download a network file</h2><div class="paragraph"><p><a href="../resources/miserables.zip">download this zip file</a> and unzip it on your computer.</p></div>
+<section id="_download_a_network_file"><h2>download a network file</h2></section>
+<section><div class="paragraph"><p><a href="../resources/miserables.zip">download this zip file</a> and unzip it on your computer.</p></div>
 <div class="paragraph"><p>You should find the file <code>miserables.gexf</code> in it.</p></div>
 <div class="paragraph"><p>Save it in a folder you will remember (or create a folder specially for this small project).</p></div></section>
-<section id="_description_of_the_file_the_network"><h2>description of the file / the network</h2><div class="paragraph"><p>This file contains a network representing "who appears next to whom" in the 19th century novel <em>Les Misérables</em> by Victor Hugo<span class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</span>.</p></div>
+<section id="_description_of_the_file_the_network"><h2>description of the file / the network</h2></section>
+<section><div class="paragraph"><p>This file contains a network representing "who appears next to whom" in the 19th century novel <em>Les Misérables</em> by Victor Hugo<span class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</span>.</p></div>
 <div class="paragraph"><p>A link between characters A and B means they appeared on the same page or paragraph in the novel.</p></div>
 <div class="paragraph"><p>The file name ends with ".gexf", which just means this is a text file where the network information is stored (name of the characters, their relations, etc.), following some conventions.</p></div></section>
 <section><div class="ulist"><ul><li><p>open Gephi. On the Welcome screen that appears,  click on <code>Open Graph File</code></p></li><li><p>find <code>miserables.gexf</code> on your computer and open it</p></li></ul></div>
@@ -119,7 +123,7 @@ It supposes you have Gephi installed and running on your computer. That is all.<
 <section><div class="imageblock" style="text-align: center"><img src="images/Appearance-and-layout-panels-in-Gephi.png" alt="Appearance and layout panels in Gephi" /></div><div class="title">Figure 7. Appearance and layout panels in Gephi</div></section>
 <section><div class="olist arabic"><ol class="arabic" start="6"><li><p>"Appearance", where we can change colors and sizes in interesting ways</p></li><li><p>"Layouts", where we can apply automated procedures to change the position of the network</p></li></ol></div></section>
 <section><div class="imageblock" style="text-align: center"><img src="images/3-groups-of-icons.png" alt="3 groups of icons" /></div><div class="title">Figure 8. 3 groups of icons</div></section>
-<section><div class="olist arabic"><ol class="arabic" start="8"><li><p>A series of icons to add / colorize nodes and links manually, by cliking on them</p></li><li><p>Options and sliders to change the size of all nodes, links, or labels</p></li><li><p>More options become visible if we click on this <strong>little arrow head pointing up</strong></p></li></ol></div></section>
+<section><div class="olist arabic"><ol class="arabic" start="8"><li><p>A series of icons to add / colorize nodes and links manually, by clicking on them</p></li><li><p>Options and sliders to change the size of all nodes, links, or labels</p></li><li><p>More options become visible if we click on this <strong>little arrow head pointing up</strong></p></li></ol></div></section>
 <section id="_showing_labels_of_the_nodes"><h2>showing labels of the nodes</h2></section>
 <section><div class="imageblock" style="text-align: center"><img src="images/showing-node-labels.png" alt="showing node labels" /></div><div class="title">Figure 9. showing node labels</div></section>
 <section id="_layout_spatialize_the_network"><h2>layout ("spatialize") the network</h2></section>
@@ -132,10 +136,8 @@ This is what we just visualized.
 Yet, the properties of these entities remain invisible.</p></div>
 <div class="paragraph"><p>For instance: the characters in the novel "Les Misérables" are male or female. Are males more likely to be connected to males, or females? Just looking at the network in Gephi, we can&#8217;t tell.</p></div>
 <div class="paragraph"><p>Now, we will see how to make this property ("Gender") visible.</p></div></section>
-<section><div class="paragraph"><p>First, let&#8217;s switch to the <code>Data Laboratory`"</code> view:</p></div>
-<div class="imageblock" style="text-align: center"><img src="images/Switching-the-view-to-the-data-laboratory.png" alt="Switching the view to the data laboratory" /></div><div class="title">Figure 13. Switching the view to the data laboratory</div></section>
-<section><div class="paragraph"><p>We see the list of the characters in the network. There is a column <code>Gender</code>, where each character is either "M" or "F". Click on <code>Overview</code> to come back to the visual version.</p></div>
-<div class="imageblock" style="text-align: center"><img src="images/We-see-there-is-a-Gender-attribute-for-each-character..png" alt="We see there is a Gender attribute for each character." /></div><div class="title">Figure 14. We see there is a Gender attribute for each character.</div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/Switching-the-view-to-the-data-laboratory.png" alt="Switching the view to the data laboratory" /></div><div class="title">Figure 13. Switching the view to the data laboratory</div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/We-see-there-is-a-Gender-attribute-for-each-character..png" alt="We see there is a Gender attribute for each character." /></div><div class="title">Figure 14. We see there is a Gender attribute for each character.</div></section>
 <section><div class="paragraph"><p>We will color the nodes based on their gender. To do that, we select <code>Gender</code> in the <code>Appearance</code> panel:</p></div>
 <div class="imageblock" style="text-align: center"><img src="images/Coloring-nodes-according-to-their-gender.png" alt="Coloring nodes according to their gender" /></div><div class="title">Figure 15. Coloring nodes according to their gender</div></section>
 <section><div class="paragraph"><p>The result:</p></div>
@@ -144,8 +146,29 @@ Yet, the properties of these entities remain invisible.</p></div>
 <section><div class="paragraph"><p>There are a number of issues with the result we get:</p></div>
 <div class="olist arabic"><ol class="arabic"><li><p>the network is too big or too small, it is hard to read</p></li><li><p>the labels of the characters overlap</p></li><li><p>the size of the labels might be too big / small</p></li><li><p>the links are sometimes too large</p></li></ol></div>
 <div class="paragraph"><p>Let&#8217;s fix these issues.</p></div></section>
-<section><div class="paragraph"><p>To enlarge or shrink the network, we have 2 options:</p></div>
-<div class="ulist"><ul><li><p>either we use the "scale" parameters of the layout, as we have seen <a href="#force-atlas-2-parameters">here</a>.</p></li><li><p>or the scale is fine, it is just that we need to zoom it or out. If so, you can use the scrolling wheel of your mouse.</p></li></ul></div></section>
+<section><div class="ulist"><ul><li><p>either we use the "scaling" parameter of the layout, as we have seen <a href="#force-atlas-2-parameters">here</a>.</p></li><li><p>or the scale is fine, it is just that we need to zoom it or out. Use the scrolling wheel of your mouse, and right click to move the network.</p></li></ul></div></section>
+<section><div class="paragraph"><p>In the layout panel, choose "Label Adjust" or "Noverlap": these layouts will move the nodes just so that the Labels stop overlapping:</p></div>
+<div class="imageblock" style="text-align: center"><img src="images/en/choosing-a-label-adjust-algo-en.png" alt="choosing a label adjust algo en" /></div><div class="title">Figure 17. Noverlap or Label Adjust will help you</div>
+<div class="paragraph"><p>Don&#8217;t forget to click on "Run" to apply these layouts.</p></div></section>
+<section><div class="paragraph"><p>Open the bottom panel of Gephi by clicking on tiny arrow head (1). Then select "nodes" (2), then move the slider (3).</p></div>
+<div class="imageblock" style="text-align: center"><img src="images/Adjusting-label-size.png" alt="Adjusting label size" /></div><div class="title">Figure 18. Adjusting label size</div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/Adjusting-edge-thickness.png" alt="Adjusting edge thickness" /></div><div class="title">Figure 19. Adjusting edge thickness</div></section>
+<section id="_computing_the_centrality_of_the_nodes"><h2>Computing the centrality of the nodes</h2></section>
+<section><div class="paragraph"><p>"Centrality" is one of the most common things to measure on a network.
+What does centrality mean? Intuitively, we understand that a "central" node will probably sit in the middle of the network.
+But how to measure that "scientifically", so that we have an objective confirmation of our visual impression?</p></div>
+<div class="paragraph"><p>There are several ways, all equally interesting.</p></div></section>
+<section><div class="paragraph"><p>We can measure <code>degree centrality</code>. "Degree" is the technical term for "number of connections that a node has".</p></div>
+<div class="paragraph"><p>So, <code>degree centrality</code> just means that the most central node is the node which has the most connections. Simple!</p></div></section>
+<section><div class="paragraph"><p>Another measure is <code>betweenness centrality</code>. This one is more tricky.</p></div>
+<div class="ulist"><ul><li><p>First, you have to imagine what is a <code>shortest path</code>.</p></li><li><p>A <code>path</code> from node A to node B is a chain of nodes, the road if you will, that you have to traverse to go from A to B.</p></li><li><p>The <code>shortest path</code> from A to B is the quickest road from A to B: the path that has the smallest number of nodes between A and B.</p></li><li><p>A node which is on many shortest paths is "between" many nodes. And when you realize it, it is a very intuitive sense of what it means to "be central". These nodes have a high <code>betweenness centrality</code>.</p></li></ul></div>
+<div class="paragraph"><p>The good news is, you don&#8217;t have to find all shortest paths and then find which nodes are on many shortest paths. Gephi does it for you:</p></div>
+<div class="imageblock" style="text-align: center"><img src="images/Find-Network-Diameter-in-the-statistics-panel-and-click-on-Run.png" alt="Find Network Diameter in the statistics panel and click on Run" /></div><div class="title">Figure 20. Find Network Diameter in the statistics panel and click on Run</div>
+<div class="paragraph"><p>This will open a window where you can choose parameters. They are explained in a more advanced tutorials. For the moment leave them unchanged, and click "OK":</p></div>
+<div class="imageblock" style="text-align: center"><img src="images/Parameters-for-the-computation-of-betweenness-centrality.png" alt="Parameters for the computation of betweenness centrality" /></div><div class="title">Figure 21. Parameters for the computation of betweenness centrality</div>
+<div class="paragraph"><p>The computation takes place, it lasts less than a second. Then a report window opens: This report is explained in a more advanced tutorial. Close the window.</p></div>
+<div class="imageblock" style="text-align: center"><img src="images/Report-after-the-computation-of-betweenness-centrality.png" alt="Report after the computation of betweenness centrality" /></div><div class="title">Figure 22. Report after the computation of betweenness centrality</div>
+<div class="paragraph"><p>Gephi has computed the betweenness centrality of each node in the network. Now we can visualize this information.</p></div></section>
 <section id="__to_be_continued"><h2>(to be continued)</h2></section>
 <section id="_questions_and_exercises"><h2>questions and exercises</h2></section>
 <section><div class="olist arabic"><ol class="arabic"><li><p>Open the file <code>miserables.gexf</code> with a text editor (here is how to do it on a <a href="http://www.dummies.com/computers/macs/how-to-open-and-edit-a-text-file-on-a-mac/">Mac</a>, and on <a href="https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/app_notepad.mspx?mfr=true">Windows</a>). See how the nodes and the links are written in the file. Can you find the character Javert?</p></li></ol></div></section>
@@ -157,7 +180,9 @@ Yet, the properties of these entities remain invisible.</p></div>
 <div class="paragraph"><p>Can you guess why this is happening?</p></div></section>
 <section><div class="olist arabic"><ol class="arabic" start="5"><li><p>In the list of layouts, Force Atlas 2 is just one of many options you can choose.
 Try "Fruchterman Reingold" and "Yfan Hu".</p></li></ol></div>
-<div class="paragraph"><p>These are layouts which follow the same logic as Force Atlas 2, but with slight variations. Explore how these algorithms result in similar, yet specific layouts.</p></div></section></div></div><script src="reveal.js-3.1.0/lib/js/head.min.js"></script><script src="reveal.js-3.1.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+<div class="paragraph"><p>These are layouts which follow the same logic as Force Atlas 2, but with slight variations. Explore how these algorithms result in similar, yet specific layouts.</p></div></section>
+<section><div class="olist arabic"><ol class="arabic" start="6"><li><p>In this tutorial, we defined degree centrality.
+Can you imagine a situation when a node with the largest degree centrality will actually be in the periphery of the network? You can draw a toy network to help you figure.</p></li></ol></div></section></div></div><script src="reveal.js-3.1.0/lib/js/head.min.js"></script><script src="reveal.js-3.1.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
 Reveal.initialize({
   // Display controls in the bottom right corner
   controls: true,

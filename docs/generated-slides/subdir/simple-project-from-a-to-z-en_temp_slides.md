@@ -13,12 +13,15 @@ image::gephi-logo-2010-transparent.png[width="450" align="center"]
 
 
 == Description of the project
+== !
+
+
 This project is for complete beginners to Gephi.
 It supposes you have Gephi installed and running on your computer. That is all.
 
 When finishing this tutorial, you should be able to:
 [options="compact"]
-- understand the vocabulary to discuss networks
+- be familiar with the vocabulary to discuss networks
 - download a network file for this exercise
 - description of the file / the network
 - open a network file
@@ -32,13 +35,15 @@ When finishing this tutorial, you should be able to:
 - export a visualization as a picture or pdf
 
 
-
+== terminology to discuss networks
 == !
 image::terminology-for-networks.png[align="center",title="terminology for networks"]
 
 
 
 == download a network file
+== !
+
 link:../resources/miserables.zip[download this zip file] and unzip it on your computer.
 
 You should find the file `miserables.gexf` in it.
@@ -47,6 +52,7 @@ Save it in a folder you will remember (or create a folder specially for this sma
 
 
 == description of the file / the network
+== !
 
 This file contains a network representing "who appears next to whom" in the 19th century novel _Les Misérables_ by Victor Hugofootnote:[D. E. Knuth, The Stanford GraphBase: A Platform for Combinatorial Computing, Addison-Wesley, Reading, MA (1993)].
 
@@ -55,7 +61,7 @@ A link between characters A and B means they appeared on the same page or paragr
 The file name ends with ".gexf", which just means this is a text file where the network information is stored (name of the characters, their relations, etc.), following some conventions.
 
 
-
+//open the network in Gephi
 == !
 - open Gephi. On the Welcome screen that appears,  click on `Open Graph File`
 - find `miserables.gexf` on your computer and open it
@@ -103,7 +109,9 @@ What we see here is the Overview.
 image::Filters-and-statistics-panels-in-Gephi.png[align="center", title="Filters and statistics panels in Gephi"]
 
 == !
+
 In the Overview, the graph is shown at the center. Around it, several panels help us fine tune the visualization.
+
 [options="compact"]
 [start=4]
 4. "Filters", where we can hide different parts of the network under a variety of conditions
@@ -114,6 +122,7 @@ image::Appearance-and-layout-panels-in-Gephi.png[align="center", title="Appearan
 
 
 == !
+
 [options="compact"]
 [start=6]
 6. "Appearance", where we can change colors and sizes in interesting ways
@@ -126,7 +135,7 @@ image::3-groups-of-icons.png[align="center", title="3 groups of icons"]
 
 [options="compact"]
 [start=8]
-8. A series of icons to add / colorize nodes and links manually, by cliking on them
+8. A series of icons to add / colorize nodes and links manually, by clicking on them
 9. Options and sliders to change the size of all nodes, links, or labels
 10. More options become visible if we click on this *little arrow head pointing up*
 
@@ -147,6 +156,7 @@ image::showing-node-labels.png[align="center", title="showing node labels"]
 image::selecting-the-force-atlas-2-layout.png[align="center", title="selecting the force atlas 2 layout"]
 
 == !
+
 [[force-atlas-2-parameters]]
 image::changing-a-few-parameters-and-launching-the-layout.png[align="center", title="changing a few parameters and launching the layout"]
 
@@ -169,24 +179,25 @@ For instance: the characters in the novel "Les Misérables" are male or female. 
 Now, we will see how to make this property ("Gender") visible.
 
 == !
-First, let's switch to the `Data Laboratory`"` view:
 
 image::Switching-the-view-to-the-data-laboratory.png[align="center",title="Switching the view to the data laboratory"]
 
 == !
-We see the list of the characters in the network. There is a column `Gender`, where each character is either "M" or "F". Click on `Overview` to come back to the visual version.
 
 image::We-see-there-is-a-Gender-attribute-for-each-character..png[align="center",title="We see there is a Gender attribute for each character."]
 
 == !
+
 We will color the nodes based on their gender. To do that, we select `Gender` in the `Appearance` panel:
 
 image::Coloring-nodes-according-to-their-gender.png[align="center",title="Coloring nodes according to their gender"]
 
 == !
+
 The result:
 
 image::appearance-miserables-result.png[align="center",title="After coloring characters according to their gender"]
+
 
 == prettify the network for enhanced readability
 == !
@@ -200,12 +211,70 @@ There are a number of issues with the result we get:
 
 Let's fix these issues.
 
+== !
+
+- either we use the "scaling" parameter of the layout, as we have seen <<force-atlas-2-parameters,here>>.
+- or the scale is fine, it is just that we need to zoom it or out. Use the scrolling wheel of your mouse, and right click to move the network.
 
 == !
-To enlarge or shrink the network, we have 2 options:
+In the layout panel, choose "Label Adjust" or "Noverlap": these layouts will move the nodes just so that the Labels stop overlapping:
 
-- either we use the "scale" parameters of the layout, as we have seen <<force-atlas-2-parameters,here>>.
-- or the scale is fine, it is just that we need to zoom it or out. If so, you can use the scrolling wheel of your mouse.
+image::en/choosing-a-label-adjust-algo-en.png[align="center",title="Noverlap or Label Adjust will help you"]
+
+Don't forget to click on "Run" to apply these layouts.
+
+== !
+Open the bottom panel of Gephi by clicking on tiny arrow head (1). Then select "nodes" (2), then move the slider (3).
+
+image::Adjusting-label-size.png[align="center",title="Adjusting label size"]
+
+== !
+
+image::Adjusting-edge-thickness.png[align="center",title="Adjusting edge thickness"]
+
+
+== Computing the centrality of the nodes
+== !
+
+"Centrality" is one of the most common things to measure on a network.
+What does centrality mean? Intuitively, we understand that a "central" node will probably sit in the middle of the network.
+But how to measure that "scientifically", so that we have an objective confirmation of our visual impression?
+
+There are several ways, all equally interesting.
+
+== !
+We can measure `degree centrality`. "Degree" is the technical term for "number of connections that a node has".
+
+So, `degree centrality` just means that the most central node is the node which has the most connections. Simple!
+
+== !
+Another measure is `betweenness centrality`. This one is more tricky.
+
+- First, you have to imagine what is a `shortest path`.
+   - A `path` from node A to node B is a chain of nodes, the road if you will, that you have to traverse to go from A to B.
+   - The `shortest path` from A to B is the quickest road from A to B: the path that has the smallest number of nodes between A and B.
+
+- A node which is on many shortest paths is "between" many nodes. And when you realize it, it is a very intuitive sense of what it means to "be central". These nodes have a high `betweenness centrality`.
+
+//ST:!
+
+The good news is, you don't have to find all shortest paths and then find which nodes are on many shortest paths. Gephi does it for you:
+
+image::Find-Network-Diameter-in-the-statistics-panel-and-click-on-Run.png[align="center",title="Find Network Diameter in the statistics panel and click on Run"]
+
+//ST:!
+This will open a window where you can choose parameters. They are explained in a more advanced tutorials. For the moment leave them unchanged, and click "OK":
+
+image::Parameters-for-the-computation-of-betweenness-centrality.png[align="center",title="Parameters for the computation of betweenness centrality"]
+
+
+//ST:!
+The computation takes place, it lasts less than a second. Then a report window opens: This report is explained in a more advanced tutorial. Close the window.
+
+image::Report-after-the-computation-of-betweenness-centrality.png[align="center",title="Report after the computation of betweenness centrality"]
+
+Gephi has computed the betweenness centrality of each node in the network. Now we can visualize this information.
+
 
 
 == (to be continued)
@@ -241,3 +310,8 @@ Can you guess why this is happening?
 Try "Fruchterman Reingold" and "Yfan Hu".
 
 These are layouts which follow the same logic as Force Atlas 2, but with slight variations. Explore how these algorithms result in similar, yet specific layouts.
+
+== !
+[start=6]
+6. In this tutorial, we defined degree centrality.
+Can you imagine a situation when a node with the largest degree centrality will actually be in the periphery of the network? You can draw a toy network to help you figure.
