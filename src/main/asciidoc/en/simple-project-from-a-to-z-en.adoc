@@ -16,12 +16,15 @@ image::gephi-logo-2010-transparent.png[width="450" align="center"]
 == Description of the project
 
 //ST: Description of the project
+//ST: !
+
+
 This project is for complete beginners to Gephi.
 It supposes you have Gephi installed and running on your computer. That is all.
 
 When finishing this tutorial, you should be able to:
 [options="compact"]
-- understand the vocabulary to discuss networks
+- be familiar with the vocabulary to discuss networks
 - download a network file for this exercise
 - description of the file / the network
 - open a network file
@@ -35,8 +38,8 @@ When finishing this tutorial, you should be able to:
 - export a visualization as a picture or pdf
 
 
-== know the terminology to discuss networks
-
+== be familiar with the terminology to discuss networks
+//ST: terminology to discuss networks
 //ST: !
 image::https://docs.google.com/drawings/d/1h8N-UBY7dO6Q7mXCbPY78ITfJx1Mti9YD2ScnVu4oHA/pub?w=960&h=720[align="center",title="terminology for networks"]
 
@@ -44,6 +47,8 @@ image::https://docs.google.com/drawings/d/1h8N-UBY7dO6Q7mXCbPY78ITfJx1Mti9YD2Scn
 == download a network file
 
 //ST: download a network file
+//ST: !
+
 link:../resources/miserables.zip[download this zip file] and unzip it on your computer.
 
 You should find the file `miserables.gexf` in it.
@@ -53,6 +58,7 @@ Save it in a folder you will remember (or create a folder specially for this sma
 == description of the file / the network
 
 //ST: description of the file / the network
+//ST: !
 
 This file contains a network representing "who appears next to whom" in the 19th century novel _Les Misérables_ by Victor Hugofootnote:[D. E. Knuth, The Stanford GraphBase: A Platform for Combinatorial Computing, Addison-Wesley, Reading, MA (1993)].
 
@@ -61,8 +67,8 @@ A link between characters A and B means they appeared on the same page or paragr
 The file name ends with ".gexf", which just means this is a text file where the network information is stored (name of the characters, their relations, etc.), following some conventions.
 
 
-== open the network
-
+== open the network in Gephi
+//open the network in Gephi
 //ST: !
 - open Gephi. On the Welcome screen that appears,  click on `Open Graph File`
 - find `miserables.gexf` on your computer and open it
@@ -113,7 +119,9 @@ What we see here is the Overview.
 image::https://docs.google.com/drawings/d/1XwpvulXoyiK3nBbxFiCFisH6_pg9P9us9LnZJvzlDz4/pub?w=960[align="center", title="Filters and statistics panels in Gephi"]
 
 //ST: !
+
 In the Overview, the graph is shown at the center. Around it, several panels help us fine tune the visualization.
+
 [options="compact"]
 [start=4]
 4. "Filters", where we can hide different parts of the network under a variety of conditions
@@ -124,6 +132,7 @@ image::https://docs.google.com/drawings/d/1J4wCFaXwIaRmiiG7t69s8HmhA0hnR0Sp0hwgO
 
 
 //ST: !
+
 [options="compact"]
 [start=6]
 6. "Appearance", where we can change colors and sizes in interesting ways
@@ -159,6 +168,7 @@ image::https://docs.google.com/drawings/d/1o-J7Uce1okDdIN_IgvZaH4MdGjn74_ChTlXo-
 image::https://docs.google.com/drawings/d/1fD_AdsP3SqV5CENMDmMpt6ZLYOAgLsDDYxv2fJr7R6E/pub?w=960&h=720[align="center", title="selecting the force atlas 2 layout"]
 
 //ST: !
+
 [[force-atlas-2-parameters]]
 image::https://docs.google.com/drawings/d/1TnbclWXKFJiYUOJTHAl2Fyh5j3KgxV5TyLGyN1Gnn7k/pub?w=960&h=720[align="center", title="changing a few parameters and launching the layout"]
 
@@ -182,22 +192,27 @@ For instance: the characters in the novel "Les Misérables" are male or female. 
 Now, we will see how to make this property ("Gender") visible.
 
 //ST: !
+
 image::https://docs.google.com/drawings/d/1mDTOUanUkOa0ND8wn3tuwM54pqYXN6RApWkZTxSpEiI/pub?w=954&h=524[align="center",title="Switching the view to the data laboratory"]
 
 //ST: !
+
 image::https://docs.google.com/drawings/d/1wIubWP6KX6oaz3pd7SQYziWR_2hK2KIhH0gAFwn3rEk/pub?w=758&h=431[align="center",title="We see there is a Gender attribute for each character."]
 
 //ST: !
+
 We will color the nodes based on their gender. To do that, we select `Gender` in the `Appearance` panel:
 
 image::https://docs.google.com/drawings/d/1VdIaYCfuMAF5Tk3EaCak-Z0M9GsIuPpjxc6RWi0FELs/pub?w=758&h=431[align="center",title="Coloring nodes according to their gender"]
 
 //ST: !
+
 The result:
 
 image::appearance-miserables-result.png[align="center",title="After coloring characters according to their gender"]
 
 == prettify the network for enhanced readability
+
 //ST: prettify the network for enhanced readability
 //ST: !
 
@@ -211,11 +226,29 @@ There are a number of issues with the result we get:
 Let's fix these issues.
 
 
-//ST: !
-To enlarge or shrink the network, we have 2 options:
+//ST: 1. Enlarge or shrink the network
 
-- either we use the "scale" parameters of the layout, as we have seen <<force-atlas-2-parameters,here>>.
+- either we use the "scaling" parameter of the layout, as we have seen <<force-atlas-2-parameters,here>>.
 - or the scale is fine, it is just that we need to zoom it or out. Use the scrolling wheel of your mouse, and right click to move the network.
+
+//ST: 2. Prevent the Labels from overlapping
+In the layout panel, choose "Label Adjust" or "Noverlap": these layouts will move the nodes just so that the Labels stop overlapping:
+
+image::en/choosing-a-label-adjust-algo-en.png[align="center",title="Noverlap or Label Adjust will help you"]
+
+Don't forget to click on "Run" to apply these layouts.
+
+//ST: 3. Changing the size of the labels
+Open the bottom panel of Gephi by clicking on tiny arrow head (1). Then select "nodes" (2), then move the slider (3).
+
+image::https://docs.google.com/drawings/d/13dOYkyzY4dKMIDrSj59NFF5GftZD55eRC26HZ8jn2RM/pub?w=758&h=431[align="center",title="Adjusting label size"]
+
+//ST: 4. Fixing the thickness of the links
+
+image::https://docs.google.com/drawings/d/13dOYkyzY4dKMIDrSj59NFF5GftZD55eRC26HZ8jn2RM/pub?w=758&h=431[align="center",title="Adjusting label size"]
+
+
+
 
 == (to be continued)
 
