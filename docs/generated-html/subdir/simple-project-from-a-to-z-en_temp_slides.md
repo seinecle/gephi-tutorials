@@ -236,7 +236,7 @@ image::Adjusting-edge-thickness.png[align="center",title="Adjusting edge thickne
 == Computing the centrality of the nodes
 == !
 
-"Centrality" is one of the most common things to measure on a network.
+"Centrality" is a very good metrics to first get an idea of a network.
 What does centrality mean? Intuitively, we understand that a "central" node will probably sit in the middle of the network.
 But how to measure that "scientifically", so that we have an objective confirmation of our visual impression?
 
@@ -263,17 +263,17 @@ Gephi computes this for you. Find "Network diameter" in the statistics panel and
 image::Computing-betweenness-centrality.png[align="center",title="Computing betweenness centrality"]
 
 == !
-This will open a window where you can choose parameters. They are explained in a more advanced tutorials. Leave them unchanged, and click "OK":
+This will open a window with parameters (explained in a more advanced tutorials). Click "OK":
 
 image::Parameters-for-the-computation-of-betweenness-centrality.png[align="center",title="Parameters for the computation of betweenness centrality"]
 
 
 == !
-A report window opens (it is explained in a more advanced tutorial). Close it.
+A report window opens (also explained in a other tutorials). Close it.
 
 image::Report-after-the-computation-of-betweenness-centrality.png[align="center",title="Report after the computation of betweenness centrality"]
 
-Gephi has computed the betweenness centrality of each node in the network. Now we can visualize this information.
+Now we can visualize this information.
 
 
 
