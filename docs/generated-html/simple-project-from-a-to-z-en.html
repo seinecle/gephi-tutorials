@@ -531,6 +531,8 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_basic_view_of_gephi_s_interface">basic view of Gephi&#8217;s interface</a></li>
 <li><a href="#_showing_labels_of_the_nodes">showing labels of the nodes</a></li>
 <li><a href="#_layout_spatialize_the_network">layout ("spatialize") the network</a></li>
+<li><a href="#_visualize_the_properties_of_the_nodes">visualize the properties of the nodes</a></li>
+<li><a href="#_prettify_the_network_for_enhanced_readability">prettify the network for enhanced readability</a></li>
 <li><a href="#__to_be_continued">(to be continued)</a></li>
 <li><a href="#_questions_and_exercises">questions and exercises</a></li>
 </ul>
@@ -540,7 +542,7 @@ table.CodeRay td.code>pre{padding:0}
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>last modified: 2017-01-22</p>
+<p>last modified: 2017-01-24</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -584,6 +586,9 @@ It supposes you have Gephi installed and running on your computer. That is all.<
 </li>
 <li>
 <p>visualize attributes of the network</p>
+</li>
+<li>
+<p>prettify the network for enhanced readability</p>
 </li>
 <li>
 <p>compute the centrality of the nodes in the network</p>
@@ -802,7 +807,7 @@ It supposes you have Gephi installed and running on your computer. That is all.<
 </div>
 <div class="title">Figure 10. selecting the force atlas 2 layout</div>
 </div>
-<div class="imageblock" style="text-align: center">
+<div id="force-atlas-2-parameters" class="imageblock" style="text-align: center">
 <div class="content">
 <img src="images/changing-a-few-parameters-and-launching-the-layout.png" alt="changing a few parameters and launching the layout">
 </div>
@@ -813,6 +818,98 @@ It supposes you have Gephi installed and running on your computer. That is all.<
 <img src="images/result-of-Force-Atlas-2-layout.png" alt="result of Force Atlas 2 layout">
 </div>
 <div class="title">Figure 12. result of Force Atlas 2 layout</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_visualize_the_properties_of_the_nodes">visualize the properties of the nodes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A network consists in entities and their relations.
+This is what we just visualized.
+Yet, the properties of these entities remain invisible.</p>
+</div>
+<div class="paragraph">
+<p>For instance: the characters in the novel "Les Misérables" are male or female. Are males more likely to be connected to males, or females? Just looking at the network in Gephi, we can&#8217;t tell.</p>
+</div>
+<div class="paragraph">
+<p>Now, we will see how to make this property ("Gender") visible.</p>
+</div>
+<div class="paragraph">
+<p>First, let&#8217;s switch to the <code>Data Laboratory`"</code> view:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Switching-the-view-to-the-data-laboratory.png" alt="Switching the view to the data laboratory">
+</div>
+<div class="title">Figure 13. Switching the view to the data laboratory</div>
+</div>
+<div class="paragraph">
+<p>We see the list of the characters in the network. There is a column <code>Gender</code>, where each character is either "M" or "F". Click on <code>Overview</code> to come back to the visual version.</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/We-see-there-is-a-Gender-attribute-for-each-character..png" alt="We see there is a Gender attribute for each character.">
+</div>
+<div class="title">Figure 14. We see there is a Gender attribute for each character.</div>
+</div>
+<div class="paragraph">
+<p>We will color the nodes based on their gender. To do that, we select <code>Gender</code> in the <code>Appearance</code> panel:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Coloring-nodes-according-to-their-gender.png" alt="Coloring nodes according to their gender">
+</div>
+<div class="title">Figure 15. Coloring nodes according to their gender</div>
+</div>
+<div class="paragraph">
+<p>The result:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/appearance-miserables-result.png" alt="appearance miserables result">
+</div>
+<div class="title">Figure 16. After coloring characters according to their gender</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_prettify_the_network_for_enhanced_readability">prettify the network for enhanced readability</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There are a number of issues with the result we get:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>the network is too big or too small, it is hard to read</p>
+</li>
+<li>
+<p>the labels of the characters overlap</p>
+</li>
+<li>
+<p>the size of the labels might be too big / small</p>
+</li>
+<li>
+<p>the links are sometimes too large</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s fix these issues.</p>
+</div>
+<div class="paragraph">
+<p>To enlarge or shrink the network, we have 2 options:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>either we use the "scale" parameters of the layout, as we have seen <a href="#force-atlas-2-parameters">here</a>.</p>
+</li>
+<li>
+<p>or the scale is fine, it is just that we need to zoom it or out. If so, you can use the scrolling wheel of your mouse.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -845,7 +942,7 @@ It supposes you have Gephi installed and running on your computer. That is all.<
 <div class="olist arabic">
 <ol class="arabic" start="3">
 <li>
-<p>Force Atlas 2 is a layout which brings together connected node, and spreads out unconnected nodes. What will happen to the nodes wich have no relation at all with other nodes (called "isolated nodes").</p>
+<p>Force Atlas 2 is a layout which brings together connected nodes, and spreads out unconnected nodes. We might have nodes with no relation at all with other nodes (called "isolated nodes").</p>
 </li>
 </ol>
 </div>
@@ -885,7 +982,7 @@ Try "Fruchterman Reingold" and "Yfan Hu".</p>
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2017-01-22 13:04:58 CET
+Last updated 2017-01-24 14:39:01 CET
 </div>
 </div>
 </body>
