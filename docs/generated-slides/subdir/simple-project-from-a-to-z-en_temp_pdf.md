@@ -371,12 +371,19 @@ CAUTION: contrary to the Overview panel, here you need to hit the "refresh" butt
 
 image::Updating-the-parameters.png[align="center",title="Updating the parameters"]
 
+//ST: !
+Here I change just 2 parameters: `Show Labels` and  `Font` (which I reduce to size "5"), to get:
 
+image::Result-of-preview.png[align="center",title="Result of preview"]
 
-== (to be continued)
+//ST: !
+Export: just click on the button and select the file format you prefer
+image::Export-button.png[align="center",title="Export button"]
 
-//ST: (to be continued)
+//ST: The end!
+Visit https://www.facebook.com/groups/gephi/[the Gephi group on Facebook] to get help,
 
+or visit https://seinecle.github.io/gephi-tutorials/[the website for more tutorials]
 
 == questions and exercises
 

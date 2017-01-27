@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gexf xmlns="http://www.gexf.net/1.3" version="1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd">
-  <meta lastmodifieddate="2017-01-25">
+  <meta lastmodifieddate="2017-01-28">
     <creator>Gephi 0.9</creator>
     <description></description>
   </meta>
@@ -29,7 +29,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.4988584474885843"></attvalue>
           <attvalue for="closnesscentrality" value="0.437125748502994"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="28.64323"></viz:size>
         <viz:position x="-194.721" y="-70.15168"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -41,7 +41,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.3280821917808218"></attvalue>
           <attvalue for="closnesscentrality" value="0.3054393305439331"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="-313.8893" y="-74.66646"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -53,7 +53,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.4509132420091321"></attvalue>
           <attvalue for="closnesscentrality" value="0.41954022988505746"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="-153.10846" y="-47.09386"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
@@ -65,7 +65,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.4509132420091321"></attvalue>
           <attvalue for="closnesscentrality" value="0.41954022988505746"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="-163.9724" y="-58.897526"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
@@ -77,7 +77,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.3280821917808218"></attvalue>
           <attvalue for="closnesscentrality" value="0.3054393305439331"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="-287.4806" y="-122.27689"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
@@ -89,7 +89,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.3280821917808218"></attvalue>
           <attvalue for="closnesscentrality" value="0.3054393305439331"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="-299.4969" y="-58.968353"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
@@ -101,7 +101,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.3280821917808218"></attvalue>
           <attvalue for="closnesscentrality" value="0.3054393305439331"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="-285.7261" y="-85.7716"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -113,7 +113,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.3280821917808218"></attvalue>
           <attvalue for="closnesscentrality" value="0.3054393305439331"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="-311.05026" y="-98.200966"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -125,7 +125,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.3280821917808218"></attvalue>
           <attvalue for="closnesscentrality" value="0.3054393305439331"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="-242.35147" y="-73.45547"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -137,7 +137,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.3280821917808218"></attvalue>
           <attvalue for="closnesscentrality" value="0.3054393305439331"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="-280.97623" y="-107.52224"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -149,7 +149,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.42123287671232845"></attvalue>
           <attvalue for="closnesscentrality" value="0.3989071038251366"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="-117.53526" y="-14.214648"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -161,8 +161,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.7442922374429224"></attvalue>
           <attvalue for="closnesscentrality" value="0.6576576576576577"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
-        <viz:position x="3.9424675" y="-18.661415"></viz:position>
+        <viz:size value="80.0"></viz:size>
+        <viz:position x="3.9424665" y="-18.661415"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
       <node id="12" label="Marguerite">
@@ -173,7 +173,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.4463470319634701"></attvalue>
           <attvalue for="closnesscentrality" value="0.41954022988505746"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="54.932285" y="-173.85254"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
@@ -185,7 +185,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.42123287671232845"></attvalue>
           <attvalue for="closnesscentrality" value="0.3989071038251366"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="-103.117035" y="-26.212688"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
@@ -197,7 +197,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.42123287671232845"></attvalue>
           <attvalue for="closnesscentrality" value="0.3989071038251366"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="-119.877594" y="4.4405217"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -209,7 +209,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.42123287671232845"></attvalue>
           <attvalue for="closnesscentrality" value="0.3989071038251366"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="-95.71785" y="-36.938377"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -221,7 +221,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.46118721461187184"></attvalue>
           <attvalue for="closnesscentrality" value="0.3945945945945946"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="10.202341"></viz:size>
         <viz:position x="133.33928" y="-251.60524"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -233,7 +233,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.40296803652967983"></attvalue>
           <attvalue for="closnesscentrality" value="0.3476190476190476"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="155.36922" y="-303.90594"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -245,7 +245,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.40296803652967983"></attvalue>
           <attvalue for="closnesscentrality" value="0.3476190476190476"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="123.88944" y="-294.73874"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -257,7 +257,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.40296803652967983"></attvalue>
           <attvalue for="closnesscentrality" value="0.3476190476190476"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="168.86787" y="-285.64493"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -269,7 +269,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.40296803652967983"></attvalue>
           <attvalue for="closnesscentrality" value="0.3476190476190476"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="159.1843" y="-264.23468"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
@@ -281,7 +281,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.40296803652967983"></attvalue>
           <attvalue for="closnesscentrality" value="0.3476190476190476"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="140.47346" y="-273.32684"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
@@ -293,7 +293,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.40296803652967983"></attvalue>
           <attvalue for="closnesscentrality" value="0.3476190476190476"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="113.90729" y="-283.6432"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
@@ -305,7 +305,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.5490867579908677"></attvalue>
           <attvalue for="closnesscentrality" value="0.47096774193548385"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="22.591457"></viz:size>
         <viz:position x="99.95536" y="-184.1579"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
@@ -317,7 +317,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.5273972602739725"></attvalue>
           <attvalue for="closnesscentrality" value="0.46794871794871795"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="8.965584"></viz:size>
         <viz:position x="98.31236" y="-17.877565"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
@@ -329,8 +329,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.5342465753424659"></attvalue>
           <attvalue for="closnesscentrality" value="0.48344370860927155"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
-        <viz:position x="13.543311" y="22.457806"></viz:position>
+        <viz:size value="7.309908"></viz:size>
+        <viz:position x="13.54331" y="22.457806"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
       <node id="27" label="Javert">
@@ -341,7 +341,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.591324200913242"></attvalue>
           <attvalue for="closnesscentrality" value="0.5214285714285715"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="11.926445"></viz:size>
         <viz:position x="54.114605" y="-8.482303"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -353,7 +353,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.44406392694063895"></attvalue>
           <attvalue for="closnesscentrality" value="0.40782122905027934"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="8.548932"></viz:size>
         <viz:position x="-39.67912" y="-43.415333"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -365,7 +365,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.48744292237442916"></attvalue>
           <attvalue for="closnesscentrality" value="0.43452380952380953"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="6.121789"></viz:size>
         <viz:position x="-45.932796" y="-169.20535"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -377,7 +377,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.3543378995433788"></attvalue>
           <attvalue for="closnesscentrality" value="0.3230088495575221"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="130.13829" y="-171.39497"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
@@ -389,7 +389,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.4600456621004564"></attvalue>
           <attvalue for="closnesscentrality" value="0.42441860465116277"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="6.1499276"></viz:size>
         <viz:position x="74.6531" y="-122.75648"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
@@ -401,7 +401,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.42123287671232845"></attvalue>
           <attvalue for="closnesscentrality" value="0.3989071038251366"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="-81.494095" y="-86.99245"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -413,8 +413,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.42808219178082163"></attvalue>
           <attvalue for="closnesscentrality" value="0.4010989010989011"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
-        <viz:position x="12.843259" y="-80.97854"></viz:position>
+        <viz:size value="5.0"></viz:size>
+        <viz:position x="12.843258" y="-80.97854"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
       <node id="34" label="Judge">
@@ -425,7 +425,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.45547945205479423"></attvalue>
           <attvalue for="closnesscentrality" value="0.4101123595505618"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="-76.90447" y="-158.46223"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -437,7 +437,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.45547945205479423"></attvalue>
           <attvalue for="closnesscentrality" value="0.4101123595505618"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="-85.77402" y="-144.6046"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -449,7 +449,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.45547945205479423"></attvalue>
           <attvalue for="closnesscentrality" value="0.4101123595505618"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="-110.9353" y="-160.89212"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -461,7 +461,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.45547945205479423"></attvalue>
           <attvalue for="closnesscentrality" value="0.4101123595505618"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="-85.76007" y="-187.5395"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -473,7 +473,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.45547945205479423"></attvalue>
           <attvalue for="closnesscentrality" value="0.4101123595505618"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="-110.68999" y="-177.4259"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -485,7 +485,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.3652968036529678"></attvalue>
           <attvalue for="closnesscentrality" value="0.3443396226415094"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="252.90875" y="-30.59283"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -497,7 +497,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.47716894977168955"></attvalue>
           <attvalue for="closnesscentrality" value="0.4010989010989011"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="6.6461368"></viz:size>
         <viz:position x="124.369194" y="84.11106"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
@@ -509,8 +509,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.3869863013698628"></attvalue>
           <attvalue for="closnesscentrality" value="0.35436893203883496"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
-        <viz:position x="162.1912" y="-3.2741675"></viz:position>
+        <viz:size value="5.0"></viz:size>
+        <viz:position x="162.1912" y="-3.2741678"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
       <node id="43" label="Woman2">
@@ -521,8 +521,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.43721461187214583"></attvalue>
           <attvalue for="closnesscentrality" value="0.40555555555555556"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
-        <viz:position x="-8.663966" y="-59.80815"></viz:position>
+        <viz:size value="5.0"></viz:size>
+        <viz:position x="-8.663967" y="-59.80815"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
       <node id="44" label="MotherInnocent">
@@ -533,7 +533,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.4303652968036527"></attvalue>
           <attvalue for="closnesscentrality" value="0.40331491712707185"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="-73.729256" y="-52.853596"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
@@ -545,7 +545,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.30753424657534234"></attvalue>
           <attvalue for="closnesscentrality" value="0.2908366533864542"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="-92.41173" y="-68.78112"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -557,7 +557,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.4029680365296803"></attvalue>
           <attvalue for="closnesscentrality" value="0.37055837563451777"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="153.01114" y="178.35083"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
@@ -569,7 +569,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.6118721461187215"></attvalue>
           <attvalue for="closnesscentrality" value="0.5177304964539007"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="22.210552"></viz:size>
         <viz:position x="83.939995" y="204.53088"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -581,7 +581,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.36529680365296785"></attvalue>
           <attvalue for="closnesscentrality" value="0.33796296296296297"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.030303"></viz:size>
         <viz:position x="103.543175" y="-56.218037"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
@@ -593,7 +593,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.4840182648401827"></attvalue>
           <attvalue for="closnesscentrality" value="0.44242424242424244"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="9.430162"></viz:size>
         <viz:position x="-35.572483" y="76.709656"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
@@ -605,7 +605,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.3801369863013698"></attvalue>
           <attvalue for="closnesscentrality" value="0.3526570048309179"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="-108.40375" y="123.28861"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
@@ -617,7 +617,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.3253424657534245"></attvalue>
           <attvalue for="closnesscentrality" value="0.3080168776371308"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="-161.67917" y="112.88589"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
@@ -629,7 +629,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.3801369863013697"></attvalue>
           <attvalue for="closnesscentrality" value="0.3526570048309179"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="-83.65634" y="112.4349"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
@@ -641,7 +641,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.47374429223744285"></attvalue>
           <attvalue for="closnesscentrality" value="0.3967391304347826"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="8.699922"></viz:size>
         <viz:position x="81.80142" y="294.6267"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -653,7 +653,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.5593607305936072"></attvalue>
           <attvalue for="closnesscentrality" value="0.4866666666666667"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="10.894524"></viz:size>
         <viz:position x="25.527979" y="188.53383"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -665,7 +665,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.4691780821917808"></attvalue>
           <attvalue for="closnesscentrality" value="0.3924731182795699"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.1537395"></viz:size>
         <viz:position x="42.340633" y="229.31097"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -677,8 +677,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.430365296803653"></attvalue>
           <attvalue for="closnesscentrality" value="0.35960591133004927"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
-        <viz:position x="-13.037967" y="268.05017"></viz:position>
+        <viz:size value="5.0"></viz:size>
+        <viz:position x="-13.037968" y="268.05017"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
       <node id="61" label="Feuilly">
@@ -689,8 +689,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.4691780821917808"></attvalue>
           <attvalue for="closnesscentrality" value="0.3924731182795699"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
-        <viz:position x="2.4101837" y="239.57167"></viz:position>
+        <viz:size value="5.1537395"></viz:size>
+        <viz:position x="2.4101827" y="239.57167"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
       <node id="62" label="Courfeyrac">
@@ -701,7 +701,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.48744292237442916"></attvalue>
           <attvalue for="closnesscentrality" value="0.4010989010989011"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.6887846"></viz:size>
         <viz:position x="28.936483" y="209.70891"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -713,7 +713,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.476027397260274"></attvalue>
           <attvalue for="closnesscentrality" value="0.3945945945945946"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.271117"></viz:size>
         <viz:position x="44.048275" y="262.85178"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -725,8 +725,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.5456621004566209"></attvalue>
           <attvalue for="closnesscentrality" value="0.48026315789473684"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
-        <viz:position x="-2.382457" y="220.14241"></viz:position>
+        <viz:size value="9.248699"></viz:size>
+        <viz:position x="-2.382458" y="220.14241"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
       <node id="65" label="Joly">
@@ -737,7 +737,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.476027397260274"></attvalue>
           <attvalue for="closnesscentrality" value="0.3945945945945946"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.271117"></viz:size>
         <viz:position x="17.41254" y="252.63686"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -749,8 +749,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.4372146118721461"></attvalue>
           <attvalue for="closnesscentrality" value="0.3613861386138614"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
-        <viz:position x="-0.60850453" y="299.8773"></viz:position>
+        <viz:size value="5.020979"></viz:size>
+        <viz:position x="-0.6085054" y="299.8773"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
       <node id="67" label="MotherPlutarch">
@@ -761,7 +761,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.31347031963470307"></attvalue>
           <attvalue for="closnesscentrality" value="0.28515625"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="102.99084" y="347.06332"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
@@ -773,7 +773,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.5228310502283104"></attvalue>
           <attvalue for="closnesscentrality" value="0.46794871794871795"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.6339803"></viz:size>
         <viz:position x="175.84601" y="46.776413"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -785,7 +785,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.5228310502283104"></attvalue>
           <attvalue for="closnesscentrality" value="0.46794871794871795"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.6339803"></viz:size>
         <viz:position x="157.65126" y="37.632244"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -797,7 +797,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.5182648401826484"></attvalue>
           <attvalue for="closnesscentrality" value="0.4620253164556962"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.678269"></viz:size>
         <viz:position x="180.74678" y="23.497093"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -809,7 +809,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.5136986301369864"></attvalue>
           <attvalue for="closnesscentrality" value="0.4620253164556962"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.5159616"></viz:size>
         <viz:position x="197.3677" y="79.343254"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -821,7 +821,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.43721461187214583"></attvalue>
           <attvalue for="closnesscentrality" value="0.40555555555555556"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="41.213913" y="-67.49861"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -833,7 +833,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.37785388127853886"></attvalue>
           <attvalue for="closnesscentrality" value="0.3443396226415094"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="161.75392" y="287.17883"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -845,7 +845,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.37785388127853886"></attvalue>
           <attvalue for="closnesscentrality" value="0.3443396226415094"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="157.79822" y="296.6003"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -857,7 +857,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.43721461187214605"></attvalue>
           <attvalue for="closnesscentrality" value="0.3802083333333333"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.036713"></viz:size>
         <viz:position x="210.4113" y="57.02845"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -869,7 +869,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.4166666666666667"></attvalue>
           <attvalue for="closnesscentrality" value="0.35609756097560974"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="5.0"></viz:size>
         <viz:position x="21.089228" y="342.5022"></viz:position>
         <viz:color r="63" g="177" b="125"></viz:color>
       </node>
@@ -881,7 +881,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.6027397260273972"></attvalue>
           <attvalue for="closnesscentrality" value="0.5328467153284672"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="21.221888"></viz:size>
         <viz:position x="16.89731" y="95.24941"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -893,7 +893,7 @@
           <attvalue for="harmonicclosnesscentrality" value="0.58675799086758"></attvalue>
           <attvalue for="closnesscentrality" value="0.5214285714285715"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
+        <viz:size value="14.636411"></viz:size>
         <viz:position x="111.06736" y="12.154605"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
@@ -905,8 +905,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.4840182648401828"></attvalue>
           <attvalue for="closnesscentrality" value="0.44242424242424244"></attvalue>
         </attvalues>
-        <viz:size value="4.0"></viz:size>
-        <viz:position x="-8.404716" y="67.64917"></viz:position>
+        <viz:size value="7.315424"></viz:size>
+        <viz:position x="-8.4047165" y="67.64917"></viz:position>
         <viz:color r="238" g="121" b="147"></viz:color>
       </node>
     </nodes>
