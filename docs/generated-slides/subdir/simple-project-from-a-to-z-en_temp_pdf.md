@@ -337,16 +337,13 @@ image::ranking-centrality-miserables-3--en.png[align="center",title="Result of t
 image::Resizing-labels-to-reflect-their-node's-size.png[align="center",title="Resizing labels to reflect their node's size"]
 
 //ST: !
-
-
 image::result-label-resizing-en.png[align="center",title="Result of the label resizing"]
+
 == exporting a network as a picture
 
 //ST: exporting a network as a picture
 
-==== exporting a screenshot from the Overview (a png image)
-
-//ST: exporting a network as a screenshot
+//ST: 1. exporting a screenshot from the Overview (a png image)
 
 //ST: !
 
@@ -357,6 +354,23 @@ image::Open-the-configuration-panel-for-screenshots.png[align="center",title="Op
 Select the maximum value for anti-aliasing, and multiply values for width and height for higher resolution. For example, resolution x 3 is width = 3072 and heighth = 2304
 
 image::en/configuration-screenshot-en.png[align="center",title="The configuration panel for screenshots"]
+
+//ST: 2. exporting a pdf or svg picture
+
+//ST: !
+Let's switch to the preview panel:
+
+image::Switching-to-the-preview-panel.png[align="center",title="Switching to the preview panel"]
+
+//ST: !
+The preview panel is dedicated to the preparation of the picture to be exported as a pdf or svg, which are "scalable": in pdf or sv, the resolution of the graph will remain perfect, even with a strong zoom.
+But as you see, it means the network is now looking different than in the Overview.
+
+//ST: !
+CAUTION: contrary to the Overview panel, here you need to hit the "refresh" button after each parameter change.
+
+image::Updating-the-parameters.png[align="center",title="Updating the parameters"]
+
 
 
 == (to be continued)

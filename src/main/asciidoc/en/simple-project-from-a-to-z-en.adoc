@@ -352,7 +352,7 @@ image::https://docs.google.com/drawings/d/13nw3KJL1vHc2zhFr3A5WB3za6GFrzpxQ8kZju
 
 //ST: !
 
-Select the maximum value for anti-aliasing, and multiply values for width and height for higher resolution. For example, resolution x 3 is width = 3072 and heighth = 2304
+Select the maximum value for anti-aliasing, and multiply values for width and height for higher resolution. For example, resolution x 3 is width = 3072 and height = 2304
 
 image::en/configuration-screenshot-en.png[align="center",title="The configuration panel for screenshots"]
 
@@ -379,6 +379,7 @@ image::https://docs.google.com/drawings/d/1Kz34ITT6BecVkgy7S50JO2nX-hywCWnC_kMpJ
 
 //ST: !
 Export: just click on the button and select the file format you prefer
+
 image::https://docs.google.com/drawings/d/1ATho4fb-YqCAPHw4sLa65le7C0kOtNWk7YOYdjd98RA/pub?w=954&h=525[align="center",title="Export button"]
 
 //ST: The end!
