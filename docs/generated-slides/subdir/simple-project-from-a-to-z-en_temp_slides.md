@@ -365,10 +365,16 @@ Export: just click on the button and select the file format you prefer
 
 image::Export-button.png[align="center",title="Export button"]
 
+== donwload the result file
+
+link:../resources/miserables_result.zip[download this zip file] if you need to see the network in its final form.
+
+
 == The end!
 Visit https://www.facebook.com/groups/gephi/[the Gephi group on Facebook] to get help,
 
 or visit https://seinecle.github.io/gephi-tutorials/[the website for more tutorials]
+
 
 
 == questions and exercises

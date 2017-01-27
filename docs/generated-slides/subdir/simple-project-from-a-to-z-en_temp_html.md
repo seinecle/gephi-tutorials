@@ -351,7 +351,7 @@ image::Open-the-configuration-panel-for-screenshots.png[align="center",title="Op
 
 //ST: !
 
-Select the maximum value for anti-aliasing, and multiply values for width and height for higher resolution. For example, resolution x 3 is width = 3072 and heighth = 2304
+Select the maximum value for anti-aliasing, and multiply values for width and height for higher resolution. For example, resolution x 3 is width = 3072 and height = 2304
 
 image::en/configuration-screenshot-en.png[align="center",title="The configuration panel for screenshots"]
 
@@ -378,6 +378,7 @@ image::Result-of-preview.png[align="center",title="Result of preview"]
 
 //ST: !
 Export: just click on the button and select the file format you prefer
+
 image::Export-button.png[align="center",title="Export button"]
 
 //ST: The end!
