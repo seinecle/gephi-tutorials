@@ -4,6 +4,8 @@ Clément Levallois <clementlevallois@gmail.com>
 
 last modified: {docdate}
 
+:icons!:
+:iconsfont:   font-awesome
 :revnumber: 1.0
 :example-caption!:
 
@@ -212,11 +214,14 @@ There are a number of issues with the result we get:
 Let's fix these issues.
 
 == !
+==== 1. Enlarge or shrink the network
 
 - either we use the "scaling" parameter of the layout, as we have seen <<force-atlas-2-parameters,here>>.
 - or the scale is fine, it is just that we need to zoom it or out. Use the scrolling wheel of your mouse, and right click to move the network.
 
 == !
+==== 2. Prevent the Labels from overlapping
+
 In the layout panel, choose "Label Adjust" or "Noverlap": these layouts will move the nodes just so that the Labels stop overlapping:
 
 image::en/choosing-a-label-adjust-algo-en.png[align="center",title="Noverlap or Label Adjust will help you"]
@@ -224,17 +229,20 @@ image::en/choosing-a-label-adjust-algo-en.png[align="center",title="Noverlap or 
 Don't forget to click on "Run" to apply these layouts.
 
 == !
+==== 3. Changing the size of the labels
 Open the bottom panel of Gephi by clicking on tiny arrow head (1). Then select "nodes" (2), then move the slider (3).
 
 image::Adjusting-label-size.png[align="center",title="Adjusting label size"]
 
 == !
+==== 4. Adjusting the thickness of the links
 
 image::Adjusting-edge-thickness.png[align="center",title="Adjusting edge thickness"]
 
 
 == Computing the centrality of the nodes
 == !
+==== 1. Definitions of centrality
 
 "Centrality" is a very good metrics to first get an idea of a network.
 What does centrality mean? Intuitively, we understand that a "central" node will probably sit in the middle of the network.
@@ -257,8 +265,9 @@ Another measure is `betweenness centrality`. This one is more tricky.
 - A node which is on many shortest paths is "between" many nodes. And when you realize it, it is a very intuitive sense of what it means to "be central". These nodes have a high `betweenness centrality`.
 
 == !
+==== 2. Computing betweenness centrality with Gephi
 
-Gephi computes this for you. Find "Network diameter" in the statistics panel and click "run":
+Gephi computes it for you. Find "Network diameter" in the statistics panel and click "run":
 
 image::Computing-betweenness-centrality.png[align="center",title="Computing betweenness centrality"]
 
@@ -274,6 +283,78 @@ A report window opens (also explained in a other tutorials). Close it.
 image::Report-after-the-computation-of-betweenness-centrality.png[align="center",title="Report after the computation of betweenness centrality"]
 
 Now we can visualize this information.
+
+
+== visualize attributes created by Gephi
+Gephi has computed for us the betweenness centrality of all nodes. This remains invisible on the network, however.
+
+It would be interesting to, say, resize the nodes according to their centrality: the more central a node, the bigger.
+This would allow for a very quick visual appreciation of which nodes are the most central.
+
+== !
+First, let's switch to the data laboratory to see how Gephi stored the "betweenness centrality" of each node:
+
+image::Switching-the-view-to-the-data-laboratory.png[align="center",title="Switching the view to the data laboratory"]
+
+== !
+
+When we ran "Network Diameter" in the statistics panel, Gephi has actually computed many kinds of centralities (not just "betweenness centrality"):
+
+image::Different-centrality-measures-visible-in-the-data-laboratory.png[align="center",title="Different centrality measures visible in the data laboratory"]
+
+== !
+To resize the nodes according to the value of their betweenness centrality, we use the `Appearance` panel:
+
+CAUTION: make sure you select the correct options
+
+image::Ranking-node-sizes-by-centrality.png[align="center",title="Ranking node sizes by centrality"]
+
+== !
+
+image::Selecting-the-minimum-and-maximum-sizes-of-nodes.png[align="center",title="Selecting the minimum and maximum sizes of nodes"]
+
+== !
+
+image::ranking-centrality-miserables-3--en.png[align="center",title="Result of the ranking"]
+
+== !
+
+image::Resizing-labels-to-reflect-their-node's-size.png[align="center",title="Resizing labels to reflect their node's size"]
+
+== !
+image::result-label-resizing-en.png[align="center",title="Result of the label resizing"]
+
+
+== exporting a network as a picture
+
+== 1. exporting a screenshot from the Overview (a png image)
+
+== !
+
+image::Open-the-configuration-panel-for-screenshots.png[align="center",title="Open the configuration panel for screenshots"]
+
+== !
+
+Select the maximum value for anti-aliasing, and multiply values for width and height for higher resolution. For example, resolution x 3 is width = 3072 and heighth = 2304
+
+image::en/configuration-screenshot-en.png[align="center",title="The configuration panel for screenshots"]
+
+== 2. exporting a pdf or svg picture
+
+== !
+Let's switch to the preview panel:
+
+image::Switching-to-the-preview-panel.png[align="center",title="Switching to the preview panel"]
+
+== !
+The preview panel is dedicated to the preparation of the picture to be exported as a pdf or svg, which are "scalable": in pdf or sv, the resolution of the graph will remain perfect, even with a strong zoom.
+But as you see, it means the network is now looking different than in the Overview.
+
+== !
+CAUTION: contrary to the Overview panel, here you need to hit the "refresh" button after each parameter change.
+
+image::Updating-the-parameters.png[align="center",title="Updating the parameters"]
+
 
 
 

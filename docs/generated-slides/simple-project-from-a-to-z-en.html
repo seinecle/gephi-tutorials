@@ -86,7 +86,7 @@ table.CodeRay td.code>pre{padding:0}
 .CodeRay .insert .insert{color:#080}
 .CodeRay .delete .delete{color:#800}
 .CodeRay .change .change{color:#66f}
-.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.1.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.1.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>Simple Gephi Project from A to Z</h1><div class="preamble"><div class="paragraph"><p>last modified: 2017-01-24</p></div>
+.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.1.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.1.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>Simple Gephi Project from A to Z</h1><div class="preamble"><div class="paragraph"><p>last modified: 2017-01-28</p></div>
 <div class="imageblock" style="text-align: center"><img src="images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450" /></div></div><p class="author"><small>Clément Levallois</small></p></section>
 <section id="_description_of_the_project"><h2>Description of the project</h2></section>
 <section><div class="paragraph"><p>This project is for complete beginners to Gephi.
@@ -146,15 +146,15 @@ Yet, the properties of these entities remain invisible.</p></div>
 <section><div class="paragraph"><p>There are a number of issues with the result we get:</p></div>
 <div class="olist arabic"><ol class="arabic"><li><p>the network is too big or too small, it is hard to read</p></li><li><p>the labels of the characters overlap</p></li><li><p>the size of the labels might be too big / small</p></li><li><p>the links are sometimes too large</p></li></ol></div>
 <div class="paragraph"><p>Let&#8217;s fix these issues.</p></div></section>
-<section><div class="ulist"><ul><li><p>either we use the "scaling" parameter of the layout, as we have seen <a href="#force-atlas-2-parameters">here</a>.</p></li><li><p>or the scale is fine, it is just that we need to zoom it or out. Use the scrolling wheel of your mouse, and right click to move the network.</p></li></ul></div></section>
-<section><div class="paragraph"><p>In the layout panel, choose "Label Adjust" or "Noverlap": these layouts will move the nodes just so that the Labels stop overlapping:</p></div>
+<section><h3>1. Enlarge or shrink the network</h3><div class="ulist"><ul><li><p>either we use the "scaling" parameter of the layout, as we have seen <a href="#force-atlas-2-parameters">here</a>.</p></li><li><p>or the scale is fine, it is just that we need to zoom it or out. Use the scrolling wheel of your mouse, and right click to move the network.</p></li></ul></div></section>
+<section><h3>2. Prevent the Labels from overlapping</h3><div class="paragraph"><p>In the layout panel, choose "Label Adjust" or "Noverlap": these layouts will move the nodes just so that the Labels stop overlapping:</p></div>
 <div class="imageblock" style="text-align: center"><img src="images/en/choosing-a-label-adjust-algo-en.png" alt="choosing a label adjust algo en" /></div><div class="title">Figure 17. Noverlap or Label Adjust will help you</div>
 <div class="paragraph"><p>Don&#8217;t forget to click on "Run" to apply these layouts.</p></div></section>
-<section><div class="paragraph"><p>Open the bottom panel of Gephi by clicking on tiny arrow head (1). Then select "nodes" (2), then move the slider (3).</p></div>
+<section><h3>3. Changing the size of the labels</h3><div class="paragraph"><p>Open the bottom panel of Gephi by clicking on tiny arrow head (1). Then select "nodes" (2), then move the slider (3).</p></div>
 <div class="imageblock" style="text-align: center"><img src="images/Adjusting-label-size.png" alt="Adjusting label size" /></div><div class="title">Figure 18. Adjusting label size</div></section>
-<section><div class="imageblock" style="text-align: center"><img src="images/Adjusting-edge-thickness.png" alt="Adjusting edge thickness" /></div><div class="title">Figure 19. Adjusting edge thickness</div></section>
+<section><h3>4. Adjusting the thickness of the links</h3><div class="imageblock" style="text-align: center"><img src="images/Adjusting-edge-thickness.png" alt="Adjusting edge thickness" /></div><div class="title">Figure 19. Adjusting edge thickness</div></section>
 <section id="_computing_the_centrality_of_the_nodes"><h2>Computing the centrality of the nodes</h2></section>
-<section><div class="paragraph"><p>"Centrality" is a very good metrics to first get an idea of a network.
+<section><h3>1. Definitions of centrality</h3><div class="paragraph"><p>"Centrality" is a very good metrics to first get an idea of a network.
 What does centrality mean? Intuitively, we understand that a "central" node will probably sit in the middle of the network.
 But how to measure that "scientifically", so that we have an objective confirmation of our visual impression?</p></div>
 <div class="paragraph"><p>There are several ways, all equally interesting.</p></div></section>
@@ -162,13 +162,39 @@ But how to measure that "scientifically", so that we have an objective confirmat
 <div class="paragraph"><p>So, <code>degree centrality</code> just means that the most central node is the node which has the most connections. Simple!</p></div></section>
 <section><div class="paragraph"><p>Another measure is <code>betweenness centrality</code>. This one is more tricky.</p></div>
 <div class="ulist"><ul><li><p>First, you have to imagine what is a <code>shortest path</code>.</p></li><li><p>A <code>path</code> from node A to node B is a chain of nodes, the road if you will, that you have to traverse to go from A to B.</p></li><li><p>The <code>shortest path</code> from A to B is the quickest road from A to B: the path that has the smallest number of nodes between A and B.</p></li><li><p>A node which is on many shortest paths is "between" many nodes. And when you realize it, it is a very intuitive sense of what it means to "be central". These nodes have a high <code>betweenness centrality</code>.</p></li></ul></div></section>
-<section><div class="paragraph"><p>Gephi computes this for you. Find "Network diameter" in the statistics panel and click "run":</p></div>
+<section><h3>2. Computing betweenness centrality with Gephi</h3><div class="paragraph"><p>Gephi computes it for you. Find "Network diameter" in the statistics panel and click "run":</p></div>
 <div class="imageblock" style="text-align: center"><img src="images/Computing-betweenness-centrality.png" alt="Computing betweenness centrality" /></div><div class="title">Figure 20. Computing betweenness centrality</div></section>
 <section><div class="paragraph"><p>This will open a window with parameters (explained in a more advanced tutorials). Click "OK":</p></div>
 <div class="imageblock" style="text-align: center"><img src="images/Parameters-for-the-computation-of-betweenness-centrality.png" alt="Parameters for the computation of betweenness centrality" /></div><div class="title">Figure 21. Parameters for the computation of betweenness centrality</div></section>
 <section><div class="paragraph"><p>A report window opens (also explained in a other tutorials). Close it.</p></div>
 <div class="imageblock" style="text-align: center"><img src="images/Report-after-the-computation-of-betweenness-centrality.png" alt="Report after the computation of betweenness centrality" /></div><div class="title">Figure 22. Report after the computation of betweenness centrality</div>
 <div class="paragraph"><p>Now we can visualize this information.</p></div></section>
+<section id="_visualize_attributes_created_by_gephi"><h2>visualize attributes created by Gephi</h2><div class="paragraph"><p>Gephi has computed for us the betweenness centrality of all nodes. This remains invisible on the network, however.</p></div>
+<div class="paragraph"><p>It would be interesting to, say, resize the nodes according to their centrality: the more central a node, the bigger.
+This would allow for a very quick visual appreciation of which nodes are the most central.</p></div></section>
+<section><div class="paragraph"><p>First, let&#8217;s switch to the data laboratory to see how Gephi stored the "betweenness centrality" of each node:</p></div>
+<div class="imageblock" style="text-align: center"><img src="images/Switching-the-view-to-the-data-laboratory.png" alt="Switching the view to the data laboratory" /></div><div class="title">Figure 23. Switching the view to the data laboratory</div></section>
+<section><div class="paragraph"><p>When we ran "Network Diameter" in the statistics panel, Gephi has actually computed many kinds of centralities (not just "betweenness centrality"):</p></div>
+<div class="imageblock" style="text-align: center"><img src="images/Different-centrality-measures-visible-in-the-data-laboratory.png" alt="Different centrality measures visible in the data laboratory" /></div><div class="title">Figure 24. Different centrality measures visible in the data laboratory</div></section>
+<section><div class="paragraph"><p>To resize the nodes according to the value of their betweenness centrality, we use the <code>Appearance</code> panel:</p></div>
+<div class="admonitionblock caution"><table><tr><td class="icon"><div class="title">Caution</div></td><td class="content">make sure you select the correct options</td></tr></table></div>
+<div class="imageblock" style="text-align: center"><img src="images/Ranking-node-sizes-by-centrality.png" alt="Ranking node sizes by centrality" /></div><div class="title">Figure 25. Ranking node sizes by centrality</div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/Selecting-the-minimum-and-maximum-sizes-of-nodes.png" alt="Selecting the minimum and maximum sizes of nodes" /></div><div class="title">Figure 26. Selecting the minimum and maximum sizes of nodes</div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/ranking-centrality-miserables-3--en.png" alt="ranking centrality miserables 3  en" /></div><div class="title">Figure 27. Result of the ranking</div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/Resizing-labels-to-reflect-their-node's-size.png" alt="Resizing labels to reflect their node's size" /></div><div class="title">Figure 28. Resizing labels to reflect their node&#8217;s size</div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/result-label-resizing-en.png" alt="result label resizing en" /></div><div class="title">Figure 29. Result of the label resizing</div></section>
+<section id="_exporting_a_network_as_a_picture"><h2>exporting a network as a picture</h2></section>
+<section id="_1_exporting_a_screenshot_from_the_overview_a_png_image"><h2>1. exporting a screenshot from the Overview (a png image)</h2></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/Open-the-configuration-panel-for-screenshots.png" alt="Open the configuration panel for screenshots" /></div><div class="title">Figure 30. Open the configuration panel for screenshots</div></section>
+<section><div class="paragraph"><p>Select the maximum value for anti-aliasing, and multiply values for width and height for higher resolution. For example, resolution x 3 is width = 3072 and heighth = 2304</p></div>
+<div class="imageblock" style="text-align: center"><img src="images/en/configuration-screenshot-en.png" alt="configuration screenshot en" /></div><div class="title">Figure 31. The configuration panel for screenshots</div></section>
+<section id="_2_exporting_a_pdf_or_svg_picture"><h2>2. exporting a pdf or svg picture</h2></section>
+<section><div class="paragraph"><p>Let&#8217;s switch to the preview panel:</p></div>
+<div class="imageblock" style="text-align: center"><img src="images/Switching-to-the-preview-panel.png" alt="Switching to the preview panel" /></div><div class="title">Figure 32. Switching to the preview panel</div></section>
+<section><div class="paragraph"><p>The preview panel is dedicated to the preparation of the picture to be exported as a pdf or svg, which are "scalable": in pdf or sv, the resolution of the graph will remain perfect, even with a strong zoom.
+But as you see, it means the network is now looking different than in the Overview.</p></div></section>
+<section><div class="admonitionblock caution"><table><tr><td class="icon"><div class="title">Caution</div></td><td class="content">contrary to the Overview panel, here you need to hit the "refresh" button after each parameter change.</td></tr></table></div>
+<div class="imageblock" style="text-align: center"><img src="images/Updating-the-parameters.png" alt="Updating the parameters" /></div><div class="title">Figure 33. Updating the parameters</div></section>
 <section id="__to_be_continued"><h2>(to be continued)</h2></section>
 <section id="_questions_and_exercises"><h2>questions and exercises</h2></section>
 <section><div class="olist arabic"><ol class="arabic"><li><p>Open the file <code>miserables.gexf</code> with a text editor (here is how to do it on a <a href="http://www.dummies.com/computers/macs/how-to-open-and-edit-a-text-file-on-a-mac/">Mac</a>, and on <a href="https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/app_notepad.mspx?mfr=true">Windows</a>). See how the nodes and the links are written in the file. Can you find the character Javert?</p></li></ol></div></section>
