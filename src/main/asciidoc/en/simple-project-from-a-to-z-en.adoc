@@ -386,6 +386,7 @@ image::https://docs.google.com/drawings/d/1ATho4fb-YqCAPHw4sLa65le7C0kOtNWk7YOYd
 
 link:../resources/miserables_result.zip[download this zip file] if you need to see the network in its final form.
 
+== the end
 
 //ST: The end!
 Visit https://www.facebook.com/groups/gephi/[the Gephi group on Facebook] to get help,
