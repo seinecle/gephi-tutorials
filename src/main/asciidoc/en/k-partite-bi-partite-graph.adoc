@@ -55,45 +55,50 @@ But that could be done without graph, an ordered list on excel would have done t
 
 === How to deal with multipartite graphs ?
 
-Having a k-partite graph makes somehow the graph and all metrics around it difficult for interpretation. We saw that depending on the degree we apply,
-it doesn't show the. Usually, the metrics won't gives you a clear vision on your graph.
+Having a k-partite graph makes somehow the graph unfriendly to read. Usually, the metrics will be difficult to interpret, and
+generating a good visualisation from it won't be trivial.
 
-One method to go forward on our case is to **reduce** the **bi-partite** graph into a **mono-partite** graph.
+One method here is to **reduce** the **bi-partite** graph into a **mono-partite** graph.
 
 > By reducing, we will « lose » information but we gain in **readability** and **synthesis**,
 > that’s part of the work in data visualisation to see at which level we
 > want to go and how to deal with this trade of information. This will 
 > mostly be driven by the question you want to answer.
 
-The principle of the reduction is to consider a type of **nodes** as **edges** and build a new graph based on this rule. In our example we have 2 ways to go :
+The principle of the reduction is to consider a type of **nodes** as **edges** and build a new graph based on this rule.
+In our example we have 2 ways to go :
 
-*   Either we decide that the nodes of type « Company  » are the edges. It will generate a **graph** of « **Persons **«
-*   Either we decide that the nodes of type « Person  » are the edges. It will generate a **graph** of « **Company **«
+*   Either we decide that the nodes of type « Company  » are the edges. It will generate a "**graph** of **Persons **"
+*   Either we decide that the nodes of type « Person  » are the edges. It will generate a "**graph** of **Company **"
 
 > Here both graphs generated makes « sense » (network of 
-> entities) but it might appears that one of the graph isn’t really 'interesting'.
+> entities) but it might appears that in some other case, one of the generated graph won't really be 'interesting'.
 >  That’s part of your work to judge this aspect.
 
 Now, how to perform the transformation ?
 
 === Using a Plugin
 
-The easiest way would be to use the link::https://marketplace.gephi.org/plugin/multimode-networks-transformations-2/[Multimode Network Transformation plugin].
+The easiest way is to use the link::https://marketplace.gephi.org/plugin/multimode-networks-transformations-2/[Multimode Network Transformation plugin].
 The plugin is available on the Gephi app market and in the plugin manager in Gephi.
 
-When it’s installed, you should be able to see or display the** Multimode Network Transformation** tab.
+image::en/k-partite/k-partite-install-plugin.png[Plugin Install]
 
-Then, load the graph your are interested in, clone it in a new workspace and :
+When it’s installed, you should be able to see or display the ** Multimode Network Transformation** tab.
+
+Then, load the graph and :
 
 *   Click on **Load Attributes** and select **Type** on **Attribute Type.**
-*   For left matrix select « **Administrator – Company** » and right matrix « **Company – Adminstrator**«
+*   For left matrix select **Administrator – Company**  and right matrix **Company – Adminstrator**
 *   Enable **Remove Edges** and** Remove Nodes**, and Click** Run
 
+> The plugin will modify directly the graph on the current workspace. If you want' to keep the original graph, be sure
+> you've done a clone of your workspace.
 
 image::en/k-partite/k-partite-config.png[MultiPartite_Gephi]
 The plugins will actually to transform each relation like:
 
-(Administrator)**<****--**(Company)**–>**(Administrator)  
+(Administrator)**<-**(Company)**->**(Administrator)
 
 to  
 
@@ -112,20 +117,20 @@ from the original graph (duplicate the workspace0 again) and in the **Multimode 
 image::en/k-partite/k-partite-config-2.png[MultiPartite_Gephi_2]
 
 image::en/k-partite/k-partite-simple-c2c.png[Tuto_Multi_C2C]
-With the 2 new graphs, we are able to see some particularities:
+With the 2 new graphs, and playing with the weighted degree of the nodes, we are able to see some particularities:
 
 *   The maximum of** common administrator** between company is **3** : Bouygues and Alstom with Olivier Bouygues, Patrick Kron, Georges Chodron de Courcel
 *   **Half of the companies** are sharing at least 2 administrators .
 *   The maximum of **common company** between person is **3**
  : Gerard Lamarche and Paul Demaray Jr see each other when Total, GDF
 Suez and Lafarge SA have a meeting with Board of Directors.
-*   From all administrators that are in at least 2 companies,** 1/3 of them are at least in the same 2 companies**.
+*   From all administrators that are in at least 2 companies,** 1/3 of them are at least in the _same_ 2 companies**.
 
 Theses statements could have been deduced from the original graph, but now, the information is more visible and accessible, especially if you want to share it to a large public.
 
 > The works now is mostly to look at graphs, and resume all
 >  the particularities within a production (poster, interactive graph, 
-> newpaper writting etc…)
+> newspaper etc…)
 
 === Limitations
 
@@ -133,4 +138,4 @@ The plugin works quite well, but sometime it has some limitation on large graph.
 
 === Conclusion
 
-Multipartite graph are complex to analyse, but systhesising  it to monopartite graphs gives you more vision to get insight about your data.
+Multipartite graph are complex to analyse, but synthesising  it to lower partite graphs gives you more vision to get insight about your data.
