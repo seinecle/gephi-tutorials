@@ -1,6 +1,6 @@
 =  K-partite and Bipartite Graph
 Matthieu Totet <matthieu.totet@gmail.com>
-{docdate}
+2017-01-29
 
 last modified: {docdate}
 
@@ -11,7 +11,7 @@ last modified: {docdate}
 ifndef::imagesdir[:imagesdir: ../images]
 ifndef::sourcedir[:sourcedir: ../../../main/java]
 
-= K-partite, Bipartite … What is it ?
+== K-partite, Bipartite … What is it ?
 
 Most of the time, when you create a graph, all the nodes are representing the same « kind » of object.
 
@@ -23,10 +23,10 @@ But sometime, you will encounter graphs that will have 2, 3 or multiple « kinds
 graphs are called **Multipartite Graphs** :
 
 * If you have **2** kinds of nodes, it’s a **Bi**partite Graph (or **2**-partite)
-** Example : Social Network : Persons <-> Companies
+** Example : Social Network : Persons < - > Companies
 
 * If you have **3** kinds of nodes it’s a** 3**-partite Graph
-** Example : Movie Network : Actors <-> Movies <-> Movie Companies
+** Example : Movie Network : Actors < - > Movies < - > Movie Companies
 
 * If you have **k** kinds of nodes it’s a **k**-partite Graph
 
@@ -34,9 +34,9 @@ If you want a proper scientific definition, you can check the https://en.wikiped
 
 == The Dataset
 
-To illustrate this thema, we will use a well known dataset : The Cac 40 Administrators relationship from http://www.citoyennumerique.fr/?tag=cac40[www.citoyennumerique.fr.]
+We will use a well known data set : The Cac 40 Administrators relationship from http://www.citoyennumerique.fr/?tag=cac40[www.citoyennumerique.fr.]
 
-The files for gephi are accessible here : link::../resources/k-partite-bi-partite.zip[Gexf files]
+The files for Gephi are accessible here : link::../resources/k-partite-bi-partite.zip[Gexf files]
 
 The tutorial will be based on the **SimpleGraph**, but you also have access to the **FullGraph** to play with.
 
@@ -44,9 +44,9 @@ The CAC 40 represents the 40 most valuable company on the french stock market. A
 
 This is a typical bi-partite graph. If you look on the data, part of the node has a property type **Administrator** and the other part has a property type **Company**.
 
-image::http://matthieu-totet.fr/Koumin/wp-content/uploads/2013/11/screenshot_130704-1024x1024.png[Cac 40 bipartite graph]
+image::en/k-partite/k-partite-simple-graph.png[Cac 40 bipartite graph]
 
-It’s already nice and we can get quick obesvation:
+We can get quick observations:
 
 *   Filtering by InDegree, we can check that Michel Pebereau and Jean-Martin Folz are in **5 companies** at the same time.
 *   Filtering by OutDegree, we can check that St-Gobain and Total have **8 administrators** that are in other companies.
@@ -55,30 +55,31 @@ But that could be done without graph, an ordered list on excel would have done t
 
 === How to deal with multipartite graphs ?
 
-Having a k-partite graph makes somehow the graph and all metrics around it difficult for interpretation. We saw that depending on the degree we apply, it doesn't show the. 
-Usually, the metrics won't gives you a clear vision on your graph.
+Having a k-partite graph makes somehow the graph and all metrics around it difficult for interpretation. We saw that depending on the degree we apply,
+it doesn't show the. Usually, the metrics won't gives you a clear vision on your graph.
 
 One method to go forward on our case is to **reduce** the **bi-partite** graph into a **mono-partite** graph.
 
 > By reducing, we will « lose » information but we gain in **readability** and **synthesis**,
->  that’s part of the work in data visualisation to see at which level we 
+> that’s part of the work in data visualisation to see at which level we
 > want to go and how to deal with this trade of information. This will 
 > mostly be driven by the question you want to answer.
 
-The principle of the reduction is to concider a type of **nodes** as **edges** and build a new graph based on this rule. In our example we have 2 ways to go :
+The principle of the reduction is to consider a type of **nodes** as **edges** and build a new graph based on this rule. In our example we have 2 ways to go :
 
 *   Either we decide that the nodes of type « Company  » are the edges. It will generate a **graph** of « **Persons **«
 *   Either we decide that the nodes of type « Person  » are the edges. It will generate a **graph** of « **Company **«
 
 > Here both graphs generated makes « sense » (network of 
-> entities) but it might appears that one of the graph isn’t really 'meanful'.
->  That’s part of your work to juge this aspect.
+> entities) but it might appears that one of the graph isn’t really 'interesting'.
+>  That’s part of your work to judge this aspect.
 
 Now, how to perform the transformation ?
 
 === Using a Plugin
 
-The easiest way would be to use the link::https://marketplace.gephi.org/plugin/multimode-networks-transformations-2/[Multimode Network Transformation plugin]. The plugin is available on the gephi app market and in the plugin manager in Gephi.
+The easiest way would be to use the link::https://marketplace.gephi.org/plugin/multimode-networks-transformations-2/[Multimode Network Transformation plugin].
+The plugin is available on the Gephi app market and in the plugin manager in Gephi.
 
 When it’s installed, you should be able to see or display the** Multimode Network Transformation** tab.
 
@@ -88,9 +89,8 @@ Then, load the graph your are interested in, clone it in a new workspace and :
 *   For left matrix select « **Administrator – Company** » and right matrix « **Company – Adminstrator**«
 *   Enable **Remove Edges** and** Remove Nodes**, and Click** Run
 
-    **
 
-image::http://matthieu-totet.fr/Koumin/wp-content/uploads/2015/07/MultiPartite_Gephi-300x202.png[MultiPartite_Gephi]
+image::en/k-partite/k-partite-config.png[MultiPartite_Gephi]
 The plugins will actually to transform each relation like:
 
 (Administrator)**<****--**(Company)**–>**(Administrator)  
@@ -101,7 +101,7 @@ to
 
 Now you should have a graph with only administrators on the graph preview.
 
-image::http://matthieu-totet.fr/Koumin/wp-content/uploads/2015/07/Tuto_Multi_P2P-300x249.png[Tuto_Multi_P2P]
+image::en/k-partite/k-partite-simple-p2p.png[Tuto_Multi_P2P]
 
 To generate the relation between companies, replay the same steps 
 from the original graph (duplicate the workspace0 again) and in the **Multimode Network Transformation** use :
@@ -109,9 +109,9 @@ from the original graph (duplicate the workspace0 again) and in the **Multimode 
 *   Left Matrix : Company – Administrator
 *   Right Matrix : Administrator – Company
 
-image::http://matthieu-totet.fr/Koumin/wp-content/uploads/2015/07/MultiPartite_Gephi_2-300x228.png[MultiPartite_Gephi_2]
+image::en/k-partite/k-partite-config-2.png[MultiPartite_Gephi_2]
 
-image::http://matthieu-totet.fr/Koumin/wp-content/uploads/2015/07/Tuto_Multi_C2C-300x288.png[Tuto_Multi_C2C]
+image::en/k-partite/k-partite-simple-c2c.png[Tuto_Multi_C2C]
 With the 2 new graphs, we are able to see some particularities:
 
 *   The maximum of** common administrator** between company is **3** : Bouygues and Alstom with Olivier Bouygues, Patrick Kron, Georges Chodron de Courcel
