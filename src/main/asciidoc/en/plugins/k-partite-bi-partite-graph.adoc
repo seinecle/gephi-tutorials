@@ -8,8 +8,8 @@ last modified: {docdate}
 :iconsfont:   font-awesome
 :revnumber: 1.0
 :example-caption!:
-ifndef::imagesdir[:imagesdir: ../images]
-ifndef::sourcedir[:sourcedir: ../../../main/java]
+ifndef::imagesdir[:imagesdir: ../../images]
+ifndef::sourcedir[:sourcedir: ../../../../main/java]
 
 == K-partite, Bipartite … What is it ?
 
@@ -19,7 +19,7 @@ Most of the time, when you create a graph, all the nodes are representing the sa
 *   In a Route Netowork : Bus Stops, Airports, Stations etc…
 *   In a Geographical Network  : Countries
 
-But sometime, you will encounter graphs that will have 2, 3 or multiple « kinds » of nodes where the links are almost exclusively going from one type to the other. These 
+But sometimes, you will encounter graphs that will have 2, 3 or multiple « kinds » of nodes where the links are almost exclusively going from one type to the other. These 
 graphs are called **Multipartite Graphs** :
 
 * If you have **2** kinds of nodes, it’s a **Bi**partite Graph (or **2**-partite)
