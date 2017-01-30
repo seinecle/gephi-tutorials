@@ -8,8 +8,7 @@ last modified: {docdate}
 :iconsfont:   font-awesome
 :revnumber: 1.0
 :example-caption!:
-ifndef::imagesdir[:imagesdir: ../../images]
-ifndef::sourcedir[:sourcedir: ../../../../main/java]
+:sourcedir: ../../../../main/java
 
 :title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
 
@@ -28,7 +27,7 @@ Most of the time, when you create a graph, all the nodes are representing the sa
 
 //ST: !
 
-But sometimes, you will encounter graphs that will have 2, 3 or multiple « kinds » of nodes where the links are almost exclusively going from one type to the other. These 
+But sometimes, you will encounter graphs that will have 2, 3 or multiple « kinds » of nodes where the links are almost exclusively going from one type to the other. These
 graphs are called **Multipartite Graphs** :
 
 //ST: !
@@ -94,7 +93,7 @@ One method here is to **reduce** the **bi-partite** graph into a **mono-partite*
 
 > By reducing, we will « lose » information but we gain in **readability** and **synthesis**,
 > that’s part of the work in data visualisation to see at which level we
-> want to go and how to deal with this trade of information. This will 
+> want to go and how to deal with this trade of information. This will
 > mostly be driven by the question you want to answer.
 
 //ST: !
@@ -107,7 +106,7 @@ In our example we have 2 ways to go :
 
 //ST: !
 
-> Here both graphs generated makes « sense » (network of 
+> Here both graphs generated makes « sense » (network of
 > entities) but it might appears that in some other case, one of the generated graph won't really be 'interesting'.
 >  That’s part of your work to judge this aspect.
 
@@ -155,7 +154,7 @@ The plugins will actually to transform each relation like:
 
 (Administrator)**<-**(Company)**->**(Administrator)
 
-to  
+to
 
 (Administrator)**<-[**{weight=Nb of Common Companies}**]->**(Administrator)
 
@@ -168,7 +167,7 @@ image::en/k-partite/k-partite-simple-p2p.png[Tuto_Multi_P2P]
 
 //ST: !
 
-To generate the relation between companies, replay the same steps 
+To generate the relation between companies, replay the same steps
 from the original graph (duplicate the workspace0 again) and in the **Multimode Network Transformation** use :
 
 *   Left Matrix : Company – Administrator
@@ -201,7 +200,7 @@ Theses statements could have been deduced from the original graph, but now, the 
 //ST: !
 
 > The works now is mostly to look at graphs, and resume all
->  the particularities within a production (poster, interactive graph, 
+>  the particularities within a production (poster, interactive graph,
 > newspaper etc…)
 
 == Limitations
