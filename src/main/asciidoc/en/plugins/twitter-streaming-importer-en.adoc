@@ -155,24 +155,24 @@ Now we can start using the plugin.
 
 == Using the plugin
 
-//ST: Using the plugin
+//ST: Using the plugin!
 
-//ST: !
+With the ** Words to follow ** tab, you will be able to follow one or multiple words. For ** hashtags **, just enter the word without the hash in front of it. (e.g if you want to follow '**#Gephi**' just add '**Gephi**')
 
-With the ** Words to follow ** tab, you will be able to follow one or multiple words. For ** hastags **, just enter the word without the hash in front of it. (e.g if you want to follow **#Gephi** just add **Gephi**)
-
-With the ** User to follow ** tab, you will be able to follow the activity of one or multiple users. Any tweet from this user or retweeting or mentioning the user will be captured.
+With the ** Users to follow ** tab, you will be able to follow the activity of one or multiple users. Any tweet from this user or retweeting or mentioning the user will be captured.
 
 You can combine the 2 tabs, the tweet collected will be matching either the Words to follow query **or** the User to follow query
 
-The ** Load Query File** and ** Save Query File ** buttons are here to save your search queries in a file or to load the search from a file. It's convenient if you have
-a long list of words / user.
+The ** Load Query File** and ** Save Query File ** buttons are here to save your search queries in a file or to load it from a file. It's convenient if you have
+a long list of words / users.
+
+=== Networklogic
 
 //ST: !
 
-A ** networklogic ** is the algorithm to apply when a tweet is process to transform it as a set of nodes and edges. There is for the moment 3 networklogic :
+A ** networklogic ** is the algorithm to apply when a tweet is process to transform it as a set of nodes and edges. There is for the moment 3 networklogics :
 
-* Full Twitter Network : This will represent **all** entities (User,Tweet,Hastags,URL,Media,Symbol etc...) as a graph. 
+* Full Twitter Network : This will represent **all** entities (User, Tweet, Hastags, URL, Media, Symbol etc...) as a graph. 
 * User Network : This will represent the interaction between users. Any mentions, retweets or quotes between 2 users, will be represented. The size of the edge represent the number of interaction between 2 users. 
 * Hashtag Network : This will create the network of hashtag.
 
@@ -208,6 +208,19 @@ image::https://docs.google.com/drawings/d/1mDTOUanUkOa0ND8wn3tuwM54pqYXN6RApWkZT
 
 //ST: !
 There, you can export nodes and relations ("edges") as csv files by clicking on "Export table".
+
+=== Timeline
+
+//ST: !
+
+When you are finished with your stream, you can use the ** timeline ** feature to replay the stream of data and look at a particular time window.
+
+_This feature is still experimental and is higly subject to bug._
+
+image::en/twitter-streaming-importer/timeline-enable.png[align="center", title="How to activate the Timeline"]
+
+//ST: !
+image::en/twitter-streaming-importer/timeline.gif[align="center", title="Example of Timeline"]
 
 == The end
 
