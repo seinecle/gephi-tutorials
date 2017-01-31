@@ -1,0 +1,219 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="author" content="Clément Levallois" /><title>Twitter Streaming Importer</title><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><link href="reveal.js-3.1.0/css/reveal.css" rel="stylesheet" /><link rel="stylesheet" href="reveal.js-3.1.0/css/theme/white.css" id="theme" /><style>/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+/*pre.CodeRay {background-color:#f7f7f8;}*/
+.CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
+.CodeRay span.line-numbers{display:inline-block;margin-right:.5em;color:rgba(0,0,0,.3)}
+.CodeRay .line-numbers strong{color:rgba(0,0,0,.4)}
+table.CodeRay{border-collapse:separate;border-spacing:0;margin-bottom:0;border:0;background:none}
+table.CodeRay td{vertical-align: top;line-height:1.45}
+table.CodeRay td.line-numbers{text-align:right}
+table.CodeRay td.line-numbers>pre{padding:0;color:rgba(0,0,0,.3)}
+table.CodeRay td.code{padding:0 0 0 .5em}
+table.CodeRay td.code>pre{padding:0}
+.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .annotation{color:#007}
+.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-value{color:#700}
+.CodeRay .binary{color:#509}
+.CodeRay .comment{color:#998;font-style:italic}
+.CodeRay .char{color:#04d}
+.CodeRay .char .content{color:#04d}
+.CodeRay .char .delimiter{color:#039}
+.CodeRay .class{color:#458;font-weight:bold}
+.CodeRay .complex{color:#a08}
+.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .color{color:#099}
+.CodeRay .class-variable{color:#369}
+.CodeRay .decorator{color:#b0b}
+.CodeRay .definition{color:#099}
+.CodeRay .delimiter{color:#000}
+.CodeRay .doc{color:#970}
+.CodeRay .doctype{color:#34b}
+.CodeRay .doc-string{color:#d42}
+.CodeRay .escape{color:#666}
+.CodeRay .entity{color:#800}
+.CodeRay .error{color:#808}
+.CodeRay .exception{color:inherit}
+.CodeRay .filename{color:#099}
+.CodeRay .function{color:#900;font-weight:bold}
+.CodeRay .global-variable{color:#008080}
+.CodeRay .hex{color:#058}
+.CodeRay .integer,.CodeRay .float{color:#099}
+.CodeRay .include{color:#555}
+.CodeRay .inline{color:#000}
+.CodeRay .inline .inline{background:#ccc}
+.CodeRay .inline .inline .inline{background:#bbb}
+.CodeRay .inline .inline-delimiter{color:#d14}
+.CodeRay .inline-delimiter{color:#d14}
+.CodeRay .important{color:#555;font-weight:bold}
+.CodeRay .interpreted{color:#b2b}
+.CodeRay .instance-variable{color:#008080}
+.CodeRay .label{color:#970}
+.CodeRay .local-variable{color:#963}
+.CodeRay .octal{color:#40e}
+.CodeRay .predefined{color:#369}
+.CodeRay .preprocessor{color:#579}
+.CodeRay .pseudo-class{color:#555}
+.CodeRay .directive{font-weight:bold}
+.CodeRay .type{font-weight:bold}
+.CodeRay .predefined-type{color:inherit}
+.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .key{color:#808}
+.CodeRay .key .delimiter{color:#606}
+.CodeRay .key .char{color:#80f}
+.CodeRay .value{color:#088}
+.CodeRay .regexp .delimiter{color:#808}
+.CodeRay .regexp .content{color:#808}
+.CodeRay .regexp .modifier{color:#808}
+.CodeRay .regexp .char{color:#d14}
+.CodeRay .regexp .function{color:#404;font-weight:bold}
+.CodeRay .string{color:#d20}
+.CodeRay .string .string .string{background:#ffd0d0}
+.CodeRay .string .content{color:#d14}
+.CodeRay .string .char{color:#d14}
+.CodeRay .string .delimiter{color:#d14}
+.CodeRay .shell{color:#d14}
+.CodeRay .shell .delimiter{color:#d14}
+.CodeRay .symbol{color:#990073}
+.CodeRay .symbol .content{color:#a60}
+.CodeRay .symbol .delimiter{color:#630}
+.CodeRay .tag{color:#008080}
+.CodeRay .tag-special{color:#d70}
+.CodeRay .variable{color:#036}
+.CodeRay .insert{background:#afa}
+.CodeRay .delete{background:#faa}
+.CodeRay .change{color:#aaf;background:#007}
+.CodeRay .head{color:#f8f;background:#505}
+.CodeRay .insert .insert{color:#080}
+.CodeRay .delete .delete{color:#800}
+.CodeRay .change .change{color:#66f}
+.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.1.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.1.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>Twitter Streaming Importer</h1><div class="preamble"><div class="paragraph"><p>last modified: 2017-01-31</p></div>
+<div class="imageblock" style="text-align: center"><img src="images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450" /></div></div><p class="author"><small>Clément Levallois</small></p></section>
+<section id="_author_and_documentation"><h2>Author and documentation</h2><div class="paragraph"><p>This plugin is created by <a href="https://matthieu-totet.fr">Matthieu Totet</a>, who is a long time community member of Gephi (check his <a href="https://github.com/totetmatt/GephiStreamer">Gephi Streamer</a>!)</p></div>
+<div class="paragraph"><p>You can find additional documentation on this plugin on <a href="https://matthieu-totet.fr/Koumin/2016/04/25/twitter-streaming-importer-naoyun-as-a-gephi-plugin/">Matthieu&#8217;s website</a>.</p></div></section>
+<section id="_description_of_the_plugin"><h2>Description of the plugin</h2><div class="paragraph"><p>This plugin enables you to:</p></div>
+<div class="ulist"><ul><li><p>Collect tweets in realtime, on the topic you choose</p></li><li><p>Get the connections between the users mentionned in these tweets</p></li><li><p>Visualize these connections in Gephi, or just export all the tweets to Excel</p></li></ul></div></section>
+<section id="_installing_the_plugin"><h2>Installing the plugin</h2></section>
+<section><div class="admonitionblock warning"><table><tr><td class="icon"><i class="fa fa-warning" title="Warning"></i></td><td class="content">The setup of the plugin will need you to create a Twitter account, if you don&#8217;t already have one.
+Get your Twitter login and password ready. <strong>You also need a mobile phone number where your Twitter account can be confirmed</strong>.</td></tr></table></div></section>
+<section><div class="admonitionblock caution"><table><tr><td class="icon"><i class="fa fa-fire" title="Caution"></i></td><td class="content"><div class="paragraph"><p>Setting up a Twitter account and creating a Twitter app is a boring task.</p></div>
+<div class="paragraph"><p>It takes just 15 minutes, and you have to do it just once. Then you&#8217;ll have Twitter at your fingertips.</p></div>
+<div class="paragraph"><p>Let&#8217;s go!</p></div></td></tr></table></div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/Choose-the-menu-Tools-then-Plugins.png" alt="Choose the menu Tools then Plugins" /></div><div class="title">Figure 1. Choose the menu Tools then Plugins</div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/Click-on-the-tab-Available-Plugins.png" alt="Click on the tab Available Plugins" /></div><div class="title">Figure 2. Click on the tab Available Plugins</div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/Install-the-plugin-then-restart-Gephi.png" alt="Install the plugin then restart Gephi" /></div><div class="title">Figure 3. Install the plugin then restart Gephi</div></section>
+<section id="_initializing_the_plugin_to_be_done_just_once"><h2>Initializing the plugin (to be done just once)</h2></section>
+<section id="_creating_a_twitter_account"><h2>Creating a Twitter account</h2></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/Open-a-new-project-in-Gephi.png" alt="Open a new project in Gephi" /></div><div class="title">Figure 4. Open a new project in Gephi</div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/Display-the-plugin-in-Gephi.png" alt="Display the plugin in Gephi" /></div><div class="title">Figure 5. Display the plugin in Gephi</div></section>
+<section><div class="paragraph"><p>We need now to connect to a Twitter account. If you already have a Twitter account and you are logged in, <a href="#twitter-account-finished-setup">skip to here</a>.</p></div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/Creating-a-Twitter-account.png" alt="Creating a Twitter account" /></div><div class="title">Figure 6. Creating a Twitter account</div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/Confirmation-of-the-sign-up.png" alt="Confirmation of the sign up" /></div><div class="title">Figure 7. Confirmation of the sign-up</div></section>
+<section><div class="admonitionblock warning"><table><tr><td class="icon"><i class="fa fa-warning" title="Warning"></i></td><td class="content">You have received an email by Twitter about the sign up. At some point (but now would be a good time), you must click on the link in this email to confirm it.</td></tr></table></div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/Enter-the-verification-code-you-received-by-sms.png" alt="Enter the verification code you received by sms" /></div><div class="title">Figure 8. Enter the verification code you received by sms</div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/Choose-a-username.png" alt="Choose a username" /></div><div class="title">Figure 9. Choose a username</div></section>
+<section><div class="paragraph"><p>The next screens of the sign up for Twitter are not important for us.
+Just follow the steps until you get to the page showing your Twitter profile, meaning the setup is finished.</p></div></section>
+<section><div class="paragraph" id="twitter-account-finished-setup"><p>You now have a Twitter account.
+We need to create a Twitter app which will authorize us to collect tweets automatically via Gephi</p></div>
+<div class="paragraph"><p>Go to <strong><a href="https://apps.twiter.com">https://apps.twiter.com</a></strong>:</p></div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/Create-a-new-app.png" alt="Create a new app" /></div><div class="title">Figure 10. Create a new app</div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/Fill-in-the-fields.png" alt="Fill in the fields" /></div><div class="title">Figure 11. Fill in the fields</div></section>
+<section><div class="paragraph"><p>INFO: Almost there!!</p></div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/Click-on-Keys-and-Access-Tokens.png" alt="Click on Keys and Access Tokens" /></div><div class="title">Figure 12. Click on Keys and Access Tokens</div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/Click-on-Create-my-access-token.png" alt="Click on Create my access token" /></div><div class="title">Figure 13. Click on Create my access token</div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/Copy-paste-these-codes-into-Gephi.png" alt="Copy paste these codes into Gephi" /></div><div class="title">Figure 14. Copy paste these codes into Gephi</div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/Where-to-copy-paste-the-codes-in-Gephi.png" alt="Where to copy paste the codes in Gephi" /></div><div class="title">Figure 15. Where to copy paste the codes in Gephi</div></section>
+<section id="_done"><h2>Done!</h2><div class="paragraph"><p><span class="icon"><i class="fa fa-thumbs-up"></i></span> Well done. This setup had just to be done once.
+Now we can start using the plugin.</p></div></section>
+<section id="_using_the_plugin"><h2>Using the plugin</h2></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/Adding-terms-and-launching-the-collection-of-tweets.png" alt="Adding terms and launching the collection of tweets" /></div><div class="title">Figure 16. Adding terms and launching the collection of tweets</div></section>
+<section><div class="paragraph"><p>Be careful that if you choose very common terms, tweets will arrive fast and in large volumes.
+If you don&#8217;t have enough memory (RAM) on your computer, this could make it crash.
+Click on "disconnect" to stop the collection of tweets.</p></div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/en/twitter-streaming-importer/result-plugin-1-en.png" alt="result plugin 1 en" /></div><div class="title">Figure 17. Users mentioned in or retweeting tweets citing the search terms</div></section>
+<section id="_applying_a_layout_while_the_tweets_arrive"><h2>Applying a layout while the tweets arrive.</h2><div class="paragraph"><p>You can see the users organize spatially in real time, while the tweets are being collected.</p></div>
+<div class="paragraph"><p>Just run Force Atlas 2 in the "Layout" panel. This will not interrupt the collection of tweets.</p></div></section>
+<section><div class="imageblock" style="text-align: center"><img src="images/Running-the-Force-Atlas-layout-while-the-tweets-are-arriving.png" alt="Running the Force Atlas layout while the tweets are arriving" /></div><div class="title">Figure 18. Running the Force Atlas layout while the tweets are arriving</div></section>
+<section><div class="paragraph"><p>Shift to the <code>data laboratory</code> to view the data collected, in a spreadsheet format:</p></div>
+<div class="imageblock" style="text-align: center"><img src="images/Switching-to-the-data-laboratory-view.png" alt="Switching to the data laboratory view" /></div><div class="title">Figure 19. Switching to the data laboratory view</div></section>
+<section><div class="paragraph"><p>There, you can export nodes and relations ("edges") as csv files by clicking on "Export table".</p></div></section>
+<section id="_the_end"><h2>The end!</h2><div class="paragraph"><p>This plugin has many more features.</p></div>
+<div class="paragraph"><p>Visit <a href="https://www.facebook.com/groups/gephi/">the Gephi group on Facebook</a> to get help,</p></div>
+<div class="paragraph"><p>or visit <a href="https://seinecle.github.io/gephi-tutorials/">the website for more tutorials</a></p></div></section></div></div><script src="reveal.js-3.1.0/lib/js/head.min.js"></script><script src="reveal.js-3.1.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+Reveal.initialize({
+  // Display controls in the bottom right corner
+  controls: true,
+  // Display a presentation progress bar
+  progress: true,
+  // Display the page number of the current slide
+  slideNumber: false,
+  // Push each slide change to the browser history
+  history: false,
+  // Enable keyboard shortcuts for navigation
+  keyboard: true,
+  // Enable the slide overview mode
+  overview: true,
+  // Vertical centering of slides
+  center: true,
+  // Enables touch navigation on devices with touch input
+  touch: true,
+  // Loop the presentation
+  loop: false,
+  // Change the presentation direction to be RTL
+  rtl: false,
+  // Turns fragments on and off globally
+  fragments: true,
+  // Flags if the presentation is running in an embedded mode,
+  // i.e. contained within a limited portion of the screen
+  embedded: false,
+  // Number of milliseconds between automatically proceeding to the
+  // next slide, disabled when set to 0, this value can be overwritten
+  // by using a data-autoslide attribute on your slides
+  autoSlide: 0,
+  // Stop auto-sliding after user input
+  autoSlideStoppable: true,
+  // Enable slide navigation via mouse wheel
+  mouseWheel: false,
+  // Hides the address bar on mobile devices
+  hideAddressBar: true,
+  // Opens links in an iframe preview overlay
+  previewLinks: false,
+  // Theme (e.g., beige, black, league, night, serif, simple, sky, solarized, white)
+  // NOTE setting the theme in the config no longer works in reveal.js 3.x
+  //theme: Reveal.getQueryHash().theme || 'white',
+  // Transition style (e.g., none, fade, slide, convex, concave, zoom)
+  transition: Reveal.getQueryHash().transition || 'linear',
+  // Transition speed (e.g., default, fast, slow)
+  transitionSpeed: 'default',
+  // Transition style for full page slide backgrounds (e.g., none, fade, slide, convex, concave, zoom)
+  backgroundTransition: 'fade',
+  // Number of slides away from the current that are visible
+  viewDistance: 3,
+  // Parallax background image (e.g., "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'")
+  parallaxBackgroundImage: '',
+  // Parallax background size in CSS syntax (e.g., "2100px 900px")
+  parallaxBackgroundSize: '',
+
+  // The "normal" size of the presentation, aspect ratio will be preserved
+  // when the presentation is scaled to fit different resolutions. Can be
+  // specified using percentage units.
+  width: 960,
+  height: 700,
+
+  // Factor of the display size that should remain empty around the content
+  margin: 0.1,
+
+  // Bounds for smallest/largest possible scale to apply to content
+  minScale: 0.2,
+  maxScale: 10.0,
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+      { src: 'reveal.js-3.1.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'reveal.js-3.1.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js-3.1.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+      { src: 'reveal.js-3.1.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'reveal.js-3.1.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+});</script></body></html>
