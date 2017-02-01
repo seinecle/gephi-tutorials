@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
-<meta name="author" content="Clément Levallois">
+<meta name="author" content="Clément Levallois, Matthieu Totet">
 <title>Twitter Streaming Importer</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -516,6 +516,8 @@ table.CodeRay td.code>pre{padding:0}
 <div class="details">
 <span id="author" class="author">Clément Levallois</span><br>
 <span id="email" class="email"><a href="mailto:clementlevallois@gmail.com">clementlevallois@gmail.com</a></span><br>
+<span id="author2" class="author">Matthieu Totet</span><br>
+<span id="email2" class="email"><a href="mailto:matthieu.totet@gmail.com">matthieu.totet@gmail.com</a></span><br>
 <span id="revdate">2017-01-31</span>
 </div>
 <div id="toc" class="toc">
@@ -524,7 +526,12 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_description_of_the_plugin">Description of the plugin</a></li>
 <li><a href="#_installing_the_plugin">Installing the plugin</a></li>
 <li><a href="#_initializing_the_plugin_to_be_done_just_once">Initializing the plugin (to be done just once)</a></li>
-<li><a href="#_using_the_plugin">Using the plugin</a></li>
+<li><a href="#_using_the_plugin">Using the plugin</a>
+<ul class="sectlevel3">
+<li><a href="#_network_logic">Network Logic</a></li>
+<li><a href="#_timeline">Timeline</a></li>
+</ul>
+</li>
 <li><a href="#_the_end">The end</a></li>
 </ul>
 </div>
@@ -533,7 +540,7 @@ table.CodeRay td.code>pre{padding:0}
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>last modified: 2017-01-31</p>
+<p>last modified: 2017-02-01</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -731,6 +738,7 @@ We need to create a Twitter app which will authorize us to collect tweets automa
 </div>
 <div class="paragraph">
 <p><span class="icon"><i class="fa fa-thumbs-up"></i></span> Well done. This setup had just to be done once.
+Your credentials are saved and will be loaded at each run.
 Now we can start using the plugin.</p>
 </div>
 </div>
@@ -738,22 +746,69 @@ Now we can start using the plugin.</p>
 <div class="sect1">
 <h2 id="_using_the_plugin">Using the plugin</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>With the <strong> Words to follow </strong> tab, you will be able to follow one or multiple words. For <strong> hashtags </strong>, just enter the word without the hash in front of it. (e.g if you want to follow '<strong>#Gephi</strong>' just add '<strong>Gephi</strong>')</p>
+</div>
+<div class="paragraph">
+<p>With the <strong> Users to follow </strong> tab, you will be able to follow the activity of one or multiple users. Any tweet from this user or retweeting or mentioning the user will be captured.</p>
+</div>
+<div class="paragraph">
+<p>You can combine the 2 tabs, the tweet collected will be matching either the Words to follow query <strong>or</strong> the User to follow query</p>
+</div>
+<div class="paragraph">
+<p>The <strong> Load Query File</strong> and <strong> Save Query File </strong> buttons are here to save your search queries in a file or to load it from a file. It&#8217;s convenient if you have
+a long list of words / users.</p>
+</div>
+<div class="sect3">
+<h4 id="_network_logic">Network Logic</h4>
+<div class="paragraph">
+<p>A <strong> Network Logic </strong> means: what should be done with an incoming tweet? How to transform it as a set of nodes and edges?</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Selection-of-the-network-logic.png" alt="Selection of the network logic">
+</div>
+<div class="title">Figure 16. Selection of the network logic</div>
+</div>
+<div class="paragraph">
+<p>There are for the moment 3 Network Logics to choose from:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Full Twitter Network : This will represent <strong>all</strong> entities (User, Tweet, Hastags, URL, Media, Symbol etc&#8230;&#8203;) as a graph.</p>
+</li>
+<li>
+<p>User Network : This will represent the interaction between users. Any mentions, retweets or quotes between 2 users, will be represented. The size of the edge represent the number of interactions between 2 users.</p>
+</li>
+<li>
+<p>Hashtag Network : This will create the network of hashtag.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In the following, we use the network logic "User Network":</p>
+</div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="images/Adding-terms-and-launching-the-collection-of-tweets.png" alt="Adding terms and launching the collection of tweets">
 </div>
-<div class="title">Figure 16. Adding terms and launching the collection of tweets</div>
+<div class="title">Figure 17. Adding terms and launching the collection of tweets</div>
 </div>
 <div class="paragraph">
-<p>Be careful that if you choose very common terms, tweets will arrive fast and in large volumes.
-If you don&#8217;t have enough memory (RAM) on your computer, this could make it crash.
-Click on "disconnect" to stop the collection of tweets.</p>
+<p>Be careful that if you choose very common terms, tweets will arrive fast and in large volumes.</p>
+</div>
+<div class="paragraph">
+<p>If you don&#8217;t have enough memory (RAM) on your computer, this could make it crash.</p>
+</div>
+<div class="paragraph">
+<p>Click on "disconnect" to stop the collection of tweets.</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="images/en/twitter-streaming-importer/result-plugin-1-en.png" alt="result plugin 1 en">
 </div>
-<div class="title">Figure 17. Users mentioned in or retweeting tweets citing the search terms</div>
+<div class="title">Figure 18. Users mentioned in or retweeting tweets citing the search terms</div>
 </div>
 <div class="paragraph">
 <p>You can see the users organize spatially in real time, while the tweets are being collected.</p>
@@ -765,7 +820,7 @@ Click on "disconnect" to stop the collection of tweets.</p>
 <div class="content">
 <img src="images/Running-the-Force-Atlas-layout-while-the-tweets-are-arriving.png" alt="Running the Force Atlas layout while the tweets are arriving">
 </div>
-<div class="title">Figure 18. Running the Force Atlas layout while the tweets are arriving</div>
+<div class="title">Figure 19. Running the Force Atlas layout while the tweets are arriving</div>
 </div>
 <div class="paragraph">
 <p>Shift to the <code>data laboratory</code> to view the data collected, in a spreadsheet format:</p>
@@ -774,19 +829,38 @@ Click on "disconnect" to stop the collection of tweets.</p>
 <div class="content">
 <img src="images/Switching-to-the-data-laboratory-view.png" alt="Switching to the data laboratory view">
 </div>
-<div class="title">Figure 19. Switching to the data laboratory view</div>
+<div class="title">Figure 20. Switching to the data laboratory view</div>
 </div>
 <div class="paragraph">
 <p>There, you can export nodes and relations ("edges") as csv files by clicking on "Export table".</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_timeline">Timeline</h4>
+<div class="paragraph">
+<p>When you are finished with your stream, you can use the <strong> timeline </strong> feature to replay the stream of data and look at a particular time window.</p>
+</div>
+<div class="paragraph">
+<p><em>This feature is still experimental and is higly subject to bug.</em></p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/en/twitter-streaming-importer/timeline-enable.png" alt="timeline enable">
+</div>
+<div class="title">Figure 21. How to activate the Timeline</div>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/en/twitter-streaming-importer/timeline.gif" alt="timeline">
+</div>
+<div class="title">Figure 22. Example of Timeline</div>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_the_end">The end</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>This plugin has many more features.</p>
-</div>
 <div class="paragraph">
 <p>Visit <a href="https://www.facebook.com/groups/gephi/">the Gephi group on Facebook</a> to get help,</p>
 </div>
@@ -799,7 +873,7 @@ Click on "disconnect" to stop the collection of tweets.</p>
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2017-01-31 14:21:00 CET
+Last updated 2017-02-01 10:01:38 CET
 </div>
 </div>
 </body>

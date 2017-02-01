@@ -122,6 +122,8 @@ Now, how to perform the transformation ?
 The easiest way is to use the link::https://marketplace.gephi.org/plugin/multimode-networks-transformations-2/[Multimode Network Transformation plugin].
 The plugin is available on the Gephi app market and in the plugin manager in Gephi.
 
+It is authored by https://github.com/jaroslav-kuchar[Jaroslav Kuchar]
+
 //ST: !
 
 image::en/k-partite/k-partite-install-plugin.png[Plugin Install]

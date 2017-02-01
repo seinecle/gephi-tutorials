@@ -1,5 +1,5 @@
 =  Twitter Streaming Importer
-Clément Levallois <clementlevallois@gmail.com>
+Clément Levallois <clementlevallois@gmail.com>;Matthieu Totet <matthieu.totet@gmail.com>
 2017-01-31
 
 last modified: {docdate}
@@ -145,10 +145,53 @@ image::Where-to-copy-paste-the-codes-in-Gephi.png[align="center", title="Where t
 == Done!
 
 icon:thumbs-up[] Well done. This setup had just to be done once.
+Your credentials are saved and will be loaded at each run.
 Now we can start using the plugin.
 
 
 == Using the plugin
+
+== !
+
+
+With the ** Words to follow ** tab, you will be able to follow one or multiple words. For ** hashtags **, just enter the word without the hash in front of it. (e.g if you want to follow '**#Gephi**' just add '**Gephi**')
+
+== !
+
+With the ** Users to follow ** tab, you will be able to follow the activity of one or multiple users. Any tweet from this user or retweeting or mentioning the user will be captured.
+
+== !
+
+You can combine the 2 tabs, the tweet collected will be matching either the Words to follow query **or** the User to follow query
+
+== !
+
+The ** Load Query File** and ** Save Query File ** buttons are here to save your search queries in a file or to load it from a file. It's convenient if you have
+a long list of words / users.
+
+== !
+
+==== Network Logic
+
+== !
+
+
+A ** Network Logic ** means: what should be done with an incoming tweet? How to transform it as a set of nodes and edges?
+
+== The dropdown menu to choose the network logic:
+
+image::Selection-of-the-network-logic.png[align="center",title="Selection of the network logic"]
+
+There are for the moment 3 Network Logics to choose from:
+
+== !
+
+* Full Twitter Network : This will represent **all** entities (User, Tweet, Hastags, URL, Media, Symbol etc...) as a graph.
+* User Network : This will represent the interaction between users. Any mentions, retweets or quotes between 2 users, will be represented. The size of the edge represent the number of interactions between 2 users.
+* Hashtag Network : This will create the network of hashtag.
+
+== !
+In the following, we use the network logic "User Network":
 
 == !
 
@@ -157,7 +200,9 @@ image::Adding-terms-and-launching-the-collection-of-tweets.png[align="center", t
 == !
 
 Be careful that if you choose very common terms, tweets will arrive fast and in large volumes.
+
 If you don't have enough memory (RAM) on your computer, this could make it crash.
+
 Click on "disconnect" to stop the collection of tweets.
 
 
@@ -183,10 +228,25 @@ image::Switching-to-the-data-laboratory-view.png[align="center", title="Switchin
 == !
 There, you can export nodes and relations ("edges") as csv files by clicking on "Export table".
 
+== !
+
+==== Timeline
+
+== !
+
+When you are finished with your stream, you can use the ** timeline ** feature to replay the stream of data and look at a particular time window.
+
+_This feature is still experimental and is higly subject to bug._
+
+== !
+
+image::en/twitter-streaming-importer/timeline-enable.png[align="center", title="How to activate the Timeline"]
+
+== !
+image::en/twitter-streaming-importer/timeline.gif[align="center", title="Example of Timeline"]
+
 
 == The end!
-
-This plugin has many more features.
 
 Visit https://www.facebook.com/groups/gephi/[the Gephi group on Facebook] to get help,
 
