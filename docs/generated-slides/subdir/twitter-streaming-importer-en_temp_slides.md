@@ -13,6 +13,8 @@ last modified: {docdate}
 
 image::gephi-logo-2010-transparent.png[width="450" align="center"]
 
+//ST == "Escape" to see all slides
+//ST ==  "F11" for full screen
 
 
 == Author and documentation

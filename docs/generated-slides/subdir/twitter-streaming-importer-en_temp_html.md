@@ -1,5 +1,5 @@
 =  Twitter Streaming Importer
-Clément Levallois <clementlevallois@gmail.com>
+Clément Levallois <clementlevallois@gmail.com>;Matthieu Totet <matthieu.totet@gmail.com>
 2017-01-31
 
 last modified: {docdate}
@@ -14,6 +14,8 @@ last modified: {docdate}
 
 image::gephi-logo-2010-transparent.png[width="450" align="center"]
 
+//ST == "Escape" to see all slides
+//ST ==  "F11" for full screen
 
 == Description of the plugin
 
