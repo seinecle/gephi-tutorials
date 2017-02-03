@@ -21,6 +21,7 @@ image::gephi-logo-2010-transparent.png[width="450" align="center"]
 
 //ST: !
 Gephi handles the import of network files in a variety of formats:
+
 image::network-formats-gephi-import-en.png[align="center",title="file formats supported by Gephi"]
 
 //ST: !
