@@ -1,0 +1,123 @@
+=  Semantic Web Importer
+Matthieu Totet <matthieu.totet@gmail.com>
+2017-01-31
+
+last modified: {docdate}
+
+:icons: font
+:iconsfont:   font-awesome
+:revnumber: 1.0
+:example-caption!:
+ifndef::imagesdir[:imagesdir: ../../images]
+ifndef::sourcedir[:sourcedir: ../../../../main/java]
+
+:title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
+
+image::gephi-logo-2010-transparent.png[width="450" align="center"]
+
+
+== Description of the plugin
+
+//ST: Author and documentation
+https://marketplace.gephi.org/plugin/semanticwebimport/
+Plugin Author: Erwan Demairy
+
+Plugin sources: git://scm.gforge.inria.fr/segviz-public/gephi-plugins.g (...)
+Licensed under: Cecill-C
+
+//ST: Introduction
+
+
+= Introduction to concepts
+
+RDF stands for https://en.wikipedia.org/wiki/Resource_Description_Framework[Resource Description Framework] .
+It’s a way to represent information of all kinds.
+It’s now a specification and since 1995 people are working on RDF and all
+subjects related to information representation for automatic system.
+
+It can be considered as the « Grand Father » of graph representation.
+
+The idea is very simple, all information can be represented by a triplet :
+
+> `(subject, predicate, object)`
+
+To query such data set, a query language has been developed : https://en.wikipedia.org/wiki/SPARQL[SPARQL]
+The SPARQL format is close to SQL format and try to be as close as possible as natural language.
+
+DBpedia is the RDF version of Wikipedia. It’s an open datastore that tries to gather and offers in RDF format,
+all information that you can find in wikipedia or other knowledge service.
+
+It very interesting because it preformat concepts and makes it available for automatic processes or complex query across concepts.
+
+You can query it through a web interface or via any RDF toolkit :
+
+http://dbpedia.org/sparql[http://dbpedia.org/sparql]
+
+```
+
+select *
+where
+{
+  <http://dbpedia.org/resource/Leonardo_DiCaprio> ?predicate ?object.
+}
+
+```
+
+= The plugin
+
+The result of a SPARQL can be a table as we could do it with SQL, but you can also build a graph based on your query.
+The Semantic Web Plugin use this feature to draw the result of your query into Gephi.
+
+First, we need to install Semantic web import. You can find and install this plugins in the Tools -> Plugins part of you gephi.
+
+When installed, go to the Semantic Web Import tab.
+
+In Drivers tab, put http://dbpedia.org/sparql *(and press ENTER)*.
+
+Go to Query tab, remove the dummy query and put this one:
+```
+CONSTRUCT{
+  ?person <http://gephi.org/type> "person".
+  ?movie <http://gephi.org/type> "movie".
+  ?movie <http://toto/link> ?person .
+}
+WHERE
+{
+ ?movie a <http://dbpedia.org/ontology/Film>.
+ ?movie ?rel1 <http://dbpedia.org/resource/Leonardo_DiCaprio>.
+ ?movie ?rel2 ?person.
+ ?person a <http://dbpedia.org/ontology/Person>.
+}
+```
+Go back to the Graph preview and you should see a graph. Use the layout tab to have a more intuitive rendering.
+
+== CONSTRUCT block
+
+The `CONSTRUCT` block define the new graph to build from the query. That's the description of your data the plugin will interpet
+to build the graph.
+
+What is the syntax for this `CONSTRUCT` block :
+
+* `?a <http://gephi.org/nodeProperty> ?b` : Will create the node `?a` with the property `nodeProperty` equals to `?b`.
+* `?a (<what_You_Want> or ?c) ?b` : will create a link between `?a` and `?b` with label `<what_You_Want>`
+
+
+== WHERE block
+The `WHERE` block define the data to match based on the query typed in :
+
+* `?movie a <http://dbpedia.org/ontology/Film>.` : Get all subject which is a <http://dbpedia.org/ontology/Film>. The ‘a’ is actually a SPARQL special word for <rdf:type>. So it’s exactly equal to ?movie <rdf:type> <http://dbpedia.org/ontology/Film>
+* `?movie ?rel1 <http://dbpedia.org/resource/Leonardo_DiCaprio>.` : Match all subjects  which has any predicate where the object is <http://dbpedia.org/resource/Leonardo_DiCaprio>
+* `?movie ?rel2 ?person.` : Match any triplet
+* `?person a <http://dbpedia.org/ontology/Person>.` : Match the subject ?person if it's a  <http://dbpedia.org/ontology/Person>.
+
+In other words, match the variable ?movie to any entity that is a Film and that has at least 1 triplet where Leonardo is an object. Match also all ?person that is a Person.
+
+
+
+The result in our case is actually a bi-modal graph with Movies and Persons shared with Leonardo Dicaprio. I advise you to read the Multimodal graph plugin tutorial if you want advanced analysis of this kind of network.
+
+What is interesting with this method is the way to query the data, and the fact that it’s easily extendable to other subjects just by changing few things in the query. We can think about Music Band and Player relationship, the traditionnal Persons to Companies, or more original, all the common places where your favorites movies where shot, etc.. The limit is your imagination to graph.
+
+On our example, you can run multiple time the same query and changing which person you want to « expand », it will automatically create the global network of all your research and maybe give you some insight which new movies to watch tonight 😉
+
+But keep in mind that you are heavily dependent on Dbpedia data quality (or other RDF entrypoint), which can alterate a lot you research.
