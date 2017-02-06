@@ -521,8 +521,15 @@ table.CodeRay td.code>pre{padding:0}
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_simplest_case_importing_an_existing_network_file">Simplest case: importing an existing network file</a></li>
-<li><a href="#_importing_nodes_with_labels_and_their_relations">Importing nodes with labels and their relations</a></li>
+<li><a href="#_importing_an_existing_network_file">Importing an existing network file</a></li>
+<li><a href="#_importing_nodes_with_labels_and_their_relations_simplest_version">Importing nodes with labels and their relations: simplest version</a>
+<ul class="sectlevel3">
+<li><a href="#_1_labels_containing_commas_in_them_will_not_work">1. labels containing commas in them will not work.</a></li>
+<li><a href="#_2_labels_containing_double_quotes_in_them_will_not_work">2. labels containing double quotes " " in them will not work.</a></li>
+</ul>
+</li>
+<li><a href="#_importing_more_than_labels_nodes_and_edges_attributes">Importing more than labels: nodes and edges attributes</a></li>
+<li><a href="#_memo_card">Memo card</a></li>
 <li><a href="#__to_be_continued">(to be continued)</a></li>
 <li><a href="#_more_tutorials_on_importing_data_to_gephi">More tutorials on importing data to Gephi</a></li>
 <li><a href="#_the_end">the end</a></li>
@@ -533,7 +540,7 @@ table.CodeRay td.code>pre{padding:0}
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>last modified: 2017-02-03</p>
+<p>last modified: 2017-02-06</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -543,7 +550,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 </div>
 <div class="sect1">
-<h2 id="_simplest_case_importing_an_existing_network_file">Simplest case: importing an existing network file</h2>
+<h2 id="_importing_an_existing_network_file">Importing an existing network file</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Gephi handles the import of network files in a variety of formats:</p>
@@ -560,8 +567,11 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 </div>
 <div class="sect1">
-<h2 id="_importing_nodes_with_labels_and_their_relations">Importing nodes with labels and their relations</h2>
+<h2 id="_importing_nodes_with_labels_and_their_relations_simplest_version">Importing nodes with labels and their relations: simplest version</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>(looking for the complete, full featured csv import version? <a href="#full-csv-version">skip to here</a>.)</p>
+</div>
 <div class="paragraph">
 <p>The easiest is probably to just have a text file like this one:</p>
 </div>
@@ -595,6 +605,245 @@ Valerian,Jeremy</pre>
 <img src="images/Second-screen.png" alt="Second screen">
 </div>
 <div class="title">Figure 3. Second screen</div>
+</div>
+<div id="full-csv-version" class="paragraph">
+<p>Let&#8217;s look again at the simple text file we used:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Source,Target
+Jeremy,Jennifer
+Valerian,Jeremy</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>There are 2 issues and several missing features, listed below:</p>
+</div>
+<div class="sect3">
+<h4 id="_1_labels_containing_commas_in_them_will_not_work">1. labels containing commas in them will not work.</h4>
+<div class="paragraph">
+<p>Imagine our characters have first names and last names separated by a comma:</p>
+</div>
+<div class="paragraph">
+<p>Dubois, Jeremy</p>
+</div>
+<div class="paragraph">
+<p>Rodriguez, Valerian</p>
+</div>
+<div class="paragraph">
+<p>This will look like:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Source,Target
+Dubois, Jeremy,Jeremy,Jennifer
+Rodriguez, Valerian,Dubois, Jeremy</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that we have 3 commas per line, instead of one!
+In this mess, Gephi will not detect where the node labels start and end.
+The import will break.</p>
+</div>
+<div class="paragraph">
+<p>The proper solution is to put node labels inside <strong>double quotes</strong>:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Source,Target
+"Dubois, Jeremy","Jeremy,Jennifer"
+"Rodriguez, Valerian","Dubois, Jeremy"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Be careful to use these straight " " double quotes, not the curvy ones: “ ” which French keyboards sometimes have.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_labels_containing_double_quotes_in_them_will_not_work">2. labels containing double quotes " " in them will not work.</h4>
+<div class="paragraph">
+<p>Example: let&#8217;s imagine that one of our characters has a middle name: Jeremy "Danger" Dubois.
+Our text file will look like:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Source,Target
+"Dubois, Jeremy "Danger"","Jeremy,Jennifer"
+"Rodriguez, Valerian","Dubois, Jeremy "Danger""</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>These extra " " will make the Gephi import break:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/en/import-spreadsheet-4-en.png" alt="import spreadsheet 4 en">
+</div>
+<div class="title">Figure 4. The import bugs - the middle name has disappeared</div>
+</div>
+<div class="paragraph">
+<p>The solution consists in <strong>adding an extra double quote in front of the double quotes</strong>.
+Our text file will look like:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Source,Target
+"Dubois, Jeremy ""Danger""","Jeremy,Jennifer"
+"Rodriguez, Valerian","Dubois, Jeremy ""Danger"""</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This time, Gephi imports the network correctly:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/en/import-spreadsheet-3-en.png" alt="import spreadsheet 3 en">
+</div>
+<div class="title">Figure 5. Importing node labels containing double quotes</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_importing_more_than_labels_nodes_and_edges_attributes">Importing more than labels: nodes and edges attributes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To import attributes we will need to proceed differently.</p>
+</div>
+<div class="paragraph">
+<p>We need 2 text files: one for the list of nodes, one for the list of relations (edges)</p>
+</div>
+<div class="paragraph">
+<p>An example file with a list of nodes:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Id,Label,Date of Birth,Place of Birth,Years of experience,Rating <i class="conum" data-value="1"></i><b>(1)</b>
+3,"Dubois, Jeremy ""Danger""",17/09/1980,"Paris",8,9.27
+1,"Jeremy,Jennifer",25/03/1978,"Tampa",8,4.34
+45,"Rodriguez, Valerian",30/04/1985,"Berlin",5,6.66</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Nodes <strong>must</strong> have at least an Id and a Label. Don&#8217;t put spaces after the commas</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>An example file with a list of edges:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Source,Target,Weight,Type,Where first met <i class="conum" data-value="1"></i><b>(1)</b>
+1,45,3,"undirected",London <i class="conum" data-value="2"></i><b>(2)</b></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Edges <strong>must</strong> have at least a Source and Target. Other fields are optional.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>"undirected", the alternative is "directed". Directed edges have arrow heads.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s import the list of nodes first. <code>File &#8594; Import Spreadsheet</code></p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Importing-a-list-of-nodes-with-attributes.png" alt="Importing a list of nodes with attributes">
+</div>
+<div class="title">Figure 6. Importing a list of nodes with attributes</div>
+</div>
+<div class="paragraph">
+<p>in the next screen, we must be careful with a couple of things:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/The-attributes-of-the-nodes.png" alt="The attributes of the nodes">
+</div>
+<div class="title">Figure 7. The attributes of the nodes</div>
+</div>
+<div class="paragraph">
+<p>Then we can import the file with the list of relations. <code>File &#8594; Import Spreadsheet</code></p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Importing-a-list-of-edges-with-attributes.png" alt="Importing a list of edges with attributes">
+</div>
+<div class="title">Figure 8. Importing a list of edges with attributes</div>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/The-attributes-of-the-edges.png" alt="The attributes of the edges">
+</div>
+<div class="title">Figure 9. The attributes of the edges</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_memo_card">Memo card</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Nodes</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>header must be at least <code>Id,Label</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Edges</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>header must be at least <code>Source,Target</code></p>
+</li>
+<li>
+<p>To have an attribute for the "thickness" or "strength" of a relation, this attribute must be called "Weight".</p>
+</li>
+<li>
+<p>Want arrows on your links? Add an attribute "Type", with value "Directed"</p>
+</li>
+<li>
+<p>Don&#8217;t wan&#8217;t arrows? Add an attribute "Type", with value "Undirected"</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Types of attributes: which to choose?</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/en/import-spreadsheet-9-en.png" alt="import spreadsheet 9 en">
+</div>
+<div class="title">Figure 10. Kinds of attributes</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Textual attribute: <code>String</code>. Nodes sharing the same textual value can be colored the same, or filtered together&#8230;&#8203;</p>
+</li>
+<li>
+<p>Numerical attribute: <code>Integer</code>, <code>Double</code> or <code>Float</code>. Nodes can be resized according to their value, or colorized in a gradient. Filters can be applied based on the range of values.</p>
+</li>
+<li>
+<p>Boolean attribute: just a <code>true</code> or <code>false</code> value. Useful for filtering out some nodes which are true or false on some parameter.</p>
+</li>
+<li>
+<p>Other types of attributes: not needed for the moment.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -631,7 +880,7 @@ Valerian,Jeremy</pre>
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2017-02-03 17:03:07 CET
+Last updated 2017-02-06 14:52:01 CET
 </div>
 </div>
 </body>

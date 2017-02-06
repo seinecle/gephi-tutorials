@@ -1,2 +1,2 @@
-Source,Target
-23,56
+Source,Target,Weight,Type,Where first met
+1,45,3,"undirected",London
