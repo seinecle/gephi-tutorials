@@ -11,6 +11,8 @@ last modified: {docdate}
 
 image:gephi-logo-2010-transparent.png[width="450" align="center"]
 
+== 'Escape' to see all sides, F11 for full screen
+
 
 == History of Gephi
 

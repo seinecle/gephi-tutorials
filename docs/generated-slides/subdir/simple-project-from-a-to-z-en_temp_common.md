@@ -13,6 +13,9 @@ last modified: {docdate}
 
 image::gephi-logo-2010-transparent.png[width="450" align="center"]
 
+//ST: 'Escape' to see all sides, F11 for full screen
+
+
 == Description of the project
 
 //ST: Description of the project
@@ -49,7 +52,7 @@ image::terminology-for-networks.png[align="center",title="terminology for networ
 //ST: download a network file
 //ST: !
 
-link:../resources/miserables.zip[download this zip file] and unzip it on your computer.
+link:../resources/miserables_result.zip[download this zip file] and unzip it on your computer.
 
 You should find the file `miserables.gexf` in it.
 

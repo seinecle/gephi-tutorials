@@ -14,10 +14,10 @@ last modified: {docdate}
 
 image::gephi-logo-2010-transparent.png[width="450" align="center"]
 
+//ST: 'Escape' to see all sides, F11 for full screen
 
-== Simplest case: importing an existing network file
-
-//ST: Simplest case: you already have a network file (gdf, gexf, etc.)
+== Importing an existing network file
+//ST: Importing an existing network file
 
 //ST: !
 Gephi handles the import of network files in a variety of formats:
@@ -136,9 +136,10 @@ This time, Gephi imports the network correctly:
 
 image::en/import-spreadsheet-3-en.png[align="center",title="Importing node labels containing double quotes"]
 
-//ST: !
-==== 3. Importing more than labels: nodes and edges attributes!
+== Importing more than labels: nodes and edges attributes
+//ST: Importing more than labels: nodes and edges attributes
 
+//ST: !
 To import attributes we will need to proceed differently.
 
 We need 2 text files: one for the list of nodes, one for the list of relations (edges)
@@ -182,8 +183,8 @@ image::Importing-a-list-of-edges-with-attributes.png[align="center",title="Impor
 
 image::The-attributes-of-the-edges.png[align="center",title="The attributes of the edges"]
 
-//ST: !
-==== 4. Memo card
+== Memo card
+//ST: Memo card
 
 //ST: !
 Nodes
@@ -195,7 +196,8 @@ Edges
 
 - header must be at least `Source,Target`
 - To have an attribute for the "thickness" or "strength" of a relation, this attribute must be called "Weight".
-- Want / don't want arrows on your links? Add an attribute "Type", with value "Undirected" or "Directed"
+- Want arrows on your links? Add an attribute "Type", with value "Directed"
+- Don't wan't arrows? Add an attribute "Type", with value "Undirected"
 
 //ST: !
 Types of attributes: which to choose?
@@ -205,9 +207,9 @@ image::en/import-spreadsheet-9-en.png[align="center",title="Kinds of attributes"
 //ST: !
 
 - Textual attribute: `String`. Nodes sharing the same textual value can be colored the same, or filtered together...
-- Numerical attribute: `Integer`, `Double` or `Float`. Nodes can be resized according to their value, or colorize in a gradient. Filters can be applied based on the range of values.
+- Numerical attribute: `Integer`, `Double` or `Float`. Nodes can be resized according to their value, or colorized in a gradient. Filters can be applied based on the range of values.
 - Boolean attribute: just a `true` or `false` value. Useful for filtering out some nodes which are true or false on some parameter.
-- Other attributes: we don't need them at all for the moment.
+- Other types of attributes: not needed for the moment.
 
 
 == (to be continued)
