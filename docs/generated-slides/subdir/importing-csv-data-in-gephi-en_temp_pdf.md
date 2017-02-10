@@ -221,6 +221,7 @@ image::en/import-spreadsheet-9-en.png[align="center",title="Kinds of attributes"
 //ST: !
 
 - https://github.com/gephi/gephi/wiki/Import-CSV-Data[The Gephi wiki on importing csv]
+- https://www.youtube.com/watch?v=3Im7vNRA2ns[Video "How to import a CSV into Gephi" by Jen Golbeck]
 
 == the end
 

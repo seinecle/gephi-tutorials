@@ -9,6 +9,7 @@ last modified: {docdate}
 :revnumber: 1.0
 :example-caption!:
 :sourcedir: ../../../main/java
+:github-root: https://github.com/seinecle/gephi-tutorials/blob/master/src/main/asciidoc/
 
 :title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
 
@@ -87,6 +88,23 @@ In the overview, make sure the Filter panel is displayed:
 image::Making-the-Filter-panel-visible..png[align="center",title="Making the Filter panel visible."]
 
 
+//ST: !
+How the Filter panel works:
+
+image::Workflow-of-filters..png[align="center",title="Workflow of filters."]
+
+
+//ST: !
+An example: filtering out the edges which have a weight value lower than 2:
+
+image::en/filter-edge-weight-en.gif[align="center",title="Animated GIF. Filtering out edges with weight lower than 2."]
+
+//PDF: image::en/filter-edge-weight-1-en.png[align="center",title="Filtering out edges with weight lower than 2."]
+
+//PDF: {github-root}images/en/filter-edge-weight-en.gif[view online animation]
+
+
+
 
 
 
@@ -99,7 +117,7 @@ image::Making-the-Filter-panel-visible..png[align="center",title="Making the Fil
 //ST: More tutorials on importing data to Gephi
 //ST: !
 
-- https://github.com/gephi/gephi/wiki/Import-CSV-Data[The Gephi wiki on importing csv]
+- https://www.youtube.com/watch?v=UrrWA_t1rjc[Video on using filters by Jen Golbeck]
 
 == the end
 

@@ -8,6 +8,7 @@ last modified: {docdate}
 :iconsfont:   font-awesome
 :revnumber: 1.0
 :example-caption!:
+:github-root: https://github.com/seinecle/gephi-tutorials/blob/master/src/main/asciidoc/
 
 :title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
 
@@ -15,8 +16,8 @@ image::gephi-logo-2010-transparent.png[width="450" align="center"]
 
 //ST: 'Escape' to see all sides, F11 for full screen
 
-== Download a network file for this tutorial
-//ST: Download a network file for this tutorial
+== download a network file for this tutorial
+//ST: download a network file for this tutorial
 
 //ST: !
 
@@ -37,14 +38,13 @@ The file name ends with ".gexf", which just means this is a text file where the 
 
 
 == open the network in Gephi
-//open the network in Gephi
+//ST: open the network in Gephi
+
 //ST: !
 - open Gephi. On the Welcome screen that appears,  click on `Open Graph File`
 - find `miserables.gexf` on your computer and open it
 
 image::en/gephi-welcome-screen-open-graph-en.png[align="center", title="welcome screen"]
-
-== read the report after opening a file
 
 //ST: !
 A report window will open, giving you basic info on the network you opened:
@@ -63,6 +63,9 @@ Click on `OK` to see the graph in Gephi.
 //ST: !
 image::result_miserables.png[align="center",title="The network we will use in this tutorial"]
 
+== getting a sense of the attributes in the data laboratory
+//ST: getting a sense of the attributes in the data laboratory
+
 //ST: !
 We can switch to the data laboratory to see the underlying data:
 
@@ -79,6 +82,8 @@ This is the list of edges (relations) in the network. Notice that they have a "w
 
 image::Edges-attributes..png[align="center",title="Edges attributes".]
 
+== discovering the filter panel
+//ST: discovering the filter panel
 
 //ST: !
 In the overview, make sure the Filter panel is displayed:
@@ -86,6 +91,43 @@ In the overview, make sure the Filter panel is displayed:
 image::Making-the-Filter-panel-visible..png[align="center",title="Making the Filter panel visible."]
 
 
+//ST: !
+How the Filter panel works:
+
+image::Workflow-of-filters..png[align="center",title="Workflow of filters."]
+
+
+//ST: !
+An example: filtering out the edges which have a weight value lower than 2:
+
+image::en/filter-edge-weight-en.gif[align="center",title="Animated GIF. Filtering out edges with weight lower than 2."]
+
+//PDF: image::en/filter-edge-weight-1-en.png[align="center",title="Filtering out edges with weight lower than 2."]
+
+//PDF: {github-root}images/en/filter-edge-weight-en.gif[view online animation]
+
+//ST: !
+When you are finished using a filter in the zone, right click on it and select "remove".
+
+== combining 2 filters
+//ST: combining 2 filters
+
+//ST: !
+One filter is applied AFTER this other:
+
+*The first filter to be applied is NESTED (placed inside) the second one as a "subfilter"*
+
+Which filter should be placed inside which? Let's look at different examples:
+
+//ST: !
+1st Example:
+
+I want to keep on screen only the female characters which have a tie (an edge, a relaion) of at least strength 2:
+
+*I can place the filter "edge weight" inside the filter "Gender"*
+
+//ST: !
+See where the filters are found in the catalogue, and how they are place in the zone:
 
 
 

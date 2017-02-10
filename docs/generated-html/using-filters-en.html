@@ -521,9 +521,11 @@ table.CodeRay td.code>pre{padding:0}
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_download_a_network_file_for_this_tutorial">Download a network file for this tutorial</a></li>
+<li><a href="#_download_a_network_file_for_this_tutorial">download a network file for this tutorial</a></li>
 <li><a href="#_open_the_network_in_gephi">open the network in Gephi</a></li>
-<li><a href="#_read_the_report_after_opening_a_file">read the report after opening a file</a></li>
+<li><a href="#_getting_a_sense_of_the_attributes_in_the_data_laboratory">getting a sense of the attributes in the data laboratory</a></li>
+<li><a href="#_discovering_the_filter_panel">discovering the filter panel</a></li>
+<li><a href="#_combining_2_filters">combining 2 filters</a></li>
 <li><a href="#__to_be_continued">(to be continued)</a></li>
 <li><a href="#_more_tutorials_on_importing_data_to_gephi">More tutorials on importing data to Gephi</a></li>
 <li><a href="#_the_end">the end</a></li>
@@ -544,7 +546,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 </div>
 <div class="sect1">
-<h2 id="_download_a_network_file_for_this_tutorial">Download a network file for this tutorial</h2>
+<h2 id="_download_a_network_file_for_this_tutorial">download a network file for this tutorial</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><a href="../resources/miserables.zip">download this zip file</a> and unzip it on your computer.</p>
@@ -585,11 +587,6 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div class="title">Figure 1. welcome screen</div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_read_the_report_after_opening_a_file">read the report after opening a file</h2>
-<div class="sectionbody">
 <div class="paragraph">
 <p>A report window will open, giving you basic info on the network you opened:</p>
 </div>
@@ -617,6 +614,11 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div class="title">Figure 3. The network we will use in this tutorial</div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_getting_a_sense_of_the_attributes_in_the_data_laboratory">getting a sense of the attributes in the data laboratory</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>We can switch to the data laboratory to see the underlying data:</p>
 </div>
@@ -644,6 +646,11 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div class="title">Figure 6. Edges attributes</div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_discovering_the_filter_panel">discovering the filter panel</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>In the overview, make sure the Filter panel is displayed:</p>
 </div>
@@ -652,6 +659,53 @@ table.CodeRay td.code>pre{padding:0}
 <img src="images/Making-the-Filter-panel-visible..png" alt="Making the Filter panel visible.">
 </div>
 <div class="title">Figure 7. Making the Filter panel visible.</div>
+</div>
+<div class="paragraph">
+<p>How the Filter panel works:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Workflow-of-filters..png" alt="Workflow of filters.">
+</div>
+<div class="title">Figure 8. Workflow of filters.</div>
+</div>
+<div class="paragraph">
+<p>An example: filtering out the edges which have a weight value lower than 2:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/en/filter-edge-weight-en.gif" alt="filter edge weight en">
+</div>
+<div class="title">Figure 9. Animated GIF. Filtering out edges with weight lower than 2.</div>
+</div>
+<div class="paragraph">
+<p>When you are finished using a filter in the zone, right click on it and select "remove".</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_combining_2_filters">combining 2 filters</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>One filter is applied AFTER this other:</p>
+</div>
+<div class="paragraph">
+<p><strong>The first filter to be applied is NESTED (placed inside) the second one as a "subfilter"</strong></p>
+</div>
+<div class="paragraph">
+<p>Which filter should be placed inside which? Let&#8217;s look at different examples:</p>
+</div>
+<div class="paragraph">
+<p>1st Example:</p>
+</div>
+<div class="paragraph">
+<p>I want to keep on screen only the female characters which have a tie (an edge, a relaion) of at least strength 2:</p>
+</div>
+<div class="paragraph">
+<p><strong>I can place the filter "edge weight" inside the filter "Gender"</strong></p>
+</div>
+<div class="paragraph">
+<p>See where the filters are found in the catalogue, and how they are place in the zone:</p>
 </div>
 </div>
 </div>
@@ -694,7 +748,7 @@ table.CodeRay td.code>pre{padding:0}
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2017-02-10 14:48:43 CET
+Last updated 2017-02-10 17:27:26 CET
 </div>
 </div>
 </body>
