@@ -17,8 +17,8 @@ image::gephi-logo-2010-transparent.png[width="450" align="center"]
 
 //ST: 'Escape' to see all sides, F11 for full screen
 
-== Download a network file for this tutorial
-//ST: Download a network file for this tutorial
+== download a network file for this tutorial
+//ST: download a network file for this tutorial
 
 //ST: !
 
@@ -39,14 +39,13 @@ The file name ends with ".gexf", which just means this is a text file where the 
 
 
 == open the network in Gephi
-//open the network in Gephi
+//ST: open the network in Gephi
+
 //ST: !
 - open Gephi. On the Welcome screen that appears,  click on `Open Graph File`
 - find `miserables.gexf` on your computer and open it
 
 image::en/gephi-welcome-screen-open-graph-en.png[align="center", title="welcome screen"]
-
-== read the report after opening a file
 
 //ST: !
 A report window will open, giving you basic info on the network you opened:
@@ -65,6 +64,9 @@ Click on `OK` to see the graph in Gephi.
 //ST: !
 image::result_miserables.png[align="center",title="The network we will use in this tutorial"]
 
+== getting a sense of the attributes in the data laboratory
+//ST: getting a sense of the attributes in the data laboratory
+
 //ST: !
 We can switch to the data laboratory to see the underlying data:
 
@@ -81,6 +83,8 @@ This is the list of edges (relations) in the network. Notice that they have a "w
 
 image::Edges-attributes..png[align="center",title="Edges attributes".]
 
+== discovering the filter panel
+//ST: discovering the filter panel
 
 //ST: !
 In the overview, make sure the Filter panel is displayed:
@@ -103,10 +107,41 @@ image::en/filter-edge-weight-en.gif[align="center",title="Animated GIF. Filterin
 
 //PDF: {github-root}images/en/filter-edge-weight-en.gif[view online animation]
 
+//ST: !
+When you are finished using a filter in the zone, right click on it and select "remove".
 
+== combining 2 filters
+//ST: combining 2 filters
 
+//ST: !
+One filter is applied AFTER this other:
 
+*The first filter to be applied is NESTED (placed inside) the second one as a "subfilter"*
 
+Which filter should be placed inside which? Let's look at different examples:
+
+//ST: !
+1st Example:
+
+Keeping on screen only the female characters which have a tie (an edge, a relaion) of at least strength 2:
+
+-> place the filter "edge weight" inside the filter "Gender":
+
+//ST: !
+
+image::Where-to-find-the-filter-on-the-Gender-attribute.png[align="center",title="Where to find the filter on the Gender attribute"]
+
+//ST: !
+
+image::Where-to-find-the-filter-on-edge-weight.png[align="center",title="Where to find the filter on edge weight"]
+
+//ST: !
+
+image::en/filter-edge-weight-gender-partition-en.gif[align="center",title="Animated GIF. Filtering out edges with weight lower than 2."]
+
+//PDF: image::en/filter-edge-weight-gender-partition1-en.png[align="center",title="Keeping only female characters with tie of at least 2."]
+
+//PDF: {github-root}images/en/filter-edge-weight-gender-partition-en.gif[view online animation]
 
 
 == (to be continued)

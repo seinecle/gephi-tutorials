@@ -100,7 +100,8 @@ image::en/filter-edge-weight-en.gif[align="center",title="Animated GIF. Filterin
 
 //PDF: image::en/filter-edge-weight-1-en.png[align="center",title="Filtering out edges with weight lower than 2."]
 
-//PDF: {github-root}images/en/filter-edge-weight-en.gif[view online animation]
+//PDF: {github-root}images/en/filter-edge-weight-en.gif[view online animation] - link: https://tinyurl.com/gephi-tuto-2
+
 
 ==  !
 When you are finished using a filter in the zone, right click on it and select "remove".
@@ -117,12 +118,123 @@ Which filter should be placed inside which? Let's look at different examples:
 ==  !
 1st Example:
 
-I want to keep on screen only the female characters which have a tie (an edge, a relaion) of at least strength 2:
+Keeping on screen only the female characters which have a tie (an edge, a relaion) of at least strength 2:
 
-*I can place the filter "edge weight" inside the filter "Gender"*
+-> place the filter "edge weight" inside the filter "Gender":
 
 ==  !
-See where the filters are found in the catalogue, and how they are place in the zone:
+
+image::Where-to-find-the-filter-on-the-Gender-attribute.png[align="center",title="Where to find the filter on the Gender attribute"]
+
+==  !
+
+image::Where-to-find-the-filter-on-edge-weight.png[align="center",title="Where to find the filter on edge weight"]
+
+==  !
+
+image::en/filter-edge-weight-gender-partition-en.gif[align="center",title="Animated GIF. Filtering out edges with weight lower than 2."]
+
+//PDF: image::en/filter-edge-weight-gender-partition1-en.png[align="center",title="Keeping only female characters with tie of at least 2."]
+
+//PDF: {github-root}images/en/filter-edge-weight-gender-partition-en.gif[view online animation] - link: https://tinyurl.com/gephi-tuto-1
+
+==  !
+In this case, it was equivalent to:
+
+- nest the "Gender" filter inside the "Edge weight" filter
+or
+- nest the "Edge weight" filter inside the "Gender Filter"
+
+-> The result was the same. Now we will see a case where the placement of filters matter.
+
+==  !
+Here, we want to visualize:
+
+- only the nodes which have *less than* 10 relations  <1>
+- and among these, only those which form the "main island" of the network (we want to hide small detached groups of nodes)  <2>
+
+<1> in technical terms, nodes with a `degree` of less than 10.
+<2> in technical terms, we are looking for the `giant component`
+
+==  !
+
+image::en/filter-degree-range-1-en.png[align="center",title="Where to find the filter on degree"]
+
+==  !
+
+image::en/filter-giant-component-1-en.png[align="center",title="Where to find the filter on giant component"]
+
+==  !
+We will see that the placement on the filters in the zone will make a difference.
+
+First, let us place the filter on giant component *inside* the filter on degree:
+
+==  !
+
+image::en/filter-order-1-en.png[align="center",title="Filters in one configuration"]
+
+==  !
+In this first case,
+
+- only the giant component of the network was made visible.
+
+-> Since the network was just one big connected "island" to start with, it did not change a thing.
+
+- then, all characters with more than 10 relations where hidden
+
+-> this hides nodes which were connecting with many others, so that we end up with many groups, disconnected from each others.
+
+==  !
+
+Now instead, placing the filter degree *inside* the filter on giant component:
+
+image::en/filter-order-2-en.png[align="center",title="Same filters in another configuration"]
+
+==  !
+In this second case,
+
+- starting from the complete network, all characters with more than 10 relations where deleted.
+
+-> this created a network made of many disconnected groups of nodes
+
+- then the giant component filter is applied,
+
+-> which had for effect to hide small groups, to keep in view only the biggest group of connected nodes.
+
+==  !
+
+WARNING: In summary: be careful how you apply several filters at once, this might have an effect on the logic of filtering.
+
+==  Filter operators
+
+==== The MASK operator
+==  The MASK operator
+Imagine you are interested in the female characters of the novel "Les Miserables".
+
+- you are interested in these characters and the relations among them
+- you are interested in the relations between female characters and male characters
+- you are *not* interested in the relations between male characters
+
+- How to make appear only female characters, their relations (to female and male characters) and only those?
+
+==
+The MASK operator enables you to:
+- apply a filter as you would usually do,
+- and then, to make visible again *only the relations that have a connection with the visible nodes*
+
+==
+So this shows female characters, relations between them, and their relations to male characters. Male-male relations are not visible:
+
+image::en/operator-mask-1-en.png[alin="center",title="Using the MASK operator"]
+
+
+==
+It is also possible to hide / show only some of the directed relations between the visible graph and the filtered out graph:
+
+image::en/operator-mask-2-en.png[alin="center",title="Parameters of the MASK operator"]
+
+
+
 
 
 
@@ -130,7 +242,8 @@ See where the filters are found in the catalogue, and how they are place in the 
 ==  (to be continued)
 
 
-==  More tutorials on importing data to Gephi
+==  More tutorials on using filters in Gephi
+
 ==  !
 
 - https://www.youtube.com/watch?v=UrrWA_t1rjc[Video on using filters by Jen Golbeck]

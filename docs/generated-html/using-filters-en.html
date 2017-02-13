@@ -526,8 +526,13 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_getting_a_sense_of_the_attributes_in_the_data_laboratory">getting a sense of the attributes in the data laboratory</a></li>
 <li><a href="#_discovering_the_filter_panel">discovering the filter panel</a></li>
 <li><a href="#_combining_2_filters">combining 2 filters</a></li>
+<li><a href="#_filter_operators">Filter operators</a>
+<ul class="sectlevel3">
+<li><a href="#_the_mask_operator">The MASK operator</a></li>
+</ul>
+</li>
 <li><a href="#__to_be_continued">(to be continued)</a></li>
-<li><a href="#_more_tutorials_on_importing_data_to_gephi">More tutorials on importing data to Gephi</a></li>
+<li><a href="#_more_tutorials_on_using_filters_in_gephi">More tutorials on using filters in Gephi</a></li>
 <li><a href="#_the_end">the end</a></li>
 </ul>
 </div>
@@ -536,7 +541,7 @@ table.CodeRay td.code>pre{padding:0}
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>last modified: 2017-02-10</p>
+<p>last modified: 2017-02-13</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -699,13 +704,211 @@ table.CodeRay td.code>pre{padding:0}
 <p>1st Example:</p>
 </div>
 <div class="paragraph">
-<p>I want to keep on screen only the female characters which have a tie (an edge, a relaion) of at least strength 2:</p>
+<p>Keeping on screen only the female characters which have a tie (an edge, a relaion) of at least strength 2:</p>
 </div>
 <div class="paragraph">
-<p><strong>I can place the filter "edge weight" inside the filter "Gender"</strong></p>
+<p>&#8594; place the filter "edge weight" inside the filter "Gender":</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Where-to-find-the-filter-on-the-Gender-attribute.png" alt="Where to find the filter on the Gender attribute">
+</div>
+<div class="title">Figure 10. Where to find the filter on the Gender attribute</div>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Where-to-find-the-filter-on-edge-weight.png" alt="Where to find the filter on edge weight">
+</div>
+<div class="title">Figure 11. Where to find the filter on edge weight</div>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/en/filter-edge-weight-gender-partition-en.gif" alt="filter edge weight gender partition en">
+</div>
+<div class="title">Figure 12. Animated GIF. Filtering out edges with weight lower than 2.</div>
 </div>
 <div class="paragraph">
-<p>See where the filters are found in the catalogue, and how they are place in the zone:</p>
+<p>In this case, it was equivalent to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>nest the "Gender" filter inside the "Edge weight" filter
+or</p>
+</li>
+<li>
+<p>nest the "Edge weight" filter inside the "Gender Filter"</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>&#8594; The result was the same. Now we will see a case where the placement of filters matter.</p>
+</div>
+<div class="paragraph">
+<p>Here, we want to visualize:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>only the nodes which have <strong>less than</strong> 10 relations  &lt;1&gt;</p>
+</li>
+<li>
+<p>and among these, only those which form the "main island" of the network (we want to hide small detached groups of nodes)  &lt;2&gt;</p>
+</li>
+</ul>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>in technical terms, nodes with a <code>degree</code> of less than 10.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>in technical terms, we are looking for the <code>giant component</code></td>
+</tr>
+</table>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/en/filter-degree-range-1-en.png" alt="filter degree range 1 en">
+</div>
+<div class="title">Figure 13. Where to find the filter on degree</div>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/en/filter-giant-component-1-en.png" alt="filter giant component 1 en">
+</div>
+<div class="title">Figure 14. Where to find the filter on giant component</div>
+</div>
+<div class="paragraph">
+<p>We will see that the placement on the filters in the zone will make a difference.</p>
+</div>
+<div class="paragraph">
+<p>First, let us place the filter on giant component <strong>inside</strong> the filter on degree:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/en/filter-order-1-en.png" alt="filter order 1 en">
+</div>
+<div class="title">Figure 15. Filters in one configuration</div>
+</div>
+<div class="paragraph">
+<p>In this first case,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>only the giant component of the network was made visible.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>&#8594; Since the network was just one big connected "island" to start with, it did not change a thing.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>then, all characters with more than 10 relations where hidden</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>&#8594; this hides nodes which were connecting with many others, so that we end up with many groups, disconnected from each others.</p>
+</div>
+<div class="paragraph">
+<p>Now instead, placing the filter degree <strong>inside</strong> the filter on giant component:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/en/filter-order-2-en.png" alt="filter order 2 en">
+</div>
+<div class="title">Figure 16. Same filters in another configuration</div>
+</div>
+<div class="paragraph">
+<p>In this second case,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>starting from the complete network, all characters with more than 10 relations where deleted.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>&#8594; this created a network made of many disconnected groups of nodes</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>then the giant component filter is applied,</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>&#8594; which had for effect to hide small groups, to keep in view only the biggest group of connected nodes.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+In summary: be careful how you apply several filters at once, this might have an effect on the logic of filtering.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_filter_operators">Filter operators</h2>
+<div class="sectionbody">
+<div class="sect3">
+<h4 id="_the_mask_operator">The MASK operator</h4>
+<div class="paragraph">
+<p>Imagine you are interested in the female characters of the novel "Les Miserables".</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>you are interested in these characters and the relations among them</p>
+</li>
+<li>
+<p>you are interested in the relations between female characters and male characters</p>
+</li>
+<li>
+<p>you are <strong>not</strong> interested in the relations between male characters</p>
+</li>
+<li>
+<p>How to make appear only female characters, their relations (to female and male characters) and only those?</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The MASK operator enables you to:
+- apply a filter as you would usually do,
+- and then, to make visible again <strong>only the relations that have a connection with the visible nodes</strong></p>
+</div>
+<div class="paragraph">
+<p>So this shows female characters, relations between them, and their relations to male characters. Male-male relations are not visible:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/en/operator-mask-1-en.png" alt="operator mask 1 en">
+</div>
+<div class="title">Figure 17. Using the MASK operator</div>
+</div>
+<div class="paragraph">
+<p>It is also possible to hide / show only some of the directed relations between the visible graph and the filtered out graph:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/en/operator-mask-2-en.png" alt="operator mask 2 en">
+</div>
+<div class="title">Figure 18. Parameters of the MASK operator</div>
+</div>
 </div>
 </div>
 </div>
@@ -716,7 +919,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 </div>
 <div class="sect1">
-<h2 id="_more_tutorials_on_importing_data_to_gephi">More tutorials on importing data to Gephi</h2>
+<h2 id="_more_tutorials_on_using_filters_in_gephi">More tutorials on using filters in Gephi</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -748,7 +951,7 @@ table.CodeRay td.code>pre{padding:0}
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2017-02-10 17:27:26 CET
+Last updated 2017-02-13 17:41:22 CET
 </div>
 </div>
 </body>
