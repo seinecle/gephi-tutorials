@@ -8,7 +8,7 @@
     <version>1.0</version>
     <packaging>jar</packaging>
     <properties>
-<!--        <doc>en/simple-project-from-a-to-z-en.adoc</doc>-->
+        <doc>en/using-filters-en.adoc</doc>
         <medium.publish>false</medium.publish>
     </properties>
     <parent>

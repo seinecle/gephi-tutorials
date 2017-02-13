@@ -2,3 +2,6 @@
 ######################
 .DS_Store
 .DS_Store?
+generated-html/subdir/
+generated-slides/subdir/
+generated-pdf/subdir/
