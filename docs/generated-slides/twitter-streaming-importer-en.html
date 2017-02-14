@@ -87,8 +87,7 @@ table.CodeRay td.code>pre{padding:0}
 .CodeRay .delete .delete{color:#800}
 .CodeRay .change .change{color:#66f}
 .CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.1.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.1.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>Twitter Streaming Importer</h1><div class="preamble"><div class="paragraph"><p>last modified: 2017-02-10</p></div>
-<div class="imageblock stretch" style="text-align: center"><img src="images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450" /></div>
-<div class="paragraph"><p>&#160;<br /></p></div></div><p class="author"><small>Clément Levallois</small></p></section>
+<div class="imageblock stretch" style="text-align: center"><img src="images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450" /></div></div><p class="author"><small>Clément Levallois</small></p></section>
 <section id="__escape_to_see_all_sides_f11_for_full_screen"><h2>'Escape' to see all sides, F11 for full screen</h2></section>
 <section id="_author_and_documentation"><h2>Author and documentation</h2><div class="paragraph"><p>This plugin is created by <a href="https://matthieu-totet.fr">Matthieu Totet</a>, who is a long time community member of Gephi (check his <a href="https://github.com/totetmatt/GephiStreamer">Gephi Streamer</a>!)</p></div>
 <div class="paragraph"><p>You can find additional documentation on this plugin on <a href="https://matthieu-totet.fr/Koumin/2016/04/25/twitter-streaming-importer-naoyun-as-a-gephi-plugin/">Matthieu&#8217;s website</a>.</p></div></section>
@@ -100,46 +99,31 @@ Get your Twitter login and password ready. <strong>You also need a mobile phone 
 <section><div class="admonitionblock caution"><table><tr><td class="icon"><i class="fa fa-fire" title="Caution"></i></td><td class="content"><div class="paragraph"><p>Setting up a Twitter account and creating a Twitter app is a boring task.</p></div>
 <div class="paragraph"><p>It takes just 15 minutes, and you have to do it just once. Then you&#8217;ll have Twitter at your fingertips.</p></div>
 <div class="paragraph"><p>Let&#8217;s go!</p></div></td></tr></table></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Choose-the-menu-Tools-then-Plugins.png" alt="Choose the menu Tools then Plugins" height="100%" /></div><div class="title">Figure 1. Choose the menu Tools then Plugins</div>
-<div class="paragraph"><p>&#160;<br /></p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Click-on-the-tab-Available-Plugins.png" alt="Click on the tab Available Plugins" height="100%" /></div><div class="title">Figure 2. Click on the tab Available Plugins</div>
-<div class="paragraph"><p>&#160;<br /></p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Install-the-plugin-then-restart-Gephi.png" alt="Install the plugin then restart Gephi" height="100%" /></div><div class="title">Figure 3. Install the plugin then restart Gephi</div>
-<div class="paragraph"><p>&#160;<br /></p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Choose-the-menu-Tools-then-Plugins.png" alt="Choose the menu Tools then Plugins" height="100%" /></div><div class="title">Figure 1. Choose the menu Tools then Plugins</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Click-on-the-tab-Available-Plugins.png" alt="Click on the tab Available Plugins" height="100%" /></div><div class="title">Figure 2. Click on the tab Available Plugins</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Install-the-plugin-then-restart-Gephi.png" alt="Install the plugin then restart Gephi" height="100%" /></div><div class="title">Figure 3. Install the plugin then restart Gephi</div></section>
 <section id="_initializing_the_plugin_to_be_done_just_once"><h2>Initializing the plugin (to be done just once)</h2></section>
 <section id="_creating_a_twitter_account"><h2>Creating a Twitter account</h2></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Open-a-new-project-in-Gephi.png" alt="Open a new project in Gephi" height="100%" /></div><div class="title">Figure 4. Open a new project in Gephi</div>
-<div class="paragraph"><p>&#160;<br /></p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Display-the-plugin-in-Gephi.png" alt="Display the plugin in Gephi" height="100%" /></div><div class="title">Figure 5. Display the plugin in Gephi</div>
-<div class="paragraph"><p>&#160;<br /></p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Open-a-new-project-in-Gephi.png" alt="Open a new project in Gephi" height="100%" /></div><div class="title">Figure 4. Open a new project in Gephi</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Display-the-plugin-in-Gephi.png" alt="Display the plugin in Gephi" height="100%" /></div><div class="title">Figure 5. Display the plugin in Gephi</div></section>
 <section><div class="paragraph"><p>We need now to connect to a Twitter account. If you already have a Twitter account and you are logged in, <a href="#twitter-account-finished-setup">skip to here</a>.</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Creating-a-Twitter-account.png" alt="Creating a Twitter account" height="100%" /></div><div class="title">Figure 6. Creating a Twitter account</div>
-<div class="paragraph"><p>&#160;<br /></p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Confirmation-of-the-sign-up.png" alt="Confirmation of the sign up" height="100%" /></div><div class="title">Figure 7. Confirmation of the sign-up</div>
-<div class="paragraph"><p>&#160;<br /></p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Creating-a-Twitter-account.png" alt="Creating a Twitter account" height="100%" /></div><div class="title">Figure 6. Creating a Twitter account</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Confirmation-of-the-sign-up.png" alt="Confirmation of the sign up" height="100%" /></div><div class="title">Figure 7. Confirmation of the sign-up</div></section>
 <section><div class="admonitionblock warning"><table><tr><td class="icon"><i class="fa fa-warning" title="Warning"></i></td><td class="content">You have received an email by Twitter about the sign up. At some point (but now would be a good time), you must click on the link in this email to confirm it.</td></tr></table></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Enter-the-verification-code-you-received-by-sms.png" alt="Enter the verification code you received by sms" height="100%" /></div><div class="title">Figure 8. Enter the verification code you received by sms</div>
-<div class="paragraph"><p>&#160;<br /></p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Choose-a-username.png" alt="Choose a username" height="100%" /></div><div class="title">Figure 9. Choose a username</div>
-<div class="paragraph"><p>&#160;<br /></p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Enter-the-verification-code-you-received-by-sms.png" alt="Enter the verification code you received by sms" height="100%" /></div><div class="title">Figure 8. Enter the verification code you received by sms</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Choose-a-username.png" alt="Choose a username" height="100%" /></div><div class="title">Figure 9. Choose a username</div></section>
 <section><div class="paragraph"><p>The next screens of the sign up for Twitter are not important for us.
 Just follow the steps until you get to the page showing your Twitter profile, meaning the setup is finished.</p></div></section>
 <section><div class="paragraph" id="twitter-account-finished-setup"><p>You now have a Twitter account.
 We need to create a Twitter app which will authorize us to collect tweets automatically via Gephi</p></div>
 <div class="paragraph"><p>Go to <strong><a href="https://apps.twiter.com">https://apps.twiter.com</a></strong>:</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Create-a-new-app.png" alt="Create a new app" height="100%" /></div><div class="title">Figure 10. Create a new app</div>
-<div class="paragraph"><p>&#160;<br /></p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Fill-in-the-fields.png" alt="Fill in the fields" height="100%" /></div><div class="title">Figure 11. Fill in the fields</div>
-<div class="paragraph"><p>&#160;<br /></p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Create-a-new-app.png" alt="Create a new app" height="100%" /></div><div class="title">Figure 10. Create a new app</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Fill-in-the-fields.png" alt="Fill in the fields" height="100%" /></div><div class="title">Figure 11. Fill in the fields</div></section>
 <section><div class="paragraph"><p>INFO: Almost there!!</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Click-on-Keys-and-Access-Tokens.png" alt="Click on Keys and Access Tokens" height="100%" /></div><div class="title">Figure 12. Click on Keys and Access Tokens</div>
-<div class="paragraph"><p>&#160;<br /></p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Click-on-Create-my-access-token.png" alt="Click on Create my access token" height="100%" /></div><div class="title">Figure 13. Click on Create my access token</div>
-<div class="paragraph"><p>&#160;<br /></p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Copy-paste-these-codes-into-Gephi.png" alt="Copy paste these codes into Gephi" height="100%" /></div><div class="title">Figure 14. Copy paste these codes into Gephi</div>
-<div class="paragraph"><p>&#160;<br /></p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Where-to-copy-paste-the-codes-in-Gephi.png" alt="Where to copy paste the codes in Gephi" height="100%" /></div><div class="title">Figure 15. Where to copy paste the codes in Gephi</div>
-<div class="paragraph"><p>&#160;<br /></p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Click-on-Keys-and-Access-Tokens.png" alt="Click on Keys and Access Tokens" height="100%" /></div><div class="title">Figure 12. Click on Keys and Access Tokens</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Click-on-Create-my-access-token.png" alt="Click on Create my access token" height="100%" /></div><div class="title">Figure 13. Click on Create my access token</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Copy-paste-these-codes-into-Gephi.png" alt="Copy paste these codes into Gephi" height="100%" /></div><div class="title">Figure 14. Copy paste these codes into Gephi</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Where-to-copy-paste-the-codes-in-Gephi.png" alt="Where to copy paste the codes in Gephi" height="100%" /></div><div class="title">Figure 15. Where to copy paste the codes in Gephi</div></section>
 <section id="_done"><h2>Done!</h2><div class="paragraph"><p><span class="icon"><i class="fa fa-thumbs-up"></i></span> Well done. This setup had just to be done once.
 Your credentials are saved and will be loaded at each run.
 Now we can start using the plugin.</p></div></section>
@@ -152,32 +136,25 @@ a long list of words / users.</p></div></section>
 <section><h3>Network Logic</h3></section>
 <section><div class="paragraph"><p>A <strong> Network Logic </strong> means: what should be done with an incoming tweet? How to transform it as a set of nodes and edges?</p></div></section>
 <section id="_the_dropdown_menu_to_choose_the_network_logic"><h2>The dropdown menu to choose the network logic:</h2><div class="imageblock stretch" style="text-align: center"><img src="images/Selection-of-the-network-logic.png" alt="Selection of the network logic" height="100%" /></div><div class="title">Figure 16. Selection of the network logic</div>
-<div class="paragraph"><p>&#160;<br /></p></div>
 <div class="paragraph"><p>There are for the moment 3 Network Logics to choose from:</p></div></section>
 <section><div class="ulist"><ul><li><p>Full Twitter Network : This will represent <strong>all</strong> entities (User, Tweet, Hastags, URL, Media, Symbol etc&#8230;&#8203;) as a graph.</p></li><li><p>User Network : This will represent the interaction between users. Any mentions, retweets or quotes between 2 users, will be represented. The size of the edge represent the number of interactions between 2 users.</p></li><li><p>Hashtag Network : This will create the network of hashtag.</p></li></ul></div></section>
 <section><div class="paragraph"><p>In the following, we use the network logic "User Network":</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Adding-terms-and-launching-the-collection-of-tweets.png" alt="Adding terms and launching the collection of tweets" height="100%" /></div><div class="title">Figure 17. Adding terms and launching the collection of tweets</div>
-<div class="paragraph"><p>&#160;<br /></p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Adding-terms-and-launching-the-collection-of-tweets.png" alt="Adding terms and launching the collection of tweets" height="100%" /></div><div class="title">Figure 17. Adding terms and launching the collection of tweets</div></section>
 <section><div class="paragraph"><p>Be careful that if you choose very common terms, tweets will arrive fast and in large volumes.</p></div>
 <div class="paragraph"><p>If you don&#8217;t have enough memory (RAM) on your computer, this could make it crash.</p></div>
 <div class="paragraph"><p>Click on "disconnect" to stop the collection of tweets.</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/en/twitter-streaming-importer/result-plugin-1-en.png" alt="result plugin 1 en" height="100%" /></div><div class="title">Figure 18. Users mentioned in or retweeting tweets citing the search terms</div>
-<div class="paragraph"><p>&#160;<br /></p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/en/twitter-streaming-importer/result-plugin-1-en.png" alt="result plugin 1 en" height="100%" /></div><div class="title">Figure 18. Users mentioned in or retweeting tweets citing the search terms</div></section>
 <section id="_applying_a_layout_while_the_tweets_arrive"><h2>Applying a layout while the tweets arrive.</h2><div class="paragraph"><p>You can see the users organize spatially in real time, while the tweets are being collected.</p></div>
 <div class="paragraph"><p>Just run Force Atlas 2 in the "Layout" panel. This will not interrupt the collection of tweets.</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Running-the-Force-Atlas-layout-while-the-tweets-are-arriving.png" alt="Running the Force Atlas layout while the tweets are arriving" height="100%" /></div><div class="title">Figure 19. Running the Force Atlas layout while the tweets are arriving</div>
-<div class="paragraph"><p>&#160;<br /></p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Running-the-Force-Atlas-layout-while-the-tweets-are-arriving.png" alt="Running the Force Atlas layout while the tweets are arriving" height="100%" /></div><div class="title">Figure 19. Running the Force Atlas layout while the tweets are arriving</div></section>
 <section><div class="paragraph"><p>Shift to the <code>data laboratory</code> to view the data collected, in a spreadsheet format:</p></div>
-<div class="imageblock stretch" style="text-align: center"><img src="images/Switching-to-the-data-laboratory-view.png" alt="Switching to the data laboratory view" height="100%" /></div><div class="title">Figure 20. Switching to the data laboratory view</div>
-<div class="paragraph"><p>&#160;<br /></p></div></section>
+<div class="imageblock stretch" style="text-align: center"><img src="images/Switching-to-the-data-laboratory-view.png" alt="Switching to the data laboratory view" height="100%" /></div><div class="title">Figure 20. Switching to the data laboratory view</div></section>
 <section><div class="paragraph"><p>There, you can export nodes and relations ("edges") as csv files by clicking on "Export table".</p></div></section>
 <section><h3>Timeline</h3></section>
 <section><div class="paragraph"><p>When you are finished with your stream, you can use the <strong> timeline </strong> feature to replay the stream of data and look at a particular time window.</p></div>
 <div class="paragraph"><p><em>This feature is still experimental and is higly subject to bug.</em></p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/en/twitter-streaming-importer/timeline-enable.png" alt="timeline enable" height="100%" /></div><div class="title">Figure 21. How to activate the Timeline</div>
-<div class="paragraph"><p>&#160;<br /></p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/en/twitter-streaming-importer/timeline.gif" alt="timeline" height="100%" /></div><div class="title">Figure 22. Example of Timeline</div>
-<div class="paragraph"><p>&#160;<br /></p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/en/twitter-streaming-importer/timeline-enable.png" alt="timeline enable" height="100%" /></div><div class="title">Figure 21. How to activate the Timeline</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/en/twitter-streaming-importer/timeline.gif" alt="timeline" height="100%" /></div><div class="title">Figure 22. Example of Timeline</div></section>
 <section id="_the_end"><h2>The end!</h2><div class="paragraph"><p>Visit <a href="https://www.facebook.com/groups/gephi/">the Gephi group on Facebook</a> to get help,</p></div>
 <div class="paragraph"><p>or visit <a href="https://seinecle.github.io/gephi-tutorials/">the website for more tutorials</a></p></div></section></div></div><script src="reveal.js-3.1.0/lib/js/head.min.js"></script><script src="reveal.js-3.1.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
 Reveal.initialize({

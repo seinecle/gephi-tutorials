@@ -14,6 +14,7 @@ last modified: {docdate}
 :title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
 
 image::gephi-logo-2010-transparent.png[width="450" align="center"]
+{nbsp} +
 
 //ST: 'Escape' to see all sides, F11 for full screen
 
@@ -46,11 +47,13 @@ The file name ends with ".gexf", which just means this is a text file where the 
 - find `miserables.gexf` on your computer and open it
 
 image::en/gephi-welcome-screen-open-graph-en.png[align="center", title="welcome screen"]
+{nbsp} +
 
 //ST: !
 A report window will open, giving you basic info on the network you opened:
 
 image::en/opening-file-report-en.png[align="center", title="report window"]
+{nbsp} +
 
 //ST: !
 This tells you that the network comprises 74 characters, connected by 248 links.
@@ -63,6 +66,7 @@ Click on `OK` to see the graph in Gephi.
 
 //ST: !
 image::result_miserables.png[align="center",title="The network we will use"]
+{nbsp} +
 
 == getting a sense of the attributes in the data laboratory
 //ST: getting a sense of the attributes in the data laboratory
@@ -71,17 +75,20 @@ image::result_miserables.png[align="center",title="The network we will use"]
 We can switch to the data laboratory to see the underlying data:
 
 image::Switching-to-the-data-laboratory.png[align="center",title="Switching to the data laboratory"]
+{nbsp} +
 
 
 //ST: !
 We see that the nodes of the network have many attributes. In particular, each have a Gender and a measure of how central they are:
 
 image::Nodes-attributes..png[align="center",title="Nodes attributes."]
+{nbsp} +
 
 //ST: !
 This is the list of edges (relations) in the network. Notice that they have a "weight" (a "strength").
 
 image::Edges-attributes..png[align="center",title="Edges attributes".]
+{nbsp} +
 
 == discovering the filter panel
 //ST: discovering the filter panel
@@ -90,18 +97,21 @@ image::Edges-attributes..png[align="center",title="Edges attributes".]
 In the overview, make sure the Filter panel is displayed:
 
 image::Making-the-Filter-panel-visible..png[align="center",title="Making the Filter panel visible."]
+{nbsp} +
 
 
 //ST: !
 How the Filter panel works:
 
 image::Workflow-of-filters--size=stretch.png[align="center",title="Workflow of filters", size="stretch"]
+{nbsp} +
 
 
 //ST: !
 An example: hiding edges with weight lower than 2
 
 image::en/filter-edge-weight-en.gif[align="center",title="How to use filters."]
+{nbsp} +
 
 //PDF: image::en/filter-edge-weight-1-en.png[align="center",title="Filtering out edges with weight lower than 2."]
 
@@ -132,14 +142,17 @@ Goal: Keeping on screen only the female characters which have a tie (an edge, a 
 //ST: !
 
 image::Filter-on-the-Gender-attribute.png[align="center",title="Filter on the Gender attribute"]
+{nbsp} +
 
 //ST: !
 
 image::Filter-on-edge-weight.png[align="center",title="Filter on edge weight"]
+{nbsp} +
 
 //ST: !
 
 image::en/filter-edge-weight-gender-partition-en.gif[align="center",title="Keeping only female characters with at least 2 ties"]
+{nbsp} +
 
 //PDF: image::en/filter-edge-weight-gender-partition1-en.png[align="center",title="Keeping only female characters with at least 2 ties"]
 
@@ -169,10 +182,12 @@ Here, we want to visualize:
 //ST: !
 
 image::en/filter-degree-range-1-en.png[align="center",title="Filter on degree"]
+{nbsp} +
 
 //ST: !
 
 image::en/filter-giant-component-1-en.png[align="center",title="Filter on giant component"]
+{nbsp} +
 
 //ST: !
 We will see that the placement on the filters in the zone will make a difference.
@@ -182,6 +197,7 @@ First, let us place the filter on giant component *inside* the filter on degree:
 //ST: !
 
 image::en/filter-order-1-en.png[align="center",title="Filters in one configuration"]
+{nbsp} +
 
 //ST: !
 In this first case,
@@ -199,6 +215,7 @@ In this first case,
 Now instead, placing the filter degree *inside* the filter on giant component:
 
 image::en/filter-order-2-en.png[align="center",title="Same filters in another configuration"]
+{nbsp} +
 
 //ST: !
 In this second case,
@@ -241,11 +258,13 @@ The MASK operator applied on the gender partition filter enables you to:
 //ST: !
 
 image::en/operator-mask-1-en.png[align="center",title="Using the MASK operator"]
+{nbsp} +
 
 //ST: !
 It is also possible to hide / show only some of the directed relations between the visible graph and the filtered out graph:
 
 image::en/operator-mask-2-en.png[align="center",title="Parameters of the MASK operator"]
+{nbsp} +
 
 //ST: !
 ==== 2. The UNION operator
@@ -268,21 +287,25 @@ Let's switch to the data laboratory and add this attribute:
 //ST: !
 
 image::Adding-a-column-for-Names.png[align="center",title="Adding a column for Names"]
+{nbsp} +
 
 
 //ST: !
 
 image::Copying-to-this-new-column.png[align="center",title="Copying to this new column"]
+{nbsp} +
 
 //ST: !
 We now have an attribute called "Name" that we can find in the Filters:
 
 image::New-filter-available.png[align="center",title="New filter available"]
+{nbsp} +
 
 //ST: !
 This is how the filter on Name and its parameters look like in the zone:
 
 image::en/filter-name-1-en.png[align="center",title="Name Filter"]
+{nbsp} +
 
 //ST: !
 To recall, we want to show only the characters which name start with "L" or "J". Let's start with the "L" characters.
@@ -311,11 +334,13 @@ So: "select nodes which have a name starting with L, followed by any character, 
 Please note that you need to check the box "regex":
 
 image::en/filter-name-2-en.png[align="center",title="Using a regular expression in a filter"]
+{nbsp} +
 
 //ST: !
 When the filter is applied, only the characters wit a name starting with L will be displayed:
 
 image::en/filter-name-3-en.png[align="center",title="Using a regular expression in a filter"]
+{nbsp} +
 
 //ST: !
 How to filter characters with a name starting with the letter "L" or "J"?
@@ -338,11 +363,13 @@ But we can also rely on 2 filters: one for L, one for J. Nesting one inside anot
 Instead, we should use the *`UNION`* operator that can be found here:
 
 image::en/filter-operator-union-1-en.png[align="center",title="The UNION operator in filters"]
+{nbsp} +
 
 //ST: !
 Drag it to the zone, and then drag inside it twice the `Attributes -> Equal -> Name` filter:
 
 image::en/filter-operator-union-2-en.png[align="center",title="The UNION operator and 2 subfilters"]
+{nbsp} +
 
 //ST: !
 In the settings of the first Name filter, put the regular expression:
@@ -359,6 +386,7 @@ J.*
 As a result, the nodes  selected by both filters are added up in the display:
 
 image::en/filter-operator-union-3-en.png[align="center",title="The UNION operator and 2 subfilters"]
+{nbsp} +
 
 //ST: !
 ==== 3. The NOT operator
@@ -370,11 +398,13 @@ The NOT operator flips the result of a filter: what was hidden becomes visible a
 Example: if we want to display all characters except for those returned by a UNION on 2 Name filters on L and J initials:
 
 image::en/filter-operator-not-3-en.png[align="center",title="The NOT nodes operator - 1"]
+{nbsp} +
 
 //ST: !
 Same effect, but applying the NOT operator on single filter using a regex on L or J:
 
 image::en/filter-operator-not-1-en.png[align="center",title="The NOT nodes operator - 2"]
+{nbsp} +
 
 //ST: !
 Same effect again, achieved without using the NOT operator. In regular expressions the ^ sign inside square brackets means "NOT":
@@ -383,6 +413,7 @@ Same effect again, achieved without using the NOT operator. In regular expressio
 [^LJ].*
 
 image::en/filter-operator-not-2-en.png[align="center",title="Achieving a NOT effect with regex"]
+{nbsp} +
 
 //ST: !
 Tutorials about regular expressions:

@@ -11,7 +11,7 @@ last modified: {docdate}
 
 [.stretch]
 image::gephi-logo-2010-transparent.png[width="450" align="center"]
-{nbsp} +
+
 
 ==  'Escape' to see all sides, F11 for full screen
 

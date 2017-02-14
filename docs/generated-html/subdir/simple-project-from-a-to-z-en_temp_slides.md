@@ -13,7 +13,7 @@ last modified: {docdate}
 
 [.stretch]
 image::gephi-logo-2010-transparent.png[width="450" align="center"]
-{nbsp} +
+
 
 ==  'Escape' to see all sides, F11 for full screen
 
@@ -46,7 +46,7 @@ When finishing this tutorial, you should be able to:
 ==  !
 [.stretch]
 image::terminology-for-networks.png[align="center",title="terminology for networks"]
-{nbsp} +
+
 
 
 
@@ -77,7 +77,7 @@ The file name ends with ".gexf", which just means this is a text file where the 
 
 [.stretch]
 image::en/gephi-welcome-screen-open-graph-en.png[align="center", title="welcome screen"]
-{nbsp} +
+
 
 
 ==  !
@@ -85,7 +85,7 @@ A report window will open, giving you basic info on the network you opened:
 
 [.stretch]
 image::en/opening-file-report-en.png[align="center", title="report window"]
-{nbsp} +
+
 
 ==  !
 This tells you that the network comprises 74 characters, connected by 248 links.
@@ -101,7 +101,7 @@ Click on `OK` to see the graph in Gephi.
 
 [.stretch]
 image::en/project-initial-view.png[align="center", title="initial view when opening a graph"]
-{nbsp} +
+
 
 This is how the network appears in Gephi. Not very useful! Let's examine what we have here.
 
@@ -110,7 +110,7 @@ This is how the network appears in Gephi. Not very useful! Let's examine what we
 
 [.stretch]
 image::the-3-main-screens-in-Gephi.png[align="center", title="the 3 main screens in Gephi"]
-{nbsp} +
+
 
 ==  !
 Gephi has 3 main screens:
@@ -125,7 +125,7 @@ What we see here is the Overview.
 
 [.stretch]
 image::Filters-and-statistics-panels-in-Gephi.png[align="center", title="Filters and statistics panels in Gephi"]
-{nbsp} +
+
 
 ==  !
 
@@ -139,7 +139,7 @@ In the Overview, the graph is shown at the center. Around it, several panels hel
 ==  !
 [.stretch]
 image::Appearance-and-layout-panels-in-Gephi.png[align="center", title="Appearance and layout panels in Gephi"]
-{nbsp} +
+
 
 
 ==  !
@@ -152,7 +152,7 @@ image::Appearance-and-layout-panels-in-Gephi.png[align="center", title="Appearan
 ==  !
 [.stretch]
 image::3-groups-of-icons.png[align="center", title="3 groups of icons"]
-{nbsp} +
+
 
 ==  !
 
@@ -170,7 +170,7 @@ image::3-groups-of-icons.png[align="center", title="3 groups of icons"]
 
 [.stretch]
 image::showing-node-labels.png[align="center", title="showing node labels"]
-{nbsp} +
+
 
 
 
@@ -180,21 +180,21 @@ image::showing-node-labels.png[align="center", title="showing node labels"]
 
 [.stretch]
 image::selecting-the-force-atlas-2-layout.png[align="center", title="selecting the force atlas 2 layout"]
-{nbsp} +
+
 
 ==  !
 
 [[force-atlas-2-parameters]]
 [.stretch]
 image::changing-a-few-parameters-and-launching-the-layout.png[align="center", title="changing a few parameters and launching the layout"]
-{nbsp} +
+
 
 
 ==  !
 
 [.stretch]
 image::result-of-Force-Atlas-2-layout.png[align="center", title="result of Force Atlas 2 layout"]
-{nbsp} +
+
 
 
 ==  visualize the properties of the nodes
@@ -213,13 +213,13 @@ Now, we will see how to make this property ("Gender") visible.
 
 [.stretch]
 image::Switching-the-view-to-the-data-laboratory.png[align="center",title="Switching the view to the data laboratory"]
-{nbsp} +
+
 
 ==  !
 
 [.stretch]
 image::We-see-there-is-a-Gender-attribute-for-each-character..png[align="center",title="We see there is a Gender attribute for each character."]
-{nbsp} +
+
 
 ==  !
 
@@ -227,7 +227,7 @@ We will color the nodes based on their gender. To do that, we select `Gender` in
 
 [.stretch]
 image::Coloring-nodes-according-to-their-gender.png[align="center",title="Coloring nodes according to their gender"]
-{nbsp} +
+
 
 ==  !
 
@@ -235,7 +235,7 @@ The result:
 
 [.stretch]
 image::appearance-miserables-result.png[align="center",title="After coloring characters according to their gender"]
-{nbsp} +
+
 
 
 ==  prettify the network for enhanced readability
@@ -263,7 +263,7 @@ In the layout panel, choose "Label Adjust" or "Noverlap": these layouts will mov
 
 [.stretch]
 image::en/choosing-a-label-adjust-algo-en.png[align="center",title="Noverlap or Label Adjust will help you"]
-{nbsp} +
+
 
 Don't forget to click on "Run" to apply these layouts.
 
@@ -273,14 +273,14 @@ Open the bottom panel of Gephi by clicking on tiny arrow head (1). Then select "
 
 [.stretch]
 image::Adjusting-label-size.png[align="center",title="Adjusting label size"]
-{nbsp} +
+
 
 ==  !
 ==== 4. Adjusting the thickness of the links
 
 [.stretch]
 image::Adjusting-edge-thickness.png[align="center",title="Adjusting edge thickness"]
-{nbsp} +
+
 
 
 ==  Computing the centrality of the nodes
@@ -314,14 +314,14 @@ Gephi computes it for you. Find "Network diameter" in the statistics panel and c
 
 [.stretch]
 image::Computing-betweenness-centrality.png[align="center",title="Computing betweenness centrality"]
-{nbsp} +
+
 
 ==  !
 This will open a window with parameters (explained in a more advanced tutorials). Click "OK":
 
 [.stretch]
 image::Parameters-for-the-computation-of-betweenness-centrality.png[align="center",title="Parameters for the computation of betweenness centrality"]
-{nbsp} +
+
 
 
 ==  !
@@ -329,7 +329,7 @@ A report window opens (also explained in a other tutorials). Close it.
 
 [.stretch]
 image::Report-after-the-computation-of-betweenness-centrality.png[align="center",title="Report after the computation of betweenness centrality"]
-{nbsp} +
+
 
 Now we can visualize this information.
 
@@ -345,7 +345,7 @@ First, let's switch to the data laboratory to see how Gephi stored the "betweenn
 
 [.stretch]
 image::Switching-the-view-to-the-data-laboratory.png[align="center",title="Switching the view to the data laboratory"]
-{nbsp} +
+
 
 ==  !
 
@@ -353,7 +353,7 @@ When we ran "Network Diameter" in the statistics panel, Gephi has actually compu
 
 [.stretch]
 image::Different-centrality-measures-visible-in-the-data-laboratory.png[align="center",title="Different centrality measures visible in the data laboratory"]
-{nbsp} +
+
 
 ==  !
 To resize the nodes according to the value of their betweenness centrality, we use the `Appearance` panel:
@@ -362,30 +362,30 @@ CAUTION: make sure you select the correct options
 
 [.stretch]
 image::Ranking-node-sizes-by-centrality.png[align="center",title="Ranking node sizes by centrality"]
-{nbsp} +
+
 
 ==  !
 
 [.stretch]
 image::Selecting-the-minimum-and-maximum-sizes-of-nodes.png[align="center",title="Selecting the minimum and maximum sizes of nodes"]
-{nbsp} +
+
 
 ==  !
 
 [.stretch]
 image::ranking-centrality-miserables-3--en.png[align="center",title="Result of the ranking"]
-{nbsp} +
+
 
 ==  !
 
 [.stretch]
 image::Resizing-labels-to-reflect-their-node's-size.png[align="center",title="Resizing labels to reflect their node's size"]
-{nbsp} +
+
 
 ==  !
 [.stretch]
 image::result-label-resizing-en.png[align="center",title="Result of the label resizing"]
-{nbsp} +
+
 
 
 ==  exporting a network as a picture
@@ -396,7 +396,7 @@ image::result-label-resizing-en.png[align="center",title="Result of the label re
 
 [.stretch]
 image::Open-the-configuration-panel-for-screenshots.png[align="center",title="Open the configuration panel for screenshots"]
-{nbsp} +
+
 
 ==  !
 
@@ -404,7 +404,7 @@ Select the maximum value for anti-aliasing, and multiply values for width and he
 
 [.stretch]
 image::en/configuration-screenshot-en.png[align="center",title="The configuration panel for screenshots"]
-{nbsp} +
+
 
 ==  2. exporting a pdf or svg picture
 
@@ -413,7 +413,7 @@ Let's switch to the preview panel:
 
 [.stretch]
 image::Switching-to-the-preview-panel.png[align="center",title="Switching to the preview panel"]
-{nbsp} +
+
 
 ==  !
 The preview panel is dedicated to the preparation of the picture to be exported as a pdf or svg, which are "scalable": in pdf or sv, the resolution of the graph will remain perfect, even with a strong zoom.
@@ -424,21 +424,21 @@ CAUTION: contrary to the Overview panel, here you need to hit the "refresh" butt
 
 [.stretch]
 image::Updating-the-parameters.png[align="center",title="Updating the parameters"]
-{nbsp} +
+
 
 ==  !
 Here I change just 2 parameters: `Show Labels` and  `Font` (which I reduce to size "5"), to get:
 
 [.stretch]
 image::Result-of-preview.png[align="center",title="Result of preview"]
-{nbsp} +
+
 
 ==  !
 Export: just click on the button and select the file format you prefer
 
 [.stretch]
 image::Export-button.png[align="center",title="Export button"]
-{nbsp} +
+
 
 ==  donwload the result file
 

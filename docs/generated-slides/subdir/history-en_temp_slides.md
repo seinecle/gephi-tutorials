@@ -21,7 +21,7 @@ This was about the same time http://www.cond.org/[Eytan Adar] was developing his
 
 [.stretch]
 image::matthieu-jacomy.jpg[align="center", title="Mathieu Jacomy", id=package_overview]
-{nbsp} +
+
 
 ==  !
 
@@ -29,7 +29,7 @@ In 2007/2008, this project morphed into Gephi, developed by a team of students a
 
 [.stretch]
 image::initial-team.png[width=450, align="center", title="The initial Gephi team"]
-{nbsp} +
+
 
 
 ==  !
@@ -73,4 +73,4 @@ pass:[<iframe scrolling="no" style="border:none;" width="640" height="600" src="
 
 [.stretch]
 image::google-scholar-gephi.png[align="center", title=""]
-{nbsp} +
+

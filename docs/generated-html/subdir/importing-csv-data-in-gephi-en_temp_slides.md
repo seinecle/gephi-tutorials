@@ -13,7 +13,7 @@ last modified: {docdate}
 
 [.stretch]
 image::gephi-logo-2010-transparent.png[width="450" align="center"]
-{nbsp} +
+
 
 ==  'Escape' to see all sides, F11 for full screen
 
@@ -24,7 +24,7 @@ Gephi handles the import of network files in a variety of formats:
 
 [.stretch]
 image::network-formats-gephi-import-en.png[align="center",title="file formats supported by Gephi. Source: gephi.org"]
-{nbsp} +
+
 
 ==  !
 To import any of these files, just choose the `File -> Open` menu
@@ -52,14 +52,14 @@ To import this file in Gephi, go to `File->Import Spreadsheet`. Then in the wind
 
 [.stretch]
 image::Importing-nodes-with-labels-and-their-relations.png[align="center",title="Importing nodes with labels and their relations"]
-{nbsp} +
+
 
 ==  !
 In this window, make sure the box "Create missing nodes" is checked:
 
 [.stretch]
 image::Second-screen.png[align="center",title="Second screen"]
-{nbsp} +
+
 
 [[full-csv-version]]
 ==  Importing nodes with labels and their relations: full version
@@ -126,7 +126,7 @@ These extra " " will make the Gephi import break:
 
 [.stretch]
 image::en/import-spreadsheet-4-en.png[align="center",title="The import bugs - the middle name has disappeared"]
-{nbsp} +
+
 
 
 ==  !
@@ -143,7 +143,7 @@ This time, Gephi imports the network correctly:
 
 [.stretch]
 image::en/import-spreadsheet-3-en.png[align="center",title="Importing node labels containing double quotes"]
-{nbsp} +
+
 
 ==  Importing more than labels: nodes and edges attributes
 
@@ -177,27 +177,27 @@ Let's import the list of nodes first. `File -> Import Spreadsheet`
 
 [.stretch]
 image::Importing-a-list-of-nodes-with-attributes.png[align="center",title="Importing a list of nodes with attributes"]
-{nbsp} +
+
 
 ==  !
 in the next screen, we must be careful with a couple of things:
 
 [.stretch]
 image::The-attributes-of-the-nodes.png[align="center",title="The attributes of the nodes"]
-{nbsp} +
+
 
 ==  !
 Then we can import the file with the list of relations. `File -> Import Spreadsheet`
 
 [.stretch]
 image::Importing-a-list-of-edges-with-attributes.png[align="center",title="Importing a list of edges with attributes"]
-{nbsp} +
+
 
 ==  !
 
 [.stretch]
 image::The-attributes-of-the-edges.png[align="center",title="The attributes of the edges"]
-{nbsp} +
+
 
 ==  Memo card
 
@@ -219,7 +219,7 @@ Types of attributes: which to choose?
 
 [.stretch]
 image::en/import-spreadsheet-9-en.png[align="center",title="Kinds of attributes"]
-{nbsp} +
+
 
 ==  !
 

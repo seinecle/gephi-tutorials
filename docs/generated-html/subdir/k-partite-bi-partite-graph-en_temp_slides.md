@@ -13,7 +13,7 @@ last modified: {docdate}
 
 [.stretch]
 image::gephi-logo-2010-transparent.png[width="450" align="center"]
-{nbsp} +
+
 
 ==  'Escape' to see all sides, F11 for full screen
 
@@ -70,7 +70,7 @@ This is a typical bi-partite graph. If you look on the data, part of the node ha
 
 [.stretch]
 image::en/k-partite/k-partite-simple-graph.png[Cac 40 bipartite graph]
-{nbsp} +
+
 
 
 ==  !
@@ -129,7 +129,7 @@ It is authored by https://github.com/jaroslav-kuchar[Jaroslav Kuchar]
 
 [.stretch]
 image::en/k-partite/k-partite-install-plugin.png[Plugin Install]
-{nbsp} +
+
 
 ==  !
 
@@ -152,7 +152,7 @@ Then, load the graph and :
 
 [.stretch]
 image::en/k-partite/k-partite-config.png[MultiPartite_Gephi]
-{nbsp} +
+
 
 
 ==  !
@@ -171,7 +171,7 @@ Now you should have a graph with only administrators on the graph preview.
 
 [.stretch]
 image::en/k-partite/k-partite-simple-p2p.png[Tuto_Multi_P2P]
-{nbsp} +
+
 
 
 ==  !
@@ -186,13 +186,13 @@ from the original graph (duplicate the workspace0 again) and in the **Multimode 
 
 [.stretch]
 image::en/k-partite/k-partite-config-2.png[MultiPartite_Gephi_2]
-{nbsp} +
+
 
 ==  !
 
 [.stretch]
 image::en/k-partite/k-partite-simple-c2c.png[Tuto_Multi_C2C]
-{nbsp} +
+
 
 ==  !
 
