@@ -8,11 +8,11 @@ last modified: {docdate}
 :iconsfont:   font-awesome
 :revnumber: 1.0
 :example-caption!:
-:sourcedir: ../../../main/java
 
 :title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
 
 image::gephi-logo-2010-transparent.png[width="450" align="center"]
+{nbsp} +
 
 //ST: 'Escape' to see all sides, F11 for full screen
 
@@ -23,6 +23,7 @@ image::gephi-logo-2010-transparent.png[width="450" align="center"]
 Gephi handles the import of network files in a variety of formats:
 
 image::network-formats-gephi-import-en.png[align="center",title="file formats supported by Gephi. Source: gephi.org"]
+{nbsp} +
 
 //ST: !
 To import any of these files, just choose the `File -> Open` menu
@@ -50,11 +51,13 @@ Just write this in a text editor and save it as a file `example.txt`
 To import this file in Gephi, go to `File->Import Spreadsheet`. Then in the window:
 
 image::Importing-nodes-with-labels-and-their-relations.png[align="center",title="Importing nodes with labels and their relations"]
+{nbsp} +
 
 //ST: !
 In this window, make sure the box "Create missing nodes" is checked:
 
 image::Second-screen.png[align="center",title="Second screen"]
+{nbsp} +
 
 [[full-csv-version]]
 //ST: Importing nodes with labels and their relations: full version
@@ -120,6 +123,7 @@ Source,Target
 These extra " " will make the Gephi import break:
 
 image::en/import-spreadsheet-4-en.png[align="center",title="The import bugs - the middle name has disappeared"]
+{nbsp} +
 
 
 //ST: !
@@ -135,6 +139,7 @@ Source,Target
 This time, Gephi imports the network correctly:
 
 image::en/import-spreadsheet-3-en.png[align="center",title="Importing node labels containing double quotes"]
+{nbsp} +
 
 == Importing more than labels: nodes and edges attributes
 //ST: Importing more than labels: nodes and edges attributes
@@ -168,20 +173,24 @@ Source,Target,Weight,Type,Where first met <1>
 Let's import the list of nodes first. `File -> Import Spreadsheet`
 
 image::Importing-a-list-of-nodes-with-attributes.png[align="center",title="Importing a list of nodes with attributes"]
+{nbsp} +
 
 //ST: !
 in the next screen, we must be careful with a couple of things:
 
 image::The-attributes-of-the-nodes.png[align="center",title="The attributes of the nodes"]
+{nbsp} +
 
 //ST: !
 Then we can import the file with the list of relations. `File -> Import Spreadsheet`
 
 image::Importing-a-list-of-edges-with-attributes.png[align="center",title="Importing a list of edges with attributes"]
+{nbsp} +
 
 //ST: !
 
 image::The-attributes-of-the-edges.png[align="center",title="The attributes of the edges"]
+{nbsp} +
 
 == Memo card
 //ST: Memo card
@@ -203,6 +212,7 @@ Edges
 Types of attributes: which to choose?
 
 image::en/import-spreadsheet-9-en.png[align="center",title="Kinds of attributes"]
+{nbsp} +
 
 //ST: !
 

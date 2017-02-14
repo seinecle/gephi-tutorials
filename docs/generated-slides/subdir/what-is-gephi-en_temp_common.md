@@ -6,11 +6,11 @@ last modified: {docdate}
 
 :revnumber: 1.0
 :example-caption!:
-:sourcedir: ../../../main/java
 
 :title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
 
 image::gephi-logo-2010-transparent.png[width="450" align="center"]
+{nbsp} +
 
 //ST: 'Escape' to see all sides, F11 for full screen
 

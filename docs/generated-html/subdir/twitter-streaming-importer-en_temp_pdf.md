@@ -13,6 +13,7 @@ last modified: {docdate}
 :title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
 
 image::gephi-logo-2010-transparent.png[width="450" align="center"]
+{nbsp} +
 
 //ST: 'Escape' to see all sides, F11 for full screen
 
@@ -54,15 +55,18 @@ Let's go!
 //ST: !
 
 image::Choose-the-menu-Tools-then-Plugins.png[align="center", title="Choose the menu Tools then Plugins"]
+{nbsp} +
 
 
 //ST: !
 
 image::Click-on-the-tab-Available-Plugins.png[align="center", title="Click on the tab Available Plugins"]
+{nbsp} +
 
 //ST: !
 
 image::Install-the-plugin-then-restart-Gephi.png[align="center", title="Install the plugin then restart Gephi"]
+{nbsp} +
 
 == Initializing the plugin (to be done just once)
 
@@ -73,10 +77,12 @@ image::Install-the-plugin-then-restart-Gephi.png[align="center", title="Install 
 //ST: !
 
 image::Open-a-new-project-in-Gephi.png[align="center", title="Open a new project in Gephi"]
+{nbsp} +
 
 //ST: !
 
 image::Display-the-plugin-in-Gephi.png[align="center", title="Display the plugin in Gephi"]
+{nbsp} +
 
 //ST: !
 We need now to connect to a Twitter account. If you already have a Twitter account and you are logged in, <<twitter-account-finished-setup, skip to here>>.
@@ -84,10 +90,12 @@ We need now to connect to a Twitter account. If you already have a Twitter accou
 //ST: !
 
 image::Creating-a-Twitter-account.png[align="center", title="Creating a Twitter account"]
+{nbsp} +
 
 //ST: !
 
 image::Confirmation-of-the-sign-up.png[align="center", title="Confirmation of the sign-up"]
+{nbsp} +
 
 //ST: !
 
@@ -98,11 +106,13 @@ You have received an email by Twitter about the sign up. At some point (but now 
 //ST: !
 
 image::Enter-the-verification-code-you-received-by-sms.png[align="center", title="Enter the verification code you received by sms"]
+{nbsp} +
 
 
 //ST: !
 
 image::Choose-a-username.png[align="center", title="Choose a username"]
+{nbsp} +
 
 //ST: !
 
@@ -122,10 +132,12 @@ Go to *https://apps.twiter.com[https://apps.twiter.com]*:
 //ST: !
 
 image::Create-a-new-app.png[align="center", title="Create a new app"]
+{nbsp} +
 
 //ST: !
 
 image::Fill-in-the-fields.png[align="center", title="Fill in the fields"]
+{nbsp} +
 
 //ST: !
 
@@ -134,18 +146,22 @@ INFO: Almost there!!
 //ST: !
 
 image::Click-on-Keys-and-Access-Tokens.png[align="center", title="Click on Keys and Access Tokens"]
+{nbsp} +
 
 //ST: !
 
 image::Click-on-Create-my-access-token.png[align="center", title="Click on Create my access token"]
+{nbsp} +
 
 //ST: !
 
 image::Copy-paste-these-codes-into-Gephi.png[align="center", title="Copy paste these codes into Gephi"]
+{nbsp} +
 
 //ST: !
 
 image::Where-to-copy-paste-the-codes-in-Gephi.png[align="center", title="Where to copy paste the codes in Gephi"]
+{nbsp} +
 
 //ST: Done!
 
@@ -187,6 +203,7 @@ A ** Network Logic ** means: what should be done with an incoming tweet? How to 
 //ST: The dropdown menu to choose the network logic:
 
 image::Selection-of-the-network-logic.png[align="center",title="Selection of the network logic"]
+{nbsp} +
 
 There are for the moment 3 Network Logics to choose from:
 
@@ -202,6 +219,7 @@ In the following, we use the network logic "User Network":
 //ST: !
 
 image::Adding-terms-and-launching-the-collection-of-tweets.png[align="center", title="Adding terms and launching the collection of tweets"]
+{nbsp} +
 
 //ST: !
 
@@ -214,6 +232,7 @@ Click on "disconnect" to stop the collection of tweets.
 
 //ST: !
 image::en/twitter-streaming-importer/result-plugin-1-en.png[align="center",title="Users mentioned in or retweeting tweets citing the search terms"]
+{nbsp} +
 
 
 //ST: Applying a layout while the tweets arrive.
@@ -225,11 +244,13 @@ Just run Force Atlas 2 in the "Layout" panel. This will not interrupt the collec
 //ST: !
 
 image::Running-the-Force-Atlas-layout-while-the-tweets-are-arriving.png[align="center", title="Running the Force Atlas layout while the tweets are arriving"]
+{nbsp} +
 
 //ST: !
 Shift to the `data laboratory` to view the data collected, in a spreadsheet format:
 
 image::Switching-to-the-data-laboratory-view.png[align="center", title="Switching to the data laboratory view"]
+{nbsp} +
 
 //ST: !
 There, you can export nodes and relations ("edges") as csv files by clicking on "Export table".
@@ -247,9 +268,11 @@ _This feature is still experimental and is higly subject to bug._
 //ST: !
 
 image::en/twitter-streaming-importer/timeline-enable.png[align="center", title="How to activate the Timeline"]
+{nbsp} +
 
 //ST: !
-image::en/twitter-streaming-importer/timeline.gif[align="center", title="Example of Timeline"]
+
+{nbsp} +
 
 == The end
 

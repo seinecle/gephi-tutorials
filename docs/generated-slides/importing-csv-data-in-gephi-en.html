@@ -87,11 +87,13 @@ table.CodeRay td.code>pre{padding:0}
 .CodeRay .delete .delete{color:#800}
 .CodeRay .change .change{color:#66f}
 .CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.1.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.1.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>Importing data in Gephi</h1><div class="preamble"><div class="paragraph"><p>last modified: 2017-02-10</p></div>
-<div class="imageblock" style="text-align: center"><img src="images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450" /></div></div><p class="author"><small>Clément Levallois</small></p></section>
+<div class="imageblock stretch" style="text-align: center"><img src="images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450" /></div>
+<div class="paragraph"><p>&#160;<br /></p></div></div><p class="author"><small>Clément Levallois</small></p></section>
 <section id="__escape_to_see_all_sides_f11_for_full_screen"><h2>'Escape' to see all sides, F11 for full screen</h2></section>
 <section id="_importing_an_existing_network_file"><h2>Importing an existing network file</h2></section>
 <section><div class="paragraph"><p>Gephi handles the import of network files in a variety of formats:</p></div>
-<div class="imageblock" style="text-align: center"><img src="images/network-formats-gephi-import-en.png" alt="network formats gephi import en" /></div><div class="title">Figure 1. file formats supported by Gephi. Source: gephi.org</div></section>
+<div class="imageblock stretch" style="text-align: center"><img src="images/network-formats-gephi-import-en.png" alt="network formats gephi import en" height="100%" /></div><div class="title">Figure 1. file formats supported by Gephi. Source: gephi.org</div>
+<div class="paragraph"><p>&#160;<br /></p></div></section>
 <section><div class="paragraph"><p>To import any of these files, just choose the <code>File &#8594; Open</code> menu</p></div></section>
 <section id="_importing_nodes_with_labels_and_their_relations_simplest_version"><h2>Importing nodes with labels and their relations: simplest version</h2><div class="paragraph"><p>(looking for the complete, full featured csv import version? <a href="#full-csv-version">skip to here</a>.)</p></div></section>
 <section><div class="paragraph"><p>The easiest is probably to just have a text file like this one:</p></div>
@@ -101,9 +103,11 @@ Valerian,Jeremy</pre></div></div>
 <div class="paragraph"><p>&lt;1&gt;This line is mandatory. Don&#8217;t put a space between the comma and "Target"</p></div>
 <div class="paragraph"><p>Just write this in a text editor and save it as a file <code>example.txt</code></p></div></section>
 <section><div class="paragraph"><p>To import this file in Gephi, go to <code>File&#8594;Import Spreadsheet</code>. Then in the window:</p></div>
-<div class="imageblock" style="text-align: center"><img src="images/Importing-nodes-with-labels-and-their-relations.png" alt="Importing nodes with labels and their relations" /></div><div class="title">Figure 2. Importing nodes with labels and their relations</div></section>
+<div class="imageblock stretch" style="text-align: center"><img src="images/Importing-nodes-with-labels-and-their-relations.png" alt="Importing nodes with labels and their relations" height="100%" /></div><div class="title">Figure 2. Importing nodes with labels and their relations</div>
+<div class="paragraph"><p>&#160;<br /></p></div></section>
 <section><div class="paragraph"><p>In this window, make sure the box "Create missing nodes" is checked:</p></div>
-<div class="imageblock" style="text-align: center"><img src="images/Second-screen.png" alt="Second screen" /></div><div class="title">Figure 3. Second screen</div></section>
+<div class="imageblock stretch" style="text-align: center"><img src="images/Second-screen.png" alt="Second screen" height="100%" /></div><div class="title">Figure 3. Second screen</div>
+<div class="paragraph"><p>&#160;<br /></p></div></section>
 <section id="full-csv-version"><h2>Importing nodes with labels and their relations: full version</h2></section>
 <section><div class="paragraph"><p>Let&#8217;s look again at the simple text file we used:</p></div>
 <div class="literalblock"><div class="content"><pre>Source,Target
@@ -131,14 +135,16 @@ Our text file will look like:</p></div>
 "Dubois, Jeremy "Danger"","Jeremy,Jennifer"
 "Rodriguez, Valerian","Dubois, Jeremy "Danger""</pre></div></div></section>
 <section><div class="paragraph"><p>These extra " " will make the Gephi import break:</p></div>
-<div class="imageblock" style="text-align: center"><img src="images/en/import-spreadsheet-4-en.png" alt="import spreadsheet 4 en" /></div><div class="title">Figure 4. The import bugs - the middle name has disappeared</div></section>
+<div class="imageblock stretch" style="text-align: center"><img src="images/en/import-spreadsheet-4-en.png" alt="import spreadsheet 4 en" height="100%" /></div><div class="title">Figure 4. The import bugs - the middle name has disappeared</div>
+<div class="paragraph"><p>&#160;<br /></p></div></section>
 <section><div class="paragraph"><p>The solution consists in <strong>adding an extra double quote in front of the double quotes</strong>.
 Our text file will look like:</p></div>
 <div class="literalblock"><div class="content"><pre>Source,Target
 "Dubois, Jeremy ""Danger""","Jeremy,Jennifer"
 "Rodriguez, Valerian","Dubois, Jeremy ""Danger"""</pre></div></div></section>
 <section><div class="paragraph"><p>This time, Gephi imports the network correctly:</p></div>
-<div class="imageblock" style="text-align: center"><img src="images/en/import-spreadsheet-3-en.png" alt="import spreadsheet 3 en" /></div><div class="title">Figure 5. Importing node labels containing double quotes</div></section>
+<div class="imageblock stretch" style="text-align: center"><img src="images/en/import-spreadsheet-3-en.png" alt="import spreadsheet 3 en" height="100%" /></div><div class="title">Figure 5. Importing node labels containing double quotes</div>
+<div class="paragraph"><p>&#160;<br /></p></div></section>
 <section id="_importing_more_than_labels_nodes_and_edges_attributes"><h2>Importing more than labels: nodes and edges attributes</h2></section>
 <section><div class="paragraph"><p>To import attributes we will need to proceed differently.</p></div>
 <div class="paragraph"><p>We need 2 text files: one for the list of nodes, one for the list of relations (edges)</p></div></section>
@@ -153,19 +159,24 @@ Our text file will look like:</p></div>
 1,45,3,"undirected",London <b>(2)</b></pre></div></div>
 <div class="colist arabic"><ol><li><p>Edges <strong>must</strong> have at least a Source and Target. Other fields are optional.</p></li><li><p>"undirected", the alternative is "directed". Directed edges have arrow heads.</p></li></ol></div></section>
 <section><div class="paragraph"><p>Let&#8217;s import the list of nodes first. <code>File &#8594; Import Spreadsheet</code></p></div>
-<div class="imageblock" style="text-align: center"><img src="images/Importing-a-list-of-nodes-with-attributes.png" alt="Importing a list of nodes with attributes" /></div><div class="title">Figure 6. Importing a list of nodes with attributes</div></section>
+<div class="imageblock stretch" style="text-align: center"><img src="images/Importing-a-list-of-nodes-with-attributes.png" alt="Importing a list of nodes with attributes" height="100%" /></div><div class="title">Figure 6. Importing a list of nodes with attributes</div>
+<div class="paragraph"><p>&#160;<br /></p></div></section>
 <section><div class="paragraph"><p>in the next screen, we must be careful with a couple of things:</p></div>
-<div class="imageblock" style="text-align: center"><img src="images/The-attributes-of-the-nodes.png" alt="The attributes of the nodes" /></div><div class="title">Figure 7. The attributes of the nodes</div></section>
+<div class="imageblock stretch" style="text-align: center"><img src="images/The-attributes-of-the-nodes.png" alt="The attributes of the nodes" height="100%" /></div><div class="title">Figure 7. The attributes of the nodes</div>
+<div class="paragraph"><p>&#160;<br /></p></div></section>
 <section><div class="paragraph"><p>Then we can import the file with the list of relations. <code>File &#8594; Import Spreadsheet</code></p></div>
-<div class="imageblock" style="text-align: center"><img src="images/Importing-a-list-of-edges-with-attributes.png" alt="Importing a list of edges with attributes" /></div><div class="title">Figure 8. Importing a list of edges with attributes</div></section>
-<section><div class="imageblock" style="text-align: center"><img src="images/The-attributes-of-the-edges.png" alt="The attributes of the edges" /></div><div class="title">Figure 9. The attributes of the edges</div></section>
+<div class="imageblock stretch" style="text-align: center"><img src="images/Importing-a-list-of-edges-with-attributes.png" alt="Importing a list of edges with attributes" height="100%" /></div><div class="title">Figure 8. Importing a list of edges with attributes</div>
+<div class="paragraph"><p>&#160;<br /></p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/The-attributes-of-the-edges.png" alt="The attributes of the edges" height="100%" /></div><div class="title">Figure 9. The attributes of the edges</div>
+<div class="paragraph"><p>&#160;<br /></p></div></section>
 <section id="_memo_card"><h2>Memo card</h2></section>
 <section><div class="paragraph"><p>Nodes</p></div>
 <div class="ulist"><ul><li><p>header must be at least <code>Id,Label</code></p></li></ul></div></section>
 <section><div class="paragraph"><p>Edges</p></div>
 <div class="ulist"><ul><li><p>header must be at least <code>Source,Target</code></p></li><li><p>To have an attribute for the "thickness" or "strength" of a relation, this attribute must be called "Weight".</p></li><li><p>Want arrows on your links? Add an attribute "Type", with value "Directed"</p></li><li><p>Don&#8217;t wan&#8217;t arrows? Add an attribute "Type", with value "Undirected"</p></li></ul></div></section>
 <section><div class="paragraph"><p>Types of attributes: which to choose?</p></div>
-<div class="imageblock" style="text-align: center"><img src="images/en/import-spreadsheet-9-en.png" alt="import spreadsheet 9 en" /></div><div class="title">Figure 10. Kinds of attributes</div></section>
+<div class="imageblock stretch" style="text-align: center"><img src="images/en/import-spreadsheet-9-en.png" alt="import spreadsheet 9 en" height="100%" /></div><div class="title">Figure 10. Kinds of attributes</div>
+<div class="paragraph"><p>&#160;<br /></p></div></section>
 <section><div class="ulist"><ul><li><p>Textual attribute: <code>String</code>. Nodes sharing the same textual value can be colored the same, or filtered together&#8230;&#8203;</p></li><li><p>Numerical attribute: <code>Integer</code>, <code>Double</code> or <code>Float</code>. Nodes can be resized according to their value, or colorized in a gradient. Filters can be applied based on the range of values.</p></li><li><p>Boolean attribute: just a <code>true</code> or <code>false</code> value. Useful for filtering out some nodes which are true or false on some parameter.</p></li><li><p>Other types of attributes: not needed for the moment.</p></li></ul></div></section>
 <section id="__to_be_continued"><h2>(to be continued)</h2></section>
 <section id="_more_tutorials_on_importing_data_to_gephi"><h2>More tutorials on importing data to Gephi</h2></section>
