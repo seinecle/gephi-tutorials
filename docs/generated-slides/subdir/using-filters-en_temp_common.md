@@ -384,10 +384,12 @@ Same effect again, achieved without using the NOT operator. In regular expressio
 image::en/filter-operator-not-2-en.png[align="center",title="Achieving a NOT effect with regex"]
 
 //ST: !
-To know more about regular expressions:
+Tutorials about regular expressions:
 
-http://www.regular-expressions.info/quickstart.html[http://www.regular-expressions.info/quickstart.html]
+- http://www.regular-expressions.info/quickstart.html[https://regexone.com/]
+- http://www.themacroscope.org/?page_id=643[http://www.themacroscope.org/?page_id=643]
 
+And a web page where you can test your regular expressions: http://regexpal.com[http://regexpal.com]
 
 == more tutorials on using filters in Gephi
 //ST: More tutorials on using filters in Gephi

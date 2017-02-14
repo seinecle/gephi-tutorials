@@ -17,8 +17,8 @@ image::gephi-logo-2010-transparent.png[width="450" align="center"]
 
 //ST: 'Escape' to see all sides, F11 for full screen
 
-== download a network file for this tutorialhttps://tinyurl.com/gephi-tuto-3
-//ST: download a network file for this tutorial
+== download a network file for practice
+//ST: download a network file for practice
 
 //ST: !
 
@@ -224,11 +224,11 @@ WARNING: In summary: be careful how you apply several filters at once, this migh
 //ST: !
 Imagine you are interested in the female characters of the novel "Les Miserables".
 
-- you are interested in these characters and the relations among them
+- you are interested in female characters and the relations among them
 - you are interested in the relations between female characters and male characters
 - you are *not* interested in the relations between male characters
 
-How to make only female characters visible, their relations (to female and male characters) and only those?
+How to display this?
 
 //ST: !
 The MASK operator applied on the gender partition filter enables you to:
@@ -237,6 +237,8 @@ The MASK operator applied on the gender partition filter enables you to:
 - relations between female characters
 - _and relations between male and female characters_
 - _but masking male-male relations_
+
+//ST: !
 
 image::en/operator-mask-1-en.png[align="center",title="Using the MASK operator"]
 
@@ -303,7 +305,7 @@ Let's examine what the L, the dot and the star mean.
 - . the dot means: any character
 - * the star means: the previous character, repeated any time.
 
-So: "select nodes which have a name starting with L, followed by any character"
+So: "select nodes which have a name starting with L, followed by any character, in any number"
 
 //ST: !
 Please note that you need to check the box "regex":
@@ -365,17 +367,22 @@ image::en/filter-operator-union-3-en.png[align="center",title="The UNION operato
 The NOT operator flips the result of a filter: what was hidden becomes visible and vice and versa.
 
 //ST: !
-Example: if we want to display all characters except for those with a name starting with L or J:
+Example: if we want to display all characters except for those returned by a UNION on 2 Name filters on L and J initials:
 
-image::en/filter-operator-not-1-en.png[align="center",title="The NOT nodes operator"]
+image::en/filter-operator-not-3-en.png[align="center",title="The NOT nodes operator - 1"]
 
 //ST: !
-The same result could have been achieved without using the NOT operator. In regular expressions the ^ sign can be used to mean "NOT":
+Same effect, but applying the NOT operator on single filter using a regex on L or J:
+
+image::en/filter-operator-not-1-en.png[align="center",title="The NOT nodes operator - 2"]
+
+//ST: !
+Same effect again, achieved without using the NOT operator. In regular expressions the ^ sign inside square brackets means "NOT":
 
 [source,regex]
 [^LJ].*
 
-image::en/filter-operator-not-2-en.png[align="center",title="The NOT nodes operator"]
+image::en/filter-operator-not-2-en.png[align="center",title="Achieving a NOT effect with regex"]
 
 //ST: !
 To know more about regular expressions:
