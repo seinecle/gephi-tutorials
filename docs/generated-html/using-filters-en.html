@@ -521,18 +521,24 @@ table.CodeRay td.code>pre{padding:0}
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_download_a_network_file_for_this_tutorial">download a network file for this tutorial</a></li>
+<li><a href="#_download_a_network_file_for_practice">download a network file for practice</a></li>
 <li><a href="#_open_the_network_in_gephi">open the network in Gephi</a></li>
 <li><a href="#_getting_a_sense_of_the_attributes_in_the_data_laboratory">getting a sense of the attributes in the data laboratory</a></li>
 <li><a href="#_discovering_the_filter_panel">discovering the filter panel</a></li>
-<li><a href="#_combining_2_filters">combining 2 filters</a></li>
-<li><a href="#_filter_operators">Filter operators</a>
+<li><a href="#_combining_2_filters">combining 2 filters</a>
 <ul class="sectlevel3">
-<li><a href="#_the_mask_operator">The MASK operator</a></li>
+<li><a href="#_1_case_when_the_placement_of_filters_makes_no_difference">1. Case when the placement of filters makes no difference</a></li>
+<li><a href="#_2_case_when_the_placement_of_filters_makes_a_difference">2. Case when the placement of filters makes a difference</a></li>
 </ul>
 </li>
-<li><a href="#__to_be_continued">(to be continued)</a></li>
-<li><a href="#_more_tutorials_on_using_filters_in_gephi">More tutorials on using filters in Gephi</a></li>
+<li><a href="#_filter_operators">filter operators</a>
+<ul class="sectlevel3">
+<li><a href="#_1_the_mask_operator">1. The MASK operator</a></li>
+<li><a href="#_2_the_union_operator">2. The UNION operator</a></li>
+<li><a href="#_3_the_not_operator">3. The NOT operator</a></li>
+</ul>
+</li>
+<li><a href="#_more_tutorials_on_using_filters_in_gephi">more tutorials on using filters in Gephi</a></li>
 <li><a href="#_the_end">the end</a></li>
 </ul>
 </div>
@@ -541,7 +547,7 @@ table.CodeRay td.code>pre{padding:0}
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>last modified: 2017-02-13</p>
+<p>last modified: 2017-02-14</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -551,16 +557,16 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 </div>
 <div class="sect1">
-<h2 id="_download_a_network_file_for_this_tutorial">download a network file for this tutorial</h2>
+<h2 id="_download_a_network_file_for_practice">download a network file for practice</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><a href="../resources/miserables.zip">download this zip file</a> and unzip it on your computer.</p>
 </div>
 <div class="paragraph">
-<p>You should find the file <code>miserables.gexf</code> in it.</p>
+<p>or use this direct link: <a href="https://tinyurl.com/gephi-tuto-3">https://tinyurl.com/gephi-tuto-3</a></p>
 </div>
 <div class="paragraph">
-<p>Save it in a folder you will remember (or create a folder specially for this small project).</p>
+<p>You should find the file <code>miserables.gexf</code> in it. Save it in a folder you will remember (or create a folder specially for this small project).</p>
 </div>
 <div class="paragraph">
 <p>This file contains a network representing "who appears next to whom" in the 19th century novel <em>Les Misérables</em> by Victor Hugo<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup>.</p>
@@ -617,7 +623,7 @@ table.CodeRay td.code>pre{padding:0}
 <div class="content">
 <img src="images/result_miserables.png" alt="result miserables">
 </div>
-<div class="title">Figure 3. The network we will use in this tutorial</div>
+<div class="title">Figure 3. The network we will use</div>
 </div>
 </div>
 </div>
@@ -629,9 +635,9 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="images/Switching-the-view-to-the-data-laboratory.png" alt="Switching the view to the data laboratory">
+<img src="images/Switching-to-the-data-laboratory.png" alt="Switching to the data laboratory">
 </div>
-<div class="title">Figure 4. Switching the view to the data laboratory</div>
+<div class="title">Figure 4. Switching to the data laboratory</div>
 </div>
 <div class="paragraph">
 <p>We see that the nodes of the network have many attributes. In particular, each have a Gender and a measure of how central they are:</p>
@@ -670,18 +676,18 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="images/Workflow-of-filters..png" alt="Workflow of filters.">
+<img src="images/Workflow-of-filters--size=stretch.png" alt="Workflow of filters  size=stretch">
 </div>
-<div class="title">Figure 8. Workflow of filters.</div>
+<div class="title">Figure 8. Workflow of filters</div>
 </div>
 <div class="paragraph">
-<p>An example: filtering out the edges which have a weight value lower than 2:</p>
+<p>An example: hiding edges with weight lower than 2</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="images/en/filter-edge-weight-en.gif" alt="filter edge weight en">
 </div>
-<div class="title">Figure 9. Animated GIF. Filtering out edges with weight lower than 2.</div>
+<div class="title">Figure 9. How to use filters.</div>
 </div>
 <div class="paragraph">
 <p>When you are finished using a filter in the zone, right click on it and select "remove".</p>
@@ -700,32 +706,31 @@ table.CodeRay td.code>pre{padding:0}
 <div class="paragraph">
 <p>Which filter should be placed inside which? Let&#8217;s look at different examples:</p>
 </div>
+<div class="sect3">
+<h4 id="_1_case_when_the_placement_of_filters_makes_no_difference">1. Case when the placement of filters makes no difference</h4>
 <div class="paragraph">
-<p>1st Example:</p>
-</div>
-<div class="paragraph">
-<p>Keeping on screen only the female characters which have a tie (an edge, a relaion) of at least strength 2:</p>
+<p>Goal: Keeping on screen only the female characters which have a tie (an edge, a relation) of at least strength 2.</p>
 </div>
 <div class="paragraph">
 <p>&#8594; place the filter "edge weight" inside the filter "Gender":</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="images/Where-to-find-the-filter-on-the-Gender-attribute.png" alt="Where to find the filter on the Gender attribute">
+<img src="images/Filter-on-the-Gender-attribute.png" alt="Filter on the Gender attribute">
 </div>
-<div class="title">Figure 10. Where to find the filter on the Gender attribute</div>
+<div class="title">Figure 10. Filter on the Gender attribute</div>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="images/Where-to-find-the-filter-on-edge-weight.png" alt="Where to find the filter on edge weight">
+<img src="images/Filter-on-edge-weight.png" alt="Filter on edge weight">
 </div>
-<div class="title">Figure 11. Where to find the filter on edge weight</div>
+<div class="title">Figure 11. Filter on edge weight</div>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="images/en/filter-edge-weight-gender-partition-en.gif" alt="filter edge weight gender partition en">
 </div>
-<div class="title">Figure 12. Animated GIF. Filtering out edges with weight lower than 2.</div>
+<div class="title">Figure 12. Keeping only female characters with at least 2 ties</div>
 </div>
 <div class="paragraph">
 <p>In this case, it was equivalent to:</p>
@@ -737,13 +742,16 @@ table.CodeRay td.code>pre{padding:0}
 or</p>
 </li>
 <li>
-<p>nest the "Edge weight" filter inside the "Gender Filter"</p>
+<p>nest the "Edge weight" filter inside the "Gender" Filter</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>&#8594; The result was the same. Now we will see a case where the placement of filters matter.</p>
+<p>&#8594; The result was the same (the network on screen is identical in both cases)</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_2_case_when_the_placement_of_filters_makes_a_difference">2. Case when the placement of filters makes a difference</h4>
 <div class="paragraph">
 <p>Here, we want to visualize:</p>
 </div>
@@ -773,13 +781,13 @@ or</p>
 <div class="content">
 <img src="images/en/filter-degree-range-1-en.png" alt="filter degree range 1 en">
 </div>
-<div class="title">Figure 13. Where to find the filter on degree</div>
+<div class="title">Figure 13. Filter on degree</div>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="images/en/filter-giant-component-1-en.png" alt="filter giant component 1 en">
 </div>
-<div class="title">Figure 14. Where to find the filter on giant component</div>
+<div class="title">Figure 14. Filter on giant component</div>
 </div>
 <div class="paragraph">
 <p>We will see that the placement on the filters in the zone will make a difference.</p>
@@ -862,18 +870,19 @@ In summary: be careful how you apply several filters at once, this might have an
 </div>
 </div>
 </div>
+</div>
 <div class="sect1">
-<h2 id="_filter_operators">Filter operators</h2>
+<h2 id="_filter_operators">filter operators</h2>
 <div class="sectionbody">
 <div class="sect3">
-<h4 id="_the_mask_operator">The MASK operator</h4>
+<h4 id="_1_the_mask_operator">1. The MASK operator</h4>
 <div class="paragraph">
 <p>Imagine you are interested in the female characters of the novel "Les Miserables".</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>you are interested in these characters and the relations among them</p>
+<p>you are interested in female characters and the relations among them</p>
 </li>
 <li>
 <p>you are interested in the relations between female characters and male characters</p>
@@ -881,20 +890,31 @@ In summary: be careful how you apply several filters at once, this might have an
 <li>
 <p>you are <strong>not</strong> interested in the relations between male characters</p>
 </li>
-<li>
-<p>How to make appear only female characters, their relations (to female and male characters) and only those?</p>
-</li>
 </ul>
 </div>
 <div class="paragraph">
-<p>The MASK operator enables you to:
-- apply a filter as you would usually do,
-- and then, to make visible again <strong>only the relations that have a connection with the visible nodes</strong></p>
+<p>How to display this?</p>
 </div>
 <div class="paragraph">
-<p>So this shows female characters, relations between them, and their relations to male characters. Male-male relations are not visible:</p>
+<p>The MASK operator applied on the gender partition filter enables you to:</p>
 </div>
-<div class="imageblock">
+<div class="ulist">
+<ul>
+<li>
+<p>show all characters</p>
+</li>
+<li>
+<p>relations between female characters</p>
+</li>
+<li>
+<p><em>and relations between male and female characters</em></p>
+</li>
+<li>
+<p><em>but masking male-male relations</em></p>
+</li>
+</ul>
+</div>
+<div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="images/en/operator-mask-1-en.png" alt="operator mask 1 en">
 </div>
@@ -903,23 +923,235 @@ In summary: be careful how you apply several filters at once, this might have an
 <div class="paragraph">
 <p>It is also possible to hide / show only some of the directed relations between the visible graph and the filtered out graph:</p>
 </div>
-<div class="imageblock">
+<div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="images/en/operator-mask-2-en.png" alt="operator mask 2 en">
 </div>
 <div class="title">Figure 18. Parameters of the MASK operator</div>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_2_the_union_operator">2. The UNION operator</h4>
+<div class="paragraph">
+<p>Imagine you are interested in the characters with names starting with "L" or "J" in "Les Miserables".</p>
+</div>
+<div class="paragraph">
+<p>How to display only these characters?</p>
+</div>
+<div class="paragraph">
+<p>We will need to apply filters on the <code>Label</code> of the nodes, which contains the names of the characters.</p>
+</div>
+<div class="paragraph">
+<p>However, looking at the "catalogue" of filters, we see no filter on <code>Label</code>. The reason is that <code>Label</code> is an internal property of nodes, inaccessible to filters.</p>
+</div>
+<div class="paragraph">
+<p>So we must first copy the Labels of the nodes in a new attribute, which we will be able to  apply a filter on.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s switch to the data laboratory and add this attribute:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Adding-a-column-for-Names.png" alt="Adding a column for Names">
+</div>
+<div class="title">Figure 19. Adding a column for Names</div>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Copying-to-this-new-column.png" alt="Copying to this new column">
+</div>
+<div class="title">Figure 20. Copying to this new column</div>
+</div>
+<div class="paragraph">
+<p>We now have an attribute called "Name" that we can find in the Filters:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/New-filter-available.png" alt="New filter available">
+</div>
+<div class="title">Figure 21. New filter available</div>
+</div>
+<div class="paragraph">
+<p>This is how the filter on Name and its parameters look like in the zone:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/en/filter-name-1-en.png" alt="filter name 1 en">
+</div>
+<div class="title">Figure 22. Name Filter</div>
+</div>
+<div class="paragraph">
+<p>To recall, we want to show only the characters which name start with "L" or "J". Let&#8217;s start with the "L" characters.</p>
+</div>
+<div class="paragraph">
+<p>We need to find the names which match the pattern <strong><code>Start with an L</code></strong>. The way to describe a pattern in text is called a "regular expression".</p>
+</div>
+<div class="paragraph">
+<p>Said differently, <em>a regular expressions (also called "regex") is a convenient way to express a pattern we search for in a text</em>.</p>
+</div>
+<div class="paragraph">
+<p>Regular expressions can become very sophisticated. But here, we need just a simple one:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="regex">L.*</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s examine what the L, the dot and the star mean.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the letter "L" means we want names starting with this first letter</p>
+</li>
+<li>
+<p>. the dot means: any character</p>
+</li>
+<li>
+<p>* the star means: the previous character, repeated any time.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>So: "select nodes which have a name starting with L, followed by any character, in any number"</p>
+</div>
+<div class="paragraph">
+<p>Please note that you need to check the box "regex":</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/en/filter-name-2-en.png" alt="filter name 2 en">
+</div>
+<div class="title">Figure 23. Using a regular expression in a filter</div>
+</div>
+<div class="paragraph">
+<p>When the filter is applied, only the characters wit a name starting with L will be displayed:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/en/filter-name-3-en.png" alt="filter name 3 en">
+</div>
+<div class="title">Figure 24. Using a regular expression in a filter</div>
+</div>
+<div class="paragraph">
+<p>How to filter characters with a name starting with the letter "L" or "J"?</p>
+</div>
+<div class="paragraph">
+<p>We could rely on a more complex regular expression to do this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="regex">[LJ].*</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Meaning: "select nodes which have a name starting with L or J, followed by any characters"</p>
+</div>
+<div class="paragraph">
+<p>But we can also rely on 2 filters: one for L, one for J. Nesting one inside another would not work, it would mean:</p>
+</div>
+<div class="paragraph">
+<p>"show nodes which start with an L, and among them, only those which start with a J"</p>
+</div>
+<div class="paragraph">
+<p>&#8594; no node can meet this condition, so they would all be invisible.</p>
+</div>
+<div class="paragraph">
+<p>Instead, we should use the <strong><code>UNION</code></strong> operator that can be found here:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/en/filter-operator-union-1-en.png" alt="filter operator union 1 en">
+</div>
+<div class="title">Figure 25. The UNION operator in filters</div>
+</div>
+<div class="paragraph">
+<p>Drag it to the zone, and then drag inside it twice the <code>Attributes &#8594; Equal &#8594; Name</code> filter:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/en/filter-operator-union-2-en.png" alt="filter operator union 2 en">
+</div>
+<div class="title">Figure 26. The UNION operator and 2 subfilters</div>
+</div>
+<div class="paragraph">
+<p>In the settings of the first Name filter, put the regular expression:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="regex">L.*</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the second Name filter, put:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="regex">J.*</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>(make sure the "regex" box is checked in both cases)</p>
+</div>
+<div class="paragraph">
+<p>As a result, the nodes  selected by both filters are added up in the display:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/en/filter-operator-union-3-en.png" alt="filter operator union 3 en">
+</div>
+<div class="title">Figure 27. The UNION operator and 2 subfilters</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_the_not_operator">3. The NOT operator</h4>
+<div class="paragraph">
+<p>The NOT operator flips the result of a filter: what was hidden becomes visible and vice and versa.</p>
+</div>
+<div class="paragraph">
+<p>Example: if we want to display all characters except for those returned by a UNION on 2 Name filters on L and J initials:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/en/filter-operator-not-3-en.png" alt="filter operator not 3 en">
+</div>
+<div class="title">Figure 28. The NOT nodes operator - 1</div>
+</div>
+<div class="paragraph">
+<p>Same effect, but applying the NOT operator on single filter using a regex on L or J:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/en/filter-operator-not-1-en.png" alt="filter operator not 1 en">
+</div>
+<div class="title">Figure 29. The NOT nodes operator - 2</div>
+</div>
+<div class="paragraph">
+<p>Same effect again, achieved without using the NOT operator. In regular expressions the ^ sign inside square brackets means "NOT":</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="regex">[^LJ].*</code></pre>
+</div>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/en/filter-operator-not-2-en.png" alt="filter operator not 2 en">
+</div>
+<div class="title">Figure 30. Achieving a NOT effect with regex</div>
+</div>
+<div class="paragraph">
+<p>To know more about regular expressions:</p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.regular-expressions.info/quickstart.html">http://www.regular-expressions.info/quickstart.html</a></p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="__to_be_continued">(to be continued)</h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
-<h2 id="_more_tutorials_on_using_filters_in_gephi">More tutorials on using filters in Gephi</h2>
+<h2 id="_more_tutorials_on_using_filters_in_gephi">more tutorials on using filters in Gephi</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -951,7 +1183,7 @@ In summary: be careful how you apply several filters at once, this might have an
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2017-02-13 17:41:22 CET
+Last updated 2017-02-14 16:38:56 CET
 </div>
 </div>
 </body>
