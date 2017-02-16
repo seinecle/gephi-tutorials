@@ -8,6 +8,7 @@ last modified: {docdate}
 :iconsfont:   font-awesome
 :revnumber: 1.0
 :example-caption!:
+:sourcedir: ../../../main/java
 :github-root: https://github.com/seinecle/gephi-tutorials/blob/master/src/main/asciidoc/
 
 :title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
@@ -15,7 +16,7 @@ last modified: {docdate}
 image::gephi-logo-2010-transparent.png[width="450" align="center"]
 {nbsp} +
 
-//ST: 'Escape' to see all sides, F11 for full screen
+//ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
 == download a network file for practice
 //ST: download a network file for practice

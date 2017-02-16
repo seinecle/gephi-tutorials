@@ -15,7 +15,8 @@ last modified: {docdate}
 image::gephi-logo-2010-transparent.png[width="450" align="center"]
 
 
-==  'Escape' to see all sides, F11 for full screen
+==  'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
+
 
 
 
@@ -271,6 +272,7 @@ Don't forget to click on "Run" to apply these layouts.
 ==== 3. Changing the size of the labels
 Open the bottom panel of Gephi by clicking on tiny arrow head (1). Then select "nodes" (2), then move the slider (3).
 
+==  !
 [.stretch]
 image::Adjusting-label-size.png[align="center",title="Adjusting label size"]
 

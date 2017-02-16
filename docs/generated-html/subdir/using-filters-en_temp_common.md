@@ -16,7 +16,7 @@ last modified: {docdate}
 image::gephi-logo-2010-transparent.png[width="450" align="center"]
 {nbsp} +
 
-//ST: 'Escape' to see all sides, F11 for full screen
+//ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
 == download a network file for practice
 //ST: download a network file for practice
