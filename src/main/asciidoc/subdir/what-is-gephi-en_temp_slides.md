@@ -13,7 +13,7 @@ last modified: {docdate}
 image::gephi-logo-2010-transparent.png[width="450" align="center"]
 
 
-==  'Escape' to see all sides, F11 for full screen
+==  'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
 
 ==  the leading desktop software to visualize and explore networks
