@@ -39,14 +39,15 @@ subjects related to information representation for automatic system.
 
 It can be considered as the « Grand Father » of graph representation.
 
-The idea is very simple, all information can be represented by a triplet :
+The idea is very simple, all information can be represented as a triplet :
 
 > `(subject, predicate, object)`
 
 To query such data set, a query language has been developed : https://en.wikipedia.org/wiki/SPARQL[SPARQL]
+
 The SPARQL format is close to SQL format and try to be as close as possible as natural language.
 
-DBpedia is the RDF version of Wikipedia. It’s an open datastore that tries to gather and offers in RDF format,
+http://dbpedia.org[DBpedia] is the RDF version of Wikipedia. It’s an open datastore that tries to gather and offers in RDF format,
 all information that you can find in wikipedia or other knowledge service.
 
 It very interesting because it preformat concepts and makes it available for automatic processes or complex query across concepts.
@@ -74,11 +75,16 @@ First, we need to install Semantic web import. You can find and install this plu
 
 When installed, go to the Semantic Web Import tab.
 
-In Drivers tab, put *http://dbpedia.org/sparql*.
+In the *Driver* tab, choose *Remote - REST endpoint* and put *http://dbpedia.org/sparql* and *EndPoint URL*.
+
+[IMPORTANT]
+====
+Press *Enter* after typing the URL endpoint so the url is getting validated and used.
+====
 
 image::en/semantic-web-importer/setup_1.png[Setup endpoint]
 
-Go to Query tab, remove the dummy query and put this one:
+Go to *Query* tab, remove the dummy query and put this one:
 ```
 CONSTRUCT{
   ?person <http://gephi.org/type> "person".
