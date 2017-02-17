@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://www.gexf.net/1.3" version="1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd">
+  <meta lastmodifieddate="2017-02-16">
+    <creator>Gephi 0.9</creator>
+    <description></description>
+  </meta>
+  <graph mode="slice" defaultedgetype="directed" timerepresentation="timestamp" timestamp="2">
+    <nodes>
+      <node id="0">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-104.447624" y="123.60604"></viz:position>
+        <viz:color r="153" g="153" b="153"></viz:color>
+      </node>
+      <node id="1">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-27.051184" y="62.74228"></viz:position>
+        <viz:color r="153" g="153" b="153"></viz:color>
+      </node>
+      <node id="2">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="140.51587" y="104.82093"></viz:position>
+        <viz:color r="153" g="153" b="153"></viz:color>
+      </node>
+      <node id="3">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-20.288387" y="-185.22122"></viz:position>
+        <viz:color r="153" g="153" b="153"></viz:color>
+      </node>
+      <node id="4">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-111.961845" y="-19.160816"></viz:position>
+        <viz:color r="153" g="153" b="153"></viz:color>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="0" target="1"></edge>
+    </edges>
+  </graph>
+</gexf>
