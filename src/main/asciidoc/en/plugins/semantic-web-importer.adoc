@@ -20,14 +20,16 @@ image::gephi-logo-2010-transparent.png[width="450" align="center"]
 
 //ST: Author and documentation
 https://marketplace.gephi.org/plugin/semanticwebimport/
+
 Plugin Author: Erwan Demairy
 
-Plugin sources: git://scm.gforge.inria.fr/segviz-public/gephi-plugins.g (...)
+Plugin sources: git://scm.gforge.inria.fr/segviz-public/gephi-plugins.git
+
 Licensed under: Cecill-C
 
+The Sematic web importer plugin allows you to query a SPARQL endpoint and represent the result as a graph in Gephi.
+
 //ST: Introduction
-
-
 = Introduction to concepts
 
 RDF stands for https://en.wikipedia.org/wiki/Resource_Description_Framework[Resource Description Framework] .
@@ -62,8 +64,8 @@ where
 }
 
 ```
-
-= The plugin
+//ST: Quickstart
+= Quickstart
 
 The result of a SPARQL can be a table as we could do it with SQL, but you can also build a graph based on your query.
 The Semantic Web Plugin use this feature to draw the result of your query into Gephi.
@@ -72,7 +74,9 @@ First, we need to install Semantic web import. You can find and install this plu
 
 When installed, go to the Semantic Web Import tab.
 
-In Drivers tab, put http://dbpedia.org/sparql *(and press ENTER)*.
+In Drivers tab, put *http://dbpedia.org/sparql*.
+
+image::en/semantic-web-importer/setup_1.png[Setup endpoint]
 
 Go to Query tab, remove the dummy query and put this one:
 ```
@@ -89,8 +93,16 @@ WHERE
  ?person a <http://dbpedia.org/ontology/Person>.
 }
 ```
+Finally, click on *Run*
+
+image::en/semantic-web-importer/setup_2.png[SPARQL Query]
+
 Go back to the Graph preview and you should see a graph. Use the layout tab to have a more intuitive rendering.
 
+image::en/semantic-web-importer/result_1.png[]
+
+//ST: Details
+= Details
 == CONSTRUCT block
 
 The `CONSTRUCT` block define the new graph to build from the query. That's the description of your data the plugin will interpet
@@ -105,19 +117,23 @@ What is the syntax for this `CONSTRUCT` block :
 == WHERE block
 The `WHERE` block define the data to match based on the query typed in :
 
-* `?movie a <http://dbpedia.org/ontology/Film>.` : Get all subject which is a <http://dbpedia.org/ontology/Film>. The ‘a’ is actually a SPARQL special word for <rdf:type>. So it’s exactly equal to ?movie <rdf:type> <http://dbpedia.org/ontology/Film>
-* `?movie ?rel1 <http://dbpedia.org/resource/Leonardo_DiCaprio>.` : Match all subjects  which has any predicate where the object is <http://dbpedia.org/resource/Leonardo_DiCaprio>
+* `?movie a <http://dbpedia.org/ontology/Film>.` : Get all subject which is a `<http://dbpedia.org/ontology/Film>`. The `a` is actually a SPARQL special word for `<rdf:type>`. So it’s exactly equal to `?movie <rdf:type> <http://dbpedia.org/ontology/Film>`
+* `?movie ?rel1 <http://dbpedia.org/resource/Leonardo_DiCaprio>.` : Match all subjects  which has any predicate where the object is `<http://dbpedia.org/resource/Leonardo_DiCaprio>`
 * `?movie ?rel2 ?person.` : Match any triplet
-* `?person a <http://dbpedia.org/ontology/Person>.` : Match the subject ?person if it's a  <http://dbpedia.org/ontology/Person>.
+* `?person a <http://dbpedia.org/ontology/Person>.` : Match the subject `?person` if it's a  `<http://dbpedia.org/ontology/Person>`.
 
-In other words, match the variable ?movie to any entity that is a Film and that has at least 1 triplet where Leonardo is an object. Match also all ?person that is a Person.
+In other words, match the variable `?movie` to any entity that is a `Film` and that has at least 1 triplet where `Leonardo` is an object. Match also all `?person` that is a `Person`.
 
 
 
-The result in our case is actually a bi-modal graph with Movies and Persons shared with Leonardo Dicaprio. I advise you to read the Multimodal graph plugin tutorial if you want advanced analysis of this kind of network.
+The result in our case is actually a bi-modal graph with Movies and Persons shared with Leonardo Dicaprio.
 
+//ST Tips to go further
+= Tips to go further
 What is interesting with this method is the way to query the data, and the fact that it’s easily extendable to other subjects just by changing few things in the query. We can think about Music Band and Player relationship, the traditionnal Persons to Companies, or more original, all the common places where your favorites movies where shot, etc.. The limit is your imagination to graph.
 
 On our example, you can run multiple time the same query and changing which person you want to « expand », it will automatically create the global network of all your research and maybe give you some insight which new movies to watch tonight 😉
 
 But keep in mind that you are heavily dependent on Dbpedia data quality (or other RDF entrypoint), which can alterate a lot you research.
+
+If you want more refined queries, you will have to learn SPARQL and RDF in more details. There is a lot of tutorial around the web that will help you to master SPARQL.
