@@ -34,7 +34,9 @@ link:../../resources/miserables-with-dates.zip[download this zip file] and unzip
 
 or use this direct link: https://tinyurl.com/gephi-tuto-4[https://tinyurl.com/gephi-tuto-4]
 
-You should find the file `miserables-with-dates.gexf` in it. Save it in a folder you will remember (or create a folder specially for this small project).
+==  !
+
+You should find the file `miserables-with-dates.gexf` in the zip file. Save it in a folder you will remember (or create a folder specially for this small project).
 
 ==  description of the file / the network
 ==  !
@@ -51,6 +53,8 @@ This file has been modified to add some dates to each character in the novel:
 - a "start date", which is a day (example: 22/09/1835). This is the date when the character *enters* the action in the novel
 - an "end date", also a day (example: 22/09/1840). This is the date when the character *leaves* the action in the novel
 - a "peak moment". This is a number (example: 14263). This is an instant when the character is at the center of the plot. This number has no historical meaning, this is just a chronological moment in time.
+
+==  !
 
 NOTE:: Values for start date, end date and peak moment have no real significance in the novel. They are made up for this exercise.
 
@@ -117,8 +121,8 @@ Do we prefer to have...
 
 We will present these 3 possibilities.
 
+==  !
 ==== 1. dynamic nodes with a start date
-==  dynamic nodes with a start date
 
 ==  !
 

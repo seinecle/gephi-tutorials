@@ -93,14 +93,15 @@ table.CodeRay td.code>pre{padding:0}
 <section><div class="ulist"><ul><li><p>We take a normal network, where nodes have attributes which can serve as time indication (a date, a number&#8230;&#8203;)</p></li><li><p>We convert this network into a dynamic network: nodes will appear and disappear according to their attributes.</p></li></ul></div></section>
 <section id="_download_a_network_file_for_practice"><h2>download a network file for practice</h2></section>
 <section><div class="paragraph"><p><a href="../../resources/miserables-with-dates.zip">download this zip file</a> and unzip it on your computer.</p></div>
-<div class="paragraph"><p>or use this direct link: <a href="https://tinyurl.com/gephi-tuto-4">https://tinyurl.com/gephi-tuto-4</a></p></div>
-<div class="paragraph"><p>You should find the file <code>miserables-with-dates.gexf</code> in it. Save it in a folder you will remember (or create a folder specially for this small project).</p></div></section>
+<div class="paragraph"><p>or use this direct link: <a href="https://tinyurl.com/gephi-tuto-4">https://tinyurl.com/gephi-tuto-4</a></p></div></section>
+<section><div class="paragraph"><p>You should find the file <code>miserables-with-dates.gexf</code> in the zip file. Save it in a folder you will remember (or create a folder specially for this small project).</p></div></section>
 <section id="_description_of_the_file_the_network"><h2>description of the file / the network</h2></section>
 <section><div class="paragraph"><p>This file contains a network representing "who appears next to whom" in the 19th century novel <em>Les Misérables</em> by Victor Hugo<span class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</span>.</p></div>
 <div class="paragraph"><p>A link between characters A and B means they appeared on the same page or paragraph in the novel.</p></div>
 <div class="paragraph"><p>The file name ends with ".gexf", which just means this is a text file where the network information is stored (name of the characters, their relations, etc.), following some conventions.</p></div></section>
 <section><div class="paragraph"><p>This file has been modified to add some dates to each character in the novel:</p></div>
-<div class="ulist"><ul><li><p>a "start date", which is a day (example: 22/09/1835). This is the date when the character <strong>enters</strong> the action in the novel</p></li><li><p>an "end date", also a day (example: 22/09/1840). This is the date when the character <strong>leaves</strong> the action in the novel</p></li><li><p>a "peak moment". This is a number (example: 14263). This is an instant when the character is at the center of the plot. This number has no historical meaning, this is just a chronological moment in time.</p><div class="dlist"><dl><dt class="hdlist1">NOTE</dt><dd><p>Values for start date, end date and peak moment have no real significance in the novel. They are made up for this exercise.</p></dd></dl></div></li></ul></div></section>
+<div class="ulist"><ul><li><p>a "start date", which is a day (example: 22/09/1835). This is the date when the character <strong>enters</strong> the action in the novel</p></li><li><p>an "end date", also a day (example: 22/09/1840). This is the date when the character <strong>leaves</strong> the action in the novel</p></li><li><p>a "peak moment". This is a number (example: 14263). This is an instant when the character is at the center of the plot. This number has no historical meaning, this is just a chronological moment in time.</p></li></ul></div></section>
+<section><div class="dlist"><dl><dt class="hdlist1">NOTE</dt><dd><p>Values for start date, end date and peak moment have no real significance in the novel. They are made up for this exercise.</p></dd></dl></div></section>
 <section id="_open_the_network_in_gephi"><h2>open the network in Gephi</h2></section>
 <section><div class="ulist"><ul><li><p>open Gephi. On the Welcome screen that appears,  click on <code>Open Graph File</code></p></li><li><p>find <code>miserables-with-dates.gexf</code> on your computer and open it</p></li></ul></div>
 <div class="imageblock stretch" style="text-align: center"><img src="images/en/gephi-welcome-screen-open-graph-en.png" alt="gephi welcome screen open graph en" height="100%" /></div><div class="title">Figure 1. welcome screen</div></section>
@@ -119,9 +120,8 @@ table.CodeRay td.code>pre{padding:0}
 <div class="paragraph"><p>A couple of steps are needed to enable the dynamic features, and here a choice must be made:</p></div></section>
 <section><div class="paragraph"><p>Do we prefer to have&#8230;&#8203;</p></div>
 <div class="olist arabic"><ol class="arabic"><li><p>&#8230;&#8203; nodes appearing on screen at their start date, and staying on screen for ever after?</p></li><li><p>&#8230;&#8203; nodes appearing on screen at their start date, and leaving the screen at their end date?</p></li><li><p>&#8230;&#8203; nodes being representedsimply by their "peak moment" (a number), without reference to chronological dates?</p></li></ol></div>
-<div class="paragraph"><p>We will present these 3 possibilities.</p></div>
-<h3>1. dynamic nodes with a start date</h3></section>
-<section id="_dynamic_nodes_with_a_start_date"><h2>dynamic nodes with a start date</h2></section>
+<div class="paragraph"><p>We will present these 3 possibilities.</p></div></section>
+<section><h3>1. dynamic nodes with a start date</h3></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="images/Merge-columns.png" alt="Merge columns" height="100%" /></div><div class="title">Figure 6. Merge columns</div></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="images/Set-up-the-parameters---1.png" alt="Set up the parameters   1" height="100%" /></div><div class="title">Figure 7. Set up the parameters - 1</div></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="images/Result.png" alt="Result" height="100%" /></div><div class="title">Figure 8. Result</div></section>

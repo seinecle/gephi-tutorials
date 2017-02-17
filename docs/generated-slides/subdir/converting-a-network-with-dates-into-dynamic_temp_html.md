@@ -142,12 +142,12 @@ IMPORTANT:: We are going to use the timeline to play the animation. The timeline
 
 //ST: !
 
-
+image::moving-timeline-miserables-1-en.gif[align="center",title="Animating the dynamic network"]
 {nbsp} +
 
-image::moving-timeline-miserables-2-en.png[align="center",title="Animating the dynamic network"]
+//PDF: image::moving-timeline-miserables-2-en.png[align="center",title="Animating the dynamic network"]
 
-{github-root}images/moving-timeline-miserables-1-en.gif[view online animation] - link: https://tinyurl.com/gephi-tuto-5
+//PDF: {github-root}images/moving-timeline-miserables-1-en.gif[view online animation] - link: https://tinyurl.com/gephi-tuto-5
 
 
 == to be continued
