@@ -8,7 +8,7 @@
     <version>1.0</version>
     <packaging>jar</packaging>
     <properties>
-        <doc>en/dynamic/creating-a-simple-dynamic-network.adoc</doc>
+        <doc>en/dynamic/converting-a-network-with-dates-into-dynamic.adoc</doc>
         <medium.publish>false</medium.publish>
     </properties>
     <parent>

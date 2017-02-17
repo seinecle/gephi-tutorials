@@ -136,9 +136,13 @@ IMPORTANT:: We are going to use the timeline to play the animation. The timeline
 
 image::moving-timeline-miserables-1-en.gif[align="center",title="Animating the dynamic network"]
 
-//PDF: image::moving-timeline-miserables-2-en[align="center",title="Animating the dynamic network"]
+//PDF: image::moving-timeline-miserables-2-en.png[align="center",title="Animating the dynamic network"]
 
-//PDF: {github-root}images/moving-timeline-miserables-1-en.gif[view online animation] - link: https://tinyurl.com/gephi-tuto-1
+//PDF: {github-root}images/moving-timeline-miserables-1-en.gif[view online animation] - link: https://tinyurl.com/gephi-tuto-5
+
+
+== to be continued
+//ST: to be continued
 
 
 == more tutorials on dynamic networks with Gephi
