@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
 <meta name="author" content="Clément Levallois">
-<title>Creating a simple dynamic network</title>
+<title>Converting a network with dates into a dynamic network</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -512,22 +512,24 @@ table.CodeRay td.code>pre{padding:0}
 </head>
 <body class="article">
 <div id="header">
-<h1>Creating a simple dynamic network</h1>
+<h1>Converting a network with dates into a dynamic network</h1>
 <div class="details">
 <span id="author" class="author">Clément Levallois</span><br>
 <span id="email" class="email"><a href="mailto:clementlevallois@gmail.com">clementlevallois@gmail.com</a></span><br>
-<span id="revdate">2017-02-16</span>
+<span id="revdate">2017-02-17</span>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_goals_of_this_tutorial">Goals of this tutorial</a></li>
-<li><a href="#_open_a_new_project_in_gephi">open a new project in Gephi</a></li>
-<li><a href="#_creating_network_a">creating network "A"</a></li>
-<li><a href="#_creating_network_b">creating network "B"</a></li>
-<li><a href="#_modifying_just_one_line_in_the_files_network_a_gexf_and_network_b_gexf">modifying just one line in the files network A.gexf and network B.gexf</a></li>
-<li><a href="#_merging_network_a_and_b_into_a_dynamic_network">merging network "A" and "B" into a dynamic network</a></li>
-<li><a href="#_enabling_the_timeline">enabling the timeline</a></li>
+<li><a href="#_download_a_network_file_for_practice">download a network file for practice</a></li>
+<li><a href="#_open_the_network_in_gephi">open the network in Gephi</a></li>
+<li><a href="#_getting_a_sense_of_the_attributes_in_the_data_laboratory">getting a sense of the attributes in the data laboratory</a>
+<ul class="sectlevel3">
+<li><a href="#_1_dynamic_nodes_with_a_start_date">1. dynamic nodes with a start date</a></li>
+</ul>
+</li>
+<li><a href="#_to_be_continued">to be continued</a></li>
 <li><a href="#_more_tutorials_on_dynamic_networks_with_gephi">more tutorials on dynamic networks with Gephi</a></li>
 <li><a href="#_the_end">the end</a></li>
 </ul>
@@ -555,257 +557,113 @@ table.CodeRay td.code>pre{padding:0}
 <div class="ulist">
 <ul>
 <li>
-<p>We are going to create one very simple <strong>non dynamic</strong> network (network "A").</p>
+<p>We take a normal network, where nodes have attributes which can serve as time indication (a date, a number&#8230;&#8203;)</p>
 </li>
 <li>
-<p>then we will create a modified version of it (network "B").</p>
-</li>
-<li>
-<p>in both files, we need to modify a single line.</p>
-</li>
-<li>
-<p>finally, we will merge networks A and B, forming a new <strong>dynamic</strong> network evolving from version A to B.</p>
+<p>We convert this network into a dynamic network: nodes will appear and disappear according to their attributes.</p>
 </li>
 </ul>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The creation of the 2 networks is not a mandatory step: you can use your own network files, as long as they are in gexf file format. In this case, <a href="#merging">skip to here</a>.</p>
-</div>
-<div class="paragraph">
-<p>We create the networks in this tutorial to provide the most simple and clear case.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_open_a_new_project_in_gephi">open a new project in Gephi</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>open Gephi. On the Welcome screen that appears,  click on <code>New Project</code></p>
-</li>
-</ul>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/Open-a-new-project.png" alt="Open a new project">
-</div>
-<div class="title">Figure 1. Open a new project</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_creating_network_a">creating network "A"</h2>
+<h2 id="_download_a_network_file_for_practice">download a network file for practice</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Our project is empty.
-We can use a simple click-and-point tool to create a network:</p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/Icon-for-node-creation.png" alt="Icon for node creation">
-</div>
-<div class="title">Figure 2. Icon for node creation</div>
+<p><a href="../../resources/miserables-with-dates.zip">download this zip file</a> and unzip it on your computer.</p>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/A-few-nodes-have-been-created.png" alt="A few nodes have been created">
-</div>
-<div class="title">Figure 3. A few nodes have been created</div>
+<p>or use this direct link: <a href="https://tinyurl.com/gephi-tuto-4">https://tinyurl.com/gephi-tuto-4</a></p>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>You should find the file <code>miserables-with-dates.gexf</code> in it. Save it in a folder you will remember (or create a folder specially for this small project).</p>
 </div>
 <div class="paragraph">
-<p>When you have created a couple of nodes, click again on the pencil icon to stop the node creation.</p>
+<p>This file contains a network representing "who appears next to whom" in the 19th century novel <em>Les Misérables</em> by Victor Hugo<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup>.</p>
 </div>
 <div class="paragraph">
-<p>Export the network as a file and call it "network A":</p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/Exporting-the-network.png" alt="Exporting the network">
-</div>
-<div class="title">Figure 4. Exporting the network</div>
+<p>A link between characters A and B means they appeared on the same page or paragraph in the novel.</p>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/Choosing-the-gexf-file-format.png" alt="Choosing the gexf file format">
-</div>
-<div class="title">Figure 5. Choosing the gexf file format</div>
+<p>The file name ends with ".gexf", which just means this is a text file where the network information is stored (name of the characters, their relations, etc.), following some conventions.</p>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div class="paragraph">
-<p>Clicking on "Save" saves the file in the folder you chose. You are back to the view on your graph.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_creating_network_b">creating network "B"</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Now, click on the "Edge pencil", just below the "Node pencil we have used (careful, the icons are identical!)</p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/Choosing-the-gexf-file-format.png" alt="Choosing the gexf file format">
-</div>
-<div class="title">Figure 6. Choosing the gexf file format</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div class="paragraph">
-<p>Create one edge, or a couple of edges, in this way.</p>
-</div>
-<div class="paragraph">
-<p>Clicking again on the pencil stops the edge creation by mouse clicks.</p>
-</div>
-<div class="paragraph">
-<p>Then export the network <strong>in the same folder</strong> where we put the previous file (<code>File &#8594; Export &#8594; Graph File &#8230;&#8203;</code>)</p>
-</div>
-<div class="paragraph">
-<p><strong>This time, name the file 'network B.gexf' and remember to choose the <code>gexf</code> file format just like we did before.</strong></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_modifying_just_one_line_in_the_files_network_a_gexf_and_network_b_gexf">modifying just one line in the files network A.gexf and network B.gexf</h2>
-<div class="sectionbody">
-<div id="merging" class="paragraph">
-<p>From your computer, open network A.gexf with a text editor (don&#8217;t use Microsoft Word!):</p>
-</div>
-<div class="paragraph">
-<p>(here is how to do it on a <a href="http://www.dummies.com/computers/macs/how-to-open-and-edit-a-text-file-on-a-mac/">Mac</a>, and on <a href="https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/app_notepad.mspx?mfr=true">Windows</a>).</p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/The-network-file-opened.png" alt="The network file opened">
-</div>
-<div class="title">Figure 7. The network file opened</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div class="paragraph">
-<p>Delete and replace this line by this one:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;graph</span> <span class="attribute-name">mode</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">slice</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">defaultedgetype</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">directed</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">timerepresentation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">timestamp</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">timestamp</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>See <code>timestamp="1"</code> ? It means this will be the first "time slice" of your dynamic network.</p>
-</div>
-<div class="paragraph">
-<p>Save the file.</p>
-</div>
-<div class="paragraph">
-<p>Repeat the steps for network B.gexf:</p>
+<p>This file has been modified to add some dates to each character in the novel:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>open the file in a text editor,</p>
+<p>a "start date", which is a day (example: 22/09/1835). This is the date when the character <strong>enters</strong> the action in the novel</p>
 </li>
 <li>
-<p>find the  line <code>&lt;graph defaultedgetype="directed" mode="static"&gt;</code></p>
+<p>an "end date", also a day (example: 22/09/1840). This is the date when the character <strong>leaves</strong> the action in the novel</p>
 </li>
 <li>
-<p>replace it by:</p>
+<p>a "peak moment". This is a number (example: 14263). This is an instant when the character is at the center of the plot. This number has no historical meaning, this is just a chronological moment in time.</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">NOTE</dt>
+<dd>
+<p>Values for start date, end date and peak moment have no real significance in the novel. They are made up for this exercise.</p>
+</dd>
+</dl>
+</div>
 </li>
 </ul>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;graph</span> <span class="attribute-name">mode</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">slice</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">defaultedgetype</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">directed</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">timerepresentation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">timestamp</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">timestamp</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>(see that we have <strong><code>timestamp="2"</code></strong> here: this is going to be the second time slice!)</p>
-</div>
+<div class="sect1">
+<h2 id="_open_the_network_in_gephi">open the network in Gephi</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>save the file.</p>
+<p>open Gephi. On the Welcome screen that appears,  click on <code>Open Graph File</code></p>
+</li>
+<li>
+<p>find <code>miserables-with-dates.gexf</code> on your computer and open it</p>
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_merging_network_a_and_b_into_a_dynamic_network">merging network "A" and "B" into a dynamic network</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>We will use the 2 files network A.gexf and network B.gexf that we have created.</p>
-</div>
-<div class="paragraph">
-<p>First, let&#8217;s close the project we have in Gephi, without saving:</p>
-</div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="images/Closing-the-current-project.png" alt="Closing the current project">
+<img src="images/en/gephi-welcome-screen-open-graph-en.png" alt="gephi welcome screen open graph en">
 </div>
-<div class="title">Figure 8. Closing the current project</div>
+<div class="title">Figure 1. welcome screen</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
 <div class="paragraph">
-<p>Then click on <code>File &#8594; Open</code> and navigate to the folder where network A.gexf and network B.gexf are located:</p>
+<p>A report window will open, giving you basic info on the network you opened:</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="images/Opening-files.png" alt="Opening files">
+<img src="images/en/opening-file-report-en.png" alt="opening file report en">
 </div>
-<div class="title">Figure 9. Opening files</div>
+<div class="title">Figure 2. report window</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
 <div class="paragraph">
-<p>Here, make sure you select the <strong>2 files at once</strong> (using the key <kbd>Ctrl</kbd> on pc or <kbd>{commandkey}</kbd> on mac).</p>
+<p>This tells you that the network comprises 74 characters, connected by 248 links.</p>
+</div>
+<div class="paragraph">
+<p>Links are undirected, meaning that if A is connected to B, then it is the same as B connected to A.</p>
+</div>
+<div class="paragraph">
+<p>The report also tells us the graph is not dynamic: it means there is no evolution or chronology, it won&#8217;t "move in time".</p>
+</div>
+<div class="paragraph">
+<p>Click on <code>OK</code> to see the graph in Gephi.</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="images/Opening-2-files-at-once.png" alt="Opening 2 files at once">
+<img src="images/result_miserables.png" alt="result miserables">
 </div>
-<div class="title">Figure 10. Opening 2 files at once</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div class="paragraph">
-<p>Opening the files display a report window:</p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/Import-report-window.png" alt="Import report window">
-</div>
-<div class="title">Figure 11. Import report window</div>
+<div class="title">Figure 3. The network we will use</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -813,39 +671,110 @@ We can use a simple click-and-point tool to create a network:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_enabling_the_timeline">enabling the timeline</h2>
+<h2 id="_getting_a_sense_of_the_attributes_in_the_data_laboratory">getting a sense of the attributes in the data laboratory</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You should see this button, click on it (if not: something went wrong. Retrace your steps)</p>
+<p>We can switch to the data laboratory to see the underlying data:</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="images/Enable-the-timeline.png" alt="Enable the timeline">
+<img src="images/Switching-to-the-data-laboratory.png" alt="Switching to the data laboratory">
 </div>
-<div class="title">Figure 12. Enable the timeline</div>
+<div class="title">Figure 4. Switching to the data laboratory</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Zoom-on-three-attributes-representing-time.png" alt="Zoom on three attributes representing time">
+</div>
+<div class="title">Figure 5. Zoom on three attributes representing time</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
 <div class="paragraph">
-<p>Click and slide the right side border of the timeline <strong>to the left</strong>. You should see the edge disappear:</p>
+<p>The nodes (characters) of the network have attributes (start date, end date, peak moment) which can make this graph dynamic - but it is not yet.</p>
+</div>
+<div class="paragraph">
+<p>A couple of steps are needed to enable the dynamic features, and here a choice must be made:</p>
+</div>
+<div class="paragraph">
+<p>Do we prefer to have&#8230;&#8203;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>&#8230;&#8203; nodes appearing on screen at their start date, and staying on screen for ever after?</p>
+</li>
+<li>
+<p>&#8230;&#8203; nodes appearing on screen at their start date, and leaving the screen at their end date?</p>
+</li>
+<li>
+<p>&#8230;&#8203; nodes being representedsimply by their "peak moment" (a number), without reference to chronological dates?</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>We will present these 3 possibilities.</p>
+</div>
+<div class="sect3">
+<h4 id="_1_dynamic_nodes_with_a_start_date">1. dynamic nodes with a start date</h4>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Merge-columns.png" alt="Merge columns">
+</div>
+<div class="title">Figure 6. Merge columns</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="images/Sliding-the-timeline.png" alt="Sliding the timeline">
+<img src="images/Set-up-the-parameters---1.png" alt="Set up the parameters   1">
 </div>
-<div class="title">Figure 13. Sliding the timeline</div>
+<div class="title">Figure 7. Set up the parameters - 1</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Result.png" alt="Result">
+</div>
+<div class="title">Figure 8. Result</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
 <div class="paragraph">
-<p>We created a dynamic network.
-It needs to be animated precisely with the timeline, dynamic attributes should be explored, as well as dynamic layouts.</p>
+<p>Let&#8217;s switch back to the Overview to see the graph and how it evolves in time.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">IMPORTANT</dt>
+<dd>
+<p>We are going to use the timeline to play the animation. The timeline has many features which are explained in a specific tutorial.</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/moving-timeline-miserables-1-en.gif" alt="moving timeline miserables 1 en">
+</div>
+<div class="title">Figure 9. Animating the dynamic network</div>
 </div>
 <div class="paragraph">
-<p>These features will be explained in the coming tutorials on dynamic networks with Gephi.</p>
+<p>&#160;<br></p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_to_be_continued">to be continued</h2>
+<div class="sectionbody">
+
 </div>
 </div>
 <div class="sect1">
@@ -872,10 +801,16 @@ It needs to be animated precisely with the timeline, dynamic attributes should b
 </div>
 </div>
 </div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnote_1">
+<a href="#_footnoteref_1">1</a>. D. E. Knuth, The Stanford GraphBase: A Platform for Combinatorial Computing, Addison-Wesley, Reading, MA (1993)
+</div>
+</div>
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2017-02-17 09:47:30 CET
+Last updated 2017-02-17 16:22:27 CET
 </div>
 </div>
 </body>

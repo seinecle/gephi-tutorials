@@ -1,6 +1,6 @@
 =  Creating a simple dynamic network
 Clément Levallois <clementlevallois@gmail.com>
-2017-02-17
+2017-02-16
 
 last modified: {docdate}
 
@@ -8,6 +8,7 @@ last modified: {docdate}
 :iconsfont:   font-awesome
 :revnumber: 1.0
 :example-caption!:
+:experimental:
 :sourcedir: ../../../../main/java
 :github-root: https://github.com/seinecle/gephi-tutorials/blob/master/src/main/asciidoc/
 
@@ -23,10 +24,10 @@ image::gephi-logo-2010-transparent.png[width="450" align="center"]
 
 //ST: !
 
-- We are going to create one very simple network (network "A").
+- We are going to create one very simple *non dynamic* network (network "A").
 - then we will create a modified version of it (network "B").
 - in both files, we need to modify a single line.
-- finally, we will merge networks A and B, in a new network evolving from version A to B.
+- finally, we will merge networks A and B, forming a new *dynamic* network evolving from version A to B.
 
 //ST: !
 [NOTE]
@@ -91,6 +92,7 @@ image::Choosing-the-gexf-file-format.png[align="center", title="Choosing the gex
 {nbsp} +
 
 Create one edge, or a couple of edges, in this way.
+
 //ST: !
 
 Clicking again on the pencil stops the edge creation by mouse clicks.

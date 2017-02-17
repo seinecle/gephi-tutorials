@@ -1,6 +1,6 @@
 =  Creating a simple dynamic network
 Clément Levallois <clementlevallois@gmail.com>
-2017-02-17
+2017-02-16
 
 last modified: {docdate}
 
@@ -9,6 +9,7 @@ last modified: {docdate}
 :revnumber: 1.0
 :example-caption!:
 :experimental:
+:sourcedir: ../../../../main/java
 :github-root: https://github.com/seinecle/gephi-tutorials/blob/master/src/main/asciidoc/
 
 :title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
