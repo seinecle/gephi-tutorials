@@ -8,7 +8,7 @@
     <version>1.0</version>
     <packaging>jar</packaging>
     <properties>
-        <doc>en/dynamic/converting-a-network-with-dates-into-dynamic.adoc</doc>
+        <!--<doc>en/plugins/semantic-web-importer-en.adoc</doc>-->
         <medium.publish>false</medium.publish>
     </properties>
     <parent>
