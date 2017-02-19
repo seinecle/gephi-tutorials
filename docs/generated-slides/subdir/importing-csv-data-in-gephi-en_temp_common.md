@@ -8,7 +8,6 @@ last modified: {docdate}
 :iconsfont:   font-awesome
 :revnumber: 1.0
 :example-caption!:
-:sourcedir: ../../../main/java
 
 :title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
 
@@ -38,12 +37,13 @@ To import any of these files, just choose the `File -> Open` menu
 //ST: !
 The easiest is probably to just have a text file like this one:
 
-....
+----
 Source,Target <1>
 Jeremy,Jennifer
 Valerian,Jeremy
-....
-<1>This line is mandatory. Don't put a space between the comma and "Target"
+----
+
+<1> This line is mandatory. Don't put a space between the comma and "Target"
 
 Just write this in a text editor and save it as a file `example.txt`
 

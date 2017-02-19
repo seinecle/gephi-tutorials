@@ -86,14 +86,16 @@ table.CodeRay td.code>pre{padding:0}
 .CodeRay .insert .insert{color:#080}
 .CodeRay .delete .delete{color:#800}
 .CodeRay .change .change{color:#66f}
-.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.1.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.1.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>Simple Gephi Project from A to Z</h1><div class="preamble"><div class="paragraph"><p>last modified: 2017-02-14</p></div>
+.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.1.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.1.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>Simple Gephi Project from A to Z</h1><div class="preamble"><div class="paragraph"><p>last modified: 2017-02-19</p></div>
 <div class="imageblock stretch" style="text-align: center"><img src="images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450" /></div></div><p class="author"><small>Clément Levallois</small></p></section>
 <section id="__escape_or_o_to_see_all_sides_f11_for_full_screen_s_for_speaker_notes"><h2>'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes</h2></section>
 <section id="_description_of_the_project"><h2>Description of the project</h2></section>
 <section><div class="paragraph"><p>This project is for complete beginners to Gephi.
 It supposes you have Gephi installed and running on your computer. That is all.</p></div>
 <div class="paragraph"><p>When finishing this tutorial, you should be able to:</p></div>
-<div class="ulist"><ul><li><p>be familiar with the vocabulary to discuss networks</p></li><li><p>download a network file for this exercise</p></li><li><p>description of the file / the network</p></li><li><p>open a network file</p></li><li><p>read the report after opening a file</p></li><li><p>show the labels of the nodes</p></li><li><p>layout the network</p></li><li><p>visualize attributes of the network</p></li><li><p>prettify the network for enhanced readability</p></li><li><p>compute the centrality of the nodes in the network</p></li><li><p>visualize attributes created by Gephi</p></li><li><p>export a visualization as a picture or pdf</p></li></ul></div></section>
+<div class="ulist"><ul><li><p>be familiar with the vocabulary to discuss networks</p></li><li><p>download a network file for this exercise</p></li><li><p>description of the file / the network
+==  !</p></li><li><p>open a network file</p></li><li><p>read the report after opening a file</p></li><li><p>show the labels of the nodes</p></li><li><p>layout the network
+==  !</p></li><li><p>visualize attributes of the network</p></li><li><p>prettify the network for enhanced readability</p></li><li><p>compute the centrality of the nodes in the network</p></li><li><p>visualize attributes created by Gephi</p></li><li><p>export a visualization as a picture or pdf</p></li></ul></div></section>
 <section id="_terminology_to_discuss_networks"><h2>terminology to discuss networks</h2></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="images/terminology-for-networks.png" alt="terminology for networks" height="100%" /></div><div class="title">Figure 1. terminology for networks</div></section>
 <section id="_download_a_network_file"><h2>download a network file</h2></section>
@@ -215,7 +217,24 @@ But as you see, it means the network is now looking different than in the Overvi
 Try "Fruchterman Reingold" and "Yfan Hu".</p></li></ol></div>
 <div class="paragraph"><p>These are layouts which follow the same logic as Force Atlas 2, but with slight variations. Explore how these algorithms result in similar, yet specific layouts.</p></div></section>
 <section><div class="olist arabic"><ol class="arabic" start="6"><li><p>In this tutorial, we defined degree centrality.
-Can you imagine a situation when a node with the largest degree centrality will actually be in the periphery of the network? You can draw a toy network to help you figure.</p></li></ol></div></section></div></div><script src="reveal.js-3.1.0/lib/js/head.min.js"></script><script src="reveal.js-3.1.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+Can you imagine a situation when a node with the largest degree centrality will actually be in the periphery of the network? You can draw a toy network to help you figure.
+    <!-- Start of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+        var sc_project = 11238920;
+        var sc_invisible = 1;
+        var sc_security = "8dac6cd5";
+        var scJsHost = (("https:" == document.location.protocol) ?
+            "https://secure." : "http://www.");
+        document.write("<sc" + "ript type='text/javascript' src='" +
+            scJsHost +
+            "statcounter.com/counter/counter.js'></" + "script>");
+    </script>
+    <noscript><div class="statcounter"><a title="site stats"
+    href="http://statcounter.com/" target="_blank"><img
+    class="statcounter"
+    src="//c.statcounter.com/11238920/0/8dac6cd5/1/" alt="site
+    stats"></a></div></noscript>
+    <!-- End of StatCounter Code for Default Guide --></p></li></ol></div></section></div></div><script src="reveal.js-3.1.0/lib/js/head.min.js"></script><script src="reveal.js-3.1.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
 Reveal.initialize({
   // Display controls in the bottom right corner
   controls: true,

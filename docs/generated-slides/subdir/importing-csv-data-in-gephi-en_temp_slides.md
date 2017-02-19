@@ -37,12 +37,13 @@ To import any of these files, just choose the `File -> Open` menu
 ==  !
 The easiest is probably to just have a text file like this one:
 
-....
+----
 Source,Target <1>
 Jeremy,Jennifer
 Valerian,Jeremy
-....
-<1>This line is mandatory. Don't put a space between the comma and "Target"
+----
+
+<1> This line is mandatory. Don't put a space between the comma and "Target"
 
 Just write this in a text editor and save it as a file `example.txt`
 
@@ -243,3 +244,20 @@ image::en/import-spreadsheet-9-en.png[align="center",title="Kinds of attributes"
 Visit https://www.facebook.com/groups/gephi/[the Gephi group on Facebook] to get help,
 
 or visit https://seinecle.github.io/gephi-tutorials/[the website for more tutorials]
+pass:[    <!-- Start of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+        var sc_project = 11238920;
+        var sc_invisible = 1;
+        var sc_security = "8dac6cd5";
+        var scJsHost = (("https:" == document.location.protocol) ?
+            "https://secure." : "http://www.");
+        document.write("<sc" + "ript type='text/javascript' src='" +
+            scJsHost +
+            "statcounter.com/counter/counter.js'></" + "script>");
+    </script>
+    <noscript><div class="statcounter"><a title="site stats"
+    href="http://statcounter.com/" target="_blank"><img
+    class="statcounter"
+    src="//c.statcounter.com/11238920/0/8dac6cd5/1/" alt="site
+    stats"></a></div></noscript>
+    <!-- End of StatCounter Code for Default Guide -->]

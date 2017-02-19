@@ -8,7 +8,6 @@ last modified: {docdate}
 :iconsfont:   font-awesome
 :revnumber: 1.0
 :example-caption!:
-:sourcedir: ../../../main/java
 
 :title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
 
@@ -33,10 +32,12 @@ When finishing this tutorial, you should be able to:
 - be familiar with the vocabulary to discuss networks
 - download a network file for this exercise
 - description of the file / the network
+//ST: !
 - open a network file
 - read the report after opening a file
 - show the labels of the nodes
 - layout the network
+//ST: !
 - visualize attributes of the network
 - prettify the network for enhanced readability
 - compute the centrality of the nodes in the network

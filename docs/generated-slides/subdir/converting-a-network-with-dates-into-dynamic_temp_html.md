@@ -36,7 +36,9 @@ link:../../resources/miserables-with-dates.zip[download this zip file] and unzip
 
 or use this direct link: https://tinyurl.com/gephi-tuto-4[https://tinyurl.com/gephi-tuto-4]
 
-You should find the file `miserables-with-dates.gexf` in it. Save it in a folder you will remember (or create a folder specially for this small project).
+//ST: !
+
+You should find the file `miserables-with-dates.gexf` in the zip file. Save it in a folder you will remember (or create a folder specially for this small project).
 
 //ST: description of the file / the network
 //ST: !
@@ -53,6 +55,8 @@ This file has been modified to add some dates to each character in the novel:
 - a "start date", which is a day (example: 22/09/1835). This is the date when the character *enters* the action in the novel
 - an "end date", also a day (example: 22/09/1840). This is the date when the character *leaves* the action in the novel
 - a "peak moment". This is a number (example: 14263). This is an instant when the character is at the center of the plot. This number has no historical meaning, this is just a chronological moment in time.
+
+//ST: !
 
 NOTE:: Values for start date, end date and peak moment have no real significance in the novel. They are made up for this exercise.
 
@@ -116,8 +120,8 @@ Do we prefer to have...
 
 We will present these 3 possibilities.
 
+//ST: !
 ==== 1. dynamic nodes with a start date
-//ST: dynamic nodes with a start date
 
 //ST: !
 
@@ -167,3 +171,20 @@ image::moving-timeline-miserables-1-en.gif[align="center",title="Animating the d
 Visit https://www.facebook.com/groups/gephi/[the Gephi group on Facebook] to get help,
 
 or visit https://seinecle.github.io/gephi-tutorials/[the website for more tutorials]
+pass:[    <!-- Start of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+        var sc_project = 11238920;
+        var sc_invisible = 1;
+        var sc_security = "8dac6cd5";
+        var scJsHost = (("https:" == document.location.protocol) ?
+            "https://secure." : "http://www.");
+        document.write("<sc" + "ript type='text/javascript' src='" +
+            scJsHost +
+            "statcounter.com/counter/counter.js'></" + "script>");
+    </script>
+    <noscript><div class="statcounter"><a title="site stats"
+    href="http://statcounter.com/" target="_blank"><img
+    class="statcounter"
+    src="//c.statcounter.com/11238920/0/8dac6cd5/1/" alt="site
+    stats"></a></div></noscript>
+    <!-- End of StatCounter Code for Default Guide -->]
