@@ -8,6 +8,7 @@ last modified: {docdate}
 :iconsfont:   font-awesome
 :revnumber: 1.0
 :example-caption!:
+:sourcedir: ../../../main/java
 :github-root: https://github.com/seinecle/gephi-tutorials/blob/master/src/main/asciidoc/
 
 :title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
