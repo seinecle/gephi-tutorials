@@ -8,7 +8,7 @@
     <version>1.0</version>
     <packaging>jar</packaging>
     <properties>
-        <!--<doc>en/plugins/semantic-web-importer-en.adoc</doc>-->
+        <doc>en/plugins/similarity-computer-en.adoc</doc>
         <medium.publish>false</medium.publish>
     </properties>
     <parent>

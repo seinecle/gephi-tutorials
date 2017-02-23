@@ -64,7 +64,7 @@ image::https://docs.google.com/drawings/d/1u4LqlnQby5DQVmq4csZ6f7sq_Z33F33UqtBZ4
 
 //ST: !
 
-image::https://docs.google.com/drawings/d/1LxGNZYaEv__QretB2-x7hX-3Dap672igCDZhFRCbm8k/pub?w=554&h=347[align="center", title="Install the plugin then restart Gephi"]
+image::https://docs.google.com/drawings/d/1LxGNZYaEv__QretB2-x7hX-3Dap672igCDZhFRCbm8k/pub?w=831&h=521[align="center", title="Install the plugin then restart Gephi"]
 
 == Initializing the plugin (to be done just once)
 
