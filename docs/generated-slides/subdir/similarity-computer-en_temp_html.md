@@ -59,7 +59,7 @@ image::en/similarity-computer/result.png[align="center", title="Resulting networ
 image::Choose-the-menu-Tools-then-Plugins.png[align="center", title="Choose the menu Tools then Plugins"]
 {nbsp} +
 
-//ST: Installing the plugin
+//ST: !
 
 image::Click-on-the-tab-Available-Plugins.png[align="center", title="Click on the tab Available Plugins"]
 {nbsp} +
@@ -87,6 +87,8 @@ image::Select-a-file.png[align="center", title="Select a file"]
 {nbsp} +
 
 //ST: Is your file with a header?
+
+//ST: !
 
 image::en/similarity-computer/file-without-header-en.png[align="center", title="A file without headers"]
 {nbsp} +
