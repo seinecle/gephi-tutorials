@@ -8,7 +8,7 @@
     <version>1.0</version>
     <packaging>jar</packaging>
     <properties>
-        <doc>en/plugins/cooccurrences-computer-en.adoc</doc>
+        <doc>en/developers/working-from-the-source-en.adoc</doc>
         <medium.publish>false</medium.publish>
         <asciidoctorj.diagram.version>1.5.0</asciidoctorj.diagram.version>
     </properties>
