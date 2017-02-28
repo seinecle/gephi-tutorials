@@ -36,15 +36,19 @@ We will:
 
 
 //ST: !
-The modified version of Gephi that we will implement, as for effect to add circles around nodes communities.
+The modified version of Gephi that we will implement will have for effect to add circles around nodes communities.
 
-This project originates from https://twitter.com/DataToViz/status/828840269072080896[Susie Lu's creation].)
+This project originates from https://twitter.com/DataToViz/status/828840269072080896[Susie Lu's creation].
 
 We should get something like:
 
 //ST: !
 
 video::Y3jk-_QaFx4[youtube, height=315, width=560, align="center"]
+
+image::en/developers/screenshot-encircling-pdf.png[align="center",title="Circles enclosing communities"]
+
+link to animated version: https://www.youtube.com/watch?v=Y3jk-_QaFx4
 
 
 //ST: !
@@ -117,7 +121,7 @@ image::en/developers/git-clone-gephi-4-en.png[align="center", title="Click on Op
 {nbsp} +
 
 //ST: !
-Select (highlight in blue) the line mentionning Gephi, and click on "Open"
+Select (highlight in blue) the line mentioning Gephi, and click on "Open"
 
 image::en/developers/git-clone-gephi-5-en.png[align="center", title="Click on Open Project"]
 {nbsp} +
@@ -168,7 +172,7 @@ We are going to add circles which will enclose groups of nodes (aka communities)
 //ST: !
 ==== 1. Open the `VisualizationImpl` module
 
-In the gephi project, in the folder Modules, double click on the `VisualizationImpl`module:
+In the gephi project, in the folder Modules, double click on the `VisualizationImpl` module:
 
 
 image::en/developers/enclosing-circles-1-en.png[align="center", title="Opening VisualizationImpl"]
@@ -201,6 +205,7 @@ No need to understand most of the code in this class.
 But we see that starting at https://github.com/seinecle/gephi/blob/enclosing-circles-opengl/modules/VisualizationImpl/src/main/java/org/gephi/visualization/opengl/CompatibilityEngine.java#L194[line 194], a loop on nodes starts:
 
 We will put nodes in a map (declared above, at https://github.com/seinecle/gephi/blob/enclosing-circles-opengl/modules/VisualizationImpl/src/main/java/org/gephi/visualization/opengl/CompatibilityEngine.java#L155[line 155]) where:
+
 - keys are the name of the cluster nodes belong too,
 - values are the Set of Nodes corresponding to the cluster.
 
@@ -216,20 +221,17 @@ Then, https://github.com/seinecle/gephi/blob/enclosing-circles-opengl/modules/Vi
 The logic of the circle creation in OpenGL can be understood rather easily, by copying and modyfying the code used just above for the creation of nodes, and by looking at the online documentation on http://www.openglprojects.in/2014/03/draw-circle-opengl.html#gsc.tab=0[how to create shapes in OpenGL].
 
 //ST: !
-That's it. Now just run Gephi from source as we did before. From Gephi, open a network where nodes have a "cluster" attribute, and Gephi will draw circles around nodes from the same clusters:
+That's it. Now just run Gephi from source as we did before. From Gephi, open a network where nodes have a "Modularity Class" attribute, and Gephi will draw circles around nodes from the same clusters:
 
 //ST: !
 
 video::Y3jk-_QaFx4[youtube, height=315, width=560, align="center"]
 
-
-
-== More tutorials on importing data to Gephi
-//ST: More tutorials on importing data to Gephi
+== More tutorials on using the source code of Gephi
+//ST: More tutorials on using the source code of Gephi
 //ST: !
 
-- https://github.com/gephi/gephi/wiki/Import-CSV-Data[The Gephi wiki on importing csv]
-- https://www.youtube.com/watch?v=3Im7vNRA2ns[Video "How to import a CSV into Gephi" by Jen Golbeck]
+- https://github.com/gephi/gephi[The Gephi readme with some instructions for developers]
 
 == the end
 

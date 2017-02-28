@@ -46,10 +46,14 @@ We should get something like:
 
 video::Y3jk-_QaFx4[youtube, height=315, width=560, align="center"]
 
+//PDF: image::en/developers/screenshot-encircling-pdf.png[align="center",title="Circles enclosing communities"]
+
+//PDF: link to animated version: https://www.youtube.com/watch?v=Y3jk-_QaFx4
+
 
 ==  !
 
-For this tutorial you need:
+For this tutorial you will need:
 
 - some knowledge of Java.
 
