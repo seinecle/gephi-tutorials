@@ -1,0 +1,11 @@
+= Gephi Tutorials
+Clément Levallois <clementlevallois@gmail.com>
+2017-03-01
+
+last modified: {docdate}
+
+This repo hosts the web pages of the gephi tutorials website.
+
+The website itsef can be visited here: https://seinecle.github.io/gephi-tutorials/
+
+Maintained by https://www.clementlevallois.net[Clement Levallois]
