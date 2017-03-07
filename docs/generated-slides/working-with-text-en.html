@@ -93,9 +93,8 @@ table.CodeRay td.code>pre{padding:0}
 <section><div class="paragraph"><p>This tutorial explains how to draw "semantic networks" like this one:</p></div>
 <div class="imageblock stretch" style="text-align: center"><img src="images/en/cooccurrences-computer/gephi-result-1-en.png" alt="gephi result 1 en" height="100%" /></div><div class="title">Figure 1. a semantic network</div></section>
 <section><div class="paragraph"><p>We call "semantic network" a visualization where textual items (words, expressions) are connected to each others, like above.</p></div>
-<div class="paragraph"><p>We will see in turn:
-==  !</p></div>
-<div class="ulist"><ul><li><p>why are semantic networks interesting</p></li><li><p>how to create a semantic network</p></li><li><p>tips and tricks to visualize semantic networks in the best possible way in Gephi</p></li></ul></div></section>
+<div class="paragraph"><p>We will see in turn:</p></div></section>
+<section><div class="ulist"><ul><li><p>why are semantic networks interesting</p></li><li><p>how to create a semantic network</p></li><li><p>tips and tricks to visualize semantic networks in the best possible way in Gephi</p></li></ul></div></section>
 <section id="_why_semantic_networks"><h2>Why semantic networks?</h2></section>
 <section><div class="paragraph"><p>A text, or many texts, can be hard to summarize.</p></div>
 <div class="paragraph"><p>Drawing a semantic network highlights what are the most frequent terms, how they relate to each other, and reveal the different groups or "clusters" of they form.</p></div></section>
@@ -120,7 +119,7 @@ Hence, converting a text into a semantic network helps detecting topics in the t
 <section><div class="paragraph"><p>So, <code>United States</code> should probably be a meaningful unit, not just <code>United</code> and <code>States</code>.
 Because <code>United States</code> is composed of 2 terms, it is called a "bi-gram".</p></div>
 <div class="paragraph"><p>Trigrams are interesting as well obviously (eg, <code>chocolate ice cream</code>).</p></div></section>
-<section><div class="paragraph"><p>People often stop there, but I find that quadrigrams can be meaningful as well, if less frequent: <code>United States of America</code>, <code>functional magnetic resonance imaging</code>, <code>The New York Times</code>, etc.</p></div>
+<section><div class="paragraph"><p>People often stop there, but quadrigrams can be meaningful as well, if less frequent: <code>United States of America</code>, <code>functional magnetic resonance imaging</code>, <code>The New York Times</code>, etc.</p></div>
 <div class="paragraph"><p>Many tools exist to extract n-grams from texts, for example <a href="http://homepages.inf.ed.ac.uk/lzhang10/ngram.html">these programs which are under a free license</a>.</p></div></section>
 <section><h3>2 bis. Considering "noun phrases"</h3></section>
 <section><div class="paragraph"><p>Another approach to go beyond single word terms (<code>United</code>, <code>States</code>) takes a different approach than n-grams. It says:</p></div>

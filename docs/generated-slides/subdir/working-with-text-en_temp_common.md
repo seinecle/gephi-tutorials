@@ -30,6 +30,7 @@ image::en/cooccurrences-computer/gephi-result-1-en.png[align="center", title="a 
 We call "semantic network" a visualization where textual items (words, expressions) are connected to each others, like above.
 
 We will see in turn:
+
 //ST: !
 
 - why are semantic networks interesting
@@ -106,7 +107,7 @@ Trigrams are interesting as well obviously (eg, `chocolate ice cream`).
 
 //ST: !
 
-People often stop there, but I find that quadrigrams can be meaningful as well, if less frequent: `United States of America`, `functional magnetic resonance imaging`, `The New York Times`, etc.
+People often stop there, but quadrigrams can be meaningful as well, if less frequent: `United States of America`, `functional magnetic resonance imaging`, `The New York Times`, etc.
 
 Many tools exist to extract n-grams from texts, for example http://homepages.inf.ed.ac.uk/lzhang10/ngram.html[these programs which are under a free license].
 
