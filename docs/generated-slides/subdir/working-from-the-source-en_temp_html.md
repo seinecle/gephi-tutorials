@@ -53,7 +53,7 @@ video::Y3jk-_QaFx4[youtube, height=315, width=560, align="center"]
 
 //ST: !
 
-For this tutorial you need:
+For this tutorial you will need:
 
 - some knowledge of Java.
 

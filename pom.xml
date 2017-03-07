@@ -8,7 +8,7 @@
     <version>1.0</version>
     <packaging>jar</packaging>
     <properties>
-        <doc>en/developers/working-from-the-source-en.adoc</doc>
+        <doc>en/working-with-text-en.adoc</doc>
         <medium.publish>false</medium.publish>
         <asciidoctorj.diagram.version>1.5.0</asciidoctorj.diagram.version>
     </properties>
@@ -108,112 +108,119 @@
                 </dependencies>
                 <!-- Shared configurations across `executions`. Can be overwritten if needed by an executions -->
                 <configuration>
-                        <requires>
-                            <require>asciidoctor-diagram</require>
-                        </requires>
-                        <attributes>
-                            <!-- Example below shows how to specify in this pom instead of System's PATH, the location of dot command of Graphviz, required by PlantUML libraries -->
-                            <!--Windows:-->
-                            <graphvizdot>C:\Program Files (x86)\Graphviz2.38\bin\dot.exe</graphvizdot>
-                            <imagesoutdir>${basedir}/src/main/asciidoc/images</imagesoutdir>
+                    <requires>
+                        <require>asciidoctor-diagram</require>
+                    </requires>
+                    <attributes>
+                        <!-- Example below shows how to specify in this pom instead of System's PATH, the location of dot command of Graphviz, required by PlantUML libraries -->
+                        <!--Windows:-->
+                        <graphvizdot>C:\Program Files (x86)\Graphviz2.38\bin\dot.exe</graphvizdot>
+                        <imagesoutdir>${basedir}/src/main/asciidoc/images</imagesoutdir>
                             
-                            <!-- *nix :
-                                <graphvizdot>/usr/local/bin/dot</graphvizdot>
-                            -->
-                        </attributes>
-                    </configuration>
+                        <!-- *nix :
+                            <graphvizdot>/usr/local/bin/dot</graphvizdot>
+                        -->
+                    </attributes>
+                </configuration>
                     
-                    <!-- Current configuration uses default layout.
-                    I'd recommend keeping everything under `src/main/asciidoc`, docs, images, etc and use GIT or SVN to
-                    track versions.
-                    -->
-                    <!--
-                    <sourceDirectory>C:\Users\levallois\Google Drive\open\gephi tutorial\history-of-gephi\en\temp</sourceDirectory>
-                    -->
-                    <executions>
-                        <execution>
-                            <id>generate-slides</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>process-asciidoc</goal>
-                            </goals>
-                            <configuration>
-                                <sourceDocumentName>${doc}</sourceDocumentName>
-                                <outputDirectory>${basedir}/docs/generated-slides</outputDirectory>
-                                <backend>revealjs</backend>
-                                <templateDir>${basedir}/docs/asciidoctor-reveal.js-${asciidoctor-revealjs.version}/templates/slim</templateDir>
-                                <sourceHighlighter>coderay</sourceHighlighter>
-                                <attributes>
+                <!-- Current configuration uses default layout.
+                I'd recommend keeping everything under `src/main/asciidoc`, docs, images, etc and use GIT or SVN to
+                track versions.
+                -->
+                <!--
+                <sourceDirectory>C:\Users\levallois\Google Drive\open\gephi tutorial\history-of-gephi\en\temp</sourceDirectory>
+                -->
+                <executions>
+                    <execution>
+                        <id>generate-slides</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>process-asciidoc</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDocumentName>${doc}</sourceDocumentName>
+                            <outputDirectory>${basedir}/docs/generated-slides</outputDirectory>
+                            <backend>revealjs</backend>
+                            <templateDir>${basedir}/docs/asciidoctor-reveal.js-${asciidoctor-revealjs.version}/templates/slim</templateDir>
+                            <sourceHighlighter>coderay</sourceHighlighter>
+                            <attributes>
                                  
-                                    As we are downloading reveal.js in runtime, it sits in a nonstandard folder `reveal.js-${revealjs.version}`
+                                As we are downloading reveal.js in runtime, it sits in a nonstandard folder `reveal.js-${revealjs.version}`
                                 
-                                    <revealjsdir>reveal.js-${revealjs.version}</revealjsdir>
-                                    put here the reveal.js specific attributes 
-                                    see https://github.com/asciidoctor/asciidoctor-reveal.js/#revealjs-options 
-                                    <sourcedir>${basedir}/src/main/java</sourcedir>
-                                    <revealjs_theme>white</revealjs_theme>
-                                    <revealjs_transition>linear</revealjs_transition>
-                                    <revealjs_maxscale>10.0</revealjs_maxscale>
-                                    <project-version>${project.version}</project-version>
+                                <revealjsdir>reveal.js-${revealjs.version}</revealjsdir>
+                                put here the reveal.js specific attributes 
+                                see https://github.com/asciidoctor/asciidoctor-reveal.js/#revealjs-options 
+                                <sourcedir>${basedir}/src/main/java</sourcedir>
+                                <revealjs_theme>white</revealjs_theme>
+                                <revealjs_transition>linear</revealjs_transition>
+                                <revealjs_maxscale>10.0</revealjs_maxscale>
+                                <project-version>${project.version}</project-version>
+                                <!--these 2 parameters come from the properties.txt file at the root of the project - see plugin above -->
+                                <!--they will be injected into the extensions which manage the html output formats-->
+                                <statcounter-project>${statcounter-project}</statcounter-project>
+                                <statcounter-security>${statcounter-security}</statcounter-security>
+                            </attributes>
+                            <extensions>
+                                <extension>
+                                    <className>Controller.SlidesPreProcessor</className>
+                                </extension>
+                            </extensions>
 
-                                </attributes>
-                                <extensions>
-                                    <extension>
-                                        <className>Controller.SlidesPreProcessor</className>
-                                    </extension>
-                                </extensions>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-pdf</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>process-asciidoc</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDocumentName>${doc}</sourceDocumentName>
+                            <outputDirectory>${basedir}/docs/generated-pdf</outputDirectory>
+                            <backend>pdf</backend>
+                            <sourceHighlighter>coderay</sourceHighlighter>
+                            <attributes>
+                                <path>${basedir}</path>                                
+                                <icons>font</icons>
+                                <pagenums/>
+                                <toc/>
+                            </attributes>
+                            <extensions>
+                                <extension>
+                                    <className>Controller.PdfPreProcessor</className>
+                                </extension>
+                            </extensions>
 
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>generate-pdf</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>process-asciidoc</goal>
-                            </goals>
-                            <configuration>
-                                <sourceDocumentName>${doc}</sourceDocumentName>
-                                <outputDirectory>${basedir}/docs/generated-pdf</outputDirectory>
-                                <backend>pdf</backend>
-                                <sourceHighlighter>coderay</sourceHighlighter>
-                                <attributes>
-                                    <path>${basedir}</path>                                
-                                    <icons>font</icons>
-                                    <pagenums/>
-                                    <toc/>
-                                </attributes>
-                                <extensions>
-                                    <extension>
-                                        <className>Controller.PdfPreProcessor</className>
-                                    </extension>
-                                </extensions>
-
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>generate-html</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>process-asciidoc</goal>
-                            </goals>
-                            <configuration>
-                                <sourceDocumentName>${doc}</sourceDocumentName>
-                                <outputDirectory>${basedir}/docs/generated-html</outputDirectory>
-                                <backend>html</backend>
-                                <sourceHighlighter>coderay</sourceHighlighter>
-                                <extensions>
-                                    <extension>
-                                        <className>Controller.HtmlPreProcessor</className>
-                                    </extension>
-                                </extensions>
-                                <attributes>
-                                    <icons>font</icons>
-                                    <pagenums/>
-                                    <toc/>
-                                </attributes>
-                            </configuration>
-                        </execution>
-                    </executions>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-html</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>process-asciidoc</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDocumentName>${doc}</sourceDocumentName>
+                            <outputDirectory>${basedir}/docs/generated-html</outputDirectory>
+                            <backend>html</backend>
+                            <sourceHighlighter>coderay</sourceHighlighter>
+                            <extensions>
+                                <extension>
+                                    <className>Controller.HtmlPreProcessor</className>
+                                </extension>
+                            </extensions>
+                            <attributes>
+                                <icons>font</icons>
+                                <pagenums/>
+                                <toc/>
+                                <!--these 2 parameters come from the properties.txt file at the root of the project - see plugin above -->
+                                <!--they will be injected into the extensions which manage the html output formats-->
+                                <statcounter-project>${statcounter-project}</statcounter-project>
+                                <statcounter-security>${statcounter-security}</statcounter-security>
+                            </attributes>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
