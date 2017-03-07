@@ -1,6 +1,6 @@
 = Working with text in Gephi
 Clément Levallois <clementlevallois@gmail.com>
-2017-03-07
+2017-02-28
 
 last modified: {docdate}
 
@@ -8,6 +8,7 @@ last modified: {docdate}
 :iconsfont:   font-awesome
 :revnumber: 1.0
 :example-caption!:
+:sourcedir: ../../../main/java
 
 :title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
 
@@ -94,7 +95,7 @@ So, `United States` should probably be a meaningful unit, not just `United` and 
 
 Trigrams are interesting as well obviously (eg, `chocolate ice cream`).
 
-People often stop there, but I find that quadrigrams can be meaningful as well, if less frequent: `United States of America`, `functional magnetic resonance imaging`, `The New York Times`, etc.
+People often stop there, but I find quadrigrams can be meaningful as well, if less frequent: `United States of America`, `functional magnetic resonance imaging`, `The New York Times`, etc.
 
 Many tools exist to extract n-grams from texts, for example http://homepages.inf.ed.ac.uk/lzhang10/ngram.html[these programs which are under a free license].
 
@@ -115,9 +116,9 @@ Take `United States`: it is a noun (`States`) preceded by an adjective (`United`
 
 This approach is interesting (implemented for example in the software http://www.vosviewer.com[Vosviewer]), but it has drawbacks:
 
-- you need to detect adjectives and nouns in your text. This is language dependent (French put adjectives after nouns, for instance), and the processing is slow for large corpora.
+- you need to detect adjectives and nouns in your text. This is very language dependent, and slow for large corpora.
 
-- what about verbs, and noun phrases comprising non adjectives, such as "United States *of* America"? These are not going to be included in the network.
+- what about verbs, and noun phrases comprising non adjectives, such as "United States *of* America"? These are not included in the network.
 
 //ST: !
 [start=3]
@@ -169,7 +170,7 @@ If ~ 300 words would fit in the visualization of the network, and the text you s
 To visualize the semantic network *for a long, single text* the straightforward approach consists in picking the 300 most frequent words (or n-grams, see above).
 
 
-In the case of a collection of texts to visualize (several documents instead of one), two possibilities:
+In the case of a colection of texts to visualize (several documents instead of one), two possibilities:
 //ST: !
 
 1. Either you also take the most frequent terms across these documents, like before
@@ -197,7 +198,7 @@ Applying the tf-idf correction will highlight terms which are frequently used wi
 (to go further, here is a webpage giving a simple example: http://www.tfidf.com/)
 
 //ST: !
-So, should you visualize the most frequent words in your corpus, or the words which rank highest according to tf-idf?
+Should you visualize the most frequent words in your corpus, or the words which rank highest according to tf-idf?
 
 Both are interesting, as they show a different info. I'd suggest that the simple frequency count is easier to interpret.
 
@@ -207,10 +208,12 @@ tf-idf can be left for specialists of the textual data under consideration, afte
 //ST: (to be continued)
 
 
-== More tutorials on working with semantic networks
-//ST: More tutorials on working with semantic networks
+== More tutorials on importing data to Gephi
+//ST: More tutorials on importing data to Gephi
 //ST: !
 
+- https://github.com/gephi/gephi/wiki/Import-CSV-Data[The Gephi wiki on importing csv]
+- https://www.youtube.com/watch?v=3Im7vNRA2ns[Video "How to import a CSV into Gephi" by Jen Golbeck]
 
 == the end
 

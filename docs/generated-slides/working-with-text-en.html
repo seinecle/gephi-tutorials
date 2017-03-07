@@ -115,7 +115,7 @@ table.CodeRay td.code>pre{padding:0}
 <section><h3>2. Considering "n-grams"</h3></section>
 <section><div class="paragraph"><p>So, <code>United States</code> should probably be a meaningful unit, not just <code>United</code> and <code>States</code>. Because <code>United States</code> is composed of 2 terms, it is called a "bi-gram".</p></div>
 <div class="paragraph"><p>Trigrams are interesting as well obviously (eg, <code>chocolate ice cream</code>).</p></div>
-<div class="paragraph"><p>People often stop there, but I find quadrigrams can be meaningful as well, if less frequent: <code>United States of America</code>, <code>functional magnetic resonance imaging</code>, <code>The New York Times</code>, etc.</p></div>
+<div class="paragraph"><p>People often stop there, but I find that quadrigrams can be meaningful as well, if less frequent: <code>United States of America</code>, <code>functional magnetic resonance imaging</code>, <code>The New York Times</code>, etc.</p></div>
 <div class="paragraph"><p>Many tools exist to extract n-grams from texts, for example <a href="http://homepages.inf.ed.ac.uk/lzhang10/ngram.html">these programs which are under a free license</a>.</p></div></section>
 <section><h3>2 bis. Considering "noun phrases"</h3></section>
 <section><div class="paragraph"><p>Another approach to go beyond single word terms (<code>United</code>, <code>States</code>) takes a different approach than n-grams. It says:</p></div>
@@ -123,7 +123,7 @@ table.CodeRay td.code>pre{padding:0}
 <div class="paragraph"><p>&#8594; (these are called, a bit improperly, "noun phrases")</p></div>
 <div class="paragraph"><p>Take <code>United States</code>: it is a noun (<code>States</code>) preceded by an adjective (<code>United</code>). It will be considered as a valid term.</p></div></section>
 <section><div class="paragraph"><p>This approach is interesting (implemented for example in the software <a href="http://www.vosviewer.com">Vosviewer</a>), but it has drawbacks:</p></div>
-<div class="ulist"><ul><li><p>you need to detect adjectives and nouns in your text. This is very language dependent, and slow for large corpora.</p></li><li><p>what about verbs, and noun phrases comprising non adjectives, such as "United States <strong>of</strong> America"? These are not included in the network.</p></li></ul></div></section>
+<div class="ulist"><ul><li><p>you need to detect adjectives and nouns in your text. This is language dependent (French put adjectives after nouns, for instance), and the processing is slow for large corpora.</p></li><li><p>what about verbs, and noun phrases comprising non adjectives, such as "United States <strong>of</strong> America"? These are not going to be included in the network.</p></li></ul></div></section>
 <section><h3>3. Stemming and lemmatization</h3></section>
 <section><div class="paragraph"><p><code>live</code>, <code>lives</code>, <code>lived</code>: in a semantic network, it is probably useless to have 3 nodes, one for each of these 3 forms of the same root.</p></div>
 <div class="ulist"><ul><li><p>Stemming consists in chopping the end of the words, so that here, we would have only <code>live</code>.</p></li><li><p>Lemmatization is the same, but in a more subtle way: it takes grammar into account. So, "good" and better" would be reduced to "good" because there is the same basic semantic unit behind these two words, even if their lettering differ completely.</p></li></ul></div>
@@ -141,7 +141,7 @@ table.CodeRay td.code>pre{padding:0}
 <section><h3>2. Representing only the most frequent terms</h3></section>
 <section><div class="paragraph"><p>If ~ 300 words would fit in the visualization of the network, and the text you start with contains 5,000 different words: which 300 words should be selected?</p></div>
 <div class="paragraph"><p>To visualize the semantic network <strong>for a long, single text</strong> the straightforward approach consists in picking the 300 most frequent words (or n-grams, see above).</p></div>
-<div class="paragraph"><p>In the case of a colection of texts to visualize (several documents instead of one), two possibilities:
+<div class="paragraph"><p>In the case of a collection of texts to visualize (several documents instead of one), two possibilities:
 ==  !</p></div>
 <div class="olist arabic"><ol class="arabic"><li><p>Either you also take the most frequent terms across these documents, like before</p></li><li><p>Or you can apply a more subtle rule called "tf-idf", detailed below.</p></li></ol></div></section>
 <section id="_tf_idf"><h2>tf-idf</h2><div class="paragraph"><p>The idea with tf-idf is that terms which appear in all documents are not interesting, because they are so ubiquitous.</p></div>
@@ -151,12 +151,12 @@ table.CodeRay td.code>pre{padding:0}
 <div class="paragraph"><p>&#8594; terms used in all web pages are less interesting to you than terms which are used frequently, but not uniformly accross webpages.</p></div></section>
 <section><div class="paragraph"><p>Applying the tf-idf correction will highlight terms which are frequently used within some texts, but not used in many texts.</p></div>
 <div class="paragraph"><p>(to go further, here is a webpage giving a simple example: <a href="http://www.tfidf.com/" class="bare">http://www.tfidf.com/</a>)</p></div></section>
-<section><div class="paragraph"><p>Should you visualize the most frequent words in your corpus, or the words which rank highest according to tf-idf?</p></div>
+<section><div class="paragraph"><p>So, should you visualize the most frequent words in your corpus, or the words which rank highest according to tf-idf?</p></div>
 <div class="paragraph"><p>Both are interesting, as they show a different info. I&#8217;d suggest that the simple frequency count is easier to interpret.</p></div>
 <div class="paragraph"><p>tf-idf can be left for specialists of the textual data under consideration, after they have been presented with the simple frequency count version.</p></div></section>
 <section id="__to_be_continued"><h2>(to be continued)</h2></section>
-<section id="_more_tutorials_on_importing_data_to_gephi"><h2>More tutorials on importing data to Gephi</h2></section>
-<section><div class="ulist"><ul><li><p><a href="https://github.com/gephi/gephi/wiki/Import-CSV-Data">The Gephi wiki on importing csv</a></p></li><li><p><a href="https://www.youtube.com/watch?v=3Im7vNRA2ns">Video "How to import a CSV into Gephi" by Jen Golbeck</a></p></li></ul></div></section>
+<section id="_more_tutorials_on_working_with_semantic_networks"><h2>More tutorials on working with semantic networks</h2></section>
+<section></section>
 <section id="_the_end"><h2>The end!</h2><div class="paragraph"><p>Visit <a href="https://www.facebook.com/groups/gephi/">the Gephi group on Facebook</a> to get help,</p></div>
 <div class="paragraph"><p>or visit <a href="https://seinecle.github.io/gephi-tutorials/">the website for more tutorials</a>
     <!-- Start of StatCounter Code for Default Guide -->

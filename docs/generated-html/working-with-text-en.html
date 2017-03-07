@@ -516,7 +516,7 @@ table.CodeRay td.code>pre{padding:0}
 <div class="details">
 <span id="author" class="author">Clément Levallois</span><br>
 <span id="email" class="email"><a href="mailto:clementlevallois@gmail.com">clementlevallois@gmail.com</a></span><br>
-<span id="revdate">2017-02-28</span>
+<span id="revdate">2017-03-07</span>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
@@ -538,7 +538,7 @@ table.CodeRay td.code>pre{padding:0}
 </ul>
 </li>
 <li><a href="#__to_be_continued">(to be continued)</a></li>
-<li><a href="#_more_tutorials_on_importing_data_to_gephi">More tutorials on importing data to Gephi</a></li>
+<li><a href="#_more_tutorials_on_working_with_semantic_networks">More tutorials on working with semantic networks</a></li>
 <li><a href="#_the_end">the end</a></li>
 </ul>
 </div>
@@ -681,7 +681,7 @@ table.CodeRay td.code>pre{padding:0}
 <p>Trigrams are interesting as well obviously (eg, <code>chocolate ice cream</code>).</p>
 </div>
 <div class="paragraph">
-<p>People often stop there, but I find quadrigrams can be meaningful as well, if less frequent: <code>United States of America</code>, <code>functional magnetic resonance imaging</code>, <code>The New York Times</code>, etc.</p>
+<p>People often stop there, but I find that quadrigrams can be meaningful as well, if less frequent: <code>United States of America</code>, <code>functional magnetic resonance imaging</code>, <code>The New York Times</code>, etc.</p>
 </div>
 <div class="paragraph">
 <p>Many tools exist to extract n-grams from texts, for example <a href="http://homepages.inf.ed.ac.uk/lzhang10/ngram.html">these programs which are under a free license</a>.</p>
@@ -709,10 +709,10 @@ table.CodeRay td.code>pre{padding:0}
 <div class="ulist">
 <ul>
 <li>
-<p>you need to detect adjectives and nouns in your text. This is very language dependent, and slow for large corpora.</p>
+<p>you need to detect adjectives and nouns in your text. This is language dependent (French put adjectives after nouns, for instance), and the processing is slow for large corpora.</p>
 </li>
 <li>
-<p>what about verbs, and noun phrases comprising non adjectives, such as "United States <strong>of</strong> America"? These are not included in the network.</p>
+<p>what about verbs, and noun phrases comprising non adjectives, such as "United States <strong>of</strong> America"? These are not going to be included in the network.</p>
 </li>
 </ul>
 </div>
@@ -794,7 +794,7 @@ table.CodeRay td.code>pre{padding:0}
 <p>To visualize the semantic network <strong>for a long, single text</strong> the straightforward approach consists in picking the 300 most frequent words (or n-grams, see above).</p>
 </div>
 <div class="paragraph">
-<p>In the case of a colection of texts to visualize (several documents instead of one), two possibilities:</p>
+<p>In the case of a collection of texts to visualize (several documents instead of one), two possibilities:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -828,7 +828,7 @@ table.CodeRay td.code>pre{padding:0}
 <p>(to go further, here is a webpage giving a simple example: <a href="http://www.tfidf.com/" class="bare">http://www.tfidf.com/</a>)</p>
 </div>
 <div class="paragraph">
-<p>Should you visualize the most frequent words in your corpus, or the words which rank highest according to tf-idf?</p>
+<p>So, should you visualize the most frequent words in your corpus, or the words which rank highest according to tf-idf?</p>
 </div>
 <div class="paragraph">
 <p>Both are interesting, as they show a different info. I&#8217;d suggest that the simple frequency count is easier to interpret.</p>
@@ -846,18 +846,9 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 </div>
 <div class="sect1">
-<h2 id="_more_tutorials_on_importing_data_to_gephi">More tutorials on importing data to Gephi</h2>
+<h2 id="_more_tutorials_on_working_with_semantic_networks">More tutorials on working with semantic networks</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/gephi/gephi/wiki/Import-CSV-Data">The Gephi wiki on importing csv</a></p>
-</li>
-<li>
-<p><a href="https://www.youtube.com/watch?v=3Im7vNRA2ns">Video "How to import a CSV into Gephi" by Jen Golbeck</a></p>
-</li>
-</ul>
-</div>
+
 </div>
 </div>
 <div class="sect1">
@@ -892,7 +883,7 @@ table.CodeRay td.code>pre{padding:0}
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2017-03-07 21:46:55 CET
+Last updated 2017-03-07 22:06:25 CET
 </div>
 </div>
 </body>
