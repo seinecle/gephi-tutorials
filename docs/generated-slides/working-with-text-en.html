@@ -91,17 +91,21 @@ table.CodeRay td.code>pre{padding:0}
 <section id="__escape_or_o_to_see_all_sides_f11_for_full_screen_s_for_speaker_notes"><h2>'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes</h2></section>
 <section id="_presentation_of_this_tutorial"><h2>Presentation of this tutorial</h2></section>
 <section><div class="paragraph"><p>This tutorial explains how to draw "semantic networks" like this one:</p></div>
-<div class="imageblock stretch" style="text-align: center"><img src="images/en/cooccurrences-computer/gephi-result-1-en.png" alt="gephi result 1 en" height="100%" /></div><div class="title">Figure 1. a semantic network</div>
-<div class="paragraph"><p>We call "semantic network" a visualization where textual items (words, expressions) are connected to each others, like above.</p></div></section>
-<section><div class="paragraph"><p>We will see in turn:</p></div>
+<div class="imageblock stretch" style="text-align: center"><img src="images/en/cooccurrences-computer/gephi-result-1-en.png" alt="gephi result 1 en" height="100%" /></div><div class="title">Figure 1. a semantic network</div></section>
+<section><div class="paragraph"><p>We call "semantic network" a visualization where textual items (words, expressions) are connected to each others, like above.</p></div>
+<div class="paragraph"><p>We will see in turn:
+==  !</p></div>
 <div class="ulist"><ul><li><p>why are semantic networks interesting</p></li><li><p>how to create a semantic network</p></li><li><p>tips and tricks to visualize semantic networks in the best possible way in Gephi</p></li></ul></div></section>
-<section id="_why_semantic_networks"><h2>Why semantic networks?</h2><div class="paragraph"><p>A text, or many texts, can be hard to summarize.</p></div>
-<div class="paragraph"><p>Drawing a semantic network highlights what are the most frequent terms, how they relate to each other, and reveal the different groups or "clusters" of they form.</p></div>
-<div class="paragraph"><p>Often, a cluster of terms characterizes a topic. Hence, converting a text into a semantic network helps detecting topics in the text, from micro-topics to the general themes discussed in the documents.</p></div></section>
+<section id="_why_semantic_networks"><h2>Why semantic networks?</h2></section>
+<section><div class="paragraph"><p>A text, or many texts, can be hard to summarize.</p></div>
+<div class="paragraph"><p>Drawing a semantic network highlights what are the most frequent terms, how they relate to each other, and reveal the different groups or "clusters" of they form.</p></div></section>
+<section><div class="paragraph"><p>Often, a cluster of terms characterizes a topic.
+Hence, converting a text into a semantic network helps detecting topics in the text, from micro-topics to the general themes discussed in the documents.</p></div></section>
 <section><div class="paragraph"><p>Semantic networks are regular networks, where:</p></div>
-<div class="ulist"><ul><li><p>nodes are words ("USA") or groups of words ("United States of America")</p></li><li><p>relations are, usually, signifying a co-occurrences: two words are connected if they co-occur.</p></li></ul></div>
-<div class="paragraph"><p>It means that if you have a textual network, you can visualize it with Gephi just like any other network. Yet, not everything is the same, and this tutorial provides tips and tricks on why textual data can be a bit different than other data.</p></div></section>
-<section></section>
+<div class="ulist"><ul><li><p>nodes are words ("USA") or groups of words ("United States of America")</p></li><li><p>relations are, usually, signifying a co-occurrences: two words are connected if they co-occur.</p></li></ul></div></section>
+<section><div class="paragraph"><p>It means that if you have a textual network, you can visualize it with Gephi just like any other network.</p></div>
+<div class="paragraph"><p>Yet, not everything is the same, and this tutorial provides tips and tricks on why textual data can be a bit different than other data.</p></div></section>
+<section id="_choosing_what_a_term_is_in_a_semantic_network"><h2>Choosing what a "term" is in a semantic network</h2></section>
 <section><div class="paragraph"><p>The starting point can be: a term is a single word. So in this sentence, we would have 7 terms:</p></div>
 <div class="literalblock"><div class="content"><pre>My sister lives in the United States (7 words -&gt; 7 terms)</pre></div></div>
 <div class="paragraph"><p>This means that each single term is a meaningful semantic unit.</p></div>
@@ -113,9 +117,10 @@ table.CodeRay td.code>pre{padding:0}
 <section><div class="paragraph"><p>To remove these little terms without informational value, the most basic approach is to keep a list of them, and remove any word from the text which belongs to this list.</p></div>
 <div class="paragraph"><p>You can find a list of these useless terms in many languages, called "stopwords", <a href="http://www.ranks.nl/stopwords/">on this website</a>.</p></div></section>
 <section><h3>2. Considering "n-grams"</h3></section>
-<section><div class="paragraph"><p>So, <code>United States</code> should probably be a meaningful unit, not just <code>United</code> and <code>States</code>. Because <code>United States</code> is composed of 2 terms, it is called a "bi-gram".</p></div>
-<div class="paragraph"><p>Trigrams are interesting as well obviously (eg, <code>chocolate ice cream</code>).</p></div>
-<div class="paragraph"><p>People often stop there, but I find that quadrigrams can be meaningful as well, if less frequent: <code>United States of America</code>, <code>functional magnetic resonance imaging</code>, <code>The New York Times</code>, etc.</p></div>
+<section><div class="paragraph"><p>So, <code>United States</code> should probably be a meaningful unit, not just <code>United</code> and <code>States</code>.
+Because <code>United States</code> is composed of 2 terms, it is called a "bi-gram".</p></div>
+<div class="paragraph"><p>Trigrams are interesting as well obviously (eg, <code>chocolate ice cream</code>).</p></div></section>
+<section><div class="paragraph"><p>People often stop there, but I find that quadrigrams can be meaningful as well, if less frequent: <code>United States of America</code>, <code>functional magnetic resonance imaging</code>, <code>The New York Times</code>, etc.</p></div>
 <div class="paragraph"><p>Many tools exist to extract n-grams from texts, for example <a href="http://homepages.inf.ed.ac.uk/lzhang10/ngram.html">these programs which are under a free license</a>.</p></div></section>
 <section><h3>2 bis. Considering "noun phrases"</h3></section>
 <section><div class="paragraph"><p>Another approach to go beyond single word terms (<code>United</code>, <code>States</code>) takes a different approach than n-grams. It says:</p></div>
@@ -126,24 +131,26 @@ table.CodeRay td.code>pre{padding:0}
 <div class="ulist"><ul><li><p>you need to detect adjectives and nouns in your text. This is language dependent (French put adjectives after nouns, for instance), and the processing is slow for large corpora.</p></li><li><p>what about verbs, and noun phrases comprising non adjectives, such as "United States <strong>of</strong> America"? These are not going to be included in the network.</p></li></ul></div></section>
 <section><h3>3. Stemming and lemmatization</h3></section>
 <section><div class="paragraph"><p><code>live</code>, <code>lives</code>, <code>lived</code>: in a semantic network, it is probably useless to have 3 nodes, one for each of these 3 forms of the same root.</p></div>
-<div class="ulist"><ul><li><p>Stemming consists in chopping the end of the words, so that here, we would have only <code>live</code>.</p></li><li><p>Lemmatization is the same, but in a more subtle way: it takes grammar into account. So, "good" and better" would be reduced to "good" because there is the same basic semantic unit behind these two words, even if their lettering differ completely.</p></li></ul></div>
-<div class="paragraph"><p>A tool performing lemmatization is <a href="https://textgrid.de/en/">TextGrid</a>. It has many functions for textual analysis, and lemmatization <a href="https://wiki.de.dariah.eu/display/TextGrid/The+Lemmatizer+Tool">is explained there</a>.</p></div></section>
-<section></section>
+<div class="ulist"><ul><li><p>Stemming consists in chopping the end of the words, so that here, we would have only <code>live</code>.</p></li><li><p>Lemmatization is the same, but in a more subtle way: it takes grammar into account. So, "good" and better" would be reduced to "good" because there is the same basic semantic unit behind these two words, even if their lettering differ completely.</p></li></ul></div></section>
+<section><div class="paragraph"><p>A tool performing lemmatization is <a href="https://textgrid.de/en/">TextGrid</a>.
+It has many functions for textual analysis, and lemmatization <a href="https://wiki.de.dariah.eu/display/TextGrid/The+Lemmatizer+Tool">is explained there</a>.</p></div></section>
+<section id="_should_we_represent_all_terms_in_a_semantic_network"><h2>Should we represent all terms in a semantic network?</h2></section>
 <section><div class="paragraph"><p>We have seen that some words are more interesting than others in a corpus:</p></div>
 <div class="ulist"><ul><li><p>stopwords should be removed,</p></li><li><p>some varieties of words (<code>lived</code>, <code>lives</code>) could be grouped together (<code>live</code>).</p></li><li><p>sequences of words (<code>baby phone</code>) can be added because they mean more than their words taken separately (<code>baby</code>, <code>phone</code>)</p></li></ul></div></section>
 <section><div class="paragraph"><p>Once this is done, we have transformed the text into plenty of words to represent. Should they all be included in the network?</p></div>
-<div class="paragraph"><p>Imagine we have a word appearing just once, in a single footnote of a text long of 2,000 pages. Should this word appear? Probably not.</p></div>
+<div class="paragraph"><p>Imagine we have a word appearing just once, in a single footnote of a text long of 2,000 pages.
+Should this word appear? Probably not.</p></div>
 <div class="paragraph"><p>Which rule to apply to keep or leave out a word?</p></div></section>
 <section><h3>1. Start with: how many words can fit in your visualization?</h3></section>
 <section><div class="paragraph"><p>A starting point can be the number of words you would like to see on a visualization. <strong>A ball park figure is 300 words max</strong>:</p></div>
-<div class="ulist"><ul><li><p>it already fills in all the space of a computer screen.</p></li><li><p>300 words provides enough information to allow micro-topics of a text to be distinguished</p></li></ul></div>
-<div class="paragraph"><p>More words can be crammed in, but in this case the viewer would have to take time zooming in and out, panning to explore the visualization. The viewer transforms into an analyst, instead of a regular reader.</p></div></section>
+<div class="ulist"><ul><li><p>it already fills in all the space of a computer screen.</p></li><li><p>300 words provides enough information to allow micro-topics of a text to be distinguished</p></li></ul></div></section>
+<section><div class="paragraph"><p>More words can be crammed in a visualization, but in this case the viewer would have to take time zooming in and out, panning to explore the visualization.
+The viewer transforms into an analyst, instead of a regular reader.</p></div></section>
 <section><h3>2. Representing only the most frequent terms</h3></section>
 <section><div class="paragraph"><p>If ~ 300 words would fit in the visualization of the network, and the text you start with contains 5,000 different words: which 300 words should be selected?</p></div>
 <div class="paragraph"><p>To visualize the semantic network <strong>for a long, single text</strong> the straightforward approach consists in picking the 300 most frequent words (or n-grams, see above).</p></div>
-<div class="paragraph"><p>In the case of a collection of texts to visualize (several documents instead of one), two possibilities:
-==  !</p></div>
-<div class="olist arabic"><ol class="arabic"><li><p>Either you also take the most frequent terms across these documents, like before</p></li><li><p>Or you can apply a more subtle rule called "tf-idf", detailed below.</p></li></ol></div></section>
+<div class="paragraph"><p>In the case of a collection of texts to visualize (several documents instead of one), two possibilities:</p></div></section>
+<section><div class="olist arabic"><ol class="arabic"><li><p>Either you also take the most frequent terms across these documents, like before</p></li><li><p>Or you can apply a more subtle rule called "tf-idf", detailed below.</p></li></ol></div></section>
 <section id="_tf_idf"><h2>tf-idf</h2><div class="paragraph"><p>The idea with tf-idf is that terms which appear in all documents are not interesting, because they are so ubiquitous.</p></div>
 <div class="paragraph"><p>Example: you retrieve all the webpages mentioning the word <code>Gephi</code>, and then want to visualize the semantic network of the texts contained in these webpages.</p></div></section>
 <section><div class="paragraph"><p>&#8594; by definition, all these webpages will mention Gephi, so Gephi will probably be the most frequent term.</p></div>

@@ -26,10 +26,12 @@ This tutorial explains how to draw "semantic networks" like this one:
 image::en/cooccurrences-computer/gephi-result-1-en.png[align="center", title="a semantic network"]
 
 
+==  !
+
 We call "semantic network" a visualization where textual items (words, expressions) are connected to each others, like above.
 
-==  !
 We will see in turn:
+==  !
 
 - why are semantic networks interesting
 - how to create a semantic network
@@ -37,12 +39,16 @@ We will see in turn:
 
 
 ==  Why semantic networks?
+==  !
 
 A text, or many texts, can be hard to summarize.
 
 Drawing a semantic network highlights what are the most frequent terms, how they relate to each other, and reveal the different groups or "clusters" of they form.
 
-Often, a cluster of terms characterizes a topic. Hence, converting a text into a semantic network helps detecting topics in the text, from micro-topics to the general themes discussed in the documents.
+==  !
+
+Often, a cluster of terms characterizes a topic.
+Hence, converting a text into a semantic network helps detecting topics in the text, from micro-topics to the general themes discussed in the documents.
 
 ==  !
 
@@ -52,13 +58,16 @@ Semantic networks are regular networks, where:
 
 - relations are, usually, signifying a co-occurrences: two words are connected if they co-occur.
 
-It means that if you have a textual network, you can visualize it with Gephi just like any other network. Yet, not everything is the same, and this tutorial provides tips and tricks on why textual data can be a bit different than other data.
-
 ==  !
+
+It means that if you have a textual network, you can visualize it with Gephi just like any other network.
+
+Yet, not everything is the same, and this tutorial provides tips and tricks on why textual data can be a bit different than other data.
+
+==  Choosing what a "term" is in a semantic network
 ==  !
 
 The starting point can be: a term is a single word. So in this sentence, we would have 7 terms:
-
 
  My sister lives in the United States (7 words -> 7 terms)
 
@@ -89,9 +98,12 @@ You can find a list of these useless terms in many languages, called "stopwords"
 ==== 2. Considering "n-grams"
 ==  !
 
-So, `United States` should probably be a meaningful unit, not just `United` and `States`. Because `United States` is composed of 2 terms, it is called a "bi-gram".
+So, `United States` should probably be a meaningful unit, not just `United` and `States`.
+Because `United States` is composed of 2 terms, it is called a "bi-gram".
 
 Trigrams are interesting as well obviously (eg, `chocolate ice cream`).
+
+==  !
 
 People often stop there, but I find that quadrigrams can be meaningful as well, if less frequent: `United States of America`, `functional magnetic resonance imaging`, `The New York Times`, etc.
 
@@ -128,10 +140,13 @@ This approach is interesting (implemented for example in the software http://www
 - Stemming consists in chopping the end of the words, so that here, we would have only `live`.
 - Lemmatization is the same, but in a more subtle way: it takes grammar into account. So, "good" and better" would be reduced to "good" because there is the same basic semantic unit behind these two words, even if their lettering differ completely.
 
-A tool performing lemmatization is https://textgrid.de/en/[TextGrid]. It has many functions for textual analysis, and lemmatization https://wiki.de.dariah.eu/display/TextGrid/The+Lemmatizer+Tool[is explained there].
-
-
 ==  !
+
+A tool performing lemmatization is https://textgrid.de/en/[TextGrid].
+It has many functions for textual analysis, and lemmatization https://wiki.de.dariah.eu/display/TextGrid/The+Lemmatizer+Tool[is explained there].
+
+
+==  Should we represent all terms in a semantic network?
 
 ==  !
 We have seen that some words are more interesting than others in a corpus:
@@ -143,7 +158,8 @@ We have seen that some words are more interesting than others in a corpus:
 ==  !
 Once this is done, we have transformed the text into plenty of words to represent. Should they all be included in the network?
 
-Imagine we have a word appearing just once, in a single footnote of a text long of 2,000 pages. Should this word appear? Probably not.
+Imagine we have a word appearing just once, in a single footnote of a text long of 2,000 pages.
+Should this word appear? Probably not.
 
 Which rule to apply to keep or leave out a word?
 
@@ -156,7 +172,10 @@ A starting point can be the number of words you would like to see on a visualiza
 - it already fills in all the space of a computer screen.
 - 300 words provides enough information to allow micro-topics of a text to be distinguished
 
-More words can be crammed in, but in this case the viewer would have to take time zooming in and out, panning to explore the visualization. The viewer transforms into an analyst, instead of a regular reader.
+==  !
+
+More words can be crammed in a visualization, but in this case the viewer would have to take time zooming in and out, panning to explore the visualization.
+The viewer transforms into an analyst, instead of a regular reader.
 
 ==  !
 ==== 2. Representing only the most frequent terms
@@ -166,8 +185,8 @@ If ~ 300 words would fit in the visualization of the network, and the text you s
 
 To visualize the semantic network *for a long, single text* the straightforward approach consists in picking the 300 most frequent words (or n-grams, see above).
 
-
 In the case of a collection of texts to visualize (several documents instead of one), two possibilities:
+
 ==  !
 
 1. Either you also take the most frequent terms across these documents, like before
@@ -208,8 +227,8 @@ tf-idf can be left for specialists of the textual data under consideration, afte
 ==  !
 
 
-
 ==  The end!
+
 Visit https://www.facebook.com/groups/gephi/[the Gephi group on Facebook] to get help,
 
 or visit https://seinecle.github.io/gephi-tutorials/[the website for more tutorials]
