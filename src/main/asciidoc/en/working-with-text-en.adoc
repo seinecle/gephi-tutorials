@@ -5,6 +5,7 @@ Clément Levallois <clementlevallois@gmail.com>
 last modified: {docdate}
 
 :icons!:
+:asciimath:
 :iconsfont:   font-awesome
 :revnumber: 1.0
 :example-caption!:
@@ -44,7 +45,7 @@ We will see in turn:
 
 A text, or many texts, can be hard to summarize.
 
-Drawing a semantic network highlights what are the most frequent terms, how they relate to each other, and reveal the different groups or "clusters" of they form.
+Drawing a semantic network highlights what are the most frequent terms, how they relate to each other, and reveal the different groups or "clusters" they form.
 
 //ST: !
 
@@ -57,7 +58,7 @@ Semantic networks are regular networks, where:
 
 - nodes are words ("USA") or groups of words ("United States of America")
 
-- relations are, usually, signifying a co-occurrences: two words are connected if they co-occur.
+- relations are, usually, signifying co-occurrences: two words are connected if they appear in the same document, or in the same paragraph, or same sentence... you decide.
 
 //ST: !
 
@@ -118,7 +119,7 @@ Many tools exist to extract n-grams from texts, for example http://homepages.inf
 
 Another approach to go beyond single word terms (`United`, `States`) takes a different approach than n-grams. It says:
 
- "delete all in the text except for all groups of words made of nouns and adjectives, ending by a noun"
+ "delete all in the text except for groups of words made of nouns and adjectives, ending by a noun"
 
 -> (these are called, a bit improperly, "noun phrases")
 
@@ -146,7 +147,6 @@ This approach is interesting (implemented for example in the software http://www
 
 A tool performing lemmatization is https://textgrid.de/en/[TextGrid].
 It has many functions for textual analysis, and lemmatization https://wiki.de.dariah.eu/display/TextGrid/The+Lemmatizer+Tool[is explained there].
-
 
 == Should we represent all terms in a semantic network?
 //ST: Should we represent all terms in a semantic network?
@@ -222,6 +222,126 @@ So, should you visualize the most frequent words in your corpus, or the words wh
 Both are interesting, as they show a different info. I'd suggest that the simple frequency count is easier to interpret.
 
 tf-idf can be left for specialists of the textual data under consideration, after they have been presented with the simple frequency count version.
+
+== Computing connections (edges) in the network
+//ST: Computing connections (edges) in the network
+
+//ST: !
+We now have extracted the most interesting / meaningful terms from the text.
+How to decide which connections make sense between them?
+
+//ST: !
+==== 1. Co-occurrences
+//ST: !
+
+Connections between terms are usually drawn from co-occurrences: two terms will be connected if they  appear next to each other in some pre-defined unit of text:
+
+- in the same sentence
+- in the same paragraph
+- in the same document (if the corpus is made of several documents)
+
+(note on vocabulary: in the following, we will call this a "unit of text").
+
+//ST: !
+For example, in bibliometrics (the study of the publications produced by scientists), this could give:
+
+- collect *abstracts* (short summaries) of all scientific articles discussing "nano-technologies".
+- so, abstracts are our units of text here.
+- two terms will be connected if they frequently appear *in the same abstracts*.
+
+//ST: !
+==== 2. What "weight" for the edges?
+//ST: !
+
+An edge between two terms will have:
+
+- weight of "1" if these two terms co-occur in just one unit of text.
+- weight of "2" if they co-occur in two units of text.
+- etc...
+
+The logic is simple, and yet there are some refinements to discuss. It will be up to you to decide what's preferable:
+
+//ST: !
+===== If 2 terms appear several times *in a given unit of text*, should their co-occurences be counted several times?
+//ST: !
+
+An example to clarify. Let's imagine that we are interested in webpages discussing nanotechnology.
+We want to draw the semantic network of the vocabulary used in these web pages.
+
+A co-occurrence is: when 2 terms are used on the same web page.
+
+Among the pages we collected, there is the Wikipedia page discussing nanotechnology:
+
+//ST: !
+
+[quote, 'https://en.wikipedia.org/wiki/Nanotechnology[Wikipedia]']
+____
+[red]#Nanotechnology# ("nanotech") is manipulation of matter on an atomic, [blue]#molecular#, and supramolecular scale.
+The earliest, widespread description of [red]#nanotechnology# referred to the particular technological goal of precisely manipulating atoms and molecules for fabrication of macroscale products, also now referred to as [blue]#molecular# [red]#nanotechnology#
+____
+
+//ST: !
+The question is:
+
+- should I count only *one* co-occurrence between `molecular` and `nanotechnology`, because it happened on this one web page?
+- or should I consider that `molecular` appears twice on this page, and `nanotechnology` three times, so *multiple* co-occurrences between these 2 terms should be counted, just on this page already?
+
+There is no exact response, and you can experiment with both possibilities.
+
+//ST: !
+===== If two terms are very frequent, is their co-occurrence really of interest?
+//ST: !
+
+Example:
+
+Chun-Yuen Teng, Yu-Ru Lin and Lada Adamic have studied (using Gephi!) https://arxiv.org/abs/1111.3919[the pairing of ingredients in cooking recipes].
+
+So, in their study the unit of text was the "recipe", and the terms in the semantic network where ingredients in all these recipes.
+
+//ST: !
+Just because they are so common, some ingredients (like `flour`, `sugar`, `salt`) are bound to appear more frequently in the same recipes (to co-occur), than infrequent ingredients.
+
+The authors of this study chose to highlight *complementary ingredients*: some ingredients appear often used together in the same recipes, _even if they are ingredients which are quite rarely used_.
+
+"Complementary" here means that these ingredients have some interesting relationship: when one is used, the other "must" be used as well.
+
+//ST: !
+
+If we just count co-occurrences, this special relationship between infrequent complementary ingredients will be lost: by definition, 2 infrequent ingredients can't co-occurr often.
+
+To fix this, a solution consists in comparing how many times the 2 ingredients co-occur, with how frequent they are in all recipes:
+
+-> ingredients co-occurring _each and every time they are used_ will have a large edge weight,
+
+-> ingredients co-occuring many times, _but also appearing many times in different recipes_, will get a low edge weight.
+
+//ST: !
+
+A simple formula does this operation. For ingredients A and B:
+
+ weight of edge between A and B =
+ nb of recipes where A & B co-occur
+ divided by
+ (total nb of recipes where A appear x total nb of recipes where B appear)
+
+//ST: !
+
+Logs are often added to this formula, which is called "Pointwise mutual information":
+
+[asciimath]
+++++
+PMI = log((p(A, B)) /(p(A) p(B)))
+++++
+
+//ST: !
+We now have nodes and their relations: a semantic network. Let's see now how to visualize it in Gephi.
+
+
+== Visualizing semantic networks with Gephi
+//ST: Visualizing semantic networks with Gephi
+//ST: !
+
+
 
 == (to be continued)
 //ST: (to be continued)

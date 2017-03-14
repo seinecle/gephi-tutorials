@@ -86,7 +86,7 @@ table.CodeRay td.code>pre{padding:0}
 .CodeRay .insert .insert{color:#080}
 .CodeRay .delete .delete{color:#800}
 .CodeRay .change .change{color:#66f}
-.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.1.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.1.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>Working with text in Gephi</h1><div class="preamble"><div class="paragraph"><p>last modified: 2017-03-07</p></div>
+.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.1.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.1.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>Working with text in Gephi</h1><div class="preamble"><div class="paragraph"><p>last modified: 2017-03-08</p></div>
 <div class="imageblock stretch" style="text-align: center"><img src="images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450" /></div></div><p class="author"><small>Clément Levallois</small></p></section>
 <section id="__escape_or_o_to_see_all_sides_f11_for_full_screen_s_for_speaker_notes"><h2>'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes</h2></section>
 <section id="_presentation_of_this_tutorial"><h2>Presentation of this tutorial</h2></section>
@@ -97,11 +97,11 @@ table.CodeRay td.code>pre{padding:0}
 <section><div class="ulist"><ul><li><p>why are semantic networks interesting</p></li><li><p>how to create a semantic network</p></li><li><p>tips and tricks to visualize semantic networks in the best possible way in Gephi</p></li></ul></div></section>
 <section id="_why_semantic_networks"><h2>Why semantic networks?</h2></section>
 <section><div class="paragraph"><p>A text, or many texts, can be hard to summarize.</p></div>
-<div class="paragraph"><p>Drawing a semantic network highlights what are the most frequent terms, how they relate to each other, and reveal the different groups or "clusters" of they form.</p></div></section>
+<div class="paragraph"><p>Drawing a semantic network highlights what are the most frequent terms, how they relate to each other, and reveal the different groups or "clusters" they form.</p></div></section>
 <section><div class="paragraph"><p>Often, a cluster of terms characterizes a topic.
 Hence, converting a text into a semantic network helps detecting topics in the text, from micro-topics to the general themes discussed in the documents.</p></div></section>
 <section><div class="paragraph"><p>Semantic networks are regular networks, where:</p></div>
-<div class="ulist"><ul><li><p>nodes are words ("USA") or groups of words ("United States of America")</p></li><li><p>relations are, usually, signifying a co-occurrences: two words are connected if they co-occur.</p></li></ul></div></section>
+<div class="ulist"><ul><li><p>nodes are words ("USA") or groups of words ("United States of America")</p></li><li><p>relations are, usually, signifying co-occurrences: two words are connected if they appear in the same document, or in the same paragraph, or same sentence&#8230;&#8203; you decide.</p></li></ul></div></section>
 <section><div class="paragraph"><p>It means that if you have a textual network, you can visualize it with Gephi just like any other network.</p></div>
 <div class="paragraph"><p>Yet, not everything is the same, and this tutorial provides tips and tricks on why textual data can be a bit different than other data.</p></div></section>
 <section id="_choosing_what_a_term_is_in_a_semantic_network"><h2>Choosing what a "term" is in a semantic network</h2></section>
@@ -123,7 +123,7 @@ Because <code>United States</code> is composed of 2 terms, it is called a "bi-gr
 <div class="paragraph"><p>Many tools exist to extract n-grams from texts, for example <a href="http://homepages.inf.ed.ac.uk/lzhang10/ngram.html">these programs which are under a free license</a>.</p></div></section>
 <section><h3>2 bis. Considering "noun phrases"</h3></section>
 <section><div class="paragraph"><p>Another approach to go beyond single word terms (<code>United</code>, <code>States</code>) takes a different approach than n-grams. It says:</p></div>
-<div class="literalblock"><div class="content"><pre>"delete all in the text except for all groups of words made of nouns and adjectives, ending by a noun"</pre></div></div>
+<div class="literalblock"><div class="content"><pre>"delete all in the text except for groups of words made of nouns and adjectives, ending by a noun"</pre></div></div>
 <div class="paragraph"><p>&#8594; (these are called, a bit improperly, "noun phrases")</p></div>
 <div class="paragraph"><p>Take <code>United States</code>: it is a noun (<code>States</code>) preceded by an adjective (<code>United</code>). It will be considered as a valid term.</p></div></section>
 <section><div class="paragraph"><p>This approach is interesting (implemented for example in the software <a href="http://www.vosviewer.com">Vosviewer</a>), but it has drawbacks:</p></div>
@@ -160,6 +160,50 @@ The viewer transforms into an analyst, instead of a regular reader.</p></div></s
 <section><div class="paragraph"><p>So, should you visualize the most frequent words in your corpus, or the words which rank highest according to tf-idf?</p></div>
 <div class="paragraph"><p>Both are interesting, as they show a different info. I&#8217;d suggest that the simple frequency count is easier to interpret.</p></div>
 <div class="paragraph"><p>tf-idf can be left for specialists of the textual data under consideration, after they have been presented with the simple frequency count version.</p></div></section>
+<section id="_computing_connections_edges_in_the_network"><h2>Computing connections (edges) in the network</h2></section>
+<section><div class="paragraph"><p>We now have extracted the most interesting / meaningful terms from the text.
+How to decide which connections make sense between them?</p></div></section>
+<section><h3>1. Co-occurrences</h3></section>
+<section><div class="paragraph"><p>Connections between terms are usually drawn from co-occurrences: two terms will be connected if they  appear next to each other in some pre-defined unit of text:</p></div>
+<div class="ulist"><ul><li><p>in the same sentence</p></li><li><p>in the same paragraph</p></li><li><p>in the same document (if the corpus is made of several documents)</p></li></ul></div>
+<div class="paragraph"><p>(note on vocabulary: in the following, we will call this a "unit of text").</p></div></section>
+<section><div class="paragraph"><p>For example, in bibliometrics (the study of the publications produced by scientists), this could give:</p></div>
+<div class="ulist"><ul><li><p>collect <strong>abstracts</strong> (short summaries) of all scientific articles discussing "nano-technologies".</p></li><li><p>so, abstracts are our units of text here.</p></li><li><p>two terms will be connected if they frequently appear <strong>in the same abstracts</strong>.</p></li></ul></div></section>
+<section><h3>2. What "weight" for the edges?</h3></section>
+<section><div class="paragraph"><p>An edge between two terms will have:</p></div>
+<div class="ulist"><ul><li><p>weight of "1" if these two terms co-occur in just one unit of text.</p></li><li><p>weight of "2" if they co-occur in two units of text.</p></li><li><p>etc&#8230;&#8203;</p></li></ul></div>
+<div class="paragraph"><p>The logic is simple, and yet there are some refinements to discuss. It will be up to you to decide what&#8217;s preferable:</p></div></section>
+<section><h4>If 2 terms appear several times <strong>in a given unit of text</strong>, should their co-occurences be counted several times?</h4></section>
+<section><div class="paragraph"><p>An example to clarify. Let&#8217;s imagine that we are interested in webpages discussing nanotechnology.
+We want to draw the semantic network of the vocabulary used in these web pages.</p></div>
+<div class="paragraph"><p>A co-occurrence is: when 2 terms are used on the same web page.</p></div>
+<div class="paragraph"><p>Among the pages we collected, there is the Wikipedia page discussing nanotechnology:</p></div></section>
+<section><div class="quoteblock"><blockquote><div class="paragraph"><p><span class="red">Nanotechnology</span> ("nanotech") is manipulation of matter on an atomic, <span class="blue">molecular</span>, and supramolecular scale.
+The earliest, widespread description of <span class="red">nanotechnology</span> referred to the particular technological goal of precisely manipulating atoms and molecules for fabrication of macroscale products, also now referred to as <span class="blue">molecular</span> <span class="red">nanotechnology</span></p></div></blockquote><div class="attribution">&#8212; <a href="https://en.wikipedia.org/wiki/Nanotechnology">Wikipedia</a></div></div></section>
+<section><div class="paragraph"><p>The question is:</p></div>
+<div class="ulist"><ul><li><p>should I count only <strong>one</strong> co-occurrence between <code>molecular</code> and <code>nanotechnology</code>, because it happened on this one web page?</p></li><li><p>or should I consider that <code>molecular</code> appears twice on this page, and <code>nanotechnology</code> three times, so <strong>multiple</strong> co-occurrences between these 2 terms should be counted, just on this page already?</p></li></ul></div>
+<div class="paragraph"><p>There is no exact response, and you can experiment with both possibilities.</p></div></section>
+<section><h4>If two terms are very frequent, is their co-occurrence really of interest?</h4></section>
+<section><div class="paragraph"><p>Example:</p></div>
+<div class="paragraph"><p>Chun-Yuen Teng, Yu-Ru Lin and Lada Adamic have studied (using Gephi!) <a href="https://arxiv.org/abs/1111.3919">the pairing of ingredients in cooking recipes</a>.</p></div>
+<div class="paragraph"><p>So, in their study the unit of text was the "recipe", and the terms in the semantic network where ingredients in all these recipes.</p></div></section>
+<section><div class="paragraph"><p>Just because they are so common, some ingredients (like <code>flour</code>, <code>sugar</code>, <code>salt</code>) are bound to appear more frequently in the same recipes (to co-occur), than infrequent ingredients.</p></div>
+<div class="paragraph"><p>The authors of this study chose to highlight <strong>complementary ingredients</strong>: some ingredients appear often used together in the same recipes, <em>even if they are ingredients which are quite rarely used</em>.</p></div>
+<div class="paragraph"><p>"Complementary" here means that these ingredients have some interesting relationship: when one is used, the other "must" be used as well.</p></div></section>
+<section><div class="paragraph"><p>If we just count co-occurrences, this special relationship between infrequent complementary ingredients will be lost: by definition, 2 infrequent ingredients can&#8217;t co-occurr often.</p></div>
+<div class="paragraph"><p>To fix this, a solution consists in comparing how many times the 2 ingredients co-occur, with how frequent they are in all recipes:</p></div>
+<div class="paragraph"><p>&#8594; ingredients co-occurring <em>each and every time they are used</em> will have a large edge weight,</p></div>
+<div class="paragraph"><p>&#8594; ingredients co-occuring many times, <em>but also appearing many times in different recipes</em>, will get a low edge weight.</p></div></section>
+<section><div class="paragraph"><p>A simple formula does this operation. For ingredients A and B:</p></div>
+<div class="literalblock"><div class="content"><pre>weight of edge between A and B =
+nb of recipes where A &amp; B co-occur
+divided by
+(total nb of recipes where A appear x total nb of recipes where B appear)</pre></div></div></section>
+<section><div class="paragraph"><p>Logs are often added to this formula, which is called "Pointwise mutual information":</p></div>
+<div class="stemblock"><div class="content">\$PMI = log((p(A, B)) /(p(A) p(B)))\$</div></div></section>
+<section><div class="paragraph"><p>We now have nodes and their relations: a semantic network. Let&#8217;s see now how to visualize it in Gephi.</p></div></section>
+<section id="_visualizing_semantic_networks_with_gephi"><h2>Visualizing semantic networks with Gephi</h2></section>
+<section></section>
 <section id="__to_be_continued"><h2>(to be continued)</h2></section>
 <section id="_more_tutorials_on_working_with_semantic_networks"><h2>More tutorials on working with semantic networks</h2></section>
 <section></section>
@@ -167,9 +211,9 @@ The viewer transforms into an analyst, instead of a regular reader.</p></div></s
 <div class="paragraph"><p>or visit <a href="https://seinecle.github.io/gephi-tutorials/">the website for more tutorials</a>
     <!-- Start of StatCounter Code for Default Guide -->
     <script type="text/javascript">
-        var sc_project = ;
+        var sc_project = 11238920;
         var sc_invisible = 1;
-        var sc_security = "";
+        var sc_security = "11238920";
         var scJsHost = (("https:" == document.location.protocol) ?
             "https://secure." : "http://www.");
         document.write("<sc" + "ript type='text/javascript' src='" +
@@ -179,7 +223,7 @@ The viewer transforms into an analyst, instead of a regular reader.</p></div></s
     <noscript><div class="statcounter"><a title="site stats"
     href="http://statcounter.com/" target="_blank"><img
     class="statcounter"
-    src="//c.statcounter.com//0//1/" alt="site
+    src="//c.statcounter.com/11238920/0/11238920/1/" alt="site
     stats"></a></div></noscript>
     <!-- End of StatCounter Code for Default Guide --></p></div></section></div></div><script src="reveal.js-3.1.0/lib/js/head.min.js"></script><script src="reveal.js-3.1.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
 Reveal.initialize({
