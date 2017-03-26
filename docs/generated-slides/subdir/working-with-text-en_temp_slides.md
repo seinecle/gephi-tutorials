@@ -338,13 +338,140 @@ We now have nodes and their relations: a semantic network. Let's see now how to 
 ==  !
 
 
+==  !
+==== 1. Downloading a dataset for this tutorial
+==  !
+We need a dataset to practice. This is a semantic network of 250 terms and 19,613 relations:
 
-==  (to be continued)
+link:../resources/semantic-networks/pubmed_abstracts_network.zip[download this zip file] and unzip it on your computer.
+
+
+==  !
+
+The network was built from the short summaries ("abstracts") of 1484 research articles from the PubMed database of scientific reports, retrieved by conducting this query:
+
+"social neuroscience" OR "neuroeco*" OR "decision neuroscience"
+
+-> The query can be see https://www.ncbi.nlm.nih.gov/pubmed?term=(%22social%20neuroscience%22%20OR%20%22neuroeco*%22%20OR%20%22decision%20neuroscience%22)[online here].
+(it comprises more than 1484 results, because some articles have no abstract).
+
+We used https://github.com/seinecle/Cowo[Cowo] to create the network from these 1484 short pieces of text, based on co-occurrences.
+
+==  !
+
+- Open the file inside the zip (`pubmed_abstracts_network.gml`) in Gephi:
+
+[.stretch]
+image::semantic-import-1-en.png[align="center", title="First view of the network"]
+
+
+
+==  !
+Several steps will make this network intelligible
+
+
+==  !
+1. Showing the labels of the nodes:
+
+[.stretch]
+image::showing-node-labels.png[align="center", title="showing node labels"]
+
+
+
+==  !
+[start=2]
+2. Making the edges (relations) invisible, because they clutter the view
+
+[.stretch]
+image::hiding-edges.png[align="center", title="hiding edges"]
+
+
+
+==  !
+[start=3]
+3. Reducing node size to the minimum (0.5) because we just need labels
+
+[.stretch]
+image::semantic-resize-nodes1-en.png[align="center", title="Making nodes disappear"]
+
+
+
+==  !
+[start=4]
+4. Detect communities with the "modularity" function in the statistics panel
+
+ see tutorial 'simple project from A to Z' for this step
+
+==  !
+[start=5]
+5. Give a different color to each community
+
+-> each group of terms, distinguished by a color, will represent a topic.
+
+[.stretch]
+image::semantic-coloring-communities-1-en.png[align="center", title="Coloring nodes - first step"]
+
+
+
+==  !
+[start=6]
+6. We then need to assign this node color to their labels:
+
+[.stretch]
+image::Coloring-nodes---second-step.png[align="center", title="Coloring nodes - second step"]
+
+
+
+==  !
+[start=7]
+7. Spatializing the network with Force Atlas 2 will place related terms next to each other, because they co-occur:
+
+Some parameters have been modified:
+
+[.stretch]
+image::semantic-spatializing-1-en.png[align="center", title="Spatializing the network"]
+
+
+==  !
+[start=8]
+8. The network so far:
+
+[.stretch]
+image::semantic-spatializing-2-en.png[align="center", title="The network - colored and spatialized"]
+
+
+
+==  !
+[start=9]
+9. Apply 2 more layouts to enhance readability:
+
+- "Expansion" to spread nodes (just select it and click on Run a couple of times)
+- "Label Adjust" to move labels around so that they don't overlap
+
+[.stretch]
+image::semantic-spatializing-3-en.png[align="center", title="Spreading labels"]
+
+
+==  !
+[start=10]
+10. Switching to the preview panel
+
+- A number of parameters must be modified (to show Labels, hide edges, etc.)
+
+[.stretch]
+image::semantic-preview-1-en.png[align="center", title="The preview panel"]
+
+
+==  !
+The network is now ready to be exported to pdf, png or svg file formats.
 
 
 ==  More tutorials on working with semantic networks
 ==  !
+Other software / web apps to visualize texts as networks:
 
+- http://textexture.com/
+- http://www.vosviewer.com/
 
 ==  The end!
 

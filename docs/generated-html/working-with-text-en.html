@@ -543,8 +543,11 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_2_what_weight_for_the_edges">2. What "weight" for the edges?</a></li>
 </ul>
 </li>
-<li><a href="#_visualizing_semantic_networks_with_gephi">Visualizing semantic networks with Gephi</a></li>
-<li><a href="#__to_be_continued">(to be continued)</a></li>
+<li><a href="#_visualizing_semantic_networks_with_gephi">Visualizing semantic networks with Gephi</a>
+<ul class="sectlevel3">
+<li><a href="#_1_downloading_a_dataset_for_this_tutorial">1. Downloading a dataset for this tutorial</a></li>
+</ul>
+</li>
 <li><a href="#_more_tutorials_on_working_with_semantic_networks">More tutorials on working with semantic networks</a></li>
 <li><a href="#_the_end">the end</a></li>
 </ul>
@@ -554,7 +557,7 @@ table.CodeRay td.code>pre{padding:0}
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>last modified: 2017-03-08</p>
+<p>last modified: 2017-03-27</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -1021,19 +1024,247 @@ divided by
 <div class="sect1">
 <h2 id="_visualizing_semantic_networks_with_gephi">Visualizing semantic networks with Gephi</h2>
 <div class="sectionbody">
-
+<div class="sect3">
+<h4 id="_1_downloading_a_dataset_for_this_tutorial">1. Downloading a dataset for this tutorial</h4>
+<div class="paragraph">
+<p>We need a dataset to practice. This is a semantic network of 250 terms and 19,613 relations:</p>
+</div>
+<div class="paragraph">
+<p><a href="../resources/semantic-networks/pubmed_abstracts_network.zip">download this zip file</a> and unzip it on your computer.</p>
+</div>
+<div class="paragraph">
+<p>The network was built from the short summaries ("abstracts") of 1484 research articles from the PubMed database of scientific reports, retrieved by conducting this query:</p>
+</div>
+<div class="paragraph">
+<p>"social neuroscience" OR "neuroeco*" OR "decision neuroscience"</p>
+</div>
+<div class="paragraph">
+<p>&#8594; The query can be see <a href="https://www.ncbi.nlm.nih.gov/pubmed?term=(%22social%20neuroscience%22%20OR%20%22neuroeco*%22%20OR%20%22decision%20neuroscience%22)">online here</a>.
+(it comprises more than 1484 results, because some articles have no abstract).</p>
+</div>
+<div class="paragraph">
+<p>We used <a href="https://github.com/seinecle/Cowo">Cowo</a> to create the network from these 1484 short pieces of text, based on co-occurrences.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Open the file inside the zip (<code>pubmed_abstracts_network.gml</code>) in Gephi:</p>
+</li>
+</ul>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/semantic-import-1-en.png" alt="semantic import 1 en">
+</div>
+<div class="title">Figure 2. First view of the network</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>Several steps will make this network intelligible</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Showing the labels of the nodes:</p>
+</li>
+</ol>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/showing-node-labels.png" alt="showing node labels">
+</div>
+<div class="title">Figure 3. showing node labels</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>Making the edges (relations) invisible, because they clutter the view</p>
+</li>
+</ol>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/hiding-edges.png" alt="hiding edges">
+</div>
+<div class="title">Figure 4. hiding edges</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>Reducing node size to the minimum (0.5) because we just need labels</p>
+</li>
+</ol>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/semantic-resize-nodes1-en.png" alt="semantic resize nodes1 en">
+</div>
+<div class="title">Figure 5. Making nodes disappear</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>Detect communities with the "modularity" function in the statistics panel</p>
+<div class="literalblock">
+<div class="content">
+<pre>see tutorial 'simple project from A to Z' for this step</pre>
 </div>
 </div>
-<div class="sect1">
-<h2 id="__to_be_continued">(to be continued)</h2>
-<div class="sectionbody">
-
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>Give a different color to each community</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&#8594; each group of terms, distinguished by a color, will represent a topic.</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/semantic-coloring-communities-1-en.png" alt="semantic coloring communities 1 en">
+</div>
+<div class="title">Figure 6. Coloring nodes - first step</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="6">
+<li>
+<p>We then need to assign this node color to their labels:</p>
+</li>
+</ol>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Coloring-nodes---second-step.png" alt="Coloring nodes   second step">
+</div>
+<div class="title">Figure 7. Coloring nodes - second step</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="7">
+<li>
+<p>Spatializing the network with Force Atlas 2 will place related terms next to each other, because they co-occur:</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Some parameters have been modified:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/semantic-spatializing-1-en.png" alt="semantic spatializing 1 en">
+</div>
+<div class="title">Figure 8. Spatializing the network</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="8">
+<li>
+<p>The network so far:</p>
+</li>
+</ol>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/semantic-spatializing-2-en.png" alt="semantic spatializing 2 en">
+</div>
+<div class="title">Figure 9. The network - colored and spatialized</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="9">
+<li>
+<p>Apply 2 more layouts to enhance readability:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>"Expansion" to spread nodes (just select it and click on Run a couple of times)</p>
+</li>
+<li>
+<p>"Label Adjust" to move labels around so that they don&#8217;t overlap</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/semantic-spatializing-3-en.png" alt="semantic spatializing 3 en">
+</div>
+<div class="title">Figure 10. Spreading labels</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="10">
+<li>
+<p>Switching to the preview panel</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A number of parameters must be modified (to show Labels, hide edges, etc.)</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/semantic-preview-1-en.png" alt="semantic preview 1 en">
+</div>
+<div class="title">Figure 11. The preview panel</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>The network is now ready to be exported to pdf, png or svg file formats.</p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_more_tutorials_on_working_with_semantic_networks">More tutorials on working with semantic networks</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p>Other software / web apps to visualize texts as networks:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://textexture.com/" class="bare">http://textexture.com/</a></p>
+</li>
+<li>
+<p><a href="http://www.vosviewer.com/" class="bare">http://www.vosviewer.com/</a></p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -1068,7 +1299,7 @@ divided by
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2017-03-08 12:14:26 CET
+Last updated 2017-03-27 01:20:43 CEST
 </div>
 </div>
 </body>

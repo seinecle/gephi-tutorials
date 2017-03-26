@@ -11,6 +11,8 @@
 
     <properties>
         <doc>en/working-with-text-en.adoc</doc>
+        <bookPath>${basedir}/src/main/asciidoc/en/book</bookPath>
+        <bookName>book-gephi-tutorials-en.adoc</bookName>
         <medium.publish>false</medium.publish>
         <asciidoctorj.diagram.version>1.5.0</asciidoctorj.diagram.version>
     </properties>
@@ -326,8 +328,8 @@
                         <configuration>
                             <mainClass>net.clementlevallois.mainclasses.AsciidocAssembler</mainClass>
                             <arguments>
-                                <argument>${basedir}/src/main/asciidoc/en</argument>
-                                <argument>${basedir}/src/main/asciidoc/en/book</argument>
+                                <argument>${bookPath}</argument>
+                                <argument>${bookName}</argument>
                             </arguments>
                         </configuration>
                     </plugin>
@@ -387,9 +389,11 @@
                                     <goal>process-asciidoc</goal>
                                 </goals>
                                 <configuration>
-                                    <sourceDocumentName>${doc}</sourceDocumentName>
-                                    <outputDirectory>${basedir}/docs/generated-pdf</outputDirectory>
-                                    <backend>pdf</backend>
+                                    <sourceDocumentName>en/book/${bookName}</sourceDocumentName>
+                                    <!--<outputDirectory>${basedir}/src/main/asciidoc/en/book</outputDirectory>-->
+                                    <!--<backend>pdf</backend>-->
+                                    <backend>docbook</backend>
+                                    <doctype>book</doctype>
                                     <sourceHighlighter>coderay</sourceHighlighter>
                                     <attributes>
                                         <path>${basedir}</path>                                
@@ -406,8 +410,92 @@
                             </execution>
                         </executions>
                     </plugin>
+                    <plugin>
+                        <groupId>com.agilejava.docbkx</groupId>
+                        <artifactId>docbkx-maven-plugin</artifactId>
+                        <version>2.0.15</version>
+                        <dependencies>
+                            <dependency>
+                                <groupId>net.sf.docbook</groupId>
+                                <artifactId>docbook-xml</artifactId>
+                                <version>5.0-all</version>
+                                <classifier>resources</classifier>
+                                <type>zip</type>
+                                <scope>runtime</scope>
+                            </dependency>
+                            <dependency>
+                                <groupId>net.sf.xslthl</groupId>
+                                <artifactId>xslthl</artifactId>
+                                <version>2.0.1</version>
+                                <scope>runtime</scope>
+                            </dependency>
+                            <dependency>
+                                <groupId>net.sf.offo</groupId>
+                                <artifactId>fop-hyph</artifactId>
+                                <version>1.2</version>
+                                <scope>runtime</scope>
+                            </dependency>
+                        </dependencies>
+                        <executions>
+                            <execution>
+                                <id>generate-pdf</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>generate-pdf</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <sourceDirectory>${project.build.directory}/generated-docs</sourceDirectory>
+                            <targetDirectory>${project.build.directory}/generated-docs</targetDirectory>
+                            <!--<includes>example-manual.xml</includes>-->
+                            <xincludeSupported>true</xincludeSupported>
+                            <highlightSource>1</highlightSource>
+                            <paperType>A4</paperType>
+                            <fop1Extensions>1</fop1Extensions>
+                            <foCustomization>${basedir}/src/main/asciidoc/en/book/custom.xls</foCustomization>
+                            <!-- NOTE imgSrcPath is handled by AsciiDoc settings -->
+                            <imgSrcPath></imgSrcPath>
+                            <!-- FIXME highlightSource not working! -->
+                            <highlightSource>1</highlightSource>
+                        </configuration>
+                    </plugin>
                 </plugins>
             </build>
         </profile>                
+        <profile>
+            <id>toc-generation</id>
+            <activation>
+                <property>
+                    <name>toc-generation</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <version>1.2.1</version>
+                        <executions>
+                            <execution>
+                                <phase>validate</phase>
+                                <goals>
+                                    <goal>java</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <mainClass>net.clementlevallois.mainclasses.TableOfContentGenerator</mainClass>
+                            <arguments>
+                                <argument>${basedir}/src/main/asciidoc/en</argument>
+                                <argument>${basedir}/src/main/asciidoc/en/book</argument>
+                            </arguments>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>                
+
     </profiles>
 </project>

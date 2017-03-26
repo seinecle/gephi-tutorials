@@ -1,0 +1,15 @@
+C:\Users\levallois\Google Drive\open\gephi tutorials\docs\src\main\asciidoc\en\how should Gephi be pronounced.adoc
+C:\Users\levallois\Google Drive\open\gephi tutorials\docs\src\main\asciidoc\en\what-is-gephi-en.adoc
+C:\Users\levallois\Google Drive\open\gephi tutorials\docs\src\main\asciidoc\en\history-en.adoc
+C:\Users\levallois\Google Drive\open\gephi tutorials\docs\src\main\asciidoc\en\simple-project-from-a-to-z-en.adoc
+C:\Users\levallois\Google Drive\open\gephi tutorials\docs\src\main\asciidoc\en\using-filters-en.adoc
+C:\Users\levallois\Google Drive\open\gephi tutorials\docs\src\main\asciidoc\en\importing-csv-data-in-gephi-en.adoc
+C:\Users\levallois\Google Drive\open\gephi tutorials\docs\src\main\asciidoc\en\working-with-text-en.adoc
+C:\Users\levallois\Google Drive\open\gephi tutorials\docs\src\main\asciidoc\en\plugins\cooccurrences-computer-en.adoc
+C:\Users\levallois\Google Drive\open\gephi tutorials\docs\src\main\asciidoc\en\plugins\k-partite-bi-partite-graph-en.adoc
+C:\Users\levallois\Google Drive\open\gephi tutorials\docs\src\main\asciidoc\en\plugins\semantic-web-importer-en.adoc
+C:\Users\levallois\Google Drive\open\gephi tutorials\docs\src\main\asciidoc\en\plugins\similarity-computer-en.adoc
+C:\Users\levallois\Google Drive\open\gephi tutorials\docs\src\main\asciidoc\en\plugins\twitter-streaming-importer-en.adoc
+C:\Users\levallois\Google Drive\open\gephi tutorials\docs\src\main\asciidoc\en\developers\working-from-the-source-en.adoc
+C:\Users\levallois\Google Drive\open\gephi tutorials\docs\src\main\asciidoc\en\dynamic\converting-a-network-with-dates-into-dynamic.adoc
+C:\Users\levallois\Google Drive\open\gephi tutorials\docs\src\main\asciidoc\en\dynamic\creating-a-simple-dynamic-network.adoc

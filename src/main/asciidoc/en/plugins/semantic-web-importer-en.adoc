@@ -129,7 +129,7 @@ image::en/semantic-web-importer/setup_2.png[align="center", title="SPARQL Query"
 
 Go back to the Graph preview and you should see a graph. Use the layout tab to get a more intuitive rendering.
 
-image::en/semantic-web-importer/result_1.png[align="center", title"result"]
+image::en/semantic-web-importer/result_1.png[align="center", title="result"]
 
 //ST: Details
 == Details

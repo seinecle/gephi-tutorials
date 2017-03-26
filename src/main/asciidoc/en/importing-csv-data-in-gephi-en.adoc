@@ -1,4 +1,4 @@
-= Importing data in Gephi
+= Importing csv data in Gephi
 Clément Levallois <clementlevallois@gmail.com>
 2017-02-03
 
