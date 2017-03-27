@@ -24,7 +24,7 @@
       </attribute>
       <attribute id="start date" title="start date" type="string"></attribute>
       <attribute id="end date" title="end date" type="string"></attribute>
-      <attribute id="peak moment" title="peak moment" type="integer"></attribute>
+      <attribute id="peak moment" title="peak moment" type="string"></attribute>
     </attributes>
     <nodes>
       <node id="11" label="Valjean">
@@ -35,8 +35,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.7442922374429224"></attvalue>
           <attvalue for="closnesscentrality" value="0.6576576576576577"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="04/04/1933"></attvalue>
-          <attvalue for="end date" value="04/04/1938"></attvalue>
+          <attvalue for="start date" value="04/04/1833"></attvalue>
+          <attvalue for="end date" value="04/04/1838"></attvalue>
           <attvalue for="peak moment" value="13061"></attvalue>
         </attvalues>
         <viz:size value="100.0"></viz:size>
@@ -51,8 +51,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.4988584474885843"></attvalue>
           <attvalue for="closnesscentrality" value="0.437125748502994"></attvalue>
           <attvalue for="modularity_class" value="0"></attvalue>
-          <attvalue for="start date" value="01/01/2018"></attvalue>
-          <attvalue for="end date" value="01/01/2023"></attvalue>
+          <attvalue for="start date" value="01/01/1818"></attvalue>
+          <attvalue for="end date" value="01/01/1823"></attvalue>
           <attvalue for="peak moment" value="44013"></attvalue>
         </attvalues>
         <viz:size value="34.263336"></viz:size>
@@ -67,8 +67,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.5490867579908677"></attvalue>
           <attvalue for="closnesscentrality" value="0.47096774193548385"></attvalue>
           <attvalue for="modularity_class" value="4"></attvalue>
-          <attvalue for="start date" value="30/10/1950"></attvalue>
-          <attvalue for="end date" value="30/10/1955"></attvalue>
+          <attvalue for="start date" value="30/10/1850"></attvalue>
+          <attvalue for="end date" value="30/10/1855"></attvalue>
           <attvalue for="peak moment" value="19479"></attvalue>
         </attvalues>
         <viz:size value="26.517065"></viz:size>
@@ -83,8 +83,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.6118721461187215"></attvalue>
           <attvalue for="closnesscentrality" value="0.5177304964539007"></attvalue>
           <attvalue for="modularity_class" value="3"></attvalue>
-          <attvalue for="start date" value="12/09/1945"></attvalue>
-          <attvalue for="end date" value="12/09/1950"></attvalue>
+          <attvalue for="start date" value="12/09/1845"></attvalue>
+          <attvalue for="end date" value="12/09/1850"></attvalue>
           <attvalue for="peak moment" value="17604"></attvalue>
         </attvalues>
         <viz:size value="26.029507"></viz:size>
@@ -99,8 +99,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.6027397260273972"></attvalue>
           <attvalue for="closnesscentrality" value="0.5328467153284672"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="06/11/1935"></attvalue>
-          <attvalue for="end date" value="06/11/1940"></attvalue>
+          <attvalue for="start date" value="06/11/1835"></attvalue>
+          <attvalue for="end date" value="06/11/1840"></attvalue>
           <attvalue for="peak moment" value="14006"></attvalue>
         </attvalues>
         <viz:size value="24.764015"></viz:size>
@@ -115,8 +115,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.58675799086758"></attvalue>
           <attvalue for="closnesscentrality" value="0.5214285714285715"></attvalue>
           <attvalue for="modularity_class" value="1"></attvalue>
-          <attvalue for="start date" value="03/03/2028"></attvalue>
-          <attvalue for="end date" value="03/03/2033"></attvalue>
+          <attvalue for="start date" value="03/03/1828"></attvalue>
+          <attvalue for="end date" value="03/03/1833"></attvalue>
           <attvalue for="peak moment" value="47729"></attvalue>
         </attvalues>
         <viz:size value="16.334606"></viz:size>
@@ -131,8 +131,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.591324200913242"></attvalue>
           <attvalue for="closnesscentrality" value="0.5214285714285715"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="18/07/1937"></attvalue>
-          <attvalue for="end date" value="18/07/1942"></attvalue>
+          <attvalue for="start date" value="18/07/1837"></attvalue>
+          <attvalue for="end date" value="18/07/1842"></attvalue>
           <attvalue for="peak moment" value="14628"></attvalue>
         </attvalues>
         <viz:size value="12.8658495"></viz:size>
@@ -147,8 +147,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.5593607305936072"></attvalue>
           <attvalue for="closnesscentrality" value="0.4866666666666667"></attvalue>
           <attvalue for="modularity_class" value="3"></attvalue>
-          <attvalue for="start date" value="14/03/1938"></attvalue>
-          <attvalue for="end date" value="14/03/1943"></attvalue>
+          <attvalue for="start date" value="14/03/1838"></attvalue>
+          <attvalue for="end date" value="14/03/1843"></attvalue>
           <attvalue for="peak moment" value="14868"></attvalue>
         </attvalues>
         <viz:size value="11.544991"></viz:size>
@@ -163,8 +163,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.46118721461187184"></attvalue>
           <attvalue for="closnesscentrality" value="0.3945945945945946"></attvalue>
           <attvalue for="modularity_class" value="4"></attvalue>
-          <attvalue for="start date" value="31/01/1948"></attvalue>
-          <attvalue for="end date" value="31/01/1953"></attvalue>
+          <attvalue for="start date" value="31/01/1848"></attvalue>
+          <attvalue for="end date" value="31/01/1853"></attvalue>
           <attvalue for="peak moment" value="18475"></attvalue>
         </attvalues>
         <viz:size value="10.658997"></viz:size>
@@ -179,8 +179,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.4840182648401827"></attvalue>
           <attvalue for="closnesscentrality" value="0.44242424242424244"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="18/07/1936"></attvalue>
-          <attvalue for="end date" value="18/07/1941"></attvalue>
+          <attvalue for="start date" value="18/07/1836"></attvalue>
+          <attvalue for="end date" value="18/07/1841"></attvalue>
           <attvalue for="peak moment" value="14263"></attvalue>
         </attvalues>
         <viz:size value="9.670608"></viz:size>
@@ -195,8 +195,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.5456621004566209"></attvalue>
           <attvalue for="closnesscentrality" value="0.48026315789473684"></attvalue>
           <attvalue for="modularity_class" value="3"></attvalue>
-          <attvalue for="start date" value="17/06/1940"></attvalue>
-          <attvalue for="end date" value="17/06/1945"></attvalue>
+          <attvalue for="start date" value="17/06/1840"></attvalue>
+          <attvalue for="end date" value="17/06/1845"></attvalue>
           <attvalue for="peak moment" value="15692"></attvalue>
         </attvalues>
         <viz:size value="9.438335"></viz:size>
@@ -211,8 +211,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.5273972602739725"></attvalue>
           <attvalue for="closnesscentrality" value="0.46794871794871795"></attvalue>
           <attvalue for="modularity_class" value="1"></attvalue>
-          <attvalue for="start date" value="02/11/1931"></attvalue>
-          <attvalue for="end date" value="02/11/1936"></attvalue>
+          <attvalue for="start date" value="02/11/1831"></attvalue>
+          <attvalue for="end date" value="02/11/1836"></attvalue>
           <attvalue for="peak moment" value="12541"></attvalue>
         </attvalues>
         <viz:size value="9.075947"></viz:size>
@@ -227,8 +227,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.47374429223744285"></attvalue>
           <attvalue for="closnesscentrality" value="0.3967391304347826"></attvalue>
           <attvalue for="modularity_class" value="3"></attvalue>
-          <attvalue for="start date" value="28/09/1943"></attvalue>
-          <attvalue for="end date" value="28/09/1948"></attvalue>
+          <attvalue for="start date" value="28/09/1843"></attvalue>
+          <attvalue for="end date" value="28/09/1848"></attvalue>
           <attvalue for="peak moment" value="16889"></attvalue>
         </attvalues>
         <viz:size value="8.735899"></viz:size>
@@ -243,8 +243,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.44406392694063895"></attvalue>
           <attvalue for="closnesscentrality" value="0.40782122905027934"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="02/01/1938"></attvalue>
-          <attvalue for="end date" value="02/01/1943"></attvalue>
+          <attvalue for="start date" value="02/01/1838"></attvalue>
+          <attvalue for="end date" value="02/01/1843"></attvalue>
           <attvalue for="peak moment" value="14794"></attvalue>
         </attvalues>
         <viz:size value="8.542633"></viz:size>
@@ -259,8 +259,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.4840182648401828"></attvalue>
           <attvalue for="closnesscentrality" value="0.44242424242424244"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="19/11/1939"></attvalue>
-          <attvalue for="end date" value="19/11/1944"></attvalue>
+          <attvalue for="start date" value="18/11/1839"></attvalue>
+          <attvalue for="end date" value="18/11/1844"></attvalue>
           <attvalue for="peak moment" value="15480"></attvalue>
         </attvalues>
         <viz:size value="6.9637423"></viz:size>
@@ -275,8 +275,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.5342465753424659"></attvalue>
           <attvalue for="closnesscentrality" value="0.48344370860927155"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="30/11/1933"></attvalue>
-          <attvalue for="end date" value="30/11/1938"></attvalue>
+          <attvalue for="start date" value="30/11/1833"></attvalue>
+          <attvalue for="end date" value="30/11/1838"></attvalue>
           <attvalue for="peak moment" value="13300"></attvalue>
         </attvalues>
         <viz:size value="6.956682"></viz:size>
@@ -291,8 +291,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.47716894977168955"></attvalue>
           <attvalue for="closnesscentrality" value="0.4010989010989011"></attvalue>
           <attvalue for="modularity_class" value="1"></attvalue>
-          <attvalue for="start date" value="17/09/1930"></attvalue>
-          <attvalue for="end date" value="17/09/1935"></attvalue>
+          <attvalue for="start date" value="17/09/1830"></attvalue>
+          <attvalue for="end date" value="17/09/1835"></attvalue>
           <attvalue for="peak moment" value="12130"></attvalue>
         </attvalues>
         <viz:size value="6.1070547"></viz:size>
@@ -307,8 +307,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.4600456621004564"></attvalue>
           <attvalue for="closnesscentrality" value="0.42441860465116277"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="30/03/1937"></attvalue>
-          <attvalue for="end date" value="30/03/1942"></attvalue>
+          <attvalue for="start date" value="30/03/1837"></attvalue>
+          <attvalue for="end date" value="30/03/1842"></attvalue>
           <attvalue for="peak moment" value="14518"></attvalue>
         </attvalues>
         <viz:size value="5.471907"></viz:size>
@@ -323,8 +323,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.48744292237442916"></attvalue>
           <attvalue for="closnesscentrality" value="0.43452380952380953"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="22/02/1936"></attvalue>
-          <attvalue for="end date" value="22/02/1941"></attvalue>
+          <attvalue for="start date" value="22/02/1836"></attvalue>
+          <attvalue for="end date" value="22/02/1841"></attvalue>
           <attvalue for="peak moment" value="14114"></attvalue>
         </attvalues>
         <viz:size value="5.4358897"></viz:size>
@@ -339,8 +339,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.48744292237442916"></attvalue>
           <attvalue for="closnesscentrality" value="0.4010989010989011"></attvalue>
           <attvalue for="modularity_class" value="3"></attvalue>
-          <attvalue for="start date" value="23/01/1942"></attvalue>
-          <attvalue for="end date" value="23/01/1947"></attvalue>
+          <attvalue for="start date" value="23/01/1842"></attvalue>
+          <attvalue for="end date" value="23/01/1847"></attvalue>
           <attvalue for="peak moment" value="16276"></attvalue>
         </attvalues>
         <viz:size value="4.8816442"></viz:size>
@@ -355,8 +355,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.5182648401826484"></attvalue>
           <attvalue for="closnesscentrality" value="0.4620253164556962"></attvalue>
           <attvalue for="modularity_class" value="1"></attvalue>
-          <attvalue for="start date" value="01/06/1934"></attvalue>
-          <attvalue for="end date" value="01/06/1939"></attvalue>
+          <attvalue for="start date" value="01/06/1834"></attvalue>
+          <attvalue for="end date" value="01/06/1839"></attvalue>
           <attvalue for="peak moment" value="13485"></attvalue>
         </attvalues>
         <viz:size value="4.868184"></viz:size>
@@ -371,8 +371,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.5228310502283104"></attvalue>
           <attvalue for="closnesscentrality" value="0.46794871794871795"></attvalue>
           <attvalue for="modularity_class" value="1"></attvalue>
-          <attvalue for="start date" value="12/12/1930"></attvalue>
-          <attvalue for="end date" value="12/12/1935"></attvalue>
+          <attvalue for="start date" value="12/12/1830"></attvalue>
+          <attvalue for="end date" value="12/12/1835"></attvalue>
           <attvalue for="peak moment" value="12217"></attvalue>
         </attvalues>
         <viz:size value="4.811495"></viz:size>
@@ -387,8 +387,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.5228310502283104"></attvalue>
           <attvalue for="closnesscentrality" value="0.46794871794871795"></attvalue>
           <attvalue for="modularity_class" value="1"></attvalue>
-          <attvalue for="start date" value="22/04/1935"></attvalue>
-          <attvalue for="end date" value="22/04/1940"></attvalue>
+          <attvalue for="start date" value="22/04/1835"></attvalue>
+          <attvalue for="end date" value="22/04/1840"></attvalue>
           <attvalue for="peak moment" value="13810"></attvalue>
         </attvalues>
         <viz:size value="4.811495"></viz:size>
@@ -403,8 +403,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.5136986301369864"></attvalue>
           <attvalue for="closnesscentrality" value="0.4620253164556962"></attvalue>
           <attvalue for="modularity_class" value="1"></attvalue>
-          <attvalue for="start date" value="15/05/2029"></attvalue>
-          <attvalue for="end date" value="15/05/2034"></attvalue>
+          <attvalue for="start date" value="15/05/1829"></attvalue>
+          <attvalue for="end date" value="15/05/1834"></attvalue>
           <attvalue for="peak moment" value="48167"></attvalue>
         </attvalues>
         <viz:size value="4.660431"></viz:size>
@@ -419,8 +419,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.476027397260274"></attvalue>
           <attvalue for="closnesscentrality" value="0.3945945945945946"></attvalue>
           <attvalue for="modularity_class" value="3"></attvalue>
-          <attvalue for="start date" value="08/08/1940"></attvalue>
-          <attvalue for="end date" value="08/08/1945"></attvalue>
+          <attvalue for="start date" value="08/08/1840"></attvalue>
+          <attvalue for="end date" value="08/08/1845"></attvalue>
           <attvalue for="peak moment" value="15745"></attvalue>
         </attvalues>
         <viz:size value="4.34703"></viz:size>
@@ -435,8 +435,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.476027397260274"></attvalue>
           <attvalue for="closnesscentrality" value="0.3945945945945946"></attvalue>
           <attvalue for="modularity_class" value="3"></attvalue>
-          <attvalue for="start date" value="22/04/1944"></attvalue>
-          <attvalue for="end date" value="22/04/1949"></attvalue>
+          <attvalue for="start date" value="22/04/1844"></attvalue>
+          <attvalue for="end date" value="22/04/1849"></attvalue>
           <attvalue for="peak moment" value="17097"></attvalue>
         </attvalues>
         <viz:size value="4.34703"></viz:size>
@@ -451,8 +451,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.4691780821917808"></attvalue>
           <attvalue for="closnesscentrality" value="0.3924731182795699"></attvalue>
           <attvalue for="modularity_class" value="3"></attvalue>
-          <attvalue for="start date" value="18/02/1944"></attvalue>
-          <attvalue for="end date" value="18/02/1949"></attvalue>
+          <attvalue for="start date" value="18/02/1844"></attvalue>
+          <attvalue for="end date" value="18/02/1849"></attvalue>
           <attvalue for="peak moment" value="17032"></attvalue>
         </attvalues>
         <viz:size value="4.1967864"></viz:size>
@@ -467,8 +467,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.4691780821917808"></attvalue>
           <attvalue for="closnesscentrality" value="0.3924731182795699"></attvalue>
           <attvalue for="modularity_class" value="3"></attvalue>
-          <attvalue for="start date" value="22/04/1943"></attvalue>
-          <attvalue for="end date" value="22/04/1948"></attvalue>
+          <attvalue for="start date" value="22/04/1843"></attvalue>
+          <attvalue for="end date" value="22/04/1848"></attvalue>
           <attvalue for="peak moment" value="16732"></attvalue>
         </attvalues>
         <viz:size value="4.1967864"></viz:size>
@@ -483,8 +483,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.43721461187214605"></attvalue>
           <attvalue for="closnesscentrality" value="0.3802083333333333"></attvalue>
           <attvalue for="modularity_class" value="1"></attvalue>
-          <attvalue for="start date" value="09/02/1932"></attvalue>
-          <attvalue for="end date" value="09/02/1937"></attvalue>
+          <attvalue for="start date" value="09/02/1832"></attvalue>
+          <attvalue for="end date" value="09/02/1837"></attvalue>
           <attvalue for="peak moment" value="12640"></attvalue>
         </attvalues>
         <viz:size value="4.046993"></viz:size>
@@ -499,8 +499,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.36529680365296785"></attvalue>
           <attvalue for="closnesscentrality" value="0.33796296296296297"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="19/10/1939"></attvalue>
-          <attvalue for="end date" value="19/10/1944"></attvalue>
+          <attvalue for="start date" value="18/10/1839"></attvalue>
+          <attvalue for="end date" value="18/10/1844"></attvalue>
           <attvalue for="peak moment" value="15450"></attvalue>
         </attvalues>
         <viz:size value="4.038788"></viz:size>
@@ -515,8 +515,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.4372146118721461"></attvalue>
           <attvalue for="closnesscentrality" value="0.3613861386138614"></attvalue>
           <attvalue for="modularity_class" value="3"></attvalue>
-          <attvalue for="start date" value="07/06/1941"></attvalue>
-          <attvalue for="end date" value="07/06/1946"></attvalue>
+          <attvalue for="start date" value="07/06/1841"></attvalue>
+          <attvalue for="end date" value="07/06/1846"></attvalue>
           <attvalue for="peak moment" value="16047"></attvalue>
         </attvalues>
         <viz:size value="4.026853"></viz:size>
@@ -531,8 +531,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.3280821917808218"></attvalue>
           <attvalue for="closnesscentrality" value="0.3054393305439331"></attvalue>
           <attvalue for="modularity_class" value="0"></attvalue>
-          <attvalue for="start date" value="20/10/2019"></attvalue>
-          <attvalue for="end date" value="20/10/2024"></attvalue>
+          <attvalue for="start date" value="18/10/1818"></attvalue>
+          <attvalue for="end date" value="18/10/1824"></attvalue>
           <attvalue for="peak moment" value="44671"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -547,8 +547,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.4509132420091321"></attvalue>
           <attvalue for="closnesscentrality" value="0.41954022988505746"></attvalue>
           <attvalue for="modularity_class" value="0"></attvalue>
-          <attvalue for="start date" value="14/07/2022"></attvalue>
-          <attvalue for="end date" value="14/07/2027"></attvalue>
+          <attvalue for="start date" value="14/07/1822"></attvalue>
+          <attvalue for="end date" value="14/07/1827"></attvalue>
           <attvalue for="peak moment" value="45671"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -563,8 +563,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.4509132420091321"></attvalue>
           <attvalue for="closnesscentrality" value="0.41954022988505746"></attvalue>
           <attvalue for="modularity_class" value="0"></attvalue>
-          <attvalue for="start date" value="04/05/2026"></attvalue>
-          <attvalue for="end date" value="04/05/2031"></attvalue>
+          <attvalue for="start date" value="04/05/1826"></attvalue>
+          <attvalue for="end date" value="04/05/1831"></attvalue>
           <attvalue for="peak moment" value="47061"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -579,8 +579,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.3280821917808218"></attvalue>
           <attvalue for="closnesscentrality" value="0.3054393305439331"></attvalue>
           <attvalue for="modularity_class" value="0"></attvalue>
-          <attvalue for="start date" value="28/02/2022"></attvalue>
-          <attvalue for="end date" value="28/02/2027"></attvalue>
+          <attvalue for="start date" value="28/02/1822"></attvalue>
+          <attvalue for="end date" value="28/02/1827"></attvalue>
           <attvalue for="peak moment" value="45532"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -595,8 +595,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.3280821917808218"></attvalue>
           <attvalue for="closnesscentrality" value="0.3054393305439331"></attvalue>
           <attvalue for="modularity_class" value="0"></attvalue>
-          <attvalue for="start date" value="01/01/2027"></attvalue>
-          <attvalue for="end date" value="01/01/2032"></attvalue>
+          <attvalue for="start date" value="01/01/1827"></attvalue>
+          <attvalue for="end date" value="01/01/1832"></attvalue>
           <attvalue for="peak moment" value="47300"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -611,8 +611,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.3280821917808218"></attvalue>
           <attvalue for="closnesscentrality" value="0.3054393305439331"></attvalue>
           <attvalue for="modularity_class" value="0"></attvalue>
-          <attvalue for="start date" value="14/03/2020"></attvalue>
-          <attvalue for="end date" value="14/03/2025"></attvalue>
+          <attvalue for="start date" value="14/03/1818"></attvalue>
+          <attvalue for="end date" value="14/03/1825"></attvalue>
           <attvalue for="peak moment" value="44818"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -627,8 +627,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.3280821917808218"></attvalue>
           <attvalue for="closnesscentrality" value="0.3054393305439331"></attvalue>
           <attvalue for="modularity_class" value="0"></attvalue>
-          <attvalue for="start date" value="13/01/2024"></attvalue>
-          <attvalue for="end date" value="13/01/2029"></attvalue>
+          <attvalue for="start date" value="13/01/1824"></attvalue>
+          <attvalue for="end date" value="13/01/1829"></attvalue>
           <attvalue for="peak moment" value="46216"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -643,8 +643,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.3280821917808218"></attvalue>
           <attvalue for="closnesscentrality" value="0.3054393305439331"></attvalue>
           <attvalue for="modularity_class" value="0"></attvalue>
-          <attvalue for="start date" value="12/12/2020"></attvalue>
-          <attvalue for="end date" value="12/12/2025"></attvalue>
+          <attvalue for="start date" value="12/12/1818"></attvalue>
+          <attvalue for="end date" value="12/12/1825"></attvalue>
           <attvalue for="peak moment" value="45089"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -659,8 +659,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.3280821917808218"></attvalue>
           <attvalue for="closnesscentrality" value="0.3054393305439331"></attvalue>
           <attvalue for="modularity_class" value="0"></attvalue>
-          <attvalue for="start date" value="07/07/2022"></attvalue>
-          <attvalue for="end date" value="07/07/2027"></attvalue>
+          <attvalue for="start date" value="07/07/1822"></attvalue>
+          <attvalue for="end date" value="07/07/1827"></attvalue>
           <attvalue for="peak moment" value="45664"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -675,8 +675,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.42123287671232845"></attvalue>
           <attvalue for="closnesscentrality" value="0.3989071038251366"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="10/10/1935"></attvalue>
-          <attvalue for="end date" value="10/10/1940"></attvalue>
+          <attvalue for="start date" value="10/10/1835"></attvalue>
+          <attvalue for="end date" value="10/10/1840"></attvalue>
           <attvalue for="peak moment" value="13980"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -691,8 +691,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.4463470319634701"></attvalue>
           <attvalue for="closnesscentrality" value="0.41954022988505746"></attvalue>
           <attvalue for="modularity_class" value="4"></attvalue>
-          <attvalue for="start date" value="26/12/1947"></attvalue>
-          <attvalue for="end date" value="26/12/1952"></attvalue>
+          <attvalue for="start date" value="26/12/1847"></attvalue>
+          <attvalue for="end date" value="26/12/1852"></attvalue>
           <attvalue for="peak moment" value="18440"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -707,8 +707,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.42123287671232845"></attvalue>
           <attvalue for="closnesscentrality" value="0.3989071038251366"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="25/01/1935"></attvalue>
-          <attvalue for="end date" value="25/01/1940"></attvalue>
+          <attvalue for="start date" value="25/01/1835"></attvalue>
+          <attvalue for="end date" value="25/01/1840"></attvalue>
           <attvalue for="peak moment" value="13721"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -723,8 +723,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.42123287671232845"></attvalue>
           <attvalue for="closnesscentrality" value="0.3989071038251366"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="26/06/1939"></attvalue>
-          <attvalue for="end date" value="26/06/1944"></attvalue>
+          <attvalue for="start date" value="26/06/1839"></attvalue>
+          <attvalue for="end date" value="26/06/1844"></attvalue>
           <attvalue for="peak moment" value="15336"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -739,8 +739,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.42123287671232845"></attvalue>
           <attvalue for="closnesscentrality" value="0.3989071038251366"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="25/08/1939"></attvalue>
-          <attvalue for="end date" value="25/08/1944"></attvalue>
+          <attvalue for="start date" value="25/08/1839"></attvalue>
+          <attvalue for="end date" value="25/08/1844"></attvalue>
           <attvalue for="peak moment" value="15397"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -755,8 +755,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.40296803652967983"></attvalue>
           <attvalue for="closnesscentrality" value="0.3476190476190476"></attvalue>
           <attvalue for="modularity_class" value="4"></attvalue>
-          <attvalue for="start date" value="23/07/1949"></attvalue>
-          <attvalue for="end date" value="23/07/1954"></attvalue>
+          <attvalue for="start date" value="23/07/1849"></attvalue>
+          <attvalue for="end date" value="23/07/1854"></attvalue>
           <attvalue for="peak moment" value="19016"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -771,8 +771,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.40296803652967983"></attvalue>
           <attvalue for="closnesscentrality" value="0.3476190476190476"></attvalue>
           <attvalue for="modularity_class" value="4"></attvalue>
-          <attvalue for="start date" value="04/03/1948"></attvalue>
-          <attvalue for="end date" value="04/03/1953"></attvalue>
+          <attvalue for="start date" value="04/03/1848"></attvalue>
+          <attvalue for="end date" value="04/03/1853"></attvalue>
           <attvalue for="peak moment" value="18510"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -787,8 +787,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.40296803652967983"></attvalue>
           <attvalue for="closnesscentrality" value="0.3476190476190476"></attvalue>
           <attvalue for="modularity_class" value="4"></attvalue>
-          <attvalue for="start date" value="13/05/1945"></attvalue>
-          <attvalue for="end date" value="13/05/1950"></attvalue>
+          <attvalue for="start date" value="13/05/1845"></attvalue>
+          <attvalue for="end date" value="13/05/1850"></attvalue>
           <attvalue for="peak moment" value="17484"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -803,8 +803,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.40296803652967983"></attvalue>
           <attvalue for="closnesscentrality" value="0.3476190476190476"></attvalue>
           <attvalue for="modularity_class" value="4"></attvalue>
-          <attvalue for="start date" value="13/04/1948"></attvalue>
-          <attvalue for="end date" value="13/04/1953"></attvalue>
+          <attvalue for="start date" value="13/04/1848"></attvalue>
+          <attvalue for="end date" value="13/04/1853"></attvalue>
           <attvalue for="peak moment" value="18549"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -819,8 +819,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.40296803652967983"></attvalue>
           <attvalue for="closnesscentrality" value="0.3476190476190476"></attvalue>
           <attvalue for="modularity_class" value="4"></attvalue>
-          <attvalue for="start date" value="31/08/1950"></attvalue>
-          <attvalue for="end date" value="31/08/1955"></attvalue>
+          <attvalue for="start date" value="31/08/1850"></attvalue>
+          <attvalue for="end date" value="31/08/1855"></attvalue>
           <attvalue for="peak moment" value="19421"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -835,8 +835,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.40296803652967983"></attvalue>
           <attvalue for="closnesscentrality" value="0.3476190476190476"></attvalue>
           <attvalue for="modularity_class" value="4"></attvalue>
-          <attvalue for="start date" value="09/01/1945"></attvalue>
-          <attvalue for="end date" value="09/01/1950"></attvalue>
+          <attvalue for="start date" value="09/01/1845"></attvalue>
+          <attvalue for="end date" value="09/01/1850"></attvalue>
           <attvalue for="peak moment" value="17357"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -851,8 +851,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.3543378995433788"></attvalue>
           <attvalue for="closnesscentrality" value="0.3230088495575221"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="13/10/1940"></attvalue>
-          <attvalue for="end date" value="13/10/1945"></attvalue>
+          <attvalue for="start date" value="13/10/1840"></attvalue>
+          <attvalue for="end date" value="13/10/1845"></attvalue>
           <attvalue for="peak moment" value="15809"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -867,8 +867,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.42123287671232845"></attvalue>
           <attvalue for="closnesscentrality" value="0.3989071038251366"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="27/04/1937"></attvalue>
-          <attvalue for="end date" value="27/04/1942"></attvalue>
+          <attvalue for="start date" value="27/04/1837"></attvalue>
+          <attvalue for="end date" value="27/04/1842"></attvalue>
           <attvalue for="peak moment" value="14545"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -883,8 +883,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.42808219178082163"></attvalue>
           <attvalue for="closnesscentrality" value="0.4010989010989011"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="07/07/1936"></attvalue>
-          <attvalue for="end date" value="07/07/1941"></attvalue>
+          <attvalue for="start date" value="07/07/1836"></attvalue>
+          <attvalue for="end date" value="07/07/1841"></attvalue>
           <attvalue for="peak moment" value="14252"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -899,8 +899,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.45547945205479423"></attvalue>
           <attvalue for="closnesscentrality" value="0.4101123595505618"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="15/03/1939"></attvalue>
-          <attvalue for="end date" value="15/03/1944"></attvalue>
+          <attvalue for="start date" value="15/03/1839"></attvalue>
+          <attvalue for="end date" value="15/03/1844"></attvalue>
           <attvalue for="peak moment" value="15234"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -915,8 +915,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.45547945205479423"></attvalue>
           <attvalue for="closnesscentrality" value="0.4101123595505618"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="20/09/1940"></attvalue>
-          <attvalue for="end date" value="20/09/1945"></attvalue>
+          <attvalue for="start date" value="18/09/1840"></attvalue>
+          <attvalue for="end date" value="18/09/1845"></attvalue>
           <attvalue for="peak moment" value="15785"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -931,8 +931,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.45547945205479423"></attvalue>
           <attvalue for="closnesscentrality" value="0.4101123595505618"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="21/12/1939"></attvalue>
-          <attvalue for="end date" value="21/12/1944"></attvalue>
+          <attvalue for="start date" value="21/12/1839"></attvalue>
+          <attvalue for="end date" value="21/12/1844"></attvalue>
           <attvalue for="peak moment" value="15513"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -947,8 +947,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.45547945205479423"></attvalue>
           <attvalue for="closnesscentrality" value="0.4101123595505618"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="31/07/1937"></attvalue>
-          <attvalue for="end date" value="31/07/1942"></attvalue>
+          <attvalue for="start date" value="31/07/1837"></attvalue>
+          <attvalue for="end date" value="31/07/1842"></attvalue>
           <attvalue for="peak moment" value="14641"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -963,8 +963,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.45547945205479423"></attvalue>
           <attvalue for="closnesscentrality" value="0.4101123595505618"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="30/08/1938"></attvalue>
-          <attvalue for="end date" value="30/08/1943"></attvalue>
+          <attvalue for="start date" value="30/08/1838"></attvalue>
+          <attvalue for="end date" value="30/08/1843"></attvalue>
           <attvalue for="peak moment" value="15037"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -979,8 +979,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.3652968036529678"></attvalue>
           <attvalue for="closnesscentrality" value="0.3443396226415094"></attvalue>
           <attvalue for="modularity_class" value="1"></attvalue>
-          <attvalue for="start date" value="20/08/1933"></attvalue>
-          <attvalue for="end date" value="20/08/1938"></attvalue>
+          <attvalue for="start date" value="18/08/1833"></attvalue>
+          <attvalue for="end date" value="18/08/1838"></attvalue>
           <attvalue for="peak moment" value="13200"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -995,8 +995,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.3869863013698628"></attvalue>
           <attvalue for="closnesscentrality" value="0.35436893203883496"></attvalue>
           <attvalue for="modularity_class" value="1"></attvalue>
-          <attvalue for="start date" value="16/08/1930"></attvalue>
-          <attvalue for="end date" value="16/08/1935"></attvalue>
+          <attvalue for="start date" value="16/08/1830"></attvalue>
+          <attvalue for="end date" value="16/08/1835"></attvalue>
           <attvalue for="peak moment" value="12101"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -1011,8 +1011,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.43721461187214583"></attvalue>
           <attvalue for="closnesscentrality" value="0.40555555555555556"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="16/05/1936"></attvalue>
-          <attvalue for="end date" value="16/05/1941"></attvalue>
+          <attvalue for="start date" value="16/05/1836"></attvalue>
+          <attvalue for="end date" value="16/05/1841"></attvalue>
           <attvalue for="peak moment" value="14200"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -1027,8 +1027,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.4303652968036527"></attvalue>
           <attvalue for="closnesscentrality" value="0.40331491712707185"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="29/03/1941"></attvalue>
-          <attvalue for="end date" value="29/03/1946"></attvalue>
+          <attvalue for="start date" value="29/03/1841"></attvalue>
+          <attvalue for="end date" value="29/03/1846"></attvalue>
           <attvalue for="peak moment" value="15978"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -1043,8 +1043,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.30753424657534234"></attvalue>
           <attvalue for="closnesscentrality" value="0.2908366533864542"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="01/07/1936"></attvalue>
-          <attvalue for="end date" value="01/07/1941"></attvalue>
+          <attvalue for="start date" value="01/07/1836"></attvalue>
+          <attvalue for="end date" value="01/07/1841"></attvalue>
           <attvalue for="peak moment" value="14246"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -1059,8 +1059,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.4029680365296803"></attvalue>
           <attvalue for="closnesscentrality" value="0.37055837563451777"></attvalue>
           <attvalue for="modularity_class" value="3"></attvalue>
-          <attvalue for="start date" value="06/12/1946"></attvalue>
-          <attvalue for="end date" value="06/12/1951"></attvalue>
+          <attvalue for="start date" value="06/12/1846"></attvalue>
+          <attvalue for="end date" value="06/12/1851"></attvalue>
           <attvalue for="peak moment" value="18055"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -1075,8 +1075,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.3801369863013698"></attvalue>
           <attvalue for="closnesscentrality" value="0.3526570048309179"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="01/09/1936"></attvalue>
-          <attvalue for="end date" value="01/09/1941"></attvalue>
+          <attvalue for="start date" value="01/09/1836"></attvalue>
+          <attvalue for="end date" value="01/09/1841"></attvalue>
           <attvalue for="peak moment" value="14305"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -1091,8 +1091,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.3253424657534245"></attvalue>
           <attvalue for="closnesscentrality" value="0.3080168776371308"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="05/08/1937"></attvalue>
-          <attvalue for="end date" value="05/08/1942"></attvalue>
+          <attvalue for="start date" value="05/08/1837"></attvalue>
+          <attvalue for="end date" value="05/08/1842"></attvalue>
           <attvalue for="peak moment" value="14646"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -1107,8 +1107,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.3801369863013697"></attvalue>
           <attvalue for="closnesscentrality" value="0.3526570048309179"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="18/11/1940"></attvalue>
-          <attvalue for="end date" value="18/11/1945"></attvalue>
+          <attvalue for="start date" value="18/11/1840"></attvalue>
+          <attvalue for="end date" value="18/11/1845"></attvalue>
           <attvalue for="peak moment" value="15844"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -1123,8 +1123,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.430365296803653"></attvalue>
           <attvalue for="closnesscentrality" value="0.35960591133004927"></attvalue>
           <attvalue for="modularity_class" value="3"></attvalue>
-          <attvalue for="start date" value="04/04/1945"></attvalue>
-          <attvalue for="end date" value="04/04/1950"></attvalue>
+          <attvalue for="start date" value="04/04/1845"></attvalue>
+          <attvalue for="end date" value="04/04/1850"></attvalue>
           <attvalue for="peak moment" value="17444"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -1139,8 +1139,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.31347031963470307"></attvalue>
           <attvalue for="closnesscentrality" value="0.28515625"></attvalue>
           <attvalue for="modularity_class" value="3"></attvalue>
-          <attvalue for="start date" value="20/09/1942"></attvalue>
-          <attvalue for="end date" value="20/09/1947"></attvalue>
+          <attvalue for="start date" value="18/09/1842"></attvalue>
+          <attvalue for="end date" value="18/09/1847"></attvalue>
           <attvalue for="peak moment" value="16516"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -1155,8 +1155,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.43721461187214583"></attvalue>
           <attvalue for="closnesscentrality" value="0.40555555555555556"></attvalue>
           <attvalue for="modularity_class" value="2"></attvalue>
-          <attvalue for="start date" value="19/12/1941"></attvalue>
-          <attvalue for="end date" value="19/12/1946"></attvalue>
+          <attvalue for="start date" value="18/12/1841"></attvalue>
+          <attvalue for="end date" value="18/12/1846"></attvalue>
           <attvalue for="peak moment" value="16242"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -1171,8 +1171,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.37785388127853886"></attvalue>
           <attvalue for="closnesscentrality" value="0.3443396226415094"></attvalue>
           <attvalue for="modularity_class" value="3"></attvalue>
-          <attvalue for="start date" value="07/11/1940"></attvalue>
-          <attvalue for="end date" value="07/11/1945"></attvalue>
+          <attvalue for="start date" value="07/11/1840"></attvalue>
+          <attvalue for="end date" value="07/11/1845"></attvalue>
           <attvalue for="peak moment" value="15833"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -1187,8 +1187,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.37785388127853886"></attvalue>
           <attvalue for="closnesscentrality" value="0.3443396226415094"></attvalue>
           <attvalue for="modularity_class" value="3"></attvalue>
-          <attvalue for="start date" value="07/03/1944"></attvalue>
-          <attvalue for="end date" value="07/03/1949"></attvalue>
+          <attvalue for="start date" value="07/03/1844"></attvalue>
+          <attvalue for="end date" value="07/03/1849"></attvalue>
           <attvalue for="peak moment" value="17052"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
@@ -1203,8 +1203,8 @@
           <attvalue for="harmonicclosnesscentrality" value="0.4166666666666667"></attvalue>
           <attvalue for="closnesscentrality" value="0.35609756097560974"></attvalue>
           <attvalue for="modularity_class" value="3"></attvalue>
-          <attvalue for="start date" value="09/10/1946"></attvalue>
-          <attvalue for="end date" value="09/10/1951"></attvalue>
+          <attvalue for="start date" value="09/10/1846"></attvalue>
+          <attvalue for="end date" value="09/10/1851"></attvalue>
           <attvalue for="peak moment" value="17997"></attvalue>
         </attvalues>
         <viz:size value="4.0"></viz:size>
