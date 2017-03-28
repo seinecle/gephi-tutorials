@@ -546,6 +546,9 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_visualizing_semantic_networks_with_gephi">Visualizing semantic networks with Gephi</a>
 <ul class="sectlevel3">
 <li><a href="#_1_downloading_a_dataset_for_this_tutorial">1. Downloading a dataset for this tutorial</a></li>
+<li><a href="#_2_managing_labels_size_and_colors">2. Managing labels size and colors</a></li>
+<li><a href="#_3_tuning_the_spatialization">3. Tuning the spatialization</a></li>
+<li><a href="#_4_exporting_an_image_of_the_network">4. Exporting an image of the network</a></li>
 </ul>
 </li>
 <li><a href="#_more_tutorials_on_working_with_semantic_networks">More tutorials on working with semantic networks</a></li>
@@ -557,7 +560,7 @@ table.CodeRay td.code>pre{padding:0}
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>last modified: 2017-03-27</p>
+<p>last modified: 2017-03-28</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -924,7 +927,7 @@ How to decide which connections make sense between them?</p>
 <p>The logic is simple, and yet there are some refinements to discuss. It will be up to you to decide what&#8217;s preferable:</p>
 </div>
 <div class="sect4">
-<h5 id="_if_2_terms_appear_several_times_strong_in_a_given_unit_of_text_strong_should_their_co_occurences_be_counted_several_times">If 2 terms appear several times <strong>in a given unit of text</strong>, should their co-occurences be counted several times?</h5>
+<h5 id="binary-counting">If 2 terms appear several times <strong>in a given unit of text</strong>, should their co-occurences be counted several times?</h5>
 <div class="paragraph">
 <p>An example to clarify. Let&#8217;s imagine that we are interested in webpages discussing nanotechnology.
 We want to draw the semantic network of the vocabulary used in these web pages.</p>
@@ -952,10 +955,10 @@ The earliest, widespread description of <span class="red">nanotechnology</span> 
 <div class="ulist">
 <ul>
 <li>
-<p>should I count only <strong>one</strong> co-occurrence between <code>molecular</code> and <code>nanotechnology</code>, because it happened on this one web page?</p>
+<p>should I count only <strong>one</strong> co-occurrence between <code>molecular</code> and <code>nanotechnology</code>, because it happened on this one web page? This is called <strong>binary counting</strong></p>
 </li>
 <li>
-<p>or should I consider that <code>molecular</code> appears twice on this page, and <code>nanotechnology</code> three times, so <strong>multiple</strong> co-occurrences between these 2 terms should be counted, just on this page already?</p>
+<p>or should I consider that <code>molecular</code> appears twice on this page, and <code>nanotechnology</code> three times, so <strong>multiple</strong> co-occurrences between these 2 terms should be counted, just on this page already? This is called <strong>full counting</strong></p>
 </li>
 </ul>
 </div>
@@ -1039,7 +1042,7 @@ divided by
 <p>"social neuroscience" OR "neuroeco*" OR "decision neuroscience"</p>
 </div>
 <div class="paragraph">
-<p>&#8594; The query can be see <a href="https://www.ncbi.nlm.nih.gov/pubmed?term=(%22social%20neuroscience%22%20OR%20%22neuroeco*%22%20OR%20%22decision%20neuroscience%22)">online here</a>.
+<p>&#8594; The query can be seent at <a href="https://www.ncbi.nlm.nih.gov/pubmed?term=(%22social%20neuroscience%22%20OR%20%22neuroeco*%22%20OR%20%22decision%20neuroscience%22)">online here</a>.
 (it comprises more than 1484 results, because some articles have no abstract).</p>
 </div>
 <div class="paragraph">
@@ -1064,8 +1067,11 @@ divided by
 <div class="paragraph">
 <p>Several steps will make this network intelligible</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</div>
+<div class="sect3">
+<h4 id="_2_managing_labels_size_and_colors">2. Managing labels size and colors</h4>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
 <p>Showing the labels of the nodes:</p>
 </li>
@@ -1080,8 +1086,8 @@ divided by
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
-<div class="olist arabic">
-<ol class="arabic" start="2">
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a" start="2">
 <li>
 <p>Making the edges (relations) invisible, because they clutter the view</p>
 </li>
@@ -1096,8 +1102,8 @@ divided by
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
-<div class="olist arabic">
-<ol class="arabic" start="3">
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a" start="3">
 <li>
 <p>Reducing node size to the minimum (0.5) because we just need labels</p>
 </li>
@@ -1112,8 +1118,8 @@ divided by
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
-<div class="olist arabic">
-<ol class="arabic" start="4">
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a" start="4">
 <li>
 <p>Detect communities with the "modularity" function in the statistics panel</p>
 <div class="literalblock">
@@ -1124,8 +1130,8 @@ divided by
 </li>
 </ol>
 </div>
-<div class="olist arabic">
-<ol class="arabic" start="5">
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a" start="5">
 <li>
 <p>Give a different color to each community</p>
 </li>
@@ -1143,8 +1149,8 @@ divided by
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
-<div class="olist arabic">
-<ol class="arabic" start="6">
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a" start="6">
 <li>
 <p>We then need to assign this node color to their labels:</p>
 </li>
@@ -1159,8 +1165,11 @@ divided by
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
-<div class="olist arabic">
-<ol class="arabic" start="7">
+</div>
+<div class="sect3">
+<h4 id="_3_tuning_the_spatialization">3. Tuning the spatialization</h4>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
 <p>Spatializing the network with Force Atlas 2 will place related terms next to each other, because they co-occur:</p>
 </li>
@@ -1178,8 +1187,8 @@ divided by
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
-<div class="olist arabic">
-<ol class="arabic" start="8">
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a" start="2">
 <li>
 <p>The network so far:</p>
 </li>
@@ -1194,8 +1203,8 @@ divided by
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
-<div class="olist arabic">
-<ol class="arabic" start="9">
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a" start="3">
 <li>
 <p>Apply 2 more layouts to enhance readability:</p>
 <div class="ulist">
@@ -1220,8 +1229,11 @@ divided by
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
-<div class="olist arabic">
-<ol class="arabic" start="10">
+</div>
+<div class="sect3">
+<h4 id="_4_exporting_an_image_of_the_network">4. Exporting an image of the network</h4>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
 <p>Switching to the preview panel</p>
 <div class="ulist">
@@ -1299,7 +1311,7 @@ divided by
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2017-03-27 01:20:43 CEST
+Last updated 2017-03-28 13:11:11 CEST
 </div>
 </div>
 </body>

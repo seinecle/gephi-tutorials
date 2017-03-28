@@ -86,7 +86,7 @@ table.CodeRay td.code>pre{padding:0}
 .CodeRay .insert .insert{color:#080}
 .CodeRay .delete .delete{color:#800}
 .CodeRay .change .change{color:#66f}
-.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.1.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.1.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>Working with text in Gephi</h1><div class="preamble"><div class="paragraph"><p>last modified: 2017-03-27</p></div>
+.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.1.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.1.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>Working with text in Gephi</h1><div class="preamble"><div class="paragraph"><p>last modified: 2017-03-28</p></div>
 <div class="imageblock stretch" style="text-align: center"><img src="images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450" /></div></div><p class="author"><small>Clément Levallois</small></p></section>
 <section id="__escape_or_o_to_see_all_sides_f11_for_full_screen_s_for_speaker_notes"><h2>'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes</h2></section>
 <section id="_presentation_of_this_tutorial"><h2>Presentation of this tutorial</h2></section>
@@ -181,7 +181,7 @@ We want to draw the semantic network of the vocabulary used in these web pages.<
 <section><div class="quoteblock"><blockquote><div class="paragraph"><p><span class="red">Nanotechnology</span> ("nanotech") is manipulation of matter on an atomic, <span class="blue">molecular</span>, and supramolecular scale.
 The earliest, widespread description of <span class="red">nanotechnology</span> referred to the particular technological goal of precisely manipulating atoms and molecules for fabrication of macroscale products, also now referred to as <span class="blue">molecular</span> <span class="red">nanotechnology</span></p></div></blockquote><div class="attribution">&#8212; <a href="https://en.wikipedia.org/wiki/Nanotechnology">Wikipedia</a></div></div></section>
 <section><div class="paragraph"><p>The question is:</p></div>
-<div class="ulist"><ul><li><p>should I count only <strong>one</strong> co-occurrence between <code>molecular</code> and <code>nanotechnology</code>, because it happened on this one web page?</p></li><li><p>or should I consider that <code>molecular</code> appears twice on this page, and <code>nanotechnology</code> three times, so <strong>multiple</strong> co-occurrences between these 2 terms should be counted, just on this page already?</p></li></ul></div>
+<div class="ulist"><ul><li><p>should I count only <strong>one</strong> co-occurrence between <code>molecular</code> and <code>nanotechnology</code>, because it happened on this one web page? This is called <strong>binary counting</strong></p></li><li><p>or should I consider that <code>molecular</code> appears twice on this page, and <code>nanotechnology</code> three times, so <strong>multiple</strong> co-occurrences between these 2 terms should be counted, just on this page already? This is called <strong>full counting</strong></p></li></ul></div>
 <div class="paragraph"><p>There is no exact response, and you can experiment with both possibilities.</p></div></section>
 <section><h4>If two terms are very frequent, is their co-occurrence really of interest?</h4></section>
 <section><div class="paragraph"><p>Example:</p></div>
@@ -209,32 +209,38 @@ divided by
 <div class="paragraph"><p><a href="../resources/semantic-networks/pubmed_abstracts_network.zip">download this zip file</a> and unzip it on your computer.</p></div></section>
 <section><div class="paragraph"><p>The network was built from the short summaries ("abstracts") of 1484 research articles from the PubMed database of scientific reports, retrieved by conducting this query:</p></div>
 <div class="paragraph"><p>"social neuroscience" OR "neuroeco*" OR "decision neuroscience"</p></div>
-<div class="paragraph"><p>&#8594; The query can be see <a href="https://www.ncbi.nlm.nih.gov/pubmed?term=(%22social%20neuroscience%22%20OR%20%22neuroeco*%22%20OR%20%22decision%20neuroscience%22)">online here</a>.
+<div class="paragraph"><p>&#8594; The query can be seent at <a href="https://www.ncbi.nlm.nih.gov/pubmed?term=(%22social%20neuroscience%22%20OR%20%22neuroeco*%22%20OR%20%22decision%20neuroscience%22)">online here</a>.
 (it comprises more than 1484 results, because some articles have no abstract).</p></div>
 <div class="paragraph"><p>We used <a href="https://github.com/seinecle/Cowo">Cowo</a> to create the network from these 1484 short pieces of text, based on co-occurrences.</p></div></section>
 <section><div class="ulist"><ul><li><p>Open the file inside the zip (<code>pubmed_abstracts_network.gml</code>) in Gephi:</p></li></ul></div>
 <div class="imageblock stretch" style="text-align: center"><img src="images/semantic-import-1-en.png" alt="semantic import 1 en" height="100%" /></div><div class="title">Figure 2. First view of the network</div></section>
 <section><div class="paragraph"><p>Several steps will make this network intelligible</p></div></section>
-<section><div class="olist arabic"><ol class="arabic"><li><p>Showing the labels of the nodes:</p></li></ol></div>
+<section><h3>2. Managing labels size and colors</h3></section>
+<section></section>
+<section><div class="olist loweralpha"><ol class="loweralpha" type="a"><li><p>Showing the labels of the nodes:</p></li></ol></div>
 <div class="imageblock stretch" style="text-align: center"><img src="images/showing-node-labels.png" alt="showing node labels" height="100%" /></div><div class="title">Figure 3. showing node labels</div></section>
-<section><div class="olist arabic"><ol class="arabic" start="2"><li><p>Making the edges (relations) invisible, because they clutter the view</p></li></ol></div>
+<section><div class="olist loweralpha"><ol class="loweralpha" start="2" type="a"><li><p>Making the edges (relations) invisible, because they clutter the view</p></li></ol></div>
 <div class="imageblock stretch" style="text-align: center"><img src="images/hiding-edges.png" alt="hiding edges" height="100%" /></div><div class="title">Figure 4. hiding edges</div></section>
-<section><div class="olist arabic"><ol class="arabic" start="3"><li><p>Reducing node size to the minimum (0.5) because we just need labels</p></li></ol></div>
+<section><div class="olist loweralpha"><ol class="loweralpha" start="3" type="a"><li><p>Reducing node size to the minimum (0.5) because we just need labels</p></li></ol></div>
 <div class="imageblock stretch" style="text-align: center"><img src="images/semantic-resize-nodes1-en.png" alt="semantic resize nodes1 en" height="100%" /></div><div class="title">Figure 5. Making nodes disappear</div></section>
-<section><div class="olist arabic"><ol class="arabic" start="4"><li><p>Detect communities with the "modularity" function in the statistics panel</p><div class="literalblock"><div class="content"><pre>see tutorial 'simple project from A to Z' for this step</pre></div></div></li></ol></div></section>
-<section><div class="olist arabic"><ol class="arabic" start="5"><li><p>Give a different color to each community</p></li></ol></div>
+<section><div class="olist loweralpha"><ol class="loweralpha" start="4" type="a"><li><p>Detect communities with the "modularity" function in the statistics panel</p><div class="literalblock"><div class="content"><pre>see tutorial 'simple project from A to Z' for this step</pre></div></div></li></ol></div></section>
+<section><div class="olist loweralpha"><ol class="loweralpha" start="5" type="a"><li><p>Give a different color to each community</p></li></ol></div>
 <div class="paragraph"><p>&#8594; each group of terms, distinguished by a color, will represent a topic.</p></div>
 <div class="imageblock stretch" style="text-align: center"><img src="images/semantic-coloring-communities-1-en.png" alt="semantic coloring communities 1 en" height="100%" /></div><div class="title">Figure 6. Coloring nodes - first step</div></section>
-<section><div class="olist arabic"><ol class="arabic" start="6"><li><p>We then need to assign this node color to their labels:</p></li></ol></div>
+<section><div class="olist loweralpha"><ol class="loweralpha" start="6" type="a"><li><p>We then need to assign this node color to their labels:</p></li></ol></div>
 <div class="imageblock stretch" style="text-align: center"><img src="images/Coloring-nodes---second-step.png" alt="Coloring nodes   second step" height="100%" /></div><div class="title">Figure 7. Coloring nodes - second step</div></section>
-<section><div class="olist arabic"><ol class="arabic" start="7"><li><p>Spatializing the network with Force Atlas 2 will place related terms next to each other, because they co-occur:</p></li></ol></div>
+<section><h3>3. Tuning the spatialization</h3></section>
+<section></section>
+<section><div class="olist loweralpha"><ol class="loweralpha" type="a"><li><p>Spatializing the network with Force Atlas 2 will place related terms next to each other, because they co-occur:</p></li></ol></div>
 <div class="paragraph"><p>Some parameters have been modified:</p></div>
 <div class="imageblock stretch" style="text-align: center"><img src="images/semantic-spatializing-1-en.png" alt="semantic spatializing 1 en" height="100%" /></div><div class="title">Figure 8. Spatializing the network</div></section>
-<section><div class="olist arabic"><ol class="arabic" start="8"><li><p>The network so far:</p></li></ol></div>
+<section><div class="olist loweralpha"><ol class="loweralpha" start="2" type="a"><li><p>The network so far:</p></li></ol></div>
 <div class="imageblock stretch" style="text-align: center"><img src="images/semantic-spatializing-2-en.png" alt="semantic spatializing 2 en" height="100%" /></div><div class="title">Figure 9. The network - colored and spatialized</div></section>
-<section><div class="olist arabic"><ol class="arabic" start="9"><li><p>Apply 2 more layouts to enhance readability:</p><div class="ulist"><ul><li><p>"Expansion" to spread nodes (just select it and click on Run a couple of times)</p></li><li><p>"Label Adjust" to move labels around so that they don&#8217;t overlap</p></li></ul></div></li></ol></div>
+<section><div class="olist loweralpha"><ol class="loweralpha" start="3" type="a"><li><p>Apply 2 more layouts to enhance readability:</p><div class="ulist"><ul><li><p>"Expansion" to spread nodes (just select it and click on Run a couple of times)</p></li><li><p>"Label Adjust" to move labels around so that they don&#8217;t overlap</p></li></ul></div></li></ol></div>
 <div class="imageblock stretch" style="text-align: center"><img src="images/semantic-spatializing-3-en.png" alt="semantic spatializing 3 en" height="100%" /></div><div class="title">Figure 10. Spreading labels</div></section>
-<section><div class="olist arabic"><ol class="arabic" start="10"><li><p>Switching to the preview panel</p><div class="ulist"><ul><li><p>A number of parameters must be modified (to show Labels, hide edges, etc.)</p></li></ul></div></li></ol></div>
+<section><h3>4. Exporting an image of the network</h3></section>
+<section></section>
+<section><div class="olist loweralpha"><ol class="loweralpha" type="a"><li><p>Switching to the preview panel</p><div class="ulist"><ul><li><p>A number of parameters must be modified (to show Labels, hide edges, etc.)</p></li></ul></div></li></ol></div>
 <div class="imageblock stretch" style="text-align: center"><img src="images/semantic-preview-1-en.png" alt="semantic preview 1 en" height="100%" /></div><div class="title">Figure 11. The preview panel</div></section>
 <section><div class="paragraph"><p>The network is now ready to be exported to pdf, png or svg file formats.</p></div></section>
 <section id="_more_tutorials_on_working_with_semantic_networks"><h2>More tutorials on working with semantic networks</h2></section>

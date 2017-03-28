@@ -204,7 +204,7 @@
 </xsl:attribute>
 </xsl:if>
 </fo:external-graphic>
-<!-- </xsl:template> -->
+</xsl:template>
 
     <!-- Add any other template overrides here -->
 
