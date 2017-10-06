@@ -10,20 +10,18 @@
     <name>gephi-tutorials-source</name>
 
     <properties>
-        <doc>en/working-with-text-en.adoc</doc>
         <bookPath>${basedir}/src/main/asciidoc/en/book</bookPath>
-        <bookName>book-gephi-tutorials-en.adoc</bookName>
+        <bookName>book-linux-tutorials-en.adoc</bookName>
         <medium.publish>false</medium.publish>
         <asciidoctorj.diagram.version>1.5.0</asciidoctorj.diagram.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
     <parent>
         <groupId>net.clementlevallois</groupId>
         <artifactId>AsciiiDocMavenJavaSE</artifactId>
         <version>1.0</version>
     </parent>
-        <profiles>
-            <profile>
-                <id>download-revealjs</id>
                 <build>
                     <plugins>
                         <plugin>
@@ -63,7 +61,8 @@
                     </plugin>
                 </plugins>
             </build>
-        </profile>
+
+        <profiles>
 
             <profile>
             <id>default</id>
@@ -147,6 +146,8 @@
                         </dependencies>
                         <!-- Shared configurations across `executions`. Can be overwritten if needed by an executions -->
                         <configuration>
+                            <sourceDocumentName>${doc-to-process}</sourceDocumentName>
+
                             <requires>
                                 <require>asciidoctor-diagram</require>
                             </requires>
@@ -155,7 +156,6 @@
                                 <!--Windows:-->
                                 <graphvizdot>C:\Program Files (x86)\Graphviz2.38\bin\dot.exe</graphvizdot>
                                 <imagesoutdir>${basedir}/src/main/asciidoc/images</imagesoutdir>
-                            
                                 <!-- *nix :
                                     <graphvizdot>/usr/local/bin/dot</graphvizdot>
                                 -->
@@ -167,7 +167,7 @@
                         track versions.
                         -->
                         <!--
-                        <sourceDirectory>C:\Users\levallois\Google Drive\open\gephi tutorial\history-of-gephi\en\temp</sourceDirectory>
+                        <sourceDirectory>C:\Users\levallois\Google Drive\open\linux tutorial\history-of-linux\en\temp</sourceDirectory>
                         -->
                         <executions>
                             <execution>
@@ -177,7 +177,6 @@
                                     <goal>process-asciidoc</goal>
                                 </goals>
                                 <configuration>
-                                    <sourceDocumentName>${doc}</sourceDocumentName>
                                     <outputDirectory>${basedir}/docs/generated-slides</outputDirectory>
                                     <backend>revealjs</backend>
                                     <templateDir>${basedir}/docs/asciidoctor-reveal.js-${asciidoctor-revealjs.version}/templates/slim</templateDir>
@@ -199,13 +198,16 @@
                                         <statcounter-project>${statcounter-project}</statcounter-project>
                                         <statcounter-security>${statcounter-security}</statcounter-security>
                                         <asciimath>asciimath</asciimath>
+                                        <doc-to-process>${doc-to-process}</doc-to-process>
                                     </attributes>
                                     <extensions>
+                                        <extension>
+                                            <className>net.clementlevallois.asciidoc.extensions.CommonPreProcessor</className>
+                                        </extension>
                                         <extension>
                                             <className>net.clementlevallois.asciidoc.extensions.SlidesPreProcessor</className>
                                         </extension>
                                     </extensions>
-
                                 </configuration>
                             </execution>
                             <execution>
@@ -215,7 +217,6 @@
                                     <goal>process-asciidoc</goal>
                                 </goals>
                                 <configuration>
-                                    <sourceDocumentName>${doc}</sourceDocumentName>
                                     <outputDirectory>${basedir}/docs/generated-pdf</outputDirectory>
                                     <backend>pdf</backend>
                                     <sourceHighlighter>coderay</sourceHighlighter>
@@ -224,8 +225,12 @@
                                         <icons>font</icons>
                                         <pagenums/>
                                         <toc/>
+                                        <doc-to-process>${doc-to-process}</doc-to-process>
                                     </attributes>
                                     <extensions>
+                                        <extension>
+                                            <className>net.clementlevallois.asciidoc.extensions.CommonPreProcessor</className>
+                                        </extension>
                                         <extension>
                                             <className>net.clementlevallois.asciidoc.extensions.PdfPreProcessor</className>
                                         </extension>
@@ -240,11 +245,13 @@
                                     <goal>process-asciidoc</goal>
                                 </goals>
                                 <configuration>
-                                    <sourceDocumentName>${doc}</sourceDocumentName>
                                     <outputDirectory>${basedir}/docs/generated-html</outputDirectory>
                                     <backend>html</backend>
                                     <sourceHighlighter>coderay</sourceHighlighter>
                                     <extensions>
+                                        <extension>
+                                            <className>net.clementlevallois.asciidoc.extensions.CommonPreProcessor</className>
+                                        </extension>
                                         <extension>
                                             <className>net.clementlevallois.asciidoc.extensions.HtmlPreProcessor</className>
                                         </extension>
@@ -257,6 +264,7 @@
                                         <!--they will be injected into the extensions which manage the html output formats-->
                                         <statcounter-project>${statcounter-project}</statcounter-project>
                                         <statcounter-security>${statcounter-security}</statcounter-security>
+                                        <doc-to-process>${doc-to-process}</doc-to-process> 
                                     </attributes>
                                 </configuration>
                             </execution>
@@ -403,6 +411,9 @@
                                     </attributes>
                                     <extensions>
                                         <extension>
+                                            <className>net.clementlevallois.asciidoc.extensions.CommonPreProcessor</className>
+                                        </extension>
+                                        <extension>
                                             <className>net.clementlevallois.asciidoc.extensions.BookPreProcessor</className>
                                         </extension>
                                     </extensions>
@@ -458,6 +469,11 @@
                             <imgSrcPath></imgSrcPath>
                             <!-- FIXME highlightSource not working! -->
                             <highlightSource>1</highlightSource>
+                            <extensions>
+                                <extension>
+                                    <className>net.clementlevallois.asciidoc.extensions.CommonPreProcessor</className>
+                                </extension>
+                            </extensions>
                         </configuration>
                     </plugin>
                 </plugins>

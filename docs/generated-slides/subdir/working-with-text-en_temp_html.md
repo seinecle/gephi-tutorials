@@ -263,6 +263,7 @@ An edge between two terms will have:
 The logic is simple, and yet there are some refinements to discuss. It will be up to you to decide what's preferable:
 
 //ST: !
+[[binary-counting]]
 ===== If 2 terms appear several times *in a given unit of text*, should their co-occurences be counted several times?
 //ST: !
 
@@ -284,8 +285,8 @@ ____
 //ST: !
 The question is:
 
-- should I count only *one* co-occurrence between `molecular` and `nanotechnology`, because it happened on this one web page?
-- or should I consider that `molecular` appears twice on this page, and `nanotechnology` three times, so *multiple* co-occurrences between these 2 terms should be counted, just on this page already?
+- should I count only *one* co-occurrence between `molecular` and `nanotechnology`, because it happened on this one web page? This is called *binary counting*
+- or should I consider that `molecular` appears twice on this page, and `nanotechnology` three times, so *multiple* co-occurrences between these 2 terms should be counted, just on this page already? This is called *full counting*
 
 There is no exact response, and you can experiment with both possibilities.
 
@@ -357,7 +358,7 @@ The network was built from the short summaries ("abstracts") of 1484 research ar
 
 "social neuroscience" OR "neuroeco*" OR "decision neuroscience"
 
--> The query can be see https://www.ncbi.nlm.nih.gov/pubmed?term=(%22social%20neuroscience%22%20OR%20%22neuroeco*%22%20OR%20%22decision%20neuroscience%22)[online here].
+-> The query can be seent at https://www.ncbi.nlm.nih.gov/pubmed?term=(%22social%20neuroscience%22%20OR%20%22neuroeco*%22%20OR%20%22decision%20neuroscience%22)[online here].
 (it comprises more than 1484 results, because some articles have no abstract).
 
 We used https://github.com/seinecle/Cowo[Cowo] to create the network from these 1484 short pieces of text, based on co-occurrences.
@@ -373,9 +374,13 @@ image::semantic-import-1-en.png[align="center", title="First view of the network
 //ST: !
 Several steps will make this network intelligible
 
+//ST: !
+==== 2. Managing labels size and colors
+//ST: !
+
 
 //ST: !
-1. Showing the labels of the nodes:
+a. Showing the labels of the nodes:
 
 image::showing-node-labels.png[align="center", title="showing node labels"]
 {nbsp} +
@@ -383,7 +388,7 @@ image::showing-node-labels.png[align="center", title="showing node labels"]
 
 //ST: !
 [start=2]
-2. Making the edges (relations) invisible, because they clutter the view
+b. Making the edges (relations) invisible, because they clutter the view
 
 image::hiding-edges.png[align="center", title="hiding edges"]
 {nbsp} +
@@ -391,7 +396,7 @@ image::hiding-edges.png[align="center", title="hiding edges"]
 
 //ST: !
 [start=3]
-3. Reducing node size to the minimum (0.5) because we just need labels
+c. Reducing node size to the minimum (0.5) because we just need labels
 
 image::semantic-resize-nodes1-en.png[align="center", title="Making nodes disappear"]
 {nbsp} +
@@ -399,13 +404,13 @@ image::semantic-resize-nodes1-en.png[align="center", title="Making nodes disappe
 
 //ST: !
 [start=4]
-4. Detect communities with the "modularity" function in the statistics panel
+d. Detect communities with the "modularity" function in the statistics panel
 
  see tutorial 'simple project from A to Z' for this step
 
 //ST: !
 [start=5]
-5. Give a different color to each community
+e. Give a different color to each community
 
 -> each group of terms, distinguished by a color, will represent a topic.
 
@@ -415,15 +420,19 @@ image::semantic-coloring-communities-1-en.png[align="center", title="Coloring no
 
 //ST: !
 [start=6]
-6. We then need to assign this node color to their labels:
+f. We then need to assign this node color to their labels:
 
 image::Coloring-nodes---second-step.png[align="center", title="Coloring nodes - second step"]
 {nbsp} +
 
 
 //ST: !
-[start=7]
-7. Spatializing the network with Force Atlas 2 will place related terms next to each other, because they co-occur:
+==== 3. Tuning the spatialization
+//ST: !
+
+
+//ST: !
+a. Spatializing the network with Force Atlas 2 will place related terms next to each other, because they co-occur:
 
 Some parameters have been modified:
 
@@ -431,16 +440,16 @@ image::semantic-spatializing-1-en.png[align="center", title="Spatializing the ne
 {nbsp} +
 
 //ST: !
-[start=8]
-8. The network so far:
+[start=2]
+b. The network so far:
 
 image::semantic-spatializing-2-en.png[align="center", title="The network - colored and spatialized"]
 {nbsp} +
 
 
 //ST: !
-[start=9]
-9. Apply 2 more layouts to enhance readability:
+[start=3]
+c. Apply 2 more layouts to enhance readability:
 
 - "Expansion" to spread nodes (just select it and click on Run a couple of times)
 - "Label Adjust" to move labels around so that they don't overlap
@@ -448,9 +457,14 @@ image::semantic-spatializing-2-en.png[align="center", title="The network - color
 image::semantic-spatializing-3-en.png[align="center", title="Spreading labels"]
 {nbsp} +
 
+
 //ST: !
-[start=10]
-10. Switching to the preview panel
+==== 4. Exporting an image of the network
+//ST: !
+
+
+//ST: !
+a. Switching to the preview panel
 
 - A number of parameters must be modified (to show Labels, hide edges, etc.)
 
@@ -459,7 +473,6 @@ image::semantic-preview-1-en.png[align="center", title="The preview panel"]
 
 //ST: !
 The network is now ready to be exported to pdf, png or svg file formats.
-
 
 == More tutorials on working with semantic networks
 //ST: More tutorials on working with semantic networks

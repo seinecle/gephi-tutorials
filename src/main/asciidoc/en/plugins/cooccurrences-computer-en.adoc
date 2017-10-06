@@ -62,7 +62,7 @@ image::https://docs.google.com/drawings/d/1u4LqlnQby5DQVmq4csZ6f7sq_Z33F33UqtBZ4
 
 //ST: !
 
-image::https://docs.google.com/drawings/d/1dcZH0jq2W2CzEIv8-XYkM3JjPab2LCbAmYhFU4tXXso/pub?w=833&h=543[align="center", title="Install the plugin and restart Gephi"]
+image::https://docs.google.com/drawings/d/e/2PACX-1vTnoukHFo6s3wgxOrtmHz_hVPf4JXcyyKIIvuXvhClULnyOIYUQcEsC-FaZNyBZBaMGv0696wk7GBhQ/pub?w=833&h=543[align="center", title="Install the plugin and restart Gephi"]
 
 == Opening the plugin
 //ST: Opening the plugin

@@ -43,7 +43,7 @@ Gephi has evolved in several major milestones:
 
 - version 0.8 (2011): Introduced dynamic graphs.
 
-2011 to 2016: Many plugins were created for Gephi, and the software sarted becoming much popular.
+2011 to 2016: Many plugins were created for Gephi, and the software started becoming much popular.
 
 Mac computer users had issues installing Gephi on their computers because of a Java compatibility issue.
 
