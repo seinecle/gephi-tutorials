@@ -31,7 +31,7 @@ Plugin Author: https://github.com/ErwanDemairy[Erwan Demairy]
 
 Plugin sources: https://scm.gforge.inria.fr/anonscm/git/segviz-public/gephi-plugins.git/[git://scm.gforge.inria.fr/segviz-public/gephi-plugins.git]
 
-Licensed under: Cecill-C
+Licensed under: http://www.cecill.info/licences/Licence_CeCILL-C_V1-en.html[Cecill-C]
 
 
 ==  Introduction
@@ -99,7 +99,9 @@ image::en/semantic-web-importer/setup_1.png[align="center", title="Setup endpoin
 ==  !
 
 Go to *Query* tab, remove the dummy query and put this one:
-```
+
+[source,SQL]
+----
 CONSTRUCT{
   ?person <http://gephi.org/type> "person".
   ?movie <http://gephi.org/type> "movie".
@@ -112,7 +114,8 @@ WHERE
  ?movie ?rel2 ?person.
  ?person a <http://dbpedia.org/ontology/Person>.
 }
-```
+----
+
 ==  !
 
 Finally, click on *Run*
@@ -128,7 +131,7 @@ image::en/semantic-web-importer/setup_2.png[align="center", title="SPARQL Query"
 Go back to the Graph preview and you should see a graph. Use the layout tab to get a more intuitive rendering.
 
 [.stretch]
-image::en/semantic-web-importer/result_1.png[align="center", title"result"]
+image::en/semantic-web-importer/result_1.png[align="center", title="result"]
 
 
 ==  Details
@@ -212,7 +215,7 @@ pass:[    <!-- Start of StatCounter Code for Default Guide -->
     <script type="text/javascript">
         var sc_project = 11238920;
         var sc_invisible = 1;
-        var sc_security = "8dac6cd5";
+        var sc_security = "11238920";
         var scJsHost = (("https:" == document.location.protocol) ?
             "https://secure." : "http://www.");
         document.write("<sc" + "ript type='text/javascript' src='" +
@@ -222,6 +225,6 @@ pass:[    <!-- Start of StatCounter Code for Default Guide -->
     <noscript><div class="statcounter"><a title="site stats"
     href="http://statcounter.com/" target="_blank"><img
     class="statcounter"
-    src="//c.statcounter.com/11238920/0/8dac6cd5/1/" alt="site
+    src="//c.statcounter.com/11238920/0/11238920/1/" alt="site
     stats"></a></div></noscript>
     <!-- End of StatCounter Code for Default Guide -->]

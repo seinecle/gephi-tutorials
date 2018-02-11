@@ -146,7 +146,7 @@ IMPORTANT:: We are going to use the timeline to play the animation. The timeline
 
 //ST: !
 
-
+image::Animating-the-dynamic-network.png[align="center",title="Animating the dynamic network"]
 {nbsp} +
 
 image::moving-timeline-miserables-2-en.png[align="center",title="Animating the dynamic network"]

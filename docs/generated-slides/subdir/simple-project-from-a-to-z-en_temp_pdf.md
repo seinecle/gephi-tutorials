@@ -29,16 +29,20 @@ This project is for complete beginners to Gephi.
 It supposes you have Gephi installed and running on your computer. That is all.
 
 When finishing this tutorial, you should be able to:
-[options="compact"]
+
 - be familiar with the vocabulary to discuss networks
 - download a network file for this exercise
 - description of the file / the network
+
 //ST: !
+
 - open a network file
 - read the report after opening a file
 - show the labels of the nodes
 - layout the network
+
 //ST: !
+
 - visualize attributes of the network
 - prettify the network for enhanced readability
 - compute the centrality of the nodes in the network
@@ -49,12 +53,12 @@ When finishing this tutorial, you should be able to:
 == be familiar with the terminology to discuss networks
 //ST: terminology to discuss networks
 //ST: !
+
 image::terminology-for-networks.png[align="center",title="terminology for networks"]
 {nbsp} +
 
 
 == download a network file
-
 //ST: download a network file
 //ST: !
 

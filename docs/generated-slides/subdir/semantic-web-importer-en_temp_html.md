@@ -32,7 +32,7 @@ Plugin Author: https://github.com/ErwanDemairy[Erwan Demairy]
 
 Plugin sources: https://scm.gforge.inria.fr/anonscm/git/segviz-public/gephi-plugins.git/[git://scm.gforge.inria.fr/segviz-public/gephi-plugins.git]
 
-Licensed under: Cecill-C
+Licensed under: http://www.cecill.info/licences/Licence_CeCILL-C_V1-en.html[Cecill-C]
 
 
 //ST: Introduction
@@ -101,7 +101,9 @@ image::en/semantic-web-importer/setup_1.png[align="center", title="Setup endpoin
 //ST: !
 
 Go to *Query* tab, remove the dummy query and put this one:
-```
+
+[source,SQL]
+----
 CONSTRUCT{
   ?person <http://gephi.org/type> "person".
   ?movie <http://gephi.org/type> "movie".
@@ -114,7 +116,8 @@ WHERE
  ?movie ?rel2 ?person.
  ?person a <http://dbpedia.org/ontology/Person>.
 }
-```
+----
+
 //ST: !
 
 Finally, click on *Run*
@@ -128,7 +131,7 @@ image::en/semantic-web-importer/setup_2.png[align="center", title="SPARQL Query"
 
 Go back to the Graph preview and you should see a graph. Use the layout tab to get a more intuitive rendering.
 
-image::en/semantic-web-importer/result_1.png[align="center", title"result"]
+image::en/semantic-web-importer/result_1.png[align="center", title="result"]
 {nbsp} +
 
 //ST: Details
