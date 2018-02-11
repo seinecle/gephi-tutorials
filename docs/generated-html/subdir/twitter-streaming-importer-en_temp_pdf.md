@@ -169,14 +169,14 @@ With the ** Users to follow ** tab, you will be able to follow the activity of o
 twitter list by giviing the `user name` of the twitter account and the `list name` to import.
 
 //ST: !
-image::en/twitter-streaming-importer/twitter-user-list.png[align="center", title="How to add user from a Twitter List"]
+image::en/twitter-streaming-importer/twitter-user-list.jpg[align="center", title="How to add user from a Twitter List"]
 {nbsp} +
 
 //ST: !
 With the ** Locations to follow ** tab, you will be able to follow the activity of one or multiple locations. Any tweet that has been geotagged will be captured. You need to delimit the zone to track by its South West Point and the Nord East Point.
 
 //ST: !
-image::en/twitter-streaming-importer/geo_params.png[align="center", title="How to add a Locations"]
+image::en/twitter-streaming-importer/geo_params.jpg[align="center", title="How to add a Locations"]
 {nbsp} +
 
 //ST: !
