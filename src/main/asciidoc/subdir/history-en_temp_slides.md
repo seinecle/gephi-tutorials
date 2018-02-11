@@ -43,7 +43,7 @@ Gephi has evolved in several major milestones:
 
 - version 0.8 (2011): Introduced dynamic graphs.
 
-2011 to 2016: Many plugins were created for Gephi, and the software sarted becoming much popular.
+2011 to 2016: Many plugins were created for Gephi, and the software started becoming much popular.
 
 Mac computer users had issues installing Gephi on their computers because of a Java compatibility issue.
 
@@ -61,12 +61,12 @@ In 2016, Gephi is translated in French, Spanish, Japanese,  Russian, Polish,
 
 ==  Cumulative downloads for Gephi
 
-pass:[<iframe width="600" height="600" align="center" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/13mTifgFRpEH0vpXUF2USdy6kTTtPuEq9FgWWXYEPIck/pubchart?oid=657051972&amp;format=interactive"></iframe>]
+pass:[<iframe width="600" height="600" align="center" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/13mTifgFRpEH0vpXUF2USdy6kTTtPuEq9FgWWXYEPIck/pubchart?oid=657051972&amp;format=interactive"></iframe>]
 
 
 ==  General interest for Gephi and related software over 2004 - 2016
 
-pass:[<iframe scrolling="no" style="border:none;" width="640" height="600" src="https://www.google.com/trends/fetchComponent?hl=en-US&q=gephi,vosviewer,nodexl,cytoscape,ucinet%20&cmpt=q&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=640&h=600"></iframe>]
+pass:[<iframe scrolling="no" style="border:none;" width="640" height="600" src="https://www.google.com/trends/fetchComponent?hl=en-US&amp;q=gephi,vosviewer,nodexl,cytoscape,ucinet%20&amp;content=1&amp;cid=TIMESERIES_GRAPH_0&amp;export=5&amp;w=640&amp;h=600"></iframe>]
 
 
 ==  Academic citations for Gephi (counting only citations to Bastian et al., 2009)
@@ -78,7 +78,7 @@ pass:[    <!-- Start of StatCounter Code for Default Guide -->
     <script type="text/javascript">
         var sc_project = 11238920;
         var sc_invisible = 1;
-        var sc_security = "8dac6cd5";
+        var sc_security = "11238920";
         var scJsHost = (("https:" == document.location.protocol) ?
             "https://secure." : "http://www.");
         document.write("<sc" + "ript type='text/javascript' src='" +
@@ -88,6 +88,6 @@ pass:[    <!-- Start of StatCounter Code for Default Guide -->
     <noscript><div class="statcounter"><a title="site stats"
     href="http://statcounter.com/" target="_blank"><img
     class="statcounter"
-    src="//c.statcounter.com/11238920/0/8dac6cd5/1/" alt="site
+    src="//c.statcounter.com/11238920/0/11238920/1/" alt="site
     stats"></a></div></noscript>
     <!-- End of StatCounter Code for Default Guide -->]

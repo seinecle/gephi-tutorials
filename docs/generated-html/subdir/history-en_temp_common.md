@@ -44,7 +44,7 @@ Gephi has evolved in several major milestones:
 
 - version 0.8 (2011): Introduced dynamic graphs.
 
-2011 to 2016: Many plugins were created for Gephi, and the software sarted becoming much popular.
+2011 to 2016: Many plugins were created for Gephi, and the software started becoming much popular.
 
 Mac computer users had issues installing Gephi on their computers because of a Java compatibility issue.
 
@@ -62,13 +62,17 @@ In 2016, Gephi is translated in French, Spanish, Japanese,  Russian, Polish,
 
 //ST: Cumulative downloads for Gephi
 
-pass:[<iframe width="600" height="600" align="center" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/13mTifgFRpEH0vpXUF2USdy6kTTtPuEq9FgWWXYEPIck/pubchart?oid=657051972&amp;format=interactive"></iframe>]
+pass:[<iframe width="600" height="600" align="center" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/13mTifgFRpEH0vpXUF2USdy6kTTtPuEq9FgWWXYEPIck/pubchart?oid=657051972&amp;format=interactive"></iframe>]
 
+image::Gephi--cumulative-downloads.png[align="center", title="Gephi, cumulative downloads"]
+{nbsp} +
 
 //ST: General interest for Gephi and related software over 2004 - 2016
 
-pass:[<iframe scrolling="no" style="border:none;" width="640" height="600" src="https://www.google.com/trends/fetchComponent?hl=en-US&q=gephi,vosviewer,nodexl,cytoscape,ucinet%20&cmpt=q&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=640&h=600"></iframe>]
+pass:[<iframe scrolling="no" style="border:none;" width="640" height="600" src="https://www.google.com/trends/fetchComponent?hl=en-US&amp;q=gephi,vosviewer,nodexl,cytoscape,ucinet%20&amp;content=1&amp;cid=TIMESERIES_GRAPH_0&amp;export=5&amp;w=640&amp;h=600"></iframe>]
 
+image::google-trends-gephi.png[align="center", title=""]
+{nbsp} +
 
 //ST: Academic citations for Gephi (counting only citations to Bastian et al., 2009)
 

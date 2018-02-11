@@ -15,7 +15,7 @@ image::gephi-logo-2010-transparent.png[width="450" align="center"]
 
 //ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
-== the leading software to visualize networks on Linux, Windows and Apple computers
+== the leading desktop software to visualize networks on Linux, Windows and Apple computers
 
 //ST: the leading desktop software to visualize and explore networks
 - more than 2 million downloads,

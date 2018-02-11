@@ -66,7 +66,7 @@ image::Click-on-the-tab-Available-Plugins.png[align="center", title="Click on th
 
 //ST: !
 
-image::Install-the-plugin-then-restart-Gephi.png[align="center", title="Install the plugin then restart Gephi"]
+image::Install-the-plugin-and-restart-Gephi.png[align="center", title="Install the plugin and restart Gephi"]
 {nbsp} +
 
 == Opening the plugin
