@@ -206,7 +206,15 @@ There are for the moment 4 Network Logics to choose from:
 * Full Twitter Network : This will represent **all** entities (User, Tweet, Hastags, URL, Media, Symbol etc...) as a graph.
 * User Network : This will represent the interaction between users. Any mentions, retweets or quotes between 2 users, will be represented. The size of the edge represent the number of interactions between 2 users.
 * Hashtag Network : This will create the network of Hashtags.
-* Emoji Network : Same as Hashtag Network but focused on Emoji characters ( original idea from http://dataneel.com[Neel Shivdasani] / @DataNeel ). 
+* Emoji Network : Same as Hashtag Network but focused on Emoji characters ( original idea from http://dataneel.com[Neel Shivdasani] / @DataNeel ).
+
+//ST: !
+
+**Note for the Emoji Network ** : By default, the `Label` of Emoji nodes use the UTF-8 character representation. On the `Overview` and the `Previsualisation` panel, the lable display might not work with the default settings (you will see some square instead). To make it work, you need to use a font that support emoji. The **Segoe Emoji** font should be the one available by default on Win 10.
+
+For the moment, you **won't** be able to export the graph as **SVG** if you keep the UTF-8 character (PNG still works). But you can use the other emoji representation (html or alias) as label to export as SVG and apply post processing on it.
+
+image::en/twitter-streaming-importer/emoji-change-font.png[align="center", title="Change font for Emoji display"] 
 
 //ST: !
 In the following, we use the network logic "User Network":
