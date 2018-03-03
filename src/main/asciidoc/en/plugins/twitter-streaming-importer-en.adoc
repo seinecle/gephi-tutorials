@@ -199,13 +199,14 @@ A ** Network Logic ** means: what should be done with an incoming tweet? How to 
 
 image::https://docs.google.com/drawings/d/17P99PQy30e6ReMrS1Yp29Sejvc7Fq7H8jQknw69t0p8/pub?w=530&h=576[align="center",title="Selection of the network logic"]
 
-There are for the moment 3 Network Logics to choose from:
+There are for the moment 4 Network Logics to choose from:
 
 //ST: !
 
 * Full Twitter Network : This will represent **all** entities (User, Tweet, Hastags, URL, Media, Symbol etc...) as a graph.
 * User Network : This will represent the interaction between users. Any mentions, retweets or quotes between 2 users, will be represented. The size of the edge represent the number of interactions between 2 users.
-* Hashtag Network : This will create the network of hashtag.
+* Hashtag Network : This will create the network of Hashtags.
+* Emoji Network : Same as Hashtag Network but focused on Emoji characters ( original idea from http://dataneel.com[Neel Shivdasani] / @DataNeel ). 
 
 //ST: !
 In the following, we use the network logic "User Network":
