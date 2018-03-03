@@ -87,7 +87,7 @@ image::Gephi--cumulative-downloads.png[align="center", title="Gephi, cumulative 
 {nbsp} +
 
 //ST: !
-==== b. General interest for Gephi and related software over 2004 - 2016
+==== b. General interest for Gephi and related software in the past 5 years
 
 //ST: !
 //pass:[<iframe scrolling="no" style="border:none;" width="640" height="600" src="https://www.google.com/trends/fetchComponent?hl=en-US&amp;q=gephi,vosviewer,nodexl,cytoscape,ucinet%20&amp;content=1&amp;cid=TIMESERIES_GRAPH_0&amp;export=5&amp;w=640&amp;h=600"></iframe>]

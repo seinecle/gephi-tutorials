@@ -554,7 +554,7 @@ table.CodeRay td.code>pre{padding:0}
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>last modified: 2018-02-11</p>
+<p>last modified: 2018-03-03</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -870,7 +870,7 @@ a long list of words / users.</p>
 <p>&#160;<br></p>
 </div>
 <div class="paragraph">
-<p>There are for the moment 3 Network Logics to choose from:</p>
+<p>There are for the moment 4 Network Logics to choose from:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -881,9 +881,27 @@ a long list of words / users.</p>
 <p>User Network : This will represent the interaction between users. Any mentions, retweets or quotes between 2 users, will be represented. The size of the edge represent the number of interactions between 2 users.</p>
 </li>
 <li>
-<p>Hashtag Network : This will create the network of hashtag.</p>
+<p>Hashtag Network : This will create the network of Hashtags.</p>
+</li>
+<li>
+<p>Emoji Network : Same as Hashtag Network but focused on Emoji characters ( original idea from <a href="http://dataneel.com">Neel Shivdasani</a> / @DataNeel ).</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p><strong>Note for the Emoji Network </strong> : By default, the <code>Label</code> of Emoji nodes use the UTF-8 character representation. On the <code>Overview</code> and the <code>Previsualisation</code> panel, the lable display might not work with the default settings (you will see some square instead). To make it work, you need to use a font that support emoji. The <strong>Segoe Emoji</strong> font should be the one available by default on Win 10.</p>
+</div>
+<div class="paragraph">
+<p>For the moment, you <strong>won&#8217;t</strong> be able to export the graph as <strong>SVG</strong> if you keep the UTF-8 character (PNG still works). But you can use the other emoji representation (html or alias) as label to export as SVG and apply post processing on it.</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/en/twitter-streaming-importer/emoji-change-font.png" alt="emoji change font">
+</div>
+<div class="title">Figure 19. Change font for Emoji display</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
 </div>
 <div class="paragraph">
 <p>In the following, we use the network logic "User Network":</p>
@@ -892,7 +910,7 @@ a long list of words / users.</p>
 <div class="content">
 <img src="images/Adding-terms-and-launching-the-collection-of-tweets.png" alt="Adding terms and launching the collection of tweets">
 </div>
-<div class="title">Figure 19. Adding terms and launching the collection of tweets</div>
+<div class="title">Figure 20. Adding terms and launching the collection of tweets</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -910,7 +928,7 @@ a long list of words / users.</p>
 <div class="content">
 <img src="images/en/twitter-streaming-importer/result-plugin-1-en.png" alt="result plugin 1 en">
 </div>
-<div class="title">Figure 20. Users mentioned in or retweeting tweets citing the search terms</div>
+<div class="title">Figure 21. Users mentioned in or retweeting tweets citing the search terms</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -928,7 +946,7 @@ a long list of words / users.</p>
 <div class="content">
 <img src="images/Running-the-Force-Atlas-layout-while-the-tweets-are-arriving.png" alt="Running the Force Atlas layout while the tweets are arriving">
 </div>
-<div class="title">Figure 21. Running the Force Atlas layout while the tweets are arriving</div>
+<div class="title">Figure 22. Running the Force Atlas layout while the tweets are arriving</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -940,7 +958,7 @@ a long list of words / users.</p>
 <div class="content">
 <img src="images/Switching-to-the-data-laboratory-view.png" alt="Switching to the data laboratory view">
 </div>
-<div class="title">Figure 22. Switching to the data laboratory view</div>
+<div class="title">Figure 23. Switching to the data laboratory view</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -961,7 +979,7 @@ a long list of words / users.</p>
 <div class="content">
 <img src="images/en/twitter-streaming-importer/timeline-enable.png" alt="timeline enable">
 </div>
-<div class="title">Figure 23. How to activate the Timeline</div>
+<div class="title">Figure 24. How to activate the Timeline</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -970,7 +988,7 @@ a long list of words / users.</p>
 <div class="content">
 <img src="images/en/twitter-streaming-importer/timeline.gif" alt="timeline">
 </div>
-<div class="title">Figure 24. Example of Timeline</div>
+<div class="title">Figure 25. Example of Timeline</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -1010,7 +1028,7 @@ a long list of words / users.</p>
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2018-02-11 16:33:15 CET
+Last updated 2018-03-03 18:03:10 CET
 </div>
 </div>
 </body>

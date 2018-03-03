@@ -84,11 +84,9 @@ https://www.linkedin.com/in/eduardo-ramos-ib%C3%A1%C3%B1ez-b6231522/[Eduardo Ram
 //ST: !
 pass:[<iframe width="600" height="600" align="center" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/13mTifgFRpEH0vpXUF2USdy6kTTtPuEq9FgWWXYEPIck/pubchart?oid=657051972&amp;format=interactive"></iframe>]
 
-image::Gephi--cumulative-downloads.png[align="center", title="Gephi, cumulative downloads"]
-{nbsp} +
 
 //ST: !
-==== b. General interest for Gephi and related software over 2004 - 2016
+==== b. General interest for Gephi and related software in the past 5 years
 
 //ST: !
 //pass:[<iframe scrolling="no" style="border:none;" width="640" height="600" src="https://www.google.com/trends/fetchComponent?hl=en-US&amp;q=gephi,vosviewer,nodexl,cytoscape,ucinet%20&amp;content=1&amp;cid=TIMESERIES_GRAPH_0&amp;export=5&amp;w=640&amp;h=600"></iframe>]
@@ -100,8 +98,6 @@ image::Gephi--cumulative-downloads.png[align="center", title="Gephi, cumulative 
   </script>
 ++++
 
-image::google-trends-gephi.png[align="center", title=""]
-{nbsp} +
 
 //ST: !
 ==== c. Academic citations for Gephi (counting only citations to http://www.aaai.org/ocs/index.php/ICWSM/09/paper/download/154/1009[Bastian et al., 2009])
