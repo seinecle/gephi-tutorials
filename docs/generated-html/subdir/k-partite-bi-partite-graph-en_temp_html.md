@@ -153,7 +153,7 @@ When it’s installed, you should be able to see or display the ** Multimode Net
 
 //ST: !
 
-Then, load the graph and :
+Then, load the graph and:
 
 *   Click on **Load Attributes** and select **Type** on **Attribute Type.**
 *   For left matrix select **Administrator – Company**  and right matrix **Company – Adminstrator**

@@ -2,7 +2,7 @@
 <project name="maven-antrun-" default="main"  >
 <target name="main">
   <delete includeemptydirs="true">
-    <fileset excludes="*.pdf" dir="D:\files\Google Drive\open\gephi tutorials\docs/docs/generated-pdf"/>
+    <fileset excludes="*.pdf" dir="C:\Users\levallois\Google Drive\open\gephi tutorials\docs/docs/generated-pdf"/>
   </delete>
 </target>
 </project>

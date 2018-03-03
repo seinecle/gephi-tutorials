@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="author" content="Clément Levallois" /><title>Simple Gephi Project from A to Z</title><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><link href="reveal.js-3.1.0/css/reveal.css" rel="stylesheet" /><link rel="stylesheet" href="reveal.js-3.1.0/css/theme/white.css" id="theme" /><style>/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="author" content="Clément Levallois" /><title>Simple Gephi Project from A to Z</title><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><link href="reveal.js-3.6.0/css/reveal.css" rel="stylesheet" /><link rel="stylesheet" href="reveal.js-3.6.0/css/theme/white.css" id="theme" /><style>/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
 /*pre.CodeRay {background-color:#f7f7f8;}*/
 .CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
 .CodeRay span.line-numbers{display:inline-block;margin-right:.5em;color:rgba(0,0,0,.3)}
@@ -86,16 +86,16 @@ table.CodeRay td.code>pre{padding:0}
 .CodeRay .insert .insert{color:#080}
 .CodeRay .delete .delete{color:#800}
 .CodeRay .change .change{color:#66f}
-.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.1.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.1.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>Simple Gephi Project from A to Z</h1><div class="preamble"><div class="paragraph"><p>last modified: 2017-02-19</p></div>
+.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.6.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.6.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>Simple Gephi Project from A to Z</h1><div class="preamble"><div class="paragraph"><p>last modified: 2017-02-28</p></div>
 <div class="imageblock stretch" style="text-align: center"><img src="images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450" /></div></div><p class="author"><small>Clément Levallois</small></p></section>
-<section id="__escape_or_o_to_see_all_sides_f11_for_full_screen_s_for_speaker_notes"><h2>'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes</h2></section>
+<section id="_escape_or_o_to_see_all_sides_f11_for_full_screen_s_for_speaker_notes"><h2>'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes</h2></section>
 <section id="_description_of_the_project"><h2>Description of the project</h2></section>
 <section><div class="paragraph"><p>This project is for complete beginners to Gephi.
 It supposes you have Gephi installed and running on your computer. That is all.</p></div>
 <div class="paragraph"><p>When finishing this tutorial, you should be able to:</p></div>
-<div class="ulist"><ul><li><p>be familiar with the vocabulary to discuss networks</p></li><li><p>download a network file for this exercise</p></li><li><p>description of the file / the network
-==  !</p></li><li><p>open a network file</p></li><li><p>read the report after opening a file</p></li><li><p>show the labels of the nodes</p></li><li><p>layout the network
-==  !</p></li><li><p>visualize attributes of the network</p></li><li><p>prettify the network for enhanced readability</p></li><li><p>compute the centrality of the nodes in the network</p></li><li><p>visualize attributes created by Gephi</p></li><li><p>export a visualization as a picture or pdf</p></li></ul></div></section>
+<div class="ulist"><ul><li><p>be familiar with the vocabulary to discuss networks</p></li><li><p>download a network file for this exercise</p></li><li><p>description of the file / the network</p></li></ul></div></section>
+<section><div class="ulist"><ul><li><p>open a network file</p></li><li><p>read the report after opening a file</p></li><li><p>show the labels of the nodes</p></li><li><p>layout the network</p></li></ul></div></section>
+<section><div class="ulist"><ul><li><p>visualize attributes of the network</p></li><li><p>prettify the network for enhanced readability</p></li><li><p>compute the centrality of the nodes in the network</p></li><li><p>visualize attributes created by Gephi</p></li><li><p>export a visualization as a picture or pdf</p></li></ul></div></section>
 <section id="_terminology_to_discuss_networks"><h2>terminology to discuss networks</h2></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="images/terminology-for-networks.png" alt="terminology for networks" height="100%" /></div><div class="title">Figure 1. terminology for networks</div></section>
 <section id="_download_a_network_file"><h2>download a network file</h2></section>
@@ -180,7 +180,7 @@ This would allow for a very quick visual appreciation of which nodes are the mos
 <section><div class="paragraph"><p>When we ran "Network Diameter" in the statistics panel, Gephi has actually computed many kinds of centralities (not just "betweenness centrality"):</p></div>
 <div class="imageblock stretch" style="text-align: center"><img src="images/Different-centrality-measures-visible-in-the-data-laboratory.png" alt="Different centrality measures visible in the data laboratory" height="100%" /></div><div class="title">Figure 24. Different centrality measures visible in the data laboratory</div></section>
 <section><div class="paragraph"><p>To resize the nodes according to the value of their betweenness centrality, we use the <code>Appearance</code> panel:</p></div>
-<div class="admonitionblock caution"><table><tr><td class="icon"><div class="title">Caution</div></td><td class="content">make sure you select the correct options</td></tr></table></div>
+<div class="admonitionblock caution"><table><tr><td class="icon"><div class="title"></div></td><td class="content">make sure you select the correct options</td></tr></table></div>
 <div class="imageblock stretch" style="text-align: center"><img src="images/Ranking-node-sizes-by-centrality.png" alt="Ranking node sizes by centrality" height="100%" /></div><div class="title">Figure 25. Ranking node sizes by centrality</div></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="images/Selecting-the-minimum-and-maximum-sizes-of-nodes.png" alt="Selecting the minimum and maximum sizes of nodes" height="100%" /></div><div class="title">Figure 26. Selecting the minimum and maximum sizes of nodes</div></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="images/ranking-centrality-miserables-3--en.png" alt="ranking centrality miserables 3  en" height="100%" /></div><div class="title">Figure 27. Result of the ranking</div></section>
@@ -196,7 +196,7 @@ This would allow for a very quick visual appreciation of which nodes are the mos
 <div class="imageblock stretch" style="text-align: center"><img src="images/Switching-to-the-preview-panel.png" alt="Switching to the preview panel" height="100%" /></div><div class="title">Figure 32. Switching to the preview panel</div></section>
 <section><div class="paragraph"><p>The preview panel is dedicated to the preparation of the picture to be exported as a pdf or svg, which are "scalable": in pdf or sv, the resolution of the graph will remain perfect, even with a strong zoom.
 But as you see, it means the network is now looking different than in the Overview.</p></div></section>
-<section><div class="admonitionblock caution"><table><tr><td class="icon"><div class="title">Caution</div></td><td class="content">contrary to the Overview panel, here you need to hit the "refresh" button after each parameter change.</td></tr></table></div>
+<section><div class="admonitionblock caution"><table><tr><td class="icon"><div class="title"></div></td><td class="content">contrary to the Overview panel, here you need to hit the "refresh" button after each parameter change.</td></tr></table></div>
 <div class="imageblock stretch" style="text-align: center"><img src="images/Updating-the-parameters.png" alt="Updating the parameters" height="100%" /></div><div class="title">Figure 33. Updating the parameters</div></section>
 <section><div class="paragraph"><p>Here I change just 2 parameters: <code>Show Labels</code> and  <code>Font</code> (which I reduce to size "5"), to get:</p></div>
 <div class="imageblock stretch" style="text-align: center"><img src="images/Result-of-preview.png" alt="Result of preview" height="100%" /></div><div class="title">Figure 34. Result of preview</div></section>
@@ -222,7 +222,7 @@ Can you imagine a situation when a node with the largest degree centrality will 
     <script type="text/javascript">
         var sc_project = 11238920;
         var sc_invisible = 1;
-        var sc_security = "8dac6cd5";
+        var sc_security = "11238920";
         var scJsHost = (("https:" == document.location.protocol) ?
             "https://secure." : "http://www.");
         document.write("<sc" + "ript type='text/javascript' src='" +
@@ -232,9 +232,9 @@ Can you imagine a situation when a node with the largest degree centrality will 
     <noscript><div class="statcounter"><a title="site stats"
     href="http://statcounter.com/" target="_blank"><img
     class="statcounter"
-    src="//c.statcounter.com/11238920/0/8dac6cd5/1/" alt="site
+    src="//c.statcounter.com/11238920/0/11238920/1/" alt="site
     stats"></a></div></noscript>
-    <!-- End of StatCounter Code for Default Guide --></p></li></ol></div></section></div></div><script src="reveal.js-3.1.0/lib/js/head.min.js"></script><script src="reveal.js-3.1.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+    <!-- End of StatCounter Code for Default Guide --></p></li></ol></div></section></div></div><script src="reveal.js-3.6.0/lib/js/head.min.js"></script><script src="reveal.js-3.6.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
 Reveal.initialize({
   // Display controls in the bottom right corner
   controls: true,
@@ -304,11 +304,11 @@ Reveal.initialize({
 
   // Optional libraries used to extend on reveal.js
   dependencies: [
-      { src: 'reveal.js-3.1.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-      { src: 'reveal.js-3.1.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-      { src: 'reveal.js-3.1.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js-3.6.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'reveal.js-3.6.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js-3.6.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
       
-      { src: 'reveal.js-3.1.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-      { src: 'reveal.js-3.1.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+      { src: 'reveal.js-3.6.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'reveal.js-3.6.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
   ]
 });</script></body></html>

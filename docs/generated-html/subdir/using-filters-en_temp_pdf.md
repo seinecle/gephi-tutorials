@@ -110,7 +110,7 @@ image::Workflow-of-filters--size=stretch.png[align="center",title="Workflow of f
 //ST: !
 An example: hiding edges with weight lower than 2
 
-
+image::How-to-use-filters..png[align="center",title="How to use filters."]
 {nbsp} +
 
 image::en/filter-edge-weight-1-en.png[align="center",title="Filtering out edges with weight lower than 2."]
@@ -151,7 +151,7 @@ image::Filter-on-edge-weight.png[align="center",title="Filter on edge weight"]
 
 //ST: !
 
-
+image::Keeping-only-female-characters-with-at-least-2-ties.png[align="center",title="Keeping only female characters with at least 2 ties"]
 {nbsp} +
 
 image::en/filter-edge-weight-gender-partition1-en.png[align="center",title="Keeping only female characters with at least 2 ties"]

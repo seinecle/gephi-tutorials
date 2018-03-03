@@ -28,16 +28,20 @@ This project is for complete beginners to Gephi.
 It supposes you have Gephi installed and running on your computer. That is all.
 
 When finishing this tutorial, you should be able to:
-[options="compact"]
+
 - be familiar with the vocabulary to discuss networks
 - download a network file for this exercise
 - description of the file / the network
+
 ==  !
+
 - open a network file
 - read the report after opening a file
 - show the labels of the nodes
 - layout the network
+
 ==  !
+
 - visualize attributes of the network
 - prettify the network for enhanced readability
 - compute the centrality of the nodes in the network
@@ -47,9 +51,9 @@ When finishing this tutorial, you should be able to:
 
 ==  terminology to discuss networks
 ==  !
+
 [.stretch]
 image::terminology-for-networks.png[align="center",title="terminology for networks"]
-
 
 
 
@@ -494,7 +498,7 @@ pass:[    <!-- Start of StatCounter Code for Default Guide -->
     <script type="text/javascript">
         var sc_project = 11238920;
         var sc_invisible = 1;
-        var sc_security = "8dac6cd5";
+        var sc_security = "11238920";
         var scJsHost = (("https:" == document.location.protocol) ?
             "https://secure." : "http://www.");
         document.write("<sc" + "ript type='text/javascript' src='" +
@@ -504,6 +508,6 @@ pass:[    <!-- Start of StatCounter Code for Default Guide -->
     <noscript><div class="statcounter"><a title="site stats"
     href="http://statcounter.com/" target="_blank"><img
     class="statcounter"
-    src="//c.statcounter.com/11238920/0/8dac6cd5/1/" alt="site
+    src="//c.statcounter.com/11238920/0/11238920/1/" alt="site
     stats"></a></div></noscript>
     <!-- End of StatCounter Code for Default Guide -->]

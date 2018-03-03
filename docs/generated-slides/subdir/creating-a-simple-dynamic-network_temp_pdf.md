@@ -19,11 +19,10 @@ image::gephi-logo-2010-transparent.png[width="450" align="center"]
 
 //ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
-== Goals of this tutorial
-//ST: Goals of this tutorial
+== 1. Goals of this tutorial
+//ST: 1. Goals of this tutorial
 
 //ST: !
-
 - We are going to create one very simple *non dynamic* network (network "A").
 - then we will create a modified version of it (network "B").
 - in both files, we need to modify a single line.
@@ -37,27 +36,28 @@ The creation of the 2 networks is not a mandatory step: you can use your own net
 We create the networks in this tutorial to provide the most simple and clear case.
 ====
 
-== open a new project in Gephi
-//ST: open a new project in Gephi
+== 2. Open a new project in Gephi
+//ST: 2. 0pen a new project in Gephi
 
 //ST: !
 - open Gephi. On the Welcome screen that appears,  click on `New Project`
 
+//ST: !
 image::Open-a-new-project.png[align="center", title="Open a new project"]
 {nbsp} +
 
-== creating network "A"
-//ST: creating network "A"
+== 3. creating network "A"
+//ST: ". creating network "A"
 
 //ST: !
 Our project is empty.
 We can use a simple click-and-point tool to create a network:
 
+//ST: !
 image::Icon-for-node-creation.png[align="center", title="Icon for node creation"]
 {nbsp} +
 
 //ST: !
-
 image::A-few-nodes-have-been-created.png[align="center", title="A few nodes have been created"]
 {nbsp} +
 
@@ -67,42 +67,38 @@ When you have created a couple of nodes, click again on the pencil icon to stop 
 Export the network as a file and call it "network A":
 
 //ST: !
-
 image::Exporting-the-network.png[align="center", title="Exporting the network"]
 {nbsp} +
 
 //ST: !
-
 image::Choosing-the-gexf-file-format.png[align="center", title="Choosing the gexf file format"]
 {nbsp} +
 
 //ST: !
 Clicking on "Save" saves the file in the folder you chose. You are back to the view on your graph.
 
-== creating network "B"
-//ST: creating network "B"
+== 4. Creating network "B"
+//ST: 4. Creating network "B"
 
 //ST: !
-
 Now, click on the "Edge pencil", just below the "Node pencil we have used (careful, the icons are identical!)
 
 //ST: !
-
 image::Choosing-the-gexf-file-format.png[align="center", title="Choosing the gexf file format"]
 {nbsp} +
 
+//ST: !
 Create one edge, or a couple of edges, in this way.
 
 //ST: !
-
 Clicking again on the pencil stops the edge creation by mouse clicks.
 
 Then export the network *in the same folder* where we put the previous file (`File -> Export -> Graph File ...`)
 
 *This time, name the file 'network B.gexf' and remember to choose the `gexf` file format just like we did before.*
 
-== modifying just one line in the files network A.gexf and network B.gexf
-//ST: modifying just one line in the files network A.gexf and network B.gexf
+== 5. Modifying just one line in the files network A.gexf and network B.gexf
+//ST: 5. Modifying just one line in the files network A.gexf and network B.gexf
 
 //ST: !
 [[merging]]
@@ -118,7 +114,6 @@ image::The-network-file-opened.png[align="center", title="The network file opene
 Delete and replace this line by this one:
 
 //ST: !
-
 [source,xml]
 ----
 <graph mode="slice" defaultedgetype="directed" timerepresentation="timestamp" timestamp="1">
@@ -139,12 +134,13 @@ Repeat the steps for network B.gexf:
 <graph mode="slice" defaultedgetype="directed" timerepresentation="timestamp" timestamp="2">
 ----
 
+//ST: !
 (see that we have *`timestamp="2"`* here: this is going to be the second time slice!)
 
 - save the file.
 
-== merging network "A" and "B" into a dynamic network
-//ST: merging network "A" and "B" into a dynamic network
+== 6. Merging network "A" and "B" into a dynamic network
+//ST: 6. Merging network "A" and "B" into a dynamic network
 
 //ST: !
 We will use the 2 files network A.gexf and network B.gexf that we have created.
@@ -152,41 +148,45 @@ We will use the 2 files network A.gexf and network B.gexf that we have created.
 First, let's close the project we have in Gephi, without saving:
 
 //ST: !
-
 image::Closing-the-current-project.png[align="center", title="Closing the current project"]
 {nbsp} +
 
 //ST: !
 Then click on `File -> Open` and navigate to the folder where network A.gexf and network B.gexf are located:
 
+//ST: !
 image::Opening-files.png[align="center", title="Opening files"]
 {nbsp} +
 
 //ST: !
 Here, make sure you select the *2 files at once* (using the key kbd:[Ctrl] on pc or kbd:[{commandkey}] on mac).
 
+//ST: !
 image::Opening-2-files-at-once.png[align="center", title="Opening 2 files at once"]
 {nbsp} +
 
 //ST: !
 Opening the files display a report window:
 
+//ST: !
 image::Import-report-window.png[align="center", title="Import report window"]
 {nbsp} +
 
 
-== enabling the timeline
-//ST: enabling the timeline
+== 7. Enabling the timeline
+//ST: 7. Enabling the timeline
 
 //ST: !
 You should see this button, click on it (if not: something went wrong. Retrace your steps)
 
+//ST: !
 image::Enable-the-timeline.png[align="center", title="Enable the timeline"]
 {nbsp} +
 
 //ST: !
 Click and slide the right side border of the timeline *to the left*. You should see the edge disappear:
 
+//ST: !
 image::Sliding-the-timeline.png[align="center", title="Sliding the timeline"]
 {nbsp} +
 
@@ -196,11 +196,10 @@ It needs to be animated precisely with the timeline, dynamic attributes should b
 
 These features will be explained in the coming tutorials on dynamic networks with Gephi.
 
-== more tutorials on dynamic networks with Gephi
-//ST: more tutorials on dynamic networks with Gephi
+== 8. More tutorials on dynamic networks with Gephi
+//ST: 8. More tutorials on dynamic networks with Gephi
 
 //ST: !
-
 - https://github.com/gephi/gephi/wiki/Import-Dynamic-Data[The wiki on gephi.org]
 
 == the end

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="author" content="Clément Levallois" /><title>Creating a simple dynamic network</title><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><link href="reveal.js-3.1.0/css/reveal.css" rel="stylesheet" /><link rel="stylesheet" href="reveal.js-3.1.0/css/theme/white.css" id="theme" /><style>/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="author" content="Clément Levallois" /><title>Creating a simple dynamic network</title><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><link href="reveal.js-3.6.0/css/reveal.css" rel="stylesheet" /><link rel="stylesheet" href="reveal.js-3.6.0/css/theme/white.css" id="theme" /><style>/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
 /*pre.CodeRay {background-color:#f7f7f8;}*/
 .CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
 .CodeRay span.line-numbers{display:inline-block;margin-right:.5em;color:rgba(0,0,0,.3)}
@@ -86,34 +86,34 @@ table.CodeRay td.code>pre{padding:0}
 .CodeRay .insert .insert{color:#080}
 .CodeRay .delete .delete{color:#800}
 .CodeRay .change .change{color:#66f}
-.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.1.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.1.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>Creating a simple dynamic network</h1><div class="preamble"><div class="paragraph"><p>last modified: 2017-02-19</p></div>
+.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.6.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.6.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>Creating a simple dynamic network</h1><div class="preamble"><div class="paragraph"><p>last modified: 2018-02-11</p></div>
 <div class="imageblock stretch" style="text-align: center"><img src="images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450" /></div></div><p class="author"><small>Clément Levallois</small></p></section>
-<section id="__escape_or_o_to_see_all_sides_f11_for_full_screen_s_for_speaker_notes"><h2>'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes</h2></section>
-<section id="_goals_of_this_tutorial"><h2>Goals of this tutorial</h2></section>
+<section id="_escape_or_o_to_see_all_sides_f11_for_full_screen_s_for_speaker_notes"><h2>'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes</h2></section>
+<section id="_1_goals_of_this_tutorial"><h2>1. Goals of this tutorial</h2></section>
 <section><div class="ulist"><ul><li><p>We are going to create one very simple <strong>non dynamic</strong> network (network "A").</p></li><li><p>then we will create a modified version of it (network "B").</p></li><li><p>in both files, we need to modify a single line.</p></li><li><p>finally, we will merge networks A and B, forming a new <strong>dynamic</strong> network evolving from version A to B.</p></li></ul></div></section>
-<section><div class="admonitionblock note"><table><tr><td class="icon"><i class="fa fa-info-circle" title="Note"></i></td><td class="content"><div class="paragraph"><p>The creation of the 2 networks is not a mandatory step: you can use your own network files, as long as they are in gexf file format. In this case, <a href="#merging">skip to here</a>.</p></div>
+<section><div class="admonitionblock note"><table><tr><td class="icon"><i class="fa fa-info-circle"></i></td><td class="content"><div class="paragraph"><p>The creation of the 2 networks is not a mandatory step: you can use your own network files, as long as they are in gexf file format. In this case, <a href="#merging">skip to here</a>.</p></div>
 <div class="paragraph"><p>We create the networks in this tutorial to provide the most simple and clear case.</p></div></td></tr></table></div></section>
-<section id="_open_a_new_project_in_gephi"><h2>open a new project in Gephi</h2></section>
-<section><div class="ulist"><ul><li><p>open Gephi. On the Welcome screen that appears,  click on <code>New Project</code></p></li></ul></div>
-<div class="imageblock stretch" style="text-align: center"><img src="images/Open-a-new-project.png" alt="Open a new project" height="100%" /></div><div class="title">Figure 1. Open a new project</div></section>
-<section id="_creating_network_a"><h2>creating network "A"</h2></section>
+<section id="_2_0pen_a_new_project_in_gephi"><h2>2. 0pen a new project in Gephi</h2></section>
+<section><div class="ulist"><ul><li><p>open Gephi. On the Welcome screen that appears,  click on <code>New Project</code></p></li></ul></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Open-a-new-project.png" alt="Open a new project" height="100%" /></div><div class="title">Figure 1. Open a new project</div></section>
+<section id="_creating_network_a"><h2>". creating network "A"</h2></section>
 <section><div class="paragraph"><p>Our project is empty.
-We can use a simple click-and-point tool to create a network:</p></div>
-<div class="imageblock stretch" style="text-align: center"><img src="images/Icon-for-node-creation.png" alt="Icon for node creation" height="100%" /></div><div class="title">Figure 2. Icon for node creation</div></section>
+We can use a simple click-and-point tool to create a network:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Icon-for-node-creation.png" alt="Icon for node creation" height="100%" /></div><div class="title">Figure 2. Icon for node creation</div></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="images/A-few-nodes-have-been-created.png" alt="A few nodes have been created" height="100%" /></div><div class="title">Figure 3. A few nodes have been created</div></section>
 <section><div class="paragraph"><p>When you have created a couple of nodes, click again on the pencil icon to stop the node creation.</p></div>
 <div class="paragraph"><p>Export the network as a file and call it "network A":</p></div></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="images/Exporting-the-network.png" alt="Exporting the network" height="100%" /></div><div class="title">Figure 4. Exporting the network</div></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="images/Choosing-the-gexf-file-format.png" alt="Choosing the gexf file format" height="100%" /></div><div class="title">Figure 5. Choosing the gexf file format</div></section>
 <section><div class="paragraph"><p>Clicking on "Save" saves the file in the folder you chose. You are back to the view on your graph.</p></div></section>
-<section id="_creating_network_b"><h2>creating network "B"</h2></section>
+<section id="_4_creating_network_b"><h2>4. Creating network "B"</h2></section>
 <section><div class="paragraph"><p>Now, click on the "Edge pencil", just below the "Node pencil we have used (careful, the icons are identical!)</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Choosing-the-gexf-file-format.png" alt="Choosing the gexf file format" height="100%" /></div><div class="title">Figure 6. Choosing the gexf file format</div>
-<div class="paragraph"><p>Create one edge, or a couple of edges, in this way.</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Choosing-the-gexf-file-format.png" alt="Choosing the gexf file format" height="100%" /></div><div class="title">Figure 6. Choosing the gexf file format</div></section>
+<section><div class="paragraph"><p>Create one edge, or a couple of edges, in this way.</p></div></section>
 <section><div class="paragraph"><p>Clicking again on the pencil stops the edge creation by mouse clicks.</p></div>
 <div class="paragraph"><p>Then export the network <strong>in the same folder</strong> where we put the previous file (<code>File &#8594; Export &#8594; Graph File &#8230;&#8203;</code>)</p></div>
 <div class="paragraph"><p><strong>This time, name the file 'network B.gexf' and remember to choose the <code>gexf</code> file format just like we did before.</strong></p></div></section>
-<section id="_modifying_just_one_line_in_the_files_network_a_gexf_and_network_b_gexf"><h2>modifying just one line in the files network A.gexf and network B.gexf</h2></section>
+<section id="_5_modifying_just_one_line_in_the_files_network_a_gexf_and_network_b_gexf"><h2>5. Modifying just one line in the files network A.gexf and network B.gexf</h2></section>
 <section><div class="paragraph" id="merging"><p>From your computer, open network A.gexf with a text editor (don&#8217;t use Microsoft Word!):</p></div>
 <div class="paragraph"><p>(here is how to do it on a <a href="http://www.dummies.com/computers/macs/how-to-open-and-edit-a-text-file-on-a-mac/">Mac</a>, and on <a href="https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/app_notepad.mspx?mfr=true">Windows</a>).</p></div></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="images/The-network-file-opened.png" alt="The network file opened" height="100%" /></div><div class="title">Figure 7. The network file opened</div></section>
@@ -123,28 +123,28 @@ We can use a simple click-and-point tool to create a network:</p></div>
 <div class="paragraph"><p>Save the file.</p></div></section>
 <section><div class="paragraph"><p>Repeat the steps for network B.gexf:</p></div>
 <div class="ulist"><ul><li><p>open the file in a text editor,</p></li><li><p>find the  line <code>&lt;graph defaultedgetype="directed" mode="static"&gt;</code></p></li><li><p>replace it by:</p></li></ul></div>
-<div class="listingblock"><div class="content"><pre class="CodeRay"><code class="xml language-xml"><span class="tag">&lt;graph</span> <span class="attribute-name">mode</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">slice</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">defaultedgetype</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">directed</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">timerepresentation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">timestamp</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">timestamp</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span></code></pre></div></div>
-<div class="paragraph"><p>(see that we have <strong><code>timestamp="2"</code></strong> here: this is going to be the second time slice!)</p></div>
+<div class="listingblock"><div class="content"><pre class="CodeRay"><code class="xml language-xml"><span class="tag">&lt;graph</span> <span class="attribute-name">mode</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">slice</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">defaultedgetype</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">directed</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">timerepresentation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">timestamp</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">timestamp</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span></code></pre></div></div></section>
+<section><div class="paragraph"><p>(see that we have <strong><code>timestamp="2"</code></strong> here: this is going to be the second time slice!)</p></div>
 <div class="ulist"><ul><li><p>save the file.</p></li></ul></div></section>
-<section id="_merging_network_a_and_b_into_a_dynamic_network"><h2>merging network "A" and "B" into a dynamic network</h2></section>
+<section id="_6_merging_network_a_and_b_into_a_dynamic_network"><h2>6. Merging network "A" and "B" into a dynamic network</h2></section>
 <section><div class="paragraph"><p>We will use the 2 files network A.gexf and network B.gexf that we have created.</p></div>
 <div class="paragraph"><p>First, let&#8217;s close the project we have in Gephi, without saving:</p></div></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="images/Closing-the-current-project.png" alt="Closing the current project" height="100%" /></div><div class="title">Figure 8. Closing the current project</div></section>
-<section><div class="paragraph"><p>Then click on <code>File &#8594; Open</code> and navigate to the folder where network A.gexf and network B.gexf are located:</p></div>
-<div class="imageblock stretch" style="text-align: center"><img src="images/Opening-files.png" alt="Opening files" height="100%" /></div><div class="title">Figure 9. Opening files</div></section>
-<section><div class="paragraph"><p>Here, make sure you select the <strong>2 files at once</strong> (using the key <kbd>Ctrl</kbd> on pc or <kbd>{commandkey}</kbd> on mac).</p></div>
-<div class="imageblock stretch" style="text-align: center"><img src="images/Opening-2-files-at-once.png" alt="Opening 2 files at once" height="100%" /></div><div class="title">Figure 10. Opening 2 files at once</div></section>
-<section><div class="paragraph"><p>Opening the files display a report window:</p></div>
-<div class="imageblock stretch" style="text-align: center"><img src="images/Import-report-window.png" alt="Import report window" height="100%" /></div><div class="title">Figure 11. Import report window</div></section>
-<section id="_enabling_the_timeline"><h2>enabling the timeline</h2></section>
-<section><div class="paragraph"><p>You should see this button, click on it (if not: something went wrong. Retrace your steps)</p></div>
-<div class="imageblock stretch" style="text-align: center"><img src="images/Enable-the-timeline.png" alt="Enable the timeline" height="100%" /></div><div class="title">Figure 12. Enable the timeline</div></section>
-<section><div class="paragraph"><p>Click and slide the right side border of the timeline <strong>to the left</strong>. You should see the edge disappear:</p></div>
-<div class="imageblock stretch" style="text-align: center"><img src="images/Sliding-the-timeline.png" alt="Sliding the timeline" height="100%" /></div><div class="title">Figure 13. Sliding the timeline</div></section>
+<section><div class="paragraph"><p>Then click on <code>File &#8594; Open</code> and navigate to the folder where network A.gexf and network B.gexf are located:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Opening-files.png" alt="Opening files" height="100%" /></div><div class="title">Figure 9. Opening files</div></section>
+<section><div class="paragraph"><p>Here, make sure you select the <strong>2 files at once</strong> (using the key <kbd>Ctrl</kbd> on pc or <kbd>{commandkey}</kbd> on mac).</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Opening-2-files-at-once.png" alt="Opening 2 files at once" height="100%" /></div><div class="title">Figure 10. Opening 2 files at once</div></section>
+<section><div class="paragraph"><p>Opening the files display a report window:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Import-report-window.png" alt="Import report window" height="100%" /></div><div class="title">Figure 11. Import report window</div></section>
+<section id="_7_enabling_the_timeline"><h2>7. Enabling the timeline</h2></section>
+<section><div class="paragraph"><p>You should see this button, click on it (if not: something went wrong. Retrace your steps)</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Enable-the-timeline.png" alt="Enable the timeline" height="100%" /></div><div class="title">Figure 12. Enable the timeline</div></section>
+<section><div class="paragraph"><p>Click and slide the right side border of the timeline <strong>to the left</strong>. You should see the edge disappear:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Sliding-the-timeline.png" alt="Sliding the timeline" height="100%" /></div><div class="title">Figure 13. Sliding the timeline</div></section>
 <section><div class="paragraph"><p>We created a dynamic network.
 It needs to be animated precisely with the timeline, dynamic attributes should be explored, as well as dynamic layouts.</p></div>
 <div class="paragraph"><p>These features will be explained in the coming tutorials on dynamic networks with Gephi.</p></div></section>
-<section id="_more_tutorials_on_dynamic_networks_with_gephi"><h2>more tutorials on dynamic networks with Gephi</h2></section>
+<section id="_8_more_tutorials_on_dynamic_networks_with_gephi"><h2>8. More tutorials on dynamic networks with Gephi</h2></section>
 <section><div class="ulist"><ul><li><p><a href="https://github.com/gephi/gephi/wiki/Import-Dynamic-Data">The wiki on gephi.org</a></p></li></ul></div></section>
 <section id="_the_end"><h2>The end!</h2><div class="paragraph"><p>Visit <a href="https://www.facebook.com/groups/gephi/">the Gephi group on Facebook</a> to get help,</p></div>
 <div class="paragraph"><p>or visit <a href="https://seinecle.github.io/gephi-tutorials/">the website for more tutorials</a>
@@ -152,7 +152,7 @@ It needs to be animated precisely with the timeline, dynamic attributes should b
     <script type="text/javascript">
         var sc_project = 11238920;
         var sc_invisible = 1;
-        var sc_security = "8dac6cd5";
+        var sc_security = "11238920";
         var scJsHost = (("https:" == document.location.protocol) ?
             "https://secure." : "http://www.");
         document.write("<sc" + "ript type='text/javascript' src='" +
@@ -162,9 +162,9 @@ It needs to be animated precisely with the timeline, dynamic attributes should b
     <noscript><div class="statcounter"><a title="site stats"
     href="http://statcounter.com/" target="_blank"><img
     class="statcounter"
-    src="//c.statcounter.com/11238920/0/8dac6cd5/1/" alt="site
+    src="//c.statcounter.com/11238920/0/11238920/1/" alt="site
     stats"></a></div></noscript>
-    <!-- End of StatCounter Code for Default Guide --></p></div></section></div></div><script src="reveal.js-3.1.0/lib/js/head.min.js"></script><script src="reveal.js-3.1.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+    <!-- End of StatCounter Code for Default Guide --></p></div></section></div></div><script src="reveal.js-3.6.0/lib/js/head.min.js"></script><script src="reveal.js-3.6.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
 Reveal.initialize({
   // Display controls in the bottom right corner
   controls: true,
@@ -234,11 +234,11 @@ Reveal.initialize({
 
   // Optional libraries used to extend on reveal.js
   dependencies: [
-      { src: 'reveal.js-3.1.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-      { src: 'reveal.js-3.1.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-      { src: 'reveal.js-3.1.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js-3.6.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'reveal.js-3.6.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js-3.6.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
       
-      { src: 'reveal.js-3.1.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-      { src: 'reveal.js-3.1.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+      { src: 'reveal.js-3.6.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'reveal.js-3.6.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
   ]
 });</script></body></html>
