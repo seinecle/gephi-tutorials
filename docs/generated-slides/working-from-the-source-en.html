@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="author" content="Clément Levallois" /><title>Working from Gephi&#8217;s source</title><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><link href="reveal.js-3.6.0/css/reveal.css" rel="stylesheet" /><link rel="stylesheet" href="reveal.js-3.6.0/css/theme/white.css" id="theme" /><style>/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="author" content="== !" /><title>Working from Gephi&#8217;s source</title><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><link href="reveal.js-3.6.0/css/reveal.css" rel="stylesheet" /><link rel="stylesheet" href="reveal.js-3.6.0/css/theme/white.css" id="theme" /><style>/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
 /*pre.CodeRay {background-color:#f7f7f8;}*/
 .CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
 .CodeRay span.line-numbers{display:inline-block;margin-right:.5em;color:rgba(0,0,0,.3)}
@@ -86,70 +86,79 @@ table.CodeRay td.code>pre{padding:0}
 .CodeRay .insert .insert{color:#080}
 .CodeRay .delete .delete{color:#800}
 .CodeRay .change .change{color:#66f}
-.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.6.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.6.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>Working from Gephi&#8217;s source</h1><div class="preamble"><div class="paragraph"><p>last modified: 2017-02-28</p></div>
-<div class="imageblock stretch" style="text-align: center"><img src="images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450" /></div></div><p class="author"><small>Clément Levallois</small></p></section>
-<section id="_escape_or_o_to_see_all_sides_f11_for_full_screen_s_for_speaker_notes"><h2>'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes</h2></section>
+.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.6.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.6.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>Working from Gephi&#8217;s source</h1><div class="preamble"><div class="paragraph"><p>2017-02-28</p></div>
+<div class="paragraph"><p>last modified: 2017-02-28</p></div></div><p class="author"><small>== !</small></p></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450" /></div></section>
+<section></section>
 <section id="_presentation_of_this_tutorial"><h2>Presentation of this tutorial</h2></section>
-<section><div class="paragraph"><p>This tutorial explains how to get and modify Gephi&#8217;s source code, and build Gephi from it.</p></div>
-<div class="imageblock stretch" style="text-align: center"><img src="images/en/developers/use-the-source.jpg" alt="use the source" height="100%" /></div><div class="title">Figure 1. The obligatory meme</div></section>
+<section><div class="paragraph"><p>This tutorial explains how to get and modify Gephi&#8217;s source code, and build Gephi from it.</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/developers/use-the-source.jpg" alt="use the source" height="100%" /></div><div class="title">Figure 1. The obligatory meme</div></section>
 <section><div class="paragraph"><p>We will:</p></div>
-<div class="ulist"><ul><li><p>download the source code</p></li><li><p>run Gephi from the source</p></li><li><p>modify Gephi&#8217;s openGL visualization engine</p></li><li><p>run Gephi in this modified version</p></li></ul></div></section>
-<section><div class="paragraph"><p>The modified version of Gephi that we will implement will have for effect to add circles around nodes communities.</p></div>
+<div class="ulist"><ul><li><p>download the source code</p></li><li><p>run Gephi from the source</p></li><li><p>modify Gephi&#8217;s openGL visualization engine</p></li><li><p>run Gephi in this modified version</p></li></ul></div>
+<div class="paragraph"><p>The modified version of Gephi that we will implement will have for effect to add circles around nodes communities.</p></div>
 <div class="paragraph"><p>This project originates from <a href="https://twitter.com/DataToViz/status/828840269072080896">Susie Lu&#8217;s creation</a>.</p></div>
 <div class="paragraph"><p>We should get something like:</p></div></section>
-<section><div class="videoblock"><iframe width="560" height="315" src="https://www.youtube.com/embed/Y3jk-_QaFx4?rel=0" frameborder="0" allowfullscreen=""></iframe></div></section>
+<section><div class="videoblock stretch"><iframe width="560" height="315" src="https://www.youtube.com/embed/Y3jk-_QaFx4?rel=0" frameborder="0" allowfullscreen=""></iframe></div></section>
 <section><div class="paragraph"><p>For this tutorial you will need:</p></div>
 <div class="ulist"><ul><li><p>some knowledge of Java.</p></li><li><p>NetBeans installed (<a href="https://dl.dropboxusercontent.com/u/28091845/coursera/codapps/session%201/module%201%20-%20installing%20NetBeans%20ans%20Codename%20One%20on%20a%20PC.pdf">up to date instructions here</a>). Eclipse, IntelliJ or any other code editor won&#8217;t do.</p></li><li><p>a good internet connection since we will download a lot of small dependencies.</p></li><li><p>no Github account is necessary (if you have one, fork Gephi before doing all the steps below).</p></li></ul></div></section>
 <section id="_downloading_the_source_code"><h2>Downloading the source code</h2></section>
 <section><div class="olist arabic"><ol class="arabic"><li><p>Open NetBeans.</p></li><li><p>In NetBeans, go to <code>Team &#8594; Git &#8594; Clone</code></p></li></ol></div>
 <div class="paragraph"><p>(can&#8217;t find this menu in NetBeans? read an alternative just below)</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/en/developers/git-clone-gephi-0-en.png" alt="git clone gephi 0 en" height="100%" /></div><div class="title">Figure 2. Cloning the gephi source</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/developers/git-clone-gephi-0-en.png" alt="git clone gephi 0 en" height="100%" /></div><div class="title">Figure 2. Cloning the gephi source</div></section>
 <section><div class="dlist"><dl><dt class="hdlist1">NOTE</dt><dd><p>if you already have projects opened in NetBeans, the menu Team &#8594; Git &#8594; Clone is replaced by:</p><div class="literalblock"><div class="content"><pre>Team -&gt; Remote -&gt; Clone</pre></div></div></dd></dl></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Cloning-the-gephi-source.png" alt="Cloning the gephi source" height="100%" /></div><div class="title">Figure 3. Cloning the gephi source</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Cloning-the-gephi-source.png" alt="Cloning the gephi source" height="100%" /></div><div class="title">Figure 3. Cloning the gephi source</div></section>
 <section><div class="ulist"><ul><li><p>For <code>Repository URL</code>, put the address of the Gephi repository on Github, which is:</p></li></ul></div>
 <div class="paragraph"><p><a href="https://github.com/gephi/gephi.git">https://github.com/gephi/gephi.git</a></p></div>
 <div class="ulist"><ul><li><p>for <code>Clone into</code>, select a folder on your disk. No need to create a new folder inside, the cloning process will do it.</p></li><li><p>Github User and password can be left empty</p></li><li><p>Then click on <code>Next</code></p></li></ul></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/en/developers/git-clone-gephi-2-en.png" alt="git clone gephi 2 en" height="100%" /></div><div class="title">Figure 4. Select Master and click next</div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/en/developers/git-clone-gephi-3-en.png" alt="git clone gephi 3 en" height="100%" /></div><div class="title">Figure 5. Leave as it is and click on Finish</div></section>
-<section><div class="paragraph"><p>At this step, NetBeans starts downloading the source code of Gephi - not all of it. Should take a couple of minutes, then:</p></div>
-<div class="imageblock stretch" style="text-align: center"><img src="images/en/developers/git-clone-gephi-4-en.png" alt="git clone gephi 4 en" height="100%" /></div><div class="title">Figure 6. Click on Open Project</div></section>
-<section><div class="paragraph"><p>Select (highlight in blue) the line mentioning Gephi, and click on "Open"</p></div>
-<div class="imageblock stretch" style="text-align: center"><img src="images/en/developers/git-clone-gephi-5-en.png" alt="git clone gephi 5 en" height="100%" /></div><div class="title">Figure 7. Click on Open Project</div></section>
-<section><div class="paragraph"><p>You should now see Gephi as a project on the left in NetBeans:</p></div>
-<div class="imageblock stretch" style="text-align: center"><img src="images/en/developers/netbeans-gephi-source-1-en.png" alt="netbeans gephi source 1 en" height="100%" /></div><div class="title">Figure 8. Gephi project</div></section>
-<section><div class="paragraph"><p>Right click on the project and select "Build with dependencies". This will download all the rest of the source, which can take roughly 5 to 20 minutes.</p></div>
-<div class="imageblock stretch" style="text-align: center"><img src="images/en/developers/netbeans-gephi-source-2-en.png" alt="netbeans gephi source 2 en" height="100%" /></div><div class="title">Figure 9. Building the project</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/developers/git-clone-gephi-2-en.png" alt="git clone gephi 2 en" height="100%" /></div><div class="title">Figure 4. Select Master and click next</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/developers/git-clone-gephi-3-en.png" alt="git clone gephi 3 en" height="100%" /></div><div class="title">Figure 5. Leave as it is and click on Finish</div></section>
+<section><div class="paragraph"><p>At this step, NetBeans starts downloading the source code of Gephi - not all of it. Should take a couple of minutes, then:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/developers/git-clone-gephi-4-en.png" alt="git clone gephi 4 en" height="100%" /></div><div class="title">Figure 6. Click on Open Project</div></section>
+<section><div class="paragraph"><p>Select (highlight in blue) the line mentioning Gephi, and click on "Open"</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/developers/git-clone-gephi-5-en.png" alt="git clone gephi 5 en" height="100%" /></div><div class="title">Figure 7. Click on Open Project</div></section>
+<section><div class="paragraph"><p>You should now see Gephi as a project on the left in NetBeans:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/developers/netbeans-gephi-source-1-en.png" alt="netbeans gephi source 1 en" height="100%" /></div><div class="title">Figure 8. Gephi project</div></section>
+<section><div class="paragraph"><p>Right click on the project and select "Build with dependencies". This will download all the rest of the source, which can take roughly 5 to 20 minutes.</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/developers/netbeans-gephi-source-2-en.png" alt="netbeans gephi source 2 en" height="100%" /></div><div class="title">Figure 9. Building the project</div></section>
+<section></section>
 <section id="_running_gephi_from_source"><h2>Running Gephi from source</h2></section>
-<section><div class="paragraph"><p>When the build is complete, expand the folder "Modules" of the Gephi project, and double click on "gephi-app":</p></div>
-<div class="imageblock stretch" style="text-align: center"><img src="images/en/developers/netbeans-gephi-source-3-en.png" alt="netbeans gephi source 3 en" height="100%" /></div><div class="title">Figure 10. Opening the gephi-app submodule</div></section>
-<section><div class="paragraph"><p>This opens a new project on the left of NetBeans, called "gephi-app". This is a submodule of Gephi, dedicated to managing its launch.</p></div>
-<div class="imageblock stretch" style="text-align: center"><img src="images/Launching-Gephi.png" alt="Launching Gephi" height="100%" /></div><div class="title">Figure 11. Launching Gephi</div></section>
+<section><div class="paragraph"><p>When the build is complete, expand the folder "Modules" of the Gephi project, and double click on "gephi-app":</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/developers/netbeans-gephi-source-3-en.png" alt="netbeans gephi source 3 en" height="100%" /></div><div class="title">Figure 10. Opening the gephi-app submodule</div></section>
+<section><div class="paragraph"><p>This opens a new project on the left of NetBeans, called "gephi-app". This is a submodule of Gephi, dedicated to managing its launch.</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Launching-Gephi.png" alt="Launching Gephi" height="100%" /></div><div class="title">Figure 11. Launching Gephi</div></section>
 <section><div class="paragraph"><p>And Gephi launches!</p></div>
 <div class="paragraph"><p>Now that we know how to run Gephi from source, we can modify the source and see how it goes.</p></div></section>
 <section id="_modifying_gephi_s_opengl_visualization_engine"><h2>Modifying Gephi&#8217;s openGL visualization engine</h2></section>
 <section><div class="paragraph"><p>We are going to add circles which will enclose groups of nodes (aka communities). In three steps:</p></div>
 <div class="olist arabic"><ol class="arabic"><li><p>Open the <code>VisualizationImpl</code> module</p></li><li><p>Create simple classes for the circles</p></li><li><p>Add some code in the class which manages the display in OpenGL, so that circles get created</p></li></ol></div></section>
-<section><h3>1. Open the <code>VisualizationImpl</code> module</h3><div class="paragraph"><p>In the gephi project, in the folder Modules, double click on the <code>VisualizationImpl</code> module:</p></div>
-<div class="imageblock stretch" style="text-align: center"><img src="images/en/developers/enclosing-circles-1-en.png" alt="enclosing circles 1 en" height="100%" /></div><div class="title">Figure 12. Opening VisualizationImpl</div></section>
-<section><h3>2. Create simple classes for the circles</h3><div class="paragraph"><p>Create a new package and add 3 classes in it: <code>Circle.java</code>, <code>Point.java</code>, <code>SmallestEnclosingCircle.java</code>.</p></div>
-<div class="paragraph"><p>(I merely adapted these classes from <a href="https://www.nayuki.io/page/smallest-enclosing-circle">this website</a>)</p></div>
-<div class="imageblock stretch" style="text-align: center"><img src="images/en/developers/enclosing-circles-2-en.png" alt="enclosing circles 2 en" height="100%" /></div><div class="title">Figure 13. Three classes</div></section>
+<section><h3>1. Open the <code>VisualizationImpl</code> module</h3></section>
+<section><div class="paragraph"><p>In the gephi project, in the folder Modules, double click on the <code>VisualizationImpl</code> module:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/developers/enclosing-circles-1-en.png" alt="enclosing circles 1 en" height="100%" /></div><div class="title">Figure 12. Opening VisualizationImpl</div></section>
+<section></section>
+<section><h3>2. Create simple classes for the circles</h3></section>
+<section><div class="paragraph"><p>Create a new package and add 3 classes in it: <code>Circle.java</code>, <code>Point.java</code>, <code>SmallestEnclosingCircle.java</code>.</p></div>
+<div class="paragraph"><p>(I merely adapted these classes from <a href="https://www.nayuki.io/page/smallest-enclosing-circle">this website</a>)</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/developers/enclosing-circles-2-en.png" alt="enclosing circles 2 en" height="100%" /></div><div class="title">Figure 13. Three classes</div></section>
 <section><div class="paragraph"><p>The code of these classes <a href="https://github.com/seinecle/gephi/tree/enclosing-circles-opengl/modules/VisualizationImpl/src/main/java/net/clementlevallois/enclosingcircles">can be found here</a>.</p></div></section>
-<section><h3>3. Add the circle creation logic to the class managing the OpenGL display</h3><div class="paragraph"><p>Open the package <code>org.gephi.visualization.opengl</code>, and inside open <code>CompatibilityEngine.java</code>:</p></div>
-<div class="imageblock stretch" style="text-align: center"><img src="images/opening-CompatibilityEngine.java.png" alt="opening CompatibilityEngine.java" height="100%" /></div><div class="title">Figure 14. opening CompatibilityEngine.java</div></section>
+<section><h3>3. Add the circle creation logic to the class managing the OpenGL display</h3></section>
+<section><div class="paragraph"><p>Open the package <code>org.gephi.visualization.opengl</code>, and inside open <code>CompatibilityEngine.java</code>:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/opening-CompatibilityEngine.java.png" alt="opening CompatibilityEngine.java" height="100%" /></div><div class="title">Figure 14. opening CompatibilityEngine.java</div></section>
 <section><div class="paragraph"><p>No need to understand most of the code in this class.</p></div>
 <div class="paragraph"><p>But we see that starting at <a href="https://github.com/seinecle/gephi/blob/enclosing-circles-opengl/modules/VisualizationImpl/src/main/java/org/gephi/visualization/opengl/CompatibilityEngine.java#L194">line 194</a>, a loop on nodes starts:</p></div>
 <div class="paragraph"><p>We will put nodes in a map (declared above, at <a href="https://github.com/seinecle/gephi/blob/enclosing-circles-opengl/modules/VisualizationImpl/src/main/java/org/gephi/visualization/opengl/CompatibilityEngine.java#L155">line 155</a>) where:</p></div>
 <div class="ulist"><ul><li><p>keys are the name of the cluster nodes belong too,</p></li><li><p>values are the Set of Nodes corresponding to the cluster.</p></li></ul></div>
-<div class="paragraph"><p>(yes, this implies the nodes must have an attribute called "Modularity Class" showing the cluster they belong to)</p></div></section>
-<section><div class="paragraph"><p>The code you should add to assign nodes to clusters in the map is in <a href="https://github.com/seinecle/gephi/blob/enclosing-circles-opengl/modules/VisualizationImpl/src/main/java/org/gephi/visualization/opengl/CompatibilityEngine.java#L197">lines 197-203</a></p></div></section>
-<section><div class="paragraph"><p>Then, <a href="https://github.com/seinecle/gephi/blob/enclosing-circles-opengl/modules/VisualizationImpl/src/main/java/org/gephi/visualization/opengl/CompatibilityEngine.java#L210">lines 210-245</a> iterate on the map, and create the circles around clusters.</p></div>
-<div class="paragraph"><p>The logic of the circle creation in OpenGL can be understood rather easily, by copying and modyfying the code used just above for the creation of nodes, and by looking at the online documentation on <a href="http://www.openglprojects.in/2014/03/draw-circle-opengl.html#gsc.tab=0">how to create shapes in OpenGL</a>.</p></div></section>
-<section><div class="paragraph"><p>That&#8217;s it. Now just run Gephi from source as we did before. From Gephi, open a network where nodes have a "Modularity Class" attribute, and Gephi will draw circles around nodes from the same clusters:</p></div></section>
-<section><div class="videoblock"><iframe width="560" height="315" src="https://www.youtube.com/embed/Y3jk-_QaFx4?rel=0" frameborder="0" allowfullscreen=""></iframe></div></section>
+<div class="paragraph"><p>(yes, this implies the nodes must have an attribute called "Modularity Class" showing the cluster they belong to)</p></div>
+<div class="paragraph"><p>The code you should add to assign nodes to clusters in the map is in <a href="https://github.com/seinecle/gephi/blob/enclosing-circles-opengl/modules/VisualizationImpl/src/main/java/org/gephi/visualization/opengl/CompatibilityEngine.java#L197">lines 197-203</a></p></div>
+<div class="paragraph"><p>Then, <a href="https://github.com/seinecle/gephi/blob/enclosing-circles-opengl/modules/VisualizationImpl/src/main/java/org/gephi/visualization/opengl/CompatibilityEngine.java#L210">lines 210-245</a> iterate on the map, and create the circles around clusters.</p></div>
+<div class="paragraph"><p>The logic of the circle creation in OpenGL can be understood rather easily, by copying and modyfying the code used just above for the creation of nodes, and by looking at the online documentation on <a href="http://www.openglprojects.in/2014/03/draw-circle-opengl.html#gsc.tab=0">how to create shapes in OpenGL</a>.</p></div>
+<div class="paragraph"><p>That&#8217;s it. Now just run Gephi from source as we did before. From Gephi, open a network where nodes have a "Modularity Class" attribute, and Gephi will draw circles around nodes from the same clusters:</p></div></section>
+<section><div class="videoblock stretch"><iframe width="560" height="315" src="https://www.youtube.com/embed/Y3jk-_QaFx4?rel=0" frameborder="0" allowfullscreen=""></iframe></div></section>
+<section></section>
 <section id="_more_tutorials_on_using_the_source_code_of_gephi"><h2>More tutorials on using the source code of Gephi</h2></section>
 <section><div class="ulist"><ul><li><p><a href="https://github.com/gephi/gephi">The Gephi readme with some instructions for developers</a></p></li></ul></div></section>
-<section id="_the_end"><h2>The end!</h2><div class="paragraph"><p>Visit <a href="https://www.facebook.com/groups/gephi/">the Gephi group on Facebook</a> to get help,</p></div>
+<section id="_the_end"><h2>the end</h2></section>
+<section><div class="paragraph"><p>Visit <a href="https://www.facebook.com/groups/gephi/">the Gephi group on Facebook</a> to get help,</p></div>
 <div class="paragraph"><p>or visit <a href="https://seinecle.github.io/gephi-tutorials/">the website for more tutorials</a>
     <!-- Start of StatCounter Code for Default Guide -->
     <script type="text/javascript">

@@ -1,4 +1,5 @@
 =  Gephi: the documentation
+== !
 Clément Levallois <clementlevallois@gmail.com>
 2017-03-14
 
@@ -13,8 +14,10 @@ last modified: {docdate}
 
 :title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
 
+== !
 [.stretch]
 image::gephi-logo-2010-transparent.png[width="450" align="center"]
+== !
 
 pass:[    <!-- Start of StatCounter Code for Default Guide -->
     <script type="text/javascript">

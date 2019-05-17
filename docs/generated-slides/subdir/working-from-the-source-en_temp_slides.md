@@ -1,4 +1,5 @@
 = Working from Gephi's source
+== !
 Clément Levallois <clementlevallois@gmail.com>
 2017-02-28
 
@@ -11,22 +12,28 @@ last modified: {docdate}
 
 :title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
 
+== !
 [.stretch]
 image::gephi-logo-2010-transparent.png[width="450" align="center"]
+== !
 
 
-==  'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
+//ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
-==  Presentation of this tutorial
+== Presentation of this tutorial
+== !
+//ST: Presentation of this tutorial
 
-==  !
+//ST: !
 This tutorial explains how to get and modify Gephi's source code, and build Gephi from it.
 
+== !
 [.stretch]
 image::en/developers/use-the-source.jpg[align="center", title="The obligatory meme"]
+== !
 
 
-==  !
+//ST: !
 We will:
 
 - download the source code
@@ -35,23 +42,27 @@ We will:
 - run Gephi in this modified version
 
 
-==  !
+//ST: !
 The modified version of Gephi that we will implement will have for effect to add circles around nodes communities.
 
 This project originates from https://twitter.com/DataToViz/status/828840269072080896[Susie Lu's creation].
 
 We should get something like:
 
-==  !
+//ST: !
 
+== !
+[.stretch]
 video::Y3jk-_QaFx4[youtube, height=315, width=560, align="center"]
+== !
+
 
 //PDF: image::en/developers/screenshot-encircling-pdf.png[align="center",title="Circles enclosing communities"]
 
 //PDF: link to animated version: https://www.youtube.com/watch?v=Y3jk-_QaFx4
 
 
-==  !
+//ST: !
 
 For this tutorial you will need:
 
@@ -64,9 +75,11 @@ For this tutorial you will need:
 - no Github account is necessary (if you have one, fork Gephi before doing all the steps below).
 
 
-==  Downloading the source code
+== Downloading the source code
+== !
+//ST: Downloading the source code
 
-==  !
+//ST: !
 
 1. Open NetBeans.
 
@@ -74,13 +87,15 @@ For this tutorial you will need:
 
 (can't find this menu in NetBeans? read an alternative just below)
 
-==  !
+//ST: !
 
+== !
 [.stretch]
 image::en/developers/git-clone-gephi-0-en.png[align="center", title="Cloning the gephi source"]
+== !
 
 
-==  !
+//ST: !
 
 NOTE:: if you already have projects opened in NetBeans, the menu Team -> Git -> Clone is replaced by:
 
@@ -88,13 +103,15 @@ NOTE:: if you already have projects opened in NetBeans, the menu Team -> Git -> 
 
 
 
-==  !
+//ST: !
 
+== !
 [.stretch]
 image::Cloning-the-gephi-source.png[align="center", title="Cloning the gephi source"]
+== !
 
 
-==  !
+//ST: !
 - For `Repository URL`, put the address of the Gephi repository on Github, which is:
 
 https://github.com/gephi/gephi.git[https://github.com/gephi/gephi.git]
@@ -105,111 +122,143 @@ https://github.com/gephi/gephi.git[https://github.com/gephi/gephi.git]
 
 - Then click on `Next`
 
-==  !
+//ST: !
 
+== !
 [.stretch]
 image::en/developers/git-clone-gephi-2-en.png[align="center", title="Select Master and click next"]
+== !
 
 
 
-==  !
+//ST: !
+== !
 [.stretch]
 image::en/developers/git-clone-gephi-3-en.png[align="center", title="Leave as it is and click on Finish"]
+== !
 
 
-==  !
+//ST: !
 At this step, NetBeans starts downloading the source code of Gephi - not all of it. Should take a couple of minutes, then:
 
+== !
 [.stretch]
 image::en/developers/git-clone-gephi-4-en.png[align="center", title="Click on Open Project"]
+== !
 
 
-==  !
+//ST: !
 Select (highlight in blue) the line mentioning Gephi, and click on "Open"
 
+== !
 [.stretch]
 image::en/developers/git-clone-gephi-5-en.png[align="center", title="Click on Open Project"]
+== !
 
 
-==  !
+//ST: !
 You should now see Gephi as a project on the left in NetBeans:
 
+== !
 [.stretch]
 image::en/developers/netbeans-gephi-source-1-en.png[align="center", title="Gephi project"]
+== !
 
 
-==  !
+//ST: !
 Right click on the project and select "Build with dependencies". This will download all the rest of the source, which can take roughly 5 to 20 minutes.
 
+== !
 [.stretch]
 image::en/developers/netbeans-gephi-source-2-en.png[align="center", title="Building the project"]
+== !
 
 
-==  Running Gephi from source
+== Running Gephi from source
+== !
+//ST: Running Gephi from source
 
-==  !
+//ST: !
 When the build is complete, expand the folder "Modules" of the Gephi project, and double click on "gephi-app":
 
 
+== !
 [.stretch]
 image::en/developers/netbeans-gephi-source-3-en.png[align="center", title="Opening the gephi-app submodule"]
+== !
 
-==  !
+//ST: !
 This opens a new project on the left of NetBeans, called "gephi-app". This is a submodule of Gephi, dedicated to managing its launch.
 
+== !
 [.stretch]
 image::Launching-Gephi.png[align="center", title="Launching Gephi"]
+== !
 
 
-==  !
+//ST: !
 
 And Gephi launches!
 
 Now that we know how to run Gephi from source, we can modify the source and see how it goes.
 
-==  Modifying Gephi's openGL visualization engine
+== Modifying Gephi's openGL visualization engine
+== !
+//ST: Modifying Gephi's openGL visualization engine
 
-==  !
+//ST: !
 We are going to add circles which will enclose groups of nodes (aka communities). In three steps:
 
 1. Open the `VisualizationImpl` module
 2. Create simple classes for the circles
 3. Add some code in the class which manages the display in OpenGL, so that circles get created
 
-==  !
+//ST: !
+== !
 ==== 1. Open the `VisualizationImpl` module
+== !
 
 In the gephi project, in the folder Modules, double click on the `VisualizationImpl` module:
 
 
+== !
 [.stretch]
 image::en/developers/enclosing-circles-1-en.png[align="center", title="Opening VisualizationImpl"]
+== !
 
 
-==  !
+//ST: !
+== !
 ==== 2. Create simple classes for the circles
+== !
 
 Create a new package and add 3 classes in it: `Circle.java`, `Point.java`, `SmallestEnclosingCircle.java`.
 
 (I merely adapted these classes from https://www.nayuki.io/page/smallest-enclosing-circle[this website])
 
+== !
 [.stretch]
 image::en/developers/enclosing-circles-2-en.png[align="center", title="Three classes"]
+== !
 
 
-==  !
+//ST: !
 The code of these classes https://github.com/seinecle/gephi/tree/enclosing-circles-opengl/modules/VisualizationImpl/src/main/java/net/clementlevallois/enclosingcircles[can be found here].
 
-==  !
+//ST: !
+== !
 ==== 3. Add the circle creation logic to the class managing the OpenGL display
+== !
 
 Open the package `org.gephi.visualization.opengl`, and inside open `CompatibilityEngine.java`:
 
+== !
 [.stretch]
 image::opening-CompatibilityEngine.java.png[align="center", title="opening CompatibilityEngine.java"]
+== !
 
 
-==  !
+//ST: !
 No need to understand most of the code in this class.
 
 But we see that starting at https://github.com/seinecle/gephi/blob/enclosing-circles-opengl/modules/VisualizationImpl/src/main/java/org/gephi/visualization/opengl/CompatibilityEngine.java#L194[line 194], a loop on nodes starts:
@@ -221,29 +270,37 @@ We will put nodes in a map (declared above, at https://github.com/seinecle/gephi
 
 (yes, this implies the nodes must have an attribute called "Modularity Class" showing the cluster they belong to)
 
-==  !
+//ST: !
 The code you should add to assign nodes to clusters in the map is in https://github.com/seinecle/gephi/blob/enclosing-circles-opengl/modules/VisualizationImpl/src/main/java/org/gephi/visualization/opengl/CompatibilityEngine.java#L197[lines 197-203]
 
-==  !
+//ST: !
 
 Then, https://github.com/seinecle/gephi/blob/enclosing-circles-opengl/modules/VisualizationImpl/src/main/java/org/gephi/visualization/opengl/CompatibilityEngine.java#L210[lines 210-245] iterate on the map, and create the circles around clusters.
 
 The logic of the circle creation in OpenGL can be understood rather easily, by copying and modyfying the code used just above for the creation of nodes, and by looking at the online documentation on http://www.openglprojects.in/2014/03/draw-circle-opengl.html#gsc.tab=0[how to create shapes in OpenGL].
 
-==  !
+//ST: !
 That's it. Now just run Gephi from source as we did before. From Gephi, open a network where nodes have a "Modularity Class" attribute, and Gephi will draw circles around nodes from the same clusters:
 
-==  !
+//ST: !
 
+== !
+[.stretch]
 video::Y3jk-_QaFx4[youtube, height=315, width=560, align="center"]
+== !
 
-==  More tutorials on using the source code of Gephi
-==  !
+
+== More tutorials on using the source code of Gephi
+== !
+//ST: More tutorials on using the source code of Gephi
+//ST: !
 
 - https://github.com/gephi/gephi[The Gephi readme with some instructions for developers]
 
+== the end
+== !
 
-==  The end!
+//ST: The end!
 Visit https://www.facebook.com/groups/gephi/[the Gephi group on Facebook] to get help,
 
 or visit https://seinecle.github.io/gephi-tutorials/[the website for more tutorials]

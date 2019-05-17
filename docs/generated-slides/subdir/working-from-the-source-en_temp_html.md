@@ -45,6 +45,7 @@ We should get something like:
 //ST: !
 
 video::Y3jk-_QaFx4[youtube, height=315, width=560, align="center"]
+{nbsp} +
 
 //PDF: image::en/developers/screenshot-encircling-pdf.png[align="center",title="Circles enclosing communities"]
 
@@ -226,6 +227,7 @@ That's it. Now just run Gephi from source as we did before. From Gephi, open a n
 //ST: !
 
 video::Y3jk-_QaFx4[youtube, height=315, width=560, align="center"]
+{nbsp} +
 
 == More tutorials on using the source code of Gephi
 //ST: More tutorials on using the source code of Gephi

@@ -130,7 +130,7 @@ In 2016, Gephi is translated in French, Spanish, Japanese,  Russian, Polish,
 //ST: Cumulative downloads for Gephi
 
 
-image::Gephi--cumulative-downloads.png[align="center", title="Gephi, cumulative downloads"]
+image::Gephi.png[align="center", title="Gephi, cumulative downloads"]
 {nbsp} +
 
 //ST: General interest for Gephi and related software over 2004 - 2016
@@ -653,7 +653,7 @@ image::Making-the-Filter-panel-visible..png[align="center",title="Making the Fil
 //ST: !
 How the Filter panel works:
 
-image::Workflow-of-filters--size=stretch.png[align="center",title="Workflow of filters", size="stretch"]
+image::Workflow-of-filters.png[align="center",title="Workflow of filters", size="stretch"]
 {nbsp} +
 
 
@@ -2766,6 +2766,7 @@ We should get something like:
 //ST: !
 
 video::Y3jk-_QaFx4[youtube, height=315, width=560, align="center"]
+{nbsp} +
 
 image::en/developers/screenshot-encircling-pdf.png[align="center",title="Circles enclosing communities"]
 
@@ -2947,6 +2948,7 @@ That's it. Now just run Gephi from source as we did before. From Gephi, open a n
 //ST: !
 
 video::Y3jk-_QaFx4[youtube, height=315, width=560, align="center"]
+{nbsp} +
 
 === More tutorials on using the source code of Gephi
 //ST: More tutorials on using the source code of Gephi
@@ -3295,3 +3297,4 @@ These features will be explained in the coming tutorials on dynamic networks wit
 //ST: !
 
 - https://github.com/gephi/gephi/wiki/Import-Dynamic-Data[The wiki on gephi.org]
+iki on gephi.org]

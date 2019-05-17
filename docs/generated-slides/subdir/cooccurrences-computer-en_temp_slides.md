@@ -1,4 +1,5 @@
 =  Creating a network from a table of cooccurring items
+== !
 Clément Levallois <clementlevallois@gmail.com>
 2017-02-27
 
@@ -11,22 +12,26 @@ last modified: {docdate}
 
 :title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
 
+== !
 [.stretch]
 image::gephi-logo-2010-transparent.png[width="450" align="center"]
+== !
 
 
-==  'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
+//ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
 
-==  Presentation of the plugin
+== Presentation of the plugin
+== !
+//ST: Presentation of the plugin
 
-==  !
+//ST: !
 
 This plugin is created by https://www.clementlevallois.net[Clement Levallois].
 
 It converts a spreadsheet or a csv file into a network.
 
-==  !
+//ST: !
 
 This plugin enables you to:
 
@@ -36,92 +41,126 @@ This plugin enables you to:
 *   Connections will be created between entities, when they appear in the same occurrence (so, when they are on thee same row)
 *   Occurrences can have dates, multiple instances of an entity can be listed in a given column.
 
-==  !
+//ST: !
+== !
 ==== 1. The input
-==  !
+== !
+//ST: !
 
+== !
 [.stretch]
 image::en/cooccurrences-computer/excel-1-en.png[align="center", title="An Excel file"]
+== !
 
 
 
-==  !
+//ST: !
+== !
 ==== 2. The output
-==  !
+== !
+//ST: !
 
+== !
 [.stretch]
 image::en/cooccurrences-computer/gephi-result-1-en.png[align="center", title="Resulting network"]
+== !
 
 
-==  Installing the plugin
-==  !
+== Installing the plugin
+== !
+//ST: Installing the plugin
+//ST: !
 
+== !
 [.stretch]
 image::Choose-the-menu-Tools-then-Plugins.png[align="center", title="Choose the menu Tools then Plugins"]
+== !
 
 
-==  !
+//ST: !
 
+== !
 [.stretch]
 image::Click-on-the-tab-Available-Plugins.png[align="center", title="Click on the tab Available Plugins"]
+== !
 
 
-==  !
+//ST: !
 
+== !
 [.stretch]
 image::Install-the-plugin-and-restart-Gephi.png[align="center", title="Install the plugin and restart Gephi"]
+== !
 
 
-==  Opening the plugin
-==  !
+== Opening the plugin
+== !
+//ST: Opening the plugin
+//ST: !
 
+== !
 [.stretch]
 image::Open-the-plugin-via-the-menu-File---Import.png[align="center", title="Open the plugin via the menu File - Import"]
+== !
 
 
-==  Using the plugin
+== Using the plugin
+== !
+//ST: Using the plugin
 
-==  !
+//ST: !
+== !
 ==== 2nd panel
-==  !
+== !
+//ST: !
 
+== !
 [.stretch]
 image::Select-a-file.png[align="center", title="Select a file"]
+== !
 
 
-==  Is your file with a header?
+//ST: Is your file with a header?
 
-==  !
+//ST: !
 
+== !
 [.stretch]
 image::en/cooccurrences-computer/excel-2-en.png[align="center", title="A file without headers"]
+== !
 
 
-==  !
+//ST: !
 
+== !
 [.stretch]
 image::en/cooccurrences-computer/excel-1-en.png[align="center", title="A file with headers"]
+== !
 
 
-==  !
+//ST: !
 To describe the next screens of the plugin, we will take the example of *the Excel file just shown*, with headers.
 
-==  !
+//ST: !
+== !
 ==== 3rd panel
-==  !
+== !
+//ST: !
 
+== !
 [.stretch]
 image::en/cooccurrences-computer/plugin-panels-1-en.png[align="center", title="Which entities should be the nodes?"]
+== !
 
 
-==  !
+//ST: !
 What does this panel mean?
 
 If you look back at the Excel file, you see that we have "Clients" and their "Purchases".
 
 -> This means we can build 2 different types of networks, depending on our needs:
 
-==  !
+//ST: !
 
 1. A network showing clients and products, with relations representing purchases from a client to a product.
 
@@ -136,7 +175,7 @@ graph g {
 To create this kind of networks, choose "Client" in the upper window, and "Purchases" in the lower window of the plugin screen.
 
 
-==  !
+//ST: !
 [start=2]
 2. Or a network where 2 products are connected, if one client puchased them together.
 
@@ -153,27 +192,35 @@ graph g {
 To create this kind of networks, choose "Purchases" in the upper [underline]#and# lower windows of the plugin screen.
 
 
-==  !
+//ST: !
+== !
 ==== 4th panel
-==  !
+== !
+//ST: !
 
+== !
 [.stretch]
 image::en/cooccurrences-computer/subfield-delimiter-en.png[align="center", title="Choosing which delimiter is used"]
+== !
 
 
-==  !
+//ST: !
 
 This 3rd panel asks: in our Excel file, how are different items separated in a given cell?
 In our example, we have used commas: the lists of products purchased are comma-separated:
 
+== !
 [.stretch]
 image::commas-shown-in-red.png[align="center", title="commas shown in red"]
+== !
 
 
 
-==  !
+//ST: !
+== !
 ==== 5th panel
-==  !
+== !
+//ST: !
 
 This panel allows you to specify whether the relations are dynamic in time, or not.
 
@@ -182,27 +229,31 @@ In this case, you need an extra column (column C), where a date is shown. We don
 (read the tutorials on dynamic networks for a starter)
 
 
-==  !
+//ST: !
+== !
 ==== 6th panel
-==  !
+== !
+//ST: !
 
+== !
 [.stretch]
 image::en/cooccurrences-computer/panel-6-1-en.png[align="center", title="Options panel"]
+== !
 
 
-==  !
+//ST: !
 
  "Create links between Purchases agents and links between Purchase agents"
 
 -> If you chose a Product <--> Product kind of network in panel 3, then of course you are interested in links between products. *Check the box*.
 
-==  !
+//ST: !
 
 -> But if you chose a Client <--> Product kind of network  in panel 3, what you need is less obvious.
 
 Let's take the example of client I, who purchased a table and some chairs:
 
-==  !
+//ST: !
 
 1. Checking the box will create a network where:
 
@@ -221,7 +272,7 @@ graph g {
 }
 ----
 
-==  !
+//ST: !
 
 1. *Not* checking the box will create a network where:
 
@@ -239,13 +290,13 @@ graph g {
 }
 ----
 
-==  !
+//ST: !
 
  "Remove duplicates"
 
 -> Check this option if your Excel or csv file has duplicate rows that you'd like to be removed
 
-==  !
+//ST: !
 
  "Remove self-loops"
 
@@ -253,13 +304,17 @@ If a Client has purchased tables twice, so that we have "table, table" in a cell
 
 -> Check this option if you'd like self loops to be removed.
 
-==  !
+//ST: !
+== !
 ==== 7th panel
-==  !
+== !
+//ST: !
 
 This panel recaps all the settings. Click on finish to create the network.
 
-==  The end!
+== The end
+== !
+//ST: The end!
 
 Visit https://www.facebook.com/groups/gephi/[the Gephi group on Facebook] to get help,
 

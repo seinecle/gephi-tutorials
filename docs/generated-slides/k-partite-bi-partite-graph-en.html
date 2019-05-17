@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="author" content="Matthieu Totet" /><title>K-partite and Bipartite Graph (Multimode Networks Transformations)</title><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><link href="reveal.js-3.6.0/css/reveal.css" rel="stylesheet" /><link rel="stylesheet" href="reveal.js-3.6.0/css/theme/white.css" id="theme" /><style>/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="author" content="== !" /><title>K-partite and Bipartite Graph (Multimode Networks Transformations)</title><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><link href="reveal.js-3.6.0/css/reveal.css" rel="stylesheet" /><link rel="stylesheet" href="reveal.js-3.6.0/css/theme/white.css" id="theme" /><style>/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
 /*pre.CodeRay {background-color:#f7f7f8;}*/
 .CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
 .CodeRay span.line-numbers{display:inline-block;margin-right:.5em;color:rgba(0,0,0,.3)}
@@ -86,78 +86,86 @@ table.CodeRay td.code>pre{padding:0}
 .CodeRay .insert .insert{color:#080}
 .CodeRay .delete .delete{color:#800}
 .CodeRay .change .change{color:#66f}
-.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.6.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.6.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>K-partite and Bipartite Graph (Multimode Networks Transformations)</h1><div class="preamble"><div class="paragraph"><p>last modified: 2017-02-23</p></div>
-<div class="imageblock stretch" style="text-align: center"><img src="images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450" /></div></div><p class="author"><small>Matthieu Totet</small></p></section>
-<section id="_escape_or_o_to_see_all_sides_f11_for_full_screen_s_for_speaker_notes"><h2>'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes</h2></section>
+.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.6.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.6.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>K-partite and Bipartite Graph (Multimode Networks Transformations)</h1><div class="preamble"><div class="paragraph"><p>2017-01-29</p></div>
+<div class="paragraph"><p>last modified: 2017-02-23</p></div></div><p class="author"><small>== !</small></p></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450" /></div></section>
+<section></section>
 <section id="_author_and_documentation"><h2>Author and documentation</h2></section>
-<section><div class="paragraph"><p>The Multimode Networks Transformations plugin allows you transform a k-partite graph into a mono-partite graph.</p></div></section>
-<section><div class="paragraph"><p>Official page of the plugin: <a href="https://gephi.org/plugins//plugin/semantic">https://gephi.org/plugins//plugin/semantic</a></p></div>
+<section><div class="paragraph"><p>The Multimode Networks Transformations plugin allows you transform a k-partite graph into a mono-partite graph.</p></div>
+<div class="paragraph"><p>Official page of the plugin: <a href="https://gephi.org/plugins//plugin/semantic">https://gephi.org/plugins//plugin/semantic</a></p></div>
 <div class="paragraph"><p>Plugin Author: <a href="https://github.com/jaroslav-kuchar">Jaroslav Kuchar</a></p></div>
 <div class="paragraph"><p>Plugin sources: <a href="https://github.com/totetmatt/gephi-plugins/tree/multimode-network">https://github.com/totetmatt/gephi-plugins/tree/multimode-network</a></p></div>
 <div class="paragraph"><p>Licensed under: GNU GENERAL PUBLIC LICENSE</p></div></section>
-<section id="_k_partite_bipartite_what_is_it"><h2>K-partite, Bipartite … What is it ?</h2><div class="paragraph"><p>Most of the time, when you create a graph, all the nodes are representing the same « kind » of object.</p></div>
-<div class="ulist"><ul><li><p>In a Social Network: Persons</p></li><li><p>In a Route Network: Bus Stops, Airports, Stations etc…</p></li><li><p>In a Geographical Network: Countries</p></li></ul></div></section>
-<section><div class="paragraph"><p>But sometimes, you will encounter graphs that will have 2, 3 or multiple « kinds » of nodes where the links are almost exclusively going from one type to the other.
+<section id="_k_partite_bipartite_what_is_it"><h2>K-partite, Bipartite … What is it ?</h2></section>
+<section><div class="paragraph"><p>Most of the time, when you create a graph, all the nodes are representing the same « kind » of object.</p></div>
+<div class="ulist"><ul><li><p>In a Social Network: Persons</p></li><li><p>In a Route Network: Bus Stops, Airports, Stations etc…</p></li><li><p>In a Geographical Network: Countries</p></li></ul></div>
+<div class="paragraph"><p>But sometimes, you will encounter graphs that will have 2, 3 or multiple « kinds » of nodes where the links are almost exclusively going from one type to the other.
 These
-graphs are called <strong>Multipartite Graphs</strong> :</p></div></section>
-<section><div class="ulist"><ul><li><p>If you have <strong>2</strong> kinds of nodes, it’s a <strong>Bi</strong>partite Graph (or <strong>2</strong>-partite)</p><div class="ulist"><ul><li><p>Example : Social Network : Persons &lt; - &gt; Companies</p></li></ul></div></li></ul></div></section>
-<section><div class="ulist"><ul><li><p>If you have <strong>3</strong> kinds of nodes it’s a<strong> 3</strong>-partite Graph</p><div class="ulist"><ul><li><p>Example : Movie Network : Actors &lt; - &gt; Movies &lt; - &gt; Movie Companies</p></li></ul></div></li></ul></div></section>
-<section><div class="ulist"><ul><li><p>If you have <strong>k</strong> kinds of nodes it’s a <strong>k</strong>-partite Graph</p></li></ul></div></section>
-<section><div class="paragraph"><p>If you want a proper scientific definition, you can check the <a href="https://en.wikipedia.org/wiki/Multipartite_graph">Wikipedia</a> page about the subject.</p></div></section>
-<section id="_the_dataset"><h2>The dataset</h2><div class="paragraph"><p>We will use a well known data set : The Cac 40 Administrators relationship from <a href="http://www.citoyennumerique.fr/?tag=cac40">www.citoyennumerique.fr.</a></p></div>
+graphs are called <strong>Multipartite Graphs</strong> :</p></div>
+<div class="ulist"><ul><li><p>If you have <strong>2</strong> kinds of nodes, it’s a <strong>Bi</strong>partite Graph (or <strong>2</strong>-partite)</p><div class="ulist"><ul><li><p>Example : Social Network : Persons &lt; - &gt; Companies</p></li></ul></div></li></ul></div>
+<div class="ulist"><ul><li><p>If you have <strong>3</strong> kinds of nodes it’s a<strong> 3</strong>-partite Graph</p><div class="ulist"><ul><li><p>Example : Movie Network : Actors &lt; - &gt; Movies &lt; - &gt; Movie Companies</p></li></ul></div></li></ul></div>
+<div class="ulist"><ul><li><p>If you have <strong>k</strong> kinds of nodes it’s a <strong>k</strong>-partite Graph</p></li></ul></div>
+<div class="paragraph"><p>If you want a proper scientific definition, you can check the <a href="https://en.wikipedia.org/wiki/Multipartite_graph">Wikipedia</a> page about the subject.</p></div></section>
+<section id="_the_dataset"><h2>The Dataset</h2></section>
+<section><div class="paragraph"><p>We will use a well known data set : The Cac 40 Administrators relationship from <a href="http://www.citoyennumerique.fr/?tag=cac40">www.citoyennumerique.fr.</a></p></div>
 <div class="paragraph"><p>The files for Gephi are accessible here : link::../../resources/k-partite-bi-partite.zip[Gexf files]</p></div>
-<div class="paragraph"><p>The tutorial will be based on the <strong>SimpleGraph</strong>, but you also have access to the <strong>FullGraph</strong> to play with.</p></div></section>
-<section><div class="paragraph"><p>The CAC 40 represents the 40 most valuable company on the french stock market. A <strong>company</strong> has several <strong>administrators </strong> and nothing prevent an <strong>administrator</strong> to be in multiple <strong>companies</strong>. So the graph is build such as <strong>companies</strong> are sources of edges and targets are the <strong>administrators</strong>.</p></div></section>
-<section><div class="paragraph"><p>This is a typical bi-partite graph. If you look on the data, part of the node has a property type <strong>Administrator</strong> and the other part has a property type <strong>Company</strong>.</p></div>
-<div class="imageblock stretch" style="text-align: center"><img src="images/en/k-partite/k-partite-simple-graph.png" alt="k partite simple graph" height="100%" /></div><div class="title">Figure 1. Cac 40 bipartite graph</div></section>
+<div class="paragraph"><p>The tutorial will be based on the <strong>SimpleGraph</strong>, but you also have access to the <strong>FullGraph</strong> to play with.</p></div>
+<div class="paragraph"><p>The CAC 40 represents the 40 most valuable company on the french stock market. A <strong>company</strong> has several <strong>administrators </strong> and nothing prevent an <strong>administrator</strong> to be in multiple <strong>companies</strong>. So the graph is build such as <strong>companies</strong> are sources of edges and targets are the <strong>administrators</strong>.</p></div>
+<div class="paragraph"><p>This is a typical bi-partite graph. If you look on the data, part of the node has a property type <strong>Administrator</strong> and the other part has a property type <strong>Company</strong>.</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/k-partite/k-partite-simple-graph.png" alt="k partite simple graph" height="100%" /></div><div class="title">Figure 1. Cac 40 bipartite graph</div></section>
 <section><div class="paragraph"><p>We can get quick observations:</p></div>
 <div class="ulist"><ul><li><p>Filtering by InDegree, we can check that Michel Pebereau and Jean-Martin Folz are in <strong>5 companies</strong> at the same time.</p></li><li><p>Filtering by OutDegree, we can check that St-Gobain and Total have <strong>8 administrators</strong> that are in other companies.</p></li></ul></div>
 <div class="paragraph"><p>But that could be done without graph, an ordered list on excel would have done the job.</p></div></section>
+<section id="_how_to_deal_with_multipartite_graphs"><h2>How to deal with multipartite graphs ?</h2></section>
 <section><div class="paragraph"><p>Having a k-partite graph makes somehow the graph unfriendly to read. Usually, the metrics will be difficult to interpret, and
 generating a good visualisation from it won&#8217;t be trivial.</p></div>
-<div class="paragraph"><p>One method here is to <strong>reduce</strong> the <strong>bi-partite</strong> graph into a <strong>mono-partite</strong> graph.</p></div></section>
-<section><div class="quoteblock"><blockquote><div class="paragraph"><p>By reducing, we will « lose » information but we gain in <strong>readability</strong> and <strong>synthesis</strong>,
+<div class="paragraph"><p>One method here is to <strong>reduce</strong> the <strong>bi-partite</strong> graph into a <strong>mono-partite</strong> graph.</p></div>
+<div class="quoteblock"><blockquote><div class="paragraph"><p>By reducing, we will « lose » information but we gain in <strong>readability</strong> and <strong>synthesis</strong>,
 that’s part of the work in data visualisation to see at which level we
 want to go and how to deal with this trade of information. This will
-mostly be driven by the question you want to answer.</p></div></blockquote></div></section>
-<section><div class="paragraph"><p>The principle of the reduction is to consider a type of <strong>nodes</strong> as <strong>edges</strong> and build a new graph based on this rule.
+mostly be driven by the question you want to answer.</p></div></blockquote></div>
+<div class="paragraph"><p>The principle of the reduction is to consider a type of <strong>nodes</strong> as <strong>edges</strong> and build a new graph based on this rule.
 In our example we have 2 ways to go:</p></div>
-<div class="ulist"><ul><li><p>Either we decide that the nodes of type « Company  » are the edges. It will generate a "<strong>graph</strong> of <strong>Persons </strong>"</p></li><li><p>Either we decide that the nodes of type « Person  » are the edges. It will generate a "<strong>graph</strong> of <strong>Company </strong>"</p></li></ul></div></section>
-<section><div class="quoteblock"><blockquote><div class="paragraph"><p>Here both graphs generated makes « sense » (network of
+<div class="ulist"><ul><li><p>Either we decide that the nodes of type « Company  » are the edges. It will generate a "<strong>graph</strong> of <strong>Persons </strong>"</p></li><li><p>Either we decide that the nodes of type « Person  » are the edges. It will generate a "<strong>graph</strong> of <strong>Company </strong>"</p></li></ul></div>
+<div class="quoteblock"><blockquote><div class="paragraph"><p>Here both graphs generated makes « sense » (network of
 entities) but it might appear that in some other case, one of the generated graphs won&#8217;t really be 'interesting'.
  That’s part of your work to judge this aspect.</p></div></blockquote></div>
 <div class="paragraph"><p>Now, how to perform the transformation?</p></div></section>
 <section id="_using_a_plugin"><h2>Using a Plugin</h2></section>
 <section><div class="paragraph"><p>The easiest way is to use the link::https://marketplace.gephi.org/plugin/multimode-networks-transformations-2/[Multimode Network Transformation plugin].
 The plugin is available on the Gephi app market and in the plugin manager in Gephi.</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/en/k-partite/k-partite-install-plugin.png" alt="k partite install plugin" height="100%" /></div><div class="title">Figure 2. Plugin Install</div></section>
-<section><div class="paragraph"><p>When it’s installed, you should be able to see or display the <strong> Multimode Network Transformation</strong> tab.</p></div></section>
-<section><div class="paragraph"><p>Then, load the graph and:</p></div>
-<div class="ulist"><ul><li><p>Click on <strong>Load Attributes</strong> and select <strong>Type</strong> on <strong>Attribute Type.</strong></p></li><li><p>For left matrix select <strong>Administrator – Company</strong>  and right matrix <strong>Company – Adminstrator</strong></p></li><li><p>Enable <strong>Remove Edges</strong> and<strong> Remove Nodes</strong>, and Click** Run</p></li></ul></div></section>
-<section><div class="quoteblock"><blockquote><div class="paragraph"><p>The plugin will modify directly the graph on the current workspace. If you want to keep the original graph, be sure
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/k-partite/k-partite-install-plugin.png" alt="k partite install plugin" height="100%" /></div><div class="title">Figure 2. Plugin Install</div></section>
+<section><div class="paragraph"><p>When it’s installed, you should be able to see or display the <strong> Multimode Network Transformation</strong> tab.</p></div>
+<div class="paragraph"><p>Then, load the graph and:</p></div>
+<div class="ulist"><ul><li><p>Click on <strong>Load Attributes</strong> and select <strong>Type</strong> on <strong>Attribute Type.</strong></p></li><li><p>For left matrix select <strong>Administrator – Company</strong>  and right matrix <strong>Company – Adminstrator</strong></p></li><li><p>Enable <strong>Remove Edges</strong> and<strong> Remove Nodes</strong>, and Click** Run</p></li></ul></div>
+<div class="quoteblock"><blockquote><div class="paragraph"><p>The plugin will modify directly the graph on the current workspace. If you want to keep the original graph, be sure
 you have copied your workspace.</p></div></blockquote></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/en/k-partite/k-partite-config.png" alt="k partite config" height="100%" /></div><div class="title">Figure 3. MultiPartite_Gephi</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/k-partite/k-partite-config.png" alt="k partite config" height="100%" /></div><div class="title">Figure 3. MultiPartite_Gephi</div></section>
 <section><div class="paragraph"><p>The plugins will actually to transform each relation like:</p></div>
 <div class="paragraph"><p>(Administrator)<strong>&#8592;</strong>(Company)<strong>&#8594;</strong>(Administrator)</p></div>
 <div class="paragraph"><p>to</p></div>
 <div class="paragraph"><p>(Administrator)<strong>&#8592;[</strong>{weight=Nb of Common Companies}<strong>]&#8594;</strong>(Administrator)</p></div>
 <div class="paragraph"><p>Now you should have a graph with only administrators on the graph preview.</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/en/k-partite/k-partite-simple-p2p.png" alt="k partite simple p2p" height="100%" /></div><div class="title">Figure 4. Tuto_Multi_P2P</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/k-partite/k-partite-simple-p2p.png" alt="k partite simple p2p" height="100%" /></div><div class="title">Figure 4. Tuto_Multi_P2P</div></section>
 <section><div class="paragraph"><p>To generate the relation between companies, replay the same steps
 from the original graph (duplicate the workspace0 again) and in the <strong>Multimode Network Transformation</strong> use :</p></div>
 <div class="ulist"><ul><li><p>Left Matrix : Company – Administrator</p></li><li><p>Right Matrix : Administrator – Company</p></li></ul></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/en/k-partite/k-partite-config-2.png" alt="k partite config 2" height="100%" /></div><div class="title">Figure 5. MultiPartite_Gephi_2</div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/en/k-partite/k-partite-simple-c2c.png" alt="k partite simple c2c" height="100%" /></div><div class="title">Figure 6. Tuto_Multi_C2C</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/k-partite/k-partite-config-2.png" alt="k partite config 2" height="100%" /></div><div class="title">Figure 5. MultiPartite_Gephi_2</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/k-partite/k-partite-simple-c2c.png" alt="k partite simple c2c" height="100%" /></div><div class="title">Figure 6. Tuto_Multi_C2C</div></section>
 <section><div class="paragraph"><p>With the 2 new graphs, and playing with the weighted degree of the nodes, we are able to see some particularities:</p></div>
-<div class="ulist"><ul><li><p>The maximum of <strong>common administrator</strong> between company is <strong>3</strong>: Bouygues and Alstom with Olivier Bouygues, Patrick Kron, Georges Chodron de Courcel</p></li><li><p><strong>Half of the companies</strong> are sharing at least 2 administrators.</p></li><li><p>The maximum of <strong>common company</strong> between person is <strong>3</strong>: Gerard Lamarche and Paul Demaray Jr see each other in Total, GDF Suez and Lafarge SA.</p></li><li><p>From all administrators that are in at least 2 companies,<strong> 1/3 of them are at least in the <em>same</em> 2 companies</strong>.</p></li></ul></div></section>
-<section><div class="paragraph"><p>Theses statements could have been deduced from the original graph, but now, the information is more visible and accessible, especially if you want to share it to a large public.</p></div></section>
-<section><div class="quoteblock"><blockquote><div class="paragraph"><p>The next steps are now mostly to look at graphs, and summarize all
+<div class="ulist"><ul><li><p>The maximum of <strong>common administrator</strong> between company is <strong>3</strong>: Bouygues and Alstom with Olivier Bouygues, Patrick Kron, Georges Chodron de Courcel</p></li><li><p><strong>Half of the companies</strong> are sharing at least 2 administrators.</p></li><li><p>The maximum of <strong>common company</strong> between person is <strong>3</strong>: Gerard Lamarche and Paul Demaray Jr see each other in Total, GDF Suez and Lafarge SA.</p></li><li><p>From all administrators that are in at least 2 companies,<strong> 1/3 of them are at least in the <em>same</em> 2 companies</strong>.</p></li></ul></div>
+<div class="paragraph"><p>Theses statements could have been deduced from the original graph, but now, the information is more visible and accessible, especially if you want to share it to a large public.</p></div>
+<div class="quoteblock"><blockquote><div class="paragraph"><p>The next steps are now mostly to look at graphs, and summarize all
  the particularities into some kind of output (poster, interactive graph,
 newspaper etc…)</p></div></blockquote></div></section>
-<section id="_limitations"><h2>Limitations</h2><div class="paragraph"><p>The plugin works quite well, but sometimes it has some limitation on large graphs. Or sometimes you may want to reduce your graph and have a custom metric computed.
+<section id="_limitations"><h2>Limitations</h2></section>
+<section><div class="paragraph"><p>The plugin works quite well, but sometimes it has some limitation on large graphs. Or sometimes you may want to reduce your graph and have a custom metric computed.
 Then the only alternative to that is to use a script that will generate the graph for you.</p></div></section>
-<section id="_conclusion"><h2>Conclusion</h2><div class="paragraph"><p>Multipartite graphs are complex to analyse, but synthesizing them to lower partite graphs gives you a better vision and insights about your data.</p></div></section>
-<section id="_the_end"><h2>The end!</h2><div class="paragraph"><p>Visit <a href="https://www.facebook.com/groups/gephi/">the Gephi group on Facebook</a> to get help,</p></div>
+<section id="_benefits"><h2>Benefits</h2></section>
+<section><div class="paragraph"><p>Multipartite graphs are complex to analyse, but synthesizing them to lower partite graphs gives you a better vision and insights about your data.</p></div></section>
+<section id="_the_end"><h2>The end</h2></section>
+<section><div class="paragraph"><p>Visit <a href="https://www.facebook.com/groups/gephi/">the Gephi group on Facebook</a> to get help,</p></div>
 <div class="paragraph"><p>or visit <a href="https://seinecle.github.io/gephi-tutorials/">the website for more tutorials</a>
     <!-- Start of StatCounter Code for Default Guide -->
     <script type="text/javascript">

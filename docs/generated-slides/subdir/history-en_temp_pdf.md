@@ -83,7 +83,7 @@ https://www.linkedin.com/in/eduardo-ramos-ib%C3%A1%C3%B1ez-b6231522/[Eduardo Ram
 
 //ST: !
 
-image::Gephi--cumulative-downloads.png[align="center", title="Gephi, cumulative downloads"]
+image::Gephi.png[align="center", title="Gephi, cumulative downloads"]
 {nbsp} +
 
 //ST: !
@@ -116,3 +116,4 @@ image::google-scholar-gephi.png[align="center", title=""]
 Visit https://www.facebook.com/groups/gephi/[the Gephi group on Facebook] to get help,
 
 or visit https://seinecle.github.io/gephi-tutorials/[the website for more tutorials]
+e for more tutorials]

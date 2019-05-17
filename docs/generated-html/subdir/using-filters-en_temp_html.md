@@ -103,7 +103,7 @@ image::Making-the-Filter-panel-visible..png[align="center",title="Making the Fil
 //ST: !
 How the Filter panel works:
 
-image::Workflow-of-filters--size=stretch.png[align="center",title="Workflow of filters", size="stretch"]
+image::Workflow-of-filters.png[align="center",title="Workflow of filters", size="stretch"]
 {nbsp} +
 
 

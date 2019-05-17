@@ -2,10 +2,20 @@
 /*.html
 
 # test stuff
-test/*.html
-test/reveal.js/
+/examples/*.html
+/examples/reveal.js/
+/examples/node_modules
 
 # node stuff
 node_modules/
 npm-debug.log
 build/
+/dist/main.js
+/asciidoctor-reveal.js-*.tgz
+
+# ruby stuff
+/.bundle/
+/Gemfile.lock
+
+# the compiled slim template
+/lib/asciidoctor-revealjs/converter.rb

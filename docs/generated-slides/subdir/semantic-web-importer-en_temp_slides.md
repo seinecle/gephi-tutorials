@@ -1,4 +1,5 @@
 =  Semantic Web Importer
+== !
 Matthieu Totet <matthieu.totet@gmail.com>
 2017-01-31
 
@@ -11,19 +12,23 @@ last modified: {docdate}
 
 :title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
 
+== !
 [.stretch]
 image::gephi-logo-2010-transparent.png[width="450" align="center"]
+== !
 
 
-==  'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
+//ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
-==  Author and documentation
+//ST: Author and documentation
+== Author and documentation
+== !
 
-==  !
+//ST: !
 
 The Semantic Web Importer plugin allows you to query a SPARQL endpoint and represent the result as a graph in Gephi.
 
-==  !
+//ST: !
 
 Official page of the plugin: https://gephi.org/plugins/#/plugin/semantic
 
@@ -34,7 +39,9 @@ Plugin sources: https://scm.gforge.inria.fr/anonscm/git/segviz-public/gephi-plug
 Licensed under: http://www.cecill.info/licences/Licence_CeCILL-C_V1-en.html[Cecill-C]
 
 
-==  Introduction
+//ST: Introduction
+== Introduction to concepts
+== !
 
 RDF stands for https://en.wikipedia.org/wiki/Resource_Description_Framework[Resource Description Framework] .
 It is a way to represent information of all kinds.
@@ -42,12 +49,12 @@ It is now a specification and since 1995 people are working on RDF and all subje
 
 RDF can be considered as the « Grand Father » of graph representation.
 
-==  !
+//ST: !
 The idea is very simple, all information can be represented as a triplet :
 
 > `(subject, predicate, object)`
 
-==  !
+//ST: !
 
 To query such a dataset, a query language has been developed: https://en.wikipedia.org/wiki/SPARQL[SPARQL]
 
@@ -55,7 +62,7 @@ The SPARQL format is close to SQL format and tries to be as close as possible to
 
 http://dbpedia.org[DBpedia] is the RDF version of Wikipedia. It is an open datastore that tries to gather and offers in RDF format all information that you can find in wikipedia or other knowledge service.
 
-==  !
+//ST: !
 
 DBPedia is very interesting because it preformats concepts and makes them available for automatic processes or complex queries across concepts.
 
@@ -72,7 +79,9 @@ where
 }
 ----
 
-==  Quickstart
+//ST: Quickstart
+== Quickstart
+== !
 
 The result of a SPARQL can be a table as we could do it with SQL, but you can also build a graph based on your query.
 The Semantic Web Plugin uses this feature to draw the result of your query into Gephi.
@@ -81,7 +90,7 @@ First, we need to install Semantic web import. You can find and install this plu
 
 When installed, go to the Semantic Web Import tab.
 
-==  !
+//ST: !
 
 In the *Driver* tab, choose *Remote - REST endpoint* and put *http://dbpedia.org/sparql* and *EndPoint URL*.
 
@@ -90,13 +99,15 @@ In the *Driver* tab, choose *Remote - REST endpoint* and put *http://dbpedia.org
 Press *Enter* after typing the URL endpoint so the url is getting validated and used.
 ====
 
-==  !
+//ST: !
 
+== !
 [.stretch]
 image::en/semantic-web-importer/setup_1.png[align="center", title="Setup endpoint"]
+== !
 
 
-==  !
+//ST: !
 
 Go to *Query* tab, remove the dummy query and put this one:
 
@@ -116,36 +127,44 @@ WHERE
 }
 ----
 
-==  !
+//ST: !
 
 Finally, click on *Run*
 
-==  !
+//ST: !
 
+== !
 [.stretch]
 image::en/semantic-web-importer/setup_2.png[align="center", title="SPARQL Query"]
+== !
 
 
-==  !
+//ST: !
 
 Go back to the Graph preview and you should see a graph. Use the layout tab to get a more intuitive rendering.
 
+== !
 [.stretch]
 image::en/semantic-web-importer/result_1.png[align="center", title="result"]
+== !
 
 
-==  Details
+//ST: Details
+== Details
+== !
 
-==  !
+//ST: !
 
+== !
 ==== CONSTRUCT block
+== !
 
 The `CONSTRUCT` block define the new graph to build from the query. That's the description of your data the plugin will interpet
 to build the graph.
 
 What is the syntax for this `CONSTRUCT` block :
 
-==  !
+//ST: !
 
 - `?a <http://gephi.org/nodeProperty> ?b`
 
@@ -155,12 +174,14 @@ What is the syntax for this `CONSTRUCT` block :
 
 -> will create a link between `?a` and `?b` with label `<what_You_Want>`
 
-==  !
+//ST: !
 
+== !
 ==== WHERE block
+== !
 The `WHERE` block define the data to match based on the query typed in :
 
-==  !
+//ST: !
 
 - `?movie a <http://dbpedia.org/ontology/Film>.`
 
@@ -172,7 +193,7 @@ So it’s exactly equal to `?movie <rdf:type> <http://dbpedia.org/ontology/Film>
 
 -> Match all subjects which have any predicate where the object is `<http://dbpedia.org/resource/Leonardo_DiCaprio>`
 
-==  !
+//ST: !
 
 - `?movie ?rel2 ?person.`
 
@@ -182,31 +203,35 @@ So it’s exactly equal to `?movie <rdf:type> <http://dbpedia.org/ontology/Film>
 
 -> Match the subject `?person` if it's a  `<http://dbpedia.org/ontology/Person>`.
 
-==  !
+//ST: !
 
 In other words, match the variable `?movie` to any entity that is a `Film` and that has at least 1 triplet where `Leonardo` is an object. Match also all `?person` that is a `Person`.
 
 The result in our case is actually a bi-modal graph with Movies and Persons shared with Leonardo Dicaprio.
 
 //ST Tips to go further
+== Tips to go further
+== !
 
 What is interesting with this method is the way to query the data, and the fact that it is easily extensible to other subjects just by changing few things in the query.
 We can think about Music Band and Player relationships, the traditionnal Persons to Companies, or more originally, all the common places where your favorites movies where shot, etc.
 The limit is your imagination to graph.
 
-==  !
+//ST: !
 
 On our example, you can run multiple time the same query and change which person you want to « expand », it will automatically create the global network of all your research.
 It will also maybe give you some insight on which new movies to watch tonight 😉
 
 But keep in mind that you are heavily dependent on Dbpedia data quality (or other RDF entrypoint), which can alterate a lot you research.
 
-==  !
+//ST: !
 
 If you want more refined queries, you will have to learn SPARQL and RDF in more details. There are a lot of tutorials around the web that will help you to master SPARQL.
 
+== The end
+== !
 
-==  The end!
+//ST: The end!
 
 Visit https://www.facebook.com/groups/gephi/[the Gephi group on Facebook] to get help,
 

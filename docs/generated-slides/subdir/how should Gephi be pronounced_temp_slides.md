@@ -1,5 +1,7 @@
+== !
 [.stretch]
 image::http://i.giphy.com/bkKvvzE9PEcTK.gif[]
+== !
 
 pass:[    <!-- Start of StatCounter Code for Default Guide -->
     <script type="text/javascript">

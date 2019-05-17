@@ -103,7 +103,7 @@ image::Making-the-Filter-panel-visible..png[align="center",title="Making the Fil
 //ST: !
 How the Filter panel works:
 
-image::Workflow-of-filters--size=stretch.png[align="center",title="Workflow of filters", size="stretch"]
+image::Workflow-of-filters.png[align="center",title="Workflow of filters", size="stretch"]
 {nbsp} +
 
 
@@ -436,3 +436,4 @@ And a web page where you can test your regular expressions: http://regexpal.com[
 Visit https://www.facebook.com/groups/gephi/[the Gephi group on Facebook] to get help,
 
 or visit https://seinecle.github.io/gephi-tutorials/[the website for more tutorials]
+re tutorials]

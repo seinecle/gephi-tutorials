@@ -7,16 +7,13 @@
     <artifactId>gephi-tutorials-source</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
-    <name>gephi-tutorials-source</name>
+    <name>Gephi tutorials - source</name>
 
     <properties>
-        <book-path>${basedir}/src/main/asciidoc/book chapters</book-path>
-        <collated-adocs>assembled adocs.adoc</collated-adocs>
-        <bookName>book-codapps-en.adoc</bookName>
         <medium.publish>false</medium.publish>
-        <asciidoctorj.diagram.version>1.5.0</asciidoctorj.diagram.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <asciidoctorj.diagram.version>1.5.16</asciidoctorj.diagram.version>
     </properties>
     <parent>
         <groupId>net.clementlevallois</groupId>
@@ -150,12 +147,14 @@
                         
                         <!-- Shared configurations across `executions`. Can be overwritten if needed by an executions -->
                         <configuration>
-                            <sourceDocumentName>${doc.to.process}</sourceDocumentName>
-
+                            <sourceDocumentName>${doc.to.process.full.path}</sourceDocumentName>
                             <requires>
                                 <require>asciidoctor-diagram</require>
                             </requires>
                             <attributes>
+                                <refresh-pics>${refresh.pics}</refresh-pics>
+                                <images-dir>${basedir}/src/main/asciidoc/images</images-dir>
+                                <path>${basedir}</path>                                
                                 <!-- Example below shows how to specify in this pom instead of System's PATH, the location of dot command of Graphviz, required by PlantUML libraries -->
                                 <!--Windows:-->
                                 <graphvizdot>C:\Program Files (x86)\Graphviz2.38\bin\dot.exe</graphvizdot>
@@ -181,8 +180,10 @@
                                     <goal>process-asciidoc</goal>
                                 </goals>
                                 <configuration>
+                                    <sourceDirectory>${source.directory}</sourceDirectory>
+                                    <imagesDir>${image.directory}</imagesDir>
+                                    <sourceDocumentName>${doc.to.process.full.path}</sourceDocumentName>
                                     <outputDirectory>${basedir}/docs/generated-slides</outputDirectory>
-                                    <sourceDocumentName>${doc.to.process.full.path}</sourceDocumentName>                                    
                                     <backend>revealjs</backend>
                                     <templateDir>${basedir}/docs/asciidoctor-reveal.js-${asciidoctor-revealjs.version}/templates/slim</templateDir>
                                     <sourceHighlighter>coderay</sourceHighlighter>
@@ -197,6 +198,7 @@
                                         <revealjs_theme>white</revealjs_theme>
                                         <revealjs_transition>linear</revealjs_transition>
                                         <revealjs_maxscale>10.0</revealjs_maxscale>
+                                        <path>${basedir}</path>                                
                                         <project-version>${project.version}</project-version>
                                         <!--these 2 parameters come from the properties.txt file at the root of the project - see plugin above -->
                                         <!--they will be injected into the extensions which manage the html output formats-->
@@ -204,7 +206,8 @@
                                         <statcounter-security>${statcounter-security}</statcounter-security>
                                         <asciimath>asciimath</asciimath>
                                         <doc-to-process>${doc.to.process}</doc-to-process>
-                                        <refresh-pics>${refresh-pics}</refresh-pics>
+                                        <refresh-pics>${refresh.pics}</refresh-pics>
+                                        <magick-path>C:\Program Files\ImageMagick-7.0.8-Q16\magick</magick-path>
                                     </attributes>
                                     <extensions>
                                         <extension>
@@ -223,7 +226,11 @@
                                     <goal>process-asciidoc</goal>
                                 </goals>
                                 <configuration>
-                                    <sourceDocumentName>${doc.to.process.full.path}</sourceDocumentName>
+                                    <sourceDirectory>${source.directory}</sourceDirectory>
+<!--                                    for pdf output the image Dir should be the default one, not ../images as defines for html and slides output!-->
+<!--so I leave this line commented out as a reminder what not to do-->
+                                    <!--<imagesDir>${image.directory}</imagesDir>-->                                    
+                                    <sourceDocumentName>${doc.to.process.full.path}</sourceDocumentName>                                    
                                     <outputDirectory>${basedir}/docs/generated-pdf</outputDirectory>
                                     <backend>pdf</backend>
                                     <sourceHighlighter>coderay</sourceHighlighter>
@@ -232,9 +239,9 @@
                                         <icons>font</icons>
                                         <pagenums/>
                                         <toc/>
-                                        <doc-to-process>${doc.to.process}</doc-to-process>
-                                        <refresh-pics>${refresh-pics}</refresh-pics>
-
+                                        <refresh-pics>${refresh.pics}</refresh-pics>
+                                        <magick-path>C:\Program Files\ImageMagick-7.0.8-Q16\magick</magick-path>
+                                        
                                     </attributes>
                                     <extensions>
                                         <extension>
@@ -254,7 +261,9 @@
                                     <goal>process-asciidoc</goal>
                                 </goals>
                                 <configuration>
-                                    <sourceDocumentName>${doc.to.process.full.path}</sourceDocumentName>
+                                    <sourceDirectory>${source.directory}</sourceDirectory>
+                                    <imagesDir>${image.directory}</imagesDir>
+                                    <sourceDocumentName>${doc.to.process.full.path}</sourceDocumentName>                                    
                                     <outputDirectory>${basedir}/docs/generated-html</outputDirectory>
                                     <backend>html</backend>
                                     <sourceHighlighter>coderay</sourceHighlighter>
@@ -275,7 +284,9 @@
                                         <statcounter-project>${statcounter-project}</statcounter-project>
                                         <statcounter-security>${statcounter-security}</statcounter-security>
                                         <doc-to-process>${doc.to.process}</doc-to-process> 
-                                        <refresh-pics>${refresh-pics}</refresh-pics>
+                                        <refresh-pics>${refresh.pics}</refresh-pics>
+                                        <path>${basedir}</path>                                
+                                        <magick-path>C:\Program Files\ImageMagick-7.0.8-Q16\magick</magick-path>
                                     </attributes>
                                 </configuration>
                             </execution>
@@ -302,23 +313,6 @@
                             </execution>
                         </executions>
                     </plugin>
-                    <plugin>
-                        <groupId>net.clementlevallois</groupId>
-                        <artifactId>MojoPublishToMedium</artifactId>
-                        <version>1.0</version>
-                        <configuration>
-                            <fileName>${project.build.directory}\generated-html\${doc}</fileName>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>default-descriptor</id>
-                                <phase>process-resources</phase>
-                                <goals>
-                                    <goal>publishtomedium</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
                 </plugins>
             </build>
         </profile>
@@ -335,49 +329,70 @@
             </activation>
             <build>
                 <plugins>
-                    <!--                    <plugin>
+                    <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>exec-maven-plugin</artifactId>
                         <version>1.2.1</version>
+                        <dependencies>
+                            <!-- https://mvnrepository.com/artifact/jmagick/jmagick -->
+                            <dependency>
+                                <groupId>jmagick</groupId>
+                                <artifactId>jmagick</artifactId>
+                                <version>6.6.9</version>
+                                <type>jar</type>
+                            </dependency>
+
+                        </dependencies>
                         <executions>
                             <execution>
+                                <id>first</id>
                                 <phase>initialize</phase>
                                 <goals>
                                     <goal>java</goal>
                                 </goals>
+                                <configuration>
+                                    <mainClass>net.clementlevallois.mainclasses.ResetAndAssembleFiles</mainClass>
+                                    <arguments>
+                                        <argument>${book-build-folder}</argument>
+                                        <argument>${collated-adocs}</argument>
+                                        <argument>${book-chapters-folder}</argument>
+                                        <argument>${book-id}</argument>
+                                        <argument>${collated-adocs-with-index}</argument>
+                                    </arguments>
+                                </configuration>
                             </execution>
-                        </executions>
-                        <configuration>
-                            <mainClass>net.clementlevallois.mainclasses.ResetFiles</mainClass>
-                            <arguments>
-                                <argument>${book-path}</argument>
-                                <baseDir>${baseDir}</baseDir>
-                            </arguments>
-                        </configuration>
-                    </plugin>-->
-                    <!--                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-antrun-plugin</artifactId>
-                        <version>1.8</version>
-                        <executions>
                             <execution>
-                                <phase>process-resources</phase>
+                                <id>second</id>
+                                <phase>process-sources</phase>
                                 <goals>
-                                    <goal>run</goal>
+                                    <goal>java</goal>
                                 </goals>
                                 <configuration>
-                                    <target>
-                                        <delete includeemptydirs="true">
-                                            <fileset dir="${basedir}/src/main/asciidoc/book"/>
-                                        </delete>
-                                        <delete includeemptydirs="true">
-                                            <fileset dir="${basedir}/src/main/asciidoc/en/book"/>
-                                        </delete>
-                                    </target>
+                                    <mainClass>net.clementlevallois.mainclasses.FinalizeBookPages</mainClass>
+                                    <arguments>
+                                        <argument>${book-build-folder}</argument>
+                                        <argument>${collated-adocs-with-index}</argument>
+                                        <argument>${collated-adocs-with-extra-pages}</argument>
+                                    </arguments>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>third</id>
+                                <phase>process-resources</phase>
+                                <goals>
+                                    <goal>java</goal>
+                                </goals>
+                                <configuration>
+                                    <mainClass>net.clementlevallois.mainclasses.PdfPostTreatment</mainClass>
+                                    <arguments>
+                                        <argument>${basedir}/docs/generated-book</argument>
+                                        <argument>${collated-adocs-with-extra-pages}</argument>
+                                        <argument>${book-id}</argument>
+                                    </arguments>
                                 </configuration>
                             </execution>
                         </executions>
-                    </plugin>-->
+                    </plugin>
                     <plugin>
                         <groupId>org.asciidoctor</groupId>
                         <artifactId>asciidoctor-maven-plugin</artifactId>
@@ -420,6 +435,7 @@
                                 <!--Windows:-->
                                 <graphvizdot>C:\Program Files (x86)\Graphviz2.38\bin\dot.exe</graphvizdot>
                                 <imagesoutdir>${basedir}/src/main/asciidoc/images</imagesoutdir>
+                                <path>${basedir}</path>                                
                             
                                 <!-- *nix :
                                     <graphvizdot>/usr/local/bin/dot</graphvizdot>
@@ -427,26 +443,29 @@
                             </attributes>
                         </configuration>
                         <executions>
-                            <execution>
-                                <id>collate-documents-into-one</id>
+                            <!--                            <execution>
+                                <id>before</id>
                                 <phase>generate-sources</phase>
                                 <goals>
                                     <goal>process-asciidoc</goal>
                                 </goals>
                                 <configuration>
-                                    <!--<sourceDirectory></sourceDirectory>-->
+                                    <sourceDirectory>${book-build-folder}</sourceDirectory>
                                     <backend>pdf</backend>
                                     <sourceHighlighter>coderay</sourceHighlighter>
-                                    <doctype>book</doctype>
+                                    <sourceDocumentName>${collated-adocs}</sourceDocumentName>
+                                    <imagesDir>${basedir}/src/main/asciidoc/images</imagesDir>
+                                        <output-dir>${book-build-folder}</output-dir>
                                     <attributes>
-                                        <book-path>${book-path}</book-path>
                                         <collated-adocs>${collated-adocs}</collated-adocs>                                        
                                         <icons>font</icons>
                                         <pagenums/>
                                         <toc/>
                                         <idprefix/>
                                         <idseparator>-</idseparator>
-                                        <path>${basedir}</path>                                
+                                        <path>${basedir}</path>
+                                        <refresh-pics>${refresh.pics}</refresh-pics>
+                                        <images-dir>${basedir}/src/main/asciidoc/images</images-dir>
                                     </attributes>
                                     <extensions>
                                         <extension>
@@ -455,21 +474,19 @@
                                         <extension>
                                             <className>net.clementlevallois.asciidoc.extensions.PdfPreProcessor</className>
                                         </extension>
-                                        <extension>
-                                            <className>net.clementlevallois.asciidoc.extensions.BookPreProcessor</className>
-                                        </extension>
                                     </extensions>
                                 </configuration>
-                            </execution>
+                            </execution>-->
                             <execution>
-                                <id>generate-pdf</id>
+                                <id>after</id>
                                 <phase>generate-resources</phase>
                                 <goals>
                                     <goal>process-asciidoc</goal>
                                 </goals>
                                 <configuration>
-                                    <sourceDirectory>${basedir}/src/main/asciidoc/</sourceDirectory>
-                                    <sourceDocumentName>${collated-adocs}</sourceDocumentName>
+                                    <sourceDirectory>${book-build-folder}/subdir</sourceDirectory>
+                                    <imagesDir>${basedir}/src/main/asciidoc/images</imagesDir>
+                                    <sourceDocumentName>${collated-adocs-with-extra-pages}</sourceDocumentName>
                                     <outputDirectory>${basedir}/docs/generated-book</outputDirectory>
                                     <backend>pdf</backend>
                                     <sourceHighlighter>coderay</sourceHighlighter>
@@ -483,14 +500,17 @@
                                         <idprefix/>
                                         <idseparator>-</idseparator>
                                         <path>${basedir}</path>                                
+                                        <refresh-pics>${refresh.pics}</refresh-pics>
+                                        <images-dir>${basedir}/src/main/asciidoc/images</images-dir>
+                                        <magick-path>C:\Program Files\ImageMagick-7.0.8-Q16\magick</magick-path>
                                     </attributes>
                                     <extensions>
-                                        <!--                                        <extension>
+                                        <extension>
                                             <className>net.clementlevallois.asciidoc.extensions.CommonPreProcessor</className>
                                         </extension>
                                         <extension>
                                             <className>net.clementlevallois.asciidoc.extensions.PdfPreProcessor</className>
-                                        </extension>-->
+                                        </extension>
                                     </extensions>
 
                                 </configuration>
@@ -502,4 +522,23 @@
             </build>
         </profile>                
     </profiles>
+    <dependencies>
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>itextpdf</artifactId>
+            <version>5.5.11</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.6</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>ExtensionsForBookEdition</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>
