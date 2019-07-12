@@ -48,7 +48,7 @@ image::Choose-the-menu-Tools-then-Plugins.png[align="center", title="Choose the 
 image::Click-on-the-tab-Available-Plugins.png[align="center", title="Click on the tab Available Plugins"]
 {nbsp} +
 
-image::Install-the-plugin-then-restart-Gephi.png[align="center", title="Install the plugin then restart Gephi"]
+image::Install-the-plugin-Similarity-Computer-then-restart-Gephi.png[align="center", title="Install the plugin Similarity Computer then restart Gephi"]
 {nbsp} +
 
 == Opening the plugin

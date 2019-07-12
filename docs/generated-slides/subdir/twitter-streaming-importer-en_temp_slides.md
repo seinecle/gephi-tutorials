@@ -62,7 +62,7 @@ Let's go!
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1dgcXEC-nrQQtLvEtSLCrzKXfAdi2Hy1jCslyf2ky20A/pub?w=956&h=530[align="center", title="Choose the menu Tools then Plugins"]
+image::Choose-the-menu-Tools-then-Plugins.png[align="center", title="Choose the menu Tools then Plugins"]
 == !
 
 
@@ -70,14 +70,14 @@ image::https://docs.google.com/drawings/d/1dgcXEC-nrQQtLvEtSLCrzKXfAdi2Hy1jCslyf
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1u4LqlnQby5DQVmq4csZ6f7sq_Z33F33UqtBZ43eh4pc/pub?w=645&h=406[align="center", title="Click on the tab Available Plugins"]
+image::Click-on-the-tab-Available-Plugins.png[align="center", title="Click on the tab Available Plugins"]
 == !
 
 
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1LxGNZYaEv__QretB2-x7hX-3Dap672igCDZhFRCbm8k/pub?w=831&h=521[align="center", title="Install the plugin then restart Gephi"]
+image::Install-the-plugin-then-restart-Gephi.png[align="center", title="Install the plugin then restart Gephi"]
 == !
 
 
@@ -94,14 +94,14 @@ image::https://docs.google.com/drawings/d/1LxGNZYaEv__QretB2-x7hX-3Dap672igCDZhF
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/18_sJyNUoPuOTEqoi7OyIxXgwQXwZEkwBXjljrzvjV1o/pub?w=712&h=403[align="center", title="Open a new project in Gephi"]
+image::Open-a-new-project-in-Gephi.png[align="center", title="Open a new project in Gephi"]
 == !
 
 
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1pGCffBxHnCueM-G70m0WwppWgyWRrFbOPvx8grzxi78/pub?w=958&h=526[align="center", title="Display the plugin in Gephi"]
+image::Display-the-plugin-in-Gephi.png[align="center", title="Display the plugin in Gephi"]
 == !
 
 
@@ -111,14 +111,14 @@ We need now to connect to a Twitter account. If you already have a Twitter accou
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1uY_OxQx5yqKorpv16MgKLCZK75qGhoL9NZFgyYJFGI0/pub?w=958&h=526[align="center", title="Creating a Twitter account"]
+image::Creating-a-Twitter-account.png[align="center", title="Creating a Twitter account"]
 == !
 
 
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1BKT2yXA2imVogI5epsHL3_ll9EGKdb-JhbSLKooXqbk/pub?w=958&h=526[align="center", title="Confirmation of the sign-up"]
+image::Confirmation-of-the-sign-up.png[align="center", title="Confirmation of the sign-up"]
 == !
 
 
@@ -132,7 +132,7 @@ At some point (but now would be a good time), you must click on the link in this
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1e85YzmyIqxYR6BwMmT1tOn-dEUP83c_gJ2MsuDRdsOE/pub?w=940&h=492[align="center", title="Enter the verification code you received by sms"]
+image::Enter-the-verification-code-you-received-by-sms.png[align="center", title="Enter the verification code you received by sms"]
 == !
 
 
@@ -140,7 +140,7 @@ image::https://docs.google.com/drawings/d/1e85YzmyIqxYR6BwMmT1tOn-dEUP83c_gJ2Msu
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1tGnfVleoGqSVNrTys-Ww15Gs7uDn69sLsYR25Tf5IS0/pub?w=940&h=492[align="center", title="Choose a username"]
+image::Choose-a-username.png[align="center", title="Choose a username"]
 == !
 
 
@@ -164,14 +164,14 @@ Go to *https://apps.twiter.com[https://apps.twiter.com]*:
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1OBhTH2Dxlftw-r_aXfDWqnj-OdD2-zpuD54HZpazXM0/pub?w=940&h=492[align="center", title="Create a new app"]
+image::Create-a-new-app.png[align="center", title="Create a new app"]
 == !
 
 
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1v7XRvnC_qq0-_JW38vtnIjddLfJxrpA-U-3x2sVExl0/pub?w=940&h=492[align="center", title="Fill in the fields"]
+image::Fill-in-the-fields.png[align="center", title="Fill in the fields"]
 == !
 
 
@@ -181,28 +181,28 @@ INFO: Almost there!!
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1fGL8WT9Jm11K1qVxaldFdn0n742i4jGqYsgXTFaVdQ0/pub?w=940&h=492[align="center", title="Click on Keys and Access Tokens"]
+image::Click-on-Keys-and-Access-Tokens.png[align="center", title="Click on Keys and Access Tokens"]
 == !
 
 
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1wdVoTQnXBKNS0mHo4vAADcQkaWTj84e56954j-XnKLQ/pub?w=940&h=492[align="center", title="Click on Create my access token"]
+image::Click-on-Create-my-access-token.png[align="center", title="Click on Create my access token"]
 == !
 
 
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1f_ntuN_RFRuCg28CSZLcGUl_8fvoWMuPbzr94sLb504/pub?w=940&h=492[align="center", title="Copy paste these codes into Gephi"]
+image::Copy-paste-these-codes-into-Gephi.png[align="center", title="Copy paste these codes into Gephi"]
 == !
 
 
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1RtPAK5Kn9nLw-lKpkh-M0XYY1OvwtH8hXK8Z8KVEH4o/pub?w=940&h=492[align="center", title="Where to copy paste the codes in Gephi"]
+image::Where-to-copy-paste-the-codes-in-Gephi.png[align="center", title="Where to copy paste the codes in Gephi"]
 == !
 
 
@@ -260,7 +260,7 @@ A ** Network Logic ** means: what should be done with an incoming tweet? How to 
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/17P99PQy30e6ReMrS1Yp29Sejvc7Fq7H8jQknw69t0p8/pub?w=530&h=576[align="center",title="Selection of the network logic"]
+image::Selection-of-the-network-logic.png[align="center",title="Selection of the network logic"]
 == !
 
 
@@ -291,7 +291,7 @@ In the following, we use the network logic "User Network":
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1_iLoyKo0FeDrLLYDks5nL48duRUb2QvJ7Ue4NsPYeZw/pub?w=561&h=308[align="center", title="Adding terms and launching the collection of tweets"]
+image::Adding-terms-and-launching-the-collection-of-tweets.png[align="center", title="Adding terms and launching the collection of tweets"]
 == !
 
 
@@ -326,7 +326,7 @@ Just run Force Atlas 2 in the "Layout" panel. This will not interrupt the collec
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1fD_AdsP3SqV5CENMDmMpt6ZLYOAgLsDDYxv2fJr7R6E/pub?w=960&h=540[align="center", title="Running the Force Atlas layout while the tweets are arriving"]
+image::Running-the-Force-Atlas-layout-while-the-tweets-are-arriving.png[align="center", title="Running the Force Atlas layout while the tweets are arriving"]
 == !
 
 
@@ -336,7 +336,7 @@ Shift to the `data laboratory` to view the data collected, in a spreadsheet form
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1mDTOUanUkOa0ND8wn3tuwM54pqYXN6RApWkZTxSpEiI/pub?w=954&h=524[align="center", title="Switching to the data laboratory view"]
+image::Switching-to-the-data-laboratory-view.png[align="center", title="Switching to the data laboratory view"]
 == !
 
 

@@ -44,7 +44,7 @@ image::https://docs.google.com/drawings/d/1dgcXEC-nrQQtLvEtSLCrzKXfAdi2Hy1jCslyf
 
 image::https://docs.google.com/drawings/d/1u4LqlnQby5DQVmq4csZ6f7sq_Z33F33UqtBZ43eh4pc/pub?w=645&h=406[align="center", title="Click on the tab Available Plugins"]
 
-image::https://docs.google.com/drawings/d/18hovYg9G5ek39rILj-aRlEpaWnN6doQeg15iX6lU0aY/pub?w=833&h=543[align="center", title="Install the plugin then restart Gephi"]
+image::https://docs.google.com/drawings/d/18hovYg9G5ek39rILj-aRlEpaWnN6doQeg15iX6lU0aY/pub?w=833&h=543[align="center", title="Install the plugin Similarity Computer then restart Gephi"]
 
 == Opening the plugin
 image::https://docs.google.com/drawings/d/1eu5O9KiGDAXJSkQuXHYq37T8vSvlZCPMgjwpa4C4Bh4/pub?w=1423&h=851[align="center", title="Open the plugin via the menu File - Import"]

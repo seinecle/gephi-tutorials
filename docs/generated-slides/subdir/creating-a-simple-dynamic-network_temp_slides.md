@@ -50,7 +50,7 @@ We create the networks in this tutorial to provide the most simple and clear cas
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1rmxB95Ew8TxaoMRERnhhaSJTT3yuhLc6VEdBRLduAag/pub?w=926&h=534[align="center", title="Open a new project"]
+image::Open-a-new-project.png[align="center", title="Open a new project"]
 == !
 
 
@@ -65,14 +65,14 @@ We can use a simple click-and-point tool to create a network:
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1qg4oSWoP9kfH75ucPquEz5oADG50729keLngKZxs0-o/pub?w=926&h=534[align="center", title="Icon for node creation"]
+image::Icon-for-node-creation.png[align="center", title="Icon for node creation"]
 == !
 
 
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/14Lyj2kYXbnCqQpAJW2OWtJnf88KVKyJtzmxaPNTWTDc/pub?w=639&h=533[align="center", title="A few nodes have been created"]
+image::A-few-nodes-have-been-created.png[align="center", title="A few nodes have been created"]
 == !
 
 
@@ -84,14 +84,14 @@ Export the network as a file and call it "network A":
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1683F5TX0MYbrNofycNIDq3TM6tcdeqQhMydnb-nrnoQ/pub?w=654&h=296[align="center", title="Exporting the network"]
+image::Exporting-the-network.png[align="center", title="Exporting the network"]
 == !
 
 
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1WiD3tIgNY13pJMnqkeyc9wECX-eSlwlwJ4fZy7fX0pM/pub?w=682&h=314[align="center", title="Choosing the gexf file format"]
+image::Choosing-the-gexf-file-format.png[align="center", title="Choosing the gexf file format"]
 == !
 
 
@@ -108,7 +108,7 @@ Now, click on the "Edge pencil", just below the "Node pencil we have used (caref
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1N5ouRs4GXZcUG9NKPrfc9XP-BsT6uPWYYgp__RCHO14/pub?w=926&h=534[align="center", title="Choosing the gexf file format"]
+image::Choosing-the-gexf-file-format.png[align="center", title="Choosing the gexf file format"]
 == !
 
 
@@ -135,7 +135,7 @@ From your computer, open network A.gexf with a text editor (don't use Microsoft 
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1UFJT918n8SUgWUD2KoEVCc6k2-G75QqoetWGirzhcIg/pub?w=1440&h=1080[align="center", title="The network file opened"]
+image::The-network-file-opened.png[align="center", title="The network file opened"]
 == !
 
 
@@ -180,7 +180,7 @@ First, let's close the project we have in Gephi, without saving:
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1urvovovyXAsGIb-yycOHKl3qRtsL8klaVbnzpjThQ60/pub?w=1440&h=1080[align="center", title="Closing the current project"]
+image::Closing-the-current-project.png[align="center", title="Closing the current project"]
 == !
 
 
@@ -190,7 +190,7 @@ Then click on `File -> Open` and navigate to the folder where network A.gexf and
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1Qah_hVAi7LXwnwuhCjLgHUlAqL4qHxUQ38PRKrPbJ_A/pub?w=1417&h=938[align="center", title="Opening files"]
+image::Opening-files.png[align="center", title="Opening files"]
 == !
 
 
@@ -200,7 +200,7 @@ Here, make sure you select the *2 files at once* (using the key kbd:[Ctrl] on pc
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1ZU4uqyz7C9bXMNFd46XF5H_F8W2n0wdvcyrg5QyhQkI/pub?w=1372&h=857[align="center", title="Opening 2 files at once"]
+image::Opening-2-files-at-once.png[align="center", title="Opening 2 files at once"]
 == !
 
 
@@ -210,7 +210,7 @@ Opening the files display a report window:
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1QAxYTCY38JJa8RyeMEu22u3-L65L3K-Y2Kd1FDslwB8/pub?w=1443&h=1014[align="center", title="Import report window"]
+image::Import-report-window.png[align="center", title="Import report window"]
 == !
 
 
@@ -225,7 +225,7 @@ You should see this button, click on it (if not: something went wrong. Retrace y
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/134kQ8NnjB5W-tqv_xsK8EvEUDezkAxAeLFoxogSh64s/pub?w=1433&h=815[align="center", title="Enable the timeline"]
+image::Enable-the-timeline.png[align="center", title="Enable the timeline"]
 == !
 
 
@@ -235,7 +235,7 @@ Click and slide the right side border of the timeline *to the left*. You should 
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1dGRD8i7Nsjujdsiearl1ls6v31KXwAA3x28cs4WQhhQ/pub?w=1316&h=748[align="center", title="Sliding the timeline"]
+image::Sliding-the-timeline.png[align="center", title="Sliding the timeline"]
 == !
 
 

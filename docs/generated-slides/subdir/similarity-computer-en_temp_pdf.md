@@ -48,7 +48,7 @@ image::Choose-the-menu-Tools-then-Plugins.png[align="center", title="Choose the 
 image::Click-on-the-tab-Available-Plugins.png[align="center", title="Click on the tab Available Plugins"]
 {nbsp} +
 
-image::Install-the-plugin-then-restart-Gephi.png[align="center", title="Install the plugin then restart Gephi"]
+image::Install-the-plugin-Similarity-Computer-then-restart-Gephi.png[align="center", title="Install the plugin Similarity Computer then restart Gephi"]
 {nbsp} +
 
 == Opening the plugin
@@ -114,8 +114,7 @@ David appears on lines 2 and 5 (because he made two purchases). Only the latest 
 Visit https://www.facebook.com/groups/gephi/[the Gephi group on Facebook] to get help,
 
 or visit https://seinecle.github.io/gephi-tutorials/[the website for more tutorials]
-", title="An entity appearing twice"]
-{nbsp} +
+bsp} +
 
 David appears on lines 2 and 5 (because he made two purchases). Only the latest line where David appears (line 5) will be taken into account.
 

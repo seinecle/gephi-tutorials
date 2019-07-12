@@ -61,7 +61,7 @@ When finishing this tutorial, you should be able to:
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1h8N-UBY7dO6Q7mXCbPY78ITfJx1Mti9YD2ScnVu4oHA/pub?w=960&h=720[align="center",title="terminology for networks"]
+image::terminology-for-networks.png[align="center",title="terminology for networks"]
 == !
 
 
@@ -144,7 +144,7 @@ This is how the network appears in Gephi. Not very useful! Let's examine what we
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1MVPuD8fYe8bEJJJ67heQjrMidA7vyizGc37p4y5LRH8/pub?w=960[align="center", title="the 3 main screens in Gephi"]
+image::the-3-main-screens-in-Gephi.png[align="center", title="the 3 main screens in Gephi"]
 == !
 
 
@@ -161,7 +161,7 @@ What we see here is the Overview.
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1XwpvulXoyiK3nBbxFiCFisH6_pg9P9us9LnZJvzlDz4/pub?w=960[align="center", title="Filters and statistics panels in Gephi"]
+image::Filters-and-statistics-panels-in-Gephi.png[align="center", title="Filters and statistics panels in Gephi"]
 == !
 
 
@@ -177,7 +177,7 @@ In the Overview, the graph is shown at the center. Around it, several panels hel
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1J4wCFaXwIaRmiiG7t69s8HmhA0hnR0Sp0hwgOFquFdw/pub?w=1439&h=787[align="center", title="Appearance and layout panels in Gephi"]
+image::Appearance-and-layout-panels-in-Gephi.png[align="center", title="Appearance and layout panels in Gephi"]
 == !
 
 
@@ -192,7 +192,7 @@ image::https://docs.google.com/drawings/d/1J4wCFaXwIaRmiiG7t69s8HmhA0hnR0Sp0hwgO
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1IkRBs4doz5fZWovao-yJFBR9hg7RO_BtGJwhUF9yoJk/pub?w=1435&h=774[align="center", title="3 groups of icons"]
+image::3-groups-of-icons.png[align="center", title="3 groups of icons"]
 == !
 
 
@@ -214,7 +214,7 @@ image::https://docs.google.com/drawings/d/1IkRBs4doz5fZWovao-yJFBR9hg7RO_BtGJwhU
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1o-J7Uce1okDdIN_IgvZaH4MdGjn74_ChTlXo-nxS-w4/pub?w=960&h=720[align="center", title="showing node labels"]
+image::showing-node-labels.png[align="center", title="showing node labels"]
 == !
 
 
@@ -228,7 +228,7 @@ image::https://docs.google.com/drawings/d/1o-J7Uce1okDdIN_IgvZaH4MdGjn74_ChTlXo-
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1fD_AdsP3SqV5CENMDmMpt6ZLYOAgLsDDYxv2fJr7R6E/pub?w=960&h=720[align="center", title="selecting the force atlas 2 layout"]
+image::selecting-the-force-atlas-2-layout.png[align="center", title="selecting the force atlas 2 layout"]
 == !
 
 
@@ -237,7 +237,7 @@ image::https://docs.google.com/drawings/d/1fD_AdsP3SqV5CENMDmMpt6ZLYOAgLsDDYxv2f
 [[force-atlas-2-parameters]]
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1TnbclWXKFJiYUOJTHAl2Fyh5j3KgxV5TyLGyN1Gnn7k/pub?w=960&h=720[align="center", title="changing a few parameters and launching the layout"]
+image::changing-a-few-parameters-and-launching-the-layout.png[align="center", title="changing a few parameters and launching the layout"]
 == !
 
 
@@ -246,7 +246,7 @@ image::https://docs.google.com/drawings/d/1TnbclWXKFJiYUOJTHAl2Fyh5j3KgxV5TyLGyN
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1RkRn4Q8Ln-C1qJCiuBp2FN51GavaaLlm17QnVOO_av4/pub?w=960&h=720[align="center", title="result of Force Atlas 2 layout"]
+image::result-of-Force-Atlas-2-layout.png[align="center", title="result of Force Atlas 2 layout"]
 == !
 
 
@@ -269,7 +269,7 @@ Now, we will see how to make this property ("Gender") visible.
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1mDTOUanUkOa0ND8wn3tuwM54pqYXN6RApWkZTxSpEiI/pub?w=954&h=524[align="center",title="Switching the view to the data laboratory"]
+image::Switching-the-view-to-the-data-laboratory.png[align="center",title="Switching the view to the data laboratory"]
 == !
 
 
@@ -277,7 +277,7 @@ image::https://docs.google.com/drawings/d/1mDTOUanUkOa0ND8wn3tuwM54pqYXN6RApWkZT
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1wIubWP6KX6oaz3pd7SQYziWR_2hK2KIhH0gAFwn3rEk/pub?w=758&h=431[align="center",title="We see there is a Gender attribute for each character."]
+image::We-see-there-is-a-Gender-attribute-for-each-character..png[align="center",title="We see there is a Gender attribute for each character."]
 == !
 
 
@@ -287,7 +287,7 @@ We will color the nodes based on their gender. To do that, we select `Gender` in
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1VdIaYCfuMAF5Tk3EaCak-Z0M9GsIuPpjxc6RWi0FELs/pub?w=758&h=431[align="center",title="Coloring nodes according to their gender"]
+image::Coloring-nodes-according-to-their-gender.png[align="center",title="Coloring nodes according to their gender"]
 == !
 
 
@@ -348,7 +348,7 @@ Open the bottom panel of Gephi by clicking on tiny arrow head (1). Then select "
 //ST: !
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/13dOYkyzY4dKMIDrSj59NFF5GftZD55eRC26HZ8jn2RM/pub?w=758&h=431[align="center",title="Adjusting label size"]
+image::Adjusting-label-size.png[align="center",title="Adjusting label size"]
 == !
 
 
@@ -358,7 +358,7 @@ image::https://docs.google.com/drawings/d/13dOYkyzY4dKMIDrSj59NFF5GftZD55eRC26HZ
 == !
 
 [.stretch]
-image::https://docs.google.com/drawings/d/13Sdd6ss52TgXoG1i4CkaGw3aHap-WWDvpJjosQJSyls/pub?w=758&h=431[align="center",title="Adjusting edge thickness"]
+image::Adjusting-edge-thickness.png[align="center",title="Adjusting edge thickness"]
 == !
 
 
@@ -400,7 +400,7 @@ Gephi computes it for you. Find "Network diameter" in the statistics panel and c
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1T66-VP25_nvxCvmnpQWUraCYT3Vxi0oW3f-TBZDtYPM/pub?w=758&h=415[align="center",title="Computing betweenness centrality"]
+image::Computing-betweenness-centrality.png[align="center",title="Computing betweenness centrality"]
 == !
 
 
@@ -409,7 +409,7 @@ This will open a window with parameters (explained in a more advanced tutorials)
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1OmI-MugkNhDR67BR0ns5injN1FoVhm1IjXXzI5Qv4NQ/pub?w=411&h=232[align="center",title="Parameters for the computation of betweenness centrality"]
+image::Parameters-for-the-computation-of-betweenness-centrality.png[align="center",title="Parameters for the computation of betweenness centrality"]
 == !
 
 
@@ -419,7 +419,7 @@ A report window opens (also explained in a other tutorials). Close it.
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1_eS17piFaVKG4cXL1TAxIh4sSL5ubg7_-6AziUrjJl8/pub?w=300[align="center",title="Report after the computation of betweenness centrality"]
+image::Report-after-the-computation-of-betweenness-centrality.png[align="center",title="Report after the computation of betweenness centrality"]
 == !
 
 
@@ -439,7 +439,7 @@ First, let's switch to the data laboratory to see how Gephi stored the "betweenn
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1mDTOUanUkOa0ND8wn3tuwM54pqYXN6RApWkZTxSpEiI/pub?w=954&h=524[align="center",title="Switching the view to the data laboratory"]
+image::Switching-the-view-to-the-data-laboratory.png[align="center",title="Switching the view to the data laboratory"]
 == !
 
 
@@ -449,7 +449,7 @@ When we ran "Network Diameter" in the statistics panel, Gephi has actually compu
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1anoYqTntqA4ZYuS035GQQEDwPwbIr_kk1oQ6wRVfkPM/pub?w=954&h=525[align="center",title="Different centrality measures visible in the data laboratory"]
+image::Different-centrality-measures-visible-in-the-data-laboratory.png[align="center",title="Different centrality measures visible in the data laboratory"]
 == !
 
 
@@ -460,7 +460,7 @@ CAUTION: make sure you select the correct options
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/13XItrvTkrJSQ6MzQTLe7ZugrpxfBJMBi0qzsVbH_JeQ/pub?w=954&h=525[align="center",title="Ranking node sizes by centrality"]
+image::Ranking-node-sizes-by-centrality.png[align="center",title="Ranking node sizes by centrality"]
 == !
 
 
@@ -468,7 +468,7 @@ image::https://docs.google.com/drawings/d/13XItrvTkrJSQ6MzQTLe7ZugrpxfBJMBi0qzsV
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1EeA-5wfTuHKc8jQL49afXZb-LQl1Rtss49mE11U8Ako/pub?w=954&h=525[align="center",title="Selecting the minimum and maximum sizes of nodes"]
+image::Selecting-the-minimum-and-maximum-sizes-of-nodes.png[align="center",title="Selecting the minimum and maximum sizes of nodes"]
 == !
 
 
@@ -484,7 +484,7 @@ image::ranking-centrality-miserables-3--en.png[align="center",title="Result of t
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1G9s36WY2PDpYpUxl0qYgA_ccqLpAoOd6kap8X8QSKog/pub?w=954&h=525[align="center",title="Resizing labels to reflect their node's size"]
+image::Resizing-labels-to-reflect-their-node's-size.png[align="center",title="Resizing labels to reflect their node's size"]
 == !
 
 
@@ -506,7 +506,7 @@ image::result-label-resizing-en.png[align="center",title="Result of the label re
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/13nw3KJL1vHc2zhFr3A5WB3za6GFrzpxQ8kZjujNLIqM/pub?w=954&h=525[align="center",title="Open the configuration panel for screenshots"]
+image::Open-the-configuration-panel-for-screenshots.png[align="center",title="Open the configuration panel for screenshots"]
 == !
 
 
@@ -527,7 +527,7 @@ Let's switch to the preview panel:
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1j0dbw5wwOccDoUEFk8XBsCaKi6Ms9bZlqqOM1MgdDog/pub?w=954&h=525[align="center",title="Switching to the preview panel"]
+image::Switching-to-the-preview-panel.png[align="center",title="Switching to the preview panel"]
 == !
 
 
@@ -540,7 +540,7 @@ CAUTION: contrary to the Overview panel, here you need to hit the "refresh" butt
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1gfeX6T1YzVEPFKgrxRmcL47EbeFnnGTmiBRw35V6VCM/pub?w=954&h=525[align="center",title="Updating the parameters"]
+image::Updating-the-parameters.png[align="center",title="Updating the parameters"]
 == !
 
 
@@ -549,7 +549,7 @@ Here I change just 2 parameters: `Show Labels` and  `Font` (which I reduce to si
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1Kz34ITT6BecVkgy7S50JO2nX-hywCWnC_kMpJ21TkXo/pub?w=954&h=525[align="center",title="Result of preview"]
+image::Result-of-preview.png[align="center",title="Result of preview"]
 == !
 
 
@@ -558,7 +558,7 @@ Export: just click on the button and select the file format you prefer
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1ATho4fb-YqCAPHw4sLa65le7C0kOtNWk7YOYdjd98RA/pub?w=954&h=525[align="center",title="Export button"]
+image::Export-button.png[align="center",title="Export button"]
 == !
 
 

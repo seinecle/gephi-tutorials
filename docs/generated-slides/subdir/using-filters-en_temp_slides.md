@@ -91,7 +91,7 @@ We can switch to the data laboratory to see the underlying data:
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/15SISc0_m4w99GUxZcbrln1183dRqBYNK0EpG2OOBbVU/pub?w=954&h=524[align="center",title="Switching to the data laboratory"]
+image::Switching-to-the-data-laboratory.png[align="center",title="Switching to the data laboratory"]
 == !
 
 
@@ -101,7 +101,7 @@ We see that the nodes of the network have many attributes. In particular, each h
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1O0NSM6ijhib5pKxCHKmSjffp3m7FuYaChLSCm35xChU/pub?w=954&h=525[align="center",title="Nodes attributes."]
+image::Nodes-attributes..png[align="center",title="Nodes attributes."]
 == !
 
 
@@ -110,7 +110,7 @@ This is the list of edges (relations) in the network. Notice that they have a "w
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1y1SfMHZ3_4lOlI2t6WBC170T9HpVLXb_UYVLnVr_BWY/pub?w=954&h=524[align="center",title="Edges attributes".]
+image::Edges-attributes..png[align="center",title="Edges attributes".]
 == !
 
 
@@ -123,7 +123,7 @@ In the overview, make sure the Filter panel is displayed:
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1wyvNAmiHtyB1oegpKHAGvL8ZERChASzU-mWSQBWCeKE/pub?w=954&h=524[align="center",title="Making the Filter panel visible."]
+image::Making-the-Filter-panel-visible..png[align="center",title="Making the Filter panel visible."]
 == !
 
 
@@ -133,7 +133,7 @@ How the Filter panel works:
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1paf2P-xNCcTlW5CMN8FicrRcoF3sTKHCLrFbksVhCC4/pub?w=749&h=790[align="center",title="Workflow of filters", size="stretch"]
+image::Workflow-of-filters.png[align="center",title="Workflow of filters", size="stretch"]
 == !
 
 
@@ -180,7 +180,7 @@ Goal: Keeping on screen only the female characters which have a tie (an edge, a 
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1TixDBp9-RQTYHioDEV4gbo0BN6cWWzKt8fkXl9So3Ds/pub?w=886&h=462[align="center",title="Filter on the Gender attribute"]
+image::Filter-on-the-Gender-attribute.png[align="center",title="Filter on the Gender attribute"]
 == !
 
 
@@ -188,7 +188,7 @@ image::https://docs.google.com/drawings/d/1TixDBp9-RQTYHioDEV4gbo0BN6cWWzKt8fkXl
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1EtqSByLSNOrGCW3nvlrTW7Oci8IBYQP2koZB1v4XTu0/pub?w=1015&h=695[align="center",title="Filter on edge weight"]
+image::Filter-on-edge-weight.png[align="center",title="Filter on edge weight"]
 == !
 
 
@@ -359,7 +359,7 @@ Let's switch to the data laboratory and add this attribute:
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1j3B2ahLGqEYBGDqDyBcVOj8-Xp1oJGER8AnIudCvuZM/pub?w=1136&h=646[align="center",title="Adding a column for Names"]
+image::Adding-a-column-for-Names.png[align="center",title="Adding a column for Names"]
 == !
 
 
@@ -368,7 +368,7 @@ image::https://docs.google.com/drawings/d/1j3B2ahLGqEYBGDqDyBcVOj8-Xp1oJGER8AnIu
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1zYQs7U_Vlf8KfZcI4Btr0fo1JgQcrLjrkx5a8Jt_eV4/pub?w=1136&h=646[align="center",title="Copying to this new column"]
+image::Copying-to-this-new-column.png[align="center",title="Copying to this new column"]
 == !
 
 
@@ -377,7 +377,7 @@ We now have an attribute called "Name" that we can find in the Filters:
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/17zSqYMEEe5K34mWssyWpPRbRffX42U5eHjY5vvtfMuc/pub?w=1031&h=627[align="center",title="New filter available"]
+image::New-filter-available.png[align="center",title="New filter available"]
 == !
 
 

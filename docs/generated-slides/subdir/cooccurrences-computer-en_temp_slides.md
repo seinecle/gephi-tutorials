@@ -58,24 +58,24 @@ image::en/cooccurrences-computer/gephi-result-1-en.png[align="center", title="Re
 == Installing the plugin
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1dgcXEC-nrQQtLvEtSLCrzKXfAdi2Hy1jCslyf2ky20A/pub?w=956&h=530[align="center", title="Choose the menu Tools then Plugins"]
+image::Choose-the-menu-Tools-then-Plugins.png[align="center", title="Choose the menu Tools then Plugins"]
 == !
 
 
 [.stretch]
-image::https://docs.google.com/drawings/d/1u4LqlnQby5DQVmq4csZ6f7sq_Z33F33UqtBZ43eh4pc/pub?w=645&h=406[align="center", title="Click on the tab Available Plugins"]
+image::Click-on-the-tab-Available-Plugins.png[align="center", title="Click on the tab Available Plugins"]
 == !
 
 
 [.stretch]
-image::https://docs.google.com/drawings/d/e/2PACX-1vTnoukHFo6s3wgxOrtmHz_hVPf4JXcyyKIIvuXvhClULnyOIYUQcEsC-FaZNyBZBaMGv0696wk7GBhQ/pub?w=833&h=543[align="center", title="Install the plugin and restart Gephi"]
+image::Install-the-plugin-Convert-Excel-and-Csv-files-and-restart-Gephi.png[align="center", title="Install the plugin Convert Excel and Csv files and restart Gephi"]
 == !
 
 
 == Opening the plugin
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1fAwFegXKYpBjfcNYmlrTsoadheVfPEqAg8kEeoEl1Ag/pub?w=1423&h=851[align="center", title="Open the plugin via the menu File - Import"]
+image::Open-the-plugin-via-the-menu-File---Import.png[align="center", title="Open the plugin via the menu File - Import"]
 == !
 
 
@@ -85,7 +85,7 @@ image::https://docs.google.com/drawings/d/1fAwFegXKYpBjfcNYmlrTsoadheVfPEqAg8kEe
 ==== 2nd panel
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1hO9PddUbSc_XUyZFmaX1Zs6-AoX-yE9npZZjWdEo8KU/pub?w=1321&h=907[align="center", title="Select a file"]
+image::Select-a-file.png[align="center", title="Select a file"]
 == !
 
 
@@ -169,7 +169,7 @@ In our example, we have used commas: the lists of products purchased are comma-s
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1tRw85HuODUSCD7e48UX_F7fUB5XWGJ7hVzNFnr6oWQI/pub?w=656&h=377[align="center", title="commas shown in red"]
+image::commas-shown-in-red.png[align="center", title="commas shown in red"]
 == !
 
 

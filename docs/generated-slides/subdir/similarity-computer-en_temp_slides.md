@@ -43,7 +43,7 @@ This plugin enables you to:
 ==== 1. The input
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1TkShesrj6PsObLdj3fCMLScxTXJgopxTEICPv8CPd4Y/pub?w=840&h=887[align="center", title="An Excel file"]
+image::An-Excel-file.png[align="center", title="An Excel file"]
 == !
 
 
@@ -57,24 +57,24 @@ image::en/similarity-computer/result.png[align="center", title="Resulting networ
 == Installing the plugin
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1dgcXEC-nrQQtLvEtSLCrzKXfAdi2Hy1jCslyf2ky20A/pub?w=956&h=530[align="center", title="Choose the menu Tools then Plugins"]
+image::Choose-the-menu-Tools-then-Plugins.png[align="center", title="Choose the menu Tools then Plugins"]
 == !
 
 
 [.stretch]
-image::https://docs.google.com/drawings/d/1u4LqlnQby5DQVmq4csZ6f7sq_Z33F33UqtBZ43eh4pc/pub?w=645&h=406[align="center", title="Click on the tab Available Plugins"]
+image::Click-on-the-tab-Available-Plugins.png[align="center", title="Click on the tab Available Plugins"]
 == !
 
 
 [.stretch]
-image::https://docs.google.com/drawings/d/18hovYg9G5ek39rILj-aRlEpaWnN6doQeg15iX6lU0aY/pub?w=833&h=543[align="center", title="Install the plugin then restart Gephi"]
+image::Install-the-plugin-Similarity-Computer-then-restart-Gephi.png[align="center", title="Install the plugin Similarity Computer then restart Gephi"]
 == !
 
 
 == Opening the plugin
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1eu5O9KiGDAXJSkQuXHYq37T8vSvlZCPMgjwpa4C4Bh4/pub?w=1423&h=851[align="center", title="Open the plugin via the menu File - Import"]
+image::Open-the-plugin-via-the-menu-File---Import.png[align="center", title="Open the plugin via the menu File - Import"]
 == !
 
 
@@ -84,7 +84,7 @@ image::https://docs.google.com/drawings/d/1eu5O9KiGDAXJSkQuXHYq37T8vSvlZCPMgjwpa
 ==== First panel
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1T1MfrbkD-0JXU0gJittis1SzC6oTS3TzN2NqwkKtRVE/pub?w=1412&h=920[align="center", title="Select a file"]
+image::Select-a-file.png[align="center", title="Select a file"]
 == !
 
 

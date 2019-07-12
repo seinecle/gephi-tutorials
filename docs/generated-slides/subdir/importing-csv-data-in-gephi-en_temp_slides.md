@@ -56,7 +56,7 @@ To import this file in Gephi, go to `File->Import Spreadsheet`. Then in the wind
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/10G-ww5yaxlUme5h1wAcfK9AdqY8dNnurfFYZotljhPs/pub?w=644&h=520[align="center",title="Importing nodes with labels and their relations"]
+image::Importing-nodes-with-labels-and-their-relations.png[align="center",title="Importing nodes with labels and their relations"]
 == !
 
 
@@ -64,7 +64,7 @@ In this window, make sure the box "Create missing nodes" is checked:
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1CnsxD6sjfXokhHxaZR6P_jJ2mNEtKBiTh_iB4EA3sjE/pub?w=644&h=520[align="center",title="Second screen"]
+image::Second-screen.png[align="center",title="Second screen"]
 == !
 
 
@@ -208,7 +208,7 @@ Let's import the list of nodes first. `File -> Import Spreadsheet`
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/15GXuO-ucoucMw4OvyckAHrg5UDThMO0hkFB924yFtm0/pub?w=951&h=537[align="center",title="Importing a list of nodes with attributes"]
+image::Importing-a-list-of-nodes-with-attributes.png[align="center",title="Importing a list of nodes with attributes"]
 == !
 
 
@@ -216,7 +216,7 @@ in the next screen, we must be careful with a couple of things:
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1K2WPeei2RYxIB8neTeXB9xWTqY8egvkVh80nj4FEIWg/pub?w=653&h=531[align="center",title="The attributes of the nodes"]
+image::The-attributes-of-the-nodes.png[align="center",title="The attributes of the nodes"]
 == !
 
 
@@ -224,12 +224,12 @@ Then we can import the file with the list of relations. `File -> Import Spreadsh
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1KSE9pCnJ61Wvqf7moB_VLUMOTQVOTqRqwUjOHac7_SE/pub?w=595&h=375[align="center",title="Importing a list of edges with attributes"]
+image::Importing-a-list-of-edges-with-attributes.png[align="center",title="Importing a list of edges with attributes"]
 == !
 
 
 [.stretch]
-image::https://docs.google.com/drawings/d/1PTWwhnWkb-blXN-Yx-wQuYoohqTZejNPnADNdfcG-_k/pub?w=506&h=356[align="center",title="The attributes of the edges"]
+image::The-attributes-of-the-edges.png[align="center",title="The attributes of the edges"]
 == !
 
 

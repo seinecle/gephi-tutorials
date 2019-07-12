@@ -113,7 +113,7 @@ We can switch to the data laboratory to see the underlying data:
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/15SISc0_m4w99GUxZcbrln1183dRqBYNK0EpG2OOBbVU/pub?w=954&h=524[align="center",title="Switching to the data laboratory"]
+image::Switching-to-the-data-laboratory.png[align="center",title="Switching to the data laboratory"]
 == !
 
 
@@ -122,7 +122,7 @@ image::https://docs.google.com/drawings/d/15SISc0_m4w99GUxZcbrln1183dRqBYNK0EpG2
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1kDpiarI7R8Z8a7nEsVlD34lCOYPxLAUJqPmsm08IwR8/pub?w=1439&h=754[align="center",title="Zoom on three attributes representing time"]
+image::Zoom-on-three-attributes-representing-time.png[align="center",title="Zoom on three attributes representing time"]
 == !
 
 
@@ -151,7 +151,7 @@ We will present these 3 possibilities.
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1bCWm0LPCJ-DWF3oR7szSA_fsd_ExMjJBjqLUBIzsyUs/pub?w=1439&h=754[align="center",title="Merge columns"]
+image::Merge-columns.png[align="center",title="Merge columns"]
 == !
 
 
@@ -159,7 +159,7 @@ image::https://docs.google.com/drawings/d/1bCWm0LPCJ-DWF3oR7szSA_fsd_ExMjJBjqLUB
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1O-C4kdb2gW8dABzUXxPDTzn0afr0YEqujGfRtVaSO80/pub?w=1438&h=657[align="center",title="Set up the parameters - 1"]
+image::Set-up-the-parameters---1.png[align="center",title="Set up the parameters - 1"]
 == !
 
 
@@ -167,7 +167,7 @@ image::https://docs.google.com/drawings/d/1O-C4kdb2gW8dABzUXxPDTzn0afr0YEqujGfRt
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1GsZ9WLLSCV7yddr9PEjGQhPLBb_nMC_g-4-zs-7jus4/pub?w=1431&h=847[align="center",title="Result"]
+image::Result.png[align="center",title="Result"]
 == !
 
 

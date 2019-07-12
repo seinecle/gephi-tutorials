@@ -45,7 +45,7 @@ image::https://docs.google.com/drawings/d/1dgcXEC-nrQQtLvEtSLCrzKXfAdi2Hy1jCslyf
 
 image::https://docs.google.com/drawings/d/1u4LqlnQby5DQVmq4csZ6f7sq_Z33F33UqtBZ43eh4pc/pub?w=645&h=406[align="center", title="Click on the tab Available Plugins"]
 
-image::https://docs.google.com/drawings/d/e/2PACX-1vTnoukHFo6s3wgxOrtmHz_hVPf4JXcyyKIIvuXvhClULnyOIYUQcEsC-FaZNyBZBaMGv0696wk7GBhQ/pub?w=833&h=543[align="center", title="Install the plugin and restart Gephi"]
+image::https://docs.google.com/drawings/d/e/2PACX-1vTnoukHFo6s3wgxOrtmHz_hVPf4JXcyyKIIvuXvhClULnyOIYUQcEsC-FaZNyBZBaMGv0696wk7GBhQ/pub?w=833&h=543[align="center", title="Install the plugin Convert Excel and Csv files and restart Gephi"]
 
 == Opening the plugin
 image::https://docs.google.com/drawings/d/1fAwFegXKYpBjfcNYmlrTsoadheVfPEqAg8kEeoEl1Ag/pub?w=1423&h=851[align="center", title="Open the plugin via the menu File - Import"]

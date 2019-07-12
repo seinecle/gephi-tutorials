@@ -421,7 +421,7 @@ a. Showing the labels of the nodes:
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1o-J7Uce1okDdIN_IgvZaH4MdGjn74_ChTlXo-nxS-w4/pub?w=960&h=720[align="center", title="showing node labels"]
+image::showing-node-labels.png[align="center", title="showing node labels"]
 == !
 
 
@@ -432,7 +432,7 @@ b. Making the edges (relations) invisible, because they clutter the view
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1EZuk_b2plau6HzFNkkB64Mep0I0xq5l5sJhnIsOpSMM/pub?w=1440&h=1080[align="center", title="hiding edges"]
+image::hiding-edges.png[align="center", title="hiding edges"]
 == !
 
 
@@ -473,7 +473,7 @@ f. We then need to assign this node color to their labels:
 
 == !
 [.stretch]
-image::https://docs.google.com/drawings/d/1fAyeO4K9cv-HV4AM0YrL8yQXw8hKxqWX-1K1GlwogN0/pub?w=1440&h=1080[align="center", title="Coloring nodes - second step"]
+image::Coloring-nodes---second-step.png[align="center", title="Coloring nodes - second step"]
 == !
 
 

@@ -49,7 +49,7 @@ image::Choose-the-menu-Tools-then-Plugins.png[align="center", title="Choose the 
 image::Click-on-the-tab-Available-Plugins.png[align="center", title="Click on the tab Available Plugins"]
 {nbsp} +
 
-image::Install-the-plugin-and-restart-Gephi.png[align="center", title="Install the plugin and restart Gephi"]
+image::Install-the-plugin-Convert-Excel-and-Csv-files-and-restart-Gephi.png[align="center", title="Install the plugin Convert Excel and Csv files and restart Gephi"]
 {nbsp} +
 
 == Opening the plugin
@@ -200,7 +200,7 @@ This panel recaps all the settings. Click on finish to create the network.
 Visit https://www.facebook.com/groups/gephi/[the Gephi group on Facebook] to get help,
 
 or visit https://seinecle.github.io/gephi-tutorials/[the website for more tutorials]
-e" in a cell: this would create a link from table to table (a *self loop*).
+le (a *self loop*).
 
 -> Check this option if you'd like self loops to be removed.
 
