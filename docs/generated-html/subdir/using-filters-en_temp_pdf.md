@@ -436,4 +436,23 @@ And a web page where you can test your regular expressions: http://regexpal.com[
 Visit https://www.facebook.com/groups/gephi/[the Gephi group on Facebook] to get help,
 
 or visit https://seinecle.github.io/gephi-tutorials/[the website for more tutorials]
-re tutorials]
+egular expressions:
+
+- http://www.regular-expressions.info/quickstart.html[https://regexone.com/]
+- http://www.themacroscope.org/?page_id=643[http://www.themacroscope.org/?page_id=643]
+
+And a web page where you can test your regular expressions: http://regexpal.com[http://regexpal.com]
+
+== more tutorials on using filters in Gephi
+//ST: More tutorials on using filters in Gephi
+
+//ST: !
+
+- https://www.youtube.com/watch?v=UrrWA_t1rjc[Video on using filters by Jen Golbeck]
+
+== the end
+
+//ST: The end!
+Visit https://www.facebook.com/groups/gephi/[the Gephi group on Facebook] to get help,
+
+or visit https://seinecle.github.io/gephi-tutorials/[the website for more tutorials]

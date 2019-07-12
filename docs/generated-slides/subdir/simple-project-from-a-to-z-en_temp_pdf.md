@@ -476,3 +476,34 @@ These are layouts which follow the same logic as Force Atlas 2, but with slight 
 [start=6]
 6. In this tutorial, we defined degree centrality.
 Can you imagine a situation when a node with the largest degree centrality will actually be in the periphery of the network? You can draw a toy network to help you figure.
+.dummies.com/computers/macs/how-to-open-and-edit-a-text-file-on-a-mac/[Mac], and on https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/app_notepad.mspx?mfr=true[Windows]). See how the nodes and the links are written in the file. Can you find the character Javert?
+
+//ST: !
+[start=2]
+2. Our network of Les Miserables characters was undirected. Can you think of networks which are directed?
+
+Imagine how undirected and directed networks differ when computing centrality, for example.
+
+//ST: !
+[start=3]
+3. Force Atlas 2 is a layout which brings together connected nodes, and spreads out unconnected nodes. We might have nodes with no relation at all with other nodes (called "isolated nodes").
+
+How will these isolated nodes move on screen?
+
+//ST: !
+[start=4]
+4. When applying the Force Atlas 2 layout, the network moves quickly, then stabilizes, and then keeps moving a bit.
+
+Can you guess why this is happening?
+
+//ST: !
+[start=5]
+5. In the list of layouts, Force Atlas 2 is just one of many options you can choose.
+Try "Fruchterman Reingold" and "Yfan Hu".
+
+These are layouts which follow the same logic as Force Atlas 2, but with slight variations. Explore how these algorithms result in similar, yet specific layouts.
+
+//ST: !
+[start=6]
+6. In this tutorial, we defined degree centrality.
+Can you imagine a situation when a node with the largest degree centrality will actually be in the periphery of the network? You can draw a toy network to help you figure.

@@ -218,7 +218,7 @@ When finishing this tutorial, you should be able to:
 
 == !
 [.stretch]
-image::terminology-for-networks.png[align="center",title="terminology for networks"]
+image::https://docs.google.com/drawings/d/1h8N-UBY7dO6Q7mXCbPY78ITfJx1Mti9YD2ScnVu4oHA/pub?w=960&h=720[align="center",title="terminology for networks"]
 == !
 
 
@@ -305,7 +305,7 @@ This is how the network appears in Gephi. Not very useful! Let's examine what we
 
 == !
 [.stretch]
-image::the-3-main-screens-in-Gephi.png[align="center", title="the 3 main screens in Gephi"]
+image::https://docs.google.com/drawings/d/1MVPuD8fYe8bEJJJ67heQjrMidA7vyizGc37p4y5LRH8/pub?w=960[align="center", title="the 3 main screens in Gephi"]
 == !
 
 
@@ -322,7 +322,7 @@ What we see here is the Overview.
 
 == !
 [.stretch]
-image::Filters-and-statistics-panels-in-Gephi.png[align="center", title="Filters and statistics panels in Gephi"]
+image::https://docs.google.com/drawings/d/1XwpvulXoyiK3nBbxFiCFisH6_pg9P9us9LnZJvzlDz4/pub?w=960[align="center", title="Filters and statistics panels in Gephi"]
 == !
 
 
@@ -338,7 +338,7 @@ In the Overview, the graph is shown at the center. Around it, several panels hel
 //ST: !
 == !
 [.stretch]
-image::Appearance-and-layout-panels-in-Gephi.png[align="center", title="Appearance and layout panels in Gephi"]
+image::https://docs.google.com/drawings/d/1J4wCFaXwIaRmiiG7t69s8HmhA0hnR0Sp0hwgOFquFdw/pub?w=1439&h=787[align="center", title="Appearance and layout panels in Gephi"]
 == !
 
 
@@ -353,7 +353,7 @@ image::Appearance-and-layout-panels-in-Gephi.png[align="center", title="Appearan
 //ST: !
 == !
 [.stretch]
-image::3-groups-of-icons.png[align="center", title="3 groups of icons"]
+image::https://docs.google.com/drawings/d/1IkRBs4doz5fZWovao-yJFBR9hg7RO_BtGJwhUF9yoJk/pub?w=1435&h=774[align="center", title="3 groups of icons"]
 == !
 
 
@@ -376,7 +376,7 @@ image::3-groups-of-icons.png[align="center", title="3 groups of icons"]
 
 == !
 [.stretch]
-image::showing-node-labels.png[align="center", title="showing node labels"]
+image::https://docs.google.com/drawings/d/1o-J7Uce1okDdIN_IgvZaH4MdGjn74_ChTlXo-nxS-w4/pub?w=960&h=720[align="center", title="showing node labels"]
 == !
 
 
@@ -390,7 +390,7 @@ image::showing-node-labels.png[align="center", title="showing node labels"]
 
 == !
 [.stretch]
-image::selecting-the-force-atlas-2-layout.png[align="center", title="selecting the force atlas 2 layout"]
+image::https://docs.google.com/drawings/d/1fD_AdsP3SqV5CENMDmMpt6ZLYOAgLsDDYxv2fJr7R6E/pub?w=960&h=720[align="center", title="selecting the force atlas 2 layout"]
 == !
 
 
@@ -399,7 +399,7 @@ image::selecting-the-force-atlas-2-layout.png[align="center", title="selecting t
 [[force-atlas-2-parameters]]
 == !
 [.stretch]
-image::changing-a-few-parameters-and-launching-the-layout.png[align="center", title="changing a few parameters and launching the layout"]
+image::https://docs.google.com/drawings/d/1TnbclWXKFJiYUOJTHAl2Fyh5j3KgxV5TyLGyN1Gnn7k/pub?w=960&h=720[align="center", title="changing a few parameters and launching the layout"]
 == !
 
 
@@ -408,7 +408,7 @@ image::changing-a-few-parameters-and-launching-the-layout.png[align="center", ti
 
 == !
 [.stretch]
-image::result-of-Force-Atlas-2-layout.png[align="center", title="result of Force Atlas 2 layout"]
+image::https://docs.google.com/drawings/d/1RkRn4Q8Ln-C1qJCiuBp2FN51GavaaLlm17QnVOO_av4/pub?w=960&h=720[align="center", title="result of Force Atlas 2 layout"]
 == !
 
 
@@ -431,7 +431,7 @@ Now, we will see how to make this property ("Gender") visible.
 
 == !
 [.stretch]
-image::Switching-the-view-to-the-data-laboratory.png[align="center",title="Switching the view to the data laboratory"]
+image::https://docs.google.com/drawings/d/1mDTOUanUkOa0ND8wn3tuwM54pqYXN6RApWkZTxSpEiI/pub?w=954&h=524[align="center",title="Switching the view to the data laboratory"]
 == !
 
 
@@ -439,7 +439,7 @@ image::Switching-the-view-to-the-data-laboratory.png[align="center",title="Switc
 
 == !
 [.stretch]
-image::We-see-there-is-a-Gender-attribute-for-each-character..png[align="center",title="We see there is a Gender attribute for each character."]
+image::https://docs.google.com/drawings/d/1wIubWP6KX6oaz3pd7SQYziWR_2hK2KIhH0gAFwn3rEk/pub?w=758&h=431[align="center",title="We see there is a Gender attribute for each character."]
 == !
 
 
@@ -449,7 +449,7 @@ We will color the nodes based on their gender. To do that, we select `Gender` in
 
 == !
 [.stretch]
-image::Coloring-nodes-according-to-their-gender.png[align="center",title="Coloring nodes according to their gender"]
+image::https://docs.google.com/drawings/d/1VdIaYCfuMAF5Tk3EaCak-Z0M9GsIuPpjxc6RWi0FELs/pub?w=758&h=431[align="center",title="Coloring nodes according to their gender"]
 == !
 
 
@@ -510,7 +510,7 @@ Open the bottom panel of Gephi by clicking on tiny arrow head (1). Then select "
 //ST: !
 == !
 [.stretch]
-image::Adjusting-label-size.png[align="center",title="Adjusting label size"]
+image::https://docs.google.com/drawings/d/13dOYkyzY4dKMIDrSj59NFF5GftZD55eRC26HZ8jn2RM/pub?w=758&h=431[align="center",title="Adjusting label size"]
 == !
 
 
@@ -520,7 +520,7 @@ image::Adjusting-label-size.png[align="center",title="Adjusting label size"]
 == !
 
 [.stretch]
-image::Adjusting-edge-thickness.png[align="center",title="Adjusting edge thickness"]
+image::https://docs.google.com/drawings/d/13Sdd6ss52TgXoG1i4CkaGw3aHap-WWDvpJjosQJSyls/pub?w=758&h=431[align="center",title="Adjusting edge thickness"]
 == !
 
 
@@ -562,7 +562,7 @@ Gephi computes it for you. Find "Network diameter" in the statistics panel and c
 
 == !
 [.stretch]
-image::Computing-betweenness-centrality.png[align="center",title="Computing betweenness centrality"]
+image::https://docs.google.com/drawings/d/1T66-VP25_nvxCvmnpQWUraCYT3Vxi0oW3f-TBZDtYPM/pub?w=758&h=415[align="center",title="Computing betweenness centrality"]
 == !
 
 
@@ -571,7 +571,7 @@ This will open a window with parameters (explained in a more advanced tutorials)
 
 == !
 [.stretch]
-image::Parameters-for-the-computation-of-betweenness-centrality.png[align="center",title="Parameters for the computation of betweenness centrality"]
+image::https://docs.google.com/drawings/d/1OmI-MugkNhDR67BR0ns5injN1FoVhm1IjXXzI5Qv4NQ/pub?w=411&h=232[align="center",title="Parameters for the computation of betweenness centrality"]
 == !
 
 
@@ -581,7 +581,7 @@ A report window opens (also explained in a other tutorials). Close it.
 
 == !
 [.stretch]
-image::Report-after-the-computation-of-betweenness-centrality.png[align="center",title="Report after the computation of betweenness centrality"]
+image::https://docs.google.com/drawings/d/1_eS17piFaVKG4cXL1TAxIh4sSL5ubg7_-6AziUrjJl8/pub?w=300[align="center",title="Report after the computation of betweenness centrality"]
 == !
 
 
@@ -602,7 +602,7 @@ First, let's switch to the data laboratory to see how Gephi stored the "betweenn
 
 == !
 [.stretch]
-image::Switching-the-view-to-the-data-laboratory.png[align="center",title="Switching the view to the data laboratory"]
+image::https://docs.google.com/drawings/d/1mDTOUanUkOa0ND8wn3tuwM54pqYXN6RApWkZTxSpEiI/pub?w=954&h=524[align="center",title="Switching the view to the data laboratory"]
 == !
 
 
@@ -612,7 +612,7 @@ When we ran "Network Diameter" in the statistics panel, Gephi has actually compu
 
 == !
 [.stretch]
-image::Different-centrality-measures-visible-in-the-data-laboratory.png[align="center",title="Different centrality measures visible in the data laboratory"]
+image::https://docs.google.com/drawings/d/1anoYqTntqA4ZYuS035GQQEDwPwbIr_kk1oQ6wRVfkPM/pub?w=954&h=525[align="center",title="Different centrality measures visible in the data laboratory"]
 == !
 
 
@@ -623,7 +623,7 @@ CAUTION: make sure you select the correct options
 
 == !
 [.stretch]
-image::Ranking-node-sizes-by-centrality.png[align="center",title="Ranking node sizes by centrality"]
+image::https://docs.google.com/drawings/d/13XItrvTkrJSQ6MzQTLe7ZugrpxfBJMBi0qzsVbH_JeQ/pub?w=954&h=525[align="center",title="Ranking node sizes by centrality"]
 == !
 
 
@@ -631,7 +631,7 @@ image::Ranking-node-sizes-by-centrality.png[align="center",title="Ranking node s
 
 == !
 [.stretch]
-image::Selecting-the-minimum-and-maximum-sizes-of-nodes.png[align="center",title="Selecting the minimum and maximum sizes of nodes"]
+image::https://docs.google.com/drawings/d/1EeA-5wfTuHKc8jQL49afXZb-LQl1Rtss49mE11U8Ako/pub?w=954&h=525[align="center",title="Selecting the minimum and maximum sizes of nodes"]
 == !
 
 
@@ -647,7 +647,7 @@ image::ranking-centrality-miserables-3--en.png[align="center",title="Result of t
 
 == !
 [.stretch]
-image::Resizing-labels-to-reflect-their-node's-size.png[align="center",title="Resizing labels to reflect their node's size"]
+image::https://docs.google.com/drawings/d/1G9s36WY2PDpYpUxl0qYgA_ccqLpAoOd6kap8X8QSKog/pub?w=954&h=525[align="center",title="Resizing labels to reflect their node's size"]
 == !
 
 
@@ -669,7 +669,7 @@ image::result-label-resizing-en.png[align="center",title="Result of the label re
 
 == !
 [.stretch]
-image::Open-the-configuration-panel-for-screenshots.png[align="center",title="Open the configuration panel for screenshots"]
+image::https://docs.google.com/drawings/d/13nw3KJL1vHc2zhFr3A5WB3za6GFrzpxQ8kZjujNLIqM/pub?w=954&h=525[align="center",title="Open the configuration panel for screenshots"]
 == !
 
 
@@ -690,7 +690,7 @@ Let's switch to the preview panel:
 
 == !
 [.stretch]
-image::Switching-to-the-preview-panel.png[align="center",title="Switching to the preview panel"]
+image::https://docs.google.com/drawings/d/1j0dbw5wwOccDoUEFk8XBsCaKi6Ms9bZlqqOM1MgdDog/pub?w=954&h=525[align="center",title="Switching to the preview panel"]
 == !
 
 
@@ -703,7 +703,7 @@ CAUTION: contrary to the Overview panel, here you need to hit the "refresh" butt
 
 == !
 [.stretch]
-image::Updating-the-parameters.png[align="center",title="Updating the parameters"]
+image::https://docs.google.com/drawings/d/1gfeX6T1YzVEPFKgrxRmcL47EbeFnnGTmiBRw35V6VCM/pub?w=954&h=525[align="center",title="Updating the parameters"]
 == !
 
 
@@ -712,7 +712,7 @@ Here I change just 2 parameters: `Show Labels` and  `Font` (which I reduce to si
 
 == !
 [.stretch]
-image::Result-of-preview.png[align="center",title="Result of preview"]
+image::https://docs.google.com/drawings/d/1Kz34ITT6BecVkgy7S50JO2nX-hywCWnC_kMpJ21TkXo/pub?w=954&h=525[align="center",title="Result of preview"]
 == !
 
 
@@ -721,7 +721,7 @@ Export: just click on the button and select the file format you prefer
 
 == !
 [.stretch]
-image::Export-button.png[align="center",title="Export button"]
+image::https://docs.google.com/drawings/d/1ATho4fb-YqCAPHw4sLa65le7C0kOtNWk7YOYdjd98RA/pub?w=954&h=525[align="center",title="Export button"]
 == !
 
 
@@ -808,7 +808,7 @@ We can switch to the data laboratory to see the underlying data:
 
 == !
 [.stretch]
-image::Switching-to-the-data-laboratory.png[align="center",title="Switching to the data laboratory"]
+image::https://docs.google.com/drawings/d/15SISc0_m4w99GUxZcbrln1183dRqBYNK0EpG2OOBbVU/pub?w=954&h=524[align="center",title="Switching to the data laboratory"]
 == !
 
 
@@ -818,7 +818,7 @@ We see that the nodes of the network have many attributes. In particular, each h
 
 == !
 [.stretch]
-image::Nodes-attributes..png[align="center",title="Nodes attributes."]
+image::https://docs.google.com/drawings/d/1O0NSM6ijhib5pKxCHKmSjffp3m7FuYaChLSCm35xChU/pub?w=954&h=525[align="center",title="Nodes attributes."]
 == !
 
 
@@ -827,7 +827,7 @@ This is the list of edges (relations) in the network. Notice that they have a "w
 
 == !
 [.stretch]
-image::Edges-attributes..png[align="center",title="Edges attributes".]
+image::https://docs.google.com/drawings/d/1y1SfMHZ3_4lOlI2t6WBC170T9HpVLXb_UYVLnVr_BWY/pub?w=954&h=524[align="center",title="Edges attributes".]
 == !
 
 
@@ -840,7 +840,7 @@ In the overview, make sure the Filter panel is displayed:
 
 == !
 [.stretch]
-image::Making-the-Filter-panel-visible..png[align="center",title="Making the Filter panel visible."]
+image::https://docs.google.com/drawings/d/1wyvNAmiHtyB1oegpKHAGvL8ZERChASzU-mWSQBWCeKE/pub?w=954&h=524[align="center",title="Making the Filter panel visible."]
 == !
 
 
@@ -850,7 +850,7 @@ How the Filter panel works:
 
 == !
 [.stretch]
-image::Workflow-of-filters.png[align="center",title="Workflow of filters", size="stretch"]
+image::https://docs.google.com/drawings/d/1paf2P-xNCcTlW5CMN8FicrRcoF3sTKHCLrFbksVhCC4/pub?w=749&h=790[align="center",title="Workflow of filters", size="stretch"]
 == !
 
 
@@ -898,7 +898,7 @@ Goal: Keeping on screen only the female characters which have a tie (an edge, a 
 
 == !
 [.stretch]
-image::Filter-on-the-Gender-attribute.png[align="center",title="Filter on the Gender attribute"]
+image::https://docs.google.com/drawings/d/1TixDBp9-RQTYHioDEV4gbo0BN6cWWzKt8fkXl9So3Ds/pub?w=886&h=462[align="center",title="Filter on the Gender attribute"]
 == !
 
 
@@ -906,7 +906,7 @@ image::Filter-on-the-Gender-attribute.png[align="center",title="Filter on the Ge
 
 == !
 [.stretch]
-image::Filter-on-edge-weight.png[align="center",title="Filter on edge weight"]
+image::https://docs.google.com/drawings/d/1EtqSByLSNOrGCW3nvlrTW7Oci8IBYQP2koZB1v4XTu0/pub?w=1015&h=695[align="center",title="Filter on edge weight"]
 == !
 
 
@@ -1078,7 +1078,7 @@ Let's switch to the data laboratory and add this attribute:
 
 == !
 [.stretch]
-image::Adding-a-column-for-Names.png[align="center",title="Adding a column for Names"]
+image::https://docs.google.com/drawings/d/1j3B2ahLGqEYBGDqDyBcVOj8-Xp1oJGER8AnIudCvuZM/pub?w=1136&h=646[align="center",title="Adding a column for Names"]
 == !
 
 
@@ -1087,7 +1087,7 @@ image::Adding-a-column-for-Names.png[align="center",title="Adding a column for N
 
 == !
 [.stretch]
-image::Copying-to-this-new-column.png[align="center",title="Copying to this new column"]
+image::https://docs.google.com/drawings/d/1zYQs7U_Vlf8KfZcI4Btr0fo1JgQcrLjrkx5a8Jt_eV4/pub?w=1136&h=646[align="center",title="Copying to this new column"]
 == !
 
 
@@ -1096,7 +1096,7 @@ We now have an attribute called "Name" that we can find in the Filters:
 
 == !
 [.stretch]
-image::New-filter-available.png[align="center",title="New filter available"]
+image::https://docs.google.com/drawings/d/17zSqYMEEe5K34mWssyWpPRbRffX42U5eHjY5vvtfMuc/pub?w=1031&h=627[align="center",title="New filter available"]
 == !
 
 
@@ -1311,7 +1311,7 @@ To import this file in Gephi, go to `File->Import Spreadsheet`. Then in the wind
 
 == !
 [.stretch]
-image::Importing-nodes-with-labels-and-their-relations.png[align="center",title="Importing nodes with labels and their relations"]
+image::https://docs.google.com/drawings/d/10G-ww5yaxlUme5h1wAcfK9AdqY8dNnurfFYZotljhPs/pub?w=644&h=520[align="center",title="Importing nodes with labels and their relations"]
 == !
 
 
@@ -1320,7 +1320,7 @@ In this window, make sure the box "Create missing nodes" is checked:
 
 == !
 [.stretch]
-image::Second-screen.png[align="center",title="Second screen"]
+image::https://docs.google.com/drawings/d/1CnsxD6sjfXokhHxaZR6P_jJ2mNEtKBiTh_iB4EA3sjE/pub?w=644&h=520[align="center",title="Second screen"]
 == !
 
 
@@ -1450,7 +1450,7 @@ Let's import the list of nodes first. `File -> Import Spreadsheet`
 
 == !
 [.stretch]
-image::Importing-a-list-of-nodes-with-attributes.png[align="center",title="Importing a list of nodes with attributes"]
+image::https://docs.google.com/drawings/d/15GXuO-ucoucMw4OvyckAHrg5UDThMO0hkFB924yFtm0/pub?w=951&h=537[align="center",title="Importing a list of nodes with attributes"]
 == !
 
 
@@ -1459,7 +1459,7 @@ in the next screen, we must be careful with a couple of things:
 
 == !
 [.stretch]
-image::The-attributes-of-the-nodes.png[align="center",title="The attributes of the nodes"]
+image::https://docs.google.com/drawings/d/1K2WPeei2RYxIB8neTeXB9xWTqY8egvkVh80nj4FEIWg/pub?w=653&h=531[align="center",title="The attributes of the nodes"]
 == !
 
 
@@ -1468,7 +1468,7 @@ Then we can import the file with the list of relations. `File -> Import Spreadsh
 
 == !
 [.stretch]
-image::Importing-a-list-of-edges-with-attributes.png[align="center",title="Importing a list of edges with attributes"]
+image::https://docs.google.com/drawings/d/1KSE9pCnJ61Wvqf7moB_VLUMOTQVOTqRqwUjOHac7_SE/pub?w=595&h=375[align="center",title="Importing a list of edges with attributes"]
 == !
 
 
@@ -1476,7 +1476,7 @@ image::Importing-a-list-of-edges-with-attributes.png[align="center",title="Impor
 
 == !
 [.stretch]
-image::The-attributes-of-the-edges.png[align="center",title="The attributes of the edges"]
+image::https://docs.google.com/drawings/d/1PTWwhnWkb-blXN-Yx-wQuYoohqTZejNPnADNdfcG-_k/pub?w=506&h=356[align="center",title="The attributes of the edges"]
 == !
 
 
@@ -1935,7 +1935,7 @@ Several steps will make this network intelligible
 
 == !
 [.stretch]
-image::showing-node-labels.png[align="center", title="showing node labels"]
+image::https://docs.google.com/drawings/d/1o-J7Uce1okDdIN_IgvZaH4MdGjn74_ChTlXo-nxS-w4/pub?w=960&h=720[align="center", title="showing node labels"]
 == !
 
 
@@ -1946,7 +1946,7 @@ image::showing-node-labels.png[align="center", title="showing node labels"]
 
 == !
 [.stretch]
-image::hiding-edges.png[align="center", title="hiding edges"]
+image::https://docs.google.com/drawings/d/1EZuk_b2plau6HzFNkkB64Mep0I0xq5l5sJhnIsOpSMM/pub?w=1440&h=1080[align="center", title="hiding edges"]
 == !
 
 
@@ -1987,7 +1987,7 @@ image::semantic-coloring-communities-1-en.png[align="center", title="Coloring no
 
 == !
 [.stretch]
-image::Coloring-nodes---second-step.png[align="center", title="Coloring nodes - second step"]
+image::https://docs.google.com/drawings/d/1fAyeO4K9cv-HV4AM0YrL8yQXw8hKxqWX-1K1GlwogN0/pub?w=1440&h=1080[align="center", title="Coloring nodes - second step"]
 == !
 
 
@@ -2121,7 +2121,7 @@ image::en/cooccurrences-computer/gephi-result-1-en.png[align="center", title="Re
 
 == !
 [.stretch]
-image::Choose-the-menu-Tools-then-Plugins.png[align="center", title="Choose the menu Tools then Plugins"]
+image::https://docs.google.com/drawings/d/1dgcXEC-nrQQtLvEtSLCrzKXfAdi2Hy1jCslyf2ky20A/pub?w=956&h=530[align="center", title="Choose the menu Tools then Plugins"]
 == !
 
 
@@ -2129,7 +2129,7 @@ image::Choose-the-menu-Tools-then-Plugins.png[align="center", title="Choose the 
 
 == !
 [.stretch]
-image::Click-on-the-tab-Available-Plugins.png[align="center", title="Click on the tab Available Plugins"]
+image::https://docs.google.com/drawings/d/1u4LqlnQby5DQVmq4csZ6f7sq_Z33F33UqtBZ43eh4pc/pub?w=645&h=406[align="center", title="Click on the tab Available Plugins"]
 == !
 
 
@@ -2137,7 +2137,7 @@ image::Click-on-the-tab-Available-Plugins.png[align="center", title="Click on th
 
 == !
 [.stretch]
-image::Install-the-plugin-and-restart-Gephi.png[align="center", title="Install the plugin and restart Gephi"]
+image::https://docs.google.com/drawings/d/1dcZH0jq2W2CzEIv8-XYkM3JjPab2LCbAmYhFU4tXXso/pub?w=833&h=543[align="center", title="Install the plugin and restart Gephi"]
 == !
 
 
@@ -2148,7 +2148,7 @@ image::Install-the-plugin-and-restart-Gephi.png[align="center", title="Install t
 
 == !
 [.stretch]
-image::Open-the-plugin-via-the-menu-File---Import.png[align="center", title="Open the plugin via the menu File - Import"]
+image::https://docs.google.com/drawings/d/1fAwFegXKYpBjfcNYmlrTsoadheVfPEqAg8kEeoEl1Ag/pub?w=1423&h=851[align="center", title="Open the plugin via the menu File - Import"]
 == !
 
 
@@ -2164,7 +2164,7 @@ image::Open-the-plugin-via-the-menu-File---Import.png[align="center", title="Ope
 
 == !
 [.stretch]
-image::Select-a-file.png[align="center", title="Select a file"]
+image::https://docs.google.com/drawings/d/1hO9PddUbSc_XUyZFmaX1Zs6-AoX-yE9npZZjWdEo8KU/pub?w=1321&h=907[align="center", title="Select a file"]
 == !
 
 
@@ -2259,7 +2259,7 @@ In our example, we have used commas: the lists of products purchased are comma-s
 
 == !
 [.stretch]
-image::commas-shown-in-red.png[align="center", title="commas shown in red"]
+image::https://docs.google.com/drawings/d/1tRw85HuODUSCD7e48UX_F7fUB5XWGJ7hVzNFnr6oWQI/pub?w=656&h=377[align="center", title="commas shown in red"]
 == !
 
 
@@ -2874,7 +2874,7 @@ This plugin enables you to:
 
 == !
 [.stretch]
-image::An-Excel-file.png[align="center", title="An Excel file"]
+image::https://docs.google.com/drawings/d/1TkShesrj6PsObLdj3fCMLScxTXJgopxTEICPv8CPd4Y/pub?w=840&h=887[align="center", title="An Excel file"]
 == !
 
 
@@ -2898,7 +2898,7 @@ image::en/similarity-computer/result.png[align="center", title="Resulting networ
 
 == !
 [.stretch]
-image::Choose-the-menu-Tools-then-Plugins.png[align="center", title="Choose the menu Tools then Plugins"]
+image::https://docs.google.com/drawings/d/1dgcXEC-nrQQtLvEtSLCrzKXfAdi2Hy1jCslyf2ky20A/pub?w=956&h=530[align="center", title="Choose the menu Tools then Plugins"]
 == !
 
 
@@ -2906,7 +2906,7 @@ image::Choose-the-menu-Tools-then-Plugins.png[align="center", title="Choose the 
 
 == !
 [.stretch]
-image::Click-on-the-tab-Available-Plugins.png[align="center", title="Click on the tab Available Plugins"]
+image::https://docs.google.com/drawings/d/1u4LqlnQby5DQVmq4csZ6f7sq_Z33F33UqtBZ43eh4pc/pub?w=645&h=406[align="center", title="Click on the tab Available Plugins"]
 == !
 
 
@@ -2914,7 +2914,7 @@ image::Click-on-the-tab-Available-Plugins.png[align="center", title="Click on th
 
 == !
 [.stretch]
-image::Install-the-plugin-then-restart-Gephi.png[align="center", title="Install the plugin then restart Gephi"]
+image::https://docs.google.com/drawings/d/18hovYg9G5ek39rILj-aRlEpaWnN6doQeg15iX6lU0aY/pub?w=833&h=543[align="center", title="Install the plugin then restart Gephi"]
 == !
 
 
@@ -2925,7 +2925,7 @@ image::Install-the-plugin-then-restart-Gephi.png[align="center", title="Install 
 
 == !
 [.stretch]
-image::Open-the-plugin-via-the-menu-File---Import.png[align="center", title="Open the plugin via the menu File - Import"]
+image::https://docs.google.com/drawings/d/1eu5O9KiGDAXJSkQuXHYq37T8vSvlZCPMgjwpa4C4Bh4/pub?w=1423&h=851[align="center", title="Open the plugin via the menu File - Import"]
 == !
 
 
@@ -2941,7 +2941,7 @@ image::Open-the-plugin-via-the-menu-File---Import.png[align="center", title="Ope
 
 == !
 [.stretch]
-image::Select-a-file.png[align="center", title="Select a file"]
+image::https://docs.google.com/drawings/d/1T1MfrbkD-0JXU0gJittis1SzC6oTS3TzN2NqwkKtRVE/pub?w=1412&h=920[align="center", title="Select a file"]
 == !
 
 
@@ -3098,7 +3098,7 @@ Let's go!
 
 == !
 [.stretch]
-image::Choose-the-menu-Tools-then-Plugins.png[align="center", title="Choose the menu Tools then Plugins"]
+image::https://docs.google.com/drawings/d/1dgcXEC-nrQQtLvEtSLCrzKXfAdi2Hy1jCslyf2ky20A/pub?w=956&h=530[align="center", title="Choose the menu Tools then Plugins"]
 == !
 
 
@@ -3107,7 +3107,7 @@ image::Choose-the-menu-Tools-then-Plugins.png[align="center", title="Choose the 
 
 == !
 [.stretch]
-image::Click-on-the-tab-Available-Plugins.png[align="center", title="Click on the tab Available Plugins"]
+image::https://docs.google.com/drawings/d/1u4LqlnQby5DQVmq4csZ6f7sq_Z33F33UqtBZ43eh4pc/pub?w=645&h=406[align="center", title="Click on the tab Available Plugins"]
 == !
 
 
@@ -3115,7 +3115,7 @@ image::Click-on-the-tab-Available-Plugins.png[align="center", title="Click on th
 
 == !
 [.stretch]
-image::Install-the-plugin-then-restart-Gephi.png[align="center", title="Install the plugin then restart Gephi"]
+image::https://docs.google.com/drawings/d/1LxGNZYaEv__QretB2-x7hX-3Dap672igCDZhFRCbm8k/pub?w=831&h=521[align="center", title="Install the plugin then restart Gephi"]
 == !
 
 
@@ -3130,7 +3130,7 @@ image::Install-the-plugin-then-restart-Gephi.png[align="center", title="Install 
 
 == !
 [.stretch]
-image::Open-a-new-project-in-Gephi.png[align="center", title="Open a new project in Gephi"]
+image::https://docs.google.com/drawings/d/18_sJyNUoPuOTEqoi7OyIxXgwQXwZEkwBXjljrzvjV1o/pub?w=712&h=403[align="center", title="Open a new project in Gephi"]
 == !
 
 
@@ -3138,7 +3138,7 @@ image::Open-a-new-project-in-Gephi.png[align="center", title="Open a new project
 
 == !
 [.stretch]
-image::Display-the-plugin-in-Gephi.png[align="center", title="Display the plugin in Gephi"]
+image::https://docs.google.com/drawings/d/1pGCffBxHnCueM-G70m0WwppWgyWRrFbOPvx8grzxi78/pub?w=958&h=526[align="center", title="Display the plugin in Gephi"]
 == !
 
 
@@ -3149,7 +3149,7 @@ We need now to connect to a Twitter account. If you already have a Twitter accou
 
 == !
 [.stretch]
-image::Creating-a-Twitter-account.png[align="center", title="Creating a Twitter account"]
+image::https://docs.google.com/drawings/d/1uY_OxQx5yqKorpv16MgKLCZK75qGhoL9NZFgyYJFGI0/pub?w=958&h=526[align="center", title="Creating a Twitter account"]
 == !
 
 
@@ -3157,7 +3157,7 @@ image::Creating-a-Twitter-account.png[align="center", title="Creating a Twitter 
 
 == !
 [.stretch]
-image::Confirmation-of-the-sign-up.png[align="center", title="Confirmation of the sign-up"]
+image::https://docs.google.com/drawings/d/1BKT2yXA2imVogI5epsHL3_ll9EGKdb-JhbSLKooXqbk/pub?w=958&h=526[align="center", title="Confirmation of the sign-up"]
 == !
 
 
@@ -3171,7 +3171,7 @@ You have received an email by Twitter about the sign up. At some point (but now 
 
 == !
 [.stretch]
-image::Enter-the-verification-code-you-received-by-sms.png[align="center", title="Enter the verification code you received by sms"]
+image::https://docs.google.com/drawings/d/1e85YzmyIqxYR6BwMmT1tOn-dEUP83c_gJ2MsuDRdsOE/pub?w=940&h=492[align="center", title="Enter the verification code you received by sms"]
 == !
 
 
@@ -3180,7 +3180,7 @@ image::Enter-the-verification-code-you-received-by-sms.png[align="center", title
 
 == !
 [.stretch]
-image::Choose-a-username.png[align="center", title="Choose a username"]
+image::https://docs.google.com/drawings/d/1tGnfVleoGqSVNrTys-Ww15Gs7uDn69sLsYR25Tf5IS0/pub?w=940&h=492[align="center", title="Choose a username"]
 == !
 
 
@@ -3203,7 +3203,7 @@ Go to *https://apps.twiter.com[https://apps.twiter.com]*:
 
 == !
 [.stretch]
-image::Create-a-new-app.png[align="center", title="Create a new app"]
+image::https://docs.google.com/drawings/d/1OBhTH2Dxlftw-r_aXfDWqnj-OdD2-zpuD54HZpazXM0/pub?w=940&h=492[align="center", title="Create a new app"]
 == !
 
 
@@ -3211,7 +3211,7 @@ image::Create-a-new-app.png[align="center", title="Create a new app"]
 
 == !
 [.stretch]
-image::Fill-in-the-fields.png[align="center", title="Fill in the fields"]
+image::https://docs.google.com/drawings/d/1v7XRvnC_qq0-_JW38vtnIjddLfJxrpA-U-3x2sVExl0/pub?w=940&h=492[align="center", title="Fill in the fields"]
 == !
 
 
@@ -3223,7 +3223,7 @@ INFO: Almost there!!
 
 == !
 [.stretch]
-image::Click-on-Keys-and-Access-Tokens.png[align="center", title="Click on Keys and Access Tokens"]
+image::https://docs.google.com/drawings/d/1fGL8WT9Jm11K1qVxaldFdn0n742i4jGqYsgXTFaVdQ0/pub?w=940&h=492[align="center", title="Click on Keys and Access Tokens"]
 == !
 
 
@@ -3231,7 +3231,7 @@ image::Click-on-Keys-and-Access-Tokens.png[align="center", title="Click on Keys 
 
 == !
 [.stretch]
-image::Click-on-Create-my-access-token.png[align="center", title="Click on Create my access token"]
+image::https://docs.google.com/drawings/d/1wdVoTQnXBKNS0mHo4vAADcQkaWTj84e56954j-XnKLQ/pub?w=940&h=492[align="center", title="Click on Create my access token"]
 == !
 
 
@@ -3239,7 +3239,7 @@ image::Click-on-Create-my-access-token.png[align="center", title="Click on Creat
 
 == !
 [.stretch]
-image::Copy-paste-these-codes-into-Gephi.png[align="center", title="Copy paste these codes into Gephi"]
+image::https://docs.google.com/drawings/d/1f_ntuN_RFRuCg28CSZLcGUl_8fvoWMuPbzr94sLb504/pub?w=940&h=492[align="center", title="Copy paste these codes into Gephi"]
 == !
 
 
@@ -3247,7 +3247,7 @@ image::Copy-paste-these-codes-into-Gephi.png[align="center", title="Copy paste t
 
 == !
 [.stretch]
-image::Where-to-copy-paste-the-codes-in-Gephi.png[align="center", title="Where to copy paste the codes in Gephi"]
+image::https://docs.google.com/drawings/d/1RtPAK5Kn9nLw-lKpkh-M0XYY1OvwtH8hXK8Z8KVEH4o/pub?w=940&h=492[align="center", title="Where to copy paste the codes in Gephi"]
 == !
 
 
@@ -3296,7 +3296,7 @@ A ** Network Logic ** means: what should be done with an incoming tweet? How to 
 
 == !
 [.stretch]
-image::Selection-of-the-network-logic.png[align="center",title="Selection of the network logic"]
+image::https://docs.google.com/drawings/d/17P99PQy30e6ReMrS1Yp29Sejvc7Fq7H8jQknw69t0p8/pub?w=530&h=576[align="center",title="Selection of the network logic"]
 == !
 
 
@@ -3315,7 +3315,7 @@ In the following, we use the network logic "User Network":
 
 == !
 [.stretch]
-image::Adding-terms-and-launching-the-collection-of-tweets.png[align="center", title="Adding terms and launching the collection of tweets"]
+image::https://docs.google.com/drawings/d/1_iLoyKo0FeDrLLYDks5nL48duRUb2QvJ7Ue4NsPYeZw/pub?w=561&h=308[align="center", title="Adding terms and launching the collection of tweets"]
 == !
 
 
@@ -3346,7 +3346,7 @@ Just run Force Atlas 2 in the "Layout" panel. This will not interrupt the collec
 
 == !
 [.stretch]
-image::Running-the-Force-Atlas-layout-while-the-tweets-are-arriving.png[align="center", title="Running the Force Atlas layout while the tweets are arriving"]
+image::https://docs.google.com/drawings/d/1fD_AdsP3SqV5CENMDmMpt6ZLYOAgLsDDYxv2fJr7R6E/pub?w=960&h=540[align="center", title="Running the Force Atlas layout while the tweets are arriving"]
 == !
 
 
@@ -3355,7 +3355,7 @@ Shift to the `data laboratory` to view the data collected, in a spreadsheet form
 
 == !
 [.stretch]
-image::Switching-to-the-data-laboratory-view.png[align="center", title="Switching to the data laboratory view"]
+image::https://docs.google.com/drawings/d/1mDTOUanUkOa0ND8wn3tuwM54pqYXN6RApWkZTxSpEiI/pub?w=954&h=524[align="center", title="Switching to the data laboratory view"]
 == !
 
 
@@ -3485,7 +3485,7 @@ NOTE:: if you already have projects opened in NetBeans, the menu Team -> Git -> 
 
 == !
 [.stretch]
-image::Cloning-the-gephi-source.png[align="center", title="Cloning the gephi source"]
+image::https://docs.google.com/drawings/d/1sdB37hWIug2nzacQxsxqVOmzK_bVF7zpn_2rkgmEWSU/pub?w=1262&h=999[align="center", title="Cloning the gephi source"]
 == !
 
 
@@ -3570,7 +3570,7 @@ This opens a new project on the left of NetBeans, called "gephi-app". This is a 
 
 == !
 [.stretch]
-image::Launching-Gephi.png[align="center", title="Launching Gephi"]
+image::https://docs.google.com/drawings/d/1VS_oa0Fp9d-hygBJESrshVGfd5H9eSx1C50eZNSIUu0/pub?w=986&h=840[align="center", title="Launching Gephi"]
 == !
 
 
@@ -3633,7 +3633,7 @@ Open the package `org.gephi.visualization.opengl`, and inside open `Compatibilit
 
 == !
 [.stretch]
-image::opening-CompatibilityEngine.java.png[align="center", title="opening CompatibilityEngine.java"]
+image::https://docs.google.com/drawings/d/1XYIZ2iQPOPjhshbh2CGjMv03teW0QCVfdoqy0urn1wI/pub?w=976&h=652[align="center", title="opening CompatibilityEngine.java"]
 == !
 
 
@@ -3777,7 +3777,7 @@ We can switch to the data laboratory to see the underlying data:
 
 == !
 [.stretch]
-image::Switching-to-the-data-laboratory.png[align="center",title="Switching to the data laboratory"]
+image::https://docs.google.com/drawings/d/15SISc0_m4w99GUxZcbrln1183dRqBYNK0EpG2OOBbVU/pub?w=954&h=524[align="center",title="Switching to the data laboratory"]
 == !
 
 
@@ -3786,7 +3786,7 @@ image::Switching-to-the-data-laboratory.png[align="center",title="Switching to t
 
 == !
 [.stretch]
-image::Zoom-on-three-attributes-representing-time.png[align="center",title="Zoom on three attributes representing time"]
+image::https://docs.google.com/drawings/d/1kDpiarI7R8Z8a7nEsVlD34lCOYPxLAUJqPmsm08IwR8/pub?w=1439&h=754[align="center",title="Zoom on three attributes representing time"]
 == !
 
 
@@ -3815,7 +3815,7 @@ We will present these 3 possibilities.
 
 == !
 [.stretch]
-image::Merge-columns.png[align="center",title="Merge columns"]
+image::https://docs.google.com/drawings/d/1bCWm0LPCJ-DWF3oR7szSA_fsd_ExMjJBjqLUBIzsyUs/pub?w=1439&h=754[align="center",title="Merge columns"]
 == !
 
 
@@ -3823,7 +3823,7 @@ image::Merge-columns.png[align="center",title="Merge columns"]
 
 == !
 [.stretch]
-image::Set-up-the-parameters---1.png[align="center",title="Set up the parameters - 1"]
+image::https://docs.google.com/drawings/d/1O-C4kdb2gW8dABzUXxPDTzn0afr0YEqujGfRtVaSO80/pub?w=1438&h=657[align="center",title="Set up the parameters - 1"]
 == !
 
 
@@ -3831,7 +3831,7 @@ image::Set-up-the-parameters---1.png[align="center",title="Set up the parameters
 
 == !
 [.stretch]
-image::Result.png[align="center",title="Result"]
+image::https://docs.google.com/drawings/d/1GsZ9WLLSCV7yddr9PEjGQhPLBb_nMC_g-4-zs-7jus4/pub?w=1431&h=847[align="center",title="Result"]
 == !
 
 
@@ -3905,7 +3905,7 @@ We create the networks in this tutorial to provide the most simple and clear cas
 
 == !
 [.stretch]
-image::Open-a-new-project.png[align="center", title="Open a new project"]
+image::https://docs.google.com/drawings/d/1rmxB95Ew8TxaoMRERnhhaSJTT3yuhLc6VEdBRLduAag/pub?w=926&h=534[align="center", title="Open a new project"]
 == !
 
 
@@ -3919,7 +3919,7 @@ We can use a simple click-and-point tool to create a network:
 
 == !
 [.stretch]
-image::Icon-for-node-creation.png[align="center", title="Icon for node creation"]
+image::https://docs.google.com/drawings/d/1qg4oSWoP9kfH75ucPquEz5oADG50729keLngKZxs0-o/pub?w=926&h=534[align="center", title="Icon for node creation"]
 == !
 
 
@@ -3927,7 +3927,7 @@ image::Icon-for-node-creation.png[align="center", title="Icon for node creation"
 
 == !
 [.stretch]
-image::A-few-nodes-have-been-created.png[align="center", title="A few nodes have been created"]
+image::https://docs.google.com/drawings/d/14Lyj2kYXbnCqQpAJW2OWtJnf88KVKyJtzmxaPNTWTDc/pub?w=639&h=533[align="center", title="A few nodes have been created"]
 == !
 
 
@@ -3940,7 +3940,7 @@ Export the network as a file and call it "network A":
 
 == !
 [.stretch]
-image::Exporting-the-network.png[align="center", title="Exporting the network"]
+image::https://docs.google.com/drawings/d/1683F5TX0MYbrNofycNIDq3TM6tcdeqQhMydnb-nrnoQ/pub?w=654&h=296[align="center", title="Exporting the network"]
 == !
 
 
@@ -3948,7 +3948,7 @@ image::Exporting-the-network.png[align="center", title="Exporting the network"]
 
 == !
 [.stretch]
-image::Choosing-the-gexf-file-format.png[align="center", title="Choosing the gexf file format"]
+image::https://docs.google.com/drawings/d/1WiD3tIgNY13pJMnqkeyc9wECX-eSlwlwJ4fZy7fX0pM/pub?w=682&h=314[align="center", title="Choosing the gexf file format"]
 == !
 
 
@@ -3968,7 +3968,7 @@ Now, click on the "Edge pencil", just below the "Node pencil we have used (caref
 
 == !
 [.stretch]
-image::Choosing-the-gexf-file-format.png[align="center", title="Choosing the gexf file format"]
+image::https://docs.google.com/drawings/d/1N5ouRs4GXZcUG9NKPrfc9XP-BsT6uPWYYgp__RCHO14/pub?w=926&h=534[align="center", title="Choosing the gexf file format"]
 == !
 
 
@@ -3996,7 +3996,7 @@ From your computer, open network A.gexf with a text editor (don't use Microsoft 
 //ST: !
 == !
 [.stretch]
-image::The-network-file-opened.png[align="center", title="The network file opened"]
+image::https://docs.google.com/drawings/d/1UFJT918n8SUgWUD2KoEVCc6k2-G75QqoetWGirzhcIg/pub?w=1440&h=1080[align="center", title="The network file opened"]
 == !
 
 
@@ -4043,7 +4043,7 @@ First, let's close the project we have in Gephi, without saving:
 
 == !
 [.stretch]
-image::Closing-the-current-project.png[align="center", title="Closing the current project"]
+image::https://docs.google.com/drawings/d/1urvovovyXAsGIb-yycOHKl3qRtsL8klaVbnzpjThQ60/pub?w=1440&h=1080[align="center", title="Closing the current project"]
 == !
 
 
@@ -4052,7 +4052,7 @@ Then click on `File -> Open` and navigate to the folder where network A.gexf and
 
 == !
 [.stretch]
-image::Opening-files.png[align="center", title="Opening files"]
+image::https://docs.google.com/drawings/d/1Qah_hVAi7LXwnwuhCjLgHUlAqL4qHxUQ38PRKrPbJ_A/pub?w=1417&h=938[align="center", title="Opening files"]
 == !
 
 
@@ -4061,7 +4061,7 @@ Here, make sure you select the *2 files at once* (using the key kbd:[Ctrl] on pc
 
 == !
 [.stretch]
-image::Opening-2-files-at-once.png[align="center", title="Opening 2 files at once"]
+image::https://docs.google.com/drawings/d/1ZU4uqyz7C9bXMNFd46XF5H_F8W2n0wdvcyrg5QyhQkI/pub?w=1372&h=857[align="center", title="Opening 2 files at once"]
 == !
 
 
@@ -4070,7 +4070,7 @@ Opening the files display a report window:
 
 == !
 [.stretch]
-image::Import-report-window.png[align="center", title="Import report window"]
+image::https://docs.google.com/drawings/d/1QAxYTCY38JJa8RyeMEu22u3-L65L3K-Y2Kd1FDslwB8/pub?w=1443&h=1014[align="center", title="Import report window"]
 == !
 
 
@@ -4084,7 +4084,7 @@ You should see this button, click on it (if not: something went wrong. Retrace y
 
 == !
 [.stretch]
-image::Enable-the-timeline.png[align="center", title="Enable the timeline"]
+image::https://docs.google.com/drawings/d/134kQ8NnjB5W-tqv_xsK8EvEUDezkAxAeLFoxogSh64s/pub?w=1433&h=815[align="center", title="Enable the timeline"]
 == !
 
 
@@ -4093,7 +4093,7 @@ Click and slide the right side border of the timeline *to the left*. You should 
 
 == !
 [.stretch]
-image::Sliding-the-timeline.png[align="center", title="Sliding the timeline"]
+image::https://docs.google.com/drawings/d/1dGRD8i7Nsjujdsiearl1ls6v31KXwAA3x28cs4WQhhQ/pub?w=1316&h=748[align="center", title="Sliding the timeline"]
 == !
 
 

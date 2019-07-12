@@ -107,7 +107,7 @@ NOTE:: if you already have projects opened in NetBeans, the menu Team -> Git -> 
 
 == !
 [.stretch]
-image::Cloning-the-gephi-source.png[align="center", title="Cloning the gephi source"]
+image::https://docs.google.com/drawings/d/1sdB37hWIug2nzacQxsxqVOmzK_bVF7zpn_2rkgmEWSU/pub?w=1262&h=999[align="center", title="Cloning the gephi source"]
 == !
 
 
@@ -192,7 +192,7 @@ This opens a new project on the left of NetBeans, called "gephi-app". This is a 
 
 == !
 [.stretch]
-image::Launching-Gephi.png[align="center", title="Launching Gephi"]
+image::https://docs.google.com/drawings/d/1VS_oa0Fp9d-hygBJESrshVGfd5H9eSx1C50eZNSIUu0/pub?w=986&h=840[align="center", title="Launching Gephi"]
 == !
 
 
@@ -254,7 +254,7 @@ Open the package `org.gephi.visualization.opengl`, and inside open `Compatibilit
 
 == !
 [.stretch]
-image::opening-CompatibilityEngine.java.png[align="center", title="opening CompatibilityEngine.java"]
+image::https://docs.google.com/drawings/d/1XYIZ2iQPOPjhshbh2CGjMv03teW0QCVfdoqy0urn1wI/pub?w=976&h=652[align="center", title="opening CompatibilityEngine.java"]
 == !
 
 

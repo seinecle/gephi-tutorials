@@ -283,3 +283,40 @@ image::Example-of-Timeline.png[align="center", title="Example of Timeline"]
 Visit https://www.facebook.com/groups/gephi/[the Gephi group on Facebook] to get help,
 
 or visit https://seinecle.github.io/gephi-tutorials/[the website for more tutorials]
+las layout while the tweets are arriving"]
+{nbsp} +
+
+//ST: !
+Shift to the `data laboratory` to view the data collected, in a spreadsheet format:
+
+//ST: !
+image::https://docs.google.com/drawings/d/1mDTOUanUkOa0ND8wn3tuwM54pqYXN6RApWkZTxSpEiI/pub?w=954&h=524[align="center", title="Switching to the data laboratory view"]
+{nbsp} +
+
+//ST: !
+There, you can export nodes and relations ("edges") as csv files by clicking on "Export table".
+
+//ST: !
+==== c. Timeline
+
+//ST: !
+
+When you are finished with your stream, you can use the ** timeline ** feature to replay the stream of data and look at a particular time window.
+
+_This feature is still experimental and is higly subject to bug._
+
+//ST: !
+image::en/twitter-streaming-importer/timeline-enable.png[align="center", title="How to activate the Timeline"]
+{nbsp} +
+
+//ST: !
+image::Example-of-Timeline.png[align="center", title="Example of Timeline"]
+{nbsp} +
+
+== The end
+
+//ST: The end!
+
+Visit https://www.facebook.com/groups/gephi/[the Gephi group on Facebook] to get help,
+
+or visit https://seinecle.github.io/gephi-tutorials/[the website for more tutorials]

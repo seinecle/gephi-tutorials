@@ -488,3 +488,11 @@ Other software / web apps to visualize texts as networks:
 Visit https://www.facebook.com/groups/gephi/[the Gephi group on Facebook] to get help,
 
 or visit https://seinecle.github.io/gephi-tutorials/[the website for more tutorials]
+w.vosviewer.com/
+
+== the end
+//ST: The end!
+
+Visit https://www.facebook.com/groups/gephi/[the Gephi group on Facebook] to get help,
+
+or visit https://seinecle.github.io/gephi-tutorials/[the website for more tutorials]

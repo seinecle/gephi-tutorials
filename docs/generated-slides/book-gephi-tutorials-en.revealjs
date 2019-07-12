@@ -1,0 +1,1307 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="author" content="== !" /><title>Gephi: the documentation</title><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><link href="reveal.js-3.6.0/css/reveal.css" rel="stylesheet" /><link rel="stylesheet" href="reveal.js-3.6.0/css/theme/white.css" id="theme" /><style>/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+pre.CodeRay{background:#f7f7f8}
+.CodeRay .line-numbers{border-right:1px solid currentColor;opacity:.35;padding:0 .5em 0 0}
+.CodeRay span.line-numbers{display:inline-block;margin-right:.75em}
+.CodeRay .line-numbers strong{color:#000}
+table.CodeRay{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.CodeRay td{vertical-align:top;line-height:inherit}
+table.CodeRay td.line-numbers{text-align:right}
+table.CodeRay td.code{padding:0 0 0 .75em}
+.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .annotation{color:#007}
+.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-value{color:#700}
+.CodeRay .binary{color:#509}
+.CodeRay .comment{color:#998;font-style:italic}
+.CodeRay .char{color:#04d}
+.CodeRay .char .content{color:#04d}
+.CodeRay .char .delimiter{color:#039}
+.CodeRay .class{color:#458;font-weight:bold}
+.CodeRay .complex{color:#a08}
+.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .color{color:#099}
+.CodeRay .class-variable{color:#369}
+.CodeRay .decorator{color:#b0b}
+.CodeRay .definition{color:#099}
+.CodeRay .delimiter{color:#000}
+.CodeRay .doc{color:#970}
+.CodeRay .doctype{color:#34b}
+.CodeRay .doc-string{color:#d42}
+.CodeRay .escape{color:#666}
+.CodeRay .entity{color:#800}
+.CodeRay .error{color:#808}
+.CodeRay .exception{color:inherit}
+.CodeRay .filename{color:#099}
+.CodeRay .function{color:#900;font-weight:bold}
+.CodeRay .global-variable{color:#008080}
+.CodeRay .hex{color:#058}
+.CodeRay .integer,.CodeRay .float{color:#099}
+.CodeRay .include{color:#555}
+.CodeRay .inline{color:#000}
+.CodeRay .inline .inline{background:#ccc}
+.CodeRay .inline .inline .inline{background:#bbb}
+.CodeRay .inline .inline-delimiter{color:#d14}
+.CodeRay .inline-delimiter{color:#d14}
+.CodeRay .important{color:#555;font-weight:bold}
+.CodeRay .interpreted{color:#b2b}
+.CodeRay .instance-variable{color:#008080}
+.CodeRay .label{color:#970}
+.CodeRay .local-variable{color:#963}
+.CodeRay .octal{color:#40e}
+.CodeRay .predefined{color:#369}
+.CodeRay .preprocessor{color:#579}
+.CodeRay .pseudo-class{color:#555}
+.CodeRay .directive{font-weight:bold}
+.CodeRay .type{font-weight:bold}
+.CodeRay .predefined-type{color:inherit}
+.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .key{color:#808}
+.CodeRay .key .delimiter{color:#606}
+.CodeRay .key .char{color:#80f}
+.CodeRay .value{color:#088}
+.CodeRay .regexp .delimiter{color:#808}
+.CodeRay .regexp .content{color:#808}
+.CodeRay .regexp .modifier{color:#808}
+.CodeRay .regexp .char{color:#d14}
+.CodeRay .regexp .function{color:#404;font-weight:bold}
+.CodeRay .string{color:#d20}
+.CodeRay .string .string .string{background:#ffd0d0}
+.CodeRay .string .content{color:#d14}
+.CodeRay .string .char{color:#d14}
+.CodeRay .string .delimiter{color:#d14}
+.CodeRay .shell{color:#d14}
+.CodeRay .shell .delimiter{color:#d14}
+.CodeRay .symbol{color:#990073}
+.CodeRay .symbol .content{color:#a60}
+.CodeRay .symbol .delimiter{color:#630}
+.CodeRay .tag{color:#008080}
+.CodeRay .tag-special{color:#d70}
+.CodeRay .variable{color:#036}
+.CodeRay .insert{background:#afa}
+.CodeRay .delete{background:#faa}
+.CodeRay .change{color:#aaf;background:#007}
+.CodeRay .head{color:#f8f;background:#505}
+.CodeRay .insert .insert{color:#080}
+.CodeRay .delete .delete{color:#800}
+.CodeRay .change .change{color:#66f}
+.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.6.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.6.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>Gephi</h1><h2>the documentation</h2><div class="preamble"><div class="paragraph"><p>2017-03-14</p></div>
+<div class="paragraph"><p>last modified: 2017-03-27</p></div></div><p class="author"><small>== !</small></p></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450" /></div></section>
+<section><div style="page-break-after: always;"></div></section>
+<section id="_what_is_gephi"><h2>What is Gephi?</h2></section>
+<section><div style="page-break-after: always;"></div></section>
+<section><h3>the leading software to visualize networks on Linux, Windows and Apple computers</h3></section>
+<section><div class="ulist"><ul><li><p>more than 2 million downloads,</p></li><li><p>used by analysts, academics, journalists,</p></li><li><p>stable on Windows, Mac and Linux,</p></li><li><p>in continuous development</p></li></ul></div></section>
+<section><h3>open source &amp; free (including for commercial purposes)</h3></section>
+<section><div class="paragraph"><p>Gephi adopts a licencing model which makes it free to use, sell, or include the source code of Gephi in larger applications.</p></div>
+<div class="paragraph"><p>Developers who modify the Gephi code base are required to make these changes public, to benefit the community.</p></div></section>
+<section><h3>"Photoshop<sup>TM</sup> for graphs"</h3></section>
+<section><div class="ulist"><ul><li><p>for networks of all types (social, semantic, biological, etc.)</p></li><li><p>attributes and properties of the network are made visible: not just the <a href="http://www.webopedia.com/quick_ref/topologies.asp">topology</a> of the network.</p></li><li><p>Gephi provides functions to explore the network: pan, filter, zoom, colorize, label, etc.</p></li><li><p>measures and metrics can be computed, and then rendered visually.</p></li></ul></div></section>
+<section><h3>committed to quality and performance</h3></section>
+<section><div class="ulist"><ul><li><p>Gephi won a <a href="http://www.oracle.com/technetwork/articles/java/dukeschoicewinners-171159.html">Duke Award in 2010</a>. Duke awards "recognize and honor extreme innovation in the world of Java technology".</p></li><li><p>Gephi evolved importantly since 2006 to adopt new, best performing techs for the visualization of very large graphs on the desktop</p></li><li><p>The code base of Gephi is maintained with the best standards to insure a <a href="https://gephi.wordpress.com/tag/code/">a stable application, ease of maintainance and modularity / extensibility</a>.</p></li></ul></div></section>
+<section><h3>modular and extensible</h3></section>
+<section><div class="ulist"><ul><li><p>Gephi is "cut" in a large number of modules, each providing a specific function. This makes it easier to maintain and evolve the software, by working on independent parts.</p></li><li><p>Since version 0.9 the <a href="https://gephi.wordpress.com/2015/12/04/gephi-boosts-its-performance-with-new-graphstore-core/">"graph store"</a> of Gephi has become a completely independent module: it can be reused by another software.</p></li><li><p>Anybody can create new modules for Gephi! <a href="https://gephi.org/plugins/#/">They are called "plugins"</a>. They integrate with Gephi seamlessly.</p></li></ul></div></section>
+<section><h3>created, maintained and documented by volunteers, for the community.</h3></section>
+<section><div class="ulist"><ul><li><p>Gephi itself is open source and free</p></li><li><p>The <a href="https://consortium.gephi.org/">Gephi Consortium</a> was created to ensure Gephi will remain so</p></li><li><p>The <a href="https://github.com/gephi/gephi/graphs/contributors">original contributors and their followers</a> are volunteers</p></li><li><p>The support to users through <a href="http://forum-gephi.org/">forums</a>, <a href="https://www.facebook.com/groups/gephi/">discussion groups</a> and <a href="https://gephi.org/users/">documents</a> is provided for free.</p></li></ul></div>
+<div style="page-break-after: always;"></div></section>
+<section id="_history_of_gephi"><h2>History of Gephi</h2></section>
+<section><div style="page-break-after: always;"></div></section>
+<section><h3>2006 and Web Atlas</h3></section>
+<section><div class="paragraph"><p>The origin of Gephi lays in <a href="http://webatlas.fr/wp/">Web Atlas</a>, a project started in 2006 involving Mathieu Jacomy, who was interested in the exploration of web-based graphs.
+This was about the same time <a href="http://www.cond.org/">Eytan Adar</a> was developing his <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=0ahUKEwjljNmDtbrRAhXL6xQKHWDdDRMQFggcMAA&amp;url=http%3A%2F%2Fgraphexploration.cond.org%2Fchi2006%2Fguess-chi2006.pdf&amp;usg=AFQjCNETmuZqHoaZyJSYpSuTGQ87PNSCLA&amp;sig2=ns0z9wqVRIo5riVtHv1QfQ">GUESS software</a></p></div></section>
+<section><div class="imageblock stretch" id="package_overview" style="text-align: center"><img src="../images/matthieu-jacomy.jpg" alt="matthieu jacomy" height="100%" /></div><div class="title">Figure 1. Mathieu Jacomy</div></section>
+<section><div class="paragraph"><p>In 2007/2008, this project morphed into Gephi, developed by a team of students at Université Technologique de Compiègne (<a href="https://www.utc.fr/en.html">UTC</a>).</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/initial-team.png" alt="initial team" width="450" /></div><div class="title">Figure 2. The initial Gephi team</div></section>
+<section><h3>A series of metrics on Gephi&#8217;s popularity over time</h3></section>
+<section><div class="paragraph"><p>Gephi has evolved in several major milestones:</p></div>
+<div class="ulist"><ul><li><p>version 0.6 (2009): the initial public release. Contains already the filter system.</p></li><li><p>version 0.7 (2010): Major overhaul of the graphics interface. Started using OpenGL framework for graphics acceleration. A system of plugin is created.</p></li></ul></div>
+<div class="ulist"><ul><li><p>version 0.8 (2011): Introduced dynamic graphs.</p></li></ul></div>
+<div class="paragraph"><p>2011 to 2016: Many plugins were created for Gephi, and the software sarted becoming much popular.</p></div>
+<div class="paragraph"><p>Mac computer users had issues installing Gephi on their computers because of a Java compatibility issue.</p></div>
+<div class="paragraph"><p>version 0.9 (December 2015):</p></div>
+<div class="ulist"><ul><li><p>A graph engine optimized for memory is introduced: Gephi can handle much larger graphs.</p></li><li><p>The codebase for the project is "mavenized", making the code more modular and easier to maintain.</p></li><li><p>Compatibility issues with Mac OS are solved.</p></li></ul></div>
+<div class="paragraph"><p>In 2016, Gephi is translated in French, Spanish, Japanese,  Russian, Polish, Brazilian Portuguese, Chinese, Czech and German.</p></div>
+<div class="paragraph"><p><iframe width="600" height="600" align="center" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/13mTifgFRpEH0vpXUF2USdy6kTTtPuEq9FgWWXYEPIck/pubchart?oid=657051972&amp;format=interactive"></iframe></p></div>
+<div class="paragraph"><p><iframe scrolling="no" style="border:none;" width="640" height="600" src="https://www.google.com/trends/fetchComponent?hl=en-US&amp;q=gephi,vosviewer,nodexl,cytoscape,ucinet%20&amp;content=1&amp;cid=TIMESERIES_GRAPH_0&amp;export=5&amp;w=640&amp;h=600"></iframe></p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/google-scholar-gephi.png" alt="google scholar gephi" height="100%" /></div><div class="title">Figure 3. </div></section>
+<section><div style="page-break-after: always;"></div></section>
+<section id="_simple_gephi_project_from_a_to_z"><h2>Simple Gephi Project from A to Z</h2></section>
+<section><div style="page-break-after: always;"></div></section>
+<section><h3>Description of the project</h3></section>
+<section><div class="paragraph"><p>This project is for complete beginners to Gephi.
+It supposes you have Gephi installed and running on your computer. That is all.</p></div>
+<div class="paragraph"><p>When finishing this tutorial, you should be able to:</p></div>
+<div class="ulist"><ul><li><p>be familiar with the vocabulary to discuss networks</p></li><li><p>download a network file for this exercise</p></li><li><p>description of the file / the network</p></li></ul></div>
+<div class="ulist"><ul><li><p>open a network file</p></li><li><p>read the report after opening a file</p></li><li><p>show the labels of the nodes</p></li><li><p>layout the network</p></li></ul></div>
+<div class="ulist"><ul><li><p>visualize attributes of the network</p></li><li><p>prettify the network for enhanced readability</p></li><li><p>compute the centrality of the nodes in the network</p></li><li><p>visualize attributes created by Gephi</p></li><li><p>export a visualization as a picture or pdf</p></li></ul></div></section>
+<section><h3>be familiar with the terminology to discuss networks</h3></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/terminology-for-networks.png" alt="terminology for networks" height="100%" /></div><div class="title">Figure 4. terminology for networks</div></section>
+<section><h3>download a network file</h3></section>
+<section><div class="paragraph"><p><a href="../resources/miserables_result.zip">download this zip file</a> and unzip it on your computer.</p></div>
+<div class="paragraph"><p>You should find the file <code>miserables.gexf</code> in it.</p></div>
+<div class="paragraph"><p>Save it in a folder you will remember (or create a folder specially for this small project).</p></div></section>
+<section><h3>description of the file / the network</h3></section>
+<section><div class="paragraph"><p>This file contains a network representing "who appears next to whom" in the 19th century novel <em>Les Misérables</em> by Victor Hugo<span class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</span>.</p></div>
+<div class="paragraph"><p>A link between characters A and B means they appeared on the same page or paragraph in the novel.</p></div>
+<div class="paragraph"><p>The file name ends with ".gexf", which just means this is a text file where the network information is stored (name of the characters, their relations, etc.), following some conventions.</p></div></section>
+<section><h3>open the network in Gephi</h3></section>
+<section><div class="ulist"><ul><li><p>open Gephi. On the Welcome screen that appears,  click on <code>Open Graph File</code></p></li><li><p>find <code>miserables.gexf</code> on your computer and open it</p></li></ul></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/gephi-welcome-screen-open-graph-en.png" alt="gephi welcome screen open graph en" height="100%" /></div><div class="title">Figure 5. welcome screen</div></section>
+<section><h3>read the report after opening a file</h3></section>
+<section><div class="paragraph"><p>A report window will open, giving you basic info on the network you opened:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/opening-file-report-en.png" alt="opening file report en" height="100%" /></div><div class="title">Figure 6. report window</div></section>
+<section><div class="paragraph"><p>This tells you that the network comprises 74 characters, connected by 248 links.</p></div>
+<div class="paragraph"><p>Links are undirected, meaning that if A is connected to B, then it is the same as B connected to A.</p></div>
+<div class="paragraph"><p>The report also tells us the graph is not dynamic: it means there is no evolution or chronology, it won&#8217;t "move in time".</p></div>
+<div class="paragraph"><p>Click on <code>OK</code> to see the graph in Gephi.</p></div></section>
+<section><h3>initial view</h3></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/project-initial-view.png" alt="project initial view" height="100%" /></div><div class="title">Figure 7. initial view when opening a graph</div></section>
+<section><div class="paragraph"><p>This is how the network appears in Gephi. Not very useful! Let&#8217;s examine what we have here.</p></div></section>
+<section><h3>basic view of Gephi&#8217;s interface</h3></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/the-3-main-screens-in-Gephi.png" alt="the 3 main screens in Gephi" height="100%" /></div><div class="title">Figure 8. the 3 main screens in Gephi</div></section>
+<section><div class="paragraph"><p>Gephi has 3 main screens:</p></div>
+<div class="olist arabic"><ol class="arabic"><li><p>Overview: where we can explore the graph visually</p></li><li><p>Data Laboratory: provides an "Excel" table view of the data in network</p></li><li><p>Preview: where we polish the visualization before exporting it as a pictue or pdf</p></li></ol></div>
+<div class="paragraph"><p>What we see here is the Overview.</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Filters-and-statistics-panels-in-Gephi.png" alt="Filters and statistics panels in Gephi" height="100%" /></div><div class="title">Figure 9. Filters and statistics panels in Gephi</div></section>
+<section><div class="paragraph"><p>In the Overview, the graph is shown at the center. Around it, several panels help us fine tune the visualization.</p></div>
+<div class="olist arabic"><ol class="arabic" start="4"><li><p>"Filters", where we can hide different parts of the network under a variety of conditions</p></li><li><p>"Statistics", where we can compute metrics on the network</p></li></ol></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Appearance-and-layout-panels-in-Gephi.png" alt="Appearance and layout panels in Gephi" height="100%" /></div><div class="title">Figure 10. Appearance and layout panels in Gephi</div></section>
+<section><div class="olist arabic"><ol class="arabic" start="6"><li><p>"Appearance", where we can change colors and sizes in interesting ways</p></li><li><p>"Layouts", where we can apply automated procedures to change the position of the network</p></li></ol></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/3-groups-of-icons.png" alt="3 groups of icons" height="100%" /></div><div class="title">Figure 11. 3 groups of icons</div></section>
+<section><div class="olist arabic"><ol class="arabic" start="8"><li><p>A series of icons to add / colorize nodes and links manually, by clicking on them</p></li><li><p>Options and sliders to change the size of all nodes, links, or labels</p></li><li><p>More options become visible if we click on this <strong>little arrow head pointing up</strong></p></li></ol></div></section>
+<section><h3>showing labels of the nodes</h3></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/showing-node-labels.png" alt="showing node labels" height="100%" /></div><div class="title">Figure 12. showing node labels</div></section>
+<section><h3>layout ("spatialize") the network</h3></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/selecting-the-force-atlas-2-layout.png" alt="selecting the force atlas 2 layout" height="100%" /></div><div class="title">Figure 13. selecting the force atlas 2 layout</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/changing-a-few-parameters-and-launching-the-layout.png" alt="changing a few parameters and launching the layout" height="100%" /></div><div class="title">Figure 14. changing a few parameters and launching the layout</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/result-of-Force-Atlas-2-layout.png" alt="result of Force Atlas 2 layout" height="100%" /></div><div class="title">Figure 15. result of Force Atlas 2 layout</div></section>
+<section><h3>visualize the properties of the nodes</h3></section>
+<section><div class="paragraph"><p>A network consists in entities and their relations.
+This is what we just visualized.
+Yet, the properties of these entities remain invisible.</p></div>
+<div class="paragraph"><p>For instance: the characters in the novel "Les Misérables" are male or female. Are males more likely to be connected to males, or females? Just looking at the network in Gephi, we can&#8217;t tell.</p></div>
+<div class="paragraph"><p>Now, we will see how to make this property ("Gender") visible.</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Switching-the-view-to-the-data-laboratory.png" alt="Switching the view to the data laboratory" height="100%" /></div><div class="title">Figure 16. Switching the view to the data laboratory</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/We-see-there-is-a-Gender-attribute-for-each-character..png" alt="We see there is a Gender attribute for each character." height="100%" /></div><div class="title">Figure 17. We see there is a Gender attribute for each character.</div></section>
+<section><div class="paragraph"><p>We will color the nodes based on their gender. To do that, we select <code>Gender</code> in the <code>Appearance</code> panel:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Coloring-nodes-according-to-their-gender.png" alt="Coloring nodes according to their gender" height="100%" /></div><div class="title">Figure 18. Coloring nodes according to their gender</div></section>
+<section><div class="paragraph"><p>The result:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/appearance-miserables-result.png" alt="appearance miserables result" height="100%" /></div><div class="title">Figure 19. After coloring characters according to their gender</div></section>
+<section><h3>prettify the network for enhanced readability</h3></section>
+<section><div class="paragraph"><p>There are a number of issues with the result we get:</p></div>
+<div class="olist arabic"><ol class="arabic"><li><p>the network is too big or too small, it is hard to read</p></li><li><p>the labels of the characters overlap</p></li><li><p>the size of the labels might be too big / small</p></li><li><p>the links are sometimes too large</p></li></ol></div>
+<div class="paragraph"><p>Let&#8217;s fix these issues.</p></div></section>
+<section><h3>1. Enlarge or shrink the network</h3></section>
+<section><div class="ulist"><ul><li><p>either we use the "scaling" parameter of the layout, as we have seen <a href="#force-atlas-2-parameters">here</a>.</p></li><li><p>or the scale is fine, it is just that we need to zoom it or out. Use the scrolling wheel of your mouse, and right click to move the network.</p></li></ul></div></section>
+<section><h3>2. Prevent the Labels from overlapping</h3></section>
+<section><div class="paragraph"><p>In the layout panel, choose "Label Adjust" or "Noverlap": these layouts will move the nodes just so that the Labels stop overlapping:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/choosing-a-label-adjust-algo-en.png" alt="choosing a label adjust algo en" height="100%" /></div><div class="title">Figure 20. Noverlap or Label Adjust will help you</div></section>
+<section><div class="paragraph"><p>Don&#8217;t forget to click on "Run" to apply these layouts.</p></div></section>
+<section><h3>3. Changing the size of the labels</h3></section>
+<section><div class="paragraph"><p>Open the bottom panel of Gephi by clicking on tiny arrow head (1). Then select "nodes" (2), then move the slider (3).</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Adjusting-label-size.png" alt="Adjusting label size" height="100%" /></div><div class="title">Figure 21. Adjusting label size</div></section>
+<section></section>
+<section><h3>4. Adjusting the thickness of the links</h3></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Adjusting-edge-thickness.png" alt="Adjusting edge thickness" height="100%" /></div><div class="title">Figure 22. Adjusting edge thickness</div></section>
+<section><h3>computing the centrality of the nodes</h3></section>
+<section></section>
+<section><h3>1. Definitions of centrality</h3></section>
+<section><div class="paragraph"><p>"Centrality" is a very good metrics to first get an idea of a network.
+What does centrality mean? Intuitively, we understand that a "central" node will probably sit in the middle of the network.
+But how to measure that "scientifically", so that we have an objective confirmation of our visual impression?</p></div>
+<div class="paragraph"><p>There are several ways, all equally interesting.</p></div>
+<div class="paragraph"><p>We can measure <code>degree centrality</code>. "Degree" is the technical term for "number of connections that a node has".</p></div>
+<div class="paragraph"><p>So, <code>degree centrality</code> just means that the most central node is the node which has the most connections. Simple!</p></div>
+<div class="paragraph"><p>Another measure is <code>betweenness centrality</code>. This one is more tricky.</p></div>
+<div class="ulist"><ul><li><p>First, you have to imagine what is a <code>shortest path</code>.</p></li><li><p>A <code>path</code> from node A to node B is a chain of nodes, the road if you will, that you have to traverse to go from A to B.</p></li><li><p>The <code>shortest path</code> from A to B is the quickest road from A to B: the path that has the smallest number of nodes between A and B.</p></li><li><p>A node which is on many shortest paths is "between" many nodes. And when you realize it, it is a very intuitive sense of what it means to "be central". These nodes have a high <code>betweenness centrality</code>.</p></li></ul></div></section>
+<section><h3>2. Computing betweenness centrality with Gephi</h3></section>
+<section><div class="paragraph"><p>Gephi computes it for you. Find "Network diameter" in the statistics panel and click "run":</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Computing-betweenness-centrality.png" alt="Computing betweenness centrality" height="100%" /></div><div class="title">Figure 23. Computing betweenness centrality</div></section>
+<section><div class="paragraph"><p>This will open a window with parameters (explained in a more advanced tutorials). Click "OK":</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Parameters-for-the-computation-of-betweenness-centrality.png" alt="Parameters for the computation of betweenness centrality" height="100%" /></div><div class="title">Figure 24. Parameters for the computation of betweenness centrality</div></section>
+<section><div class="paragraph"><p>A report window opens (also explained in a other tutorials). Close it.</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Report-after-the-computation-of-betweenness-centrality.png" alt="Report after the computation of betweenness centrality" height="100%" /></div><div class="title">Figure 25. Report after the computation of betweenness centrality</div></section>
+<section><div class="paragraph"><p>Now we can visualize this information.</p></div></section>
+<section><h3>visualize attributes created by Gephi</h3></section>
+<section><div class="paragraph"><p>Gephi has computed for us the betweenness centrality of all nodes. This remains invisible on the network, however.</p></div>
+<div class="paragraph"><p>It would be interesting to, say, resize the nodes according to their centrality: the more central a node, the bigger.
+This would allow for a very quick visual appreciation of which nodes are the most central.</p></div>
+<div class="paragraph"><p>First, let&#8217;s switch to the data laboratory to see how Gephi stored the "betweenness centrality" of each node:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Switching-the-view-to-the-data-laboratory.png" alt="Switching the view to the data laboratory" height="100%" /></div><div class="title">Figure 26. Switching the view to the data laboratory</div></section>
+<section><div class="paragraph"><p>When we ran "Network Diameter" in the statistics panel, Gephi has actually computed many kinds of centralities (not just "betweenness centrality"):</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Different-centrality-measures-visible-in-the-data-laboratory.png" alt="Different centrality measures visible in the data laboratory" height="100%" /></div><div class="title">Figure 27. Different centrality measures visible in the data laboratory</div></section>
+<section><div class="paragraph"><p>To resize the nodes according to the value of their betweenness centrality, we use the <code>Appearance</code> panel:</p></div>
+<div class="admonitionblock caution"><table><tr><td class="icon"><i class="fa fa-fire"></i></td><td class="content">make sure you select the correct options</td></tr></table></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Ranking-node-sizes-by-centrality.png" alt="Ranking node sizes by centrality" height="100%" /></div><div class="title">Figure 28. Ranking node sizes by centrality</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Selecting-the-minimum-and-maximum-sizes-of-nodes.png" alt="Selecting the minimum and maximum sizes of nodes" height="100%" /></div><div class="title">Figure 29. Selecting the minimum and maximum sizes of nodes</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/ranking-centrality-miserables-3--en.png" alt="ranking centrality miserables 3  en" height="100%" /></div><div class="title">Figure 30. Result of the ranking</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Resizing-labels-to-reflect-their-node's-size.png" alt="Resizing labels to reflect their node's size" height="100%" /></div><div class="title">Figure 31. Resizing labels to reflect their node&#8217;s size</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/result-label-resizing-en.png" alt="result label resizing en" height="100%" /></div><div class="title">Figure 32. Result of the label resizing</div></section>
+<section><h3>exporting a network as a picture</h3></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Open-the-configuration-panel-for-screenshots.png" alt="Open the configuration panel for screenshots" height="100%" /></div><div class="title">Figure 33. Open the configuration panel for screenshots</div></section>
+<section><div class="paragraph"><p>Select the maximum value for anti-aliasing, and multiply values for width and height for higher resolution. For example, resolution x 3 is width = 3072 and height = 2304</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/configuration-screenshot-en.png" alt="configuration screenshot en" height="100%" /></div><div class="title">Figure 34. The configuration panel for screenshots</div></section>
+<section><div class="paragraph"><p>Let&#8217;s switch to the preview panel:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Switching-to-the-preview-panel.png" alt="Switching to the preview panel" height="100%" /></div><div class="title">Figure 35. Switching to the preview panel</div></section>
+<section><div class="paragraph"><p>The preview panel is dedicated to the preparation of the picture to be exported as a pdf or svg, which are "scalable": in pdf or sv, the resolution of the graph will remain perfect, even with a strong zoom.
+But as you see, it means the network is now looking different than in the Overview.</p></div>
+<div class="admonitionblock caution"><table><tr><td class="icon"><i class="fa fa-fire"></i></td><td class="content">contrary to the Overview panel, here you need to hit the "refresh" button after each parameter change.</td></tr></table></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Updating-the-parameters.png" alt="Updating the parameters" height="100%" /></div><div class="title">Figure 36. Updating the parameters</div></section>
+<section><div class="paragraph"><p>Here I change just 2 parameters: <code>Show Labels</code> and  <code>Font</code> (which I reduce to size "5"), to get:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Result-of-preview.png" alt="Result of preview" height="100%" /></div><div class="title">Figure 37. Result of preview</div></section>
+<section><div class="paragraph"><p>Export: just click on the button and select the file format you prefer</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Export-button.png" alt="Export button" height="100%" /></div><div class="title">Figure 38. Export button</div></section>
+<section><div class="paragraph"><p><a href="../resources/miserables_result.zip">download this zip file</a> if you need to see the network in its final form.</p></div>
+<div style="page-break-after: always;"></div></section>
+<section id="_using_filters"><h2>Using filters</h2></section>
+<section><div style="page-break-after: always;"></div></section>
+<section><h3>download a network file for practice</h3></section>
+<section><div class="paragraph"><p><a href="../resources/miserables.zip">download this zip file</a> and unzip it on your computer.</p></div>
+<div class="paragraph"><p>or use this direct link: <a href="https://tinyurl.com/gephi-tuto-3">https://tinyurl.com/gephi-tuto-3</a></p></div>
+<div class="paragraph"><p>You should find the file <code>miserables.gexf</code> in it. Save it in a folder you will remember (or create a folder specially for this small project).</p></div>
+<div class="paragraph"><p>This file contains a network representing "who appears next to whom" in the 19th century novel <em>Les Misérables</em> by Victor Hugo<span class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</span>.</p></div>
+<div class="paragraph"><p>A link between characters A and B means they appeared on the same page or paragraph in the novel.</p></div>
+<div class="paragraph"><p>The file name ends with ".gexf", which just means this is a text file where the network information is stored (name of the characters, their relations, etc.), following some conventions.</p></div></section>
+<section><h3>open the network in Gephi</h3></section>
+<section><div class="ulist"><ul><li><p>open Gephi. On the Welcome screen that appears,  click on <code>Open Graph File</code></p></li><li><p>find <code>miserables.gexf</code> on your computer and open it</p></li></ul></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/gephi-welcome-screen-open-graph-en.png" alt="gephi welcome screen open graph en" height="100%" /></div><div class="title">Figure 39. welcome screen</div></section>
+<section><div class="paragraph"><p>A report window will open, giving you basic info on the network you opened:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/opening-file-report-en.png" alt="opening file report en" height="100%" /></div><div class="title">Figure 40. report window</div></section>
+<section><div class="paragraph"><p>This tells you that the network comprises 74 characters, connected by 248 links.</p></div>
+<div class="paragraph"><p>Links are undirected, meaning that if A is connected to B, then it is the same as B connected to A.</p></div>
+<div class="paragraph"><p>The report also tells us the graph is not dynamic: it means there is no evolution or chronology, it won&#8217;t "move in time".</p></div>
+<div class="paragraph"><p>Click on <code>OK</code> to see the graph in Gephi.</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/result_miserables.png" alt="result miserables" height="100%" /></div><div class="title">Figure 41. The network we will use</div></section>
+<section><h3>getting a sense of the attributes in the data laboratory</h3></section>
+<section><div class="paragraph"><p>We can switch to the data laboratory to see the underlying data:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Switching-to-the-data-laboratory.png" alt="Switching to the data laboratory" height="100%" /></div><div class="title">Figure 42. Switching to the data laboratory</div></section>
+<section><div class="paragraph"><p>We see that the nodes of the network have many attributes. In particular, each have a Gender and a measure of how central they are:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Nodes-attributes..png" alt="Nodes attributes." height="100%" /></div><div class="title">Figure 43. Nodes attributes.</div></section>
+<section><div class="paragraph"><p>This is the list of edges (relations) in the network. Notice that they have a "weight" (a "strength").</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Edges-attributes..png" alt="Edges attributes." height="." /></div><div class="title">Figure 44. Edges attributes</div></section>
+<section><h3>discovering the filter panel</h3></section>
+<section><div class="paragraph"><p>In the overview, make sure the Filter panel is displayed:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Making-the-Filter-panel-visible..png" alt="Making the Filter panel visible." height="100%" /></div><div class="title">Figure 45. Making the Filter panel visible.</div></section>
+<section><div class="paragraph"><p>How the Filter panel works:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Workflow-of-filters.png" alt="Workflow of filters" height="100%" /></div><div class="title">Figure 46. Workflow of filters</div></section>
+<section><div class="paragraph"><p>An example: hiding edges with weight lower than 2</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/filter-edge-weight-en.gif" alt="filter edge weight en" height="100%" /></div><div class="title">Figure 47. How to use filters.</div></section>
+<section><div class="paragraph"><p>When you are finished using a filter in the zone, right click on it and select "remove".</p></div></section>
+<section><h3>combining 2 filters</h3></section>
+<section><div class="paragraph"><p>One filter is applied AFTER this other:</p></div>
+<div class="paragraph"><p><strong>The first filter to be applied is NESTED (placed inside) the second one as a "subfilter"</strong></p></div>
+<div class="paragraph"><p>Which filter should be placed inside which? Let&#8217;s look at different examples:</p></div></section>
+<section><h3>1. Case when the placement of filters makes no difference</h3></section>
+<section><div class="paragraph"><p>Goal: Keeping on screen only the female characters which have a tie (an edge, a relation) of at least strength 2.</p></div>
+<div class="paragraph"><p>&#8594; place the filter "edge weight" inside the filter "Gender":</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Filter-on-the-Gender-attribute.png" alt="Filter on the Gender attribute" height="100%" /></div><div class="title">Figure 48. Filter on the Gender attribute</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Filter-on-edge-weight.png" alt="Filter on edge weight" height="100%" /></div><div class="title">Figure 49. Filter on edge weight</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/filter-edge-weight-gender-partition-en.gif" alt="filter edge weight gender partition en" height="100%" /></div><div class="title">Figure 50. Keeping only female characters with at least 2 ties</div></section>
+<section><div class="paragraph"><p>In this case, it was equivalent to:</p></div>
+<div class="ulist"><ul><li><p>nest the "Gender" filter inside the "Edge weight" filter
+or</p></li><li><p>nest the "Edge weight" filter inside the "Gender" Filter</p></li></ul></div>
+<div class="paragraph"><p>&#8594; The result was the same (the network on screen is identical in both cases)</p></div></section>
+<section><h3>2. Case when the placement of filters makes a difference</h3></section>
+<section><div class="paragraph"><p>Here, we want to visualize:</p></div>
+<div class="ulist"><ul><li><p>only the nodes which have <strong>less than</strong> 10 relations  &lt;1&gt;</p></li><li><p>and among these, only those which form the "main island" of the network (we want to hide small detached groups of nodes)  &lt;2&gt;</p></li></ul></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>in technical terms, nodes with a <code>degree</code> of less than 10.</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>in technical terms, we are looking for the <code>giant component</code></td></tr></table></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/filter-degree-range-1-en.png" alt="filter degree range 1 en" height="100%" /></div><div class="title">Figure 51. Filter on degree</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/filter-giant-component-1-en.png" alt="filter giant component 1 en" height="100%" /></div><div class="title">Figure 52. Filter on giant component</div></section>
+<section><div class="paragraph"><p>We will see that the placement on the filters in the zone will make a difference.</p></div>
+<div class="paragraph"><p>First, let us place the filter on giant component <strong>inside</strong> the filter on degree:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/filter-order-1-en.png" alt="filter order 1 en" height="100%" /></div><div class="title">Figure 53. Filters in one configuration</div></section>
+<section><div class="paragraph"><p>In this first case,</p></div>
+<div class="ulist"><ul><li><p>only the giant component of the network was made visible.</p></li></ul></div>
+<div class="paragraph"><p>&#8594; Since the network was just one big connected "island" to start with, it did not change a thing.</p></div>
+<div class="ulist"><ul><li><p>then, all characters with more than 10 relations where hidden</p></li></ul></div>
+<div class="paragraph"><p>&#8594; this hides nodes which were connecting with many others, so that we end up with many groups, disconnected from each others.</p></div>
+<div class="paragraph"><p>Now instead, placing the filter degree <strong>inside</strong> the filter on giant component:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/filter-order-2-en.png" alt="filter order 2 en" height="100%" /></div><div class="title">Figure 54. Same filters in another configuration</div></section>
+<section><div class="paragraph"><p>In this second case,</p></div>
+<div class="ulist"><ul><li><p>starting from the complete network, all characters with more than 10 relations where deleted.</p></li></ul></div>
+<div class="paragraph"><p>&#8594; this created a network made of many disconnected groups of nodes</p></div>
+<div class="ulist"><ul><li><p>then the giant component filter is applied,</p></li></ul></div>
+<div class="paragraph"><p>&#8594; which had for effect to hide small groups, to keep in view only the biggest group of connected nodes.</p></div>
+<div class="admonitionblock warning"><table><tr><td class="icon"><i class="fa fa-warning"></i></td><td class="content">In summary: be careful how you apply several filters at once, this might have an effect on the logic of filtering.</td></tr></table></div></section>
+<section><h3>filter operators</h3></section>
+<section></section>
+<section><h3>1. The MASK operator</h3></section>
+<section><div class="paragraph"><p>Imagine you are interested in the female characters of the novel "Les Miserables".</p></div>
+<div class="ulist"><ul><li><p>you are interested in female characters and the relations among them</p></li><li><p>you are interested in the relations between female characters and male characters</p></li><li><p>you are <strong>not</strong> interested in the relations between male characters</p></li></ul></div>
+<div class="paragraph"><p>How to display this?</p></div>
+<div class="paragraph"><p>The MASK operator applied on the gender partition filter enables you to:</p></div>
+<div class="ulist"><ul><li><p>show all characters</p></li><li><p>relations between female characters</p></li><li><p><em>and relations between male and female characters</em></p></li><li><p><em>but masking male-male relations</em></p></li></ul></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/operator-mask-1-en.png" alt="operator mask 1 en" height="100%" /></div><div class="title">Figure 55. Using the MASK operator</div></section>
+<section><div class="paragraph"><p>It is also possible to hide / show only some of the directed relations between the visible graph and the filtered out graph:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/operator-mask-2-en.png" alt="operator mask 2 en" height="100%" /></div><div class="title">Figure 56. Parameters of the MASK operator</div></section>
+<section></section>
+<section><h3>2. The UNION operator</h3></section>
+<section><div class="paragraph"><p>Imagine you are interested in the characters with names starting with "L" or "J" in "Les Miserables".</p></div>
+<div class="paragraph"><p>How to display only these characters?</p></div>
+<div class="paragraph"><p>We will need to apply filters on the <code>Label</code> of the nodes, which contains the names of the characters.</p></div>
+<div class="paragraph"><p>However, looking at the "catalogue" of filters, we see no filter on <code>Label</code>. The reason is that <code>Label</code> is an internal property of nodes, inaccessible to filters.</p></div>
+<div class="paragraph"><p>So we must first copy the Labels of the nodes in a new attribute, which we will be able to  apply a filter on.</p></div>
+<div class="paragraph"><p>Let&#8217;s switch to the data laboratory and add this attribute:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Adding-a-column-for-Names.png" alt="Adding a column for Names" height="100%" /></div><div class="title">Figure 57. Adding a column for Names</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Copying-to-this-new-column.png" alt="Copying to this new column" height="100%" /></div><div class="title">Figure 58. Copying to this new column</div></section>
+<section><div class="paragraph"><p>We now have an attribute called "Name" that we can find in the Filters:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/New-filter-available.png" alt="New filter available" height="100%" /></div><div class="title">Figure 59. New filter available</div></section>
+<section><div class="paragraph"><p>This is how the filter on Name and its parameters look like in the zone:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/filter-name-1-en.png" alt="filter name 1 en" height="100%" /></div><div class="title">Figure 60. Name Filter</div></section>
+<section><div class="paragraph"><p>To recall, we want to show only the characters which name start with "L" or "J". Let&#8217;s start with the "L" characters.</p></div>
+<div class="paragraph"><p>We need to find the names which match the pattern <strong><code>Start with an L</code></strong>. The way to describe a pattern in text is called a "regular expression".</p></div>
+<div class="paragraph"><p>Said differently, <em>a regular expressions (also called "regex") is a convenient way to express a pattern we search for in a text</em>.</p></div>
+<div class="paragraph"><p>Regular expressions can become very sophisticated. But here, we need just a simple one:</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="regex language-regex">L.*</code></pre></div></div>
+<div class="paragraph"><p>Let&#8217;s examine what the L, the dot and the star mean.</p></div>
+<div class="ulist"><ul><li><p>the letter "L" means we want names starting with this first letter</p></li><li><p>. the dot means: any character</p></li><li><p>* the star means: the previous character, repeated any time.</p></li></ul></div>
+<div class="paragraph"><p>So: "select nodes which have a name starting with L, followed by any character, in any number"</p></div>
+<div class="paragraph"><p>Please note that you need to check the box "regex":</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/filter-name-2-en.png" alt="filter name 2 en" height="100%" /></div><div class="title">Figure 61. Using a regular expression in a filter</div></section>
+<section><div class="paragraph"><p>When the filter is applied, only the characters wit a name starting with L will be displayed:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/filter-name-3-en.png" alt="filter name 3 en" height="100%" /></div><div class="title">Figure 62. Using a regular expression in a filter</div></section>
+<section><div class="paragraph"><p>How to filter characters with a name starting with the letter "L" or "J"?</p></div>
+<div class="paragraph"><p>We could rely on a more complex regular expression to do this:</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="regex language-regex">[LJ].*</code></pre></div></div>
+<div class="paragraph"><p>Meaning: "select nodes which have a name starting with L or J, followed by any characters"</p></div>
+<div class="paragraph"><p>But we can also rely on 2 filters: one for L, one for J. Nesting one inside another would not work, it would mean:</p></div>
+<div class="paragraph"><p>"show nodes which start with an L, and among them, only those which start with a J"</p></div>
+<div class="paragraph"><p>&#8594; no node can meet this condition, so they would all be invisible.</p></div>
+<div class="paragraph"><p>Instead, we should use the <strong><code>UNION</code></strong> operator that can be found here:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/filter-operator-union-1-en.png" alt="filter operator union 1 en" height="100%" /></div><div class="title">Figure 63. The UNION operator in filters</div></section>
+<section><div class="paragraph"><p>Drag it to the zone, and then drag inside it twice the <code>Attributes &#8594; Equal &#8594; Name</code> filter:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/filter-operator-union-2-en.png" alt="filter operator union 2 en" height="100%" /></div><div class="title">Figure 64. The UNION operator and 2 subfilters</div></section>
+<section><div class="paragraph"><p>In the settings of the first Name filter, put the regular expression:</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="regex language-regex">L.*</code></pre></div></div>
+<div class="paragraph"><p>In the second Name filter, put:</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="regex language-regex">J.*</code></pre></div></div>
+<div class="paragraph"><p>(make sure the "regex" box is checked in both cases)</p></div>
+<div class="paragraph"><p>As a result, the nodes  selected by both filters are added up in the display:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/filter-operator-union-3-en.png" alt="filter operator union 3 en" height="100%" /></div><div class="title">Figure 65. The UNION operator and 2 subfilters</div></section>
+<section></section>
+<section><h3>3. The NOT operator</h3></section>
+<section><div class="paragraph"><p>The NOT operator flips the result of a filter: what was hidden becomes visible and vice and versa.</p></div>
+<div class="paragraph"><p>Example: if we want to display all characters except for those returned by a UNION on 2 Name filters on L and J initials:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/filter-operator-not-3-en.png" alt="filter operator not 3 en" height="100%" /></div><div class="title">Figure 66. The NOT nodes operator - 1</div></section>
+<section><div class="paragraph"><p>Same effect, but applying the NOT operator on single filter using a regex on L or J:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/filter-operator-not-1-en.png" alt="filter operator not 1 en" height="100%" /></div><div class="title">Figure 67. The NOT nodes operator - 2</div></section>
+<section><div class="paragraph"><p>Same effect again, achieved without using the NOT operator. In regular expressions the ^ sign inside square brackets means "NOT":</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="regex language-regex">[^LJ].*</code></pre></div></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/filter-operator-not-2-en.png" alt="filter operator not 2 en" height="100%" /></div><div class="title">Figure 68. Achieving a NOT effect with regex</div></section>
+<section><div class="paragraph"><p>Tutorials about regular expressions:</p></div>
+<div class="ulist"><ul><li><p><a href="http://www.regular-expressions.info/quickstart.html">https://regexone.com/</a></p></li><li><p><a href="http://www.themacroscope.org/?page_id=643">http://www.themacroscope.org/?page_id=643</a></p></li></ul></div>
+<div class="paragraph"><p>And a web page where you can test your regular expressions: <a href="http://regexpal.com">http://regexpal.com</a></p></div></section>
+<section><h3>more tutorials on using filters in Gephi</h3></section>
+<section><div class="ulist"><ul><li><p><a href="https://www.youtube.com/watch?v=UrrWA_t1rjc">Video on using filters by Jen Golbeck</a></p></li></ul></div>
+<div style="page-break-after: always;"></div></section>
+<section id="_importing_csv_data_in_gephi"><h2>Importing csv data in Gephi</h2></section>
+<section><div style="page-break-after: always;"></div></section>
+<section><h3>Importing an existing network file</h3></section>
+<section><div class="paragraph"><p>Gephi handles the import of network files in a variety of formats:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/network-formats-gephi-import-en.png" alt="network formats gephi import en" height="100%" /></div><div class="title">Figure 69. file formats supported by Gephi. Source: gephi.org</div></section>
+<section><div class="paragraph"><p>To import any of these files, just choose the <code>File &#8594; Open</code> menu</p></div></section>
+<section><h3>Importing nodes with labels and their relations: simplest version</h3></section>
+<section><div class="paragraph"><p>(looking for the complete, full featured csv import version? <a href="#full-csv-version">skip to here</a>.)</p></div>
+<div class="paragraph"><p>The easiest is probably to just have a text file like this one:</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code>Source,Target <i class="conum" data-value="1"></i><b>(1)</b>
+Jeremy,Jennifer
+Valerian,Jeremy</code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>This line is mandatory. Don&#8217;t put a space between the comma and "Target"</td></tr></table></div>
+<div class="paragraph"><p>Just write this in a text editor and save it as a file <code>example.txt</code></p></div>
+<div class="paragraph"><p>To import this file in Gephi, go to <code>File&#8594;Import Spreadsheet</code>. Then in the window:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Importing-nodes-with-labels-and-their-relations.png" alt="Importing nodes with labels and their relations" height="100%" /></div><div class="title">Figure 70. Importing nodes with labels and their relations</div></section>
+<section><div class="paragraph"><p>In this window, make sure the box "Create missing nodes" is checked:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Second-screen.png" alt="Second screen" height="100%" /></div><div class="title">Figure 71. Second screen</div></section>
+<section><div class="paragraph" id="full-csv-version"><p>Let&#8217;s look again at the simple text file we used:</p></div>
+<div class="literalblock"><div class="content"><pre>Source,Target
+Jeremy,Jennifer
+Valerian,Jeremy</pre></div></div>
+<div class="paragraph"><p>There are 2 issues and several missing features, listed below:</p></div></section>
+<section><h3>1. labels containing commas in them will not work.</h3></section>
+<section><div class="paragraph"><p>Imagine our characters have first names and last names separated by a comma:</p></div>
+<div class="paragraph"><p>Dubois, Jeremy</p></div>
+<div class="paragraph"><p>Rodriguez, Valerian</p></div>
+<div class="paragraph"><p>This will look like:</p></div>
+<div class="literalblock"><div class="content"><pre>Source,Target
+Dubois, Jeremy,Jeremy,Jennifer
+Rodriguez, Valerian,Dubois, Jeremy</pre></div></div>
+<div class="paragraph"><p>Note that we have 3 commas per line, instead of one!
+In this mess, Gephi will not detect where the node labels start and end.
+The import will break.</p></div>
+<div class="paragraph"><p>The proper solution is to put node labels inside <strong>double quotes</strong>:</p></div>
+<div class="literalblock"><div class="content"><pre>Source,Target
+"Dubois, Jeremy","Jeremy,Jennifer"
+"Rodriguez, Valerian","Dubois, Jeremy"</pre></div></div>
+<div class="paragraph"><p>Be careful to use these straight " " double quotes, not the curvy ones: “ ” which French keyboards sometimes have.</p></div></section>
+<section><h3>2. labels containing double quotes " " in them will not work.</h3></section>
+<section><div class="paragraph"><p>Example: let&#8217;s imagine that one of our characters has a middle name: Jeremy "Danger" Dubois.
+Our text file will look like:</p></div>
+<div class="literalblock"><div class="content"><pre>Source,Target
+"Dubois, Jeremy "Danger"","Jeremy,Jennifer"
+"Rodriguez, Valerian","Dubois, Jeremy "Danger""</pre></div></div>
+<div class="paragraph"><p>These extra " " will make the Gephi import break:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/import-spreadsheet-4-en.png" alt="import spreadsheet 4 en" height="100%" /></div><div class="title">Figure 72. The import bugs - the middle name has disappeared</div></section>
+<section><div class="paragraph"><p>The solution consists in <strong>adding an extra double quote in front of the double quotes</strong>.
+Our text file will look like:</p></div>
+<div class="literalblock"><div class="content"><pre>Source,Target
+"Dubois, Jeremy ""Danger""","Jeremy,Jennifer"
+"Rodriguez, Valerian","Dubois, Jeremy ""Danger"""</pre></div></div>
+<div class="paragraph"><p>This time, Gephi imports the network correctly:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/import-spreadsheet-3-en.png" alt="import spreadsheet 3 en" height="100%" /></div><div class="title">Figure 73. Importing node labels containing double quotes</div></section>
+<section><h3>Importing more than labels: nodes and edges attributes</h3></section>
+<section><div class="paragraph"><p>To import attributes we will need to proceed differently.</p></div>
+<div class="paragraph"><p>We need 2 text files: one for the list of nodes, one for the list of relations (edges)</p></div>
+<div class="paragraph"><p>An example file with a list of nodes:</p></div>
+<div class="literalblock"><div class="content"><pre>Id,Label,Date of Birth,Place of Birth,Years of experience,Rating <i class="conum" data-value="1"></i><b>(1)</b>
+3,"Dubois, Jeremy ""Danger""",17/09/1980,"Paris",8,9.27
+1,"Jeremy,Jennifer",25/03/1978,"Tampa",8,4.34
+45,"Rodriguez, Valerian",30/04/1985,"Berlin",5,6.66</pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>Nodes <strong>must</strong> have at least an Id and a Label. Don&#8217;t put spaces after the commas</td></tr></table></div>
+<div class="paragraph"><p>An example file with a list of edges:</p></div>
+<div class="literalblock"><div class="content"><pre>Source,Target,Weight,Type,Where first met <i class="conum" data-value="1"></i><b>(1)</b>
+1,45,3,"undirected",London <i class="conum" data-value="2"></i><b>(2)</b></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>Edges <strong>must</strong> have at least a Source and Target. Other fields are optional.</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>"undirected", the alternative is "directed". Directed edges have arrow heads.</td></tr></table></div>
+<div class="paragraph"><p>Let&#8217;s import the list of nodes first. <code>File &#8594; Import Spreadsheet</code></p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Importing-a-list-of-nodes-with-attributes.png" alt="Importing a list of nodes with attributes" height="100%" /></div><div class="title">Figure 74. Importing a list of nodes with attributes</div></section>
+<section><div class="paragraph"><p>in the next screen, we must be careful with a couple of things:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/The-attributes-of-the-nodes.png" alt="The attributes of the nodes" height="100%" /></div><div class="title">Figure 75. The attributes of the nodes</div></section>
+<section><div class="paragraph"><p>Then we can import the file with the list of relations. <code>File &#8594; Import Spreadsheet</code></p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Importing-a-list-of-edges-with-attributes.png" alt="Importing a list of edges with attributes" height="100%" /></div><div class="title">Figure 76. Importing a list of edges with attributes</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/The-attributes-of-the-edges.png" alt="The attributes of the edges" height="100%" /></div><div class="title">Figure 77. The attributes of the edges</div></section>
+<section><h3>Memo card</h3></section>
+<section><div class="paragraph"><p>Nodes</p></div>
+<div class="ulist"><ul><li><p>header must be at least <code>Id,Label</code></p></li></ul></div>
+<div class="paragraph"><p>Edges</p></div>
+<div class="ulist"><ul><li><p>header must be at least <code>Source,Target</code></p></li><li><p>To have an attribute for the "thickness" or "strength" of a relation, this attribute must be called "Weight".</p></li><li><p>Want arrows on your links? Add an attribute "Type", with value "Directed"</p></li><li><p>Don&#8217;t wan&#8217;t arrows? Add an attribute "Type", with value "Undirected"</p></li></ul></div>
+<div class="paragraph"><p>Types of attributes: which to choose?</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/import-spreadsheet-9-en.png" alt="import spreadsheet 9 en" height="100%" /></div><div class="title">Figure 78. Kinds of attributes</div></section>
+<section><div class="ulist"><ul><li><p>Textual attribute: <code>String</code>. Nodes sharing the same textual value can be colored the same, or filtered together&#8230;&#8203;</p></li><li><p>Numerical attribute: <code>Integer</code>, <code>Double</code> or <code>Float</code>. Nodes can be resized according to their value, or colorized in a gradient. Filters can be applied based on the range of values.</p></li><li><p>Boolean attribute: just a <code>true</code> or <code>false</code> value. Useful for filtering out some nodes which are true or false on some parameter.</p></li><li><p>Other types of attributes: not needed for the moment.</p></li></ul></div></section>
+<section><h3>(to be continued)</h3></section>
+<section></section>
+<section><h3>More tutorials on importing data to Gephi</h3></section>
+<section><div class="ulist"><ul><li><p><a href="https://github.com/gephi/gephi/wiki/Import-CSV-Data">The Gephi wiki on importing csv</a></p></li><li><p><a href="https://www.youtube.com/watch?v=3Im7vNRA2ns">Video "How to import a CSV into Gephi" by Jen Golbeck</a></p></li></ul></div>
+<div style="page-break-after: always;"></div></section>
+<section id="_working_with_text_in_gephi"><h2>Working with text in Gephi</h2></section>
+<section><div style="page-break-after: always;"></div></section>
+<section><h3>Presentation of this tutorial</h3></section>
+<section><div class="paragraph"><p>This tutorial explains how to draw "semantic networks" like this one:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/cooccurrences-computer/gephi-result-1-en.png" alt="gephi result 1 en" height="100%" /></div><div class="title">Figure 79. a semantic network</div></section>
+<section><div class="paragraph"><p>We call "semantic network" a visualization where textual items (words, expressions) are connected to each others, like above.</p></div>
+<div class="paragraph"><p>We will see in turn:</p></div>
+<div class="ulist"><ul><li><p>why are semantic networks interesting</p></li><li><p>how to create a semantic network</p></li><li><p>tips and tricks to visualize semantic networks in the best possible way in Gephi</p></li></ul></div></section>
+<section><h3>Why semantic networks?</h3></section>
+<section><div class="paragraph"><p>A text, or many texts, can be hard to summarize.</p></div>
+<div class="paragraph"><p>Drawing a semantic network highlights what are the most frequent terms, how they relate to each other, and reveal the different groups or "clusters" they form.</p></div>
+<div class="paragraph"><p>Often, a cluster of terms characterizes a topic.
+Hence, converting a text into a semantic network helps detecting topics in the text, from micro-topics to the general themes discussed in the documents.</p></div>
+<div class="paragraph"><p>Semantic networks are regular networks, where:</p></div>
+<div class="ulist"><ul><li><p>nodes are words ("USA") or groups of words ("United States of America")</p></li><li><p>relations are, usually, signifying co-occurrences: two words are connected if they appear in the same document, or in the same paragraph, or same sentence&#8230;&#8203; you decide.</p></li></ul></div>
+<div class="paragraph"><p>It means that if you have a textual network, you can visualize it with Gephi just like any other network.</p></div>
+<div class="paragraph"><p>Yet, not everything is the same, and this tutorial provides tips and tricks on why textual data can be a bit different than other data.</p></div></section>
+<section><h3>Choosing what a "term" is in a semantic network</h3></section>
+<section><div class="paragraph"><p>The starting point can be: a term is a single word. So in this sentence, we would have 7 terms:</p></div>
+<div class="literalblock"><div class="content"><pre>My sister lives in the United States (7 words -&gt; 7 terms)</pre></div></div>
+<div class="paragraph"><p>This means that each single term is a meaningful semantic unit.</p></div>
+<div class="paragraph"><p>This approach is simple but not great. Look again at the sentence:</p></div>
+<div class="literalblock"><div class="content"><pre>My sister lives in the United States</pre></div></div>
+<div class="olist arabic"><ol class="arabic"><li><p><code>My</code>, <code>in</code>, <code>the</code> are frequent terms which have no special significance: they should probably be discarded</p></li><li><p><code>United</code> and <code>States</code> are meaningful separately, but here they should probably be considered together: <code>United States</code></p></li><li><p><code>lives</code> is the conjugated form of the verb <code>to live</code>. In a network, it would make sense to regroup <code>live</code>, <code>lives</code> and <code>lived</code> as one single node.</p></li></ol></div>
+<div class="paragraph"><p>Analysts, facing each of these issues, have imagined several solutions:</p></div></section>
+<section><h3>1. Removing "stopwords"</h3></section>
+<section><div class="paragraph"><p>To remove these little terms without informational value, the most basic approach is to keep a list of them, and remove any word from the text which belongs to this list.</p></div>
+<div class="paragraph"><p>You can find a list of these useless terms in many languages, called "stopwords", <a href="http://www.ranks.nl/stopwords/">on this website</a>.</p></div></section>
+<section><h3>2. Considering "n-grams"</h3></section>
+<section><div class="paragraph"><p>So, <code>United States</code> should probably be a meaningful unit, not just <code>United</code> and <code>States</code>.
+Because <code>United States</code> is composed of 2 terms, it is called a "bi-gram".</p></div>
+<div class="paragraph"><p>Trigrams are interesting as well obviously (eg, <code>chocolate ice cream</code>).</p></div>
+<div class="paragraph"><p>People often stop there, but quadrigrams can be meaningful as well, if less frequent: <code>United States of America</code>, <code>functional magnetic resonance imaging</code>, <code>The New York Times</code>, etc.</p></div>
+<div class="paragraph"><p>Many tools exist to extract n-grams from texts, for example <a href="http://homepages.inf.ed.ac.uk/lzhang10/ngram.html">these programs which are under a free license</a>.</p></div></section>
+<section><h3>2 bis. Considering "noun phrases"</h3></section>
+<section><div class="paragraph"><p>Another approach to go beyond single word terms (<code>United</code>, <code>States</code>) takes a different approach than n-grams. It says:</p></div>
+<div class="literalblock"><div class="content"><pre>"delete all in the text except for groups of words made of nouns and adjectives, ending by a noun"</pre></div></div>
+<div class="paragraph"><p>&#8594; (these are called, a bit improperly, "noun phrases")</p></div>
+<div class="paragraph"><p>Take <code>United States</code>: it is a noun (<code>States</code>) preceded by an adjective (<code>United</code>). It will be considered as a valid term.</p></div>
+<div class="paragraph"><p>This approach is interesting (implemented for example in the software <a href="http://www.vosviewer.com">Vosviewer</a>), but it has drawbacks:</p></div>
+<div class="ulist"><ul><li><p>you need to detect adjectives and nouns in your text. This is language dependent (French put adjectives after nouns, for instance), and the processing is slow for large corpora.</p></li><li><p>what about verbs, and noun phrases comprising non adjectives, such as "United States <strong>of</strong> America"? These are not going to be included in the network.</p></li></ul></div></section>
+<section><h3>3. Stemming and lemmatization</h3></section>
+<section><div class="paragraph"><p><code>live</code>, <code>lives</code>, <code>lived</code>: in a semantic network, it is probably useless to have 3 nodes, one for each of these 3 forms of the same root.</p></div>
+<div class="ulist"><ul><li><p>Stemming consists in chopping the end of the words, so that here, we would have only <code>live</code>.</p></li><li><p>Lemmatization is the same, but in a more subtle way: it takes grammar into account. So, "good" and better" would be reduced to "good" because there is the same basic semantic unit behind these two words, even if their lettering differ completely.</p></li></ul></div>
+<div class="paragraph"><p>A tool performing lemmatization is <a href="https://textgrid.de/en/">TextGrid</a>.
+It has many functions for textual analysis, and lemmatization <a href="https://wiki.de.dariah.eu/display/TextGrid/The+Lemmatizer+Tool">is explained there</a>.</p></div></section>
+<section><h3>Should we represent all terms in a semantic network?</h3></section>
+<section><div class="paragraph"><p>We have seen that some words are more interesting than others in a corpus:</p></div>
+<div class="ulist"><ul><li><p>stopwords should be removed,</p></li><li><p>some varieties of words (<code>lived</code>, <code>lives</code>) could be grouped together (<code>live</code>).</p></li><li><p>sequences of words (<code>baby phone</code>) can be added because they mean more than their words taken separately (<code>baby</code>, <code>phone</code>)</p></li></ul></div>
+<div class="paragraph"><p>Once this is done, we have transformed the text into plenty of words to represent. Should they all be included in the network?</p></div>
+<div class="paragraph"><p>Imagine we have a word appearing just once, in a single footnote of a text long of 2,000 pages.
+Should this word appear? Probably not.</p></div>
+<div class="paragraph"><p>Which rule to apply to keep or leave out a word?</p></div></section>
+<section><h3>1. Start with: how many words can fit in your visualization?</h3></section>
+<section><div class="paragraph"><p>A starting point can be the number of words you would like to see on a visualization. <strong>A ball park figure is 300 words max</strong>:</p></div>
+<div class="ulist"><ul><li><p>it already fills in all the space of a computer screen.</p></li><li><p>300 words provides enough information to allow micro-topics of a text to be distinguished</p></li></ul></div>
+<div class="paragraph"><p>More words can be crammed in a visualization, but in this case the viewer would have to take time zooming in and out, panning to explore the visualization.
+The viewer transforms into an analyst, instead of a regular reader.</p></div></section>
+<section><h3>2. Representing only the most frequent terms</h3></section>
+<section><div class="paragraph"><p>If ~ 300 words would fit in the visualization of the network, and the text you start with contains 5,000 different words: which 300 words should be selected?</p></div>
+<div class="paragraph"><p>To visualize the semantic network <strong>for a long, single text</strong> the straightforward approach consists in picking the 300 most frequent words (or n-grams, see above).</p></div>
+<div class="paragraph"><p>In the case of a collection of texts to visualize (several documents instead of one), two possibilities:</p></div>
+<div class="olist arabic"><ol class="arabic"><li><p>Either you also take the most frequent terms across these documents, like before</p></li><li><p>Or you can apply a more subtle rule called "tf-idf", detailed below.</p></li></ol></div>
+<div class="paragraph"><p>The idea with tf-idf is that terms which appear in all documents are not interesting, because they are so ubiquitous.</p></div>
+<div class="paragraph"><p>Example: you retrieve all the webpages mentioning the word <code>Gephi</code>, and then want to visualize the semantic network of the texts contained in these webpages.</p></div>
+<div class="paragraph"><p>&#8594; by definition, all these webpages will mention Gephi, so Gephi will probably be the most frequent term.</p></div>
+<div class="paragraph"><p>&#8594; so your network will end up with a node "Gephi" connected to many other terms, but you actually knew that. Boring.</p></div>
+<div class="paragraph"><p>&#8594; terms used in all web pages are less interesting to you than terms which are used frequently, but not uniformly accross webpages.</p></div>
+<div class="paragraph"><p>Applying the tf-idf correction will highlight terms which are frequently used within some texts, but not used in many texts.</p></div>
+<div class="paragraph"><p>(to go further, here is a webpage giving a simple example: <a href="http://www.tfidf.com/" class="bare">http://www.tfidf.com/</a>)</p></div>
+<div class="paragraph"><p>So, should you visualize the most frequent words in your corpus, or the words which rank highest according to tf-idf?</p></div>
+<div class="paragraph"><p>Both are interesting, as they show a different info. I&#8217;d suggest that the simple frequency count is easier to interpret.</p></div>
+<div class="paragraph"><p>tf-idf can be left for specialists of the textual data under consideration, after they have been presented with the simple frequency count version.</p></div></section>
+<section><h3>Computing connections (edges) in the network</h3></section>
+<section><div class="paragraph"><p>We now have extracted the most interesting / meaningful terms from the text.
+How to decide which connections make sense between them?</p></div></section>
+<section><h3>1. Co-occurrences</h3></section>
+<section><div class="paragraph"><p>Connections between terms are usually drawn from co-occurrences: two terms will be connected if they  appear next to each other in some pre-defined unit of text:</p></div>
+<div class="ulist"><ul><li><p>in the same sentence</p></li><li><p>in the same paragraph</p></li><li><p>in the same document (if the corpus is made of several documents)</p></li></ul></div>
+<div class="paragraph"><p>(note on vocabulary: in the following, we will call this a "unit of text").</p></div>
+<div class="paragraph"><p>For example, in bibliometrics (the study of the publications produced by scientists), this could give:</p></div>
+<div class="ulist"><ul><li><p>collect <strong>abstracts</strong> (short summaries) of all scientific articles discussing "nano-technologies".</p></li><li><p>so, abstracts are our units of text here.</p></li><li><p>two terms will be connected if they frequently appear <strong>in the same abstracts</strong>.</p></li></ul></div></section>
+<section><h3>2. What "weight" for the edges?</h3></section>
+<section><div class="paragraph"><p>An edge between two terms will have:</p></div>
+<div class="ulist"><ul><li><p>weight of "1" if these two terms co-occur in just one unit of text.</p></li><li><p>weight of "2" if they co-occur in two units of text.</p></li><li><p>etc&#8230;&#8203;</p></li></ul></div>
+<div class="paragraph"><p>The logic is simple, and yet there are some refinements to discuss. It will be up to you to decide what&#8217;s preferable:</p></div>
+<h4>If 2 terms appear several times <strong>in a given unit of text</strong>, should their co-occurences be counted several times?</h4></section>
+<section><div class="paragraph"><p>An example to clarify. Let&#8217;s imagine that we are interested in webpages discussing nanotechnology.
+We want to draw the semantic network of the vocabulary used in these web pages.</p></div>
+<div class="paragraph"><p>A co-occurrence is: when 2 terms are used on the same web page.</p></div>
+<div class="paragraph"><p>Among the pages we collected, there is the Wikipedia page discussing nanotechnology:</p></div>
+<div class="quoteblock"><blockquote><div class="paragraph"><p><span class="red">Nanotechnology</span> ("nanotech") is manipulation of matter on an atomic, <span class="blue">molecular</span>, and supramolecular scale.
+The earliest, widespread description of <span class="red">nanotechnology</span> referred to the particular technological goal of precisely manipulating atoms and molecules for fabrication of macroscale products, also now referred to as <span class="blue">molecular</span> <span class="red">nanotechnology</span></p></div></blockquote><div class="attribution">&#8212; <a href="https://en.wikipedia.org/wiki/Nanotechnology">Wikipedia</a></div></div>
+<div class="paragraph"><p>The question is:</p></div>
+<div class="ulist"><ul><li><p>should I count only <strong>one</strong> co-occurrence between <code>molecular</code> and <code>nanotechnology</code>, because it happened on this one web page?</p></li><li><p>or should I consider that <code>molecular</code> appears twice on this page, and <code>nanotechnology</code> three times, so <strong>multiple</strong> co-occurrences between these 2 terms should be counted, just on this page already?</p></li></ul></div>
+<div class="paragraph"><p>There is no exact response, and you can experiment with both possibilities.</p></div>
+<h4>If two terms are very frequent, is their co-occurrence really of interest?</h4></section>
+<section><div class="paragraph"><p>Example:</p></div>
+<div class="paragraph"><p>Chun-Yuen Teng, Yu-Ru Lin and Lada Adamic have studied (using Gephi!) <a href="https://arxiv.org/abs/1111.3919">the pairing of ingredients in cooking recipes</a>.</p></div>
+<div class="paragraph"><p>So, in their study the unit of text was the "recipe", and the terms in the semantic network where ingredients in all these recipes.</p></div>
+<div class="paragraph"><p>Just because they are so common, some ingredients (like <code>flour</code>, <code>sugar</code>, <code>salt</code>) are bound to appear more frequently in the same recipes (to co-occur), than infrequent ingredients.</p></div>
+<div class="paragraph"><p>The authors of this study chose to highlight <strong>complementary ingredients</strong>: some ingredients appear often used together in the same recipes, <em>even if they are ingredients which are quite rarely used</em>.</p></div>
+<div class="paragraph"><p>"Complementary" here means that these ingredients have some interesting relationship: when one is used, the other "must" be used as well.</p></div>
+<div class="paragraph"><p>If we just count co-occurrences, this special relationship between infrequent complementary ingredients will be lost: by definition, 2 infrequent ingredients can&#8217;t co-occurr often.</p></div>
+<div class="paragraph"><p>To fix this, a solution consists in comparing how many times the 2 ingredients co-occur, with how frequent they are in all recipes:</p></div>
+<div class="paragraph"><p>&#8594; ingredients co-occurring <em>each and every time they are used</em> will have a large edge weight,</p></div>
+<div class="paragraph"><p>&#8594; ingredients co-occuring many times, <em>but also appearing many times in different recipes</em>, will get a low edge weight.</p></div>
+<div class="paragraph"><p>A simple formula does this operation. For ingredients A and B:</p></div>
+<div class="literalblock"><div class="content"><pre>weight of edge between A and B =
+nb of recipes where A &amp; B co-occur
+divided by
+(total nb of recipes where A appear x total nb of recipes where B appear)</pre></div></div>
+<div class="paragraph"><p>Logs are often added to this formula, which is called "Pointwise mutual information":</p></div>
+<div class="stemblock"><div class="content">\$PMI = log((p(A, B)) /(p(A) p(B)))\$</div></div>
+<div class="paragraph"><p>We now have nodes and their relations: a semantic network. Let&#8217;s see now how to visualize it in Gephi.</p></div></section>
+<section><h3>Visualizing semantic networks with Gephi</h3></section>
+<section></section>
+<section><h3>1. Downloading a dataset for this tutorial</h3></section>
+<section><div class="paragraph"><p>We need a dataset to practice. This is a semantic network of 250 terms and 19,613 relations:</p></div>
+<div class="paragraph"><p><a href="../resources/semantic-networks/pubmed_abstracts_network.zip">download this zip file</a> and unzip it on your computer.</p></div>
+<div class="paragraph"><p>The network was built from the short summaries ("abstracts") of 1484 research articles from the PubMed database of scientific reports, retrieved by conducting this query:</p></div>
+<div class="paragraph"><p>"social neuroscience" OR "neuroeco*" OR "decision neuroscience"</p></div>
+<div class="paragraph"><p>&#8594; The query can be see <a href="https://www.ncbi.nlm.nih.gov/pubmed?term=(%22social%20neuroscience%22%20OR%20%22neuroeco*%22%20OR%20%22decision%20neuroscience%22)">online here</a>.
+(it comprises more than 1484 results, because some articles have no abstract).</p></div>
+<div class="paragraph"><p>We used <a href="https://github.com/seinecle/Cowo">Cowo</a> to create the network from these 1484 short pieces of text, based on co-occurrences.</p></div>
+<div class="ulist"><ul><li><p>Open the file inside the zip (<code>pubmed_abstracts_network.gml</code>) in Gephi:</p></li></ul></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/semantic-import-1-en.png" alt="semantic import 1 en" height="100%" /></div><div class="title">Figure 80. First view of the network</div></section>
+<section><div class="paragraph"><p>Several steps will make this network intelligible</p></div>
+<div class="olist arabic"><ol class="arabic"><li><p>Showing the labels of the nodes:</p></li></ol></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/showing-node-labels.png" alt="showing node labels" height="100%" /></div><div class="title">Figure 81. showing node labels</div></section>
+<section><div class="olist arabic"><ol class="arabic" start="2"><li><p>Making the edges (relations) invisible, because they clutter the view</p></li></ol></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/hiding-edges.png" alt="hiding edges" height="100%" /></div><div class="title">Figure 82. hiding edges</div></section>
+<section><div class="olist arabic"><ol class="arabic" start="3"><li><p>Reducing node size to the minimum (0.5) because we just need labels</p></li></ol></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/semantic-resize-nodes1-en.png" alt="semantic resize nodes1 en" height="100%" /></div><div class="title">Figure 83. Making nodes disappear</div></section>
+<section><div class="olist arabic"><ol class="arabic" start="4"><li><p>Detect communities with the "modularity" function in the statistics panel</p><div class="literalblock"><div class="content"><pre>see tutorial 'simple project from A to Z' for this step</pre></div></div></li></ol></div>
+<div class="olist arabic"><ol class="arabic" start="5"><li><p>Give a different color to each community</p></li></ol></div>
+<div class="paragraph"><p>&#8594; each group of terms, distinguished by a color, will represent a topic.</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/semantic-coloring-communities-1-en.png" alt="semantic coloring communities 1 en" height="100%" /></div><div class="title">Figure 84. Coloring nodes - first step</div></section>
+<section><div class="olist arabic"><ol class="arabic" start="6"><li><p>We then need to assign this node color to their labels:</p></li></ol></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Coloring-nodes---second-step.png" alt="Coloring nodes   second step" height="100%" /></div><div class="title">Figure 85. Coloring nodes - second step</div></section>
+<section><div class="olist arabic"><ol class="arabic" start="7"><li><p>Spatializing the network with Force Atlas 2 will place related terms next to each other, because they co-occur:</p></li></ol></div>
+<div class="paragraph"><p>Some parameters have been modified:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/semantic-spatializing-1-en.png" alt="semantic spatializing 1 en" height="100%" /></div><div class="title">Figure 86. Spatializing the network</div></section>
+<section><div class="olist arabic"><ol class="arabic" start="8"><li><p>The network so far:</p></li></ol></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/semantic-spatializing-2-en.png" alt="semantic spatializing 2 en" height="100%" /></div><div class="title">Figure 87. The network - colored and spatialized</div></section>
+<section><div class="olist arabic"><ol class="arabic" start="9"><li><p>Apply 2 more layouts to enhance readability:</p><div class="ulist"><ul><li><p>"Expansion" to spread nodes (just select it and click on Run a couple of times)</p></li><li><p>"Label Adjust" to move labels around so that they don&#8217;t overlap</p></li></ul></div></li></ol></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/semantic-spatializing-3-en.png" alt="semantic spatializing 3 en" height="100%" /></div><div class="title">Figure 88. Spreading labels</div></section>
+<section><div class="olist arabic"><ol class="arabic" start="10"><li><p>Switching to the preview panel</p><div class="ulist"><ul><li><p>A number of parameters must be modified (to show Labels, hide edges, etc.)</p></li></ul></div></li></ol></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/semantic-preview-1-en.png" alt="semantic preview 1 en" height="100%" /></div><div class="title">Figure 89. The preview panel</div></section>
+<section><div class="paragraph"><p>The network is now ready to be exported to pdf, png or svg file formats.</p></div></section>
+<section><h3>More tutorials on working with semantic networks</h3></section>
+<section><div class="paragraph"><p>Other software / web apps to visualize texts as networks:</p></div>
+<div class="ulist"><ul><li><p><a href="http://textexture.com/" class="bare">http://textexture.com/</a></p></li><li><p><a href="http://www.vosviewer.com/" class="bare">http://www.vosviewer.com/</a></p></li></ul></div>
+<div style="page-break-after: always;"></div></section>
+<section id="_plugins_for_gephi"><h2>Plugins for Gephi</h2><section><div style="page-break-after: always;"></div>
+<div style="page-break-after: always;"></div></section>
+<section id="_creating_a_network_from_a_table_of_cooccurring_items"><h2>Creating a network from a table of cooccurring items</h2></section>
+<section><div style="page-break-after: always;"></div></section>
+<section><h3>Presentation of the plugin</h3></section>
+<section><div class="paragraph"><p>This plugin is created by <a href="https://www.clementlevallois.net">Clement Levallois</a>.</p></div>
+<div class="paragraph"><p>It converts a spreadsheet or a csv file into a network.</p></div>
+<div class="paragraph"><p>This plugin enables you to:</p></div>
+<div class="ulist"><ul><li><p>Start from a data table in Excel or csv format</p></li><li><p>In the data table, each row describes an "occurrence" (of an event, a purchase, a relation, etc.)</p></li><li><p>In columns A, B, C, D, we have the entities involved: column A for persons, column B for what they bought, etc.</p></li><li><p>Connections will be created between entities, when they appear in the same occurrence (so, when they are on thee same row)</p></li><li><p>Occurrences can have dates, multiple instances of an entity can be listed in a given column.</p></li></ul></div></section>
+<section><h3>1. The input</h3></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/cooccurrences-computer/excel-1-en.png" alt="excel 1 en" height="100%" /></div><div class="title">Figure 90. An Excel file</div></section>
+<section></section>
+<section><h3>2. The output</h3></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/cooccurrences-computer/gephi-result-1-en.png" alt="gephi result 1 en" height="100%" /></div><div class="title">Figure 91. Resulting network</div></section>
+<section><h3>Installing the plugin</h3></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Choose-the-menu-Tools-then-Plugins.png" alt="Choose the menu Tools then Plugins" height="100%" /></div><div class="title">Figure 92. Choose the menu Tools then Plugins</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Click-on-the-tab-Available-Plugins.png" alt="Click on the tab Available Plugins" height="100%" /></div><div class="title">Figure 93. Click on the tab Available Plugins</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Install-the-plugin-and-restart-Gephi.png" alt="Install the plugin and restart Gephi" height="100%" /></div><div class="title">Figure 94. Install the plugin and restart Gephi</div></section>
+<section><h3>Opening the plugin</h3></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Open-the-plugin-via-the-menu-File---Import.png" alt="Open the plugin via the menu File   Import" height="100%" /></div><div class="title">Figure 95. Open the plugin via the menu File - Import</div></section>
+<section><h3>Using the plugin</h3></section>
+<section></section>
+<section><h3>2nd panel</h3></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Select-a-file.png" alt="Select a file" height="100%" /></div><div class="title">Figure 96. Select a file</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/cooccurrences-computer/excel-2-en.png" alt="excel 2 en" height="100%" /></div><div class="title">Figure 97. A file without headers</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/cooccurrences-computer/excel-1-en.png" alt="excel 1 en" height="100%" /></div><div class="title">Figure 98. A file with headers</div></section>
+<section><div class="paragraph"><p>To describe the next screens of the plugin, we will take the example of <strong>the Excel file just shown</strong>, with headers.</p></div></section>
+<section><h3>3rd panel</h3></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/cooccurrences-computer/plugin-panels-1-en.png" alt="plugin panels 1 en" height="100%" /></div><div class="title">Figure 99. Which entities should be the nodes?</div></section>
+<section><div class="paragraph"><p>What does this panel mean?</p></div>
+<div class="paragraph"><p>If you look back at the Excel file, you see that we have "Clients" and their "Purchases".</p></div>
+<div class="paragraph"><p>&#8594; This means we can build 2 different types of networks, depending on our needs:</p></div>
+<div class="olist arabic"><ol class="arabic"><li><p>A network showing clients and products, with relations representing purchases from a client to a product.</p></li></ol></div>
+<div class="imageblock" style=""><img src="../images/client-to-product.png" alt="client to product" /></div>
+<div class="paragraph"><p>To create this kind of networks, choose "Client" in the upper window, and "Purchases" in the lower window of the plugin screen.</p></div>
+<div class="olist arabic"><ol class="arabic" start="2"><li><p>Or a network where 2 products are connected, if one client puchased them together.</p></li></ol></div>
+<div class="imageblock" style=""><img src="../images/product-to-product.png" alt="product to product" /></div>
+<div class="paragraph"><p>To create this kind of networks, choose "Purchases" in the upper <span class="underline">and</span> lower windows of the plugin screen.</p></div></section>
+<section><h3>4th panel</h3></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/cooccurrences-computer/subfield-delimiter-en.png" alt="subfield delimiter en" height="100%" /></div><div class="title">Figure 100. Choosing which delimiter is used</div></section>
+<section><div class="paragraph"><p>This 3rd panel asks: in our Excel file, how are different items separated in a given cell?
+In our example, we have used commas: the lists of products purchased are comma-separated:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/commas-shown-in-red.png" alt="commas shown in red" height="100%" /></div><div class="title">Figure 101. commas shown in red</div></section>
+<section></section>
+<section><h3>5th panel</h3></section>
+<section><div class="paragraph"><p>This panel allows you to specify whether the relations are dynamic in time, or not.</p></div>
+<div class="paragraph"><p>In this case, you need an extra column (column C), where a date is shown. We don&#8217;t cover this case here.</p></div>
+<div class="paragraph"><p>(read the tutorials on dynamic networks for a starter)</p></div></section>
+<section><h3>6th panel</h3></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/cooccurrences-computer/panel-6-1-en.png" alt="panel 6 1 en" height="100%" /></div><div class="title">Figure 102. Options panel</div></section>
+<section><div class="literalblock"><div class="content"><pre>"Create links between Purchases agents and links between Purchase agents"</pre></div></div>
+<div class="paragraph"><p>&#8594; If you chose a Product &#8592;&#8594; Product kind of network in panel 3, then of course you are interested in links between products. <strong>Check the box</strong>.</p></div>
+<div class="paragraph"><p>&#8594; But if you chose a Client &#8592;&#8594; Product kind of network  in panel 3, what you need is less obvious.</p></div>
+<div class="paragraph"><p>Let&#8217;s take the example of client I, who purchased a table and some chairs:</p></div>
+<div class="olist arabic"><ol class="arabic"><li><p>Checking the box will create a network where:</p></li></ol></div>
+<div class="imageblock" style=""><img src="../images/inner-links-included.png" alt="inner links included" /></div>
+<div class="olist arabic"><ol class="arabic"><li><p><strong>Not</strong> checking the box will create a network where:</p></li></ol></div>
+<div class="imageblock" style=""><img src="../images/inner-links-excluded.png" alt="inner links excluded" /></div>
+<div class="literalblock"><div class="content"><pre>"Remove duplicates"</pre></div></div>
+<div class="paragraph"><p>&#8594; Check this option if your Excel or csv file has duplicate rows that you&#8217;d like to be removed</p></div>
+<div class="literalblock"><div class="content"><pre>"Remove self-loops"</pre></div></div>
+<div class="paragraph"><p>If a Client has purchased tables twice, so that we have "table, table" in a cell: this would create a link from table to table (a <strong>self loop</strong>).</p></div>
+<div class="paragraph"><p>&#8594; Check this option if you&#8217;d like self loops to be removed.</p></div></section>
+<section><h3>7th panel</h3></section>
+<section><div class="paragraph"><p>This panel recaps all the settings. Click on finish to create the network.</p></div>
+<div style="page-break-after: always;"></div></section>
+<section id="_k_partite_and_bipartite_graph_multimode_networks_transformations"><h2>K-partite and Bipartite Graph (Multimode Networks Transformations)</h2></section>
+<section><div style="page-break-after: always;"></div></section>
+<section><h3>Author and documentation</h3></section>
+<section><div class="paragraph"><p>The Multimode Networks Transformations plugin allows you transform a k-partite graph into a mono-partite graph.</p></div>
+<div class="paragraph"><p>Official page of the plugin: <a href="https://gephi.org/plugins//plugin/semantic">https://gephi.org/plugins//plugin/semantic</a></p></div>
+<div class="paragraph"><p>Plugin Author: <a href="https://github.com/jaroslav-kuchar">Jaroslav Kuchar</a></p></div>
+<div class="paragraph"><p>Plugin sources: <a href="https://github.com/totetmatt/gephi-plugins/tree/multimode-network">https://github.com/totetmatt/gephi-plugins/tree/multimode-network</a></p></div>
+<div class="paragraph"><p>Licensed under: GNU GENERAL PUBLIC LICENSE</p></div></section>
+<section><h3>K-partite, Bipartite … What is it ?</h3></section>
+<section><div class="paragraph"><p>Most of the time, when you create a graph, all the nodes are representing the same « kind » of object.</p></div>
+<div class="ulist"><ul><li><p>In a Social Network: Persons</p></li><li><p>In a Route Network: Bus Stops, Airports, Stations etc…</p></li><li><p>In a Geographical Network: Countries</p></li></ul></div>
+<div class="paragraph"><p>But sometimes, you will encounter graphs that will have 2, 3 or multiple « kinds » of nodes where the links are almost exclusively going from one type to the other.
+These
+graphs are called <strong>Multipartite Graphs</strong> :</p></div>
+<div class="ulist"><ul><li><p>If you have <strong>2</strong> kinds of nodes, it’s a <strong>Bi</strong>partite Graph (or <strong>2</strong>-partite)</p><div class="ulist"><ul><li><p>Example : Social Network : Persons &lt; - &gt; Companies</p></li></ul></div></li></ul></div>
+<div class="ulist"><ul><li><p>If you have <strong>3</strong> kinds of nodes it’s a<strong> 3</strong>-partite Graph</p><div class="ulist"><ul><li><p>Example : Movie Network : Actors &lt; - &gt; Movies &lt; - &gt; Movie Companies</p></li></ul></div></li></ul></div>
+<div class="ulist"><ul><li><p>If you have <strong>k</strong> kinds of nodes it’s a <strong>k</strong>-partite Graph</p></li></ul></div>
+<div class="paragraph"><p>If you want a proper scientific definition, you can check the <a href="https://en.wikipedia.org/wiki/Multipartite_graph">Wikipedia</a> page about the subject.</p></div></section>
+<section><h3>The Dataset</h3></section>
+<section><div class="paragraph"><p>We will use a well known data set : The Cac 40 Administrators relationship from <a href="http://www.citoyennumerique.fr/?tag=cac40">www.citoyennumerique.fr.</a></p></div>
+<div class="paragraph"><p>The files for Gephi are accessible here : link::../../resources/k-partite-bi-partite.zip[Gexf files]</p></div>
+<div class="paragraph"><p>The tutorial will be based on the <strong>SimpleGraph</strong>, but you also have access to the <strong>FullGraph</strong> to play with.</p></div>
+<div class="paragraph"><p>The CAC 40 represents the 40 most valuable company on the french stock market. A <strong>company</strong> has several <strong>administrators </strong> and nothing prevent an <strong>administrator</strong> to be in multiple <strong>companies</strong>. So the graph is build such as <strong>companies</strong> are sources of edges and targets are the <strong>administrators</strong>.</p></div>
+<div class="paragraph"><p>This is a typical bi-partite graph. If you look on the data, part of the node has a property type <strong>Administrator</strong> and the other part has a property type <strong>Company</strong>.</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/k-partite/k-partite-simple-graph.png" alt="k partite simple graph" height="100%" /></div><div class="title">Figure 103. Cac 40 bipartite graph</div></section>
+<section><div class="paragraph"><p>We can get quick observations:</p></div>
+<div class="ulist"><ul><li><p>Filtering by InDegree, we can check that Michel Pebereau and Jean-Martin Folz are in <strong>5 companies</strong> at the same time.</p></li><li><p>Filtering by OutDegree, we can check that St-Gobain and Total have <strong>8 administrators</strong> that are in other companies.</p></li></ul></div>
+<div class="paragraph"><p>But that could be done without graph, an ordered list on excel would have done the job.</p></div></section>
+<section><h3>How to deal with multipartite graphs ?</h3></section>
+<section><div class="paragraph"><p>Having a k-partite graph makes somehow the graph unfriendly to read. Usually, the metrics will be difficult to interpret, and
+generating a good visualisation from it won&#8217;t be trivial.</p></div>
+<div class="paragraph"><p>One method here is to <strong>reduce</strong> the <strong>bi-partite</strong> graph into a <strong>mono-partite</strong> graph.</p></div>
+<div class="quoteblock"><blockquote><div class="paragraph"><p>By reducing, we will « lose » information but we gain in <strong>readability</strong> and <strong>synthesis</strong>,
+that’s part of the work in data visualisation to see at which level we
+want to go and how to deal with this trade of information. This will
+mostly be driven by the question you want to answer.</p></div></blockquote></div>
+<div class="paragraph"><p>The principle of the reduction is to consider a type of <strong>nodes</strong> as <strong>edges</strong> and build a new graph based on this rule.
+In our example we have 2 ways to go:</p></div>
+<div class="ulist"><ul><li><p>Either we decide that the nodes of type « Company  » are the edges. It will generate a "<strong>graph</strong> of <strong>Persons </strong>"</p></li><li><p>Either we decide that the nodes of type « Person  » are the edges. It will generate a "<strong>graph</strong> of <strong>Company </strong>"</p></li></ul></div>
+<div class="quoteblock"><blockquote><div class="paragraph"><p>Here both graphs generated makes « sense » (network of
+entities) but it might appear that in some other case, one of the generated graphs won&#8217;t really be 'interesting'.
+ That’s part of your work to judge this aspect.</p></div></blockquote></div>
+<div class="paragraph"><p>Now, how to perform the transformation?</p></div></section>
+<section><h3>Using a Plugin</h3></section>
+<section><div class="paragraph"><p>The easiest way is to use the link::https://marketplace.gephi.org/plugin/multimode-networks-transformations-2/[Multimode Network Transformation plugin].
+The plugin is available on the Gephi app market and in the plugin manager in Gephi.</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/k-partite/k-partite-install-plugin.png" alt="k partite install plugin" height="100%" /></div><div class="title">Figure 104. Plugin Install</div></section>
+<section><div class="paragraph"><p>When it’s installed, you should be able to see or display the <strong> Multimode Network Transformation</strong> tab.</p></div>
+<div class="paragraph"><p>Then, load the graph and:</p></div>
+<div class="ulist"><ul><li><p>Click on <strong>Load Attributes</strong> and select <strong>Type</strong> on <strong>Attribute Type.</strong></p></li><li><p>For left matrix select <strong>Administrator – Company</strong>  and right matrix <strong>Company – Adminstrator</strong></p></li><li><p>Enable <strong>Remove Edges</strong> and<strong> Remove Nodes</strong>, and Click** Run</p></li></ul></div>
+<div class="quoteblock"><blockquote><div class="paragraph"><p>The plugin will modify directly the graph on the current workspace. If you want to keep the original graph, be sure
+you have copied your workspace.</p></div></blockquote></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/k-partite/k-partite-config.png" alt="k partite config" height="100%" /></div><div class="title">Figure 105. MultiPartite_Gephi</div></section>
+<section><div class="paragraph"><p>The plugins will actually to transform each relation like:</p></div>
+<div class="paragraph"><p>(Administrator)<strong>&#8592;</strong>(Company)<strong>&#8594;</strong>(Administrator)</p></div>
+<div class="paragraph"><p>to</p></div>
+<div class="paragraph"><p>(Administrator)<strong>&#8592;[</strong>{weight=Nb of Common Companies}<strong>]&#8594;</strong>(Administrator)</p></div>
+<div class="paragraph"><p>Now you should have a graph with only administrators on the graph preview.</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/k-partite/k-partite-simple-p2p.png" alt="k partite simple p2p" height="100%" /></div><div class="title">Figure 106. Tuto_Multi_P2P</div></section>
+<section><div class="paragraph"><p>To generate the relation between companies, replay the same steps
+from the original graph (duplicate the workspace0 again) and in the <strong>Multimode Network Transformation</strong> use :</p></div>
+<div class="ulist"><ul><li><p>Left Matrix : Company – Administrator</p></li><li><p>Right Matrix : Administrator – Company</p></li></ul></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/k-partite/k-partite-config-2.png" alt="k partite config 2" height="100%" /></div><div class="title">Figure 107. MultiPartite_Gephi_2</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/k-partite/k-partite-simple-c2c.png" alt="k partite simple c2c" height="100%" /></div><div class="title">Figure 108. Tuto_Multi_C2C</div></section>
+<section><div class="paragraph"><p>With the 2 new graphs, and playing with the weighted degree of the nodes, we are able to see some particularities:</p></div>
+<div class="ulist"><ul><li><p>The maximum of <strong>common administrator</strong> between company is <strong>3</strong>: Bouygues and Alstom with Olivier Bouygues, Patrick Kron, Georges Chodron de Courcel</p></li><li><p><strong>Half of the companies</strong> are sharing at least 2 administrators.</p></li><li><p>The maximum of <strong>common company</strong> between person is <strong>3</strong>: Gerard Lamarche and Paul Demaray Jr see each other in Total, GDF Suez and Lafarge SA.</p></li><li><p>From all administrators that are in at least 2 companies,<strong> 1/3 of them are at least in the <em>same</em> 2 companies</strong>.</p></li></ul></div>
+<div class="paragraph"><p>Theses statements could have been deduced from the original graph, but now, the information is more visible and accessible, especially if you want to share it to a large public.</p></div>
+<div class="quoteblock"><blockquote><div class="paragraph"><p>The next steps are now mostly to look at graphs, and summarize all
+ the particularities into some kind of output (poster, interactive graph,
+newspaper etc…)</p></div></blockquote></div></section>
+<section><h3>Limitations</h3></section>
+<section><div class="paragraph"><p>The plugin works quite well, but sometimes it has some limitation on large graphs. Or sometimes you may want to reduce your graph and have a custom metric computed.
+Then the only alternative to that is to use a script that will generate the graph for you.</p></div></section>
+<section><h3>Benefits</h3></section>
+<section><div class="paragraph"><p>Multipartite graphs are complex to analyse, but synthesizing them to lower partite graphs gives you a better vision and insights about your data.</p></div>
+<div style="page-break-after: always;"></div></section>
+<section id="_semantic_web_importer"><h2>Semantic Web Importer</h2></section>
+<section><div style="page-break-after: always;"></div></section>
+<section><h3>Author and documentation</h3></section>
+<section><div class="paragraph"><p>The Semantic Web Importer plugin allows you to query a SPARQL endpoint and represent the result as a graph in Gephi.</p></div>
+<div class="paragraph"><p>Official page of the plugin: <a href="https://gephi.org/plugins/#/plugin/semantic" class="bare">https://gephi.org/plugins/#/plugin/semantic</a></p></div>
+<div class="paragraph"><p>Plugin Author: <a href="https://github.com/ErwanDemairy">Erwan Demairy</a></p></div>
+<div class="paragraph"><p>Plugin sources: <a href="https://scm.gforge.inria.fr/anonscm/git/segviz-public/gephi-plugins.git/">git://scm.gforge.inria.fr/segviz-public/gephi-plugins.git</a></p></div>
+<div class="paragraph"><p>Licensed under: <a href="http://www.cecill.info/licences/Licence_CeCILL-C_V1-en.html">Cecill-C</a></p></div></section>
+<section><h3>Introduction to concepts</h3></section>
+<section><div class="paragraph"><p>RDF stands for <a href="https://en.wikipedia.org/wiki/Resource_Description_Framework">Resource Description Framework</a> .
+It is a way to represent information of all kinds.
+It is now a specification and since 1995 people are working on RDF and all subjects related to information representation for automatic system.</p></div>
+<div class="paragraph"><p>RDF can be considered as the « Grand Father » of graph representation.</p></div>
+<div class="paragraph"><p>The idea is very simple, all information can be represented as a triplet :</p></div>
+<div class="quoteblock"><blockquote><div class="paragraph"><p><code>(subject, predicate, object)</code></p></div></blockquote></div>
+<div class="paragraph"><p>To query such a dataset, a query language has been developed: <a href="https://en.wikipedia.org/wiki/SPARQL">SPARQL</a></p></div>
+<div class="paragraph"><p>The SPARQL format is close to SQL format and tries to be as close as possible to a natural language.</p></div>
+<div class="paragraph"><p><a href="http://dbpedia.org">DBpedia</a> is the RDF version of Wikipedia. It is an open datastore that tries to gather and offers in RDF format all information that you can find in wikipedia or other knowledge service.</p></div>
+<div class="paragraph"><p>DBPedia is very interesting because it preformats concepts and makes them available for automatic processes or complex queries across concepts.</p></div>
+<div class="paragraph"><p>You can query it through a web interface or via any RDF toolkit :</p></div>
+<div class="paragraph"><p><a href="http://dbpedia.org/sparql">http://dbpedia.org/sparql</a></p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="SQL language-SQL">select *
+where
+{
+  &lt;http://dbpedia.org/resource/Leonardo_DiCaprio&gt; ?predicate ?object.
+}</code></pre></div></div></section>
+<section><h3>Quickstart</h3></section>
+<section><div class="paragraph"><p>The result of a SPARQL can be a table as we could do it with SQL, but you can also build a graph based on your query.
+The Semantic Web Plugin uses this feature to draw the result of your query into Gephi.</p></div>
+<div class="paragraph"><p>First, we need to install Semantic web import. You can find and install this plugin in the menu Tools &#8594; Plugins of Gephi.</p></div>
+<div class="paragraph"><p>When installed, go to the Semantic Web Import tab.</p></div>
+<div class="paragraph"><p>In the <strong>Driver</strong> tab, choose <strong>Remote - REST endpoint</strong> and put <strong><a href="http://dbpedia.org/sparql" class="bare">http://dbpedia.org/sparql</a></strong> and <strong>EndPoint URL</strong>.</p></div>
+<div class="admonitionblock important"><table><tr><td class="icon"><i class="fa fa-exclamation-circle"></i></td><td class="content"><div class="paragraph"><p>Press <strong>Enter</strong> after typing the URL endpoint so the url is getting validated and used.</p></div></td></tr></table></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/semantic-web-importer/setup_1.png" alt="setup 1" height="100%" /></div><div class="title">Figure 109. Setup endpoint</div></section>
+<section><div class="paragraph"><p>Go to <strong>Query</strong> tab, remove the dummy query and put this one:</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="SQL language-SQL">CONSTRUCT{
+  ?person &lt;http://gephi.org/type&gt; "person".
+  ?movie &lt;http://gephi.org/type&gt; "movie".
+  ?movie &lt;http://toto/link&gt; ?person .
+}
+WHERE
+{
+ ?movie a &lt;http://dbpedia.org/ontology/Film&gt;.
+ ?movie ?rel1 &lt;http://dbpedia.org/resource/Leonardo_DiCaprio&gt;.
+ ?movie ?rel2 ?person.
+ ?person a &lt;http://dbpedia.org/ontology/Person&gt;.
+}</code></pre></div></div>
+<div class="paragraph"><p>Finally, click on <strong>Run</strong></p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/semantic-web-importer/setup_2.png" alt="setup 2" height="100%" /></div><div class="title">Figure 110. SPARQL Query</div></section>
+<section><div class="paragraph"><p>Go back to the Graph preview and you should see a graph. Use the layout tab to get a more intuitive rendering.</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/semantic-web-importer/result_1.png" alt="result 1" height="100%" /></div><div class="title">Figure 111. result</div></section>
+<section></section>
+<section><h3>Details</h3></section>
+<section></section>
+<section><h3>CONSTRUCT block</h3></section>
+<section><div class="paragraph"><p>The <code>CONSTRUCT</code> block define the new graph to build from the query. That&#8217;s the description of your data the plugin will interpet
+to build the graph.</p></div>
+<div class="paragraph"><p>What is the syntax for this <code>CONSTRUCT</code> block :</p></div>
+<div class="ulist"><ul><li><p><code>?a <a href="http://gephi.org/nodeProperty" class="bare">http://gephi.org/nodeProperty</a> ?b</code></p></li></ul></div>
+<div class="paragraph"><p>&#8594; Will create the node <code>?a</code> with the property <code>nodeProperty</code> equal to <code>?b</code>.</p></div>
+<div class="ulist"><ul><li><p><code>?a (&lt;what_You_Want&gt; or ?c) ?b</code></p></li></ul></div>
+<div class="paragraph"><p>&#8594; will create a link between <code>?a</code> and <code>?b</code> with label <code>&lt;what_You_Want&gt;</code></p></div></section>
+<section><h3>WHERE block</h3></section>
+<section><div class="paragraph"><p>The <code>WHERE</code> block define the data to match based on the query typed in :</p></div>
+<div class="ulist"><ul><li><p><code>?movie a <a href="http://dbpedia.org/ontology/Film" class="bare">http://dbpedia.org/ontology/Film</a>.</code></p></li></ul></div>
+<div class="paragraph"><p>&#8594; Get all subject which is a <code><a href="http://dbpedia.org/ontology/Film" class="bare">http://dbpedia.org/ontology/Film</a></code>.
+The <code>a</code> is actually a SPARQL special word for <code>&lt;rdf:type&gt;</code>.
+So it’s exactly equal to <code>?movie &lt;rdf:type&gt; <a href="http://dbpedia.org/ontology/Film" class="bare">http://dbpedia.org/ontology/Film</a></code></p></div>
+<div class="ulist"><ul><li><p><code>?movie ?rel1 <a href="http://dbpedia.org/resource/Leonardo_DiCaprio" class="bare">http://dbpedia.org/resource/Leonardo_DiCaprio</a>.</code></p></li></ul></div>
+<div class="paragraph"><p>&#8594; Match all subjects which have any predicate where the object is <code><a href="http://dbpedia.org/resource/Leonardo_DiCaprio" class="bare">http://dbpedia.org/resource/Leonardo_DiCaprio</a></code></p></div>
+<div class="ulist"><ul><li><p><code>?movie ?rel2 ?person.</code></p></li></ul></div>
+<div class="paragraph"><p>&#8594; Match any triplet</p></div>
+<div class="ulist"><ul><li><p><code>?person a <a href="http://dbpedia.org/ontology/Person" class="bare">http://dbpedia.org/ontology/Person</a>.</code></p></li></ul></div>
+<div class="paragraph"><p>&#8594; Match the subject <code>?person</code> if it&#8217;s a  <code><a href="http://dbpedia.org/ontology/Person" class="bare">http://dbpedia.org/ontology/Person</a></code>.</p></div>
+<div class="paragraph"><p>In other words, match the variable <code>?movie</code> to any entity that is a <code>Film</code> and that has at least 1 triplet where <code>Leonardo</code> is an object. Match also all <code>?person</code> that is a <code>Person</code>.</p></div>
+<div class="paragraph"><p>The result in our case is actually a bi-modal graph with Movies and Persons shared with Leonardo Dicaprio.</p></div></section>
+<section><h3>Tips to go further</h3></section>
+<section><div class="paragraph"><p>What is interesting with this method is the way to query the data, and the fact that it is easily extensible to other subjects just by changing few things in the query.
+We can think about Music Band and Player relationships, the traditionnal Persons to Companies, or more originally, all the common places where your favorites movies where shot, etc.
+The limit is your imagination to graph.</p></div>
+<div class="paragraph"><p>On our example, you can run multiple time the same query and change which person you want to « expand », it will automatically create the global network of all your research.
+It will also maybe give you some insight on which new movies to watch tonight 😉</p></div>
+<div class="paragraph"><p>But keep in mind that you are heavily dependent on Dbpedia data quality (or other RDF entrypoint), which can alterate a lot you research.</p></div>
+<div class="paragraph"><p>If you want more refined queries, you will have to learn SPARQL and RDF in more details. There are a lot of tutorials around the web that will help you to master SPARQL.</p></div>
+<div style="page-break-after: always;"></div></section>
+<section id="_creating_a_network_from_a_table_of_entities_and_their_attributes"><h2>Creating a network from a table of entities and their attributes</h2></section>
+<section><div style="page-break-after: always;"></div></section>
+<section><h3>Presentation of the plugin</h3></section>
+<section><div class="paragraph"><p>This plugin is created by <a href="https://www.clementlevallois.net">Clement Levallois</a>.</p></div>
+<div class="paragraph"><p>It converts a spreadsheet or a csv file into a network.</p></div>
+<div class="paragraph"><p>This plugin enables you to:</p></div>
+<div class="ulist"><ul><li><p>Start from a data table in Excel or csv format</p></li><li><p>In the data table, nodes are the entities listed in column A</p></li><li><p>Nodes' attributes must be listed in columns B, C, D, etc.</p></li><li><p>Connections will be created between nodes, when they have identical attributes.</p></li><li><p>Attributes can have values, stored in columns right next to the attribute.</p></li></ul></div></section>
+<section><h3>1. The input</h3></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/An-Excel-file.png" alt="An Excel file" height="100%" /></div><div class="title">Figure 112. An Excel file</div></section>
+<section></section>
+<section><h3>2. The output</h3></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/similarity-computer/result.png" alt="result" height="100%" /></div><div class="title">Figure 113. Resulting network</div></section>
+<section><h3>Installing the plugin</h3></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Choose-the-menu-Tools-then-Plugins.png" alt="Choose the menu Tools then Plugins" height="100%" /></div><div class="title">Figure 114. Choose the menu Tools then Plugins</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Click-on-the-tab-Available-Plugins.png" alt="Click on the tab Available Plugins" height="100%" /></div><div class="title">Figure 115. Click on the tab Available Plugins</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Install-the-plugin-then-restart-Gephi.png" alt="Install the plugin then restart Gephi" height="100%" /></div><div class="title">Figure 116. Install the plugin then restart Gephi</div></section>
+<section><h3>Opening the plugin</h3></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Open-the-plugin-via-the-menu-File---Import.png" alt="Open the plugin via the menu File   Import" height="100%" /></div><div class="title">Figure 117. Open the plugin via the menu File - Import</div></section>
+<section><h3>Using the plugin</h3></section>
+<section></section>
+<section><h3>First panel</h3></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Select-a-file.png" alt="Select a file" height="100%" /></div><div class="title">Figure 118. Select a file</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/similarity-computer/file-without-header-en.png" alt="file without header en" height="100%" /></div><div class="title">Figure 119. A file without headers</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/similarity-computer/file-with-header-en.png" alt="file with header en" height="100%" /></div><div class="title">Figure 120. A file with headers</div></section>
+<section></section>
+<section><h3>Second panel</h3></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/similarity-computer/plugin-4-en.png" alt="plugin 4 en" height="100%" /></div><div class="title">Figure 121. Parameter for weight</div></section>
+<section></section>
+<section><h3>Third panel</h3></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/similarity-computer/plugin-5-en.png" alt="plugin 5 en" height="100%" /></div><div class="title">Figure 122. Confirmation panel</div></section>
+<section><h3>How is the similarity computed, exactly?</h3></section>
+<section><div class="paragraph"><p>We use the cosine similarity. Sounds complicated, but it is not. <a href="http://stackoverflow.com/questions/1746501/can-someone-give-an-example-of-cosine-similarity-in-a-very-simple-graphical-wa">Check here</a>.</p></div>
+<div class="paragraph"><p>The source code for the cosine calculation is in this <a href="https://github.com/gephi/gephi-plugins/blob/master-forge/modules/SimilarityComputer/src/main/java/net/clementlevallois/computer/CosineCalculation.java">file</a>, at <a href="https://github.com/gephi/gephi-plugins/blob/master-forge/modules/SimilarityComputer/src/main/java/net/clementlevallois/computer/CosineCalculation.java#L110">this place</a>.</p></div></section>
+<section><h3>FAQ / special notes on the plugin</h3></section>
+<section></section>
+<section><h3>1. Excel files should be .xlsx, not .xls</h3></section>
+<section><div class="paragraph"><p>Because they represent two slightly different files formats, and the plugin supports only .xlsx</p></div></section>
+<section><h3>2. csv files are ok.</h3></section>
+<section><div class="paragraph"><p>If you select a <a href="http://www.computerhope.com/issues/ch001356.htm">csv file</a>, you will be asked to indicate the field delimiter and optionally the text delimiter.</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/similarity-computer/plugin-6-en.png" alt="plugin 6 en" height="100%" /></div><div class="title">Figure 123. When a csv file is selected</div></section>
+<section></section>
+<section><h3>3. You can&#8217;t use numerical values in the attributes</h3></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/similarity-computer/numerical-attributes-en.png" alt="numerical attributes en" height="100%" /></div><div class="title">Figure 124. Age is a numerical attribute</div></section>
+<section><div class="paragraph"><p>This is too bad. If there is enough demand for it I&#8217;ll add this feature, which is not trivial.</p></div></section>
+<section><h3>4. Each entity should appear only on one line</h3></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/similarity-computer/plugin-7-en.png" alt="plugin 7 en" height="100%" /></div><div class="title">Figure 125. An entity appearing twice</div></section>
+<section><div class="paragraph"><p>David appears on lines 2 and 5 (because he made two purchases). Only the latest line where David appears (line 5) will be taken into account.</p></div>
+<div style="page-break-after: always;"></div></section>
+<section id="_twitter_streaming_importer"><h2>Twitter Streaming Importer</h2></section>
+<section><div style="page-break-after: always;"></div></section>
+<section><h3>Description of the plugin</h3></section>
+<section><div class="paragraph"><p>This plugin is created by <a href="https://matthieu-totet.fr">Matthieu Totet</a>, who is a long time community member of Gephi (check his <a href="https://github.com/totetmatt/GephiStreamer">Gephi Streamer</a>!)</p></div>
+<div class="paragraph"><p>You can find additional documentation on this plugin on <a href="https://matthieu-totet.fr/Koumin/2016/04/25/twitter-streaming-importer-naoyun-as-a-gephi-plugin/">Matthieu&#8217;s website</a>.</p></div>
+<div class="paragraph"><p>This plugin enables you to:</p></div>
+<div class="ulist"><ul><li><p>Collect tweets in realtime, on the topic you choose</p></li><li><p>Get the connections between the users mentionned in these tweets</p></li><li><p>Visualize these connections in Gephi, or just export all the tweets to Excel</p></li></ul></div></section>
+<section><h3>Installing the plugin</h3></section>
+<section><div class="admonitionblock warning"><table><tr><td class="icon"><i class="fa fa-warning"></i></td><td class="content">The setup of the plugin will need you to create a Twitter account, if you don&#8217;t already have one.
+Get your Twitter login and password ready. <strong>You also need a mobile phone number where your Twitter account can be confirmed</strong>.</td></tr></table></div>
+<div class="admonitionblock caution"><table><tr><td class="icon"><i class="fa fa-fire"></i></td><td class="content"><div class="paragraph"><p>Setting up a Twitter account and creating a Twitter app is a boring task.</p></div>
+<div class="paragraph"><p>It takes just 15 minutes, and you have to do it just once. Then you&#8217;ll have Twitter at your fingertips.</p></div>
+<div class="paragraph"><p>Let&#8217;s go!</p></div></td></tr></table></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Choose-the-menu-Tools-then-Plugins.png" alt="Choose the menu Tools then Plugins" height="100%" /></div><div class="title">Figure 126. Choose the menu Tools then Plugins</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Click-on-the-tab-Available-Plugins.png" alt="Click on the tab Available Plugins" height="100%" /></div><div class="title">Figure 127. Click on the tab Available Plugins</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Install-the-plugin-then-restart-Gephi.png" alt="Install the plugin then restart Gephi" height="100%" /></div><div class="title">Figure 128. Install the plugin then restart Gephi</div></section>
+<section><h3>Initializing the plugin (to be done just once)</h3></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Open-a-new-project-in-Gephi.png" alt="Open a new project in Gephi" height="100%" /></div><div class="title">Figure 129. Open a new project in Gephi</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Display-the-plugin-in-Gephi.png" alt="Display the plugin in Gephi" height="100%" /></div><div class="title">Figure 130. Display the plugin in Gephi</div></section>
+<section><div class="paragraph"><p>We need now to connect to a Twitter account. If you already have a Twitter account and you are logged in, <a href="#twitter-account-finished-setup">skip to here</a>.</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Creating-a-Twitter-account.png" alt="Creating a Twitter account" height="100%" /></div><div class="title">Figure 131. Creating a Twitter account</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Confirmation-of-the-sign-up.png" alt="Confirmation of the sign up" height="100%" /></div><div class="title">Figure 132. Confirmation of the sign-up</div></section>
+<section><div class="admonitionblock warning"><table><tr><td class="icon"><i class="fa fa-warning"></i></td><td class="content">You have received an email by Twitter about the sign up. At some point (but now would be a good time), you must click on the link in this email to confirm it.</td></tr></table></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Enter-the-verification-code-you-received-by-sms.png" alt="Enter the verification code you received by sms" height="100%" /></div><div class="title">Figure 133. Enter the verification code you received by sms</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Choose-a-username.png" alt="Choose a username" height="100%" /></div><div class="title">Figure 134. Choose a username</div></section>
+<section><div class="paragraph"><p>The next screens of the sign up for Twitter are not important for us.
+Just follow the steps until you get to the page showing your Twitter profile, meaning the setup is finished.</p></div>
+<div class="paragraph" id="twitter-account-finished-setup"><p>You now have a Twitter account.
+We need to create a Twitter app which will authorize us to collect tweets automatically via Gephi</p></div>
+<div class="paragraph"><p>Go to <strong><a href="https://apps.twiter.com">https://apps.twiter.com</a></strong>:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Create-a-new-app.png" alt="Create a new app" height="100%" /></div><div class="title">Figure 135. Create a new app</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Fill-in-the-fields.png" alt="Fill in the fields" height="100%" /></div><div class="title">Figure 136. Fill in the fields</div></section>
+<section><div class="paragraph"><p>INFO: Almost there!!</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Click-on-Keys-and-Access-Tokens.png" alt="Click on Keys and Access Tokens" height="100%" /></div><div class="title">Figure 137. Click on Keys and Access Tokens</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Click-on-Create-my-access-token.png" alt="Click on Create my access token" height="100%" /></div><div class="title">Figure 138. Click on Create my access token</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Copy-paste-these-codes-into-Gephi.png" alt="Copy paste these codes into Gephi" height="100%" /></div><div class="title">Figure 139. Copy paste these codes into Gephi</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Where-to-copy-paste-the-codes-in-Gephi.png" alt="Where to copy paste the codes in Gephi" height="100%" /></div><div class="title">Figure 140. Where to copy paste the codes in Gephi</div></section>
+<section><div class="paragraph"><p><span class="icon"><i class="fa fa-thumbs-up"></i></span> Well done. This setup had just to be done once.
+Your credentials are saved and will be loaded at each run.
+Now we can start using the plugin.</p></div></section>
+<section><h3>Using the plugin</h3></section>
+<section><div class="paragraph"><p>With the <strong> Words to follow </strong> tab, you will be able to follow one or multiple words. For <strong> hashtags </strong>, just enter the word without the hash in front of it. (e.g if you want to follow '<strong>#Gephi</strong>' just add '<strong>Gephi</strong>')</p></div>
+<div class="paragraph"><p>With the <strong> Users to follow </strong> tab, you will be able to follow the activity of one or multiple users. Any tweet from this user or retweeting or mentioning the user will be captured.</p></div>
+<div class="paragraph"><p>You can combine the 2 tabs, the tweet collected will be matching either the Words to follow query <strong>or</strong> the User to follow query</p></div>
+<div class="paragraph"><p>The <strong> Load Query File</strong> and <strong> Save Query File </strong> buttons are here to save your search queries in a file or to load it from a file. It&#8217;s convenient if you have
+a long list of words / users.</p></div></section>
+<section><h3>Network Logic</h3></section>
+<section><div class="paragraph"><p>A <strong> Network Logic </strong> means: what should be done with an incoming tweet? How to transform it as a set of nodes and edges?</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Selection-of-the-network-logic.png" alt="Selection of the network logic" height="100%" /></div><div class="title">Figure 141. Selection of the network logic</div></section>
+<section><div class="paragraph"><p>There are for the moment 3 Network Logics to choose from:</p></div>
+<div class="ulist"><ul><li><p>Full Twitter Network : This will represent <strong>all</strong> entities (User, Tweet, Hastags, URL, Media, Symbol etc&#8230;&#8203;) as a graph.</p></li><li><p>User Network : This will represent the interaction between users. Any mentions, retweets or quotes between 2 users, will be represented. The size of the edge represent the number of interactions between 2 users.</p></li><li><p>Hashtag Network : This will create the network of hashtag.</p></li></ul></div>
+<div class="paragraph"><p>In the following, we use the network logic "User Network":</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Adding-terms-and-launching-the-collection-of-tweets.png" alt="Adding terms and launching the collection of tweets" height="100%" /></div><div class="title">Figure 142. Adding terms and launching the collection of tweets</div></section>
+<section><div class="paragraph"><p>Be careful that if you choose very common terms, tweets will arrive fast and in large volumes.</p></div>
+<div class="paragraph"><p>If you don&#8217;t have enough memory (RAM) on your computer, this could make it crash.</p></div>
+<div class="paragraph"><p>Click on "disconnect" to stop the collection of tweets.</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/twitter-streaming-importer/result-plugin-1-en.png" alt="result plugin 1 en" height="100%" /></div><div class="title">Figure 143. Users mentioned in or retweeting tweets citing the search terms</div></section>
+<section><div class="paragraph"><p>You can see the users organize spatially in real time, while the tweets are being collected.</p></div>
+<div class="paragraph"><p>Just run Force Atlas 2 in the "Layout" panel. This will not interrupt the collection of tweets.</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Running-the-Force-Atlas-layout-while-the-tweets-are-arriving.png" alt="Running the Force Atlas layout while the tweets are arriving" height="100%" /></div><div class="title">Figure 144. Running the Force Atlas layout while the tweets are arriving</div></section>
+<section><div class="paragraph"><p>Shift to the <code>data laboratory</code> to view the data collected, in a spreadsheet format:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Switching-to-the-data-laboratory-view.png" alt="Switching to the data laboratory view" height="100%" /></div><div class="title">Figure 145. Switching to the data laboratory view</div></section>
+<section><div class="paragraph"><p>There, you can export nodes and relations ("edges") as csv files by clicking on "Export table".</p></div></section>
+<section><h3>Timeline</h3></section>
+<section><div class="paragraph"><p>When you are finished with your stream, you can use the <strong> timeline </strong> feature to replay the stream of data and look at a particular time window.</p></div>
+<div class="paragraph"><p><em>This feature is still experimental and is higly subject to bug.</em></p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/twitter-streaming-importer/timeline-enable.png" alt="timeline enable" height="100%" /></div><div class="title">Figure 146. How to activate the Timeline</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/twitter-streaming-importer/timeline.gif" alt="timeline" height="100%" /></div><div class="title">Figure 147. Example of Timeline</div></section>
+<section><div style="page-break-after: always;"></div></section>
+<section id="_working_from_gephis_source"><h2>Working from Gephi&#8217;s source</h2></section>
+<section><div style="page-break-after: always;"></div></section>
+<section><h3>Presentation of this tutorial</h3></section>
+<section><div class="paragraph"><p>This tutorial explains how to get and modify Gephi&#8217;s source code, and build Gephi from it.</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/developers/use-the-source.jpg" alt="use the source" height="100%" /></div><div class="title">Figure 148. The obligatory meme</div></section>
+<section><div class="paragraph"><p>We will:</p></div>
+<div class="ulist"><ul><li><p>download the source code</p></li><li><p>run Gephi from the source</p></li><li><p>modify Gephi&#8217;s openGL visualization engine</p></li><li><p>run Gephi in this modified version</p></li></ul></div>
+<div class="paragraph"><p>The modified version of Gephi that we will implement will have for effect to add circles around nodes communities.</p></div>
+<div class="paragraph"><p>This project originates from <a href="https://twitter.com/DataToViz/status/828840269072080896">Susie Lu&#8217;s creation</a>.</p></div>
+<div class="paragraph"><p>We should get something like:</p></div></section>
+<section><div class="videoblock stretch"><iframe width="560" height="315" src="https://www.youtube.com/embed/Y3jk-_QaFx4?rel=0" frameborder="0" allowfullscreen=""></iframe></div></section>
+<section><div class="paragraph"><p>For this tutorial you will need:</p></div>
+<div class="ulist"><ul><li><p>some knowledge of Java.</p></li><li><p>NetBeans installed (<a href="https://dl.dropboxusercontent.com/u/28091845/coursera/codapps/session%201/module%201%20-%20installing%20NetBeans%20ans%20Codename%20One%20on%20a%20PC.pdf">up to date instructions here</a>). Eclipse, IntelliJ or any other code editor won&#8217;t do.</p></li><li><p>a good internet connection since we will download a lot of small dependencies.</p></li><li><p>no Github account is necessary (if you have one, fork Gephi before doing all the steps below).</p></li></ul></div></section>
+<section><h3>Downloading the source code</h3></section>
+<section><div class="olist arabic"><ol class="arabic"><li><p>Open NetBeans.</p></li><li><p>In NetBeans, go to <code>Team &#8594; Git &#8594; Clone</code></p></li></ol></div>
+<div class="paragraph"><p>(can&#8217;t find this menu in NetBeans? read an alternative just below)</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/developers/git-clone-gephi-0-en.png" alt="git clone gephi 0 en" height="100%" /></div><div class="title">Figure 149. Cloning the gephi source</div></section>
+<section><div class="dlist"><dl><dt class="hdlist1">NOTE</dt><dd><p>if you already have projects opened in NetBeans, the menu Team &#8594; Git &#8594; Clone is replaced by:</p><div class="literalblock"><div class="content"><pre>Team -&gt; Remote -&gt; Clone</pre></div></div></dd></dl></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Cloning-the-gephi-source.png" alt="Cloning the gephi source" height="100%" /></div><div class="title">Figure 150. Cloning the gephi source</div></section>
+<section><div class="ulist"><ul><li><p>For <code>Repository URL</code>, put the address of the Gephi repository on Github, which is:</p></li></ul></div>
+<div class="paragraph"><p><a href="https://github.com/gephi/gephi.git">https://github.com/gephi/gephi.git</a></p></div>
+<div class="ulist"><ul><li><p>for <code>Clone into</code>, select a folder on your disk. No need to create a new folder inside, the cloning process will do it.</p></li><li><p>Github User and password can be left empty</p></li><li><p>Then click on <code>Next</code></p></li></ul></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/developers/git-clone-gephi-2-en.png" alt="git clone gephi 2 en" height="100%" /></div><div class="title">Figure 151. Select Master and click next</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/developers/git-clone-gephi-3-en.png" alt="git clone gephi 3 en" height="100%" /></div><div class="title">Figure 152. Leave as it is and click on Finish</div></section>
+<section><div class="paragraph"><p>At this step, NetBeans starts downloading the source code of Gephi - not all of it. Should take a couple of minutes, then:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/developers/git-clone-gephi-4-en.png" alt="git clone gephi 4 en" height="100%" /></div><div class="title">Figure 153. Click on Open Project</div></section>
+<section><div class="paragraph"><p>Select (highlight in blue) the line mentioning Gephi, and click on "Open"</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/developers/git-clone-gephi-5-en.png" alt="git clone gephi 5 en" height="100%" /></div><div class="title">Figure 154. Click on Open Project</div></section>
+<section><div class="paragraph"><p>You should now see Gephi as a project on the left in NetBeans:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/developers/netbeans-gephi-source-1-en.png" alt="netbeans gephi source 1 en" height="100%" /></div><div class="title">Figure 155. Gephi project</div></section>
+<section><div class="paragraph"><p>Right click on the project and select "Build with dependencies". This will download all the rest of the source, which can take roughly 5 to 20 minutes.</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/developers/netbeans-gephi-source-2-en.png" alt="netbeans gephi source 2 en" height="100%" /></div><div class="title">Figure 156. Building the project</div></section>
+<section><h3>Running Gephi from source</h3></section>
+<section><div class="paragraph"><p>When the build is complete, expand the folder "Modules" of the Gephi project, and double click on "gephi-app":</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/developers/netbeans-gephi-source-3-en.png" alt="netbeans gephi source 3 en" height="100%" /></div><div class="title">Figure 157. Opening the gephi-app submodule</div></section>
+<section><div class="paragraph"><p>This opens a new project on the left of NetBeans, called "gephi-app". This is a submodule of Gephi, dedicated to managing its launch.</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Launching-Gephi.png" alt="Launching Gephi" height="100%" /></div><div class="title">Figure 158. Launching Gephi</div></section>
+<section><div class="paragraph"><p>And Gephi launches!</p></div>
+<div class="paragraph"><p>Now that we know how to run Gephi from source, we can modify the source and see how it goes.</p></div></section>
+<section><h3>Modifying Gephi&#8217;s openGL visualization engine</h3></section>
+<section><div class="paragraph"><p>We are going to add circles which will enclose groups of nodes (aka communities). In three steps:</p></div>
+<div class="olist arabic"><ol class="arabic"><li><p>Open the <code>VisualizationImpl</code> module</p></li><li><p>Create simple classes for the circles</p></li><li><p>Add some code in the class which manages the display in OpenGL, so that circles get created</p></li></ol></div></section>
+<section><h3>1. Open the <code>VisualizationImpl</code> module</h3></section>
+<section><div class="paragraph"><p>In the gephi project, in the folder Modules, double click on the <code>VisualizationImpl</code> module:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/developers/enclosing-circles-1-en.png" alt="enclosing circles 1 en" height="100%" /></div><div class="title">Figure 159. Opening VisualizationImpl</div></section>
+<section></section>
+<section><h3>2. Create simple classes for the circles</h3></section>
+<section><div class="paragraph"><p>Create a new package and add 3 classes in it: <code>Circle.java</code>, <code>Point.java</code>, <code>SmallestEnclosingCircle.java</code>.</p></div>
+<div class="paragraph"><p>(I merely adapted these classes from <a href="https://www.nayuki.io/page/smallest-enclosing-circle">this website</a>)</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/developers/enclosing-circles-2-en.png" alt="enclosing circles 2 en" height="100%" /></div><div class="title">Figure 160. Three classes</div></section>
+<section><div class="paragraph"><p>The code of these classes <a href="https://github.com/seinecle/gephi/tree/enclosing-circles-opengl/modules/VisualizationImpl/src/main/java/net/clementlevallois/enclosingcircles">can be found here</a>.</p></div></section>
+<section><h3>3. Add the circle creation logic to the class managing the OpenGL display</h3></section>
+<section><div class="paragraph"><p>Open the package <code>org.gephi.visualization.opengl</code>, and inside open <code>CompatibilityEngine.java</code>:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/opening-CompatibilityEngine.java.png" alt="opening CompatibilityEngine.java" height="100%" /></div><div class="title">Figure 161. opening CompatibilityEngine.java</div></section>
+<section><div class="paragraph"><p>No need to understand most of the code in this class.</p></div>
+<div class="paragraph"><p>But we see that starting at <a href="https://github.com/seinecle/gephi/blob/enclosing-circles-opengl/modules/VisualizationImpl/src/main/java/org/gephi/visualization/opengl/CompatibilityEngine.java#L194">line 194</a>, a loop on nodes starts:</p></div>
+<div class="paragraph"><p>We will put nodes in a map (declared above, at <a href="https://github.com/seinecle/gephi/blob/enclosing-circles-opengl/modules/VisualizationImpl/src/main/java/org/gephi/visualization/opengl/CompatibilityEngine.java#L155">line 155</a>) where:</p></div>
+<div class="ulist"><ul><li><p>keys are the name of the cluster nodes belong too,</p></li><li><p>values are the Set of Nodes corresponding to the cluster.</p></li></ul></div>
+<div class="paragraph"><p>(yes, this implies the nodes must have an attribute called "Modularity Class" showing the cluster they belong to)</p></div>
+<div class="paragraph"><p>The code you should add to assign nodes to clusters in the map is in <a href="https://github.com/seinecle/gephi/blob/enclosing-circles-opengl/modules/VisualizationImpl/src/main/java/org/gephi/visualization/opengl/CompatibilityEngine.java#L197">lines 197-203</a></p></div>
+<div class="paragraph"><p>Then, <a href="https://github.com/seinecle/gephi/blob/enclosing-circles-opengl/modules/VisualizationImpl/src/main/java/org/gephi/visualization/opengl/CompatibilityEngine.java#L210">lines 210-245</a> iterate on the map, and create the circles around clusters.</p></div>
+<div class="paragraph"><p>The logic of the circle creation in OpenGL can be understood rather easily, by copying and modyfying the code used just above for the creation of nodes, and by looking at the online documentation on <a href="http://www.openglprojects.in/2014/03/draw-circle-opengl.html#gsc.tab=0">how to create shapes in OpenGL</a>.</p></div>
+<div class="paragraph"><p>That&#8217;s it. Now just run Gephi from source as we did before. From Gephi, open a network where nodes have a "Modularity Class" attribute, and Gephi will draw circles around nodes from the same clusters:</p></div></section>
+<section><div class="videoblock stretch"><iframe width="560" height="315" src="https://www.youtube.com/embed/Y3jk-_QaFx4?rel=0" frameborder="0" allowfullscreen=""></iframe></div></section>
+<section><h3>More tutorials on using the source code of Gephi</h3></section>
+<section><div class="ulist"><ul><li><p><a href="https://github.com/gephi/gephi">The Gephi readme with some instructions for developers</a></p></li></ul></div>
+<div style="page-break-after: always;"></div></section>
+<section id="_converting_a_network_with_dates_into_a_dynamic_network"><h2>Converting a network with dates into a dynamic network</h2></section>
+<section><div style="page-break-after: always;"></div></section>
+<section><h3>Goals of this tutorial</h3></section>
+<section><div class="ulist"><ul><li><p>We take a normal network, where nodes have attributes which can serve as time indication (a date, a number&#8230;&#8203;)</p></li><li><p>We convert this network into a dynamic network: nodes will appear and disappear according to their attributes.</p></li></ul></div></section>
+<section><h3>download a network file for practice</h3></section>
+<section><div class="paragraph"><p><a href="../../resources/miserables-with-dates.zip">download this zip file</a> and unzip it on your computer.</p></div>
+<div class="paragraph"><p>or use this direct link: <a href="https://tinyurl.com/gephi-tuto-4">https://tinyurl.com/gephi-tuto-4</a></p></div>
+<div class="paragraph"><p>You should find the file <code>miserables-with-dates.gexf</code> in the zip file. Save it in a folder you will remember (or create a folder specially for this small project).</p></div>
+<div class="paragraph"><p>This file contains a network representing "who appears next to whom" in the 19th century novel <em>Les Misérables</em> by Victor Hugo<span class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnote_3" title="View footnote.">3</a>]</span>.</p></div>
+<div class="paragraph"><p>A link between characters A and B means they appeared on the same page or paragraph in the novel.</p></div>
+<div class="paragraph"><p>The file name ends with ".gexf", which just means this is a text file where the network information is stored (name of the characters, their relations, etc.), following some conventions.</p></div>
+<div class="paragraph"><p>This file has been modified to add some dates to each character in the novel:</p></div>
+<div class="ulist"><ul><li><p>a "start date", which is a day (example: 22/09/1835). This is the date when the character <strong>enters</strong> the action in the novel</p></li><li><p>an "end date", also a day (example: 22/09/1840). This is the date when the character <strong>leaves</strong> the action in the novel</p></li><li><p>a "peak moment". This is a number (example: 14263). This is an instant when the character is at the center of the plot. This number has no historical meaning, this is just a chronological moment in time.</p></li></ul></div>
+<div class="dlist"><dl><dt class="hdlist1">NOTE</dt><dd><p>Values for start date, end date and peak moment have no real significance in the novel. They are made up for this exercise.</p></dd></dl></div></section>
+<section><h3>open the network in Gephi</h3></section>
+<section><div class="ulist"><ul><li><p>open Gephi. On the Welcome screen that appears,  click on <code>Open Graph File</code></p></li><li><p>find <code>miserables-with-dates.gexf</code> on your computer and open it</p></li></ul></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/gephi-welcome-screen-open-graph-en.png" alt="gephi welcome screen open graph en" height="100%" /></div><div class="title">Figure 162. welcome screen</div></section>
+<section><div class="paragraph"><p>A report window will open, giving you basic info on the network you opened:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/opening-file-report-en.png" alt="opening file report en" height="100%" /></div><div class="title">Figure 163. report window</div></section>
+<section><div class="paragraph"><p>This tells you that the network comprises 74 characters, connected by 248 links.</p></div>
+<div class="paragraph"><p>Links are undirected, meaning that if A is connected to B, then it is the same as B connected to A.</p></div>
+<div class="paragraph"><p>The report also tells us the graph is not dynamic: it means there is no evolution or chronology, it won&#8217;t "move in time".</p></div>
+<div class="paragraph"><p>Click on <code>OK</code> to see the graph in Gephi.</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/result_miserables.png" alt="result miserables" height="100%" /></div><div class="title">Figure 164. The network we will use</div></section>
+<section><h3>getting a sense of the attributes in the data laboratory</h3></section>
+<section><div class="paragraph"><p>We can switch to the data laboratory to see the underlying data:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Switching-to-the-data-laboratory.png" alt="Switching to the data laboratory" height="100%" /></div><div class="title">Figure 165. Switching to the data laboratory</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Zoom-on-three-attributes-representing-time.png" alt="Zoom on three attributes representing time" height="100%" /></div><div class="title">Figure 166. Zoom on three attributes representing time</div></section>
+<section><div class="paragraph"><p>The nodes (characters) of the network have attributes (start date, end date, peak moment) which can make this graph dynamic - but it is not yet.</p></div>
+<div class="paragraph"><p>A couple of steps are needed to enable the dynamic features, and here a choice must be made:</p></div>
+<div class="paragraph"><p>Do we prefer to have&#8230;&#8203;</p></div>
+<div class="olist arabic"><ol class="arabic"><li><p>&#8230;&#8203; nodes appearing on screen at their start date, and staying on screen for ever after?</p></li><li><p>&#8230;&#8203; nodes appearing on screen at their start date, and leaving the screen at their end date?</p></li><li><p>&#8230;&#8203; nodes being representedsimply by their "peak moment" (a number), without reference to chronological dates?</p></li></ol></div>
+<div class="paragraph"><p>We will present these 3 possibilities.</p></div></section>
+<section><h3>1. dynamic nodes with a start date</h3></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Merge-columns.png" alt="Merge columns" height="100%" /></div><div class="title">Figure 167. Merge columns</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Set-up-the-parameters---1.png" alt="Set up the parameters   1" height="100%" /></div><div class="title">Figure 168. Set up the parameters - 1</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Result.png" alt="Result" height="100%" /></div><div class="title">Figure 169. Result</div></section>
+<section><div class="paragraph"><p>Let&#8217;s switch back to the Overview to see the graph and how it evolves in time.</p></div>
+<div class="dlist"><dl><dt class="hdlist1">IMPORTANT</dt><dd><p>We are going to use the timeline to play the animation. The timeline has many features which are explained in a specific tutorial.</p></dd></dl></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/moving-timeline-miserables-1-en.gif" alt="moving timeline miserables 1 en" height="100%" /></div><div class="title">Figure 170. Animating the dynamic network</div></section>
+<section></section>
+<section><h3>to be continued</h3></section>
+<section></section>
+<section><h3>more tutorials on dynamic networks with Gephi</h3></section>
+<section><div class="ulist"><ul><li><p><a href="https://github.com/gephi/gephi/wiki/Import-Dynamic-Data">The wiki on gephi.org</a></p></li></ul></div>
+<div style="page-break-after: always;"></div></section>
+<section id="_creating_a_simple_dynamic_network"><h2>Creating a simple dynamic network</h2></section>
+<section><div style="page-break-after: always;"></div></section>
+<section><h3>Goals of this tutorial</h3></section>
+<section><div class="ulist"><ul><li><p>We are going to create one very simple <strong>non dynamic</strong> network (network "A").</p></li><li><p>then we will create a modified version of it (network "B").</p></li><li><p>in both files, we need to modify a single line.</p></li><li><p>finally, we will merge networks A and B, forming a new <strong>dynamic</strong> network evolving from version A to B.</p></li></ul></div>
+<div class="admonitionblock note"><table><tr><td class="icon"><i class="fa fa-info-circle"></i></td><td class="content"><div class="paragraph"><p>The creation of the 2 networks is not a mandatory step: you can use your own network files, as long as they are in gexf file format. In this case, <a href="#merging">skip to here</a>.</p></div>
+<div class="paragraph"><p>We create the networks in this tutorial to provide the most simple and clear case.</p></div></td></tr></table></div>
+<h3>open a new project in Gephi</h3></section>
+<section><div class="ulist"><ul><li><p>open Gephi. On the Welcome screen that appears,  click on <code>New Project</code></p></li></ul></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Open-a-new-project.png" alt="Open a new project" height="100%" /></div><div class="title">Figure 171. Open a new project</div></section>
+<section><h3>creating network "A"</h3></section>
+<section><div class="paragraph"><p>Our project is empty.
+We can use a simple click-and-point tool to create a network:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Icon-for-node-creation.png" alt="Icon for node creation" height="100%" /></div><div class="title">Figure 172. Icon for node creation</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/A-few-nodes-have-been-created.png" alt="A few nodes have been created" height="100%" /></div><div class="title">Figure 173. A few nodes have been created</div></section>
+<section><div class="paragraph"><p>When you have created a couple of nodes, click again on the pencil icon to stop the node creation.</p></div>
+<div class="paragraph"><p>Export the network as a file and call it "network A":</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Exporting-the-network.png" alt="Exporting the network" height="100%" /></div><div class="title">Figure 174. Exporting the network</div></section>
+<section></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Choosing-the-gexf-file-format.png" alt="Choosing the gexf file format" height="100%" /></div><div class="title">Figure 175. Choosing the gexf file format</div></section>
+<section><div class="paragraph"><p>Clicking on "Save" saves the file in the folder you chose. You are back to the view on your graph.</p></div></section>
+<section><h3>creating network "B"</h3></section>
+<section><div class="paragraph"><p>Now, click on the "Edge pencil", just below the "Node pencil we have used (careful, the icons are identical!)</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Choosing-the-gexf-file-format.png" alt="Choosing the gexf file format" height="100%" /></div><div class="title">Figure 176. Choosing the gexf file format</div></section>
+<section><div class="paragraph"><p>Create one edge, or a couple of edges, in this way.</p></div>
+<div class="paragraph"><p>Clicking again on the pencil stops the edge creation by mouse clicks.</p></div>
+<div class="paragraph"><p>Then export the network <strong>in the same folder</strong> where we put the previous file (<code>File &#8594; Export &#8594; Graph File &#8230;&#8203;</code>)</p></div>
+<div class="paragraph"><p><strong>This time, name the file 'network B.gexf' and remember to choose the <code>gexf</code> file format just like we did before.</strong></p></div></section>
+<section><h3>modifying just one line in the files network A.gexf and network B.gexf</h3></section>
+<section><div class="paragraph" id="merging"><p>From your computer, open network A.gexf with a text editor (don&#8217;t use Microsoft Word!):</p></div>
+<div class="paragraph"><p>(here is how to do it on a <a href="http://www.dummies.com/computers/macs/how-to-open-and-edit-a-text-file-on-a-mac/">Mac</a>, and on <a href="https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/app_notepad.mspx?mfr=true">Windows</a>).</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/The-network-file-opened.png" alt="The network file opened" height="100%" /></div><div class="title">Figure 177. The network file opened</div></section>
+<section><div class="paragraph"><p>Delete and replace this line by this one:</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="xml language-xml">&lt;graph mode="slice" defaultedgetype="directed" timerepresentation="timestamp" timestamp="1"&gt;</code></pre></div></div>
+<div class="paragraph"><p>See <code>timestamp="1"</code> ? It means this will be the first "time slice" of your dynamic network.</p></div>
+<div class="paragraph"><p>Save the file.</p></div>
+<div class="paragraph"><p>Repeat the steps for network B.gexf:</p></div>
+<div class="ulist"><ul><li><p>open the file in a text editor,</p></li><li><p>find the  line <code>&lt;graph defaultedgetype="directed" mode="static"&gt;</code></p></li><li><p>replace it by:</p></li></ul></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="xml language-xml">&lt;graph mode="slice" defaultedgetype="directed" timerepresentation="timestamp" timestamp="2"&gt;</code></pre></div></div>
+<div class="paragraph"><p>(see that we have <strong><code>timestamp="2"</code></strong> here: this is going to be the second time slice!)</p></div>
+<div class="ulist"><ul><li><p>save the file.</p></li></ul></div></section>
+<section><h3>merging network "A" and "B" into a dynamic network</h3></section>
+<section><div class="paragraph"><p>We will use the 2 files network A.gexf and network B.gexf that we have created.</p></div>
+<div class="paragraph"><p>First, let&#8217;s close the project we have in Gephi, without saving:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Closing-the-current-project.png" alt="Closing the current project" height="100%" /></div><div class="title">Figure 178. Closing the current project</div></section>
+<section><div class="paragraph"><p>Then click on <code>File &#8594; Open</code> and navigate to the folder where network A.gexf and network B.gexf are located:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Opening-files.png" alt="Opening files" height="100%" /></div><div class="title">Figure 179. Opening files</div></section>
+<section><div class="paragraph"><p>Here, make sure you select the <strong>2 files at once</strong> (using the key <kbd>Ctrl</kbd> on pc or <kbd>{commandkey}</kbd> on mac).</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Opening-2-files-at-once.png" alt="Opening 2 files at once" height="100%" /></div><div class="title">Figure 180. Opening 2 files at once</div></section>
+<section><div class="paragraph"><p>Opening the files display a report window:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Import-report-window.png" alt="Import report window" height="100%" /></div><div class="title">Figure 181. Import report window</div></section>
+<section><h3>enabling the timeline</h3></section>
+<section><div class="paragraph"><p>You should see this button, click on it (if not: something went wrong. Retrace your steps)</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Enable-the-timeline.png" alt="Enable the timeline" height="100%" /></div><div class="title">Figure 182. Enable the timeline</div></section>
+<section><div class="paragraph"><p>Click and slide the right side border of the timeline <strong>to the left</strong>. You should see the edge disappear:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Sliding-the-timeline.png" alt="Sliding the timeline" height="100%" /></div><div class="title">Figure 183. Sliding the timeline</div></section>
+<section><div class="paragraph"><p>We created a dynamic network.
+It needs to be animated precisely with the timeline, dynamic attributes should be explored, as well as dynamic layouts.</p></div>
+<div class="paragraph"><p>These features will be explained in the coming tutorials on dynamic networks with Gephi.</p></div></section>
+<section><h3>more tutorials on dynamic networks with Gephi</h3></section>
+<section><div class="ulist"><ul><li><p><a href="https://github.com/gephi/gephi/wiki/Import-Dynamic-Data">The wiki on gephi.org</a>
+    <!-- Start of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+        var sc_project = 11238920;
+        var sc_invisible = 1;
+        var sc_security = "11238920";
+        var scJsHost = (("https:" == document.location.protocol) ?
+            "https://secure." : "http://www.");
+        document.write("<sc" + "ript type='text/javascript' src='" +
+            scJsHost +
+            "statcounter.com/counter/counter.js'></" + "script>");
+    </script>
+    <noscript><div class="statcounter"><a title="site stats"
+    href="http://statcounter.com/" target="_blank"><img
+    class="statcounter"
+    src="//c.statcounter.com/11238920/0/11238920/1/" alt="site
+    stats"></a></div></noscript>
+    <!-- End of StatCounter Code for Default Guide --></p></li></ul></div></section></section></div></div><script src="reveal.js-3.6.0/lib/js/head.min.js"></script><script src="reveal.js-3.6.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+Reveal.initialize({
+  // Display controls in the bottom right corner
+  controls: true,
+  // Display a presentation progress bar
+  progress: true,
+  // Display the page number of the current slide
+  slideNumber: false,
+  // Push each slide change to the browser history
+  history: false,
+  // Enable keyboard shortcuts for navigation
+  keyboard: true,
+  // Enable the slide overview mode
+  overview: true,
+  // Vertical centering of slides
+  center: true,
+  // Enables touch navigation on devices with touch input
+  touch: true,
+  // Loop the presentation
+  loop: false,
+  // Change the presentation direction to be RTL
+  rtl: false,
+  // Turns fragments on and off globally
+  fragments: true,
+  // Flags if the presentation is running in an embedded mode,
+  // i.e. contained within a limited portion of the screen
+  embedded: false,
+  // Number of milliseconds between automatically proceeding to the
+  // next slide, disabled when set to 0, this value can be overwritten
+  // by using a data-autoslide attribute on your slides
+  autoSlide: 0,
+  // Stop auto-sliding after user input
+  autoSlideStoppable: true,
+  // Enable slide navigation via mouse wheel
+  mouseWheel: false,
+  // Hides the address bar on mobile devices
+  hideAddressBar: true,
+  // Opens links in an iframe preview overlay
+  previewLinks: false,
+  // Theme (e.g., beige, black, league, night, serif, simple, sky, solarized, white)
+  // NOTE setting the theme in the config no longer works in reveal.js 3.x
+  //theme: Reveal.getQueryHash().theme || 'white',
+  // Transition style (e.g., none, fade, slide, convex, concave, zoom)
+  transition: Reveal.getQueryHash().transition || 'linear',
+  // Transition speed (e.g., default, fast, slow)
+  transitionSpeed: 'default',
+  // Transition style for full page slide backgrounds (e.g., none, fade, slide, convex, concave, zoom)
+  backgroundTransition: 'fade',
+  // Number of slides away from the current that are visible
+  viewDistance: 3,
+  // Parallax background image (e.g., "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'")
+  parallaxBackgroundImage: '',
+  // Parallax background size in CSS syntax (e.g., "2100px 900px")
+  parallaxBackgroundSize: '',
+
+  // The "normal" size of the presentation, aspect ratio will be preserved
+  // when the presentation is scaled to fit different resolutions. Can be
+  // specified using percentage units.
+  width: 960,
+  height: 700,
+
+  // Factor of the display size that should remain empty around the content
+  margin: 0.1,
+
+  // Bounds for smallest/largest possible scale to apply to content
+  minScale: 0.2,
+  maxScale: 10.0,
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+      { src: 'reveal.js-3.6.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'reveal.js-3.6.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js-3.6.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+      { src: 'reveal.js-3.6.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'reveal.js-3.6.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+});</script></body></html>

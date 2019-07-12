@@ -85,81 +85,67 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 .CodeRay .delete .delete{color:#800}
 .CodeRay .change .change{color:#66f}
 .CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.6.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.6.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>Creating a network from a table of cooccurring items</h1><div class="preamble"><div class="paragraph"><p>2017-02-27</p></div>
-<div class="paragraph"><p>last modified: 2017-10-06</p></div></div><p class="author"><small>== !</small></p></section>
+<div class="paragraph"><p>last modified: 2019-07-12</p></div></div><p class="author"><small>== !</small></p></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="../images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450" /></div></section>
 <section></section>
 <section id="_presentation_of_the_plugin"><h2>Presentation of the plugin</h2></section>
 <section><div class="paragraph"><p>This plugin is created by <a href="https://www.clementlevallois.net">Clement Levallois</a>.</p></div>
 <div class="paragraph"><p>It converts a spreadsheet or a csv file into a network.</p></div>
-<div class="paragraph"><p>This plugin enables you to:</p></div>
-<div class="ulist"><ul><li><p>Start from a data table in Excel or csv format</p></li><li><p>In the data table, each row describes an "occurrence" (of an event, a purchase, a relation, etc.)</p></li><li><p>In columns A, B, C, D, we have the entities involved: column A for persons, column B for what they bought, etc.</p></li><li><p>Connections will be created between entities, when they appear in the same occurrence (so, when they are on thee same row)</p></li><li><p>Occurrences can have dates, multiple instances of an entity can be listed in a given column.</p></li></ul></div></section>
+<div class="paragraph"><p>This plugin enables you to:</p></div></section>
+<section><div class="ulist"><ul><li><p>Start from a data table in Excel or csv format</p></li><li><p>In the data table, each row describes an "occurrence" (of an event, a purchase, a relation, etc.)</p></li></ul></div></section>
+<section><div class="ulist"><ul><li><p>In columns A, B, C, D, we have the entities involved: column A for persons, column B for what they bought, etc.</p></li><li><p>Connections will be created between entities, when they appear in the same occurrence (so, when they are on thee same row)</p></li><li><p>Occurrences can have dates, multiple instances of an entity can be listed in a given column.</p></li></ul></div></section>
 <section><h3>1. The input</h3></section>
-<section></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/cooccurrences-computer/excel-1-en.png" alt="excel 1 en" height="100%" /></div><div class="title">Figure 1. An Excel file</div></section>
-<section></section>
 <section><h3>2. The output</h3></section>
-<section></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/cooccurrences-computer/gephi-result-1-en.png" alt="gephi result 1 en" height="100%" /></div><div class="title">Figure 2. Resulting network</div></section>
 <section></section>
 <section id="_installing_the_plugin"><h2>Installing the plugin</h2></section>
-<section></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="../images/Choose-the-menu-Tools-then-Plugins.png" alt="Choose the menu Tools then Plugins" height="100%" /></div><div class="title">Figure 3. Choose the menu Tools then Plugins</div></section>
-<section></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="../images/Click-on-the-tab-Available-Plugins.png" alt="Click on the tab Available Plugins" height="100%" /></div><div class="title">Figure 4. Click on the tab Available Plugins</div></section>
-<section></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="../images/Install-the-plugin-and-restart-Gephi.png" alt="Install the plugin and restart Gephi" height="100%" /></div><div class="title">Figure 5. Install the plugin and restart Gephi</div></section>
 <section></section>
 <section id="_opening_the_plugin"><h2>Opening the plugin</h2></section>
-<section></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="../images/Open-the-plugin-via-the-menu-File---Import.png" alt="Open the plugin via the menu File   Import" height="100%" /></div><div class="title">Figure 6. Open the plugin via the menu File - Import</div></section>
 <section></section>
 <section id="_using_the_plugin"><h2>Using the plugin</h2></section>
-<section></section>
 <section><h3>2nd panel</h3></section>
-<section></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="../images/Select-a-file.png" alt="Select a file" height="100%" /></div><div class="title">Figure 7. Select a file</div></section>
-<section></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/cooccurrences-computer/excel-2-en.png" alt="excel 2 en" height="100%" /></div><div class="title">Figure 8. A file without headers</div></section>
-<section></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/cooccurrences-computer/excel-1-en.png" alt="excel 1 en" height="100%" /></div><div class="title">Figure 9. A file with headers</div></section>
 <section><div class="paragraph"><p>To describe the next screens of the plugin, we will take the example of <strong>the Excel file just shown</strong>, with headers.</p></div></section>
 <section><h3>3rd panel</h3></section>
-<section></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/cooccurrences-computer/plugin-panels-1-en.png" alt="plugin panels 1 en" height="100%" /></div><div class="title">Figure 10. Which entities should be the nodes?</div></section>
 <section><div class="paragraph"><p>What does this panel mean?</p></div>
-<div class="paragraph"><p>If you look back at the Excel file, you see that we have "Clients" and their "Purchases".</p></div>
-<div class="paragraph"><p>&#8594; This means we can build 2 different types of networks, depending on our needs:</p></div>
-<div class="olist arabic"><ol class="arabic"><li><p>A network showing clients and products, with relations representing purchases from a client to a product.</p></li></ol></div>
-<div class="imageblock" style=""><img src="../images/client-to-product.png" alt="client to product" /></div>
-<div class="paragraph"><p>To create this kind of networks, choose "Client" in the upper window, and "Purchases" in the lower window of the plugin screen.</p></div>
-<div class="olist arabic"><ol class="arabic" start="2"><li><p>Or a network where 2 products are connected, if one client puchased them together.</p></li></ol></div>
-<div class="imageblock" style=""><img src="../images/product-to-product.png" alt="product to product" /></div>
-<div class="paragraph"><p>To create this kind of networks, choose "Purchases" in the upper <span class="underline">and</span> lower windows of the plugin screen.</p></div></section>
+<div class="paragraph"><p>If you look back at the Excel file, you see that we have "Clients" and their "Purchases".</p></div></section>
+<section><div class="paragraph"><p>&#8594; This means we can build 2 different types of networks, depending on our needs:</p></div>
+<div class="olist arabic"><ol class="arabic"><li><p>A network showing clients and products, with relations representing purchases from a client to a product.</p></li></ol></div></section>
+<section><div class="imageblock" style=""><img src="../images/client-to-product.png" alt="client to product" /></div></section>
+<section><div class="paragraph"><p>To create this kind of networks, choose "Client" in the upper window, and "Purchases" in the lower window of the plugin screen.</p></div></section>
+<section><div class="olist arabic"><ol class="arabic" start="2"><li><p>Or a network where 2 products are connected, if one client puchased them together.</p></li></ol></div></section>
+<section><div class="imageblock" style=""><img src="../images/product-to-product.png" alt="product to product" /></div></section>
+<section><div class="paragraph"><p>To create this kind of networks, choose "Purchases" in the upper <span class="underline">and</span> lower windows of the plugin screen.</p></div></section>
 <section><h3>4th panel</h3></section>
-<section></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/cooccurrences-computer/subfield-delimiter-en.png" alt="subfield delimiter en" height="100%" /></div><div class="title">Figure 11. Choosing which delimiter is used</div></section>
 <section><div class="paragraph"><p>This 3rd panel asks: in our Excel file, how are different items separated in a given cell?
 In our example, we have used commas: the lists of products purchased are comma-separated:</p></div></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="../images/commas-shown-in-red.png" alt="commas shown in red" height="100%" /></div><div class="title">Figure 12. commas shown in red</div></section>
-<section></section>
 <section><h3>5th panel</h3></section>
 <section><div class="paragraph"><p>This panel allows you to specify whether the relations are dynamic in time, or not.</p></div>
 <div class="paragraph"><p>In this case, you need an extra column (column C), where a date is shown. We don&#8217;t cover this case here.</p></div>
 <div class="paragraph"><p>(read the tutorials on dynamic networks for a starter)</p></div></section>
 <section><h3>6th panel</h3></section>
-<section></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/cooccurrences-computer/panel-6-1-en.png" alt="panel 6 1 en" height="100%" /></div><div class="title">Figure 13. Options panel</div></section>
 <section><div class="literalblock"><div class="content"><pre>"Create links between Purchases agents and links between Purchase agents"</pre></div></div>
-<div class="paragraph"><p>&#8594; If you chose a Product &#8592;&#8594; Product kind of network in panel 3, then of course you are interested in links between products. <strong>Check the box</strong>.</p></div>
-<div class="paragraph"><p>&#8594; But if you chose a Client &#8592;&#8594; Product kind of network  in panel 3, what you need is less obvious.</p></div>
+<div class="paragraph"><p>&#8594; If you chose a Product &#8592;&#8594; Product kind of network in panel 3, then of course you are interested in links between products. <strong>Check the box</strong>.</p></div></section>
+<section><div class="paragraph"><p>&#8594; But if you chose a Client &#8592;&#8594; Product kind of network  in panel 3, what you need is less obvious.</p></div>
 <div class="paragraph"><p>Let&#8217;s take the example of client I, who purchased a table and some chairs:</p></div>
-<div class="olist arabic"><ol class="arabic"><li><p>Checking the box will create a network where:</p></li></ol></div>
-<div class="imageblock" style=""><img src="../images/inner-links-included.png" alt="inner links included" /></div>
-<div class="olist arabic"><ol class="arabic"><li><p><strong>Not</strong> checking the box will create a network where:</p></li></ol></div>
-<div class="imageblock" style=""><img src="../images/inner-links-excluded.png" alt="inner links excluded" /></div>
-<div class="literalblock"><div class="content"><pre>"Remove duplicates"</pre></div></div>
-<div class="paragraph"><p>&#8594; Check this option if your Excel or csv file has duplicate rows that you&#8217;d like to be removed</p></div>
-<div class="literalblock"><div class="content"><pre>"Remove self-loops"</pre></div></div>
+<div class="olist arabic"><ol class="arabic"><li><p>Checking the box will create a network where:</p></li></ol></div></section>
+<section><div class="imageblock" style=""><img src="../images/inner-links-included.png" alt="inner links included" /></div></section>
+<section><div class="olist arabic"><ol class="arabic"><li><p><strong>Not</strong> checking the box will create a network where:</p></li></ol></div></section>
+<section><div class="imageblock" style=""><img src="../images/inner-links-excluded.png" alt="inner links excluded" /></div></section>
+<section><div class="literalblock"><div class="content"><pre>"Remove duplicates"</pre></div></div>
+<div class="paragraph"><p>&#8594; Check this option if your Excel or csv file has duplicate rows that you&#8217;d like to be removed</p></div></section>
+<section><div class="literalblock"><div class="content"><pre>"Remove self-loops"</pre></div></div>
 <div class="paragraph"><p>If a Client has purchased tables twice, so that we have "table, table" in a cell: this would create a link from table to table (a <strong>self loop</strong>).</p></div>
 <div class="paragraph"><p>&#8594; Check this option if you&#8217;d like self loops to be removed.</p></div></section>
 <section><h3>7th panel</h3></section>
