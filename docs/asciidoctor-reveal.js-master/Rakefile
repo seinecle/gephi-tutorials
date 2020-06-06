@@ -3,11 +3,14 @@
 require 'asciidoctor'
 require 'asciidoctor/doctest'
 require 'colorize'
-require 'thread_safe'
 require 'tilt'
+require 'rake/testtask'
 
 CONVERTER_FILE = 'lib/asciidoctor-revealjs/converter.rb'
+JS_FILE = 'build/asciidoctor-reveal.js'
+DIST_FILE = 'dist/main.js'
 TEMPLATES_DIR = 'templates'
+PUBLIC_DIR = 'public'
 
 file CONVERTER_FILE => FileList["#{TEMPLATES_DIR}/*"] do
   build_converter :fast
@@ -16,8 +19,7 @@ end
 namespace :build do
   desc 'Compile Slim templates and generate converter.rb'
   task :converter => 'clean' do
-    # NOTE: using mode :fast by default due to a bug in ruby-beautify under Ruby 2.5
-    #       https://github.com/erniebrodeur/ruby-beautify/issues/45
+    # NOTE: use :pretty if you want to debug the generated code
     build_converter :fast
   end
 
@@ -25,12 +27,34 @@ namespace :build do
   task 'converter:opal' => 'clean' do
     build_converter :opal
   end
+
+  desc "Transcompile to JavaScript and generate #{JS_FILE}"
+  task :js => 'converter:opal' do
+    require 'opal'
+
+    builder = Opal::Builder.new(compiler_options: {
+      dynamic_require_severity: :error,
+    })
+    builder.append_paths 'lib'
+    builder.build 'asciidoctor-revealjs'
+
+    mkdir_p [File.dirname(JS_FILE), File.dirname(DIST_FILE)]
+    File.open(JS_FILE, 'w') do |file|
+      template = File.read('src/asciidoctor-revealjs.tmpl.js')
+      template['//OPAL-GENERATED-CODE//'] = builder.to_s
+      file << template
+    end
+    File.binwrite "#{JS_FILE}.map", builder.source_map
+
+    cp JS_FILE, DIST_FILE, :verbose => true
+  end
 end
 
 task :build => 'build:converter'
 
 task :clean do
   rm_rf CONVERTER_FILE
+  rm_rf PUBLIC_DIR
 end
 
 def build_converter(mode = :pretty)
@@ -50,11 +74,12 @@ def build_converter(mode = :pretty)
     Asciidoctor::TemplatesCompiler::RevealjsSlim.compile_converter(
       templates_dir: TEMPLATES_DIR,
       class_name: 'Asciidoctor::Revealjs::Converter',
-      register_for: ['revealjs'],
+      register_for: ['revealjs', 'reveal.js'],
       backend_info: {
         basebackend: 'html',
         outfilesuffix: '.html',
         filetype: 'html',
+        supports_templates: true
       },
       delegate_backend: 'html5',
       engine_opts: {
@@ -73,6 +98,11 @@ DocTest::RakeTasks.new do |t|
   t.converter_opts = { backend_name: 'revealjs' }
 end
 
+Rake::TestTask.new(:test) do |t|
+  t.test_files = FileList['test/asciidoctor-revealjs/*_test.rb']
+  t.warning = false
+end
+
 task 'prepare-converter' do
   # Run as an external process to ensure that it will not affect tests
   # environment with extra loaded modules (especially slim).
@@ -86,6 +116,7 @@ namespace :examples do
   # converted slides will be put in examples/ directory
   task :convert do
     require 'slim-htag'
+    require_relative 'lib/asciidoctor-revealjs'
     Dir.glob('examples/*.adoc') do |_file|
       print "Converting file #{_file}... "
       out = Asciidoctor.convert_file _file,
@@ -108,9 +139,20 @@ namespace :examples do
       `ruby -run -e httpd . -p 5000 -b 127.0.0.1`
     end
   end
+
+  task :publish do
+    Dir.mkdir PUBLIC_DIR
+    Dir.mkdir "#{PUBLIC_DIR}/reveal.js"
+    FileUtils.cp 'src/index.html', "#{PUBLIC_DIR}/index.html"
+    FileUtils.cp_r 'node_modules/reveal.js/', "#{PUBLIC_DIR}"
+    FileUtils.cp_r 'examples/images/', "#{PUBLIC_DIR}"
+    FileUtils.cp 'examples/release-4.0.html', "#{PUBLIC_DIR}/release-4.0.html"
+    FileUtils.cp 'examples/release-4.0.css', "#{PUBLIC_DIR}/release-4.0.css"
+  end
 end
 
+task 'test' => 'doctest'
 task 'doctest:test' => 'prepare-converter'
 task 'doctest:generate' => 'prepare-converter'
 # When no task specified, run test.
-task :default => :doctest
+task :default => :test

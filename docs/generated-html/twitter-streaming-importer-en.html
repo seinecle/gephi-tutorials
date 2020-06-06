@@ -462,6 +462,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_c_timeline">c. Timeline</a></li>
 </ul>
 </li>
+<li><a href="#_extra_scripts">Extra Scripts</a></li>
+<li><a href="#_they_use_it">They use it !</a></li>
 <li><a href="#_the_end">The end</a></li>
 </ul>
 </div>
@@ -470,7 +472,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>last modified: 2018-03-03</p>
+<p>last modified: 2020-06-06</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
@@ -663,7 +665,7 @@ We need to create a Twitter app which will authorize us to collect tweets automa
 <div class="sect3">
 <h4 id="_b_creating_a_twitter_app">b. Creating a Twitter app</h4>
 <div class="paragraph">
-<p>Go to <strong><a href="https://apps.twiter.com">https://apps.twiter.com</a></strong>:</p>
+<p>Go to <strong><a href="https://apps.twitter.com">https://apps.twitter.com</a></strong>:</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
@@ -737,11 +739,11 @@ Now we can start using the plugin.</p>
 <h2 id="_3_using_the_plugin">3. Using the plugin</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>With the <strong> Words to follow </strong> tab, you will be able to follow one or multiple words. For <strong> hashtags </strong>, just enter the word without the hash in front of it. (e.g if you want to follow '<strong>#Gephi</strong>' just add '<strong>Gephi</strong>')</p>
+<p>With the <strong> Words to follow </strong> tab, you will be able to follow one or multiple words. For <strong> hashtags </strong>, just enter the word without the hash in front of it. (e.g if you want to follow '<strong>#Gephi</strong>' just add '<strong>Gephi</strong>'). You can enter multiple words by separating them with a comma <strong> , </strong>. E.g <strong> word1, word2 </strong> .</p>
 </div>
 <div class="paragraph">
 <p>With the <strong> Users to follow </strong> tab, you will be able to follow the activity of one or multiple users. Any tweet from this user or retweeting or mentioning the user will be captured. You can also import all users from a
-twitter list by giviing the <code>user name</code> of the twitter account and the <code>list name</code> to import.</p>
+twitter list by giviing the <code>user name</code> of the twitter account and the <code>list name</code> to import. You can enter multiple users by separating them with a comma <strong> , </strong>. E.g <strong> totetmatt, gephi </strong> .</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
@@ -774,7 +776,7 @@ a long list of words / users.</p>
 <div class="sect3">
 <h4 id="_a_network_logic">a. Network Logic</h4>
 <div class="paragraph">
-<p>A <strong> Network Logic </strong> means: what should be done with an incoming tweet? How to transform it as a set of nodes and edges?</p>
+<p>A <strong> Network Logic </strong> means: what should be done with an incoming tweet? How to transform it as a set of nodes and edges? It&#8217;s equivalent to map projection in the cartography world.</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
@@ -801,6 +803,9 @@ a long list of words / users.</p>
 </li>
 <li>
 <p>Emoji Network : Same as Hashtag Network but focused on Emoji characters ( original idea from <a href="http://dataneel.com">Neel Shivdasani</a> / @DataNeel ).</p>
+</li>
+<li>
+<p>Bernardamus Projection (based on <a href="https://twitter.com/Bernardamus/status/1131334028043411456" class="bare">https://twitter.com/Bernardamus/status/1131334028043411456</a>) : This network represents user network via hashtag present in tweets.</p>
 </li>
 </ul>
 </div>
@@ -913,6 +918,45 @@ a long list of words / users.</p>
 </div>
 </div>
 <div class="sect1">
+<h2 id="_extra_scripts">Extra Scripts</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/Minyall/gephi_twitter_media_downloader" class="bare">https://github.com/Minyall/gephi_twitter_media_downloader</a> : A small script designed to take either a .csv of Tweet ids, or the export from Gephi&#8217;s TwitterStreamingImporter Plugin and download related Tweet media.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_they_use_it">They use it !</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Panteion University - Dept. of Communication, Media and Culture</p>
+</li>
+<li>
+<p>Storyful</p>
+</li>
+<li>
+<p>BBC Monitoring</p>
+</li>
+<li>
+<p>Paris II</p>
+</li>
+<li>
+<p>University Aberdeen</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can ping @totetmatt on twitter if you wish to expand the list ;)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_the_end">The end</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -944,7 +988,7 @@ a long list of words / users.</p>
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2018-03-03 18:03:10 +0100
+Last updated 2020-06-06 15:31:02 +0200
 </div>
 </div>
 </body>

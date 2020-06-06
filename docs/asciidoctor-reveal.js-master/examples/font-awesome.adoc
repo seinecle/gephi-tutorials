@@ -1,0 +1,29 @@
+// .font-awesome
+// Testing font-awesome icons
+// :include:  //head//link[@rel="stylesheet"] | //div[@class="slides"]
+// :header_footer:
+= Font Awesome Tests
+:icons: font
+:customcss: font-awesome.css
+
+== !
+
+icon:heart[2x]
+
+== !
+
+icon:heart[size=5x]
+
+== !
+
+// TODO
+[.red]
+icon:heart[size=5x]
+
+== !
+
+icon:stackpath[size=5x]
+
+== !
+
+icon:twitter[size=5x]

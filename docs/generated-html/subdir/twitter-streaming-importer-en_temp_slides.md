@@ -159,7 +159,7 @@ We need to create a Twitter app which will authorize us to collect tweets automa
 == !
 //ST: Creating a Twitter app
 
-Go to *https://apps.twiter.com[https://apps.twiter.com]*:
+Go to *https://apps.twitter.com[https://apps.twitter.com]*:
 
 //ST: !
 == !
@@ -218,11 +218,11 @@ Now we can start using the plugin.
 //ST: Using the plugin
 
 //ST: !
-With the ** Words to follow ** tab, you will be able to follow one or multiple words. For ** hashtags **, just enter the word without the hash in front of it. (e.g if you want to follow '**#Gephi**' just add '**Gephi**')
+With the ** Words to follow ** tab, you will be able to follow one or multiple words. For ** hashtags **, just enter the word without the hash in front of it. (e.g if you want to follow '**#Gephi**' just add '**Gephi**'). You can enter multiple words by separating them with a comma ** , **. E.g ** word1, word2 ** .
 
 //ST: !
 With the ** Users to follow ** tab, you will be able to follow the activity of one or multiple users. Any tweet from this user or retweeting or mentioning the user will be captured. You can also import all users from a
-twitter list by giviing the `user name` of the twitter account and the `list name` to import.
+twitter list by giviing the `user name` of the twitter account and the `list name` to import. You can enter multiple users by separating them with a comma ** , **. E.g ** totetmatt, gephi ** .
 
 //ST: !
 == !
@@ -254,7 +254,7 @@ a long list of words / users.
 == !
 
 //ST: !
-A ** Network Logic ** means: what should be done with an incoming tweet? How to transform it as a set of nodes and edges?
+A ** Network Logic ** means: what should be done with an incoming tweet? How to transform it as a set of nodes and edges? It's equivalent to map projection in the cartography world.
 
 //ST: The dropdown menu to choose the network logic:
 
@@ -272,6 +272,7 @@ There are for the moment 4 Network Logics to choose from:
 * User Network : This will represent the interaction between users. Any mentions, retweets or quotes between 2 users, will be represented. The size of the edge represent the number of interactions between 2 users.
 * Hashtag Network : This will create the network of Hashtags.
 * Emoji Network : Same as Hashtag Network but focused on Emoji characters ( original idea from http://dataneel.com[Neel Shivdasani] / @DataNeel ).
+* Bernardamus Projection (based on https://twitter.com/Bernardamus/status/1131334028043411456) : This network represents user network via hashtag present in tweets.
 
 //ST: !
 
@@ -367,6 +368,25 @@ image::en/twitter-streaming-importer/timeline-enable.png[align="center", title="
 image::en/twitter-streaming-importer/timeline.gif[align="center", title="Example of Timeline"]
 == !
 
+
+== Extra Scripts
+== !
+
+//ST: Extra Scripts
+
+* https://github.com/Minyall/gephi_twitter_media_downloader : A small script designed to take either a .csv of Tweet ids, or the export from Gephi's TwitterStreamingImporter Plugin and download related Tweet media.
+
+== They use it !
+== !
+//ST: They use it !
+
+* Panteion University - Dept. of Communication, Media and Culture
+* Storyful
+* BBC Monitoring
+* Paris II
+* University Aberdeen
+
+You can ping @totetmatt on twitter if you wish to expand the list ;)
 
 == The end
 == !

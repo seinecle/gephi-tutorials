@@ -19,6 +19,7 @@
         <groupId>net.clementlevallois</groupId>
         <artifactId>AsciiiDocMavenJavaSE</artifactId>
         <version>1.0</version>
+        <relativePath>../../AsciiiDocMavenJavaSE/pom.xml</relativePath>
     </parent>
     <build>
         <plugins>
@@ -62,18 +63,18 @@
 
     <profiles>
         <profile>
-        <id>build-pdf-html-slides</id>
-        <activation>
-            <property>
-                <name>build-pdf-html-slides</name>
-                <value>true</value>
-            </property>
-        </activation>
-        <build>
+            <id>build-pdf-html-slides</id>
+            <activation>
+                <property>
+                    <name>build-pdf-html-slides</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <build>
 
-            <defaultGoal>process-resources</defaultGoal>
+                <defaultGoal>process-resources</defaultGoal>
 
-            <!--
+                <!--
             Plugin attach to different phases of the build process to customize it.
             (see https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference).
 
@@ -109,7 +110,11 @@
                     <plugin>
                         <groupId>org.asciidoctor</groupId>
                         <artifactId>asciidoctor-maven-plugin</artifactId>
-                        <version>${asciidoctor.maven.plugin.version}</version>
+                        <version>2.0.0.RC.logging.1</version>
+
+<!--                        <groupId>org.asciidoctor</groupId>
+                        <artifactId>asciidoctor-maven-plugin</artifactId>
+                        <version>${asciidoctor.maven.plugin.version}</version>-->
                         <dependencies>
                             <!-- Comment this section to use the default jruby artifact provided by the plugin -->
                             <!-- The Asciidoctor core converter is written in Ruby, we use jRuby to integrate it.
@@ -227,8 +232,8 @@
                                 </goals>
                                 <configuration>
                                     <sourceDirectory>${source.directory}</sourceDirectory>
-<!--                                    for pdf output the image Dir should be the default one, not ../images as defines for html and slides output!-->
-<!--so I leave this line commented out as a reminder what not to do-->
+                                    <!--                                    for pdf output the image Dir should be the default one, not ../images as defines for html and slides output!-->
+                                    <!--so I leave this line commented out as a reminder what not to do-->
                                     <!--<imagesDir>${image.directory}</imagesDir>-->                                    
                                     <sourceDocumentName>${doc.to.process.full.path}</sourceDocumentName>                                    
                                     <outputDirectory>${basedir}/docs/generated-pdf</outputDirectory>
@@ -541,4 +546,12 @@
             <version>${project.version}</version>
         </dependency>
     </dependencies>
+    <repositories>
+        <repository>
+            <id>bintray-asciidoctor-maven-asciidoctor-maven-plugin</id>
+            <name>asciidoctor-maven-asciidoctor-maven-plugin</name>
+            <url>https://dl.bintray.com/abelsromero/maven/</url>
+        </repository>
+    </repositories>
+
 </project>

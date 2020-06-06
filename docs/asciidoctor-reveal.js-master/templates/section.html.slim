@@ -1,10 +1,4 @@
 / OPTIONS PROCESSING
-/ strip IDs the same way revealjs does to make links to direct slides work using URL fragments gh#127
-/ Strip unallowed characters globally then strip anything non a-Z from start of string until something matches
-/ TODO remove when hakimel/reveal.js#1230 is fixed
-- _id = id.gsub(/[^a-zA-Z0-9\-\_\:\.]/, '').gsub(/^[^a-zA-Z]+/, '')
-
-
 / hide slides on %conceal, %notitle and named "!"
 - titleless = (title = self.title) == '!'
 - hide_title = (titleless || (option? :notitle) || (option? :conceal))
@@ -14,7 +8,7 @@
 / extracting block image attributes to find an image to use as a
 / background_image attribute
 - data_background_image, data_background_size, data_background_repeat,
-  data_background_transition = nil
+  data_background_position, data_background_transition = nil
 
 / process the first image block in the current section that acts as a background
 - section_images = blocks.map do |block|
@@ -30,38 +24,55 @@
   - data_background_size = bg_image.attr 'size'
   - data_background_repeat = bg_image.attr 'repeat'
   - data_background_transition = bg_image.attr 'transition'
+  - data_background_position = bg_image.attr 'position'
 
 / background-image section attribute overrides the image one
 - if attr? 'background-image'
   - data_background_image = image_uri(attr 'background-image')
 
+- if attr? 'background-video'
+  - data_background_video = media_uri(attr 'background-video')
+
 - if attr? 'background-color'
   - data_background_color = attr 'background-color'
 
+- parent_section_with_vertical_slides = @level == 1 && !vertical_slides.empty?
+
+- content_for :section
+  section(id=(titleless ? nil : id)
+    class=roles
+    data-transition=(attr 'transition')
+    data-transition-speed=(attr 'transition-speed')
+    data-background-color=data_background_color
+    data-background-image=data_background_image
+    data-background-size=(data_background_size || attr('background-size'))
+    data-background-repeat=(data_background_repeat || attr('background-repeat'))
+    data-background-transition=(data_background_transition || attr('background-transition'))
+    data-background-position=(data_background_position || attr('background-position'))
+    data-background-iframe=(attr "background-iframe")
+    data-background-video=data_background_video
+    data-background-video-loop=((attr? 'background-video-loop') || (option? 'loop'))
+    data-background-video-muted=((attr? 'background-video-muted') || (option? 'muted'))
+    data-background-opacity=(attr "background-opacity")
+    data-autoslide=(attr "autoslide")
+    data-state=(attr 'state'))
+    - unless hide_title
+      h2=section_title
+    - if parent_section_with_vertical_slides
+      - unless (_blocks = blocks - vertical_slides).empty?
+        div.slide-content
+          - _blocks.each do |block|
+            =block.convert
+    - else
+      - unless (_content = content.chomp).empty?
+        div.slide-content
+          =_content
+
 / RENDERING
 / render parent section of vertical slides set
-- if @level == 1 && !vertical_slides.empty?
+- if parent_section_with_vertical_slides
   section
-    / TODO: try to get rid of duplication w/ standalone slide section
-    section(id=(titleless ? nil : _id)
-      class=roles
-      data-transition=(attr 'transition')
-      data-transition-speed=(attr 'transition-speed')
-      data-background-color=data_background_color
-      data-background-image=data_background_image
-      data-background-size=(data_background_size || attr('background-size'))
-      data-background-repeat=(data_background_repeat || attr('background-repeat'))
-      data-background-transition=(data_background_transition || attr('background-transition'))
-      data-background-iframe=(attr "background-iframe")
-      data-background-video=(attr "background-video")
-      data-background-video-loop=((attr? 'background-video-loop') || (option? 'loop'))
-      data-background-video-muted=((attr? 'background-video-muted') || (option? 'muted'))
-      data-state=(attr 'state'))
-
-      - unless hide_title
-        h2=title
-      - (blocks - vertical_slides).each do |block|
-        =block.convert
+    - yield_content :section
     - vertical_slides.each do |subsection|
       =subsection.convert
 
@@ -72,21 +83,4 @@
     h level=(@level) =title
     =content.chomp
   - else
-    section(id=(titleless ? nil : _id)
-      class=roles
-      data-transition=(attr 'transition')
-      data-transition-speed=(attr 'transition-speed')
-      data-background-color=data_background_color
-      data-background-image=data_background_image
-      data-background-size=(data_background_size || attr('background-size'))
-      data-background-repeat=(data_background_repeat || attr('background-repeat'))
-      data-background-transition=(data_background_transition || attr('background-transition'))
-      data-background-iframe=(attr "background-iframe")
-      data-background-video=(attr "background-video")
-      data-background-video-loop=((attr? 'background-video-loop') || (option? 'loop'))
-      data-background-video-muted=((attr? 'background-video-muted') || (option? 'muted'))
-      data-state=(attr 'state'))
-
-      - unless hide_title
-        h2=title
-      =content.chomp
+    - yield_content :section
