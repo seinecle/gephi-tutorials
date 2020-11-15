@@ -8,8 +8,8 @@ last modified: {docdate}
 :iconsfont:   font-awesome
 :revnumber: 1.0
 :example-caption!:
-ifndef::imagesdir[:imagesdir: ../images]
-ifndef::sourcedir[:sourcedir: ../../../main/java]
+:imagesdir: images
+
 
 :title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
 
@@ -203,6 +203,6 @@ image::en/import-spreadsheet-9-en.png[align="center",title="Kinds of attributes"
 - https://www.youtube.com/watch?v=3Im7vNRA2ns[Video "How to import a CSV into Gephi" by Jen Golbeck]
 
 == the end
-Visit https://www.facebook.com/groups/gephi/[the Gephi group on Facebook] to get help,
+Visit https://www.facebook.com/groups/gephi[the Gephi group on Facebook] to get help,
 
-or visit https://seinecle.github.io/gephi-tutorials/[the website for more tutorials]
+or visit https://seinecle.github.io/gephi-tutorials[the website for more tutorials]

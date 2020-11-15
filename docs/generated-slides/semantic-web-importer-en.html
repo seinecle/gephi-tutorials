@@ -144,12 +144,14 @@ link.rel = 'stylesheet';
 link.type = 'text/css';
 link.href = window.location.search.match( /print-pdf/gi ) ? "reveal.js-3.9.2/css/print/pdf.css" : "reveal.js-3.9.2/css/print/paper.css";
 document.getElementsByTagName( 'head' )[0].appendChild( link );</script></head><body><div class="reveal"><div class="slides"><section class="title" data-state="title"><h1>Semantic Web Importer</h1><div class="preamble"><div class="paragraph"><p>2017-01-31</p></div>
-<div class="paragraph"><p>last modified: 2017-03-15</p></div></div><p class="author"><small>== !</small></p></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../../images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450"></div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div></div></section>
+<div class="paragraph"><p>last modified: 2020-11-15</p></div></div><p class="author"><small>== !</small></p></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450"></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;</p></div></div></section>
 <section id="_author_and_documentation"><h2>Author and documentation</h2></section>
-<section><div class="slide-content"><div class="paragraph"><p>The Semantic Web Importer plugin allows you to query a SPARQL endpoint and represent the result as a graph in Gephi.</p></div>
-<div class="paragraph"><p>Official page of the plugin: <a href="https://gephi.org/plugins/#/plugin/semantic" class="bare">https://gephi.org/plugins/#/plugin/semantic</a></p></div>
+<section></section>
+<section><div class="slide-content"><div class="paragraph"><p>The Semantic Web Importer plugin allows you to query a SPARQL endpoint and represent the result as a graph in Gephi.</p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>Official page of the plugin: <a href="https://gephi.org/plugins/#/plugin/semantic" class="bare">https://gephi.org/plugins/#/plugin/semantic</a></p></div>
 <div class="paragraph"><p>Plugin Author: <a href="https://github.com/ErwanDemairy">Erwan Demairy</a></p></div>
 <div class="paragraph"><p>Plugin sources: <a href="https://scm.gforge.inria.fr/anonscm/git/segviz-public/gephi-plugins.git/">git://scm.gforge.inria.fr/segviz-public/gephi-plugins.git</a></p></div>
 <div class="paragraph"><p>Licensed under: <a href="http://www.cecill.info/licences/Licence_CeCILL-C_V1-en.html">Cecill-C</a></p></div></div></section>
@@ -157,13 +159,13 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );</script></head><
 <section><div class="slide-content"><div class="paragraph"><p>RDF stands for <a href="https://en.wikipedia.org/wiki/Resource_Description_Framework">Resource Description Framework</a> .
 It is a way to represent information of all kinds.
 It is now a specification and since 1995 people are working on RDF and all subjects related to information representation for automatic system.</p></div>
-<div class="paragraph"><p>RDF can be considered as the « Grand Father » of graph representation.</p></div>
-<div class="paragraph"><p>The idea is very simple, all information can be represented as a triplet :</p></div>
-<div class="quoteblock"><blockquote><div class="paragraph"><p><code>(subject, predicate, object)</code></p></div></blockquote></div>
-<div class="paragraph"><p>To query such a dataset, a query language has been developed: <a href="https://en.wikipedia.org/wiki/SPARQL">SPARQL</a></p></div>
+<div class="paragraph"><p>RDF can be considered as the « Grand Father » of graph representation.</p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>The idea is very simple, all information can be represented as a triplet :</p></div>
+<div class="quoteblock"><blockquote><div class="paragraph"><p><code>(subject, predicate, object)</code></p></div></blockquote></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>To query such a dataset, a query language has been developed: <a href="https://en.wikipedia.org/wiki/SPARQL">SPARQL</a></p></div>
 <div class="paragraph"><p>The SPARQL format is close to SQL format and tries to be as close as possible to a natural language.</p></div>
-<div class="paragraph"><p><a href="http://dbpedia.org">DBpedia</a> is the RDF version of Wikipedia. It is an open datastore that tries to gather and offers in RDF format all information that you can find in wikipedia or other knowledge service.</p></div>
-<div class="paragraph"><p>DBPedia is very interesting because it preformats concepts and makes them available for automatic processes or complex queries across concepts.</p></div>
+<div class="paragraph"><p><a href="http://dbpedia.org">DBpedia</a> is the RDF version of Wikipedia. It is an open datastore that tries to gather and offers in RDF format all information that you can find in wikipedia or other knowledge service.</p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>DBPedia is very interesting because it preformats concepts and makes them available for automatic processes or complex queries across concepts.</p></div>
 <div class="paragraph"><p>You can query it through a web interface or via any RDF toolkit :</p></div>
 <div class="paragraph"><p><a href="http://dbpedia.org/sparql">http://dbpedia.org/sparql</a></p></div>
 <div class="listingblock"><div class="content"><pre class="highlight"><code class="language-SQL" data-lang="SQL">select *
@@ -175,12 +177,13 @@ where
 <section><div class="slide-content"><div class="paragraph"><p>The result of a SPARQL can be a table as we could do it with SQL, but you can also build a graph based on your query.
 The Semantic Web Plugin uses this feature to draw the result of your query into Gephi.</p></div>
 <div class="paragraph"><p>First, we need to install Semantic web import. You can find and install this plugin in the menu Tools &#8594; Plugins of Gephi.</p></div>
-<div class="paragraph"><p>When installed, go to the Semantic Web Import tab.</p></div>
-<div class="paragraph"><p>In the <strong>Driver</strong> tab, choose <strong>Remote - REST endpoint</strong> and put <strong><a href="http://dbpedia.org/sparql" class="bare">http://dbpedia.org/sparql</a></strong> and <strong>EndPoint URL</strong>.</p></div>
+<div class="paragraph"><p>When installed, go to the Semantic Web Import tab.</p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>In the <strong>Driver</strong> tab, choose <strong>Remote - REST endpoint</strong> and put <strong><a href="http://dbpedia.org/sparql" class="bare">http://dbpedia.org/sparql</a></strong> and <strong>EndPoint URL</strong>.</p></div>
 <div class="admonitionblock important"><table><tr><td class="icon"><i class="fa fa-exclamation-circle" title="Important"></i></td><td class="content"><div class="paragraph"><p>Press <strong>Enter</strong> after typing the URL endpoint so the url is getting validated and used.</p></div></td></tr></table></div></div></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../../images/en/semantic-web-importer/setup_1.png" alt="setup 1" height="100%"></div><div class="title">Figure 1. Setup endpoint</div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div>
-<div class="paragraph"><p>Go to <strong>Query</strong> tab, remove the dummy query and put this one:</p></div>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/en/semantic-web-importer/setup_1.png" alt="setup 1" height="100%"></div><div class="title">Figure 1. Setup endpoint</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;</p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>Go to <strong>Query</strong> tab, remove the dummy query and put this one:</p></div>
 <div class="listingblock"><div class="content"><pre class="highlight"><code class="language-SQL" data-lang="SQL">CONSTRUCT{
   ?person &lt;http://gephi.org/type&gt; "person".
   ?movie &lt;http://gephi.org/type&gt; "movie".
@@ -192,48 +195,53 @@ WHERE
  ?movie ?rel1 &lt;http://dbpedia.org/resource/Leonardo_DiCaprio&gt;.
  ?movie ?rel2 ?person.
  ?person a &lt;http://dbpedia.org/ontology/Person&gt;.
-}</code></pre></div></div>
-<div class="paragraph"><p>Finally, click on <strong>Run</strong></p></div></div></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../../images/en/semantic-web-importer/setup_2.png" alt="setup 2" height="100%"></div><div class="title">Figure 2. SPARQL Query</div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div>
-<div class="paragraph"><p>Go back to the Graph preview and you should see a graph. Use the layout tab to get a more intuitive rendering.</p></div></div></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../../images/en/semantic-web-importer/result_1.png" alt="result 1" height="100%"></div><div class="title">Figure 3. result</div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div></div></section>
+}</code></pre></div></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>Finally, click on <strong>Run</strong></p></div></div></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/en/semantic-web-importer/setup_2.png" alt="setup 2" height="100%"></div><div class="title">Figure 2. SPARQL Query</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;</p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>Go back to the Graph preview and you should see a graph. Use the layout tab to get a more intuitive rendering.</p></div></div></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/en/semantic-web-importer/result_1.png" alt="result 1" height="100%"></div><div class="title">Figure 3. result</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;</p></div></div></section>
 <section id="_details"><h2>Details</h2></section>
 <section></section>
 <section><div class="slide-content"><h3>CONSTRUCT block</h3></div></section>
 <section><div class="slide-content"><div class="paragraph"><p>The <code>CONSTRUCT</code> block define the new graph to build from the query. That&#8217;s the description of your data the plugin will interpet
 to build the graph.</p></div>
-<div class="paragraph"><p>What is the syntax for this <code>CONSTRUCT</code> block :</p></div>
-<div class="ulist"><ul><li><p><code>?a <a href="http://gephi.org/nodeProperty" class="bare">http://gephi.org/nodeProperty</a> ?b</code></p></li></ul></div>
+<div class="paragraph"><p>What is the syntax for this <code>CONSTRUCT</code> block :</p></div></div></section>
+<section><div class="slide-content"><div class="ulist"><ul><li><p><code>?a <a href="http://gephi.org/nodeProperty" class="bare">http://gephi.org/nodeProperty</a> ?b</code></p></li></ul></div>
 <div class="paragraph"><p>&#8594; Will create the node <code>?a</code> with the property <code>nodeProperty</code> equal to <code>?b</code>.</p></div>
 <div class="ulist"><ul><li><p><code>?a (&lt;what_You_Want&gt; or ?c) ?b</code></p></li></ul></div>
 <div class="paragraph"><p>&#8594; will create a link between <code>?a</code> and <code>?b</code> with label <code>&lt;what_You_Want&gt;</code></p></div></div></section>
 <section><div class="slide-content"><h3>WHERE block</h3></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>The <code>WHERE</code> block define the data to match based on the query typed in :</p></div>
-<div class="ulist"><ul><li><p><code>?movie a <a href="http://dbpedia.org/ontology/Film" class="bare">http://dbpedia.org/ontology/Film</a>.</code></p></li></ul></div>
+<section><div class="slide-content"><div class="paragraph"><p>The <code>WHERE</code> block define the data to match based on the query typed in :</p></div></div></section>
+<section><div class="slide-content"><div class="ulist"><ul><li><p><code>?movie a <a href="http://dbpedia.org/ontology/Film" class="bare">http://dbpedia.org/ontology/Film</a>.</code></p></li></ul></div>
 <div class="paragraph"><p>&#8594; Get all subject which is a <code><a href="http://dbpedia.org/ontology/Film" class="bare">http://dbpedia.org/ontology/Film</a></code>.
 The <code>a</code> is actually a SPARQL special word for <code>&lt;rdf:type&gt;</code>.
 So it’s exactly equal to <code>?movie &lt;rdf:type&gt; <a href="http://dbpedia.org/ontology/Film" class="bare">http://dbpedia.org/ontology/Film</a></code></p></div>
 <div class="ulist"><ul><li><p><code>?movie ?rel1 <a href="http://dbpedia.org/resource/Leonardo_DiCaprio" class="bare">http://dbpedia.org/resource/Leonardo_DiCaprio</a>.</code></p></li></ul></div>
-<div class="paragraph"><p>&#8594; Match all subjects which have any predicate where the object is <code><a href="http://dbpedia.org/resource/Leonardo_DiCaprio" class="bare">http://dbpedia.org/resource/Leonardo_DiCaprio</a></code></p></div>
-<div class="ulist"><ul><li><p><code>?movie ?rel2 ?person.</code></p></li></ul></div>
+<div class="paragraph"><p>&#8594; Match all subjects which have any predicate where the object is <code><a href="http://dbpedia.org/resource/Leonardo_DiCaprio" class="bare">http://dbpedia.org/resource/Leonardo_DiCaprio</a></code></p></div></div></section>
+<section><div class="slide-content"><div class="ulist"><ul><li><p><code>?movie ?rel2 ?person.</code></p></li></ul></div>
 <div class="paragraph"><p>&#8594; Match any triplet</p></div>
 <div class="ulist"><ul><li><p><code>?person a <a href="http://dbpedia.org/ontology/Person" class="bare">http://dbpedia.org/ontology/Person</a>.</code></p></li></ul></div>
-<div class="paragraph"><p>&#8594; Match the subject <code>?person</code> if it&#8217;s a  <code><a href="http://dbpedia.org/ontology/Person" class="bare">http://dbpedia.org/ontology/Person</a></code>.</p></div>
-<div class="paragraph"><p>In other words, match the variable <code>?movie</code> to any entity that is a <code>Film</code> and that has at least 1 triplet where <code>Leonardo</code> is an object. Match also all <code>?person</code> that is a <code>Person</code>.</p></div>
+<div class="paragraph"><p>&#8594; Match the subject <code>?person</code> if it&#8217;s a  <code><a href="http://dbpedia.org/ontology/Person" class="bare">http://dbpedia.org/ontology/Person</a></code>.</p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>In other words, match the variable <code>?movie</code> to any entity that is a <code>Film</code> and that has at least 1 triplet where <code>Leonardo</code> is an object. Match also all <code>?person</code> that is a <code>Person</code>.</p></div>
 <div class="paragraph"><p>The result in our case is actually a bi-modal graph with Movies and Persons shared with Leonardo Dicaprio.</p></div></div></section>
 <section id="_tips_to_go_further"><h2>Tips to go further</h2></section>
 <section><div class="slide-content"><div class="paragraph"><p>What is interesting with this method is the way to query the data, and the fact that it is easily extensible to other subjects just by changing few things in the query.
 We can think about Music Band and Player relationships, the traditionnal Persons to Companies, or more originally, all the common places where your favorites movies where shot, etc.
-The limit is your imagination to graph.</p></div>
-<div class="paragraph"><p>On our example, you can run multiple time the same query and change which person you want to « expand », it will automatically create the global network of all your research.
+The limit is your imagination to graph.</p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>On our example, you can run multiple time the same query and change which person you want to « expand », it will automatically create the global network of all your research.
 It will also maybe give you some insight on which new movies to watch tonight 😉</p></div>
-<div class="paragraph"><p>But keep in mind that you are heavily dependent on Dbpedia data quality (or other RDF entrypoint), which can alterate a lot you research.</p></div>
-<div class="paragraph"><p>If you want more refined queries, you will have to learn SPARQL and RDF in more details. There are a lot of tutorials around the web that will help you to master SPARQL.</p></div></div></section>
+<div class="paragraph"><p>But keep in mind that you are heavily dependent on Dbpedia data quality (or other RDF entrypoint), which can alterate a lot you research.</p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>If you want more refined queries, you will have to learn SPARQL and RDF in more details. There are a lot of tutorials around the web that will help you to master SPARQL.</p></div></div></section>
 <section id="_the_end"><h2>The end</h2></section>
-<section><div class="slide-content"><div class="paragraph"><p>Visit <a href="https://www.facebook.com/groups/gephi/">the Gephi group on Facebook</a> to get help,</p></div>
-<div class="paragraph"><p>or visit <a href="https://seinecle.github.io/gephi-tutorials/">the website for more tutorials</a>
+<section><div class="slide-content"><div class="paragraph"><p>Visit <a href="https://www.facebook.com/groups/gephi">the Gephi group on Facebook</a> to get help,</p></div>
+<div class="paragraph"><p>or visit <a href="https://seinecle.github.io/gephi-tutorials">the website for more tutorials</a>
+e website for more tutorials]
+website for more tutorials]
+rials/[the website for more tutorials]
     <!-- Start of StatCounter Code for Default Guide -->
     <script type="text/javascript">
         var sc_project = 11238920;

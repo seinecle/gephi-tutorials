@@ -6,8 +6,8 @@ last modified: {docdate}
 
 :revnumber: 1.0
 :example-caption!:
-ifndef::imagesdir[:imagesdir: ../images]
-ifndef::sourcedir[:sourcedir: ../../../main/java]
+:imagesdir: images
+
 
 :title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
 
@@ -85,6 +85,6 @@ image::google-scholar-gephi.png[align="center", title=""]
 
 
 == the end
-Visit https://www.facebook.com/groups/gephi/[the Gephi group on Facebook] to get help,
+Visit https://www.facebook.com/groups/gephi[the Gephi group on Facebook] to get help,
 
-or visit https://seinecle.github.io/gephi-tutorials/[the website for more tutorials]
+or visit https://seinecle.github.io/gephi-tutorials[the website for more tutorials]

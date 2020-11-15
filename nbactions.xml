@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-run "process-resources" goal</actionName>
+            <displayName>run "process-resources" goal</displayName>
+            <goals>
+                <goal>process-resources</goal>
+            </goals>
+        </action>
+    </actions>

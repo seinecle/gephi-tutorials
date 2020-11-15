@@ -37,21 +37,6 @@
                 <version>1.6.0</version>
                 <executions>
                     <execution>
-                        <id>install-asciidoctor-revealjs</id>
-                        <phase>initialize</phase>
-                        <goals>
-                            <goal>wget</goal>
-                        </goals>
-                        <configuration>
-                            <url>
-                                https://github.com/asciidoctor/asciidoctor-reveal.js/archive/${asciidoctor-revealjs.version}.zip
-                            </url>
-                            <unpack>true</unpack>
-                            <outputFileName>asciidoctor-reveal.js-${asciidoctor-revealjs.version}.zip</outputFileName>
-                            <outputDirectory>${basedir}/docs/</outputDirectory>
-                        </configuration>
-                    </execution>
-                    <execution>
                         <id>install-revealjs</id>
                         <phase>initialize</phase>
                         <goals>
@@ -103,18 +88,6 @@
 
                 <defaultGoal>process-resources</defaultGoal>
 
-                <!--
-            Plugin attach to different phases of the build process to customize it.
-            (see https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference).
-
-            Here:
-              * Attach `download-maven-plugin` during `initialize` to download and install reveal.js tools in the `target` dir.
-              * Attach `asciidoctor-maven-plugin` during `generate-resources` to convert AsciiDoc documents to outputs.
-                  Separated `executions` allow to define different outputs with different options.
-                  Use initial `configuration` section for shared configurations across all executions.
-
-                    Note: the phases used are 50% a matter of taste.
-                -->
                 <plugins>
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
@@ -141,9 +114,6 @@
                         <artifactId>asciidoctor-maven-plugin</artifactId>
                         <version>${asciidoctor.maven.plugin.version}</version>
 
-                        <!--                        <groupId>org.asciidoctor</groupId>
-                        <artifactId>asciidoctor-maven-plugin</artifactId>
-                        <version>${asciidoctor.maven.plugin.version}</version>-->
                         <dependencies>
                             <!-- Comment this section to use the default jruby artifact provided by the plugin -->
                             <!-- The Asciidoctor core converter is written in Ruby, we use jRuby to integrate it.
@@ -187,6 +157,7 @@
                                 <require>asciidoctor-diagram</require>
                             </requires>
                             <attributes>
+                                <allow-uri-read/>
                                 <refresh-pics>${refresh.pics}</refresh-pics>
                                 <images-dir>${basedir}/src/main/asciidoc/images</images-dir>
                                 <path>${basedir}</path>                                
@@ -200,14 +171,35 @@
                             </attributes>
                         </configuration>
                     
-                        <!-- Current configuration uses default layout.
-                        I'd recommend keeping everything under `src/main/asciidoc`, docs, images, etc and use GIT or SVN to
-                        track versions.
-                        -->
-                        <!--
-                        <sourceDirectory>C:\Users\levallois\Google Drive\open\linux tutorial\history-of-linux\en\temp</sourceDirectory>
-                        -->
                         <executions>
+                            <execution>
+                                <id>generate-preprocessed version</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>process-asciidoc</goal>
+                                </goals>
+                                <configuration>
+                                    <sourceDirectory>${source.directory}</sourceDirectory>
+                                    <imagesDir>${basedir}/src/main/asciidoc/images</imagesDir>                                    
+                                    <images-dir>${basedir}/src/main/asciidoc/images</images-dir>
+                                    <sourceDocumentName>${doc.to.process.full.path}</sourceDocumentName>
+                                    <sourceHighlighter>coderay</sourceHighlighter>
+                                    <attributes>
+                                        <path>${basedir}</path>                                
+                                        <icons>font</icons>
+                                        <pagenums/>
+                                        <toc/>
+                                        <refresh-pics>${refresh.pics}</refresh-pics>
+                                        <magick-path>C:\Program Files\ImageMagick-7.0.8-Q16\magick</magick-path>                                        
+                                    </attributes>
+                                    <extensions>
+                                        <extension>
+                                            <className>net.clementlevallois.asciidoc.extensions.CommonPreProcessor</className>
+                                        </extension>
+                                    </extensions>
+                                </configuration>
+                            </execution>
+
                             <execution>
                                 <id>generate-slides</id>
                                 <phase>generate-resources</phase>
@@ -219,9 +211,9 @@
                                     <requires>
                                         <require>asciidoctor-revealjs</require>
                                     </requires>
-                                    <sourceDirectory>${source.directory}</sourceDirectory>
+                                    <sourceDirectory>${source.directory}/subdir</sourceDirectory>
                                     <imagesDir>${image.directory}</imagesDir>
-                                    <sourceDocumentName>${doc.to.process.full.path}</sourceDocumentName>
+                                    <sourceDocumentName>${doc.to.process}</sourceDocumentName>
                                     <outputDirectory>${basedir}/docs/generated-slides</outputDirectory>
                                     <backend>revealjs</backend>
                                     <templateDir>${basedir}/docs/asciidoctor-reveal.js-${asciidoctor-revealjs.version}/templates/slim</templateDir>
@@ -251,9 +243,6 @@
                                     </attributes>
                                     <extensions>
                                         <extension>
-                                            <className>net.clementlevallois.asciidoc.extensions.CommonPreProcessor</className>
-                                        </extension>
-                                        <extension>
                                             <className>net.clementlevallois.asciidoc.extensions.SlidesPreProcessor</className>
                                         </extension>
                                     </extensions>
@@ -270,7 +259,10 @@
                                     <sourceDirectory>${source.directory}</sourceDirectory>
                                     for pdf output the image Dir should be the default one, not ../images as defines for html and slides output!
                                     so I leave this line commented out as a reminder what not to do
-                                    <imagesDir>${image.directory}</imagesDir>                                    
+                                    <!--<imagesDir>${image.directory}</imagesDir>-->                                    
+                                    <imagesDir>${basedir}/src/main/asciidoc/images</imagesDir>                                    
+                                <images-dir>${basedir}/src/main/asciidoc/images</images-dir>
+
                                     <sourceDocumentName>${doc.to.process.full.path}</sourceDocumentName>                                    
                                     <outputDirectory>${basedir}/docs/generated-pdf</outputDirectory>
                                     <backend>pdf</backend>
@@ -285,9 +277,6 @@
                                         
                                     </attributes>
                                     <extensions>
-                                        <extension>
-                                            <className>net.clementlevallois.asciidoc.extensions.CommonPreProcessor</className>
-                                        </extension>
                                         <extension>
                                             <className>net.clementlevallois.asciidoc.extensions.PdfPreProcessor</className>
                                         </extension>
@@ -309,9 +298,6 @@
                                     <sourceHighlighter>coderay</sourceHighlighter>
                                     <extensions>
                                         <extension>
-                                            <className>net.clementlevallois.asciidoc.extensions.CommonPreProcessor</className>
-                                        </extension>
-                                        <extension>
                                             <className>net.clementlevallois.asciidoc.extensions.HtmlPreProcessor</className>
                                         </extension>
                                     </extensions>
@@ -332,7 +318,7 @@
                             </execution>
                         </executions>
                     </plugin>
-                    <plugin>
+<!--                    <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-antrun-plugin</artifactId>
                         <version>1.8</version>
@@ -352,7 +338,7 @@
                                 </configuration>
                             </execution>
                         </executions>
-                    </plugin>
+                    </plugin>-->
                 </plugins>
             </build>
         </profile>                

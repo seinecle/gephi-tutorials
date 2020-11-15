@@ -144,64 +144,75 @@ link.rel = 'stylesheet';
 link.type = 'text/css';
 link.href = window.location.search.match( /print-pdf/gi ) ? "reveal.js-3.9.2/css/print/pdf.css" : "reveal.js-3.9.2/css/print/paper.css";
 document.getElementsByTagName( 'head' )[0].appendChild( link );</script></head><body><div class="reveal"><div class="slides"><section class="title" data-state="title"><h1>Converting a network with dates into a dynamic network</h1><div class="preamble"><div class="paragraph"><p>2017-02-17</p></div>
-<div class="paragraph"><p>last modified: 2017-02-19</p></div></div><p class="author"><small>== !</small></p></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../../images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450"></div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div></div></section>
+<div class="paragraph"><p>last modified: 2020-11-15</p></div></div><p class="author"><small>== !</small></p></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450"></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;</p></div></div></section>
 <section id="_goals_of_this_tutorial"><h2>Goals of this tutorial</h2></section>
 <section><div class="slide-content"><div class="ulist"><ul><li><p>We take a normal network, where nodes have attributes which can serve as time indication (a date, a number&#8230;&#8203;)</p></li><li><p>We convert this network into a dynamic network: nodes will appear and disappear according to their attributes.</p></li></ul></div></div></section>
 <section id="_download_a_network_file_for_practice"><h2>download a network file for practice</h2></section>
 <section><div class="slide-content"><div class="paragraph"><p><a href="../../resources/miserables-with-dates.zip">download this zip file</a> and unzip it on your computer.</p></div>
-<div class="paragraph"><p>or use this direct link: <a href="https://tinyurl.com/gephi-tuto-4">https://tinyurl.com/gephi-tuto-4</a></p></div>
-<div class="paragraph"><p>You should find the file <code>miserables-with-dates.gexf</code> in the zip file. Save it in a folder you will remember (or create a folder specially for this small project).</p></div>
-<div class="paragraph"><p>This file contains a network representing "who appears next to whom" in the 19th century novel <em>Les Misérables</em> by Victor Hugo<span class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</span>.</p></div>
+<div class="paragraph"><p>or use this direct link: <a href="https://tinyurl.com/gephi-tuto-4">https://tinyurl.com/gephi-tuto-4</a></p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>You should find the file <code>miserables-with-dates.gexf</code> in the zip file. Save it in a folder you will remember (or create a folder specially for this small project).</p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>This file contains a network representing "who appears next to whom" in the 19th century novel <em>Les Misérables</em> by Victor Hugo<span class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</span>.</p></div>
 <div class="paragraph"><p>A link between characters A and B means they appeared on the same page or paragraph in the novel.</p></div>
-<div class="paragraph"><p>The file name ends with ".gexf", which just means this is a text file where the network information is stored (name of the characters, their relations, etc.), following some conventions.</p></div>
-<div class="paragraph"><p>This file has been modified to add some dates to each character in the novel:</p></div>
-<div class="ulist"><ul><li><p>a "start date", which is a day (example: 22/09/1835). This is the date when the character <strong>enters</strong> the action in the novel</p></li><li><p>an "end date", also a day (example: 22/09/1840). This is the date when the character <strong>leaves</strong> the action in the novel</p></li><li><p>a "peak moment". This is a number (example: 14263). This is an instant when the character is at the center of the plot. This number has no historical meaning, this is just a chronological moment in time.</p></li></ul></div>
-<div class="dlist"><dl><dt class="hdlist1">NOTE</dt><dd><p>Values for start date, end date and peak moment have no real significance in the novel. They are made up for this exercise.</p></dd></dl></div></div></section>
+<div class="paragraph"><p>The file name ends with ".gexf", which just means this is a text file where the network information is stored (name of the characters, their relations, etc.), following some conventions.</p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>This file has been modified to add some dates to each character in the novel:</p></div>
+<div class="ulist"><ul><li><p>a "start date", which is a day (example: 22/09/1835). This is the date when the character <strong>enters</strong> the action in the novel</p></li><li><p>an "end date", also a day (example: 22/09/1840). This is the date when the character <strong>leaves</strong> the action in the novel</p></li><li><p>a "peak moment". This is a number (example: 14263). This is an instant when the character is at the center of the plot. This number has no historical meaning, this is just a chronological moment in time.</p></li></ul></div></div></section>
+<section><div class="slide-content"><div class="dlist"><dl><dt class="hdlist1">NOTE</dt><dd><p>Values for start date, end date and peak moment have no real significance in the novel. They are made up for this exercise.</p></dd></dl></div></div></section>
 <section id="_open_the_network_in_gephi"><h2>open the network in Gephi</h2></section>
 <section><div class="slide-content"><div class="ulist"><ul><li><p>open Gephi. On the Welcome screen that appears,  click on <code>Open Graph File</code></p></li><li><p>find <code>miserables-with-dates.gexf</code> on your computer and open it</p></li></ul></div></div></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../../images/en/gephi-welcome-screen-open-graph-en.png" alt="gephi welcome screen open graph en" height="100%"></div><div class="title">Figure 1. welcome screen</div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/en/gephi-welcome-screen-open-graph-en.png" alt="gephi welcome screen open graph en" height="100%"></div><div class="title">Figure 1. welcome screen</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;</p></div>
 <div class="paragraph"><p>A report window will open, giving you basic info on the network you opened:</p></div></div></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../../images/en/opening-file-report-en.png" alt="opening file report en" height="100%"></div><div class="title">Figure 2. report window</div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/en/opening-file-report-en.png" alt="opening file report en" height="100%"></div><div class="title">Figure 2. report window</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;</p></div>
 <div class="paragraph"><p>This tells you that the network comprises 74 characters, connected by 248 links.</p></div>
 <div class="paragraph"><p>Links are undirected, meaning that if A is connected to B, then it is the same as B connected to A.</p></div>
 <div class="paragraph"><p>The report also tells us the graph is not dynamic: it means there is no evolution or chronology, it won&#8217;t "move in time".</p></div>
 <div class="paragraph"><p>Click on <code>OK</code> to see the graph in Gephi.</p></div></div></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../../images/result_miserables.png" alt="result miserables" height="100%"></div><div class="title">Figure 3. The network we will use</div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div></div></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/result_miserables.png" alt="result miserables" height="100%"></div><div class="title">Figure 3. The network we will use</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;</p></div></div></section>
 <section id="_getting_a_sense_of_the_attributes_in_the_data_laboratory"><h2>getting a sense of the attributes in the data laboratory</h2></section>
 <section><div class="slide-content"><div class="paragraph"><p>We can switch to the data laboratory to see the underlying data:</p></div></div></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../../images/Switching-to-the-data-laboratory.png" alt="Switching to the data laboratory" height="100%"></div><div class="title">Figure 4. Switching to the data laboratory</div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div></div></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../../images/Zoom-on-three-attributes-representing-time.png" alt="Zoom on three attributes representing time" height="100%"></div><div class="title">Figure 5. Zoom on three attributes representing time</div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/Switching-to-the-data-laboratory.png" alt="Switching to the data laboratory" height="100%"></div><div class="title">Figure 4. Switching to the data laboratory</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;</p></div></div></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/Zoom-on-three-attributes-representing-time.png" alt="Zoom on three attributes representing time" height="100%"></div><div class="title">Figure 5. Zoom on three attributes representing time</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;</p></div>
 <div class="paragraph"><p>The nodes (characters) of the network have attributes (start date, end date, peak moment) which can make this graph dynamic - but it is not yet.</p></div>
-<div class="paragraph"><p>A couple of steps are needed to enable the dynamic features, and here a choice must be made:</p></div>
-<div class="paragraph"><p>Do we prefer to have&#8230;&#8203;</p></div>
+<div class="paragraph"><p>A couple of steps are needed to enable the dynamic features, and here a choice must be made:</p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>Do we prefer to have&#8230;&#8203;</p></div>
 <div class="olist arabic"><ol class="arabic"><li><p>&#8230;&#8203; nodes appearing on screen at their start date, and staying on screen for ever after?</p></li><li><p>&#8230;&#8203; nodes appearing on screen at their start date, and leaving the screen at their end date?</p></li><li><p>&#8230;&#8203; nodes being representedsimply by their "peak moment" (a number), without reference to chronological dates?</p></li></ol></div>
 <div class="paragraph"><p>We will present these 3 possibilities.</p></div></div></section>
 <section><div class="slide-content"><h3>1. dynamic nodes with a start date</h3></div></section>
-<section></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../../images/Merge-columns.png" alt="Merge columns" height="100%"></div><div class="title">Figure 6. Merge columns</div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div></div></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../../images/Set-up-the-parameters---1.png" alt="Set up the parameters   1" height="100%"></div><div class="title">Figure 7. Set up the parameters - 1</div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div></div></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../../images/Result.png" alt="Result" height="100%"></div><div class="title">Figure 8. Result</div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/Merge-columns.png" alt="Merge columns" height="100%"></div><div class="title">Figure 6. Merge columns</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;</p></div></div></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/Set-up-the-parameters---1.png" alt="Set up the parameters   1" height="100%"></div><div class="title">Figure 7. Set up the parameters - 1</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;</p></div></div></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/Result.png" alt="Result" height="100%"></div><div class="title">Figure 8. Result</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;</p></div>
 <div class="paragraph"><p>Let&#8217;s switch back to the Overview to see the graph and how it evolves in time.</p></div>
 <div class="dlist"><dl><dt class="hdlist1">IMPORTANT</dt><dd><p>We are going to use the timeline to play the animation. The timeline has many features which are explained in a specific tutorial.</p></dd></dl></div></div></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../../images/moving-timeline-miserables-1-en.gif" alt="moving timeline miserables 1 en" height="100%"></div><div class="title">Figure 9. Animating the dynamic network</div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div></div></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/moving-timeline-miserables-1-en.gif" alt="moving timeline miserables 1 en" height="100%"></div><div class="title">Figure 9. Animating the dynamic network</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;</p></div></div></section>
 <section id="_to_be_continued"><h2>to be continued</h2></section>
 <section></section>
 <section id="_more_tutorials_on_dynamic_networks_with_gephi"><h2>more tutorials on dynamic networks with Gephi</h2></section>
 <section><div class="slide-content"><div class="ulist"><ul><li><p><a href="https://github.com/gephi/gephi/wiki/Import-Dynamic-Data">The wiki on gephi.org</a></p></li></ul></div></div></section>
 <section id="_the_end"><h2>the end</h2></section>
-<section><div class="slide-content"><div class="paragraph"><p>Visit <a href="https://www.facebook.com/groups/gephi/">the Gephi group on Facebook</a> to get help,</p></div>
-<div class="paragraph"><p>or visit <a href="https://seinecle.github.io/gephi-tutorials/">the website for more tutorials</a>
+<section><div class="slide-content"><div class="paragraph"><p>Visit <a href="https://www.facebook.com/groups/gephi">the Gephi group on Facebook</a> to get help,</p></div>
+<div class="paragraph"><p>or visit <a href="https://seinecle.github.io/gephi-tutorials">the website for more tutorials</a>
+s://seinecle.github.io/gephi-tutorials/[the website for more tutorials]
+rials/[the website for more tutorials]
     <!-- Start of StatCounter Code for Default Guide -->
     <script type="text/javascript">
         var sc_project = 11238920;

@@ -144,79 +144,84 @@ link.rel = 'stylesheet';
 link.type = 'text/css';
 link.href = window.location.search.match( /print-pdf/gi ) ? "reveal.js-3.9.2/css/print/pdf.css" : "reveal.js-3.9.2/css/print/paper.css";
 document.getElementsByTagName( 'head' )[0].appendChild( link );</script></head><body><div class="reveal"><div class="slides"><section class="title" data-state="title"><h1>Working with text in Gephi</h1><div class="preamble"><div class="paragraph"><p>2017-03-07</p></div>
-<div class="paragraph"><p>last modified: 2017-03-28</p></div></div><p class="author"><small>== !</small></p></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450"></div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div></div></section>
+<div class="paragraph"><p>last modified: 2020-11-15</p></div></div><p class="author"><small>== !</small></p></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450"></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;</p></div></div></section>
 <section id="_presentation_of_this_tutorial"><h2>Presentation of this tutorial</h2></section>
 <section><div class="slide-content"><div class="paragraph"><p>This tutorial explains how to draw "semantic networks" like this one:</p></div></div></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../images/en/cooccurrences-computer/gephi-result-1-en.png" alt="gephi result 1 en" height="100%"></div><div class="title">Figure 1. a semantic network</div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/en/cooccurrences-computer/gephi-result-1-en.png" alt="gephi result 1 en" height="100%"></div><div class="title">Figure 1. a semantic network</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;</p></div>
 <div class="paragraph"><p>We call "semantic network" a visualization where textual items (words, expressions) are connected to each others, like above.</p></div>
-<div class="paragraph"><p>We will see in turn:</p></div>
-<div class="ulist"><ul><li><p>why are semantic networks interesting</p></li><li><p>how to create a semantic network</p></li><li><p>tips and tricks to visualize semantic networks in the best possible way in Gephi</p></li></ul></div></div></section>
+<div class="paragraph"><p>We will see in turn:</p></div></div></section>
+<section><div class="slide-content"><div class="ulist"><ul><li><p>why are semantic networks interesting</p></li><li><p>how to create a semantic network</p></li><li><p>tips and tricks to visualize semantic networks in the best possible way in Gephi</p></li></ul></div></div></section>
 <section id="_why_semantic_networks"><h2>Why semantic networks?</h2></section>
 <section><div class="slide-content"><div class="paragraph"><p>A text, or many texts, can be hard to summarize.</p></div>
-<div class="paragraph"><p>Drawing a semantic network highlights what are the most frequent terms, how they relate to each other, and reveal the different groups or "clusters" they form.</p></div>
-<div class="paragraph"><p>Often, a cluster of terms characterizes a topic.
-Hence, converting a text into a semantic network helps detecting topics in the text, from micro-topics to the general themes discussed in the documents.</p></div>
-<div class="paragraph"><p>Semantic networks are regular networks, where:</p></div>
-<div class="ulist"><ul><li><p>nodes are words ("USA") or groups of words ("United States of America")</p></li><li><p>relations are, usually, signifying co-occurrences: two words are connected if they appear in the same document, or in the same paragraph, or same sentence&#8230;&#8203; you decide.</p></li></ul></div>
-<div class="paragraph"><p>It means that if you have a textual network, you can visualize it with Gephi just like any other network.</p></div>
+<div class="paragraph"><p>Drawing a semantic network highlights what are the most frequent terms, how they relate to each other, and reveal the different groups or "clusters" they form.</p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>Often, a cluster of terms characterizes a topic.
+Hence, converting a text into a semantic network helps detecting topics in the text, from micro-topics to the general themes discussed in the documents.</p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>Semantic networks are regular networks, where:</p></div>
+<div class="ulist"><ul><li><p>nodes are words ("USA") or groups of words ("United States of America")</p></li><li><p>relations are, usually, signifying co-occurrences: two words are connected if they appear in the same document, or in the same paragraph, or same sentence&#8230;&#8203; you decide.</p></li></ul></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>It means that if you have a textual network, you can visualize it with Gephi just like any other network.</p></div>
 <div class="paragraph"><p>Yet, not everything is the same, and this tutorial provides tips and tricks on why textual data can be a bit different than other data.</p></div></div></section>
 <section id="_choosing_what_a_term_is_in_a_semantic_network"><h2>Choosing what a "term" is in a semantic network</h2></section>
 <section><div class="slide-content"><div class="paragraph"><p>The starting point can be: a term is a single word. So in this sentence, we would have 7 terms:</p></div>
 <div class="literalblock"><div class="content"><pre>My sister lives in the United States (7 words -&gt; 7 terms)</pre></div></div>
 <div class="paragraph"><p>This means that each single term is a meaningful semantic unit.</p></div>
-<div class="paragraph"><p>This approach is simple but not great. Look again at the sentence:</p></div>
-<div class="literalblock"><div class="content"><pre>My sister lives in the United States</pre></div></div>
+<div class="paragraph"><p>This approach is simple but not great. Look again at the sentence:</p></div></div></section>
+<section><div class="slide-content"><div class="literalblock"><div class="content"><pre>My sister lives in the United States</pre></div></div>
 <div class="olist arabic"><ol class="arabic"><li><p><code>My</code>, <code>in</code>, <code>the</code> are frequent terms which have no special significance: they should probably be discarded</p></li><li><p><code>United</code> and <code>States</code> are meaningful separately, but here they should probably be considered together: <code>United States</code></p></li><li><p><code>lives</code> is the conjugated form of the verb <code>to live</code>. In a network, it would make sense to regroup <code>live</code>, <code>lives</code> and <code>lived</code> as one single node.</p></li></ol></div>
 <div class="paragraph"><p>Analysts, facing each of these issues, have imagined several solutions:</p></div></div></section>
 <section><div class="slide-content"><h3>1. Removing "stopwords"</h3></div></section>
 <section><div class="slide-content"><div class="paragraph"><p>To remove these little terms without informational value, the most basic approach is to keep a list of them, and remove any word from the text which belongs to this list.</p></div>
 <div class="paragraph"><p>You can find a list of these useless terms in many languages, called "stopwords", <a href="http://www.ranks.nl/stopwords/">on this website</a>.</p></div></div></section>
+<section></section>
 <section><div class="slide-content"><h3>2. Considering "n-grams"</h3></div></section>
 <section><div class="slide-content"><div class="paragraph"><p>So, <code>United States</code> should probably be a meaningful unit, not just <code>United</code> and <code>States</code>.
 Because <code>United States</code> is composed of 2 terms, it is called a "bi-gram".</p></div>
-<div class="paragraph"><p>Trigrams are interesting as well obviously (eg, <code>chocolate ice cream</code>).</p></div>
-<div class="paragraph"><p>People often stop there, but quadrigrams can be meaningful as well, if less frequent: <code>United States of America</code>, <code>functional magnetic resonance imaging</code>, <code>The New York Times</code>, etc.</p></div>
+<div class="paragraph"><p>Trigrams are interesting as well obviously (eg, <code>chocolate ice cream</code>).</p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>People often stop there, but quadrigrams can be meaningful as well, if less frequent: <code>United States of America</code>, <code>functional magnetic resonance imaging</code>, <code>The New York Times</code>, etc.</p></div>
 <div class="paragraph"><p>Many tools exist to extract n-grams from texts, for example <a href="http://homepages.inf.ed.ac.uk/lzhang10/ngram.html">these programs which are under a free license</a>.</p></div></div></section>
+<section></section>
 <section><div class="slide-content"><h3>2 bis. Considering "noun phrases"</h3></div></section>
 <section><div class="slide-content"><div class="paragraph"><p>Another approach to go beyond single word terms (<code>United</code>, <code>States</code>) takes a different approach than n-grams. It says:</p></div>
 <div class="literalblock"><div class="content"><pre>"delete all in the text except for groups of words made of nouns and adjectives, ending by a noun"</pre></div></div>
 <div class="paragraph"><p>&#8594; (these are called, a bit improperly, "noun phrases")</p></div>
-<div class="paragraph"><p>Take <code>United States</code>: it is a noun (<code>States</code>) preceded by an adjective (<code>United</code>). It will be considered as a valid term.</p></div>
-<div class="paragraph"><p>This approach is interesting (implemented for example in the software <a href="http://www.vosviewer.com">Vosviewer</a>), but it has drawbacks:</p></div>
+<div class="paragraph"><p>Take <code>United States</code>: it is a noun (<code>States</code>) preceded by an adjective (<code>United</code>). It will be considered as a valid term.</p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>This approach is interesting (implemented for example in the software <a href="http://www.vosviewer.com">Vosviewer</a>), but it has drawbacks:</p></div>
 <div class="ulist"><ul><li><p>you need to detect adjectives and nouns in your text. This is language dependent (French put adjectives after nouns, for instance), and the processing is slow for large corpora.</p></li><li><p>what about verbs, and noun phrases comprising non adjectives, such as "United States <strong>of</strong> America"? These are not going to be included in the network.</p></li></ul></div></div></section>
+<section></section>
 <section><div class="slide-content"><h3>3. Stemming and lemmatization</h3></div></section>
 <section><div class="slide-content"><div class="paragraph"><p><code>live</code>, <code>lives</code>, <code>lived</code>: in a semantic network, it is probably useless to have 3 nodes, one for each of these 3 forms of the same root.</p></div>
-<div class="ulist"><ul><li><p>Stemming consists in chopping the end of the words, so that here, we would have only <code>live</code>.</p></li><li><p>Lemmatization is the same, but in a more subtle way: it takes grammar into account. So, "good" and better" would be reduced to "good" because there is the same basic semantic unit behind these two words, even if their lettering differ completely.</p></li></ul></div>
-<div class="paragraph"><p>A tool performing lemmatization is <a href="https://textgrid.de/en/">TextGrid</a>.
+<div class="ulist"><ul><li><p>Stemming consists in chopping the end of the words, so that here, we would have only <code>live</code>.</p></li><li><p>Lemmatization is the same, but in a more subtle way: it takes grammar into account. So, "good" and better" would be reduced to "good" because there is the same basic semantic unit behind these two words, even if their lettering differ completely.</p></li></ul></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>A tool performing lemmatization is <a href="https://textgrid.de/en/">TextGrid</a>.
 It has many functions for textual analysis, and lemmatization <a href="https://wiki.de.dariah.eu/display/TextGrid/The+Lemmatizer+Tool">is explained there</a>.</p></div></div></section>
 <section id="_should_we_represent_all_terms_in_a_semantic_network"><h2>Should we represent all terms in a semantic network?</h2></section>
 <section><div class="slide-content"><div class="paragraph"><p>We have seen that some words are more interesting than others in a corpus:</p></div>
-<div class="ulist"><ul><li><p>stopwords should be removed,</p></li><li><p>some varieties of words (<code>lived</code>, <code>lives</code>) could be grouped together (<code>live</code>).</p></li><li><p>sequences of words (<code>baby phone</code>) can be added because they mean more than their words taken separately (<code>baby</code>, <code>phone</code>)</p></li></ul></div>
-<div class="paragraph"><p>Once this is done, we have transformed the text into plenty of words to represent. Should they all be included in the network?</p></div>
+<div class="ulist"><ul><li><p>stopwords should be removed,</p></li><li><p>some varieties of words (<code>lived</code>, <code>lives</code>) could be grouped together (<code>live</code>).</p></li><li><p>sequences of words (<code>baby phone</code>) can be added because they mean more than their words taken separately (<code>baby</code>, <code>phone</code>)</p></li></ul></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>Once this is done, we have transformed the text into plenty of words to represent. Should they all be included in the network?</p></div>
 <div class="paragraph"><p>Imagine we have a word appearing just once, in a single footnote of a text long of 2,000 pages.
 Should this word appear? Probably not.</p></div>
 <div class="paragraph"><p>Which rule to apply to keep or leave out a word?</p></div></div></section>
 <section><div class="slide-content"><h3>1. Start with: how many words can fit in your visualization?</h3></div></section>
 <section><div class="slide-content"><div class="paragraph"><p>A starting point can be the number of words you would like to see on a visualization. <strong>A ball park figure is 300 words max</strong>:</p></div>
-<div class="ulist"><ul><li><p>it already fills in all the space of a computer screen.</p></li><li><p>300 words provides enough information to allow micro-topics of a text to be distinguished</p></li></ul></div>
-<div class="paragraph"><p>More words can be crammed in a visualization, but in this case the viewer would have to take time zooming in and out, panning to explore the visualization.
+<div class="ulist"><ul><li><p>it already fills in all the space of a computer screen.</p></li><li><p>300 words provides enough information to allow micro-topics of a text to be distinguished</p></li></ul></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>More words can be crammed in a visualization, but in this case the viewer would have to take time zooming in and out, panning to explore the visualization.
 The viewer transforms into an analyst, instead of a regular reader.</p></div></div></section>
 <section><div class="slide-content"><h3>2. Representing only the most frequent terms</h3></div></section>
 <section><div class="slide-content"><div class="paragraph"><p>If ~ 300 words would fit in the visualization of the network, and the text you start with contains 5,000 different words: which 300 words should be selected?</p></div>
 <div class="paragraph"><p>To visualize the semantic network <strong>for a long, single text</strong> the straightforward approach consists in picking the 300 most frequent words (or n-grams, see above).</p></div>
-<div class="paragraph"><p>In the case of a collection of texts to visualize (several documents instead of one), two possibilities:</p></div>
-<div class="olist arabic"><ol class="arabic"><li><p>Either you also take the most frequent terms across these documents, like before</p></li><li><p>Or you can apply a more subtle rule called "tf-idf", detailed below.</p></li></ol></div>
+<div class="paragraph"><p>In the case of a collection of texts to visualize (several documents instead of one), two possibilities:</p></div></div></section>
+<section><div class="slide-content"><div class="olist arabic"><ol class="arabic"><li><p>Either you also take the most frequent terms across these documents, like before</p></li><li><p>Or you can apply a more subtle rule called "tf-idf", detailed below.</p></li></ol></div>
 <div class="paragraph"><p>The idea with tf-idf is that terms which appear in all documents are not interesting, because they are so ubiquitous.</p></div>
-<div class="paragraph"><p>Example: you retrieve all the webpages mentioning the word <code>Gephi</code>, and then want to visualize the semantic network of the texts contained in these webpages.</p></div>
-<div class="paragraph"><p>&#8594; by definition, all these webpages will mention Gephi, so Gephi will probably be the most frequent term.</p></div>
+<div class="paragraph"><p>Example: you retrieve all the webpages mentioning the word <code>Gephi</code>, and then want to visualize the semantic network of the texts contained in these webpages.</p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#8594; by definition, all these webpages will mention Gephi, so Gephi will probably be the most frequent term.</p></div>
 <div class="paragraph"><p>&#8594; so your network will end up with a node "Gephi" connected to many other terms, but you actually knew that. Boring.</p></div>
-<div class="paragraph"><p>&#8594; terms used in all web pages are less interesting to you than terms which are used frequently, but not uniformly accross webpages.</p></div>
-<div class="paragraph"><p>Applying the tf-idf correction will highlight terms which are frequently used within some texts, but not used in many texts.</p></div>
-<div class="paragraph"><p>(to go further, here is a webpage giving a simple example: <a href="http://www.tfidf.com/" class="bare">http://www.tfidf.com/</a>)</p></div>
-<div class="paragraph"><p>So, should you visualize the most frequent words in your corpus, or the words which rank highest according to tf-idf?</p></div>
+<div class="paragraph"><p>&#8594; terms used in all web pages are less interesting to you than terms which are used frequently, but not uniformly accross webpages.</p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>Applying the tf-idf correction will highlight terms which are frequently used within some texts, but not used in many texts.</p></div>
+<div class="paragraph"><p>(to go further, here is a webpage giving a simple example: <a href="http://www.tfidf.com/" class="bare">http://www.tfidf.com/</a>)</p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>So, should you visualize the most frequent words in your corpus, or the words which rank highest according to tf-idf?</p></div>
 <div class="paragraph"><p>Both are interesting, as they show a different info. I&#8217;d suggest that the simple frequency count is easier to interpret.</p></div>
 <div class="paragraph"><p>tf-idf can be left for specialists of the textual data under consideration, after they have been presented with the simple frequency count version.</p></div></div></section>
 <section id="_computing_connections_edges_in_the_network"><h2>Computing connections (edges) in the network</h2></section>
@@ -225,8 +230,8 @@ How to decide which connections make sense between them?</p></div></div></sectio
 <section><div class="slide-content"><h3>1. Co-occurrences</h3></div></section>
 <section><div class="slide-content"><div class="paragraph"><p>Connections between terms are usually drawn from co-occurrences: two terms will be connected if they  appear next to each other in some pre-defined unit of text:</p></div>
 <div class="ulist"><ul><li><p>in the same sentence</p></li><li><p>in the same paragraph</p></li><li><p>in the same document (if the corpus is made of several documents)</p></li></ul></div>
-<div class="paragraph"><p>(note on vocabulary: in the following, we will call this a "unit of text").</p></div>
-<div class="paragraph"><p>For example, in bibliometrics (the study of the publications produced by scientists), this could give:</p></div>
+<div class="paragraph"><p>(note on vocabulary: in the following, we will call this a "unit of text").</p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>For example, in bibliometrics (the study of the publications produced by scientists), this could give:</p></div>
 <div class="ulist"><ul><li><p>collect <strong>abstracts</strong> (short summaries) of all scientific articles discussing "nano-technologies".</p></li><li><p>so, abstracts are our units of text here.</p></li><li><p>two terms will be connected if they frequently appear <strong>in the same abstracts</strong>.</p></li></ul></div></div></section>
 <section><div class="slide-content"><h3>2. What "weight" for the edges?</h3></div></section>
 <section><div class="slide-content"><div class="paragraph"><p>An edge between two terms will have:</p></div>
@@ -236,83 +241,114 @@ How to decide which connections make sense between them?</p></div></div></sectio
 <section><div class="slide-content"><div class="paragraph"><p>An example to clarify. Let&#8217;s imagine that we are interested in webpages discussing nanotechnology.
 We want to draw the semantic network of the vocabulary used in these web pages.</p></div>
 <div class="paragraph"><p>A co-occurrence is: when 2 terms are used on the same web page.</p></div>
-<div class="paragraph"><p>Among the pages we collected, there is the Wikipedia page discussing nanotechnology:</p></div>
-<div class="quoteblock"><blockquote><div class="paragraph"><p><span class="red">Nanotechnology</span> ("nanotech") is manipulation of matter on an atomic, <span class="blue">molecular</span>, and supramolecular scale.
-The earliest, widespread description of <span class="red">nanotechnology</span> referred to the particular technological goal of precisely manipulating atoms and molecules for fabrication of macroscale products, also now referred to as <span class="blue">molecular</span> <span class="red">nanotechnology</span></p></div></blockquote><div class="attribution">&#8212; <a href="https://en.wikipedia.org/wiki/Nanotechnology">Wikipedia</a></div></div>
-<div class="paragraph"><p>The question is:</p></div>
+<div class="paragraph"><p>Among the pages we collected, there is the Wikipedia page discussing nanotechnology:</p></div></div></section>
+<section><div class="slide-content"><div class="quoteblock"><blockquote><div class="paragraph"><p><span class="red">Nanotechnology</span> ("nanotech") is manipulation of matter on an atomic, <span class="blue">molecular</span>, and supramolecular scale.
+The earliest, widespread description of <span class="red">nanotechnology</span> referred to the particular technological goal of precisely manipulating atoms and molecules for fabrication of macroscale products, also now referred to as <span class="blue">molecular</span> <span class="red">nanotechnology</span></p></div></blockquote><div class="attribution">&#8212; <a href="https://en.wikipedia.org/wiki/Nanotechnology">Wikipedia</a></div></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>The question is:</p></div>
 <div class="ulist"><ul><li><p>should I count only <strong>one</strong> co-occurrence between <code>molecular</code> and <code>nanotechnology</code>, because it happened on this one web page? This is called <strong>binary counting</strong></p></li><li><p>or should I consider that <code>molecular</code> appears twice on this page, and <code>nanotechnology</code> three times, so <strong>multiple</strong> co-occurrences between these 2 terms should be counted, just on this page already? This is called <strong>full counting</strong></p></li></ul></div>
 <div class="paragraph"><p>There is no exact response, and you can experiment with both possibilities.</p></div>
 <h4>If two terms are very frequent, is their co-occurrence really of interest?</h4></div></section>
 <section><div class="slide-content"><div class="paragraph"><p>Example:</p></div>
 <div class="paragraph"><p>Chun-Yuen Teng, Yu-Ru Lin and Lada Adamic have studied (using Gephi!) <a href="https://arxiv.org/abs/1111.3919">the pairing of ingredients in cooking recipes</a>.</p></div>
-<div class="paragraph"><p>So, in their study the unit of text was the "recipe", and the terms in the semantic network where ingredients in all these recipes.</p></div>
-<div class="paragraph"><p>Just because they are so common, some ingredients (like <code>flour</code>, <code>sugar</code>, <code>salt</code>) are bound to appear more frequently in the same recipes (to co-occur), than infrequent ingredients.</p></div>
+<div class="paragraph"><p>So, in their study the unit of text was the "recipe", and the terms in the semantic network where ingredients in all these recipes.</p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>Just because they are so common, some ingredients (like <code>flour</code>, <code>sugar</code>, <code>salt</code>) are bound to appear more frequently in the same recipes (to co-occur), than infrequent ingredients.</p></div>
 <div class="paragraph"><p>The authors of this study chose to highlight <strong>complementary ingredients</strong>: some ingredients appear often used together in the same recipes, <em>even if they are ingredients which are quite rarely used</em>.</p></div>
-<div class="paragraph"><p>"Complementary" here means that these ingredients have some interesting relationship: when one is used, the other "must" be used as well.</p></div>
-<div class="paragraph"><p>If we just count co-occurrences, this special relationship between infrequent complementary ingredients will be lost: by definition, 2 infrequent ingredients can&#8217;t co-occurr often.</p></div>
+<div class="paragraph"><p>"Complementary" here means that these ingredients have some interesting relationship: when one is used, the other "must" be used as well.</p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>If we just count co-occurrences, this special relationship between infrequent complementary ingredients will be lost: by definition, 2 infrequent ingredients can&#8217;t co-occurr often.</p></div>
 <div class="paragraph"><p>To fix this, a solution consists in comparing how many times the 2 ingredients co-occur, with how frequent they are in all recipes:</p></div>
 <div class="paragraph"><p>&#8594; ingredients co-occurring <em>each and every time they are used</em> will have a large edge weight,</p></div>
-<div class="paragraph"><p>&#8594; ingredients co-occuring many times, <em>but also appearing many times in different recipes</em>, will get a low edge weight.</p></div>
-<div class="paragraph"><p>A simple formula does this operation. For ingredients A and B:</p></div>
+<div class="paragraph"><p>&#8594; ingredients co-occuring many times, <em>but also appearing many times in different recipes</em>, will get a low edge weight.</p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>A simple formula does this operation. For ingredients A and B:</p></div>
 <div class="literalblock"><div class="content"><pre>weight of edge between A and B =
 nb of recipes where A &amp; B co-occur
 divided by
-(total nb of recipes where A appear x total nb of recipes where B appear)</pre></div></div>
-<div class="paragraph"><p>Logs are often added to this formula, which is called "Pointwise mutual information":</p></div>
-<div class="stemblock"><div class="content">\$PMI = log((p(A, B)) /(p(A) p(B)))\$</div></div>
-<div class="paragraph"><p>We now have nodes and their relations: a semantic network. Let&#8217;s see now how to visualize it in Gephi.</p></div></div></section>
+(total nb of recipes where A appear x total nb of recipes where B appear)</pre></div></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>Logs are often added to this formula, which is called "Pointwise mutual information":</p></div>
+<div class="stemblock"><div class="content">\$PMI = log((p(A, B)) /(p(A) p(B)))\$</div></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>We now have nodes and their relations: a semantic network. Let&#8217;s see now how to visualize it in Gephi.</p></div></div></section>
 <section id="_visualizing_semantic_networks_with_gephi"><h2>Visualizing semantic networks with Gephi</h2></section>
-<section></section>
 <section><div class="slide-content"><h3>1. Downloading a dataset for this tutorial</h3></div></section>
 <section><div class="slide-content"><div class="paragraph"><p>We need a dataset to practice. This is a semantic network of 250 terms and 19,613 relations:</p></div>
-<div class="paragraph"><p><a href="../resources/semantic-networks/pubmed_abstracts_network.zip">download this zip file</a> and unzip it on your computer.</p></div>
-<div class="paragraph"><p>The network was built from the short summaries ("abstracts") of 1484 research articles from the PubMed database of scientific reports, retrieved by conducting this query:</p></div>
+<div class="paragraph"><p><a href="../resources/semantic-networks/pubmed_abstracts_network.zip">download this zip file</a> and unzip it on your computer.</p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>The network was built from the short summaries ("abstracts") of 1484 research articles from the PubMed database of scientific reports, retrieved by conducting this query:</p></div>
 <div class="paragraph"><p>"social neuroscience" OR "neuroeco*" OR "decision neuroscience"</p></div>
-<div class="paragraph"><p>&#8594; The query can be seent at <a href="https://www.ncbi.nlm.nih.gov/pubmed?term=(%22social%20neuroscience%22%20OR%20%22neuroeco*%22%20OR%20%22decision%20neuroscience%22)">online here</a>.
+<div class="paragraph"><p>&#8594; The query can be seen at <a href="https://www.ncbi.nlm.nih.gov/pubmed?term=(%22social%20neuroscience%22%20OR%20%22neuroeco*%22%20OR%20%22decision%20neuroscience%22)">online here</a>.
 (it comprises more than 1484 results, because some articles have no abstract).</p></div>
-<div class="paragraph"><p>We used <a href="https://github.com/seinecle/Cowo">Cowo</a> to create the network from these 1484 short pieces of text, based on co-occurrences.</p></div>
-<div class="ulist"><ul><li><p>Open the file inside the zip (<code>pubmed_abstracts_network.gml</code>) in Gephi:</p></li></ul></div></div></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../images/semantic-import-1-en.png" alt="semantic import 1 en" height="100%"></div><div class="title">Figure 2. First view of the network</div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div>
-<div class="paragraph"><p>Several steps will make this network intelligible</p></div></div></section>
+<div class="paragraph"><p>We used <a href="https://github.com/seinecle/Cowo">Cowo</a> to create the network from these 1484 short pieces of text, based on co-occurrences.</p></div></div></section>
+<section><div class="slide-content"><div class="ulist"><ul><li><p>Open the file inside the zip (<code>pubmed_abstracts_network.gml</code>) in Gephi:</p></li></ul></div></div></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/semantic-import-1-en.png" alt="semantic import 1 en" height="100%"></div><div class="title">Figure 2. First view of the network</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;</p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>Several steps will make this network intelligible</p></div></div></section>
 <section><div class="slide-content"><h3>2. Managing labels size and colors</h3></div></section>
 <section><div class="slide-content"><div class="olist loweralpha"><ol class="loweralpha"><li><p>Showing the labels of the nodes:</p></li></ol></div></div></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../images/showing-node-labels.png" alt="showing node labels" height="100%"></div><div class="title">Figure 3. showing node labels</div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div>
-<div class="olist loweralpha"><ol class="loweralpha" start="2"><li><p>Making the edges (relations) invisible, because they clutter the view</p></li></ol></div></div></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../images/hiding-edges.png" alt="hiding edges" height="100%"></div><div class="title">Figure 4. hiding edges</div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div>
-<div class="olist loweralpha"><ol class="loweralpha" start="3"><li><p>Reducing node size to the minimum (0.5) because we just need labels</p></li></ol></div></div></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../images/semantic-resize-nodes1-en.png" alt="semantic resize nodes1 en" height="100%"></div><div class="title">Figure 5. Making nodes disappear</div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div>
-<div class="olist loweralpha"><ol class="loweralpha" start="4"><li><p>Detect communities with the "modularity" function in the statistics panel</p><div class="literalblock"><div class="content"><pre>see tutorial 'simple project from A to Z' for this step</pre></div></div></li></ol></div>
-<div class="olist loweralpha"><ol class="loweralpha" start="5"><li><p>Give a different color to each community</p></li></ol></div>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/showing-node-labels.png" alt="showing node labels" height="100%"></div><div class="title">Figure 3. showing node labels</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;</p></div></div></section>
+<section><div class="slide-content"><div class="olist loweralpha"><ol class="loweralpha" start="2"><li><p>Making the edges (relations) invisible, because they clutter the view</p></li></ol></div></div></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/hiding-edges.png" alt="hiding edges" height="100%"></div><div class="title">Figure 4. hiding edges</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;</p></div></div></section>
+<section><div class="slide-content"><div class="olist loweralpha"><ol class="loweralpha" start="3"><li><p>Reducing node size to the minimum (0.5) because we just need labels</p></li></ol></div></div></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/semantic-resize-nodes1-en.png" alt="semantic resize nodes1 en" height="100%"></div><div class="title">Figure 5. Making nodes disappear</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;</p></div></div></section>
+<section><div class="slide-content"><div class="olist loweralpha"><ol class="loweralpha" start="4"><li><p>Detect communities with the "modularity" function in the statistics panel</p><div class="literalblock"><div class="content"><pre>see tutorial 'simple project from A to Z' for this step</pre></div></div></li></ol></div></div></section>
+<section><div class="slide-content"><div class="olist loweralpha"><ol class="loweralpha" start="5"><li><p>Give a different color to each community</p></li></ol></div>
 <div class="paragraph"><p>&#8594; each group of terms, distinguished by a color, will represent a topic.</p></div></div></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../images/semantic-coloring-communities-1-en.png" alt="semantic coloring communities 1 en" height="100%"></div><div class="title">Figure 6. Coloring nodes - first step</div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div>
-<div class="olist loweralpha"><ol class="loweralpha" start="6"><li><p>We then need to assign this node color to their labels:</p></li></ol></div></div></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../images/Coloring-nodes---second-step.png" alt="Coloring nodes   second step" height="100%"></div><div class="title">Figure 7. Coloring nodes - second step</div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div></div></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/semantic-coloring-communities-1-en.png" alt="semantic coloring communities 1 en" height="100%"></div><div class="title">Figure 6. Coloring nodes - first step</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;</p></div></div></section>
+<section><div class="slide-content"><div class="olist loweralpha"><ol class="loweralpha" start="6"><li><p>We then need to assign this node color to their labels:</p></li></ol></div></div></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/Coloring-nodes---second-step.png" alt="Coloring nodes   second step" height="100%"></div><div class="title">Figure 7. Coloring nodes - second step</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;</p></div></div></section>
 <section><div class="slide-content"><h3>3. Tuning the spatialization</h3></div></section>
+<section></section>
 <section><div class="slide-content"><div class="olist loweralpha"><ol class="loweralpha"><li><p>Spatializing the network with Force Atlas 2 will place related terms next to each other, because they co-occur:</p></li></ol></div>
 <div class="paragraph"><p>Some parameters have been modified:</p></div></div></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../images/semantic-spatializing-1-en.png" alt="semantic spatializing 1 en" height="100%"></div><div class="title">Figure 8. Spatializing the network</div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div>
-<div class="olist loweralpha"><ol class="loweralpha" start="2"><li><p>The network so far:</p></li></ol></div></div></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../images/semantic-spatializing-2-en.png" alt="semantic spatializing 2 en" height="100%"></div><div class="title">Figure 9. The network - colored and spatialized</div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div>
-<div class="olist loweralpha"><ol class="loweralpha" start="3"><li><p>Apply 2 more layouts to enhance readability:</p><div class="ulist"><ul><li><p>"Expansion" to spread nodes (just select it and click on Run a couple of times)</p></li><li><p>"Label Adjust" to move labels around so that they don&#8217;t overlap</p></li></ul></div></li></ol></div></div></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../images/semantic-spatializing-3-en.png" alt="semantic spatializing 3 en" height="100%"></div><div class="title">Figure 10. Spreading labels</div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div></div></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/semantic-spatializing-1-en.png" alt="semantic spatializing 1 en" height="100%"></div><div class="title">Figure 8. Spatializing the network</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;</p></div></div></section>
+<section><div class="slide-content"><div class="olist loweralpha"><ol class="loweralpha" start="2"><li><p>The network so far:</p></li></ol></div></div></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/semantic-spatializing-2-en.png" alt="semantic spatializing 2 en" height="100%"></div><div class="title">Figure 9. The network - colored and spatialized</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;</p></div></div></section>
+<section><div class="slide-content"><div class="olist loweralpha"><ol class="loweralpha" start="3"><li><p>Apply 2 more layouts to enhance readability:</p><div class="ulist"><ul><li><p>"Expansion" to spread nodes (just select it and click on Run a couple of times)</p></li><li><p>"Label Adjust" to move labels around so that they don&#8217;t overlap</p></li></ul></div></li></ol></div></div></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/semantic-spatializing-3-en.png" alt="semantic spatializing 3 en" height="100%"></div><div class="title">Figure 10. Spreading labels</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;</p></div></div></section>
 <section><div class="slide-content"><h3>4. Exporting an image of the network</h3></div></section>
+<section></section>
 <section><div class="slide-content"><div class="olist loweralpha"><ol class="loweralpha"><li><p>Switching to the preview panel</p><div class="ulist"><ul><li><p>A number of parameters must be modified (to show Labels, hide edges, etc.)</p></li></ul></div></li></ol></div></div></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../images/semantic-preview-1-en.png" alt="semantic preview 1 en" height="100%"></div><div class="title">Figure 11. The preview panel</div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div>
-<div class="paragraph"><p>The network is now ready to be exported to pdf, png or svg file formats.</p></div></div></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/semantic-preview-1-en.png" alt="semantic preview 1 en" height="100%"></div><div class="title">Figure 11. The preview panel</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;</p></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>The network is now ready to be exported to pdf, png or svg file formats.</p></div></div></section>
 <section id="_more_tutorials_on_working_with_semantic_networks"><h2>More tutorials on working with semantic networks</h2></section>
 <section><div class="slide-content"><div class="paragraph"><p>Other software / web apps to visualize texts as networks:</p></div>
 <div class="ulist"><ul><li><p><a href="http://textexture.com/" class="bare">http://textexture.com/</a></p></li><li><p><a href="http://www.vosviewer.com/" class="bare">http://www.vosviewer.com/</a></p></li></ul></div></div></section>
 <section id="_the_end"><h2>the end</h2></section>
+<section><div class="slide-content"><div class="paragraph"><p>Visit <a href="https://www.facebook.com/groups/gephi">the Gephi group on Facebook</a> to get help,</p></div>
+<div class="paragraph"><p>or visit <a href="https://seinecle.github.io/gephi-tutorials">the website for more tutorials</a></p></div>
+<div class="paragraph"><p>or visit <a href="https://seinecle.github.io/gephi-tutorials/">the website for more tutorials</a>
+r visit <a href="https://seinecle.github.io/gephi-tutorials/">the website for more tutorials</a>
+r visit <a href="https://seinecle.github.io/gephi-tutorials/">the website for more tutorials</a>
+== !
+==== 4. Exporting an image of the network
+== !</p></div>
+<div class="olist loweralpha"><ol class="loweralpha"><li><p>Switching to the preview panel</p><div class="ulist"><ul><li><p>A number of parameters must be modified (to show Labels, hide edges, etc.)</p></li></ul></div></li></ol></div></div></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/semantic-preview-1-en.png" alt="semantic preview 1 en" height="100%"></div><div class="title">Figure 12. The preview panel</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;
+&#160;
+&#160;
+&#160;
+&#160;</p></div>
+<div class="paragraph"><p>The network is now ready to be exported to pdf, png or svg file formats.</p></div></div></section>
+<section id="_more_tutorials_on_working_with_semantic_networks_2"><h2>More tutorials on working with semantic networks</h2></section>
+<section><div class="slide-content"><div class="paragraph"><p>Other software / web apps to visualize texts as networks:</p></div>
+<div class="ulist"><ul><li><p><a href="http://textexture.com/" class="bare">http://textexture.com/</a></p></li><li><p><a href="http://www.vosviewer.com/" class="bare">http://www.vosviewer.com/</a></p></li></ul></div></div></section>
+<section id="_the_end_2"><h2>the end</h2></section>
 <section><div class="slide-content"><div class="paragraph"><p>Visit <a href="https://www.facebook.com/groups/gephi/">the Gephi group on Facebook</a> to get help,</p></div>
 <div class="paragraph"><p>or visit <a href="https://seinecle.github.io/gephi-tutorials/">the website for more tutorials</a>
     <!-- Start of StatCounter Code for Default Guide -->
