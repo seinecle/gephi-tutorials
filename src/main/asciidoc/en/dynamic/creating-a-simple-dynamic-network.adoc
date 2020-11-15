@@ -98,7 +98,7 @@ Then export the network *in the same folder* where we put the previous file (`Fi
 [[merging]]
 From your computer, open network A.gexf with a text editor (don't use Microsoft Word!):
 
-(here is how to do it on a http://www.dummies.com/computers/macs/how-to-open-and-edit-a-text-file-on-a-mac/[Mac], and on https://www.howtogeek.com/357092/what-is-an-xml-file-and-how-do-i-open-one/[Windows]).
+(here is how to do it on a http://www.dummies.com/computers/macs/how-to-open-and-edit-a-text-file-on-a-mac/[Mac], and on https://www.lifewire.com/txt-text-file-4150707[Windows]).
 
 //ST: !
 image::https://docs.google.com/drawings/d/1UFJT918n8SUgWUD2KoEVCc6k2-G75QqoetWGirzhcIg/pub?w=1440&h=1080[align="center", title="The network file opened"]

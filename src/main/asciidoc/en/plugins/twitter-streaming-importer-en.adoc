@@ -113,7 +113,7 @@ We need to create a Twitter app which will authorize us to collect tweets automa
 ==== b. Creating a Twitter app
 //ST: Creating a Twitter app
 
-Go to *https://apps.twitter.com[https://apps.twitter.com]*:
+Go to *https://developer.twitter.com/en/apps[https://developer.twitter.com/en/apps]*:
 
 //ST: !
 image::https://docs.google.com/drawings/d/1OBhTH2Dxlftw-r_aXfDWqnj-OdD2-zpuD54HZpazXM0/pub?w=940&h=492[align="center", title="Create a new app"]

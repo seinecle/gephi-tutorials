@@ -1,99 +1,156 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="author" content="== !" /><title>Converting a network with dates into a dynamic network</title><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><link href="reveal.js-3.6.0/css/reveal.css" rel="stylesheet" /><link rel="stylesheet" href="reveal.js-3.6.0/css/theme/white.css" id="theme" /><style>/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
-/*pre.CodeRay {background-color:#f7f7f8;}*/
-.CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
-.CodeRay span.line-numbers{display:inline-block;margin-right:.5em;color:rgba(0,0,0,.3)}
-.CodeRay .line-numbers strong{color:rgba(0,0,0,.4)}
-table.CodeRay{border-collapse:separate;border-spacing:0;margin-bottom:0;border:0;background:none}
-table.CodeRay td{vertical-align: top;line-height:1.45}
-table.CodeRay td.line-numbers{text-align:right}
-table.CodeRay td.line-numbers>pre{padding:0;color:rgba(0,0,0,.3)}
-table.CodeRay td.code{padding:0 0 0 .5em}
-table.CodeRay td.code>pre{padding:0}
-.CodeRay .debug{color:#fff !important;background:#000080 !important}
-.CodeRay .annotation{color:#007}
-.CodeRay .attribute-name{color:#000080}
-.CodeRay .attribute-value{color:#700}
-.CodeRay .binary{color:#509}
-.CodeRay .comment{color:#998;font-style:italic}
-.CodeRay .char{color:#04d}
-.CodeRay .char .content{color:#04d}
-.CodeRay .char .delimiter{color:#039}
-.CodeRay .class{color:#458;font-weight:bold}
-.CodeRay .complex{color:#a08}
-.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
-.CodeRay .color{color:#099}
-.CodeRay .class-variable{color:#369}
-.CodeRay .decorator{color:#b0b}
-.CodeRay .definition{color:#099}
-.CodeRay .delimiter{color:#000}
-.CodeRay .doc{color:#970}
-.CodeRay .doctype{color:#34b}
-.CodeRay .doc-string{color:#d42}
-.CodeRay .escape{color:#666}
-.CodeRay .entity{color:#800}
-.CodeRay .error{color:#808}
-.CodeRay .exception{color:inherit}
-.CodeRay .filename{color:#099}
-.CodeRay .function{color:#900;font-weight:bold}
-.CodeRay .global-variable{color:#008080}
-.CodeRay .hex{color:#058}
-.CodeRay .integer,.CodeRay .float{color:#099}
-.CodeRay .include{color:#555}
-.CodeRay .inline{color:#000}
-.CodeRay .inline .inline{background:#ccc}
-.CodeRay .inline .inline .inline{background:#bbb}
-.CodeRay .inline .inline-delimiter{color:#d14}
-.CodeRay .inline-delimiter{color:#d14}
-.CodeRay .important{color:#555;font-weight:bold}
-.CodeRay .interpreted{color:#b2b}
-.CodeRay .instance-variable{color:#008080}
-.CodeRay .label{color:#970}
-.CodeRay .local-variable{color:#963}
-.CodeRay .octal{color:#40e}
-.CodeRay .predefined{color:#369}
-.CodeRay .preprocessor{color:#579}
-.CodeRay .pseudo-class{color:#555}
-.CodeRay .directive{font-weight:bold}
-.CodeRay .type{font-weight:bold}
-.CodeRay .predefined-type{color:inherit}
-.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
-.CodeRay .key{color:#808}
-.CodeRay .key .delimiter{color:#606}
-.CodeRay .key .char{color:#80f}
-.CodeRay .value{color:#088}
-.CodeRay .regexp .delimiter{color:#808}
-.CodeRay .regexp .content{color:#808}
-.CodeRay .regexp .modifier{color:#808}
-.CodeRay .regexp .char{color:#d14}
-.CodeRay .regexp .function{color:#404;font-weight:bold}
-.CodeRay .string{color:#d20}
-.CodeRay .string .string .string{background:#ffd0d0}
-.CodeRay .string .content{color:#d14}
-.CodeRay .string .char{color:#d14}
-.CodeRay .string .delimiter{color:#d14}
-.CodeRay .shell{color:#d14}
-.CodeRay .shell .delimiter{color:#d14}
-.CodeRay .symbol{color:#990073}
-.CodeRay .symbol .content{color:#a60}
-.CodeRay .symbol .delimiter{color:#630}
-.CodeRay .tag{color:#008080}
-.CodeRay .tag-special{color:#d70}
-.CodeRay .variable{color:#036}
-.CodeRay .insert{background:#afa}
-.CodeRay .delete{background:#faa}
-.CodeRay .change{color:#aaf;background:#007}
-.CodeRay .head{color:#f8f;background:#505}
-.CodeRay .insert .insert{color:#080}
-.CodeRay .delete .delete{color:#800}
-.CodeRay .change .change{color:#66f}
-.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.6.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.6.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>Converting a network with dates into a dynamic network</h1><div class="preamble"><div class="paragraph"><p>2017-02-17</p></div>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"><title>Converting a network with dates into a dynamic network</title><meta name="author" content="== !"><link rel="stylesheet" href="reveal.js-3.9.2/css/reset.css"><link rel="stylesheet" href="reveal.js-3.9.2/css/reveal.css"><link rel="stylesheet" href="reveal.js-3.9.2/css/theme/white.css" id="theme"><!--This CSS is generated by the Asciidoctor reveal.js converter to further integrate AsciiDoc's existing semantic with reveal.js--><style type="text/css">.reveal div.right{float:right}
+
+/* listing block */
+.reveal .listingblock.stretch>.content{height: 100%}
+.reveal .listingblock.stretch>.content>pre{height: 100%}
+.reveal .listingblock.stretch>.content>pre>code{height:100%;max-height:100%}
+
+/* tables */
+table{border-collapse:collapse;border-spacing:0}
+table{margin-bottom:1.25em;border:solid 1px #dedede}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+td.tableblock>.content{margin-bottom:1.25em}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
+table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
+table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
+table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px}
+table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0}
+table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
+table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
+table.frame-all{border-width:1px}
+table.frame-sides{border-width:0 1px}
+table.frame-topbot,table.frame-ends{border-width:1px 0}
+.reveal table th.halign-left,.reveal table td.halign-left{text-align:left}
+.reveal table th.halign-right,.reveal table td.halign-right{text-align:right}
+.reveal table th.halign-center,.reveal table td.halign-center{text-align:center}
+.reveal table th.valign-top,.reveal table td.valign-top{vertical-align:top}
+.reveal table th.valign-bottom,.reveal table td.valign-bottom{vertical-align:bottom}
+.reveal table th.valign-middle,.reveal table td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{display:table-cell;line-height:1.6}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{font-weight:bold}
+thead{display:table-header-group}
+
+.reveal table.grid-none th,.reveal table.grid-none td{border-bottom:0!important}
+
+/* kbd macro */
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+
+/* callouts */
+.conum[data-value] {display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:50%;border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]:after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+/* Callout list */
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+/* Disabled from Asciidoctor CSS because it caused callout list to go under the
+ * source listing when .stretch is applied (see #335)
+ * .literalblock+.colist,.listingblock+.colist{margin-top:-.5em} */
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+
+/* Override Asciidoctor CSS that causes issues with reveal.js features */
+.reveal .hljs table{border: 0}
+/* Callout list rows would have a bottom border with some reveal.js themes (see #335) */
+.reveal .colist>table th, .reveal .colist>table td {border-bottom:0}
+/* Fixes line height with Highlight.js source listing when linenums enabled (see #331) */
+.reveal .hljs table thead tr th, .reveal .hljs table tfoot tr th, .reveal .hljs table tbody tr td, .reveal .hljs table tr td, .reveal .hljs table tfoot tr td{line-height:inherit}
+
+/* Columns layout */
+.columns .slide-content {
+  display: flex;
+}
+
+.columns.wrap .slide-content {
+  flex-wrap: wrap;
+}
+
+.columns.is-vcentered .slide-content {
+  align-items: center;
+}
+
+.columns .slide-content > .column {
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: .75rem;
+}
+
+.columns .slide-content > .column.is-full {
+  flex: none;
+  width: 100%;
+}
+
+.columns .slide-content > .column.is-four-fifths {
+  flex: none;
+  width: 80%;
+}
+
+.columns .slide-content > .column.is-three-quarters {
+  flex: none;
+  width: 75%;
+}
+
+.columns .slide-content > .column.is-two-thirds {
+  flex: none;
+  width: 66.6666%;
+}
+
+.columns .slide-content > .column.is-three-fifths {
+  flex: none;
+  width: 60%;
+}
+
+.columns .slide-content > .column.is-half {
+  flex: none;
+  width: 50%;
+}
+
+.columns .slide-content > .column.is-two-fifths {
+  flex: none;
+  width: 40%;
+}
+
+.columns .slide-content > .column.is-one-third {
+  flex: none;
+  width: 33.3333%;
+}
+
+.columns .slide-content > .column.is-one-quarter {
+  flex: none;
+  width: 25%;
+}
+
+.columns .slide-content > .column.is-one-fifth {
+  flex: none;
+  width: 20%;
+}
+</style><!--Printing and PDF exports--><script>var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? "reveal.js-3.9.2/css/print/pdf.css" : "reveal.js-3.9.2/css/print/paper.css";
+document.getElementsByTagName( 'head' )[0].appendChild( link );</script></head><body><div class="reveal"><div class="slides"><section class="title" data-state="title"><h1>Converting a network with dates into a dynamic network</h1><div class="preamble"><div class="paragraph"><p>2017-02-17</p></div>
 <div class="paragraph"><p>last modified: 2017-02-19</p></div></div><p class="author"><small>== !</small></p></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="../images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450" /></div></section>
-<section></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../../images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450"></div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div></div></section>
 <section id="_goals_of_this_tutorial"><h2>Goals of this tutorial</h2></section>
-<section><div class="ulist"><ul><li><p>We take a normal network, where nodes have attributes which can serve as time indication (a date, a number&#8230;&#8203;)</p></li><li><p>We convert this network into a dynamic network: nodes will appear and disappear according to their attributes.</p></li></ul></div></section>
+<section><div class="slide-content"><div class="ulist"><ul><li><p>We take a normal network, where nodes have attributes which can serve as time indication (a date, a number&#8230;&#8203;)</p></li><li><p>We convert this network into a dynamic network: nodes will appear and disappear according to their attributes.</p></li></ul></div></div></section>
 <section id="_download_a_network_file_for_practice"><h2>download a network file for practice</h2></section>
-<section><div class="paragraph"><p><a href="../../resources/miserables-with-dates.zip">download this zip file</a> and unzip it on your computer.</p></div>
+<section><div class="slide-content"><div class="paragraph"><p><a href="../../resources/miserables-with-dates.zip">download this zip file</a> and unzip it on your computer.</p></div>
 <div class="paragraph"><p>or use this direct link: <a href="https://tinyurl.com/gephi-tuto-4">https://tinyurl.com/gephi-tuto-4</a></p></div>
 <div class="paragraph"><p>You should find the file <code>miserables-with-dates.gexf</code> in the zip file. Save it in a folder you will remember (or create a folder specially for this small project).</p></div>
 <div class="paragraph"><p>This file contains a network representing "who appears next to whom" in the 19th century novel <em>Les Misérables</em> by Victor Hugo<span class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</span>.</p></div>
@@ -101,45 +158,49 @@ table.CodeRay td.code>pre{padding:0}
 <div class="paragraph"><p>The file name ends with ".gexf", which just means this is a text file where the network information is stored (name of the characters, their relations, etc.), following some conventions.</p></div>
 <div class="paragraph"><p>This file has been modified to add some dates to each character in the novel:</p></div>
 <div class="ulist"><ul><li><p>a "start date", which is a day (example: 22/09/1835). This is the date when the character <strong>enters</strong> the action in the novel</p></li><li><p>an "end date", also a day (example: 22/09/1840). This is the date when the character <strong>leaves</strong> the action in the novel</p></li><li><p>a "peak moment". This is a number (example: 14263). This is an instant when the character is at the center of the plot. This number has no historical meaning, this is just a chronological moment in time.</p></li></ul></div>
-<div class="dlist"><dl><dt class="hdlist1">NOTE</dt><dd><p>Values for start date, end date and peak moment have no real significance in the novel. They are made up for this exercise.</p></dd></dl></div></section>
+<div class="dlist"><dl><dt class="hdlist1">NOTE</dt><dd><p>Values for start date, end date and peak moment have no real significance in the novel. They are made up for this exercise.</p></dd></dl></div></div></section>
 <section id="_open_the_network_in_gephi"><h2>open the network in Gephi</h2></section>
-<section><div class="ulist"><ul><li><p>open Gephi. On the Welcome screen that appears,  click on <code>Open Graph File</code></p></li><li><p>find <code>miserables-with-dates.gexf</code> on your computer and open it</p></li></ul></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/gephi-welcome-screen-open-graph-en.png" alt="gephi welcome screen open graph en" height="100%" /></div><div class="title">Figure 1. welcome screen</div></section>
-<section><div class="paragraph"><p>A report window will open, giving you basic info on the network you opened:</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="../images/en/opening-file-report-en.png" alt="opening file report en" height="100%" /></div><div class="title">Figure 2. report window</div></section>
-<section><div class="paragraph"><p>This tells you that the network comprises 74 characters, connected by 248 links.</p></div>
+<section><div class="slide-content"><div class="ulist"><ul><li><p>open Gephi. On the Welcome screen that appears,  click on <code>Open Graph File</code></p></li><li><p>find <code>miserables-with-dates.gexf</code> on your computer and open it</p></li></ul></div></div></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../../images/en/gephi-welcome-screen-open-graph-en.png" alt="gephi welcome screen open graph en" height="100%"></div><div class="title">Figure 1. welcome screen</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div>
+<div class="paragraph"><p>A report window will open, giving you basic info on the network you opened:</p></div></div></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../../images/en/opening-file-report-en.png" alt="opening file report en" height="100%"></div><div class="title">Figure 2. report window</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div>
+<div class="paragraph"><p>This tells you that the network comprises 74 characters, connected by 248 links.</p></div>
 <div class="paragraph"><p>Links are undirected, meaning that if A is connected to B, then it is the same as B connected to A.</p></div>
 <div class="paragraph"><p>The report also tells us the graph is not dynamic: it means there is no evolution or chronology, it won&#8217;t "move in time".</p></div>
-<div class="paragraph"><p>Click on <code>OK</code> to see the graph in Gephi.</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="../images/result_miserables.png" alt="result miserables" height="100%" /></div><div class="title">Figure 3. The network we will use</div></section>
-<section></section>
+<div class="paragraph"><p>Click on <code>OK</code> to see the graph in Gephi.</p></div></div></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../../images/result_miserables.png" alt="result miserables" height="100%"></div><div class="title">Figure 3. The network we will use</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div></div></section>
 <section id="_getting_a_sense_of_the_attributes_in_the_data_laboratory"><h2>getting a sense of the attributes in the data laboratory</h2></section>
-<section><div class="paragraph"><p>We can switch to the data laboratory to see the underlying data:</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Switching-to-the-data-laboratory.png" alt="Switching to the data laboratory" height="100%" /></div><div class="title">Figure 4. Switching to the data laboratory</div></section>
-<section></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Zoom-on-three-attributes-representing-time.png" alt="Zoom on three attributes representing time" height="100%" /></div><div class="title">Figure 5. Zoom on three attributes representing time</div></section>
-<section><div class="paragraph"><p>The nodes (characters) of the network have attributes (start date, end date, peak moment) which can make this graph dynamic - but it is not yet.</p></div>
+<section><div class="slide-content"><div class="paragraph"><p>We can switch to the data laboratory to see the underlying data:</p></div></div></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../../images/Switching-to-the-data-laboratory.png" alt="Switching to the data laboratory" height="100%"></div><div class="title">Figure 4. Switching to the data laboratory</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div></div></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../../images/Zoom-on-three-attributes-representing-time.png" alt="Zoom on three attributes representing time" height="100%"></div><div class="title">Figure 5. Zoom on three attributes representing time</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div>
+<div class="paragraph"><p>The nodes (characters) of the network have attributes (start date, end date, peak moment) which can make this graph dynamic - but it is not yet.</p></div>
 <div class="paragraph"><p>A couple of steps are needed to enable the dynamic features, and here a choice must be made:</p></div>
 <div class="paragraph"><p>Do we prefer to have&#8230;&#8203;</p></div>
 <div class="olist arabic"><ol class="arabic"><li><p>&#8230;&#8203; nodes appearing on screen at their start date, and staying on screen for ever after?</p></li><li><p>&#8230;&#8203; nodes appearing on screen at their start date, and leaving the screen at their end date?</p></li><li><p>&#8230;&#8203; nodes being representedsimply by their "peak moment" (a number), without reference to chronological dates?</p></li></ol></div>
-<div class="paragraph"><p>We will present these 3 possibilities.</p></div></section>
-<section><h3>1. dynamic nodes with a start date</h3></section>
+<div class="paragraph"><p>We will present these 3 possibilities.</p></div></div></section>
+<section><div class="slide-content"><h3>1. dynamic nodes with a start date</h3></div></section>
 <section></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Merge-columns.png" alt="Merge columns" height="100%" /></div><div class="title">Figure 6. Merge columns</div></section>
-<section></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Set-up-the-parameters---1.png" alt="Set up the parameters   1" height="100%" /></div><div class="title">Figure 7. Set up the parameters - 1</div></section>
-<section></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="../images/Result.png" alt="Result" height="100%" /></div><div class="title">Figure 8. Result</div></section>
-<section><div class="paragraph"><p>Let&#8217;s switch back to the Overview to see the graph and how it evolves in time.</p></div>
-<div class="dlist"><dl><dt class="hdlist1">IMPORTANT</dt><dd><p>We are going to use the timeline to play the animation. The timeline has many features which are explained in a specific tutorial.</p></dd></dl></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="../images/moving-timeline-miserables-1-en.gif" alt="moving timeline miserables 1 en" height="100%" /></div><div class="title">Figure 9. Animating the dynamic network</div></section>
-<section></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../../images/Merge-columns.png" alt="Merge columns" height="100%"></div><div class="title">Figure 6. Merge columns</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div></div></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../../images/Set-up-the-parameters---1.png" alt="Set up the parameters   1" height="100%"></div><div class="title">Figure 7. Set up the parameters - 1</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div></div></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../../images/Result.png" alt="Result" height="100%"></div><div class="title">Figure 8. Result</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div>
+<div class="paragraph"><p>Let&#8217;s switch back to the Overview to see the graph and how it evolves in time.</p></div>
+<div class="dlist"><dl><dt class="hdlist1">IMPORTANT</dt><dd><p>We are going to use the timeline to play the animation. The timeline has many features which are explained in a specific tutorial.</p></dd></dl></div></div></section>
+<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="../../images/moving-timeline-miserables-1-en.gif" alt="moving timeline miserables 1 en" height="100%"></div><div class="title">Figure 9. Animating the dynamic network</div></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>&#160;</p></div></div></section>
 <section id="_to_be_continued"><h2>to be continued</h2></section>
 <section></section>
 <section id="_more_tutorials_on_dynamic_networks_with_gephi"><h2>more tutorials on dynamic networks with Gephi</h2></section>
-<section><div class="ulist"><ul><li><p><a href="https://github.com/gephi/gephi/wiki/Import-Dynamic-Data">The wiki on gephi.org</a></p></li></ul></div></section>
+<section><div class="slide-content"><div class="ulist"><ul><li><p><a href="https://github.com/gephi/gephi/wiki/Import-Dynamic-Data">The wiki on gephi.org</a></p></li></ul></div></div></section>
 <section id="_the_end"><h2>the end</h2></section>
-<section><div class="paragraph"><p>Visit <a href="https://www.facebook.com/groups/gephi/">the Gephi group on Facebook</a> to get help,</p></div>
+<section><div class="slide-content"><div class="paragraph"><p>Visit <a href="https://www.facebook.com/groups/gephi/">the Gephi group on Facebook</a> to get help,</p></div>
 <div class="paragraph"><p>or visit <a href="https://seinecle.github.io/gephi-tutorials/">the website for more tutorials</a>
     <!-- Start of StatCounter Code for Default Guide -->
     <script type="text/javascript">
@@ -157,15 +218,41 @@ table.CodeRay td.code>pre{padding:0}
     class="statcounter"
     src="//c.statcounter.com/11238920/0/11238920/1/" alt="site
     stats"></a></div></noscript>
-    <!-- End of StatCounter Code for Default Guide --></p></div></section></div></div><script src="reveal.js-3.6.0/lib/js/head.min.js"></script><script src="reveal.js-3.6.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+    <!-- End of StatCounter Code for Default Guide --></p></div></div></section></div></div><script src="reveal.js-3.9.2/js/reveal.js"></script><script>Array.prototype.slice.call(document.querySelectorAll('.slides section')).forEach(function(slide) {
+  if (slide.getAttribute('data-background-color')) return;
+  // user needs to explicitly say he wants CSS color to override otherwise we might break custom css or theme (#226)
+  if (!(slide.classList.contains('canvas') || slide.classList.contains('background'))) return;
+  var bgColor = getComputedStyle(slide).backgroundColor;
+  if (bgColor !== 'rgba(0, 0, 0, 0)' && bgColor !== 'transparent') {
+    slide.setAttribute('data-background-color', bgColor);
+    slide.style.backgroundColor = 'transparent';
+  }
+});
+
+// More info about config & dependencies:
+// - https://github.com/hakimel/reveal.js#configuration
+// - https://github.com/hakimel/reveal.js#dependencies
 Reveal.initialize({
-  // Display controls in the bottom right corner
+  // Display presentation control arrows
   controls: true,
+  // Help the user learn the controls by providing hints, for example by
+  // bouncing the down arrow when they first encounter a vertical slide
+  controlsTutorial: true,
+  // Determines where controls appear, "edges" or "bottom-right"
+  controlsLayout: 'bottom-right',
+  // Visibility rule for backwards navigation arrows; "faded", "hidden"
+  // or "visible"
+  controlsBackArrows: 'faded',
   // Display a presentation progress bar
   progress: true,
   // Display the page number of the current slide
   slideNumber: false,
-  // Push each slide change to the browser history
+  // Control which views the slide number displays on
+  showSlideNumber: 'all',
+  // Add the current slide number to the URL hash so that reloading the
+  // page/copying the URL will return you to the same slide
+  hash: false,
+  // Push each slide change to the browser history. Implies `hash: true`
   history: false,
   // Enable keyboard shortcuts for navigation
   keyboard: true,
@@ -179,38 +266,92 @@ Reveal.initialize({
   loop: false,
   // Change the presentation direction to be RTL
   rtl: false,
+  // See https://github.com/hakimel/reveal.js/#navigation-mode
+  navigationMode: 'default',
+  // Randomizes the order of slides each time the presentation loads
+  shuffle: false,
   // Turns fragments on and off globally
   fragments: true,
+  // Flags whether to include the current fragment in the URL,
+  // so that reloading brings you to the same fragment position
+  fragmentInURL: false,
   // Flags if the presentation is running in an embedded mode,
   // i.e. contained within a limited portion of the screen
   embedded: false,
+  // Flags if we should show a help overlay when the questionmark
+  // key is pressed
+  help: true,
+  // Flags if speaker notes should be visible to all viewers
+  showNotes: false,
+  // Global override for autolaying embedded media (video/audio/iframe)
+  // - null: Media will only autoplay if data-autoplay is present
+  // - true: All media will autoplay, regardless of individual setting
+  // - false: No media will autoplay, regardless of individual setting
+  autoPlayMedia: null,
+  // Global override for preloading lazy-loaded iframes
+  // - null: Iframes with data-src AND data-preload will be loaded when within
+  //   the viewDistance, iframes with only data-src will be loaded when visible
+  // - true: All iframes with data-src will be loaded when within the viewDistance
+  // - false: All iframes with data-src will be loaded only when visible
+  preloadIframes: null,
   // Number of milliseconds between automatically proceeding to the
   // next slide, disabled when set to 0, this value can be overwritten
   // by using a data-autoslide attribute on your slides
   autoSlide: 0,
   // Stop auto-sliding after user input
   autoSlideStoppable: true,
+  // Use this method for navigation when auto-sliding
+  autoSlideMethod: Reveal.navigateNext,
+  // Specify the average time in seconds that you think you will spend
+  // presenting each slide. This is used to show a pacing timer in the
+  // speaker view
+  defaultTiming: 120,
+  // Specify the total time in seconds that is available to
+  // present.  If this is set to a nonzero value, the pacing
+  // timer will work out the time available for each slide,
+  // instead of using the defaultTiming value
+  totalTime: 0,
+  // Specify the minimum amount of time you want to allot to
+  // each slide, if using the totalTime calculation method.  If
+  // the automated time allocation causes slide pacing to fall
+  // below this threshold, then you will see an alert in the
+  // speaker notes window
+  minimumTimePerSlide: 0,
   // Enable slide navigation via mouse wheel
   mouseWheel: false,
+  // Hide cursor if inactive
+  hideInactiveCursor: true,
+  // Time before the cursor is hidden (in ms)
+  hideCursorTime: 5000,
   // Hides the address bar on mobile devices
   hideAddressBar: true,
   // Opens links in an iframe preview overlay
+  // Add `data-preview-link` and `data-preview-link="false"` to customise each link
+  // individually
   previewLinks: false,
-  // Theme (e.g., beige, black, league, night, serif, simple, sky, solarized, white)
-  // NOTE setting the theme in the config no longer works in reveal.js 3.x
-  //theme: Reveal.getQueryHash().theme || 'white',
   // Transition style (e.g., none, fade, slide, convex, concave, zoom)
-  transition: Reveal.getQueryHash().transition || 'linear',
+  transition: 'linear',
   // Transition speed (e.g., default, fast, slow)
   transitionSpeed: 'default',
   // Transition style for full page slide backgrounds (e.g., none, fade, slide, convex, concave, zoom)
   backgroundTransition: 'fade',
   // Number of slides away from the current that are visible
   viewDistance: 3,
+  // Number of slides away from the current that are visible on mobile
+  // devices. It is advisable to set this to a lower number than
+  // viewDistance in order to save resources.
+  mobileViewDistance: 3,
   // Parallax background image (e.g., "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'")
   parallaxBackgroundImage: '',
   // Parallax background size in CSS syntax (e.g., "2100px 900px")
   parallaxBackgroundSize: '',
+  // Number of pixels to move the parallax background per slide
+  // - Calculated automatically unless specified
+  // - Set to 0 to disable movement along an axis
+  parallaxBackgroundHorizontal: null,
+  parallaxBackgroundVertical: null,
+  // The display mode that will be used to show slides
+  display: 'block',
 
   // The "normal" size of the presentation, aspect ratio will be preserved
   // when the presentation is scaled to fit different resolutions. Can be
@@ -225,13 +366,81 @@ Reveal.initialize({
   minScale: 0.2,
   maxScale: 10.0,
 
+  // PDF Export Options
+  // Put each fragment on a separate page
+  pdfSeparateFragments: true,
+  // For slides that do not fit on a page, max number of pages
+  pdfMaxPagesPerSlide: 1,
+
   // Optional libraries used to extend on reveal.js
   dependencies: [
-      { src: 'reveal.js-3.6.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-      { src: 'reveal.js-3.6.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-      { src: 'reveal.js-3.6.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-      
-      { src: 'reveal.js-3.6.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-      { src: 'reveal.js-3.6.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-  ]
+      { src: 'reveal.js-3.9.2/plugin/zoom-js/zoom.js', async: true },
+      { src: 'reveal.js-3.9.2/plugin/notes/notes.js', async: true }
+  ],
+
+  
+
+});</script><script>var dom = {};
+dom.slides = document.querySelector('.reveal .slides');
+
+function getRemainingHeight(element, slideElement, height) {
+  height = height || 0;
+  if (element) {
+    var newHeight, oldHeight = element.style.height;
+    // Change the .stretch element height to 0 in order find the height of all
+    // the other elements
+    element.style.height = '0px';
+    // In Overview mode, the parent (.slide) height is set of 700px.
+    // Restore it temporarily to its natural height.
+    slideElement.style.height = 'auto';
+    newHeight = height - slideElement.offsetHeight;
+    // Restore the old height, just in case
+    element.style.height = oldHeight + 'px';
+    // Clear the parent (.slide) height. .removeProperty works in IE9+
+    slideElement.style.removeProperty('height');
+    return newHeight;
+  }
+  return height;
+}
+
+function layoutSlideContents(width, height) {
+  // Handle sizing of elements with the 'stretch' class
+  toArray(dom.slides.querySelectorAll('section .stretch')).forEach(function (element) {
+    // Determine how much vertical space we can use
+    var limit = 5; // hard limit
+    var parent = element.parentNode;
+    while (parent.nodeName !== 'SECTION' && limit > 0) {
+      parent = parent.parentNode;
+      limit--;
+    }
+    if (limit === 0) {
+      // unable to find parent, aborting!
+      return;
+    }
+    var remainingHeight = getRemainingHeight(element, parent, height);
+    // Consider the aspect ratio of media elements
+    if (/(img|video)/gi.test(element.nodeName)) {
+      var nw = element.naturalWidth || element.videoWidth, nh = element.naturalHeight || element.videoHeight;
+      var es = Math.min(width / nw, remainingHeight / nh);
+      element.style.width = (nw * es) + 'px';
+      element.style.height = (nh * es) + 'px';
+    } else {
+      element.style.width = width + 'px';
+      element.style.height = remainingHeight + 'px';
+    }
+  });
+}
+
+function toArray(o) {
+  return Array.prototype.slice.call(o);
+}
+
+Reveal.addEventListener('slidechanged', function () {
+  layoutSlideContents(960, 700)
+});
+Reveal.addEventListener('ready', function () {
+  layoutSlideContents(960, 700)
+});
+Reveal.addEventListener('resize', function () {
+  layoutSlideContents(960, 700)
 });</script></body></html>

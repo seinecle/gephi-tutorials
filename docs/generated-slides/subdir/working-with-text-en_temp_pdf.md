@@ -9,12 +9,13 @@ last modified: {docdate}
 :iconsfont:   font-awesome
 :revnumber: 1.0
 :example-caption!:
+:imagesdir: ../images
 :sourcedir: ../../../main/java
 
 :title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
 
 image::gephi-logo-2010-transparent.png[width="450" align="center"]
-{nbsp} +
+{nbsp}
 
 //ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
@@ -25,7 +26,7 @@ image::gephi-logo-2010-transparent.png[width="450" align="center"]
 This tutorial explains how to draw "semantic networks" like this one:
 
 image::en/cooccurrences-computer/gephi-result-1-en.png[align="center", title="a semantic network"]
-{nbsp} +
+{nbsp}
 
 //ST: !
 
@@ -368,7 +369,7 @@ We used https://github.com/seinecle/Cowo[Cowo] to create the network from these 
 - Open the file inside the zip (`pubmed_abstracts_network.gml`) in Gephi:
 
 image::semantic-import-1-en.png[align="center", title="First view of the network"]
-{nbsp} +
+{nbsp}
 
 
 //ST: !
@@ -383,7 +384,7 @@ Several steps will make this network intelligible
 a. Showing the labels of the nodes:
 
 image::showing-node-labels.png[align="center", title="showing node labels"]
-{nbsp} +
+{nbsp}
 
 
 //ST: !
@@ -391,7 +392,7 @@ image::showing-node-labels.png[align="center", title="showing node labels"]
 b. Making the edges (relations) invisible, because they clutter the view
 
 image::hiding-edges.png[align="center", title="hiding edges"]
-{nbsp} +
+{nbsp}
 
 
 //ST: !
@@ -399,7 +400,7 @@ image::hiding-edges.png[align="center", title="hiding edges"]
 c. Reducing node size to the minimum (0.5) because we just need labels
 
 image::semantic-resize-nodes1-en.png[align="center", title="Making nodes disappear"]
-{nbsp} +
+{nbsp}
 
 
 //ST: !
@@ -415,7 +416,7 @@ e. Give a different color to each community
 -> each group of terms, distinguished by a color, will represent a topic.
 
 image::semantic-coloring-communities-1-en.png[align="center", title="Coloring nodes - first step"]
-{nbsp} +
+{nbsp}
 
 
 //ST: !
@@ -423,7 +424,7 @@ image::semantic-coloring-communities-1-en.png[align="center", title="Coloring no
 f. We then need to assign this node color to their labels:
 
 image::Coloring-nodes---second-step.png[align="center", title="Coloring nodes - second step"]
-{nbsp} +
+{nbsp}
 
 
 //ST: !
@@ -437,14 +438,14 @@ a. Spatializing the network with Force Atlas 2 will place related terms next to 
 Some parameters have been modified:
 
 image::semantic-spatializing-1-en.png[align="center", title="Spatializing the network"]
-{nbsp} +
+{nbsp}
 
 //ST: !
 [start=2]
 b. The network so far:
 
 image::semantic-spatializing-2-en.png[align="center", title="The network - colored and spatialized"]
-{nbsp} +
+{nbsp}
 
 
 //ST: !
@@ -455,7 +456,7 @@ c. Apply 2 more layouts to enhance readability:
 - "Label Adjust" to move labels around so that they don't overlap
 
 image::semantic-spatializing-3-en.png[align="center", title="Spreading labels"]
-{nbsp} +
+{nbsp}
 
 
 //ST: !
@@ -469,7 +470,7 @@ a. Switching to the preview panel
 - A number of parameters must be modified (to show Labels, hide edges, etc.)
 
 image::semantic-preview-1-en.png[align="center", title="The preview panel"]
-{nbsp} +
+{nbsp}
 
 //ST: !
 The network is now ready to be exported to pdf, png or svg file formats.
@@ -488,9 +489,8 @@ Other software / web apps to visualize texts as networks:
 Visit https://www.facebook.com/groups/gephi/[the Gephi group on Facebook] to get help,
 
 or visit https://seinecle.github.io/gephi-tutorials/[the website for more tutorials]
-w.vosviewer.com/
-
-== the end
+ite for more tutorials]
+he end
 //ST: The end!
 
 Visit https://www.facebook.com/groups/gephi/[the Gephi group on Facebook] to get help,

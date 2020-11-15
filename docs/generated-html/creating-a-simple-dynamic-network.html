@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.8">
+<meta name="generator" content="Asciidoctor 2.0.10">
 <meta name="author" content="Clément Levallois">
 <title>Creating a simple dynamic network</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -241,7 +241,7 @@ table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;pad
 pre.pygments .lineno{border-right:1px solid currentColor;opacity:.35;display:inline-block;margin-right:.75em}
 pre.pygments .lineno::before{content:"";margin-right:-.125em}
 .quoteblock{margin:0 1em 1.25em 1.5em;display:table}
-.quoteblock>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
 .quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
 .quoteblock blockquote{margin:0;padding:0;border:0}
 .quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
@@ -258,7 +258,8 @@ pre.pygments .lineno::before{content:"";margin-right:-.125em}
 .quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
 .quoteblock.abstract{margin:0 1em 1.25em;display:block}
 .quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
-.quoteblock.excerpt,.quoteblock .quoteblock{margin:0 0 1.25em;padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
 .quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
 .quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
 table.tableblock{max-width:100%;border-collapse:separate}
@@ -464,15 +465,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>last modified: 2018-02-11</p>
+<p>last modified: 2020-11-15</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<img src="../images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450">
+<img src="../../images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450">
 </div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 </div>
 </div>
@@ -526,12 +527,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<img src="../images/Open-a-new-project.png" alt="Open a new project">
+<img src="../../images/Open-a-new-project.png" alt="Open a new project">
 </div>
 <div class="title">Figure 1. Open a new project</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 </div>
 </div>
@@ -544,21 +545,21 @@ We can use a simple click-and-point tool to create a network:</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<img src="../images/Icon-for-node-creation.png" alt="Icon for node creation">
+<img src="../../images/Icon-for-node-creation.png" alt="Icon for node creation">
 </div>
 <div class="title">Figure 2. Icon for node creation</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<img src="../images/A-few-nodes-have-been-created.png" alt="A few nodes have been created">
+<img src="../../images/A-few-nodes-have-been-created.png" alt="A few nodes have been created">
 </div>
 <div class="title">Figure 3. A few nodes have been created</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p>When you have created a couple of nodes, click again on the pencil icon to stop the node creation.</p>
@@ -568,21 +569,21 @@ We can use a simple click-and-point tool to create a network:</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<img src="../images/Exporting-the-network.png" alt="Exporting the network">
+<img src="../../images/Exporting-the-network.png" alt="Exporting the network">
 </div>
 <div class="title">Figure 4. Exporting the network</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<img src="../images/Choosing-the-gexf-file-format.png" alt="Choosing the gexf file format">
+<img src="../../images/Choosing-the-gexf-file-format.png" alt="Choosing the gexf file format">
 </div>
 <div class="title">Figure 5. Choosing the gexf file format</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p>Clicking on "Save" saves the file in the folder you chose. You are back to the view on your graph.</p>
@@ -597,12 +598,12 @@ We can use a simple click-and-point tool to create a network:</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<img src="../images/Choosing-the-gexf-file-format.png" alt="Choosing the gexf file format">
+<img src="../../images/Choosing-the-gexf-file-format.png" alt="Choosing the gexf file format">
 </div>
 <div class="title">Figure 6. Choosing the gexf file format</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p>Create one edge, or a couple of edges, in this way.</p>
@@ -625,23 +626,23 @@ We can use a simple click-and-point tool to create a network:</p>
 <p>From your computer, open network A.gexf with a text editor (don&#8217;t use Microsoft Word!):</p>
 </div>
 <div class="paragraph">
-<p>(here is how to do it on a <a href="http://www.dummies.com/computers/macs/how-to-open-and-edit-a-text-file-on-a-mac/">Mac</a>, and on <a href="https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/app_notepad.mspx?mfr=true">Windows</a>).</p>
+<p>(here is how to do it on a <a href="http://www.dummies.com/computers/macs/how-to-open-and-edit-a-text-file-on-a-mac/">Mac</a>, and on <a href="https://www.lifewire.com/txt-text-file-4150707">Windows</a>).</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<img src="../images/The-network-file-opened.png" alt="The network file opened">
+<img src="../../images/The-network-file-opened.png" alt="The network file opened">
 </div>
 <div class="title">Figure 7. The network file opened</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p>Delete and replace this line by this one:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;graph</span> <span class="attribute-name">mode</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">slice</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">defaultedgetype</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">directed</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">timerepresentation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">timestamp</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">timestamp</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span></code></pre>
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;graph mode="slice" defaultedgetype="directed" timerepresentation="timestamp" timestamp="1"&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -668,7 +669,7 @@ We can use a simple click-and-point tool to create a network:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;graph</span> <span class="attribute-name">mode</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">slice</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">defaultedgetype</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">directed</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">timerepresentation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">timestamp</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">timestamp</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span></code></pre>
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;graph mode="slice" defaultedgetype="directed" timerepresentation="timestamp" timestamp="2"&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -694,48 +695,48 @@ We can use a simple click-and-point tool to create a network:</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<img src="../images/Closing-the-current-project.png" alt="Closing the current project">
+<img src="../../images/Closing-the-current-project.png" alt="Closing the current project">
 </div>
 <div class="title">Figure 8. Closing the current project</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p>Then click on <code>File &#8594; Open</code> and navigate to the folder where network A.gexf and network B.gexf are located:</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<img src="../images/Opening-files.png" alt="Opening files">
+<img src="../../images/Opening-files.png" alt="Opening files">
 </div>
 <div class="title">Figure 9. Opening files</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p>Here, make sure you select the <strong>2 files at once</strong> (using the key <kbd>Ctrl</kbd> on pc or <kbd>{commandkey}</kbd> on mac).</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<img src="../images/Opening-2-files-at-once.png" alt="Opening 2 files at once">
+<img src="../../images/Opening-2-files-at-once.png" alt="Opening 2 files at once">
 </div>
 <div class="title">Figure 10. Opening 2 files at once</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p>Opening the files display a report window:</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<img src="../images/Import-report-window.png" alt="Import report window">
+<img src="../../images/Import-report-window.png" alt="Import report window">
 </div>
 <div class="title">Figure 11. Import report window</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 </div>
 </div>
@@ -747,24 +748,24 @@ We can use a simple click-and-point tool to create a network:</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<img src="../images/Enable-the-timeline.png" alt="Enable the timeline">
+<img src="../../images/Enable-the-timeline.png" alt="Enable the timeline">
 </div>
 <div class="title">Figure 12. Enable the timeline</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p>Click and slide the right side border of the timeline <strong>to the left</strong>. You should see the edge disappear:</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<img src="../images/Sliding-the-timeline.png" alt="Sliding the timeline">
+<img src="../../images/Sliding-the-timeline.png" alt="Sliding the timeline">
 </div>
 <div class="title">Figure 13. Sliding the timeline</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p>We created a dynamic network.
@@ -819,97 +820,8 @@ It needs to be animated precisely with the timeline, dynamic attributes should b
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2018-02-11 15:39:56 +0100
+Last updated 2020-11-15 11:04:01 +0100
 </div>
 </div>
-<style>
-/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
-pre.CodeRay{background:#f7f7f8}
-.CodeRay .line-numbers{border-right:1px solid currentColor;opacity:.35;padding:0 .5em 0 0}
-.CodeRay span.line-numbers{display:inline-block;margin-right:.75em}
-.CodeRay .line-numbers strong{color:#000}
-table.CodeRay{border-collapse:separate;border:0;margin-bottom:0;background:none}
-table.CodeRay td{vertical-align:top;line-height:inherit}
-table.CodeRay td.line-numbers{text-align:right}
-table.CodeRay td.code{padding:0 0 0 .75em}
-.CodeRay .debug{color:#fff !important;background:#000080 !important}
-.CodeRay .annotation{color:#007}
-.CodeRay .attribute-name{color:#000080}
-.CodeRay .attribute-value{color:#700}
-.CodeRay .binary{color:#509}
-.CodeRay .comment{color:#998;font-style:italic}
-.CodeRay .char{color:#04d}
-.CodeRay .char .content{color:#04d}
-.CodeRay .char .delimiter{color:#039}
-.CodeRay .class{color:#458;font-weight:bold}
-.CodeRay .complex{color:#a08}
-.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
-.CodeRay .color{color:#099}
-.CodeRay .class-variable{color:#369}
-.CodeRay .decorator{color:#b0b}
-.CodeRay .definition{color:#099}
-.CodeRay .delimiter{color:#000}
-.CodeRay .doc{color:#970}
-.CodeRay .doctype{color:#34b}
-.CodeRay .doc-string{color:#d42}
-.CodeRay .escape{color:#666}
-.CodeRay .entity{color:#800}
-.CodeRay .error{color:#808}
-.CodeRay .exception{color:inherit}
-.CodeRay .filename{color:#099}
-.CodeRay .function{color:#900;font-weight:bold}
-.CodeRay .global-variable{color:#008080}
-.CodeRay .hex{color:#058}
-.CodeRay .integer,.CodeRay .float{color:#099}
-.CodeRay .include{color:#555}
-.CodeRay .inline{color:#000}
-.CodeRay .inline .inline{background:#ccc}
-.CodeRay .inline .inline .inline{background:#bbb}
-.CodeRay .inline .inline-delimiter{color:#d14}
-.CodeRay .inline-delimiter{color:#d14}
-.CodeRay .important{color:#555;font-weight:bold}
-.CodeRay .interpreted{color:#b2b}
-.CodeRay .instance-variable{color:#008080}
-.CodeRay .label{color:#970}
-.CodeRay .local-variable{color:#963}
-.CodeRay .octal{color:#40e}
-.CodeRay .predefined{color:#369}
-.CodeRay .preprocessor{color:#579}
-.CodeRay .pseudo-class{color:#555}
-.CodeRay .directive{font-weight:bold}
-.CodeRay .type{font-weight:bold}
-.CodeRay .predefined-type{color:inherit}
-.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
-.CodeRay .key{color:#808}
-.CodeRay .key .delimiter{color:#606}
-.CodeRay .key .char{color:#80f}
-.CodeRay .value{color:#088}
-.CodeRay .regexp .delimiter{color:#808}
-.CodeRay .regexp .content{color:#808}
-.CodeRay .regexp .modifier{color:#808}
-.CodeRay .regexp .char{color:#d14}
-.CodeRay .regexp .function{color:#404;font-weight:bold}
-.CodeRay .string{color:#d20}
-.CodeRay .string .string .string{background:#ffd0d0}
-.CodeRay .string .content{color:#d14}
-.CodeRay .string .char{color:#d14}
-.CodeRay .string .delimiter{color:#d14}
-.CodeRay .shell{color:#d14}
-.CodeRay .shell .delimiter{color:#d14}
-.CodeRay .symbol{color:#990073}
-.CodeRay .symbol .content{color:#a60}
-.CodeRay .symbol .delimiter{color:#630}
-.CodeRay .tag{color:#008080}
-.CodeRay .tag-special{color:#d70}
-.CodeRay .variable{color:#036}
-.CodeRay .insert{background:#afa}
-.CodeRay .delete{background:#faa}
-.CodeRay .change{color:#aaf;background:#007}
-.CodeRay .head{color:#f8f;background:#505}
-.CodeRay .insert .insert{color:#080}
-.CodeRay .delete .delete{color:#800}
-.CodeRay .change .change{color:#66f}
-.CodeRay .head .head{color:#f4f}
-</style>
 </body>
 </html>

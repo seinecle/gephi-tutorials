@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.8">
+<meta name="generator" content="Asciidoctor 2.0.10">
 <meta name="author" content="Clément Levallois">
 <title>Simple Gephi Project from A to Z</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -241,7 +241,7 @@ table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;pad
 pre.pygments .lineno{border-right:1px solid currentColor;opacity:.35;display:inline-block;margin-right:.75em}
 pre.pygments .lineno::before{content:"";margin-right:-.125em}
 .quoteblock{margin:0 1em 1.25em 1.5em;display:table}
-.quoteblock>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
 .quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
 .quoteblock blockquote{margin:0;padding:0;border:0}
 .quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
@@ -258,7 +258,8 @@ pre.pygments .lineno::before{content:"";margin-right:-.125em}
 .quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
 .quoteblock.abstract{margin:0 1em 1.25em;display:block}
 .quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
-.quoteblock.excerpt,.quoteblock .quoteblock{margin:0 0 1.25em;padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
 .quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
 .quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
 table.tableblock{max-width:100%;border-collapse:separate}
@@ -484,7 +485,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>last modified: 2017-02-28</p>
+<p>last modified: 2020-11-15</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
@@ -492,7 +493,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 </div>
 </div>
@@ -566,7 +567,7 @@ It supposes you have Gephi installed and running on your computer. That is all.<
 <div class="title">Figure 1. terminology for networks</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 </div>
 </div>
@@ -574,7 +575,7 @@ It supposes you have Gephi installed and running on your computer. That is all.<
 <h2 id="_download_a_network_file">download a network file</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="../resources/miserables_result.zip">download this zip file</a> and unzip it on your computer.</p>
+<p><a href="../resources/miserables.zip">download this zip file</a> and unzip it on your computer.</p>
 </div>
 <div class="paragraph">
 <p>You should find the file <code>miserables.gexf</code> in it.</p>
@@ -618,7 +619,7 @@ It supposes you have Gephi installed and running on your computer. That is all.<
 <div class="title">Figure 2. welcome screen</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 </div>
 </div>
@@ -635,7 +636,7 @@ It supposes you have Gephi installed and running on your computer. That is all.<
 <div class="title">Figure 3. report window</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p>This tells you that the network comprises 74 characters, connected by 248 links.</p>
@@ -661,7 +662,7 @@ It supposes you have Gephi installed and running on your computer. That is all.<
 <div class="title">Figure 4. initial view when opening a graph</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p>This is how the network appears in Gephi. Not very useful! Let&#8217;s examine what we have here.</p>
@@ -678,7 +679,7 @@ It supposes you have Gephi installed and running on your computer. That is all.<
 <div class="title">Figure 5. the 3 main screens in Gephi</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p>Gephi has 3 main screens:</p>
@@ -706,7 +707,7 @@ It supposes you have Gephi installed and running on your computer. That is all.<
 <div class="title">Figure 6. Filters and statistics panels in Gephi</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p>In the Overview, the graph is shown at the center. Around it, several panels help us fine tune the visualization.</p>
@@ -728,7 +729,7 @@ It supposes you have Gephi installed and running on your computer. That is all.<
 <div class="title">Figure 7. Appearance and layout panels in Gephi</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic" start="6">
@@ -747,7 +748,7 @@ It supposes you have Gephi installed and running on your computer. That is all.<
 <div class="title">Figure 8. 3 groups of icons</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic" start="8">
@@ -774,7 +775,7 @@ It supposes you have Gephi installed and running on your computer. That is all.<
 <div class="title">Figure 9. showing node labels</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 </div>
 </div>
@@ -788,7 +789,7 @@ It supposes you have Gephi installed and running on your computer. That is all.<
 <div class="title">Figure 10. selecting the force atlas 2 layout</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div id="force-atlas-2-parameters" class="imageblock text-center">
 <div class="content">
@@ -797,7 +798,7 @@ It supposes you have Gephi installed and running on your computer. That is all.<
 <div class="title">Figure 11. changing a few parameters and launching the layout</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
@@ -806,7 +807,7 @@ It supposes you have Gephi installed and running on your computer. That is all.<
 <div class="title">Figure 12. result of Force Atlas 2 layout</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 </div>
 </div>
@@ -831,7 +832,7 @@ Yet, the properties of these entities remain invisible.</p>
 <div class="title">Figure 13. Switching the view to the data laboratory</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
@@ -840,7 +841,7 @@ Yet, the properties of these entities remain invisible.</p>
 <div class="title">Figure 14. We see there is a Gender attribute for each character.</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p>We will color the nodes based on their gender. To do that, we select <code>Gender</code> in the <code>Appearance</code> panel:</p>
@@ -852,7 +853,7 @@ Yet, the properties of these entities remain invisible.</p>
 <div class="title">Figure 15. Coloring nodes according to their gender</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p>The result:</p>
@@ -864,7 +865,7 @@ Yet, the properties of these entities remain invisible.</p>
 <div class="title">Figure 16. After coloring characters according to their gender</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 </div>
 </div>
@@ -918,7 +919,7 @@ Yet, the properties of these entities remain invisible.</p>
 <div class="title">Figure 17. Noverlap or Label Adjust will help you</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p>Don&#8217;t forget to click on "Run" to apply these layouts.</p>
@@ -936,7 +937,7 @@ Yet, the properties of these entities remain invisible.</p>
 <div class="title">Figure 18. Adjusting label size</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 </div>
 <div class="sect3">
@@ -948,7 +949,7 @@ Yet, the properties of these entities remain invisible.</p>
 <div class="title">Figure 19. Adjusting edge thickness</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 </div>
 </div>
@@ -1004,7 +1005,7 @@ But how to measure that "scientifically", so that we have an objective confirmat
 <div class="title">Figure 20. Computing betweenness centrality</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p>This will open a window with parameters (explained in a more advanced tutorials). Click "OK":</p>
@@ -1016,7 +1017,7 @@ But how to measure that "scientifically", so that we have an objective confirmat
 <div class="title">Figure 21. Parameters for the computation of betweenness centrality</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p>A report window opens (also explained in a other tutorials). Close it.</p>
@@ -1028,7 +1029,7 @@ But how to measure that "scientifically", so that we have an objective confirmat
 <div class="title">Figure 22. Report after the computation of betweenness centrality</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p>Now we can visualize this information.</p>
@@ -1056,7 +1057,7 @@ This would allow for a very quick visual appreciation of which nodes are the mos
 <div class="title">Figure 23. Switching the view to the data laboratory</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p>When we ran "Network Diameter" in the statistics panel, Gephi has actually computed many kinds of centralities (not just "betweenness centrality"):</p>
@@ -1068,7 +1069,7 @@ This would allow for a very quick visual appreciation of which nodes are the mos
 <div class="title">Figure 24. Different centrality measures visible in the data laboratory</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p>To resize the nodes according to the value of their betweenness centrality, we use the <code>Appearance</code> panel:</p>
@@ -1092,7 +1093,7 @@ make sure you select the correct options
 <div class="title">Figure 25. Ranking node sizes by centrality</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
@@ -1101,7 +1102,7 @@ make sure you select the correct options
 <div class="title">Figure 26. Selecting the minimum and maximum sizes of nodes</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
@@ -1110,7 +1111,7 @@ make sure you select the correct options
 <div class="title">Figure 27. Result of the ranking</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
@@ -1119,7 +1120,7 @@ make sure you select the correct options
 <div class="title">Figure 28. Resizing labels to reflect their node&#8217;s size</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
@@ -1128,7 +1129,7 @@ make sure you select the correct options
 <div class="title">Figure 29. Result of the label resizing</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 </div>
 </div>
@@ -1142,7 +1143,7 @@ make sure you select the correct options
 <div class="title">Figure 30. Open the configuration panel for screenshots</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p>Select the maximum value for anti-aliasing, and multiply values for width and height for higher resolution. For example, resolution x 3 is width = 3072 and height = 2304</p>
@@ -1154,7 +1155,7 @@ make sure you select the correct options
 <div class="title">Figure 31. The configuration panel for screenshots</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p>Let&#8217;s switch to the preview panel:</p>
@@ -1166,7 +1167,7 @@ make sure you select the correct options
 <div class="title">Figure 32. Switching to the preview panel</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p>The preview panel is dedicated to the preparation of the picture to be exported as a pdf or svg, which are "scalable": in pdf or sv, the resolution of the graph will remain perfect, even with a strong zoom.
@@ -1191,7 +1192,7 @@ contrary to the Overview panel, here you need to hit the "refresh" button after 
 <div class="title">Figure 33. Updating the parameters</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p>Here I change just 2 parameters: <code>Show Labels</code> and  <code>Font</code> (which I reduce to size "5"), to get:</p>
@@ -1203,7 +1204,7 @@ contrary to the Overview panel, here you need to hit the "refresh" button after 
 <div class="title">Figure 34. Result of preview</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p>Export: just click on the button and select the file format you prefer</p>
@@ -1215,7 +1216,7 @@ contrary to the Overview panel, here you need to hit the "refresh" button after 
 <div class="title">Figure 35. Export button</div>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>&#160;</p>
 </div>
 <div class="paragraph">
 <p><a href="../resources/miserables_result.zip">download this zip file</a> if you need to see the network in its final form.</p>
@@ -1321,7 +1322,7 @@ Can you imagine a situation when a node with the largest degree centrality will 
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2017-02-28 12:40:26 +0100
+Last updated 2020-11-15 10:57:39 +0100
 </div>
 </div>
 </body>

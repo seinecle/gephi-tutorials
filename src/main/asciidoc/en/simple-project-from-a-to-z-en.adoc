@@ -61,7 +61,7 @@ image::https://docs.google.com/drawings/d/1h8N-UBY7dO6Q7mXCbPY78ITfJx1Mti9YD2Scn
 //ST: download a network file
 //ST: !
 
-link:../resources/miserables_result.zip[download this zip file] and unzip it on your computer.
+link:../resources/miserables.zip[download this zip file] and unzip it on your computer.
 
 You should find the file `miserables.gexf` in it.
 
