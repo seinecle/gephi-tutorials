@@ -1,3 +1,4 @@
 target/
 src/main/asciidoc/subdir/
 properties/
+docs/asciidoctor-reveal.js-master
