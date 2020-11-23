@@ -198,6 +198,7 @@ image::en/twitter-streaming-importer/timeline.gif[align="center", title="Example
 * BBC Monitoring
 * Paris II
 * University Aberdeen
+* Athens university of economics and business / Οικονομικό Πανεπιστήμιο Αθηνών, Department of Management Science and Technology / Τμήμα Διοικητικής Επιστήμης και Τεχνολογίας 
 
 You can ping @totetmatt on twitter if you wish to expand the list ;)
 
