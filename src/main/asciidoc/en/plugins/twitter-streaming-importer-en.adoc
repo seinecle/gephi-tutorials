@@ -1,5 +1,5 @@
 =  Twitter Streaming Importer
-Clément Levallois <clementlevallois@gmail.com>;Matthieu Totet <matthieu.totet@gmail.com>
+Clément Levallois <clementlevallois@gmail.com>; Matthieu Totet <matthieu.totet@gmail.com>
 2017-01-31
 
 last modified: {docdate}
