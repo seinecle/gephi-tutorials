@@ -17,7 +17,7 @@ image::gephi-logo-2010-transparent.png[width="450" align="center"]
 
 //ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
-== Upgrade: this function is now available as a web app!
+== Upgrade: this plugin is now available as a web app!
 
 I have transfered the plugin to a free web application, which makes it easier to access.
 Visit the https://nocodefunctions.com/gaze/network_builder_tool.html["network builder page"] on https://nocodefunctions.com[Nocodefunctions].
