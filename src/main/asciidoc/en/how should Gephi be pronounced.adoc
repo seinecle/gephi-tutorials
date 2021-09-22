@@ -1,1 +1,7 @@
-image::http://i.giphy.com/bkKvvzE9PEcTK.gif[]
+ifdef::backend-pdf[]
+image::seinfeld.png[align="center", title=""]
+endif::[]
+
+ifndef::backend-pdf[]
+image::seinfeld.gif[align="center", title=""]
+endif::[]

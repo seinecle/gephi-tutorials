@@ -1,3 +1,0 @@
-[build]
-  publish = "public/"
-  command = "bundle exec rake build; bundle exec rake examples:convert; bundle exec rake examples:publish"

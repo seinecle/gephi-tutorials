@@ -308,7 +308,10 @@ We now have nodes and their relations: a semantic network. Let's see now how to 
 
 == Visualizing semantic networks with Gephi
 
-==== 1. Downloading a dataset for this tutorial
+==== 1. Creating a semantic network by yourself
+You can convert any text into a network with https://nocodefunctions.com/cowo/semantic_networks_tool.html[Cowo], an online tool on the Nocodefunctions webapp [disclaimer: I created Cowo and Nocodefunctions].
+
+==== 2. Or, download a dataset for this tutorial
 
 We need a dataset to practice. This is a semantic network of 250 terms and 19,613 relations:
 
@@ -336,7 +339,7 @@ image::semantic-import-1-en.png[align="center", title="First view of the network
 //+
 Several steps will make this network intelligible
 
-==== 2. Managing labels size and colors
+==== 3. Managing labels size and colors
 
 a. Showing the labels of the nodes:
 
@@ -378,7 +381,7 @@ f. We then need to assign this node color to their labels:
 image::https://docs.google.com/drawings/d/1fAyeO4K9cv-HV4AM0YrL8yQXw8hKxqWX-1K1GlwogN0/pub?w=1440&h=1080[align="center", title="Coloring nodes - second step"]
 
 
-==== 3. Tuning the spatialization
+==== 4. Tuning the spatialization
 
 
 //+
@@ -394,7 +397,6 @@ b. The network so far:
 
 image::semantic-spatializing-2-en.png[align="center", title="The network - colored and spatialized"]
 
-
 //+
 [start=3]
 c. Apply 2 more layouts to enhance readability:
@@ -404,8 +406,7 @@ c. Apply 2 more layouts to enhance readability:
 
 image::semantic-spatializing-3-en.png[align="center", title="Spreading labels"]
 
-==== 4. Exporting an image of the network
-
+==== 5. Exporting an image of the network
 
 //+
 a. Switching to the preview panel
@@ -421,8 +422,8 @@ The network is now ready to be exported to pdf, png or svg file formats.
 
 Other software / web apps to visualize texts as networks:
 
-- http://textexture.com/
-- http://www.vosviewer.com/
+- https://textexture.com/ or its new version https://infranodus.com/
+- https://www.vosviewer.com/
 
 == the end
 

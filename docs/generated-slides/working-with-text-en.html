@@ -144,7 +144,7 @@ link.rel = 'stylesheet';
 link.type = 'text/css';
 link.href = window.location.search.match( /print-pdf/gi ) ? "reveal.js-3.9.2/css/print/pdf.css" : "reveal.js-3.9.2/css/print/paper.css";
 document.getElementsByTagName( 'head' )[0].appendChild( link );</script></head><body><div class="reveal"><div class="slides"><section class="title" data-state="title"><h1>Working with text in Gephi</h1><div class="preamble"><div class="paragraph"><p>2017-03-07</p></div>
-<div class="paragraph"><p>last modified: 2020-11-15</p></div></div><p class="author"><small>== !</small></p></section>
+<div class="paragraph"><p>last modified: 2021-09-21</p></div></div><p class="author"><small>== !</small></p></section>
 <section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/gephi-logo-2010-transparent.png" alt="gephi logo 2010 transparent" width="450"></div></div></section>
 <section><div class="slide-content"><div class="paragraph"><p>&#160;
 &#160;</p></div></div></section>
@@ -267,7 +267,9 @@ divided by
 <div class="stemblock"><div class="content">\$PMI = log((p(A, B)) /(p(A) p(B)))\$</div></div></div></section>
 <section><div class="slide-content"><div class="paragraph"><p>We now have nodes and their relations: a semantic network. Let&#8217;s see now how to visualize it in Gephi.</p></div></div></section>
 <section id="_visualizing_semantic_networks_with_gephi"><h2>Visualizing semantic networks with Gephi</h2></section>
-<section><div class="slide-content"><h3>1. Downloading a dataset for this tutorial</h3></div></section>
+<section><div class="slide-content"><h3>1. Creating a semantic network by yourself</h3></div></section>
+<section><div class="slide-content"><div class="paragraph"><p>You can convert any text into a network with <a href="https://nocodefunctions.com/cowo/semantic_networks_tool.html">Cowo</a>, an online tool on the Nocodefunctions webapp [disclaimer: I created Cowo and Nocodefunctions].</p></div></div></section>
+<section><div class="slide-content"><h3>2. Or, download a dataset for this tutorial</h3></div></section>
 <section><div class="slide-content"><div class="paragraph"><p>We need a dataset to practice. This is a semantic network of 250 terms and 19,613 relations:</p></div>
 <div class="paragraph"><p><a href="../resources/semantic-networks/pubmed_abstracts_network.zip">download this zip file</a> and unzip it on your computer.</p></div></div></section>
 <section><div class="slide-content"><div class="paragraph"><p>The network was built from the short summaries ("abstracts") of 1484 research articles from the PubMed database of scientific reports, retrieved by conducting this query:</p></div>
@@ -280,7 +282,7 @@ divided by
 <section><div class="slide-content"><div class="paragraph"><p>&#160;
 &#160;</p></div></div></section>
 <section><div class="slide-content"><div class="paragraph"><p>Several steps will make this network intelligible</p></div></div></section>
-<section><div class="slide-content"><h3>2. Managing labels size and colors</h3></div></section>
+<section><div class="slide-content"><h3>3. Managing labels size and colors</h3></div></section>
 <section><div class="slide-content"><div class="olist loweralpha"><ol class="loweralpha"><li><p>Showing the labels of the nodes:</p></li></ol></div></div></section>
 <section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/showing-node-labels.png" alt="showing node labels" height="100%"></div><div class="title">Figure 3. showing node labels</div></div></section>
 <section><div class="slide-content"><div class="paragraph"><p>&#160;
@@ -303,7 +305,7 @@ divided by
 <section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/Coloring-nodes---second-step.png" alt="Coloring nodes   second step" height="100%"></div><div class="title">Figure 7. Coloring nodes - second step</div></div></section>
 <section><div class="slide-content"><div class="paragraph"><p>&#160;
 &#160;</p></div></div></section>
-<section><div class="slide-content"><h3>3. Tuning the spatialization</h3></div></section>
+<section><div class="slide-content"><h3>4. Tuning the spatialization</h3></div></section>
 <section></section>
 <section><div class="slide-content"><div class="olist loweralpha"><ol class="loweralpha"><li><p>Spatializing the network with Force Atlas 2 will place related terms next to each other, because they co-occur:</p></li></ol></div>
 <div class="paragraph"><p>Some parameters have been modified:</p></div></div></section>
@@ -318,7 +320,7 @@ divided by
 <section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/semantic-spatializing-3-en.png" alt="semantic spatializing 3 en" height="100%"></div><div class="title">Figure 10. Spreading labels</div></div></section>
 <section><div class="slide-content"><div class="paragraph"><p>&#160;
 &#160;</p></div></div></section>
-<section><div class="slide-content"><h3>4. Exporting an image of the network</h3></div></section>
+<section><div class="slide-content"><h3>5. Exporting an image of the network</h3></div></section>
 <section></section>
 <section><div class="slide-content"><div class="olist loweralpha"><ol class="loweralpha"><li><p>Switching to the preview panel</p><div class="ulist"><ul><li><p>A number of parameters must be modified (to show Labels, hide edges, etc.)</p></li></ul></div></li></ol></div></div></section>
 <section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/semantic-preview-1-en.png" alt="semantic preview 1 en" height="100%"></div><div class="title">Figure 11. The preview panel</div></div></section>
@@ -327,30 +329,10 @@ divided by
 <section><div class="slide-content"><div class="paragraph"><p>The network is now ready to be exported to pdf, png or svg file formats.</p></div></div></section>
 <section id="_more_tutorials_on_working_with_semantic_networks"><h2>More tutorials on working with semantic networks</h2></section>
 <section><div class="slide-content"><div class="paragraph"><p>Other software / web apps to visualize texts as networks:</p></div>
-<div class="ulist"><ul><li><p><a href="http://textexture.com/" class="bare">http://textexture.com/</a></p></li><li><p><a href="http://www.vosviewer.com/" class="bare">http://www.vosviewer.com/</a></p></li></ul></div></div></section>
+<div class="ulist"><ul><li><p><a href="https://textexture.com/" class="bare">https://textexture.com/</a> or its new version <a href="https://infranodus.com/" class="bare">https://infranodus.com/</a></p></li><li><p><a href="https://www.vosviewer.com/" class="bare">https://www.vosviewer.com/</a></p></li></ul></div></div></section>
 <section id="_the_end"><h2>the end</h2></section>
 <section><div class="slide-content"><div class="paragraph"><p>Visit <a href="https://www.facebook.com/groups/gephi">the Gephi group on Facebook</a> to get help,</p></div>
-<div class="paragraph"><p>or visit <a href="https://seinecle.github.io/gephi-tutorials">the website for more tutorials</a></p></div>
-<div class="paragraph"><p>or visit <a href="https://seinecle.github.io/gephi-tutorials/">the website for more tutorials</a>
-r visit <a href="https://seinecle.github.io/gephi-tutorials/">the website for more tutorials</a>
-r visit <a href="https://seinecle.github.io/gephi-tutorials/">the website for more tutorials</a>
-== !
-==== 4. Exporting an image of the network
-== !</p></div>
-<div class="olist loweralpha"><ol class="loweralpha"><li><p>Switching to the preview panel</p><div class="ulist"><ul><li><p>A number of parameters must be modified (to show Labels, hide edges, etc.)</p></li></ul></div></li></ol></div></div></section>
-<section><div class="slide-content"><div class="imageblock stretch" style="text-align: center"><img src="images/semantic-preview-1-en.png" alt="semantic preview 1 en" height="100%"></div><div class="title">Figure 12. The preview panel</div></div></section>
-<section><div class="slide-content"><div class="paragraph"><p>&#160;
-&#160;
-&#160;
-&#160;
-&#160;</p></div>
-<div class="paragraph"><p>The network is now ready to be exported to pdf, png or svg file formats.</p></div></div></section>
-<section id="_more_tutorials_on_working_with_semantic_networks_2"><h2>More tutorials on working with semantic networks</h2></section>
-<section><div class="slide-content"><div class="paragraph"><p>Other software / web apps to visualize texts as networks:</p></div>
-<div class="ulist"><ul><li><p><a href="http://textexture.com/" class="bare">http://textexture.com/</a></p></li><li><p><a href="http://www.vosviewer.com/" class="bare">http://www.vosviewer.com/</a></p></li></ul></div></div></section>
-<section id="_the_end_2"><h2>the end</h2></section>
-<section><div class="slide-content"><div class="paragraph"><p>Visit <a href="https://www.facebook.com/groups/gephi/">the Gephi group on Facebook</a> to get help,</p></div>
-<div class="paragraph"><p>or visit <a href="https://seinecle.github.io/gephi-tutorials/">the website for more tutorials</a>
+<div class="paragraph"><p>or visit <a href="https://seinecle.github.io/gephi-tutorials">the website for more tutorials</a>
     <!-- Start of StatCounter Code for Default Guide -->
     <script type="text/javascript">
         var sc_project = 11238920;
