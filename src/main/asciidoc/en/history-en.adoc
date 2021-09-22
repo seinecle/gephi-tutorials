@@ -69,18 +69,22 @@ endif::[]
 
 //pass:[<iframe scrolling="no" style="border:none;" width="640" height="600" src="https://www.google.com/trends/fetchComponent?hl=en-US&amp;q=gephi,vosviewer,nodexl,cytoscape,ucinet%20&amp;content=1&amp;cid=TIMESERIES_GRAPH_0&amp;export=5&amp;w=640&amp;h=600"></iframe>]
 
+ifndef::backend-pdf[]
 ++++
-<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1308_RC02/embed_loader.js"></script>
-  <script type="text/javascript">
-    trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"gephi","geo":"","time":"today 5-y"},{"keyword":"vosviewer","geo":"","time":"today 5-y"},{"keyword":"nodexl","geo":"","time":"today 5-y"},{"keyword":"cytoscape","geo":"","time":"today 5-y"},{"keyword":"ucinet","geo":"","time":"today 5-y"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&q=gephi,vosviewer,nodexl,cytoscape,ucinet","guestPath":"https://trends.google.com:443/trends/embed/"});
-  </script>
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2674_RC03/embed_loader.js"></script>
+<script type="text/javascript">
+  trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"gephi","geo":"","time":"2004-01-01 2021-09-21"},{"keyword":"vosviewer","geo":"","time":"2004-01-01 2021-09-21"},{"keyword":"cytoscape","geo":"","time":"2004-01-01 2021-09-21"},{"keyword":"ucinet","geo":"","time":"2004-01-01 2021-09-21"},{"keyword":"nodexl","geo":"","time":"2004-01-01 2021-09-21"}],"category":0,"property":""}, {"exploreQuery":"date=all&q=gephi,vosviewer,cytoscape,ucinet,nodexl","guestPath":"https://trends.google.com:443/trends/embed/"});
+</script>
+
 ++++
+endif::[]
 
 ifdef::backend-pdf[]
 image::google-trends-gephi.png[align="center", title=""]
 endif::[]
 
 ==== c. Academic citations for Gephi (counting only citations to http://www.aaai.org/ocs/index.php/ICWSM/09/paper/download/154/1009[Bastian et al., 2009])
+
 image::google-scholar-gephi.png[align="center", title=""]
 
 

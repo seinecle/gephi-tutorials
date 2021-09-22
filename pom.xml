@@ -173,12 +173,29 @@
                     
                         <executions>
                             <execution>
+                                <id>default</id>
+                                <phase>none</phase> <!-- disable the default execution in validate phase -->
+                            </execution>
+                            <execution>
                                 <id>generate-preprocessed version</id>
                                 <phase>generate-resources</phase>
                                 <goals>
                                     <goal>process-asciidoc</goal>
                                 </goals>
                                 <configuration>
+                                    <resources>
+                                        <resource>
+                                            <directory>${basedir}/src/main/asciidoc/*s</directory> <!-- just use . to filter across all files-->
+                                            <excludes>
+                                                <exclude>**/*.gdraw</exclude>
+                                                <exclude>**/*.gsheet</exclude>
+                                                <exclude>**/*.gdoc</exclude>
+                                                <exclude>**/*.gslides</exclude>
+                                                <exclude>**/*.docx</exclude>
+                                                <exclude>**/*.xlsx</exclude>
+                                            </excludes>
+                                        </resource>
+                                    </resources>
                                     <sourceDirectory>${source.directory}</sourceDirectory>
                                     <imagesDir>${basedir}/src/main/asciidoc/images</imagesDir>                                    
                                     <images-dir>${basedir}/src/main/asciidoc/images</images-dir>
@@ -207,11 +224,24 @@
                                     <goal>process-asciidoc</goal>
                                 </goals>
                                 <configuration>
+                                    <resources>
+                                        <resource>
+                                            <directory>${basedir}/src/main/asciidoc/</directory> <!-- just use . to filter across all files-->
+                                            <excludes>
+                                                <exclude>**/*.gdraw</exclude>
+                                                <exclude>**/*.gsheet</exclude>
+                                                <exclude>**/*.gdoc</exclude>
+                                                <exclude>**/*.gslides</exclude>
+                                                <exclude>**/*.docx</exclude>
+                                                <exclude>**/*.xlsx</exclude>
+                                            </excludes>
+                                        </resource>
+                                    </resources>
                                     <gemPath>${project.build.directory}/gems</gemPath>
                                     <requires>
                                         <require>asciidoctor-revealjs</require>
                                     </requires>
-                                    <sourceDirectory>${source.directory}/subdir</sourceDirectory>
+                                    <sourceDirectory>${source.directory}</sourceDirectory>
                                     <imagesDir>${image.directory}</imagesDir>
                                     <sourceDocumentName>${doc.to.process}</sourceDocumentName>
                                     <outputDirectory>${basedir}/docs/generated-slides</outputDirectory>
@@ -255,13 +285,25 @@
                                     <goal>process-asciidoc</goal>
                                 </goals>
                                 <configuration>
-
+                                    <resources>
+                                        <resource>
+                                            <directory>${basedir}/src/main/asciidoc/</directory> <!-- just use . to filter across all files-->
+                                            <excludes>
+                                                <exclude>**/*.gdraw</exclude>
+                                                <exclude>**/*.gsheet</exclude>
+                                                <exclude>**/*.gdoc</exclude>
+                                                <exclude>**/*.gslides</exclude>
+                                                <exclude>**/*.docx</exclude>
+                                                <exclude>**/*.xlsx</exclude>
+                                            </excludes>
+                                        </resource>
+                                    </resources>
                                     <sourceDirectory>${source.directory}</sourceDirectory>
                                     for pdf output the image Dir should be the default one, not ../images as defines for html and slides output!
                                     so I leave this line commented out as a reminder what not to do
                                     <!--<imagesDir>${image.directory}</imagesDir>-->                                    
                                     <imagesDir>${basedir}/src/main/asciidoc/images</imagesDir>                                    
-                                <images-dir>${basedir}/src/main/asciidoc/images</images-dir>
+                                    <images-dir>${basedir}/src/main/asciidoc/images</images-dir>
 
                                     <sourceDocumentName>${doc.to.process.full.path}</sourceDocumentName>                                    
                                     <outputDirectory>${basedir}/docs/generated-pdf</outputDirectory>
@@ -290,6 +332,20 @@
                                     <goal>process-asciidoc</goal>
                                 </goals>
                                 <configuration>
+                                    <resources>
+                                        <resource>
+                                            <directory>${basedir}/src/main/asciidoc/</directory> <!-- just use . to filter across all files-->
+                                            <excludes>
+                                                <exclude>**/*.gdraw</exclude>
+                                                <exclude>**/*.gsheet</exclude>
+                                                <exclude>**/*.gdoc</exclude>
+                                                <exclude>**/*.gslides</exclude>
+                                                <exclude>**/*.docx</exclude>
+                                                <exclude>**/*.xlsx</exclude>
+                                            </excludes>
+                                        </resource>
+                                    </resources>
+
                                     <sourceDirectory>${source.directory}</sourceDirectory>
                                     <imagesDir>${image.directory}</imagesDir>
                                     <sourceDocumentName>${doc.to.process.full.path}</sourceDocumentName>                                    
@@ -318,7 +374,7 @@
                             </execution>
                         </executions>
                     </plugin>
-<!--                    <plugin>
+                    <!--                    <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-antrun-plugin</artifactId>
                         <version>1.8</version>
