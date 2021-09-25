@@ -44,6 +44,7 @@ When finishing this tutorial, you should be able to:
 - compute the centrality of the nodes in the network
 - visualize attributes created by Gephi
 - export a visualization as a picture or pdf
+- export a web visualization of the network
 
 
 == be familiar with the terminology to discuss networks
@@ -301,9 +302,68 @@ Export: just click on the button and select the file format you prefer
 
 image::https://docs.google.com/drawings/d/1ATho4fb-YqCAPHw4sLa65le7C0kOtNWk7YOYdjd98RA/pub?w=954&h=525[align="center",title="Export button"]
 
-==== 3. donwload the result file
+==== 3. download the result file
 
 link:../resources/miserables_result.zip[download this zip file] if you need to see the network in its final form.
+
+== export a network as a web visualization
+
+You can easily create a web-based version of your network. It can be made public or private.
+If you choose to make it public, it will be easy to share - simply send the url.
+
+The web version makes use of https://github.com/neesjanvaneck/VOSviewer-Online[VOSviewer online], which works best for networks up to ~ 500 nodes (if your networks has more nodes, it can be hard to read on screen).
+
+To proceed, simply:
+
+==== 1. export your graph from Gephi as a .gexf file
+
+WARNING: make sure you export a *gexf* file, not a *GEPHI* file!
+
+In Gephi, do: *File -> Export -> Graph file...* See an illustration below:
+
+image::https://docs.google.com/drawings/d/e/2PACX-1vT1Ku1bUqL3EHEn1byCIU1OWGBlbR3ygIdVsJx6lfJ2kGjkuOtao78Wzg7z-NKqgCTVm02kQM0ep1kz/pub?w=617&h=356[align="center",title="Export gexf file 1"]
+
+image::https://docs.google.com/drawings/d/e/2PACX-1vS_qt5cta9d7B84CBojpv_F8m-g-l5BMXTuCB5g4daQ6AV87prgSfGAhmPE7oPtkcn0GSSobIRD_GF1/pub?w=566&h=348[align="center",title="Export gexf file 2"]
+
+==== 2. visit nocodefunctions and convert the gexf file to a web visualization
+
+
+https://nocodefunctions.com/[Nocode functions] is a web application that I developed.
+It provides useful tools to work with networks and text.
+It is free, does not need a registration, and is respectful of your data.
+
+//+
+- Go to https://nocodefunctions.com/networkconverter/network_format_converter.html[this page  on nocodefunction].
+- Choose option 1 ("convert a Gephi gexf file to VOSviewer json format")
+- If you want to share your visualization, check the box to make it public
+- Click on "Convert to VOSviewer json file"
+
+
+//+
+You will be directed to a new webpage like the one below:
+
+image::en/vosviewer_result.png[align="center",title="An illustration of the web view of a gexf file"]
+
+==== 3. public or private web visualization? How to manage
+
+If you have chosen "public" at the previous step you can now bookmark the web page of your network, share it, etc.
+Otherwise, *the visualization will be deleted after an hour*. This is to keep the promise that your data is secure: if you want it private, we simply don't keep it on the servers.
+
+//+
+What if you want to keep your visualization private, but don't want to redo all the steps after each hour?
+
+- in the VOSviewer visualization, save your network as a json file by clicking on the "save" icon:
+
+image::https://docs.google.com/drawings/d/e/2PACX-1vTLGLExFtxC4dVKqPopQZnKJ5UkyZ90LSaVMjoIrOtd-THcxqePRG5vcG_FKxfBrVAnh1GsnoT7nS3F/pub?w=566&h=348[align="center",title="Saving the network to a json file from the VOSviewer online interface"]
+
+Then, you can re-open this file in the web interface whenever you want:
+
+- Visit https://nocodefunctions.com/html/vosviewer/index.html[this page by nocode functions] or https://app.vosviewer.com[the official page by VOSviewer online], and open your network in it:
+
+image::https://docs.google.com/drawings/d/e/2PACX-1vT52zSJRDW4hWN150kcMbMJ0HFiXE-tPHvZ0wQ__0bItpYyQUINTLujxXpctv1jpCHMt_stimVB7kHq/pub?w=566&h=348[align="center",title="Opening a network in the VOSviewer online interface"]
+
+==== 4. More options to share your visualization with VOSviewer online
+https://app.vosviewer.com/docs/sharing/linking/[This web page] offers a full view on the other ways you can share a network visualization with VOSviewer online.
 
 == the end
 

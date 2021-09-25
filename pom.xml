@@ -243,7 +243,7 @@
                                     </requires>
                                     <sourceDirectory>${source.directory}</sourceDirectory>
                                     <imagesDir>${image.directory}</imagesDir>
-                                    <sourceDocumentName>${doc.to.process}</sourceDocumentName>
+                                    <sourceDocumentName>${doc.to.process.full.path}</sourceDocumentName>
                                     <outputDirectory>${basedir}/docs/generated-slides</outputDirectory>
                                     <backend>revealjs</backend>
                                     <templateDir>${basedir}/docs/asciidoctor-reveal.js-${asciidoctor-revealjs.version}/templates/slim</templateDir>
@@ -365,7 +365,7 @@
                                         <!--they will be injected into the extensions which manage the html output formats-->
                                         <statcounter-project>${statcounter-project}</statcounter-project>
                                         <statcounter-security>${statcounter-security}</statcounter-security>
-                                        <doc-to-process>${doc.to.process}</doc-to-process> 
+                                        <doc-to-process>${doc.to.process.full.path}</doc-to-process> 
                                         <refresh-pics>${refresh.pics}</refresh-pics>
                                         <path>${basedir}</path>                                
                                         <magick-path>C:\Program Files\ImageMagick-7.0.8-Q16\magick</magick-path>
