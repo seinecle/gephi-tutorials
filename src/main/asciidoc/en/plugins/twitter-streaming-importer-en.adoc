@@ -37,6 +37,8 @@ This plugin enables you to:
 ====
 The setup of the plugin will need you to create a Twitter account, if you don't already have one.
 Get your Twitter login and password ready. **You also need a mobile phone number where your Twitter account can be confirmed**.
+
+The plugin works currently with Twitter API V1 which is getting deprecated. The credentials will works only if you  have a developer account with an existing v1 app or a new account with elevated access.
 ====
 
 //+
