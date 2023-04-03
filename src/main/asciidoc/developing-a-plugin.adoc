@@ -30,7 +30,7 @@ Each episode of the series is chaptered, you can easily jump to specific part by
 
 Check the episode 1:
 
-video::bfobfVxIt20[align=center]
+video::bfobfVxIt20[youtube, height=315, width=560, align="center"]
 
 
 == to go further
