@@ -201,7 +201,7 @@ image::timeline.gif[align="center", title="Example of Timeline"]
 
 You can ping @totetmatt on twitter if you wish to expand the list ;)
 
-== The end
+== to go further
 
 Visit https://www.facebook.com/groups/gephi[the Gephi group on Facebook] to get help,
 

@@ -87,8 +87,11 @@ endif::[]
 ==== c. Academic citations for Gephi (counting only citations to http://www.aaai.org/ocs/index.php/ICWSM/09/paper/download/154/1009[Bastian et al., 2009])
 image::google-scholar-gephi.png[align="center", title=""]
 
+== to go further
 
-== the end
 Visit https://www.facebook.com/groups/gephi[the Gephi group on Facebook] to get help,
 
 or visit https://seinecle.github.io/gephi-tutorials[the website for more tutorials]
+
+Give a try to https://nocodefunctions.com[nocodefunctions.com], the web application I develop to create networks for Gephi. Click-and-point, free, no registration needed.
+

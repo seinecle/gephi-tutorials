@@ -206,7 +206,11 @@ image::import-spreadsheet-9-en.png[align="center",title="Kinds of attributes"]
 - https://github.com/gephi/gephi/wiki/Import-CSV-Data[The Gephi wiki on importing csv]
 - https://www.youtube.com/watch?v=3Im7vNRA2ns[Video "How to import a CSV into Gephi" by Jen Golbeck]
 
-== the end
+== to go further
+
 Visit https://www.facebook.com/groups/gephi[the Gephi group on Facebook] to get help,
 
 or visit https://seinecle.github.io/gephi-tutorials[the website for more tutorials]
+
+Give a try to https://nocodefunctions.com[nocodefunctions.com], the web application I develop to create networks for Gephi. Click-and-point, free, no registration needed.
+

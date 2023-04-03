@@ -9,11 +9,7 @@
     <packaging>jar</packaging>
     <name>Gephi tutorials - source</name>
 
-    <properties>
-        <medium.publish>false</medium.publish>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-    </properties>
+    <!--Everything below this line can be copied / pasted to create the POM of new tutorial / Asciidoc projects !! -->
     <parent>
         <groupId>net.clementlevallois</groupId>
         <artifactId>AsciiiDocMavenJavaSE</artifactId>
@@ -55,7 +51,6 @@
                 <artifactId>gem-maven-plugin</artifactId>
                 <version>${gem.maven.plugin.version}</version>
                 <configuration>
-                    <!--<jrubyVersion>${jruby.version}</jrubyVersion>-->
                     <jrubyVersion>${jruby.version}</jrubyVersion>
                     <gemHome>${project.build.directory}/gems</gemHome>
                     <gemPath>${project.build.directory}/gems</gemPath>
@@ -303,6 +298,7 @@
                                     <sourceDocumentName>${doc.to.process.full.path}</sourceDocumentName>
                                     <sourceDirectory>${source.directory}/subdir</sourceDirectory>
                                     <outputDirectory>${basedir}/docs</outputDirectory>
+                                    <skip>true</skip>
                                     <backend>html</backend>
                                     <!--resources should be set, even empty, otherwise everything in sourceDirectory will be copied to the destination-->
                                     <!--see https://docs.asciidoctor.org/maven-tools/latest/plugin/goals/process-asciidoc/#configuration-->
@@ -326,49 +322,6 @@
                             </execution>
                         </executions>
                     </plugin>
-<!--
-                    <plugin>
-                        <artifactId>maven-resources-plugin</artifactId>
-                        <version>3.0.2</version>
-                        <executions>
-                            <execution>
-                                <id>copy-resources-slides</id>
-                                <goals>
-                                    <goal>copy-resources</goal>
-                                </goals>
-                                <configuration>
-                                    <outputDirectory>${basedir}/docs/generated-slides</outputDirectory>
-                                    <resources>
-                                        <resource>
-                                            <directory>${source.directory}/subdir/**</directory>
-                                            <excludes>
-                                                <exclude>*.adoc</exclude>
-                                            </excludes>
-                                            <filtering>true</filtering>
-                                        </resource>
-                                    </resources>
-                                </configuration>
-                            </execution>
-                            <execution>
-                                <id>copy-resources-html</id>
-                                <goals>
-                                    <goal>copy-resources</goal>
-                                </goals>
-                                <configuration>
-                                    <outputDirectory>${basedir}/docs/generated-html</outputDirectory>
-                                    <resources>
-                                        <resource>
-                                            <directory>${source.directory}/subdir/**</directory>
-                                            <excludes>
-                                                <exclude>*.adoc</exclude>
-                                            </excludes>
-                                            <filtering>true</filtering>
-                                        </resource>
-                                    </resources>
-                                </configuration>
-                            </execution>
-                        </executions>                    
-                    </plugin>-->
                 </plugins>
             </build>
         </profile>                

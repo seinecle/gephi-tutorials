@@ -350,3 +350,12 @@ These are layouts which follow the same logic as Force Atlas 2, but with slight 
 [start=6]
 6. In this tutorial, we defined degree centrality.
 Can you imagine a situation when a node with the largest degree centrality will actually be in the periphery of the network? You can draw a toy network to help you figure.
+
+== to go further
+
+Visit https://www.facebook.com/groups/gephi[the Gephi group on Facebook] to get help,
+
+or visit https://seinecle.github.io/gephi-tutorials[the website for more tutorials]
+
+Give a try to https://nocodefunctions.com[nocodefunctions.com], the web application I develop to create networks for Gephi. Click-and-point, free, no registration needed.
+

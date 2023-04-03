@@ -61,3 +61,11 @@ Developers who modify the Gephi code base are required to make these changes pub
 - The https://consortium.gephi.org[Gephi Consortium] was created to ensure Gephi will remain so
 - The https://github.com/gephi/gephi/graphs/contributors[original contributors and their followers] are volunteers
 - The support to users through http://forum-gephi.org[forums], https://www.facebook.com/groups/gephi[discussion groups] and https://gephi.org/users/[documents] is provided for free.
+
+== to go further
+
+Visit https://www.facebook.com/groups/gephi[the Gephi group on Facebook] to get help,
+
+or visit https://seinecle.github.io/gephi-tutorials[the website for more tutorials]
+
+Give a try to https://nocodefunctions.com[nocodefunctions.com], the web application I develop to create networks for Gephi. Click-and-point, free, no registration needed.

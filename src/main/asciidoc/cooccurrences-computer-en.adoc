@@ -197,7 +197,11 @@ If a Client has purchased tables twice, so that we have "table, table" in a cell
 ==== 7th panel
 This panel recaps all the settings. Click on finish to create the network.
 
-== The end
+== to go further
+
 Visit https://www.facebook.com/groups/gephi[the Gephi group on Facebook] to get help,
 
 or visit https://seinecle.github.io/gephi-tutorials[the website for more tutorials]
+
+Give a try to https://nocodefunctions.com[nocodefunctions.com], the web application I develop to create networks for Gephi. Click-and-point, free, no registration needed.
+

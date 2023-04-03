@@ -17,3 +17,26 @@ last modified: {docdate}
 == Gephi workshops
 I organize online workshops and personalized trainings for Gephi, for beginners and experts.
 To schedule one or to get more information: analysis@exploreyourdata.com.
+
+== An entire plugin developed from scratch
+
+This series was recorded from November 2022 to March 2023. It shows how I developed a plugin from scratch for Gephi: the https://gephi.org/plugins//#/plugin/word-cloud-plugin["Word Cloud" plugin], now published and accessible directly from Gephi.
+
+Each episode of the series is chaptered, you can easily jump to specific part by looking up the description below the videos.
+
+- https://www.youtube.com/watch?v=uvDtZ05UyC8&list=PLvlvvwcxkw3p7LkC8hzwg5Vi55rJsJwty[Browse the series on Youtube]
+- The https://docs.google.com/document/d/1kooElbNWdSXpgU-6Q24ue1HyA0y8K8op6xyd7wjkBLo/edit?usp=sharing[resource document containing useful links] in relation to each episode
+- the https://www.twitch.tv/clementlevallois[twitch channel] where the sessions took place - subscribe for follow up projects!
+
+Check the episode 1:
+
+video::bfobfVxIt20[align=center]
+
+
+== to go further
+
+Visit https://www.facebook.com/groups/gephi[the Gephi group on Facebook] to get help,
+
+or visit https://seinecle.github.io/gephi-tutorials[the website for more tutorials]
+
+Give a try to https://nocodefunctions.com[nocodefunctions.com], the web application I develop to create networks for Gephi. Click-and-point, free, no registration needed.

@@ -199,7 +199,7 @@ But keep in mind that you are heavily dependent on Dbpedia data quality (or othe
 
 If you want more refined queries, you will have to learn SPARQL and RDF in more details. There are a lot of tutorials around the web that will help you to master SPARQL.
 
-== The end
+== to go further
 
 Visit https://www.facebook.com/groups/gephi[the Gephi group on Facebook] to get help,
 

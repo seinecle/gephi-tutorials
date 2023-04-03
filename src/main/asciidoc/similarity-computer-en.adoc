@@ -108,7 +108,11 @@ image::plugin-7-en.png[align="center", title="An entity appearing twice"]
 
 David appears on lines 2 and 5 (because he made two purchases). Only the latest line where David appears (line 5) will be taken into account.
 
-== The end
+== to go further
+
 Visit https://www.facebook.com/groups/gephi[the Gephi group on Facebook] to get help,
 
 or visit https://seinecle.github.io/gephi-tutorials[the website for more tutorials]
+
+Give a try to https://nocodefunctions.com[nocodefunctions.com], the web application I develop to create networks for Gephi. Click-and-point, free, no registration needed.
+

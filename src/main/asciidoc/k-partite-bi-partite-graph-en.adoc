@@ -172,7 +172,8 @@ Then the only alternative to that is to use a script that will generate the grap
 == Benefits
 Multipartite graphs are complex to analyse, but synthesizing them to lower partite graphs gives you a better vision and insights about your data.
 
-== The end
+== to go further
+
 Visit https://www.facebook.com/groups/gephi[the Gephi group on Facebook] to get help,
 
 or visit https://seinecle.github.io/gephi-tutorials[the website for more tutorials]
