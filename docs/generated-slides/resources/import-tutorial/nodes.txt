@@ -1,4 +1,0 @@
-Id,Label,Date of Birth,Place of Birth,Years of experience,Rating
-3,"Dubois, Jeremy ""Danger""",17/09/1980,"Paris",8,9.27
-1,"Jeremy,Jennifer",25/03/1978,"Tampa",8,4.34
-45,"Rodriguez, Valerian",30/04/1985,"Berlin",5,6.66

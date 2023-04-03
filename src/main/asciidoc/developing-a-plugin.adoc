@@ -1,0 +1,19 @@
+=  Developing a plugin for Gephi
+Clément Levallois <analysis@exploreyourdata.com>
+2023-04-03
+
+last modified: {docdate}
+
+:icons: font
+:iconsfont:   font-awesome
+:revnumber: 1.0
+:example-caption!:
+:experimental:
+:imagesdir: images
+
+
+//ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
+
+== Gephi workshops
+I organize online workshops and personalized trainings for Gephi, for beginners and experts.
+To schedule one or to get more information: analysis@exploreyourdata.com.

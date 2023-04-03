@@ -1,0 +1,155 @@
+=  Creating a simple dynamic network
+Clément Levallois <analysis@exploreyourdata.com>
+2017-02-16
+
+last modified: {docdate}
+
+:icons: font
+:iconsfont:   font-awesome
+:revnumber: 1.0
+:example-caption!:
+:experimental:
+:imagesdir: images
+
+:github-root: https://github.com/seinecle/gephi-tutorials/blob/master/src/main/asciidoc/
+
+:title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
+
+image::gephi-logo-2010-transparent.png[width="450" align="center"]
+
+//ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
+
+== Gephi workshops
+I organize online workshops and personalized trainings for Gephi, for beginners and experts.
+To schedule one or to get more information: analysis@exploreyourdata.com.
+
+== 1. Goals of this tutorial
+- We are going to create one very simple *non dynamic* network (network "A").
+- then we will create a modified version of it (network "B").
+- in both files, we need to modify a single line.
+- finally, we will merge networks A and B, forming a new *dynamic* network evolving from version A to B.
+
+//+
+[NOTE]
+====
+The creation of the 2 networks is not a mandatory step: you can use your own network files, as long as they are in gexf file format. In this case, <<merging, skip to here>>.
+
+We create the networks in this tutorial to provide the most simple and clear case.
+====
+
+== 2. Open a new project in Gephi
+
+- open Gephi. On the Welcome screen that appears,  click on `New Project`
+
+image::https://docs.google.com/drawings/d/1rmxB95Ew8TxaoMRERnhhaSJTT3yuhLc6VEdBRLduAag/pub?w=926&h=534[align="center", title="Open a new project"]
+
+== 3. creating network "A"
+
+Our project is empty.
+We can use a simple click-and-point tool to create a network:
+
+image::https://docs.google.com/drawings/d/1qg4oSWoP9kfH75ucPquEz5oADG50729keLngKZxs0-o/pub?w=926&h=534[align="center", title="Icon for node creation"]
+
+image::https://docs.google.com/drawings/d/14Lyj2kYXbnCqQpAJW2OWtJnf88KVKyJtzmxaPNTWTDc/pub?w=639&h=533[align="center", title="A few nodes have been created"]
+
+When you have created a couple of nodes, click again on the pencil icon to stop the node creation.
+
+Export the network as a file and call it "network A":
+
+image::https://docs.google.com/drawings/d/1683F5TX0MYbrNofycNIDq3TM6tcdeqQhMydnb-nrnoQ/pub?w=654&h=296[align="center", title="Exporting the network"]
+
+image::https://docs.google.com/drawings/d/1WiD3tIgNY13pJMnqkeyc9wECX-eSlwlwJ4fZy7fX0pM/pub?w=682&h=314[align="center", title="Choosing the gexf file format"]
+
+Clicking on "Save" saves the file in the folder you chose. You are back to the view on your graph.
+
+== 4. Creating network "B"
+Now, click on the "Edge pencil", just below the "Node pencil we have used (careful, the icons are identical!)
+
+image::https://docs.google.com/drawings/d/1N5ouRs4GXZcUG9NKPrfc9XP-BsT6uPWYYgp__RCHO14/pub?w=926&h=534[align="center", title="Choosing the gexf file format"]
+
+Create one edge, or a couple of edges, in this way.
+
+//+
+Clicking again on the pencil stops the edge creation by mouse clicks.
+
+Then export the network *in the same folder* where we put the previous file (`File -> Export -> Graph File ...`)
+
+*This time, name the file 'network B.gexf' and remember to choose the `gexf` file format just like we did before.*
+
+== 5. Modifying just one line in the files network A.gexf and network B.gexf
+
+[[merging]]
+From your computer, open network A.gexf with a text editor (don't use Microsoft Word!):
+
+(here is how to do it on a http://www.dummies.com/computers/macs/how-to-open-and-edit-a-text-file-on-a-mac/[Mac], and on https://www.lifewire.com/txt-text-file-4150707[Windows]).
+
+image::https://docs.google.com/drawings/d/1UFJT918n8SUgWUD2KoEVCc6k2-G75QqoetWGirzhcIg/pub?w=1440&h=1080[align="center", title="The network file opened"]
+
+Delete and replace this line by this one:
+
+//+
+[source,xml]
+----
+<graph mode="slice" defaultedgetype="directed" timerepresentation="timestamp" timestamp="1">
+----
+See `timestamp="1"` ? It means this will be the first "time slice" of your dynamic network.
+
+Save the file.
+
+//+
+Repeat the steps for network B.gexf:
+
+- open the file in a text editor,
+- find the  line `<graph defaultedgetype="directed" mode="static">`
+- replace it by:
+
+[source,xml]
+----
+<graph mode="slice" defaultedgetype="directed" timerepresentation="timestamp" timestamp="2">
+----
+
+//+
+(see that we have *`timestamp="2"`* here: this is going to be the second time slice!)
+
+- save the file.
+
+== 6. Merging network "A" and "B" into a dynamic network
+We will use the 2 files network A.gexf and network B.gexf that we have created.
+
+First, let's close the project we have in Gephi, without saving:
+
+image::https://docs.google.com/drawings/d/1urvovovyXAsGIb-yycOHKl3qRtsL8klaVbnzpjThQ60/pub?w=1440&h=1080[align="center", title="Closing the current project"]
+
+Then click on `File -> Open` and navigate to the folder where network A.gexf and network B.gexf are located:
+
+image::https://docs.google.com/drawings/d/1Qah_hVAi7LXwnwuhCjLgHUlAqL4qHxUQ38PRKrPbJ_A/pub?w=1417&h=938[align="center", title="Opening files"]
+
+Here, make sure you select the *2 files at once* (using the key kbd:[Ctrl] on pc or kbd:[{commandkey}] on mac).
+
+image::https://docs.google.com/drawings/d/1ZU4uqyz7C9bXMNFd46XF5H_F8W2n0wdvcyrg5QyhQkI/pub?w=1372&h=857[align="center", title="Opening 2 files at once"]
+
+Opening the files display a report window:
+
+image::https://docs.google.com/drawings/d/1QAxYTCY38JJa8RyeMEu22u3-L65L3K-Y2Kd1FDslwB8/pub?w=1443&h=1014[align="center", title="Import report window"]
+
+== 7. Enabling the timeline
+You should see this button, click on it (if not: something went wrong. Retrace your steps)
+
+image::https://docs.google.com/drawings/d/134kQ8NnjB5W-tqv_xsK8EvEUDezkAxAeLFoxogSh64s/pub?w=1433&h=815[align="center", title="Enable the timeline"]
+
+Click and slide the right side border of the timeline *to the left*. You should see the edge disappear:
+
+image::https://docs.google.com/drawings/d/1dGRD8i7Nsjujdsiearl1ls6v31KXwAA3x28cs4WQhhQ/pub?w=1316&h=748[align="center", title="Sliding the timeline"]
+
+We created a dynamic network.
+It needs to be animated precisely with the timeline, dynamic attributes should be explored, as well as dynamic layouts.
+
+These features will be explained in the coming tutorials on dynamic networks with Gephi.
+
+== 8. More tutorials on dynamic networks with Gephi
+- https://github.com/gephi/gephi/wiki/Import-Dynamic-Data[The wiki on gephi.org]
+
+== the end
+Visit https://www.facebook.com/groups/gephi[the Gephi group on Facebook] to get help,
+
+or visit https://seinecle.github.io/gephi-tutorials[the website for more tutorials]

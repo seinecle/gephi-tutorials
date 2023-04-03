@@ -1,10 +1,12 @@
-= Open and collaborative Gephi tutorials (in multiple languages)
+= Open and collaborative Gephi tutorials
 Clément Levallois <clementlevallois@gmail.com>
 2017-01-11
 :revnumber: 1.0
 :example-caption!:
 ifndef::imagesdir[:imagesdir: images]
 ifndef::sourcedir[:sourcedir: ../../main/java]
+
+last modified: {docdate}
 
 Website: https://seinecle.github.io/gephi-tutorials/
 
@@ -17,4 +19,4 @@ This is a project to write Gephi tutorials in an open and collaborative way:
 
 The project has started in January 2017. Want to join? Questions? Create a Github account and open an issue here!
 
-by http://clementlevallois.net[Clément Levallois], Associate Professor at http://www.emlyon.com[emlyon business school].
+by https://clementlevallois.net[Clément Levallois], Associate Professor at https://www.emlyon.com[emlyon business school].

@@ -1,0 +1,212 @@
+= Importing csv data in Gephi
+Clément Levallois <analysis@exploreyourdata.com>
+2017-02-03
+
+last modified: {docdate}
+
+:icons!:
+:iconsfont:   font-awesome
+:revnumber: 1.0
+:example-caption!:
+:imagesdir: images
+
+
+:title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
+
+image::gephi-logo-2010-transparent.png[width="450" align="center"]
+
+//ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
+
+== Gephi workshops
+I organize online workshops and personalized trainings for Gephi, for beginners and experts.
+To schedule one or to get more information: analysis@exploreyourdata.com.
+
+== Importing an existing network file
+Gephi handles the import of network files in a variety of formats:
+
+image::network-formats-gephi-import-en.png[align="center",title="file formats supported by Gephi. Source: gephi.org"]
+
+To import any of these files, just choose the `File -> Open` menu
+
+==  Importing nodes with labels and their relations: simplest version
+(looking for the complete, full featured csv import version? <<full-csv-version, skip to here>>.)
+
+The easiest is probably to just have a text file like this one:
+
+//+
+----
+Source,Target <1>
+Jeremy,Jennifer
+Valerian,Jeremy
+----
+
+<1> This line is mandatory. Don't put a space between the comma and "Target"
+
+//+
+Just write this in a text editor and save it as a file `example.txt`
+
+To import this file in Gephi, go to `File->Import Spreadsheet`. Then in the window:
+
+image::https://docs.google.com/drawings/d/10G-ww5yaxlUme5h1wAcfK9AdqY8dNnurfFYZotljhPs/pub?w=644&h=520[align="center",title="Importing nodes with labels and their relations"]
+
+In this window, make sure the box "Create missing nodes" is checked:
+
+image::https://docs.google.com/drawings/d/1CnsxD6sjfXokhHxaZR6P_jJ2mNEtKBiTh_iB4EA3sjE/pub?w=644&h=520[align="center",title="Second screen"]
+
+[[full-csv-version]]
+
+Let's look again at the simple text file we used:
+
+//+
+....
+Source,Target
+Jeremy,Jennifer
+Valerian,Jeremy
+....
+
+There are 2 issues and several missing features, listed below:
+
+==== 1. labels containing commas in them will not work.
+
+Imagine our characters have first names and last names separated by a comma:
+
+Dubois, Jeremy
+
+Rodriguez, Valerian
+
+//+
+This will look like:
+
+....
+Source,Target
+Dubois, Jeremy,Jeremy,Jennifer
+Rodriguez, Valerian,Dubois, Jeremy
+....
+
+//+
+Note that we have 3 commas per line, instead of one!
+In this mess, Gephi will not detect where the node labels start and end.
+The import will break.
+
+//+
+The proper solution is to put node labels inside *double quotes*:
+
+//+
+....
+Source,Target
+"Dubois, Jeremy","Jeremy,Jennifer"
+"Rodriguez, Valerian","Dubois, Jeremy"
+....
+
+//+
+Be careful to use these straight " " double quotes, not the curvy ones: “ ” which French keyboards sometimes have.
+
+==== 2. labels containing double quotes " " in them will not work.
+
+Example: let's imagine that one of our characters has a middle name: Jeremy "Danger" Dubois.
+Our text file will look like:
+
+//+
+....
+Source,Target
+"Dubois, Jeremy "Danger"","Jeremy,Jennifer"
+"Rodriguez, Valerian","Dubois, Jeremy "Danger""
+....
+
+//+
+These extra " " will make the Gephi import break:
+
+image::import-spreadsheet-4-en.png[align="center",title="The import bugs - the middle name has disappeared"]
+
+The solution consists in *adding an extra double quote in front of the double quotes*.
+Our text file will look like:
+
+//+
+....
+Source,Target
+"Dubois, Jeremy ""Danger""","Jeremy,Jennifer"
+"Rodriguez, Valerian","Dubois, Jeremy ""Danger"""
+....
+
+//+
+This time, Gephi imports the network correctly:
+
+image::import-spreadsheet-3-en.png[align="center",title="Importing node labels containing double quotes"]
+
+== Importing more than labels: nodes and edges attributes
+To import attributes we will need to proceed differently.
+
+We need 2 text files: one for the list of nodes, one for the list of relations (edges)
+
+An example file with a list of nodes:
+
+//+
+....
+Id,Label,Date of Birth,Place of Birth,Years of experience,Rating <1>
+3,"Dubois, Jeremy ""Danger""",17/09/1980,"Paris",8,9.27
+1,"Jeremy,Jennifer",25/03/1978,"Tampa",8,4.34
+45,"Rodriguez, Valerian",30/04/1985,"Berlin",5,6.66
+....
+
+<1> Nodes *must* have at least an Id and a Label. Don't put spaces after the commas
+
+//+
+An example file with a list of edges:
+
+//+
+....
+Source,Target,Weight,Type,Where first met <1>
+1,45,3,"undirected",London <2>
+....
+<1> Edges *must* have at least a Source and Target. Other fields are optional.
+<2> "undirected", the alternative is "directed". Directed edges have arrow heads.
+
+//+
+Let's import the list of nodes first. `File -> Import Spreadsheet`
+
+image::https://docs.google.com/drawings/d/15GXuO-ucoucMw4OvyckAHrg5UDThMO0hkFB924yFtm0/pub?w=951&h=537[align="center",title="Importing a list of nodes with attributes"]
+
+in the next screen, we must be careful with a couple of things:
+
+image::https://docs.google.com/drawings/d/1K2WPeei2RYxIB8neTeXB9xWTqY8egvkVh80nj4FEIWg/pub?w=653&h=531[align="center",title="The attributes of the nodes"]
+
+Then we can import the file with the list of relations. `File -> Import Spreadsheet`
+
+image::https://docs.google.com/drawings/d/1KSE9pCnJ61Wvqf7moB_VLUMOTQVOTqRqwUjOHac7_SE/pub?w=595&h=375[align="center",title="Importing a list of edges with attributes"]
+
+image::https://docs.google.com/drawings/d/1PTWwhnWkb-blXN-Yx-wQuYoohqTZejNPnADNdfcG-_k/pub?w=506&h=356[align="center",title="The attributes of the edges"]
+
+== Memo card
+Nodes
+
+- header must be at least `Id,Label`
+
+//+
+Edges
+
+- header must be at least `Source,Target`
+- To have an attribute for the "thickness" or "strength" of a relation, this attribute must be called "Weight".
+- Want arrows on your links? Add an attribute "Type", with value "Directed"
+- Don't wan't arrows? Add an attribute "Type", with value "Undirected"
+
+//+
+Types of attributes: which to choose?
+
+image::import-spreadsheet-9-en.png[align="center",title="Kinds of attributes"]
+
+- Textual attribute: `String`. Nodes sharing the same textual value can be colored the same, or filtered together...
+- Numerical attribute: `Integer`, `Double` or `Float`. Nodes can be resized according to their value, or colorized in a gradient. Filters can be applied based on the range of values.
+- Boolean attribute: just a `true` or `false` value. Useful for filtering out some nodes which are true or false on some parameter.
+- Other types of attributes: not needed for the moment.
+
+
+== (to be continued)
+
+== More tutorials on importing data to Gephi
+- https://github.com/gephi/gephi/wiki/Import-CSV-Data[The Gephi wiki on importing csv]
+- https://www.youtube.com/watch?v=3Im7vNRA2ns[Video "How to import a CSV into Gephi" by Jen Golbeck]
+
+== the end
+Visit https://www.facebook.com/groups/gephi[the Gephi group on Facebook] to get help,
+
+or visit https://seinecle.github.io/gephi-tutorials[the website for more tutorials]

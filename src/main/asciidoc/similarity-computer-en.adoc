@@ -1,0 +1,114 @@
+=  Creating a network from a table of entities and their attributes
+Clément Levallois <analysis@exploreyourdata.com>
+2017-02-22
+
+last modified: {docdate}
+
+:icons: font
+:iconsfont:   font-awesome
+:revnumber: 1.0
+:example-caption!:
+:imagesdir: images
+
+
+:title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
+
+image::gephi-logo-2010-transparent.png[width="450" align="center"]
+
+//ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
+
+== Gephi workshops
+I organize online workshops and personalized trainings for Gephi, for beginners and experts.
+To schedule one or to get more information: analysis@exploreyourdata.com.
+
+== Update
+
+//+
+[TIP]
+====
+This plugin has been replaced by a new and better function available on the web, developed by the same author. It is free, click and point, without registration at this address: https://nocodefunctions.com/gaze/network_builder_tool.html[https://nocodefunctions.com]
+====
+
+
+== Presentation of the plugin
+This plugin is created by https://www.clementlevallois.net[Clement Levallois].
+
+It converts a spreadsheet or a csv file into a network.
+
+This plugin enables you to:
+
+//+
+*   Start from a data table in Excel or csv format
+*   In the data table, nodes are the entities listed in column A
+*   Nodes' attributes must be listed in columns B, C, D, etc.
+//+
+*   Connections will be created between nodes, when they have identical attributes.
+*   Attributes can have values, stored in columns right next to the attribute.
+
+==== 1. The input
+image::https://docs.google.com/drawings/d/1TkShesrj6PsObLdj3fCMLScxTXJgopxTEICPv8CPd4Y/pub?w=840&h=887[align="center", title="An Excel file"]
+
+==== 2. The output
+image::result.png[align="center", title="Resulting network"]
+
+== Installing the plugin
+image::https://docs.google.com/drawings/d/1dgcXEC-nrQQtLvEtSLCrzKXfAdi2Hy1jCslyf2ky20A/pub?w=956&h=530[align="center", title="Choose the menu Tools then Plugins"]
+
+image::https://docs.google.com/drawings/d/1u4LqlnQby5DQVmq4csZ6f7sq_Z33F33UqtBZ43eh4pc/pub?w=645&h=406[align="center", title="Click on the tab Available Plugins"]
+
+image::https://docs.google.com/drawings/d/18hovYg9G5ek39rILj-aRlEpaWnN6doQeg15iX6lU0aY/pub?w=833&h=543[align="center", title="Install the plugin Similarity Computer then restart Gephi"]
+
+== Opening the plugin
+image::https://docs.google.com/drawings/d/1eu5O9KiGDAXJSkQuXHYq37T8vSvlZCPMgjwpa4C4Bh4/pub?w=1423&h=851[align="center", title="Open the plugin via the menu File - Import"]
+
+== Using the plugin
+
+==== First panel
+image::https://docs.google.com/drawings/d/1T1MfrbkD-0JXU0gJittis1SzC6oTS3TzN2NqwkKtRVE/pub?w=1412&h=920[align="center", title="Select a file"]
+
+image::file-without-header-en.png[align="center", title="A file without headers"]
+
+image::file-with-header-en.png[align="center", title="A file with headers"]
+
+==== Second panel
+image::plugin-4-en.png[align="center", title="Parameter for weight"]
+
+==== Third panel
+
+image::plugin-5-en.png[align="center", title="Confirmation panel"]
+
+== How is the similarity computed, exactly?
+We use the cosine similarity.
+Sounds complicated, but it is not.
+http://stackoverflow.com/questions/1746501/can-someone-give-an-example-of-cosine-similarity-in-a-very-simple-graphical-wa[Check here].
+
+//+
+The source code for the cosine calculation is in this https://github.com/gephi/gephi-plugins/blob/master-forge/modules/SimilarityComputer/src/main/java/net/clementlevallois/computer/CosineCalculation.java[file], at https://github.com/gephi/gephi-plugins/blob/master-forge/modules/SimilarityComputer/src/main/java/net/clementlevallois/computer/CosineCalculation.java#L110[this place].
+
+== FAQ / special notes on the plugin
+
+==== 1. Excel files should be .xlsx, not .xls
+Because they represent two slightly different files formats, and the plugin supports only .xlsx
+
+==== 2. csv files are ok.
+If you select a http://www.computerhope.com/issues/ch001356.htm[csv file], you will be asked to indicate the field delimiter and optionally the text delimiter.
+
+image::plugin-6-en.png[align="center", title="When a csv file is selected"]
+
+==== 3. You can't use numerical values in the attributes
+
+image::numerical-attributes-en.png[align="center", title="Age is a numerical attribute"]
+
+This is too bad.
+If there is enough demand for it I'll add this feature, which is not trivial.
+
+==== 4. Each entity should appear only on one line
+
+image::plugin-7-en.png[align="center", title="An entity appearing twice"]
+
+David appears on lines 2 and 5 (because he made two purchases). Only the latest line where David appears (line 5) will be taken into account.
+
+== The end
+Visit https://www.facebook.com/groups/gephi[the Gephi group on Facebook] to get help,
+
+or visit https://seinecle.github.io/gephi-tutorials[the website for more tutorials]

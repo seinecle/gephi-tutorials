@@ -1,0 +1,13 @@
+= How should Gephi be pronounced?
+Clément Levallois <analysis@exploreyourdata.com>
+2017-02-28
+
+last modified: {docdate}
+
+:icons!:
+:iconsfont:   font-awesome
+:revnumber: 1.0
+:example-caption!:
+:imagesdir: images
+
+image::seinfeld.gif[title="up to you"]
