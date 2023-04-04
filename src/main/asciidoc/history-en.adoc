@@ -78,20 +78,18 @@ pass:[<iframe width="600" height="600" align="center" frameborder="0" scrolling=
 
 ==== b. General interest for Gephi and related software in the past 5 years
 
-//HTML:  ++++
-//HTML:  <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3309_RC01/embed_loader.js"></script>
-
-//HTML:    <script type="text/javascript">
-
-//HTML:      trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/0blw873","geo":"","time":"2004-01-01 2023-04-04"},{"keyword":"/m/0fpgvwy","geo":"","time":"2004-01-01 2023-04-04"},{"keyword":"/g/11hzcqc1rl","geo":"","time":"2004-01-01 2023-04-04"}],"category":0,"property":""}, {"exploreQuery":"date=all&q=%2Fm%2F0blw873,%2Fm%2F0fpgvwy,%2Fg%2F11hzcqc1rl&hl=en","guestPath":"https://trends.google.fr:443/trends/embed/"});
-
-//HTML:    </script>
-//HTML:  ++++
+//HTML: ++++
+//HTML: <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3309_RC01/embed_loader.js"></script><script type="text/javascript">trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/0blw873","geo":"","time":"2004-01-01 2023-04-04"},{"keyword":"/m/0fpgvwy","geo":"","time":"2004-01-01 2023-04-04"},{"keyword":"/g/11hzcqc1rl","geo":"","time":"2004-01-01 2023-04-04"}],"category":0,"property":""}, {"exploreQuery":"date=all&q=%2Fm%2F0blw873,%2Fm%2F0fpgvwy,%2Fg%2F11hzcqc1rl&hl=en","guestPath":"https://trends.google.fr:443/trends/embed/"});
+//HTML: </script>
+//HTML: ++++
 
 //PDF: image::google-trends-gephi.png[align="center", title=""]
 
 
-==== c. Academic citations for Gephi (counting only citations to http://www.aaai.org/ocs/index.php/ICWSM/09/paper/download/154/1009[Bastian et al., 2009])
+==== c. Academic citations for Gephi
+
+(counting only citations to http://www.aaai.org/ocs/index.php/ICWSM/09/paper/download/154/1009[Bastian et al., 2009])
+
 image::google-scholar-gephi.png[align="center", title=""]
 
 == to go further
