@@ -41,6 +41,7 @@ This plugin enables you to:
 *   Start from a data table in Excel or csv format
 *   In the data table, nodes are the entities listed in column A
 *   Nodes' attributes must be listed in columns B, C, D, etc.
+
 //+
 *   Connections will be created between nodes, when they have identical attributes.
 *   Attributes can have values, stored in columns right next to the attribute.
