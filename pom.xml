@@ -298,7 +298,6 @@
                                     <sourceDocumentName>${doc.to.process.full.path}</sourceDocumentName>
                                     <sourceDirectory>${source.directory}/subdir</sourceDirectory>
                                     <outputDirectory>${basedir}/docs</outputDirectory>
-                                    <skip>true</skip>
                                     <backend>html</backend>
                                     <!--resources should be set, even empty, otherwise everything in sourceDirectory will be copied to the destination-->
                                     <!--see https://docs.asciidoctor.org/maven-tools/latest/plugin/goals/process-asciidoc/#configuration-->

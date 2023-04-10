@@ -1,0 +1,72 @@
+=  The word cloud plugin
+Clément Levallois <analysis@exploreyourdata.com>
+2023-04-10
+
+last modified: {docdate}
+
+:icons: font
+:iconsfont:   font-awesome
+:revnumber: 1.0
+:example-caption!:
+:experimental:
+:imagesdir: images
+
+
+//ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
+
+== Gephi workshops
+I organize online workshops and personalized trainings for Gephi, for beginners and experts.
+To schedule one or to get more information: analysis@exploreyourdata.com.
+
+== What does it do?
+This plugin helps you explore a network where the nodes have a textual attribute.
+Let's take the example of a network of 3,000 twitter users, where each user would have their bio in an attribute called "description".
+
+You open the network, spatialize it with Force Atlas... then you try to make sense of it.
+Who are these twitter users in different parts of the network?
+
+- __without__ the plugin, you need to make frequent back and forth between the Overview and the Data Laboratory to see the description of the nodes.
+
+- __with__ the plugin, a window opens in the Overview, and it shows a word cloud of the descriptions of the nodes you are currently selecting with the mouse.
+*At a glance, you can visualize and understand the most prominent keywords associated with the Twitter accounts your mouse is selecting: it becomes clear who these persons are and what they relate to.*
+
+
+== When to use it?
+This plugin is the most useful when:
+
+1. the nodes have a textual attribute, where the text is pretty long for each node. A description of the node, typically.
+2. the network has a couple of hundreds of nodes at least
+3. you don't know perfectly the network
+
+Conditions 2 and 3 reflect the fact that if the network is very small or if you know it very well, you don't really need help to explore it :-)
+
+== How to use it?
+
+Dr. Veronica Espinoza has published a https://medium.com/@vespinozag/how-to-use-word-cloud-plugin-for-gephi-6f14c7c052e3[great tutorial about it - go check it].
+
+Here is the demo she includes in her tutorial above, to give you a sense:
+
+image::word-cloud-demo.gif[width=450, align="center", title="demo of the word cloud plugin by Dr. Veronica Espinoza"]
+
+== Where does it come from?
+
+The plugin was developed from scratch by https://twitter.com/seinecle[Clement Levallois] (the author of these Gephi tutorials) on Twitch from October 2022 to March 2023.
+
+Each episode of the series is chaptered, you can easily jump to specific part by looking up the description below the videos.
+
+- https://www.youtube.com/watch?v=uvDtZ05UyC8&list=PLvlvvwcxkw3p7LkC8hzwg5Vi55rJsJwty[Browse the series on Youtube]
+- The https://docs.google.com/document/d/1kooElbNWdSXpgU-6Q24ue1HyA0y8K8op6xyd7wjkBLo/edit?usp=sharing[resource document containing useful links] in relation to each episode
+- the https://www.twitch.tv/clementlevallois[twitch channel] where the sessions took place - subscribe for follow up projects!
+
+Check the episode 1:
+
+video::bfobfVxIt20[youtube, height=315, width=560, align="center"]
+
+
+== to go further
+
+Visit https://www.facebook.com/groups/gephi[the Gephi group on Facebook] to get help,
+
+or visit https://seinecle.github.io/gephi-tutorials[the website for more tutorials]
+
+Give a try to https://nocodefunctions.com[nocodefunctions.com], the web application I develop to create networks for Gephi. Click-and-point, free, no registration needed.
