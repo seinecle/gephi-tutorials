@@ -1,4 +1,4 @@
-=  Developing a plugin for Gephi
+= Developing a plugin for Gephi
 Clément Levallois <analysis@exploreyourdata.com>
 2023-04-03
 

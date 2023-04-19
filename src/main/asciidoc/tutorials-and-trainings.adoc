@@ -1,0 +1,60 @@
+= Other great tutorials for Gephi
+Clément Levallois <analysis@exploreyourdata.com>
+2023-04-19
+
+last modified: {docdate}
+
+:revnumber: 1.0
+:example-caption!:
+:imagesdir: images
+
+
+:title-logo-image: gephi-logo-2010-transparent.png[width="450" align="center"]
+
+image::gephi-logo-2010-transparent.png[width="450" align="center"]
+
+//ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
+
+
+== Gephi workshops
+I organize online workshops and personalized trainings for Gephi, for beginners and experts.
+To schedule one or to get more information: analysis@exploreyourdata.com.
+
+You can also book Gephi trainings from:
+
+- https://www.nethabitus.org/[Nethabitus], a consultancy in computational anthropology which organizes trainings and workshops in Spanish.
+
+
+== Gephi tutorials
+
+=== a. A series of tutorials for beginners and advanced users by Dr. Veronica Espinoza
+https://www.linkedin.com/in/ver%C3%B3nica-espinoza/[Veronica Espinoza] has a Phd in Siences and humanities and an MSc in neurobiology.
+She is a staff member of the https://www.smrfoundation.org[Social Media Research Foundation] and an expert in tools for network and textual data exploration.
+
+
+image::veronica-poster-gephi-tutorials.jpg[align="center",title="Series of medium articles on Gephi", width="250"]
+
+https://medium.com/@vespinozag[Find these tutorials here].
+
+=== b. A widely viewed video tutorial by Martin Grandjean
+https://www.martingrandjean.ch/[Martin Grandjean] is a professor in digital humanities and a Gephi expert. He produced videos and web tutorials on Gephi, his most viewed video is this one:
+
+video::GXtbL8avpik[youtube, align="center",title="Video tutorial by Martin Grandjean", width="250"]
+
+== Books
+
+=== a. by Ken Cherven
+
+Ken Cherven has two books (beginners and advanced level) on Gephi, check them out https://www.amazon.com/stores/Ken-Cherven/author/B00J0ZRZCC[at this link].
+
+image::kc-1.jpg[align="center",title="Mastering Gephi Network Visualization", width="250"]
+
+image::kc-2.jpg[align="center",title="Network graph Analysis and Visualization with Gephi", width="250"]
+
+
+== to go further
+
+Visit https://www.facebook.com/groups/gephi[the Gephi group on Facebook] to get help,
+
+Give a try to https://nocodefunctions.com[nocodefunctions.com], the web application I develop to create networks for Gephi. Click-and-point, free, no registration needed.
+
