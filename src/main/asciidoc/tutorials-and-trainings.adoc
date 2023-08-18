@@ -28,18 +28,24 @@ You can also book Gephi trainings from:
 == Gephi tutorials
 
 === a. A series of tutorials for beginners and advanced users by Dr. Veronica Espinoza
-https://www.linkedin.com/in/ver%C3%B3nica-espinoza/[Veronica Espinoza] has a Phd in Siences and humanities and an MSc in neurobiology.
+https://www.linkedin.com/in/ver%C3%B3nica-espinoza/[Veronica Espinoza] has a Phd in Sciences and humanities and an MSc in neurobiology.
 She is a staff member of the https://www.smrfoundation.org[Social Media Research Foundation] and an expert in tools for network and textual data exploration.
-
 
 image::veronica-poster-gephi-tutorials.jpg[align="center",title="Series of medium articles on Gephi", width="250"]
 
 https://medium.com/@vespinozag[Find these tutorials here].
 
 === b. A widely viewed video tutorial by Martin Grandjean
-https://www.martingrandjean.ch/[Martin Grandjean] is a professor in digital humanities and a Gephi expert. He produced videos and web tutorials on Gephi, his most viewed video is this one:
+https://www.martingrandjean.ch/[Martin Grandjean] is a professor in digital humanities and a Gephi expert.
+He produced videos and web tutorials on Gephi, his most viewed video is this one:
 
 video::GXtbL8avpik[youtube, align="center",title="Video tutorial by Martin Grandjean", width="250"]
+
+=== c. A very detailed tutorial on how to import Excel data to Gephi by Ifeanyi Idiaye
+https://www.linkedin.com/in/ifeanyi-idiaye-09523abb/[Ifeanyi Idiaye] is a data scientist and a software developer.
+His tutorial https://ifeanyidiaye.medium.com/how-to-use-gephi-to-analyze-social-network-data-51d3ba0ef050["How to Use Gephi to Analyze Social Network Data for Beginners"] is very detailed and clearly explained, with a practical example.
+
+image::ifeanyi.jpg[align="center",title="Series of medium articles on data science by Ifeanyi Idiaye", width="250"]
 
 == Books
 
